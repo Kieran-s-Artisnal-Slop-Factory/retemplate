@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Allegory preview, dark">
+  <rect width="400" height="250" fill="#0b0708"/>
+  <ellipse cx="200" cy="270" rx="240" ry="110" fill="#b3122e" opacity="0.3"/>
+  <rect x="0" y="0" width="400" height="28" fill="#16100f"/>
+  <rect x="0" y="0" width="400" height="3" fill="#b3122e"/>
+  <rect x="0" y="28" width="400" height="1" fill="#3d2429"/>
+  <text x="14" y="20" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="13" fill="#f3ebe6">Allegory</text>
+  <rect x="196" y="12" width="22" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="226" y="12" width="22" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="256" y="12" width="22" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="286" y="12" width="22" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="316" y="12" width="22" height="4" rx="1" fill="#f3ebe6"/>
+  <circle cx="366" cy="14" r="7" fill="#16100f" stroke="#3d2429"/>
+  <rect x="24" y="42" width="52" height="3" rx="1" fill="#e0334f"/>
+  <text x="24" y="70" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#f3ebe6">By day an angel's page.</text>
+  <text x="24" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#f3ebe6">By night <tspan font-style="italic" fill="#e0334f">a devil's.</tspan></text>
+  <rect x="30" y="112" width="352" height="108" fill="#000000"/>
+  <rect x="24" y="106" width="352" height="108" rx="3" fill="#fbf7ee" stroke="#3d2429"/>
+  <rect x="200" y="106" width="176" height="108" fill="#0b0708"/>
+  <path d="M200 106v108" stroke="#3d2429"/>
+  <circle cx="52" cy="120" r="4" fill="none" stroke="#c8a44a" stroke-width="1.6"/>
+  <path d="M46 122c-5 2-10 1-14-2 4-1 6-3 8-6-3-2-5-4-6-8 5 2 9 6 12 16zM58 122c5 2 10 1 14-2-4-1-6-3-8-6 3-2 5-4 6-8-5 2-9 6-12 16z" fill="#c8a44a"/>
+  <rect x="40" y="132" width="86" height="22" fill="#c8a44a"/>
+  <text x="46" y="149" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="15" fill="#ffffff">The ascent</text>
+  <rect x="40" y="162" width="120" height="3" rx="1" fill="#6e6246" opacity="0.7"/>
+  <rect x="40" y="170" width="96" height="3" rx="1" fill="#6e6246" opacity="0.7"/>
+  <rect x="40" y="186" width="74" height="16" rx="1" fill="none" stroke="#c8a44a" stroke-width="1.5"/>
+  <text x="49" y="198" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="9" fill="#2a2418">Read the ascent</text>
+  <path d="M288 126c-3-2-4-5-3-8 1-2 2-3 2-5 1 2 2 3 3 4 0-2 1-4 2-5 2 3 3 5 3 8-1 3-3 5-7 6z" fill="#e0334f"/>
+  <path d="M280 122c-5-1-8-4-9-9 0-2 1-4 2-5 0 3 1 5 3 7 2 2 4 3 6 4-1 1-2 2-2 3zM296 122c5-1 8-4 9-9 0-2-1-4-2-5 0 3-1 5-3 7-2 2-4 3-6 4 1 1 2 2 2 3z" fill="#e0334f"/>
+  <rect x="216" y="132" width="98" height="22" fill="#b3122e"/>
+  <text x="222" y="149" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="15" fill="#0b0708">The descent</text>
+  <rect x="216" y="162" width="120" height="3" rx="1" fill="#b89b98" opacity="0.7"/>
+  <rect x="216" y="170" width="96" height="3" rx="1" fill="#b89b98" opacity="0.7"/>
+  <rect x="216" y="186" width="78" height="16" rx="1" fill="none" stroke="#b3122e" stroke-width="1.5"/>
+  <text x="225" y="198" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="9" fill="#f3ebe6">Read the descent</text>
+  <rect x="24" y="224" width="108" height="26" rx="3" fill="#fbf7ee" stroke="#dccfa8"/>
+  <rect x="146" y="224" width="108" height="26" rx="3" fill="#16100f" stroke="#3d2429"/>
+  <rect x="268" y="224" width="108" height="26" rx="3" fill="#16100f" stroke="#3d2429"/>
+  <rect x="32" y="232" width="50" height="4" rx="1" fill="#2a2418"/>
+  <rect x="154" y="232" width="50" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="276" y="232" width="50" height="4" rx="1" fill="#f3ebe6"/>
+  <rect x="32" y="241" width="80" height="3" rx="1" fill="#6e6246"/>
+  <rect x="154" y="241" width="80" height="3" rx="1" fill="#b89b98"/>
+  <rect x="276" y="241" width="80" height="3" rx="1" fill="#b89b98"/>
+</svg>

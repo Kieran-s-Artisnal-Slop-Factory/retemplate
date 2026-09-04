@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-theme="gothic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Visiting the archive · Saint Aldric's Archive</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Saint Aldric's Archive</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="chronicle.html">Chronicle</a>
+    <a href="visiting.html" aria-current="page">Visiting</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">The search room</p>
+    <h1>Visiting the archive</h1>
+    <p>The search room is on the first floor of the chapter house, up a stone stair with no lift. Tell us if that is a difficulty and we will bring the documents down to the vestry.</p>
+  </header>
+
+  <section class="section" id="hours">
+    <h2>Hours</h2>
+    <div class="gothic-flare" aria-hidden="true">
+      <svg class="gothic-rose" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="26"/><path d="M100 4v192M4 100h192M32 32l136 136M168 32L32 168"/></g><g style="fill: var(--gothic-violet)"><ellipse cx="100" cy="51" rx="13" ry="24"/><ellipse cx="100" cy="149" rx="13" ry="24"/><ellipse cx="51" cy="100" rx="24" ry="13"/><ellipse cx="149" cy="100" rx="24" ry="13"/></g><g fill="currentColor"><circle cx="65" cy="65" r="12"/><circle cx="135" cy="65" r="12"/><circle cx="65" cy="135" r="12"/><circle cx="135" cy="135" r="12"/><circle cx="100" cy="100" r="12"/></g></svg>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>Search room</th><th>Documents fetched</th><th>Chapter house shop</th></tr></thead>
+        <tbody>
+          <tr><td>Monday</td><td>Closed</td><td>By post only</td><td>10 to 4</td></tr>
+          <tr><td>Tuesday to Thursday</td><td>10 to 4</td><td>10, 12 and 2</td><td>10 to 4</td></tr>
+          <tr><td>Friday</td><td>10 to 1</td><td>10 only</td><td>10 to 4</td></tr>
+          <tr><td>First Saturday of the month</td><td>10 to 1</td><td>10 only</td><td>10 to 5</td></tr>
+          <tr><td>Sunday</td><td>Closed</td><td>Closed</td><td>12 to 4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="row"><span class="badge badge-active">Six desks</span><span class="badge">Pencils only</span><span class="muted small">Closed 3 to 5 October for the Feast of Saint Aldric, and from Christmas Eve to Epiphany.</span></p>
+  </section>
+
+  <hr class="gothic-tracery">
+
+  <section class="section" id="desk">
+    <h2>Book a reading desk</h2>
+    <p>Desks are free and there are six. Book at least two working days ahead so the documents can be fetched from the strongroom before you arrive. Say what you want to see; a shelf mark is ideal, a question is fine.</p>
+    <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+    <form class="form-grid" action="#" method="get">
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field">
+          <label for="v-name">Full name</label>
+          <input id="v-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="v-email">Email</label>
+          <input id="v-email" name="email" type="email" autocomplete="email" required>
+          <p class="hint">We confirm the desk by email within a day.</p>
+        </div>
+        <div class="field">
+          <label for="v-date">Day of the visit</label>
+          <input id="v-date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="v-arrive">Arriving at</label>
+          <select id="v-arrive" name="arrive">
+            <option value="10" selected>10 o'clock</option>
+            <option value="12">12 o'clock</option>
+            <option value="14">2 o'clock</option>
+          </select>
+          <p class="hint">Documents are fetched at these three times.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="v-want">What you would like to see</label>
+          <textarea id="v-want" name="want" rows="3" placeholder="Shelf marks if you have them; a question if you do not."></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Your visit</legend>
+        <div class="field">
+          <span class="field-label">I would like</span>
+          <label class="check"><input type="checkbox" name="wants" value="window" checked> A desk by the window</label>
+          <label class="check"><input type="checkbox" name="wants" value="microfilm"> The microfilm reader</label>
+          <label class="check"><input type="checkbox" name="wants" value="help"> Help reading the hand</label>
+        </div>
+        <div class="field">
+          <span class="field-label">I am</span>
+          <label class="check"><input type="radio" name="who" value="public" checked> A member of the public</label>
+          <label class="check"><input type="radio" name="who" value="student"> A student, with a letter from my tutor</label>
+          <label class="check"><input type="radio" name="who" value="chapter"> Chapter clergy or staff</label>
+        </div>
+        <div class="field">
+          <label class="switch"><input type="checkbox" role="switch" name="calendar" checked><span>Write to me when the calendar of charters is finished</span></label>
+          <label class="switch"><input type="checkbox" role="switch" name="leaf"><span>Send the month's leaf of the chronicle</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn btn-primary btn-lg" type="submit">Book the desk</button>
+        <button class="btn" type="reset">Clear the form</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>Rules of the search room</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="rules" open>
+        <summary>Pencils only</summary>
+        <div class="accordion-body"><p>No ink of any kind, including ballpoint. Pencils are on the desk; laptops are welcome, and there is power at every desk but the two by the window.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Bags in the lockers</summary>
+        <div class="accordion-body"><p>Coats and bags go in the lockers on the stair. Bring a pound coin for the key; you get it back.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>One box at a time</summary>
+        <div class="accordion-body"><p>Documents come to the desk one box at a time, on a cushion where they need one. Keep the order they arrive in; the slips between items are there for that.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Photographs, without flash</summary>
+        <div class="accordion-body"><p>For your own study, as many as you like. For publication, ask at the desk; the chapter's leave is usually given and takes about a fortnight.</p></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Saint Aldric's Cathedral Archive</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chronicle.html">The chronicle</a></li>
+        <li><a href="visiting.html">Visiting</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>The Chapter House, Minster Yard, Hollowmere</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:archive@example.com">archive@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Gothic template</a></li>
+        <li><a href="../docs/index.html">Get started with Gothic</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Gothic template. The cathedral, its canons and its fallen tower are fictional.</p>
+</footer>
+</body>
+</html>

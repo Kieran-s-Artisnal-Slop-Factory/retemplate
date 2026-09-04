@@ -1,0 +1,223 @@
+/*
+ * allegory — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * Two faces of one site. By day the page is ivory with an antique gold for
+ * links and a brighter gold for the bands that carry white display type:
+ * halos, feathers, a soft radiance behind everything. By night the page is
+ * black with a red for links and a deeper red for the bands that carry
+ * black display type: horns, flame, hard shadows. Body text never sits on
+ * a band; only large bold display type does, so everything you read clears
+ * AA in both halves.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────────
+   * Two layers in each shadow: a wide soft one and a hard offset one. The
+   * soft layer is coloured only by day, the hard layer only by night, so
+   * one declaration gives radiance in the light half and a cut-out drop in
+   * the dark half, and the swap is a colour (it survives the paste-in). */
+  --shadow-1: 0 2px 10px var(--pal-shadow-1), 3px 3px 0 var(--allegory-hard-shadow-1);
+  --shadow-2: 0 12px 36px var(--pal-shadow-2), 6px 6px 0 var(--allegory-hard-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: 'Cormorant Garamond', 'Cormorant', Garamond, 'EB Garamond', 'Times New Roman', serif;
+  --font-weight-display: 600;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1.0625rem;
+  --font-size-lg: 1.3rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.3rem;
+  --font-size-3xl: 3rem;
+  --font-size-hero: clamp(2.75rem, 1.6rem + 3.8vw, 4.75rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: allegory ──────────────────────────────────────────────────
+ * Light: ivory surfaces, warm near-black ink, an antique gold accent dark
+ * enough for links and focus rings. Dark: black surfaces, ivory text, a
+ * red accent bright enough to read on black. The brighter gold and the
+ * deeper red that carry display type are template tokens below, not slots.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='allegory'],
+[data-theme='allegory'] {
+  --pal-bg0: light-dark(#fbf7ee, #0b0708);
+  --pal-bg0-soft: light-dark(#fffdf7, #16100f);
+  --pal-bg1: light-dark(#f2ead7, #20171a);
+  --pal-bg2: light-dark(#dccfa8, #3d2429);
+  --pal-bg3: light-dark(#bfa96e, #5e333d);
+
+  --pal-fg: light-dark(#2a2418, #f3ebe6);
+  --pal-fg-muted: light-dark(#6e6246, #b89b98);
+  --pal-gray: light-dark(#8f856d, #7d6a6a);
+
+  --pal-red: light-dark(#a8322f, #ff6b6b);
+  --pal-green: light-dark(#4a7a3a, #7fbf7a);
+  --pal-yellow: light-dark(#8a6d1f, #e0b45a);
+  --pal-blue: light-dark(#3e5f8c, #7ea4d8);
+  --pal-purple: light-dark(#6b4f8a, #b98cd8);
+  --pal-aqua: light-dark(#2f7a78, #66c2b8);
+
+  --pal-accent: light-dark(#8a6d1f, #e0334f);
+  --pal-accent-strong: light-dark(#6b5314, #ff5c73);
+  --pal-on-accent: light-dark(#fffdf7, #0b0708);
+
+  --pal-shadow-1: light-dark(rgb(138 109 31 / 0.14), transparent);
+  --pal-shadow-2: light-dark(rgb(138 109 31 / 0.26), transparent);
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The two faces. `--allegory-band` is the gold (day) or red (night) that
+ * carries display type of at least 24px bold in `--allegory-on-band`;
+ * never body text. The `--allegory-day-*` and `--allegory-night-*` sets
+ * are each face written out as flat colours, so an element can be pinned
+ * to one face whatever the scheme (`.allegory-halo`, `.allegory-horn`,
+ * the two panels of a diptych, the back of the feature card). The
+ * radiance and the flame are background layers on <body>, each coloured
+ * only in its own half. The ornaments are SVG masks filled with the band
+ * colour; which drawing shows is chosen by `--allegory-ornament`,
+ * re-pointed under `:root[data-scheme='dark']` at the end of this file,
+ * because a mask image is not a colour. Not part of the retoken paste-in.
+ */
+:root,
+.themed {
+  --allegory-gold: #c8a44a;
+  --allegory-red: #b3122e;
+  --allegory-white: #ffffff;
+
+  /* The day face, flat. */
+  --allegory-day-bg: #fbf7ee;
+  --allegory-day-surface: #fffdf7;
+  --allegory-day-raised: #f2ead7;
+  --allegory-day-border: #dccfa8;
+  --allegory-day-fg: #2a2418;
+  --allegory-day-muted: #6e6246;
+  --allegory-day-accent: #8a6d1f;
+  --allegory-day-accent-strong: #6b5314;
+  --allegory-day-shadow: rgb(138 109 31 / 0.22);
+
+  /* The night face, flat. */
+  --allegory-night-bg: #0b0708;
+  --allegory-night-surface: #16100f;
+  --allegory-night-raised: #20171a;
+  --allegory-night-border: #3d2429;
+  --allegory-night-fg: #f3ebe6;
+  --allegory-night-muted: #b89b98;
+  --allegory-night-accent: #e0334f;
+  --allegory-night-accent-strong: #ff5c73;
+  --allegory-night-shadow: #000000;
+
+  /* Which face the page wears now, and the other one. */
+  --allegory-band: light-dark(var(--allegory-gold), var(--allegory-red));
+  --allegory-on-band: light-dark(var(--allegory-white), var(--allegory-night-bg));
+  --allegory-band-other: light-dark(var(--allegory-red), var(--allegory-gold));
+  --allegory-on-band-other: light-dark(var(--allegory-night-bg), var(--allegory-white));
+  --allegory-band-soft: light-dark(rgb(200 164 74 / 0.18), rgb(179 18 46 / 0.22));
+
+  --allegory-face-other-bg: light-dark(var(--allegory-night-bg), var(--allegory-day-bg));
+  --allegory-face-other-surface: light-dark(var(--allegory-night-surface), var(--allegory-day-surface));
+  --allegory-face-other-fg: light-dark(var(--allegory-night-fg), var(--allegory-day-fg));
+  --allegory-face-other-muted: light-dark(var(--allegory-night-muted), var(--allegory-day-muted));
+  --allegory-face-other-border: light-dark(var(--allegory-night-border), var(--allegory-day-border));
+
+  /* Hard shadows: night only. By day they are transparent. */
+  --allegory-hard-shadow-1: light-dark(transparent, rgb(0 0 0 / 0.9));
+  --allegory-hard-shadow-2: light-dark(transparent, var(--allegory-night-shadow));
+
+  /* Radiance (day) and flame (night) behind the page. */
+  --allegory-radiance-color: light-dark(rgb(200 164 74 / 0.22), transparent);
+  --allegory-radiance: radial-gradient(64rem 30rem at 50% -8rem, var(--allegory-radiance-color), transparent 70%);
+  --allegory-flame-color: light-dark(transparent, rgb(179 18 46 / 0.32));
+  --allegory-flame-color-2: light-dark(transparent, rgb(224 51 79 / 0.12));
+  --allegory-flame: radial-gradient(70rem 24rem at 50% calc(100% + 10rem), var(--allegory-flame-color), transparent 70%),
+                    radial-gradient(30rem 40rem at 85% 110%, var(--allegory-flame-color-2), transparent 70%);
+
+  /* Ornaments, as masks. Wings around a halo; horns around a flame. */
+  --allegory-wings: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32'%3E%3Cpath d='M0 20h56M144 20h56' stroke='%23000' stroke-width='1.2'/%3E%3Ccircle cx='100' cy='18' r='7' fill='none' stroke='%23000' stroke-width='2.4'/%3E%3Cpath d='M90 22c-8 4-18 3-26-2 6-1 10-3 13-6-7 1-13-1-18-5 6 0 11-1 15-4-6-1-10-4-12-8 8 2 15 7 20 13 4 4 7 8 8 12zM110 22c8 4 18 3 26-2-6-1-10-3-13-6 7 1 13-1 18-5-6 0-11-1-15-4 6-1 10-4 12-8-8 2-15 7-20 13-4 4-7 8-8 12z' fill='%23000'/%3E%3C/svg%3E");
+  --allegory-horns: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 32'%3E%3Cpath d='M0 20h58M142 20h58' stroke='%23000' stroke-width='1.2'/%3E%3Cpath d='M100 30c-6-4-9-9-8-14 1-3 3-5 4-9 1 3 2 5 4 6 0-3 1-6 3-8 3 5 6 9 5 15-1 5-4 8-8 10z' fill='%23000'/%3E%3Cpath d='M88 26c-9-2-15-8-16-16 0-4 1-7 4-10-1 5 0 9 3 12 4 4 8 6 12 7-2 2-3 4-3 7zM112 26c9-2 15-8 16-16 0-4-1-7-4-10 1 5 0 9-3 12-4 4-8 6-12 7 2 2 3 4 3 7z' fill='%23000'/%3E%3C/svg%3E");
+  --allegory-ornament: var(--allegory-wings);
+}
+
+:root[data-scheme='dark'] {
+  --allegory-ornament: var(--allegory-horns);
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="detailed">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Detailed</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Detailed · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Detailed adds a sunburst drawn as inline SVG, a stepped frame with a title plate, the chevron ornament as a block, and one hero variant that puts them together. The rays behind every page are not flare; they are tokens on <code>&lt;body&gt;</code> and need no markup. The variants of contract components (the stepped card, the gold outline button, the menu table) are documented on those components' pages and listed at the bottom of this one.</p>
+</header>
+<h2 id="preview">Sunburst</h2>
+<p>A half-disc of rays and three arcs, stroked with the current colour, which the class sets to the ornament gold. It scales to its container and keeps its proportions. On its own it is a section header; inside <code>.hero.detailed-marquee</code> it sits behind the heading.</p>
+<figure class="example" data-snippet="detailed-sunburst">
+<div class="detailed-flare detailed-sunburst" aria-hidden="true"><svg viewBox="0 0 240 60" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M106 60L64 60M106 57L65 49M107 55L68 39M108 52L73 29M110 50L80 20M112 48L89 13M115 47L99 8M117 46L109 5M120 46L120 4M123 46L131 5M125 47L141 8M128 48L151 13M130 50L160 20M132 52L167 29M133 55L172 39M134 57L175 49M134 60L176 60"/><path d="M64 60A56 56 0 0 1 176 60" stroke-width="1.5"/><path d="M120 22l6 10-6 10-6-10z" fill="currentColor" stroke="none"/></svg></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-sunburst">&lt;div class="detailed-flare detailed-sunburst" aria-hidden="true"&gt;&lt;svg viewBox="0 0 240 60" fill="none" stroke="currentColor" stroke-width="1.2"&gt;&lt;path d="M106 60L64 60M106 57L65 49M107 55L68 39M108 52L73 29M110 50L80 20M112 48L89 13M115 47L99 8M117 46L109 5M120 46L120 4M123 46L131 5M125 47L141 8M128 48L151 13M130 50L160 20M132 52L167 29M133 55L172 39M134 57L175 49M134 60L176 60"/&gt;&lt;path d="M64 60A56 56 0 0 1 176 60" stroke-width="1.5"/&gt;&lt;path d="M120 22l6 10-6 10-6-10z" fill="currentColor" stroke="none"/&gt;&lt;/svg&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="variants">The marquee</h2>
+<p>The hero as the name over a hotel door. Add <code>detailed-marquee</code> to <code>.hero</code>: one centred column, Limelight at its largest, a single call, and a sunburst child rising behind the heading. The overview and the example home both open with one. It has no picture; the picture is the sunburst.</p>
+<figure class="example" data-snippet="detailed-marquee">
+<section class="hero detailed-marquee">
+  <div class="detailed-flare detailed-sunburst" aria-hidden="true"><svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"><path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/><path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/></svg></div>
+  <div class="stack">
+    <p class="kicker">Regent Quay, since 1931</p>
+    <h1>The Marlowe</h1>
+    <p>Sixty-two rooms above the river, a dining room under a glass fan, and a desk that never closes.</p>
+    <div class="row"><a class="btn btn-primary btn-lg" href="#">Reserve a room</a></div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-marquee">&lt;section class="hero detailed-marquee"&gt;
+  &lt;div class="detailed-flare detailed-sunburst" aria-hidden="true"&gt;&lt;svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"&gt;&lt;path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/&gt;&lt;path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/&gt;&lt;/svg&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Regent Quay, since 1931&lt;/p&gt;
+    &lt;h1&gt;The Marlowe&lt;/h1&gt;
+    &lt;p&gt;Sixty-two rooms above the river, a dining room under a glass fan, and a desk that never closes.&lt;/p&gt;
+    &lt;div class="row"&gt;&lt;a class="btn btn-primary btn-lg" href="#"&gt;Reserve a room&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>Stepped frame</h3>
+<p>A panel clipped to the step polygon, with a double gold rule inside and a title plate: a bronze hexagon in tracked capitals. Headings inside it set in Limelight. Use it for the one thing on a page that should read as an announcement: the hours, the house rules, a reservation form.</p>
+<figure class="example" data-snippet="detailed-frame">
+<div class="detailed-flare">
+  <div class="detailed-frame">
+    <p class="detailed-frame-title">The desk</p>
+    <h3>Open at every hour</h3>
+    <p>Keys, luggage, a taxi, a doctor, a sewing kit at two in the morning. Ask.</p>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-frame">&lt;div class="detailed-flare"&gt;
+  &lt;div class="detailed-frame"&gt;
+    &lt;p class="detailed-frame-title"&gt;The desk&lt;/p&gt;
+    &lt;h3&gt;Open at every hour&lt;/h3&gt;
+    &lt;p&gt;Keys, luggage, a taxi, a doctor, a sewing kit at two in the morning. Ask.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Chevron</h3>
+<p>The page-break ornament as a free-standing block, a little larger. It is the same <code>--detailed-chevron</code> mask filled with <code>--detailed-gold</code>, so it recolours with the scheme. Use <code>&lt;hr class="page-break"&gt;</code> when you mean a break between sections; use this when you only want the drawing.</p>
+<figure class="example" data-snippet="detailed-chevron">
+<div class="detailed-flare detailed-chevron" aria-hidden="true"></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-chevron">&lt;div class="detailed-flare detailed-chevron" aria-hidden="true"&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>. The last four rows are variants of contract components; their rules are in the same section and their examples on the pages named.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.detailed-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.detailed-sunburst</code></td><td>Gold fan of rays; an inline SVG scaled to its container</td></tr>
+      <tr><td><code>.detailed-marquee</code></td><td>On <code>.hero</code>: one centred column, the sunburst behind the heading</td></tr>
+      <tr><td><code>.detailed-frame</code></td><td>Stepped panel with a double gold rule; <code>.detailed-frame-title</code> is the plate</td></tr>
+      <tr><td><code>.detailed-chevron</code></td><td>The chevron mask as a free-standing block</td></tr>
+      <tr><td><code>.card.detailed-stepped</code></td><td>Stepped top corners with a gold hairline (<a href="cards.html">cards</a>)</td></tr>
+      <tr><td><code>.btn.detailed-outline</code></td><td>Gold double outline, fills gold on hover (<a href="buttons.html">buttons</a>)</td></tr>
+      <tr><td><code>.table-wrap.detailed-menu</code></td><td>A table set like a bill of fare; <code>tr.detailed-course</code> is a course heading (<a href="table.html">table</a>)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token: <code>--detailed-gold</code>, <code>--detailed-gold-soft</code>, <code>--detailed-brass</code>, <code>--detailed-band</code> and the rest in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>Nothing animates continuously. The only motion in the template is the sheen on the <a href="cards.html">feature card</a>, which runs once per hover and is removed under <code>prefers-reduced-motion</code>.</li>
+<li>The sunburst and the chevron are decoration; mark them <code>aria-hidden="true"</code> as the examples do. The frame is content and should not be.</li>
+<li>The rays behind every page (<code>--detailed-rays</code>, <code>--detailed-rays-fade</code>) are background layers on <code>body</code>, documented on the <a href="../theme.html">theme page</a>. Remove the <code>background-image</code> line in <code>global.css</code> to lose them.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

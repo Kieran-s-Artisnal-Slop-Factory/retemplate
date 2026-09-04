@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" data-theme="detailed">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Detailed · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Detailed</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero detailed-marquee">
+    <div class="detailed-flare detailed-sunburst" aria-hidden="true"><svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"><path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/><path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/></svg></div>
+    <div class="stack">
+      <p class="kicker">A retemplate template</p>
+      <h1>Detailed</h1>
+      <p>Brass on black. Cream by day, navy by night. Sunbursts, stepped corners and chevron rules, with Limelight over the door and Jost for the small print.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg detailed-outline" href="docs/components/index.html">Browse the components</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <div class="detailed-flare">
+    <div class="detailed-frame">
+      <p class="detailed-frame-title">What you take</p>
+      <h2>Two stylesheets, one script, a folder of gold on navy</h2>
+      <p>Everything below is built from the same markup every retemplate template uses. Swap <code>css/</code> and <code>assets/</code> and the page changes its clothes; keep them and you have this.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <h2>Cards</h2>
+    <p>The stepped card is Detailed's own: the top corners cut in two steps with a gold hairline following the cut. The plain card is still here, with an icon, for when a page needs to be quiet.</p>
+    <div class="grid-3">
+      <article class="card detailed-stepped">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Sunburst</h3>
+          <p class="card-text">Rays fan from the top of every page and from the top of the marquee. They are gradients and one inline drawing, nothing downloaded.</p>
+        </div>
+      </article>
+      <article class="card detailed-stepped">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Stepped forms</h3>
+          <p class="card-text">One <code>clip-path</code> polygon, kept in a token, cuts the steps on cards, frames and pictures alike.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M12 4v3M5 9l7-5 7 5M6 20v-9h12v9M10 20v-5h4v5"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Retoken compatible</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> pastes into a retoken site as it is. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sideways, and the one that shines</h2>
+    <p>Horizontal cards put the picture on the left or, with <code>card-media-end</code>, on the right. The feature card mounts its picture in a stepped gold frame and, when you rest on it, a sheet of gold leaf sweeps across once.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The picture takes a little over a third; the words take the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card mirrored. One class differs.</p>
+        </div>
+      </article>
+    </div>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/hero.svg" alt="" width="1200" height="500"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The feature card</h3>
+        <p class="card-text">A double gold rule around the card, the picture in a stepped frame, and the sheen. It runs once per hover, in CSS, and not at all for people who ask for reduced motion.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>The mezzanine</h2>
+    <p>Eight pieces of the ornament set. Click any of them and the lightbox opens on the band, where brass belongs; the arrows are links and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A sunburst of gold rays" width="800" height="600"></a><figcaption>Sunburst</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A diamond over a gold lattice" width="800" height="600"></a><figcaption>Lattice</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A stepped tower in gold and brass" width="800" height="600"></a><figcaption>Ziggurat</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Five gold chevrons" width="800" height="600"></a><figcaption>Chevrons</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="Fanned gold arcs" width="800" height="600"></a><figcaption>Fan</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Three zigzag lines" width="800" height="600"></a><figcaption>Zigzag</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="Nested octagons around a diamond" width="800" height="600"></a><figcaption>Octagons</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A tower under faint rays" width="800" height="600"></a><figcaption>Spire</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A sunburst of gold rays"><figcaption>Sunburst · 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A diamond over a gold lattice"><figcaption>Lattice · 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A stepped tower in gold and brass"><figcaption>Ziggurat · 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Five gold chevrons"><figcaption>Chevrons · 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="Fanned gold arcs"><figcaption>Fan · 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Three zigzag lines"><figcaption>Zigzag · 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="Nested octagons around a diamond"><figcaption>Octagons · 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A tower under faint rays"><figcaption>Spire · 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Half picture, half words</h2>
+    <section class="fifty-fifty fifty-fifty-reverse">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Fifty-fifty</p>
+        <h2>The doorway block</h2>
+        <p>A heading in Limelight, a paragraph and one call. The picture is framed by a double gold rule on the inside of the box; <code>fifty-fifty-reverse</code> moves it to the right, as here. On a phone the picture comes first either way.</p>
+        <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Bill of fare</h2>
+    <p>The data table has a second dress. Add <code>detailed-menu</code> to the wrapper and it sets like a menu: courses between hairlines, dotted leaders, the last column right in tracked capitals. The plain table, with its gold-ruled head, is on the <a href="docs/components/table.html">table page</a>.</p>
+    <div class="table-wrap detailed-menu">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Script</th></tr></thead>
+        <tbody>
+          <tr class="detailed-course"><th colspan="2" scope="colgroup">Structure</th></tr>
+          <tr><td><strong><a href="docs/components/navbar.html">Navbar</a></strong> <span class="small">Sticky band, popover menu below 48rem</span></td><td>None</td></tr>
+          <tr><td><strong><a href="docs/components/sidebar.html">Sidebar</a></strong> <span class="small">Sticky column, drawer below 64rem</span></td><td>None</td></tr>
+          <tr><td><strong><a href="docs/components/footer.html">Footer</a></strong> <span class="small">Columns on the band</span></td><td>None</td></tr>
+          <tr class="detailed-course"><th colspan="2" scope="colgroup">Behaviour</th></tr>
+          <tr><td><strong><a href="docs/components/accordion.html">Accordion</a></strong> <span class="small">Native details; exclusive with a shared name</span></td><td>None</td></tr>
+          <tr><td><strong><a href="docs/components/gallery.html">Lightbox</a></strong> <span class="small">A dialog; slides picked by :target</span></td><td>One line</td></tr>
+          <tr><td><strong><a href="docs/components/dialog.html">Dialog</a></strong> <span class="small">Modal, focus trapped, closes by form</span></td><td>One line</td></tr>
+          <tr><td><strong><a href="docs/theme.html">Scheme toggle</a></strong> <span class="small">Auto, light, dark; remembered</span></td><td>theme.js</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Questions, folded</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets, the one script and the fonts, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Where do the fonts come from?</summary>
+        <div class="accordion-body"><p>Google Fonts, by one <code>&lt;link&gt;</code>: Limelight, Josefin Sans and Jost. Without the network the page falls back to Copperplate or Futura, and the README says how to self-host.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How much of this is decoration?</summary>
+        <div class="accordion-body"><p>The rays, the chevrons and the steps are CSS gradients, one mask and one <code>clip-path</code>, all held in <code>--detailed-*</code> tokens. The sunburst in the marquee is one inline drawing inside a <code>detailed-flare</code> wrapper. Strip the wrappers and the page is still whole.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and the README. Everything else on this page is showcase and can go.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are tracked Josefin capitals with a double inset rule on the primary. The gold outline is Detailed's own, for the marquee and the band. A switch is a checkbox with <code>role="switch"</code>; badges and banners carry status.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Primary</button>
+      <button class="btn" type="button">Default</button>
+      <button class="btn detailed-outline" type="button">Gold outline</button>
+      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Turn-down service</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Morning paper</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Active</span>
+      <span class="badge badge-done">Done</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Three fonts load from Google Fonts. Nothing else leaves the folder.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo; its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A dialog</h2>
+    <p>Dialogs are native. The button opens one; the dialog closes itself through a form, and the page behind it dims to the band.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">A modal dialog</h2>
+      <p>It traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Most pages are prose, so <code>.prose</code> styles every construct a markdown renderer produces: headings with gold double rules, lists, quotes, code, tables, footnotes. The <a href="blogpost.html">blog post</a> runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>Ornament is not the opposite of discipline. It is what discipline looks like when it has time.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Detailed</strong>
+        <p class="author-bio">Art deco for the web. Brass on black, sunbursts, stepped forms, and a sheen that runs once.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a><a class="tag" href="docs/components/flare.html">flare</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Detailed</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site: The Marlowe</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="docs/components/flare.html">Flare and variants</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Detailed is a retemplate template. MIT licensed. No build step, no framework, one small script, three fonts.</p>
+</footer>
+</body>
+</html>

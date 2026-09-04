@@ -38,10 +38,10 @@ state of the build; the TODO records which *asks* have landed.
 | 6 — Neon | done | 2026-09-04 | checker 0/0; visual pass at Checkpoint C |
 | 7 — Natural | done | 2026-09-04 | checker 0/0; visual pass at Checkpoint C |
 | C — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of neon and natural at 1280 and 375 in both schemes (overflow, images, fonts, dialog, lightbox, exclusive accordion, nav popover, sidebar drawer, toggle persistence, console) clean, landing cards and filters checked; two gaps accepted and applied: inline `<svg>` drawings are content slots in the contract check, `copy.js` trimmed to budget in every template; eyeball items in the TODO |
-| 8 — Detailed | not started | | |
-| 9 — Gothic | not started | | |
-| 10 — Allegory | not started | | |
-| D — Checkpoint | not started | | |
+| 8 — Detailed | done | 2026-09-04 | checker 0/0; first template built under decision 21 (marquee hero, four variants); visual pass at Checkpoint D |
+| 9 — Gothic | done | 2026-09-04 | checker 0/0; one pointed arch, illuminated initial, manuscript variant; visual pass at Checkpoint D |
+| 10 — Allegory | done | 2026-09-04 | checker 0/0; diptych hero, halo/horn pins, mirrored chapter pages; band contrast below 3:1 by brief (human to eyeball); visual pass at Checkpoint D |
+| D — Checkpoint | in progress | 2026-09-04 | |
 | 11 — Release | not started | | |
 
 ---
@@ -240,6 +240,22 @@ Settled; the phases assume them. Each records why.
     surfaces in its light half (Neon): `scrollbar-color` on `:root` and
     `color-scheme: dark` on `select, input, textarea, dialog, [popover]` so
     native controls do not paint white on dark.
+
+21. **Templates must not feel the same (owner, 2026-09-04).** The first
+    five templates read as one design re-coloured. From Phase 8 on, and in a
+    Phase 11 pass over the earlier five, each template makes deliberate
+    per-template choices: its own overview and example-site *structure*
+    (section order, hero form, which components lead), extra **component
+    variants** (namespaced `.<name>-*` modifier classes, or contract-neutral
+    additions documented on the component's page), its own copy register, and
+    one signature element. The contract still holds: the required components,
+    class names and pages stay, so a swap still works; variants are additive.
+    Guidance: the owner's "Frontend Design" brief (hero as thesis; typography
+    carries personality; structure encodes information; one aesthetic risk;
+    remove one accessory) and the taste-skill checklist (no em-dashes in copy,
+    no generic names or startup-slop brands, no numbered-eyebrow decoration,
+    no duplicate CTA intents, hero fits the viewport, one radius system per
+    template, buttons and forms pass AA in both halves).
 
 ## Folder structure
 
@@ -673,9 +689,17 @@ Measured values come from the references (computed styles read on
 
 ## Phase 11 — Cross-template review, docs, release
 
+0. **Distinctiveness pass** (decision 21) over plain's five siblings built
+   before the rule: neumorphic, brutal-news, glassy, neon, natural. Per
+   template: restructure the overview and example site, add the variants the
+   design wants, sharpen copy; checker green after each.
 1. Unfiltered checker green for all eight; a read of every README.
 2. Consistency pass on docs copy (component descriptions identical across
    templates except where a template genuinely differs).
+   Includes removing the em-dashes plain's docs copy carries (`docs/blog.html`,
+   `docs/defaults.html`, `docs/theme.html`, `docs/components/forms.html` and
+   `gallery.html` captions) and propagating the fix to every template
+   (decision 21's copy rule); the fixture article is exempt.
 3. `docs/user/using-a-template.md`, `docs/user/retoken.md`,
    `docs/dev/adding-a-template.md` finished; root `README.md` finished.
 4. TODO re-verified and ticked; `CHANGELOG.md` tidied; release date when

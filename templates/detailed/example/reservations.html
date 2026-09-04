@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-theme="detailed">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Reservations · The Marlowe</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Marlowe</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="restaurant.html">The Lantern Room</a>
+    <a href="reservations.html" aria-current="page">Reservations</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Reservations</p>
+    <h1>Reserve a room</h1>
+    <p>Tell us when and how many. We hold the room without a card until six on the evening of arrival; after that we ask for one.</p>
+  </header>
+
+  <div class="detailed-flare">
+    <div class="detailed-frame">
+      <p class="detailed-frame-title">Your stay</p>
+      <form class="form-grid" action="#" method="get">
+        <fieldset>
+          <legend>Dates and party</legend>
+          <div class="field">
+            <label for="r-arrive">Arrival</label>
+            <input id="r-arrive" name="arrive" type="date" required>
+          </div>
+          <div class="field">
+            <label for="r-depart">Departure</label>
+            <input id="r-depart" name="depart" type="date" required>
+          </div>
+          <div class="field">
+            <label for="r-guests">Guests</label>
+            <select id="r-guests" name="guests">
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="r-room">Room</label>
+            <select id="r-room" name="room">
+              <option>Quay room</option><option>River suite</option><option>Tower suite</option><option>Whatever is best that night</option>
+            </select>
+            <p class="hint">Rates are in the table below.</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Who is coming</legend>
+          <div class="field">
+            <label for="r-name">Name</label>
+            <input id="r-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="r-email">Email</label>
+            <input id="r-email" name="email" type="email" autocomplete="email" required>
+            <p class="hint">The confirmation goes here, and nothing else does.</p>
+          </div>
+          <div class="field field-wide">
+            <label for="r-notes">Anything we should know</label>
+            <textarea id="r-notes" name="notes" rows="3" placeholder="A high floor, a cot, a dog, an anniversary"></textarea>
+          </div>
+          <div class="field field-wide">
+            <span class="field-label">Extras</span>
+            <label class="check"><input type="checkbox" name="breakfast" checked> Breakfast in the Lantern Room</label>
+            <label class="check"><input type="checkbox" name="parking"> A space under the arches</label>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Reserve a room</button>
+            <a class="btn detailed-outline" href="tel:+441632960231">Telephone the desk</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <section class="section" id="rooms">
+    <h2>The rooms</h2>
+    <div class="grid-3">
+      <article class="card detailed-stepped">
+        <figure class="card-media"><img src="../assets/gallery-3.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Quay room</h3>
+          <p class="card-text">Floors one to three, facing the quay or the courtyard. A king bed or two singles, a walk-in shower, a desk by the window.</p>
+        </div>
+      </article>
+      <article class="card detailed-stepped">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">River suite</h3>
+          <p class="card-text">Floors four to eight. A sitting room with the river in both windows, a bedroom behind a walnut screen, a bath you can lie down in.</p>
+        </div>
+      </article>
+      <article class="card detailed-stepped">
+        <figure class="card-media"><img src="../assets/gallery-8.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Tower suite</h3>
+          <p class="card-text">Two only, under the lantern on the ninth floor, with the terrace between them. The whole quay, the bridge and the estuary, and the original 1931 bathroom.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Rates</h2>
+    <p>Per night, for the room, including breakfast when it is ticked above. Prices hold for the whole stay at the rate of the first night.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Room</th><th>Sunday to Thursday</th><th>Friday and Saturday</th><th>Availability</th></tr></thead>
+        <tbody>
+          <tr><td>Quay room</td><td>£185</td><td>£220</td><td><span class="badge badge-active">Open</span></td></tr>
+          <tr><td>River suite</td><td>£310</td><td>£365</td><td><span class="badge badge-active">Open</span></td></tr>
+          <tr><td>Tower suite</td><td>£540</td><td>£620</td><td><span class="badge">Two left in May</span></td></tr>
+          <tr><td>The private room, for dinner</td><td>By arrangement</td><td>By arrangement</td><td><span class="badge badge-done">Weekends taken</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The house rules, briefly</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="rules" open>
+        <summary>Cancelling</summary>
+        <div class="accordion-body"><p>Free until noon two days before you arrive. After that, the first night. If the river floods and the trains stop, none of this applies.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Children</summary>
+        <div class="accordion-body"><p>Welcome everywhere, including the Lantern Room until eight. Cots are free; a folding bed for an older child is £30 a night in the suites.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Paying</summary>
+        <div class="accordion-body"><p>On the morning you leave, by card or by cash. We do not take a deposit for stays under four nights.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and the telephone number is a fictional one.</p></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Marlowe</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurant.html">The Lantern Room</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>1 Regent Quay</li>
+        <li>01632 960 231</li>
+        <li><a href="mailto:desk@example.com">desk@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Detailed template</a></li>
+        <li><a href="../docs/index.html">Get started with Detailed</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Detailed template. The Marlowe, its staff and its river are fictional.</p>
+</footer>
+</body>
+</html>

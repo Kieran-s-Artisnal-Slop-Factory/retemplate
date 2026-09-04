@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="detailed">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>The Lantern Room · The Marlowe</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Marlowe</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="restaurant.html" aria-current="page">The Lantern Room</a>
+    <a href="reservations.html">Reservations</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">The Lantern Room</p>
+    <h1>Dinner under the glass fan</h1>
+    <p>Six until half past ten, every evening. Forty covers, one kitchen, a menu that changes when the boats do.</p>
+  </header>
+
+  <section class="section">
+    <h2>The menu tonight</h2>
+    <div class="table-wrap detailed-menu">
+      <table class="data-table">
+        <thead><tr><th>Dish</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr class="detailed-course"><th colspan="2" scope="colgroup">To begin</th></tr>
+          <tr><td><strong>Quay oysters</strong> <span class="small">Six, with a shallot vinegar and brown bread</span></td><td>18</td></tr>
+          <tr><td><strong>Smoked eel</strong> <span class="small">Beetroot, horseradish cream, rye</span></td><td>14</td></tr>
+          <tr><td><strong>Garden leeks</strong> <span class="small">Charred, with a hazelnut vinaigrette and a soft egg</span></td><td>11</td></tr>
+          <tr class="detailed-course"><th colspan="2" scope="colgroup">Mains</th></tr>
+          <tr><td><strong>Turbot</strong> <span class="small">On the bone, brown butter, capers, sea vegetables</span></td><td>38</td></tr>
+          <tr><td><strong>Salt-marsh lamb</strong> <span class="small">Loin and shoulder, anchovy, spring greens</span></td><td>34</td></tr>
+          <tr><td><strong>Barley and mushrooms</strong> <span class="small">Aged parmesan, chervil, a poached egg</span></td><td>24</td></tr>
+          <tr class="detailed-course"><th colspan="2" scope="colgroup">Puddings</th></tr>
+          <tr><td><strong>Marlowe custard tart</strong> <span class="small">As served in 1931, with nutmeg</span></td><td>9</td></tr>
+          <tr><td><strong>Rhubarb and burnt cream</strong> <span class="small">Forced rhubarb, brown sugar, shortbread</span></td><td>10</td></tr>
+          <tr><td><strong>Cheese</strong> <span class="small">Three from the county, quince, oatcakes</span></td><td>13</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <section class="fifty-fifty">
+      <figure><img src="../assets/gallery-5.svg" alt="" width="800" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">The kitchen</p>
+        <h2>Tomas Kell cooks what the day brings</h2>
+        <p>Tomas has run the Lantern Room since 2019. Before that he cooked on the quay itself, in the café the fishermen used, which is where the oysters and the eel come from and why the boat names are on the menu when we know them.</p>
+        <a class="btn detailed-outline" href="#table">Reserve a table</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Beyond the menu</h2>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="../assets/gallery-1.svg" alt="" width="800" height="600"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The tasting menu</h3>
+        <p class="card-text">Seven courses, decided at five o'clock, served to the whole table from seven. Seventy-five a head; the wine pairing is forty more and is chosen by Priya Sethi, who keeps the cellar.</p>
+        <div class="card-actions"><button class="btn btn-sm btn-primary" type="button" onclick="document.getElementById('pairings').showModal()">Tonight's pairings</button></div>
+      </div>
+    </article>
+    <dialog class="modal" id="pairings" aria-labelledby="pairings-title">
+      <h2 id="pairings-title">Tonight's pairings</h2>
+      <p>A dry fino with the oysters; a Loire chenin with the eel and the leeks; a village Chablis with the turbot; a Rhône syrah with the lamb; a late-harvest riesling with the tart; a tawny port with the cheese. Priya will swap any glass for one you would rather have.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn btn-primary" type="submit">Close</button>
+      </form>
+    </dialog>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-7.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">The private room</h3>
+          <p class="card-text">The old boardroom, seating fourteen at the original table. Its own door from the hall, its own waiter, and the tasting menu or a menu agreed with Tomas a week ahead.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Breakfast</h3>
+          <p class="card-text">Seven until half past ten in the Lantern Room, for residents and anyone else. Kippers, eggs from the walled garden, and the tart if there is any left.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="table">
+    <h2>Reserve a table</h2>
+    <div class="detailed-flare">
+      <div class="detailed-frame">
+        <p class="detailed-frame-title">The Lantern Room</p>
+        <form class="form-grid" action="#" method="get">
+          <fieldset>
+            <legend>Your table</legend>
+            <div class="field">
+              <label for="t-date">Evening</label>
+              <input id="t-date" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="t-time">Time</label>
+              <select id="t-time" name="time">
+                <option>6:00</option><option>6:30</option><option>7:00</option><option selected>7:30</option><option>8:00</option><option>8:30</option><option>9:00</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="t-party">Guests</label>
+              <input id="t-party" name="party" type="number" min="1" max="14" value="2">
+              <p class="hint">More than eight and we will suggest the private room.</p>
+            </div>
+            <div class="field">
+              <label for="t-name">Name</label>
+              <input id="t-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field field-wide">
+              <label for="t-notes">Anything we should know</label>
+              <textarea id="t-notes" name="notes" rows="2" placeholder="Allergies, a birthday, a window if there is one"></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Reserve a table</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Marlowe</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="restaurant.html">The Lantern Room</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>1 Regent Quay</li>
+        <li>01632 960 231</li>
+        <li><a href="mailto:desk@example.com">desk@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Detailed template</a></li>
+        <li><a href="../docs/index.html">Get started with Detailed</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Detailed template. The Marlowe, its staff and its river are fictional.</p>
+</footer>
+</body>
+</html>

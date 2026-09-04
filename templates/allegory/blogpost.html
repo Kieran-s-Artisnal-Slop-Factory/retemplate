@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-theme="allegory">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Markdown test document: Allegory</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Allegory</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Overview</a>
+    <a href="blogpost.html" aria-current="page">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <article class="post">
+    <header class="post-header">
+      <p class="kicker">Fixture · The word, in both lights</p>
+      <aside class="author-card">
+        <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+        <div>
+          <strong class="author-name">Ada Example</strong>
+          <p class="author-bio">Writes the test documents every template has to survive, by day and by night.</p>
+          <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>6 min read</span></p>
+          <p class="tags"><a class="tag" href="#">markdown</a><a class="tag" href="#">fixtures</a><a class="tag" href="#">typography</a></p>
+        </div>
+      </aside>
+    </header>
+
+    <div class="prose post-body">
+<article data-fixture="markdown-test">
+<h1 id="md-markdown-test-document">Markdown test document</h1>
+<p>This document exercises every construct a blog post is likely to use. It is the source of <code>markdown-test.html</code>, which is the same content hand-rendered to HTML; every template's <code>blogpost.html</code> embeds that rendered fragment verbatim, so if you change one you change all three. It borrows the shape of <a href="https://github.com/mxstbr/markdown-test-file">mxstbr's markdown-test-file</a> and adds the things that file leaves out (tables, images, task lists, footnotes, definition lists).</p>
+<h2 id="md-headings">Headings</h2>
+<p>The line above is a level-two heading. Below are the remaining levels.</p>
+<h3 id="md-a-third-level-heading">A third-level heading</h3>
+<h4 id="md-a-fourth-level-heading">A fourth-level heading</h4>
+<h5 id="md-a-fifth-level-heading">A fifth-level heading</h5>
+<h6 id="md-a-sixth-level-heading">A sixth-level heading, which is as deep as it goes</h6>
+<h2 id="md-paragraphs-and-inline-text">Paragraphs and inline text</h2>
+<p>Paragraphs are separated by a blank line. A single newline inside a paragraph does nothing; two trailing spaces<br>
+force a hard line break like the one before this clause.</p>
+<p>Text can be <em>emphasised</em> or <strong>strong</strong> or <em><strong>both</strong></em>; it can be <del>struck through</del>, and it can hold <code>inline code</code> such as <code>printf()</code> or <code>&lt;br&gt;</code>. Abbreviations get an <abbr title="HyperText Markup Language">HTML</abbr> tag, keyboard input a <kbd>Ctrl</kbd> + <kbd>K</kbd> pair, a highlight uses <mark>mark</mark>, and chemistry needs H<sub>2</sub>O while footnotes need a superscript.<sup id="fnref-1"><a href="#fn-1" data-footnote-ref>1</a></sup></p>
+<p>Links come in three kinds: an <a href="https://example.com" title="with a title">inline link</a>, a <a href="https://example.com/reference">reference-style link</a>, and a bare URL such as <a href="https://example.org">https://example.org</a>.</p>
+<h2 id="md-lists">Lists</h2>
+<p>An unordered list:</p>
+<ul>
+<li>Apples</li>
+<li>Pears
+<ul>
+<li>A nested item</li>
+<li>Another nested item, with <em>emphasis</em></li>
+</ul>
+</li>
+<li>Plums</li>
+</ul>
+<p>An ordered list, whose numbers do not have to be in order in the source:</p>
+<ol>
+<li>First</li>
+<li>Second</li>
+<li>
+<p>Third, with a paragraph of its own.</p>
+<p>This paragraph belongs to the third item.</p>
+<pre><code class="language-python">print("and so does this code block")
+</code></pre>
+</li>
+</ol>
+<p>A task list:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled> Write the fixture</label></li>
+<li><label><input type="checkbox" disabled> Embed it in every template</label></li>
+<li><label><input type="checkbox" disabled> Never edit the copies by hand</label></li>
+</ul>
+<h2 id="md-blockquotes">Blockquotes</h2>
+<blockquote>
+<p>A blockquote can hold several paragraphs.</p>
+<p>It can also hold a list:</p>
+<ul>
+<li>one</li>
+<li>two</li>
+</ul>
+<blockquote>
+<p>And it can nest another quote, with a heading inside:</p>
+<h3 id="md-quoted-heading">Quoted heading</h3>
+<p>Which is unusual but legal.</p>
+</blockquote>
+</blockquote>
+<h2 id="md-code">Code</h2>
+<p>Fenced code with a language:</p>
+<pre><code class="language-js">export function greet(name = "world") {
+  return `Hello, ${name}!`;
+}
+</code></pre>
+<p>Fenced code in a second language, with a long line to test overflow:</p>
+<pre><code class="language-css">.card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--border-color); }
+</code></pre>
+<p>Indented code, four spaces:</p>
+<pre><code>$ python tools/check.py --template plain
+checked templates/plain: 0 error(s), 0 warning(s)
+</code></pre>
+<h2 id="md-tables">Tables</h2>
+<table>
+<thead>
+<tr>
+<th class="align-left">Component</th>
+<th class="align-center">Element</th>
+<th class="align-right">Needs JS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="align-left">Accordion</td>
+<td class="align-center"><code>&lt;details&gt;</code></td>
+<td class="align-right">no</td>
+</tr>
+<tr>
+<td class="align-left">Dialog</td>
+<td class="align-center"><code>&lt;dialog&gt;</code></td>
+<td class="align-right">one line</td>
+</tr>
+<tr>
+<td class="align-left">Lightbox</td>
+<td class="align-center"><code>&lt;dialog&gt;</code></td>
+<td class="align-right">one line</td>
+</tr>
+<tr>
+<td class="align-left">Switch</td>
+<td class="align-center"><code>&lt;input&gt;</code></td>
+<td class="align-right">no</td>
+</tr>
+</tbody>
+</table>
+<p>The first column is left-aligned, the second centred, the third right-aligned.</p>
+<h2 id="md-images">Images</h2>
+<p><img src="assets/fixture-photo-1.svg" alt="A placeholder landscape" title="The first fixture image"></p>
+<p>Images can also sit inline in a paragraph, like this small one: <img src="assets/fixture-photo-2.svg" alt="A second placeholder" title="The second fixture image"> which the stylesheet should keep from breaking the line height too badly.</p>
+<h2 id="md-horizontal-rule">Horizontal rule</h2>
+<p>The line below is a thematic break.</p>
+<hr>
+<h2 id="md-definition-list">Definition list</h2>
+<p>Markdown has no syntax for these, so they are written as HTML:</p>
+<dl>
+<dt>Token</dt>
+<dd>A named value in <code>theme.css</code> that components reference instead of a literal.</dd>
+<dt>Palette slot</dt>
+<dd>One of the nineteen <code>--pal-*</code> tokens a retoken theme fills in.</dd>
+</dl>
+<h2 id="md-details">Details</h2>
+<details>
+<summary>A collapsed section</summary>
+<p>This paragraph is hidden until the summary is clicked. It uses the browser's native disclosure, so it needs no script.</p>
+</details>
+<h2 id="md-footnotes">Footnotes</h2>
+<p>The footnote referenced near the top of the page is rendered at the end.<sup id="fnref-2"><a href="#fn-2" data-footnote-ref>2</a></sup></p>
+<section class="footnotes">
+<h2 class="visually-hidden" id="md-footnote-label">Footnotes</h2>
+<ol>
+<li id="fn-1">
+<p>This is the first footnote. It can be a full sentence. <a href="#fnref-1" data-footnote-backref aria-label="Back to reference 1">↩</a></p>
+</li>
+<li id="fn-2">
+<p>The second footnote has two paragraphs.</p>
+<p>This is the second paragraph of the second footnote. <a href="#fnref-2" data-footnote-backref aria-label="Back to reference 2">↩</a></p>
+</li>
+</ol>
+</section>
+</article>
+    </div>
+
+    <footer class="post-footer">
+      <hr class="page-break">
+      <div class="grid-2">
+        <article class="card card-horizontal">
+          <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+          <div class="card-body">
+            <p class="kicker">Previous</p>
+            <h3 class="card-title"><a href="index.html">The overview</a></h3>
+            <p class="card-text">Every component on one page.</p>
+          </div>
+        </article>
+        <article class="card card-horizontal card-media-end">
+          <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+          <div class="card-body">
+            <p class="kicker">Next</p>
+            <h3 class="card-title"><a href="docs/blog.html">How this page is built</a></h3>
+            <p class="card-text">The post shell, annotated.</p>
+          </div>
+        </article>
+      </div>
+    </footer>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Allegory</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Allegory is a retemplate template with two faces. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

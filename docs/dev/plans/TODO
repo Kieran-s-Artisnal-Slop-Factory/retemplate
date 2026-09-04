@@ -15,7 +15,7 @@ Before beginning make sure the VERSION is up to date, and create a file called `
   - [x] Fixtures: `fixtures/markdown-test.md`, `fixtures/markdown-test.html`, `fixtures/forms.html`
   - [x] `docs/dev/template-contract.md` + `docs/dev/testing.md`
   - [x] `templates/plain` — the reference implementation of the contract (every page, component and doc)
-- [ ] Create initial templates
+- [x] Create initial templates
   - [x] Neumorphic
   - [x] Brutal News; A brutalist newspaper like design with thick border lines and harsh colors
     - [x] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5) (built to these words rather than the reference's 2px/one-red restraint; see open question 14)
@@ -25,10 +25,10 @@ Before beginning make sure the VERSION is up to date, and create a file called `
     - [x] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/4)
   - [x] Natural; A cream-papery design with some light green and brown accents, dark mode leans into more of a dirt texturey backgrop with light green and cream colours
     - [x] [reference](https://www.whichai.dev/with-design-skill/glm-5.2/3)
-  - [ ] Detailed; An art deco inspired deisgn with lots of intricate details
-    - [ ] [refernce](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Empire_State_Building_Entrance_decoration_%286046008895%29.jpg/960px-Empire_State_Building_Entrance_decoration_%286046008895%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
-  - [ ] Gothic; A gothic design inspired website
-  - [ ] Allegory; A light theme based on angelic imagery and white on gold, a dark theme based on demonic imagery, black on red
+  - [x] Detailed; An art deco inspired deisgn with lots of intricate details
+    - [x] [refernce](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Empire_State_Building_Entrance_decoration_%286046008895%29.jpg/960px-Empire_State_Building_Entrance_decoration_%286046008895%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+  - [x] Gothic; A gothic design inspired website
+  - [x] Allegory; A light theme based on angelic imagery and white on gold, a dark theme based on demonic imagery, black on red
 
 ## For human
 

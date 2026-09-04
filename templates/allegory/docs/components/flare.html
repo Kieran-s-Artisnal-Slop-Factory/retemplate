@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-theme="allegory">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare: Allegory</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Allegory · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Allegory adds one idea, the two faces, and a few pieces that use it: a pair of classes that pin an element to one face, a split section that shows both, a band of display type, a verse, and a button in italic display type. The radiance behind the page by day and the flame by night are not flare; they are tokens on <code>&lt;body&gt;</code> and need no markup.</p>
+</header>
+<h2 id="preview">The two faces</h2>
+<p><code>allegory-halo</code> pins an element to the day face and <code>allegory-horn</code> to the night face. Each sets <code>color-scheme</code> on the element, so every <code>light-dark()</code> pair inside resolves to that half whatever the visitor chose, native controls included, and re-points the ornament mask, which is the one thing a colour function cannot swap. A pinned block is padded and edged like a panel; a pinned card stays a card. Flip the toggle: these two do not move.</p>
+<figure class="example" data-snippet="allegory-faces">
+<div class="grid-2">
+  <section class="allegory-halo">
+    <h3 class="allegory-band">By day</h3>
+    <p>Ivory, gold, wings. Everything inside is the day face: text, links, <a href="#">this link</a>, and the field below.</p>
+    <div class="field"><label for="f-day">A field, pinned light</label><input id="f-day" type="text" placeholder="Native controls follow the pin"></div>
+  </section>
+  <section class="allegory-horn">
+    <h3 class="allegory-band">By night</h3>
+    <p>Black, red, horns. Everything inside is the night face: text, links, <a href="#">this link</a>, and the field below.</p>
+    <div class="field"><label for="f-night">A field, pinned dark</label><input id="f-night" type="text" placeholder="Native controls follow the pin"></div>
+  </section>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-faces">&lt;div class="grid-2"&gt;
+  &lt;section class="allegory-halo"&gt;
+    &lt;h3 class="allegory-band"&gt;By day&lt;/h3&gt;
+    &lt;p&gt;Ivory, gold, wings. Everything inside is the day face: text, links, &lt;a href="#"&gt;this link&lt;/a&gt;, and the field below.&lt;/p&gt;
+    &lt;div class="field"&gt;&lt;label for="f-day"&gt;A field, pinned light&lt;/label&gt;&lt;input id="f-day" type="text" placeholder="Native controls follow the pin"&gt;&lt;/div&gt;
+  &lt;/section&gt;
+  &lt;section class="allegory-horn"&gt;
+    &lt;h3 class="allegory-band"&gt;By night&lt;/h3&gt;
+    &lt;p&gt;Black, red, horns. Everything inside is the night face: text, links, &lt;a href="#"&gt;this link&lt;/a&gt;, and the field below.&lt;/p&gt;
+    &lt;div class="field"&gt;&lt;label for="f-night"&gt;A field, pinned dark&lt;/label&gt;&lt;input id="f-night" type="text" placeholder="Native controls follow the pin"&gt;&lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">The diptych</h2>
+<p>A split section: one grid, two panels, each pinned to a face, each opening with its ornament drawn by <code>::before</code>. The overview's hero is one of these. On a narrow screen the panels stack, day above night. Any children work; the pattern is a band, a paragraph and a vow.</p>
+<figure class="example" data-snippet="allegory-diptych">
+<div class="allegory-diptych">
+  <section class="allegory-halo">
+    <h2 class="allegory-band">The ascent</h2>
+    <p>Mara Quill climbs the tower to ring the hour.</p>
+    <a class="btn allegory-vow" href="../../example/ascent.html">Read the ascent</a>
+  </section>
+  <section class="allegory-horn">
+    <h2 class="allegory-band">The descent</h2>
+    <p>Tobin Marrow goes down the well to find the hum.</p>
+    <a class="btn allegory-vow" href="../../example/descent.html">Read the descent</a>
+  </section>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-diptych">&lt;div class="allegory-diptych"&gt;
+  &lt;section class="allegory-halo"&gt;
+    &lt;h2 class="allegory-band"&gt;The ascent&lt;/h2&gt;
+    &lt;p&gt;Mara Quill climbs the tower to ring the hour.&lt;/p&gt;
+    &lt;a class="btn allegory-vow" href="../../example/ascent.html"&gt;Read the ascent&lt;/a&gt;
+  &lt;/section&gt;
+  &lt;section class="allegory-horn"&gt;
+    &lt;h2 class="allegory-band"&gt;The descent&lt;/h2&gt;
+    &lt;p&gt;Tobin Marrow goes down the well to find the hum.&lt;/p&gt;
+    &lt;a class="btn allegory-vow" href="../../example/descent.html"&gt;Read the descent&lt;/a&gt;
+  &lt;/section&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>The band</h3>
+<p>The literal white-on-gold and black-on-red of the brief, kept for display type. Put <code>allegory-band</code> on a heading and it becomes a strip of the band colour at that heading's size; on any other element the type is forced to at least 24px bold. Body text never goes on a band: the contrast is not there for it.</p>
+<figure class="example" data-snippet="allegory-band">
+<div class="stack">
+  <h2 class="allegory-band">A heading on the band</h2>
+  <p class="allegory-band">A paragraph, made display type by the class. <em>Italic is lighter.</em></p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-band">&lt;div class="stack"&gt;
+  &lt;h2 class="allegory-band"&gt;A heading on the band&lt;/h2&gt;
+  &lt;p class="allegory-band"&gt;A paragraph, made display type by the class. &lt;em&gt;Italic is lighter.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>The verse</h3>
+<p>A quotation set centred in the display italic, with the ornament above it in the band colour. Use it for an epigraph or a pull quote; the ordinary <code>&lt;blockquote&gt;</code> inside <code>.prose</code> is for quotations in running text. The <code>&lt;cite&gt;</code> is optional.</p>
+<figure class="example" data-snippet="allegory-verse">
+<blockquote class="allegory-verse">
+  <p>Every bell that lifts a soul is rung by someone standing in the dark below it.</p>
+  <cite>The Bell at Corren, chapter one</cite>
+</blockquote>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-verse">&lt;blockquote class="allegory-verse"&gt;
+  &lt;p&gt;Every bell that lifts a soul is rung by someone standing in the dark below it.&lt;/p&gt;
+  &lt;cite&gt;The Bell at Corren, chapter one&lt;/cite&gt;
+&lt;/blockquote&gt;</code></pre></div>
+<h3>The vow</h3>
+<p>A button in italic display type with a band-coloured outline: a promise rather than a control. On hover and focus it fills with the accent, which clears AA with its text, rather than the band, which would not. It takes <code>btn-lg</code>.</p>
+<figure class="example" data-snippet="allegory-vow">
+<div class="row">
+  <button class="btn allegory-vow" type="button">I will finish the chapter</button>
+  <a class="btn allegory-vow btn-lg" href="#">Read the ascent</a>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-vow">&lt;div class="row"&gt;
+  &lt;button class="btn allegory-vow" type="button"&gt;I will finish the chapter&lt;/button&gt;
+  &lt;a class="btn allegory-vow btn-lg" href="#"&gt;Read the ascent&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.allegory-flare</code></td><td>The wrapper for flare that is only decoration; strip it when swapping templates</td></tr>
+      <tr><td><code>.allegory-halo</code></td><td>Pin to the day face: <code>color-scheme: light</code>, wings</td></tr>
+      <tr><td><code>.allegory-horn</code></td><td>Pin to the night face: <code>color-scheme: dark</code>, horns</td></tr>
+      <tr><td><code>.card.allegory-halo</code>, <code>.card.allegory-horn</code></td><td>A pinned card; signs off with its ornament at the foot</td></tr>
+      <tr><td><code>.allegory-diptych</code></td><td>Two-column grid of pinned panels; one column below 48rem; ornament by <code>::before</code></td></tr>
+      <tr><td><code>.allegory-band</code></td><td>Display type on the band colour; headings keep their size, anything else is at least 24px bold</td></tr>
+      <tr><td><code>.allegory-verse</code></td><td>Centred display-italic quotation with the ornament above; <code>cite</code> inside is the attribution</td></tr>
+      <tr><td><code>.btn.allegory-vow</code></td><td>Outlined button in italic display type; fills with the accent on hover</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token. The band is <code>--allegory-band</code> and <code>--allegory-on-band</code>; the two faces written out flat are <code>--allegory-day-*</code> and <code>--allegory-night-*</code>; the ornaments are <code>--allegory-wings</code> and <code>--allegory-horns</code>, chosen by <code>--allegory-ornament</code>. All in <code>theme.css</code>, listed on the <a href="../theme.html">theme page</a>. Nothing in <code>global.css</code> names a colour.</li>
+<li>Nothing here animates. The only motion in the template is the <a href="cards.html">feature card</a>'s turn and a short fade when the scheme changes, both transitions the global <code>prefers-reduced-motion</code> rule shortens to nothing.</li>
+<li>A pin is <code>color-scheme</code>, so inside a pinned element the browser draws form controls, scrollbars and the dialog backdrop in that scheme too.</li>
+<li>Inside the <code>.themed</code> swatch panels on the theme page the ornament does not swap, because those panels pin <code>color-scheme</code> without setting <code>data-scheme</code>. Accepted; pin with <code>allegory-halo</code> or <code>allegory-horn</code> instead and it does.</li>
+<li>The diptych and the band are content, not decoration, so they do not need <code>aria-hidden</code>. The ornaments drawn by <code>::before</code> and <code>::after</code> are invisible to assistive technology already.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

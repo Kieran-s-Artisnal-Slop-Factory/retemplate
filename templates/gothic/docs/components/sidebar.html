@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-theme="gothic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Sidebar · Gothic</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Gothic · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html" aria-current="page">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Sidebar</h1>
+  <p>The docs layout: a sticky top bar, a navigation column that becomes a drawer on small screens, and the page. <a href="../../sidebar.html">The sidebar variant</a> is the overview inside it.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The sidebar variant, live. Narrow the frame below 64rem to see the drawer.</p>
+<iframe class="docs-iframe" src="../../sidebar.html" title="The sidebar variant"></iframe>
+<h2 id="markup">Markup</h2>
+<p>The <code>&lt;aside&gt;</code> from <code>sidebar.html</code>; the whole page is <code>&lt;div class="sidebar-layout"&gt;</code> holding <code>header.topbar</code>, this aside and <code>main.page</code>.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="sidebar" data-source="../../sidebar.html" data-select="aside.sidebar">&lt;aside class="sidebar" id="sidebar" popover&gt;
+    &lt;nav aria-label="Documentation"&gt;
+      &lt;details open&gt;
+        &lt;summary&gt;Pages&lt;/summary&gt;
+        &lt;a href="index.html"&gt;Overview&lt;/a&gt;
+        &lt;a href="blogpost.html"&gt;Blog post&lt;/a&gt;
+        &lt;a href="forms.html"&gt;Forms&lt;/a&gt;
+        &lt;a href="sidebar.html" aria-current="page"&gt;Sidebar variant&lt;/a&gt;
+      &lt;/details&gt;
+      &lt;details open&gt;
+        &lt;summary&gt;Docs&lt;/summary&gt;
+        &lt;a href="docs/index.html"&gt;Get started&lt;/a&gt;
+        &lt;a href="docs/theme.html"&gt;Theme&lt;/a&gt;
+        &lt;a href="docs/defaults.html"&gt;Defaults&lt;/a&gt;
+        &lt;a href="docs/blog.html"&gt;Blog anatomy&lt;/a&gt;
+      &lt;/details&gt;
+      &lt;details open&gt;
+        &lt;summary&gt;Components&lt;/summary&gt;
+        &lt;a href="docs/components/index.html"&gt;All components&lt;/a&gt;
+        &lt;a href="docs/components/accordion.html"&gt;Accordion&lt;/a&gt;
+        &lt;a href="docs/components/cards.html"&gt;Cards&lt;/a&gt;
+        &lt;a href="docs/components/fifty-fifty.html"&gt;Fifty-fifty&lt;/a&gt;
+        &lt;a href="docs/components/gallery.html"&gt;Gallery and lightbox&lt;/a&gt;
+        &lt;a href="docs/components/switch.html"&gt;Switch&lt;/a&gt;
+        &lt;a href="docs/components/page-break.html"&gt;Page break&lt;/a&gt;
+        &lt;a href="docs/components/buttons.html"&gt;Buttons&lt;/a&gt;
+        &lt;a href="docs/components/forms.html"&gt;Forms&lt;/a&gt;
+        &lt;a href="docs/components/dialog.html"&gt;Dialog&lt;/a&gt;
+        &lt;a href="docs/components/navbar.html"&gt;Navbar&lt;/a&gt;
+        &lt;a href="docs/components/sidebar.html"&gt;Sidebar&lt;/a&gt;
+        &lt;a href="docs/components/banner.html"&gt;Banner&lt;/a&gt;
+        &lt;a href="docs/components/badge.html"&gt;Badge&lt;/a&gt;
+        &lt;a href="docs/components/table.html"&gt;Table&lt;/a&gt;
+        &lt;a href="docs/components/author-card.html"&gt;Author card&lt;/a&gt;
+        &lt;a href="docs/components/footer.html"&gt;Footer&lt;/a&gt;
+        &lt;a href="docs/components/flare.html"&gt;Flare&lt;/a&gt;
+      &lt;/details&gt;
+      &lt;details open&gt;
+        &lt;summary&gt;Example&lt;/summary&gt;
+        &lt;a href="example/index.html"&gt;Example site&lt;/a&gt;
+      &lt;/details&gt;
+    &lt;/nav&gt;
+    &lt;p class="sidebar-footer"&gt;&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;&lt;/p&gt;
+  &lt;/aside&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == sidebar == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.sidebar-layout</code></td><td>The grid: one column below 64rem, two above</td></tr>
+      <tr><td><code>.topbar</code></td><td>Sticky bar spanning both columns</td></tr>
+      <tr><td><code>.sidebar-toggle</code></td><td>Opens the drawer; hidden on wide screens</td></tr>
+      <tr><td><code>.sidebar</code></td><td>The column, or the popover drawer</td></tr>
+      <tr><td><code>.sidebar nav details</code></td><td>A collapsible group of links</td></tr>
+      <tr><td><code>a[aria-current=page]</code></td><td>The current page</td></tr>
+      <tr><td><code>.sidebar-footer</code></td><td>Pushed to the bottom of the column</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Below 64rem the aside is a popover: a real button opens it, the browser dims the page and closes it on <kbd>Esc</kbd> or a click outside. Above 64rem it is a sticky column and the attribute is inert.</li>
+<li>There is no collapse on wide screens in this version.</li>
+<li>Every sidebar page carries the same links, in the same groups; the checker compares them.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="navbar.html">← Navbar</a><a href="banner.html">Banner →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Gothic preview">
+<rect width="400" height="250" fill="#111014"/>
+<ellipse cx="200" cy="0" rx="230" ry="70" fill="#8b78b3" opacity="0.14"/>
+<rect width="400" height="26" fill="#1a181e"/><rect y="26" width="400" height="1" fill="#c9a24c" opacity="0.7"/>
+<text x="14" y="19" font-family="'Old English Text MT', UnifrakturMaguntia, Georgia, serif" font-size="15" fill="#e6e1d6">Gothic</text>
+<rect x="196" y="11" width="30" height="4" fill="#aaa39b"/>
+<rect x="238" y="11" width="34" height="4" fill="#aaa39b"/>
+<rect x="280" y="11" width="26" height="4" fill="#aaa39b"/>
+<rect x="322" y="11" width="30" height="4" fill="#aaa39b"/>
+<rect x="196" y="18" width="30" height="1.5" fill="#c9a24c"/>
+<rect x="368" y="7" width="13" height="13" fill="#1a181e" stroke="#3b363f"/>
+<rect x="24" y="44" width="58" height="3" fill="#c9a24c"/>
+<text x="24" y="74" font-family="'Old English Text MT', UnifrakturMaguntia, Georgia, serif" font-size="21" fill="#e6e1d6">Stone by day,</text>
+<text x="24" y="98" font-family="'Old English Text MT', UnifrakturMaguntia, Georgia, serif" font-size="21" fill="#e6e1d6">candlelight by night.</text>
+<rect x="24" y="110" width="22" height="22" fill="#8b78b3" opacity="0.18" stroke="#8b78b3" stroke-width="1.2"/>
+<text x="28" y="128" font-family="Georgia, serif" font-size="17" fill="#c9a24c">P</text>
+<rect x="52" y="112" width="130" height="3" fill="#aaa39b"/><rect x="52" y="120" width="120" height="3" fill="#aaa39b"/><rect x="52" y="128" width="96" height="3" fill="#aaa39b"/>
+<rect x="24" y="144" width="60" height="16" fill="#c9a24c"/><rect x="92" y="144" width="60" height="16" fill="none" stroke="#e6e1d6" stroke-width="1"/>
+<path d="M268 168V93.75999999999999Q268 47.68 316.0 40Q364 47.68 364 93.75999999999999V168Z" fill="#0b0a0d"/>
+<path d="M268 168V93.75999999999999Q268 47.68 316.0 40Q364 47.68 364 93.75999999999999V168Z" fill="#8b78b3" opacity="0.6"/>
+<rect x="268" y="118" width="96" height="50" fill="#c9a24c" opacity="0.85"/>
+<circle cx="336" cy="70" r="11" fill="#e0bf6b"/>
+<path d="M268 168V140h14v-14l8-10 8 10v14h20v-22h12v-10l8-14 8 14v10h12v22h20v-14l8-10 8 10v14h10v28Z" fill="#0b0a0d"/>
+<path d="M316 40V168M268 118H364" stroke="#0b0a0d" stroke-width="2"/>
+<path d="M24 186V183Q24 179 29 178Q34 179 34 183V186M34 186V183Q34 179 39 178Q44 179 44 183V186M44 186V183Q44 179 49 178Q54 179 54 183V186M54 186V183Q54 179 59 178Q64 179 64 183V186M64 186V183Q64 179 69 178Q74 179 74 183V186M74 186V183Q74 179 79 178Q84 179 84 183V186M84 186V183Q84 179 89 178Q94 179 94 183V186M94 186V183Q94 179 99 178Q104 179 104 183V186M104 186V183Q104 179 109 178Q114 179 114 183V186M114 186V183Q114 179 119 178Q124 179 124 183V186M124 186V183Q124 179 129 178Q134 179 134 183V186M134 186V183Q134 179 139 178Q144 179 144 183V186M144 186V183Q144 179 149 178Q154 179 154 183V186M154 186V183Q154 179 159 178Q164 179 164 183V186M164 186V183Q164 179 169 178Q174 179 174 183V186M174 186V183Q174 179 179 178Q184 179 184 183V186M184 186V183Q184 179 189 178Q194 179 194 183V186M194 186V183Q194 179 199 178Q204 179 204 183V186M204 186V183Q204 179 209 178Q214 179 214 183V186M214 186V183Q214 179 219 178Q224 179 224 183V186M224 186V183Q224 179 229 178Q234 179 234 183V186M234 186V183Q234 179 239 178Q244 179 244 183V186M244 186V183Q244 179 249 178Q254 179 254 183V186M254 186V183Q254 179 259 178Q264 179 264 183V186M264 186V183Q264 179 269 178Q274 179 274 183V186M274 186V183Q274 179 279 178Q284 179 284 183V186M284 186V183Q284 179 289 178Q294 179 294 183V186M294 186V183Q294 179 299 178Q304 179 304 183V186M304 186V183Q304 179 309 178Q314 179 314 183V186M314 186V183Q314 179 319 178Q324 179 324 183V186M324 186V183Q324 179 329 178Q334 179 334 183V186M334 186V183Q334 179 339 178Q344 179 344 183V186M344 186V183Q344 179 349 178Q354 179 354 183V186M354 186V183Q354 179 359 178Q364 179 364 183V186M364 186V183Q364 179 369 178Q374 179 374 183V186M374 186V183Q374 179 379 178Q384 179 384 183V186" fill="none" stroke="#c9a24c" stroke-width="0.8"/>
+<rect x="24" y="196" width="108" height="54" fill="#1a181e" stroke="#3b363f"/>
+<path d="M62 232V214.6Q62 203.8 78.0 202Q94 203.8 94 214.6V232Z" fill="#8b78b3"/>
+<rect x="60" y="238" width="36" height="3" fill="#e6e1d6"/>
+<rect x="146" y="196" width="108" height="54" fill="#1a181e" stroke="#3b363f"/>
+<path d="M184 232V214.6Q184 203.8 200.0 202Q216 203.8 216 214.6V232Z" fill="#8b78b3"/>
+<rect x="182" y="238" width="36" height="3" fill="#e6e1d6"/>
+<rect x="268" y="196" width="108" height="54" fill="#1a181e" stroke="#3b363f"/>
+<path d="M306 232V214.6Q306 203.8 322.0 202Q338 203.8 338 214.6V232Z" fill="#8b78b3"/>
+<rect x="304" y="238" width="36" height="3" fill="#e6e1d6"/>
+</svg>

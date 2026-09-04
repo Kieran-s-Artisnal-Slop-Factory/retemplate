@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en" data-theme="gothic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Gothic</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Gothic · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Gothic adds four things from a scriptorium: an illuminated initial, a manuscript page with notes in the margin, a rose window, and an arcade rule. Two more are variants of contract components and live on their own pages: the <a href="cards.html#variants">arched card</a> and the <a href="page-break.html#variants">tracery rule</a>. The pointed arch itself is a token, <code>--gothic-arch</code>, and needs no markup.</p>
+</header>
+<h2 id="preview">Illuminated initial</h2>
+<p>Put <code>gothic-initial</code> on a paragraph and its first letter is set large in blackletter, crimson by day and gold by night, on a violet ground inside a double rule. It is a <code>::first-letter</code> rule, so the paragraph's markup does not change. One per page is enough; the overview and the example put it on the first paragraph of the hero.</p>
+<figure class="example" data-snippet="gothic-initial">
+<p class="gothic-initial">In the year of the great frost the chapter met by candlelight, the glass in the north windows having cracked, and resolved that the fabric roll be read aloud before any new work was begun.</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="gothic-initial">&lt;p class="gothic-initial"&gt;In the year of the great frost the chapter met by candlelight, the glass in the north windows having cracked, and resolved that the fabric roll be read aloud before any new work was begun.&lt;/p&gt;</code></pre></div>
+<h2 id="variants">Manuscript with marginalia</h2>
+<p>A two-column page: the text on the left, notes on the right in a small italic with a crimson rule. Above 48rem the notes are a 13rem column; below it they follow the text. A <code>&lt;strong&gt;</code> at the start of a note is its heading, in small caps. The wrapper is <code>gothic-flare</code>, so a template swap can remove the whole thing.</p>
+<figure class="example" data-snippet="gothic-manuscript">
+<div class="gothic-flare">
+  <div class="gothic-manuscript">
+    <div class="prose">
+      <p class="gothic-initial">The north-west tower fell on the eve of Candlemas, 1471, taking two bays of the aisle roof with it. No one was killed. The chapter's account, written the same week, is the only record.</p>
+      <p>The rebuilding took eleven years and is the reason the two western towers do not match.</p>
+    </div>
+    <aside class="gothic-marginalia">
+      <p><strong>Source</strong>Fabric roll 1470/71, membrane 4.</p>
+      <p><strong>Shelf mark</strong>D/C/F/12.</p>
+      <p><strong>See also</strong>Entry 218, the mason's contract.</p>
+    </aside>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="gothic-manuscript">&lt;div class="gothic-flare"&gt;
+  &lt;div class="gothic-manuscript"&gt;
+    &lt;div class="prose"&gt;
+      &lt;p class="gothic-initial"&gt;The north-west tower fell on the eve of Candlemas, 1471, taking two bays of the aisle roof with it. No one was killed. The chapter's account, written the same week, is the only record.&lt;/p&gt;
+      &lt;p&gt;The rebuilding took eleven years and is the reason the two western towers do not match.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;aside class="gothic-marginalia"&gt;
+      &lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;Fabric roll 1470/71, membrane 4.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Shelf mark&lt;/strong&gt;D/C/F/12.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;See also&lt;/strong&gt;Entry 218, the mason's contract.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Rose window</h3>
+<p>An inline SVG drawing sized by <code>gothic-rose</code>: eight petals in the ornament colour and violet, with lead lines. It is decoration, so mark it <code>aria-hidden</code>. The example's visiting page puts one above the hours table.</p>
+<figure class="example" data-snippet="gothic-rose">
+<div class="gothic-flare" aria-hidden="true">
+  <svg class="gothic-rose" viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="100" cy="100" r="76"/><circle cx="100" cy="100" r="26"/><path d="M100 4v192M4 100h192M32 32l136 136M168 32L32 168"/></g><g style="fill: var(--gothic-violet)"><ellipse cx="100" cy="51" rx="13" ry="24"/><ellipse cx="100" cy="149" rx="13" ry="24"/><ellipse cx="51" cy="100" rx="24" ry="13"/><ellipse cx="149" cy="100" rx="24" ry="13"/></g><g fill="currentColor"><circle cx="65" cy="65" r="12"/><circle cx="135" cy="65" r="12"/><circle cx="65" cy="135" r="12"/><circle cx="135" cy="135" r="12"/><circle cx="100" cy="100" r="12"/></g></svg>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="gothic-rose">&lt;div class="gothic-flare" aria-hidden="true"&gt;
+  &lt;svg class="gothic-rose" viewBox="0 0 200 200"&gt;&lt;circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3"/&gt;&lt;g fill="none" stroke="currentColor" stroke-width="2"&gt;&lt;circle cx="100" cy="100" r="76"/&gt;&lt;circle cx="100" cy="100" r="26"/&gt;&lt;path d="M100 4v192M4 100h192M32 32l136 136M168 32L32 168"/&gt;&lt;/g&gt;&lt;g style="fill: var(--gothic-violet)"&gt;&lt;ellipse cx="100" cy="51" rx="13" ry="24"/&gt;&lt;ellipse cx="100" cy="149" rx="13" ry="24"/&gt;&lt;ellipse cx="51" cy="100" rx="24" ry="13"/&gt;&lt;ellipse cx="149" cy="100" rx="24" ry="13"/&gt;&lt;/g&gt;&lt;g fill="currentColor"&gt;&lt;circle cx="65" cy="65" r="12"/&gt;&lt;circle cx="135" cy="65" r="12"/&gt;&lt;circle cx="65" cy="135" r="12"/&gt;&lt;circle cx="135" cy="135" r="12"/&gt;&lt;circle cx="100" cy="100" r="12"/&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Arcade rule</h3>
+<p>A row of small pointed arches the full width of the column, for the places where a page changes subject. It is an <code>&lt;hr&gt;</code> with a class, so a template swap leaves an ordinary rule behind. The <a href="page-break.html">page break</a> is the other ornament: a quatrefoil, centred, for a break inside one subject.</p>
+<figure class="example" data-snippet="gothic-tracery">
+<p>The hours.</p>
+<hr class="gothic-tracery">
+<p>The rules of the search room.</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="gothic-tracery">&lt;p&gt;The hours.&lt;/p&gt;
+&lt;hr class="gothic-tracery"&gt;
+&lt;p&gt;The rules of the search room.&lt;/p&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>, except the two variants, which sit with their components.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.gothic-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.gothic-initial</code></td><td>Illuminated first letter on a paragraph (<code>::first-letter</code>)</td></tr>
+      <tr><td><code>.gothic-manuscript</code></td><td>Two-column grid: text and margin</td></tr>
+      <tr><td><code>.gothic-marginalia</code></td><td>The margin column: small italic, crimson rule, small-caps headings</td></tr>
+      <tr><td><code>.gothic-rose</code></td><td>Sizes and colours an inline rose-window SVG</td></tr>
+      <tr><td><code>hr.gothic-tracery</code></td><td>Arcade rule (<code>global.css § page-break</code>)</td></tr>
+      <tr><td><code>.card.gothic-arch</code></td><td>Lancet picture in a card (<code>global.css § cards</code>)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token: <code>--gothic-ornament</code>, <code>--gothic-violet</code>, <code>--gothic-violet-soft</code>, <code>--gothic-tracery</code>, <code>--gothic-rule</code> and <code>--gothic-arch</code> in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>Nothing here moves. The only motion in the template is the stained-glass wash on the <a href="cards.html">feature card</a> and the arch marker on an accordion, both transitions the global <code>prefers-reduced-motion</code> rule shortens to nothing.</li>
+<li>The initial and the manuscript are content and should not be hidden from assistive technology. The rose window is decoration; mark it <code>aria-hidden="true"</code> as the example does.</li>
+<li>Blackletter has no bold and no italic. The initial uses the face at its one weight; do not put <code>gothic-initial</code> on text that is already bold.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="gothic">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Blog anatomy · Gothic</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Gothic · Blog anatomy</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../index.html">Overview</a>
+        <a href="../blogpost.html">Blog post</a>
+        <a href="../forms.html">Forms</a>
+        <a href="../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../docs/index.html">Get started</a>
+        <a href="../docs/theme.html">Theme</a>
+        <a href="../docs/defaults.html">Defaults</a>
+        <a href="../docs/blog.html" aria-current="page">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../docs/components/index.html">All components</a>
+        <a href="../docs/components/accordion.html">Accordion</a>
+        <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../docs/components/switch.html">Switch</a>
+        <a href="../docs/components/page-break.html">Page break</a>
+        <a href="../docs/components/buttons.html">Buttons</a>
+        <a href="../docs/components/forms.html">Forms</a>
+        <a href="../docs/components/dialog.html">Dialog</a>
+        <a href="../docs/components/navbar.html">Navbar</a>
+        <a href="../docs/components/sidebar.html">Sidebar</a>
+        <a href="../docs/components/banner.html">Banner</a>
+        <a href="../docs/components/badge.html">Badge</a>
+        <a href="../docs/components/table.html">Table</a>
+        <a href="../docs/components/author-card.html">Author card</a>
+        <a href="../docs/components/footer.html">Footer</a>
+        <a href="../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Blog anatomy</p>
+  <h1>The post shell</h1>
+  <p>A blog post is the fixture article inside a shell: a header with the author card, the body in <code>.prose</code>, and a footer. <a href="../blogpost.html">The blog post page</a> is the full thing; this is the skeleton.</p>
+</header>
+<h2>The skeleton</h2>
+<p>The <code>&lt;article&gt;</code> inside <code>.post-body</code> is where rendered markdown goes; in the showcase it is the shared fixture, verbatim. The author card is its own component (<a href="components/author-card.html">docs</a>); the kicker, meta and tags are utilities.</p>
+<figure class="example" data-snippet="post-shell">
+<article class="post">
+  <header class="post-header">
+    <p class="kicker">Section · Topic</p>
+    <aside class="author-card">
+      <img class="avatar" src="../assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Author name</strong>
+        <p class="author-bio">One line about the author.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>3 min read</span></p>
+        <p class="tags"><a class="tag" href="#">tag</a><a class="tag" href="#">another</a></p>
+      </div>
+    </aside>
+  </header>
+  <div class="prose post-body">
+    <article>
+      <h1>The post title</h1>
+      <p>The body of the post: rendered markdown, wrapped in <code>.prose</code>.</p>
+    </article>
+  </div>
+  <footer class="post-footer">
+    <hr class="page-break">
+    <p class="muted">Related posts, previous and next, or nothing at all.</p>
+  </footer>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="post-shell">&lt;article class="post"&gt;
+  &lt;header class="post-header"&gt;
+    &lt;p class="kicker"&gt;Section · Topic&lt;/p&gt;
+    &lt;aside class="author-card"&gt;
+      &lt;img class="avatar" src="../assets/avatar.svg" alt="" width="96" height="96"&gt;
+      &lt;div&gt;
+        &lt;strong class="author-name"&gt;Author name&lt;/strong&gt;
+        &lt;p class="author-bio"&gt;One line about the author.&lt;/p&gt;
+        &lt;p class="meta"&gt;&lt;time datetime="2026-09-04"&gt;4 September 2026&lt;/time&gt; · &lt;span&gt;3 min read&lt;/span&gt;&lt;/p&gt;
+        &lt;p class="tags"&gt;&lt;a class="tag" href="#"&gt;tag&lt;/a&gt;&lt;a class="tag" href="#"&gt;another&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+  &lt;/header&gt;
+  &lt;div class="prose post-body"&gt;
+    &lt;article&gt;
+      &lt;h1&gt;The post title&lt;/h1&gt;
+      &lt;p&gt;The body of the post: rendered markdown, wrapped in &lt;code&gt;.prose&lt;/code&gt;.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;
+  &lt;footer class="post-footer"&gt;
+    &lt;hr class="page-break"&gt;
+    &lt;p class="muted"&gt;Related posts, previous and next, or nothing at all.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</code></pre></div>
+<h2>What the shell styles</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+<tr><td><code>.post</code></td><td>The article wrapper; no styling of its own</td></tr>
+<tr><td><code>.post-header</code></td><td>Spacing above the body; an <code>h1</code> here gets the hero size</td></tr>
+<tr><td><code>.post-body</code></td><td>Pairs with <code>.prose</code>; the markdown lives inside</td></tr>
+<tr><td><code>.post-footer</code></td><td>Spacing below the body</td></tr>
+<tr><td><code>.kicker</code>, <code>.meta</code>, <code>.tags</code>, <code>.tag</code></td><td>Small text above and below the title</td></tr>
+</tbody></table></div>
+<h2>Where the title goes</h2>
+<p>Rendered markdown usually begins with its own <code>&lt;h1&gt;</code>, as the fixture does, so the shell leaves the title to the body. If your renderer strips the title out, put an <code>&lt;h1&gt;</code> in <code>.post-header</code> instead: it is styled for it.</p>
+
+  </main>
+</div>
+<script src="../js/copy.js"></script>
+</body>
+</html>

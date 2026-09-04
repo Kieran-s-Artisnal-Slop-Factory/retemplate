@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="allegory">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Allegory: a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Allegory</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero allegory-split">
+    <div class="stack">
+      <p class="kicker">Two faces of one site</p>
+      <h1>By day an angel's page. By night <em>a devil's.</em></h1>
+    </div>
+    <div class="allegory-diptych">
+      <section class="allegory-halo">
+        <h2 class="allegory-band">The ascent</h2>
+        <p>Ivory, an antique gold, white type on gold bands, wings around a halo, and a soft light from above.</p>
+        <a class="btn allegory-vow" href="example/ascent.html">Read the ascent</a>
+      </section>
+      <section class="allegory-horn">
+        <h2 class="allegory-band">The descent</h2>
+        <p>Black, a red that reads on black, black type on red bands, horns around a flame, and hard shadows from below.</p>
+        <a class="btn allegory-vow" href="example/descent.html">Read the descent</a>
+      </section>
+    </div>
+    <div class="row">
+      <p>The toggle in the top corner chooses which face the rest of the page wears; every colour is a <code>light-dark()</code> pair, so the swap is complete. The two panels above are pinned, one to each face, with <a href="docs/components/flare.html">two classes</a>.</p>
+      <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What the toggle changes</h2>
+    <p>Body text never sits on a band, so everything you read clears AA in both faces. Only display type, 24px and up in bold, goes white on gold or black on red.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Element</th><th>By day</th><th>By night</th></tr></thead>
+        <tbody>
+          <tr><td>Page and surfaces</td><td>Ivory, <code>#fbf7ee</code></td><td>Off-black, <code>#0b0708</code></td></tr>
+          <tr><td>Links, focus, primary buttons</td><td>Antique gold, <code>#8a6d1f</code></td><td>Red, <code>#e0334f</code></td></tr>
+          <tr><td>Bands (display type only)</td><td>White on gold, <code>#c8a44a</code></td><td>Black on red, <code>#b3122e</code></td></tr>
+          <tr><td>Ornament</td><td>Wings around a halo</td><td>Horns around a flame</td></tr>
+          <tr><td>Shadows</td><td>Soft, gold-tinted radiance</td><td>Hard, offset, pure black</td></tr>
+          <tr><td>Behind the page</td><td>Light from above</td><td>Flame from below</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Three cards, three loyalties</h2>
+    <p>The left card is pinned to the day with <code>allegory-halo</code> and the right to the night with <code>allegory-horn</code>. The middle one follows you. Flip the toggle and watch which of them move.</p>
+    <div class="grid-3">
+      <article class="card allegory-halo">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Loyal to the day</h3>
+          <p class="card-text">Always ivory, always gold. A card like this can announce a chapter of light on a dark page.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Follows the reader</h3>
+          <p class="card-text">An ordinary card. It takes whichever face the page is wearing, and its icon takes the band colour.</p>
+        </div>
+      </article>
+      <article class="card allegory-horn">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Loyal to the night</h3>
+          <p class="card-text">Always black, always red. Native controls inside it turn dark too, because the pin is <code>color-scheme</code>.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The two chapters, mirrored</h2>
+    <p>The example site tells one night twice. Its two chapter pages use the same sections in the same order; the media sits on opposite sides, and the bands wear opposite colours.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/gallery-7.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">The ascent</h3>
+          <p class="card-text">Mara Quill climbs the bell tower of Corren to ring the hour. Media on the left, gold band.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/gallery-8.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">The descent</h3>
+          <p class="card-text">Tobin Marrow lowers himself into the dry well under the same tower. Media on the right, red band.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one feature card with an effect of its own. This one turns over and shows the other face. Hover it, or tab into it.</p>
+    <div class="grid-2">
+      <article class="card card-feature">
+        <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">The turn</h3>
+          <p class="card-text">Half a turn about its spine. When it is edge on, the colours swap to the opposite face, so on a light page the back is black and red, and on a dark page it is ivory and gold.</p>
+          <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">How the card is built</a></div>
+        </div>
+      </article>
+      <blockquote class="allegory-verse">
+        <p>Every bell that lifts a soul is rung by someone standing in the dark below it.</p>
+        <cite>The Bell at Corren, chapter one</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Where the faces meet</h2>
+    <section class="fifty-fifty">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">The seam</p>
+        <h2>One page can wear both</h2>
+        <p>A pinned section keeps its face while the page around it changes. The diptych in the hero is two pinned panels in a grid; the cards above are pinned one at a time. The ornament inside a pin is chosen by hand, because a mask is not a colour.</p>
+        <a class="btn btn-primary" href="docs/components/flare.html">How the pins work</a>
+      </div>
+    </section>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Eight plates</h2>
+    <p>Four from the ascent and four from the descent, alternating. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows are links, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A gold halo with rays on ivory" width="800" height="600"></a><figcaption>Halo</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A red flame on black" width="800" height="600"></a><figcaption>Flame</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="Two gold feathers" width="800" height="600"></a><figcaption>Feathers</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Red horns on black" width="800" height="600"></a><figcaption>Horns</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="Gold steps rising toward a halo" width="800" height="600"></a><figcaption>Rising</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Red steps falling toward a flame" width="800" height="600"></a><figcaption>Falling</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A bell tower under wings" width="800" height="600"></a><figcaption>The tower</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A well with a red rim" width="800" height="600"></a><figcaption>The well</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A gold halo with rays on ivory"><figcaption>Halo, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A red flame on black"><figcaption>Flame, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Two gold feathers"><figcaption>Feathers, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Red horns on black"><figcaption>Horns, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="Gold steps rising toward a halo"><figcaption>Rising, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Red steps falling toward a flame"><figcaption>Falling, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A bell tower under wings"><figcaption>The tower, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A well with a red rim"><figcaption>The well, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are Inter in tracked capitals, plus one in italic display type, the vow, for a promise rather than an action. A switch is a checkbox with <code>role="switch"</code>. Badges and banners carry status in the scheme's own hues.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Primary</button>
+      <button class="btn" type="button">Default</button>
+      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+      <button class="btn allegory-vow" type="button">I will finish the chapter</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Show the plates</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Read the chapters aloud</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Being told</span>
+      <span class="badge badge-done">Told</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your place in the story is kept.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Cormorant Garamond and Inter come from Google Fonts; the README says how to self-host them.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo. Its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>The bell did not ring. Nothing is wrong here; this is what wrong would look like.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Questions at the gate</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code>. Summaries are set in the display face; give a group one <code>name</code> and opening one closes the rest.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="gate" open>
+        <summary>Why two faces and not two themes?</summary>
+        <div class="accordion-body"><p>Because one palette block does both. Every slot is a <code>light-dark()</code> pair, so the same tokens paint the angel and the devil; nothing is duplicated and nothing can drift.</p></div>
+      </details>
+      <details class="accordion" name="gate">
+        <summary>Is white on gold really readable?</summary>
+        <div class="accordion-body"><p>Not for body text, which is why body text never goes there. Bands carry display type only, 24px and up in bold, where the shape of the letters does the work. Links and buttons use the darker <code>#8a6d1f</code>, which clears 4.5:1 on ivory.</p></div>
+      </details>
+      <details class="accordion" name="gate">
+        <summary>Does the ornament swap survive a retoken paste-in?</summary>
+        <div class="accordion-body"><p>The colours do; the drawing does not. Retoken takes the palette block only. The wings and horns are <code>--allegory-*</code> masks keyed to <code>data-scheme</code>, and stay with this template.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code> and <code>assets/</code>. Everything else in the folder is showcase and can go.</p></div>
+    </details>
+    <p>Dialogs are native too. The gate below opens one; the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open the gate</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Which way?</h2>
+      <p>The dialog traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser; the band on its top edge comes from the template.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Stay</button>
+        <button class="btn btn-primary" type="submit" value="go">Go on</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what a story is made of, so <code>.prose</code> styles every construct a markdown renderer produces. Headings are Cormorant Garamond; quotations are set in its italic against a band-coloured rule. The <a href="blogpost.html">blog post</a> runs the full test document through it, and <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A template is a promise about what markup will look like. This one makes the promise twice and keeps it both times.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Allegory</strong>
+        <p class="author-bio">A template with two faces. Cormorant Garamond for the telling, Inter for the controls.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>3 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a><a class="tag" href="docs/components/flare.html">the two faces</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Allegory</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Allegory is a retemplate template. MIT licensed. Two stylesheets, one small script, and one story told twice.</p>
+</footer>
+</body>
+</html>

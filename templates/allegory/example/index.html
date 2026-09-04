@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" data-theme="allegory">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>The Bell at Corren</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Bell at Corren</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="ascent.html">The ascent</a>
+    <a href="descent.html">The descent</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero allegory-split">
+    <div class="stack">
+      <p class="kicker">One night, told twice</p>
+      <h1>At midnight the bell must ring. Two people set out to make sure it does, <em>in opposite directions.</em></h1>
+    </div>
+    <div class="allegory-diptych">
+      <section class="allegory-halo">
+        <h2 class="allegory-band">The ascent</h2>
+        <p>Mara Quill, bellkeeper of Corren, climbs the two hundred and twelve steps of the tower with a lamp and a bad knee.</p>
+        <a class="btn allegory-vow" href="ascent.html">Climb with Mara</a>
+      </section>
+      <section class="allegory-horn">
+        <h2 class="allegory-band">The descent</h2>
+        <p>Tobin Marrow, who has dug wells for thirty years, is lowered into the dry one under the tower to find out why the ground is humming.</p>
+        <a class="btn allegory-vow" href="descent.html">Go down with Tobin</a>
+      </section>
+    </div>
+    <div class="row">
+      <p>Read either chapter first. They are the same length, they cover the same hour, and they end on the same word. The toggle in the corner changes the light you read by, not the story.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <section class="fifty-fifty">
+      <figure><img src="../assets/hero.svg" alt="" width="1200" height="500"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Corren</p>
+        <h2>A hill town with a bell on top and a well underneath</h2>
+        <p>The tower was built over the well in 1611, on the theory that a bell keeps bad things down. Nobody has tested the theory since, because nobody has needed to. On the night of the winter fair, that changes.</p>
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('keep-place').showModal()">Keep your place</button>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Who is in it</h2>
+    <p>Two people and a bell. The cards on the left and right keep the colours of their chapters whatever the light; the bell belongs to both.</p>
+    <div class="grid-3">
+      <article class="card allegory-halo">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Mara Quill</h3>
+          <p class="card-text">Bellkeeper for nineteen years. Has never missed the midnight of the fair, and does not intend to start because of a knee.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">The bell</h3>
+          <p class="card-text">Cast in 1611, four tonnes, named Patience by someone with a sense of humour. It has not been silent at midnight in four hundred years.</p>
+        </div>
+      </article>
+      <article class="card allegory-horn">
+        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Tobin Marrow</h3>
+          <p class="card-text">Well-digger, retired, called back for one job. Does not believe in humming ground, and would like to stop hearing it.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Before you begin</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="begin" open>
+        <summary>How long does it take to read?</summary>
+        <div class="accordion-body"><p>About twenty minutes a chapter. Each page is one sitting, and the two together are the whole story.</p></div>
+      </details>
+      <details class="accordion" name="begin">
+        <summary>Which chapter should I read first?</summary>
+        <div class="accordion-body"><p>Whichever face the page is wearing when you arrive. People who read the ascent first tend to trust the bell. People who read the descent first tend not to.</p></div>
+      </details>
+      <details class="accordion" name="begin">
+        <summary>Is it finished?</summary>
+        <div class="accordion-body"><p>Both chapters are complete. There is no third; midnight only happens once.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <div class="banner banner-info" role="status"><span>i</span><p>This is a demonstration site for the Allegory template. The town, the bell and the people in it are made up, and the forms post nowhere.</p></div>
+
+  <dialog class="modal" id="keep-place" aria-labelledby="keep-place-title">
+    <h2 id="keep-place-title">Keep your place</h2>
+    <p>Tell us a name and we will remember which step you were on. Nothing is sent anywhere; this is a demonstration.</p>
+    <form method="dialog">
+      <div class="stack">
+        <div class="field">
+          <label for="kp-name">Your name</label>
+          <input id="kp-name" name="name" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="kp-chapter">Chapter to return to</label>
+          <select id="kp-chapter" name="chapter">
+            <option value="ascent">The ascent</option>
+            <option value="descent">The descent</option>
+          </select>
+          <p class="hint">You can change this from either chapter page.</p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Not now</button>
+        <button class="btn btn-primary" type="submit" value="keep">Keep it</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Bell at Corren</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ascent.html">The ascent</a></li>
+        <li><a href="descent.html">The descent</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>The telling</h2>
+      <ul>
+        <li>Two chapters, one hour</li>
+        <li>About forty minutes to read</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Allegory template</a></li>
+        <li><a href="../docs/index.html">Get started with Allegory</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Allegory template. Corren, its bell and its well are fictional.</p>
+</footer>
+</body>
+</html>
