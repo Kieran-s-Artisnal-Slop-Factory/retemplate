@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en" data-theme="glassy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare — Glassy</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Glassy · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Glassy adds the two things that make glassmorphism read as glass: colour behind the panes, and something moving behind them.</p>
+</header>
+<h2 id="preview">Orbs</h2>
+<p>Two large blurred discs, fixed behind the page, drifting slowly. Put the block right after <code>&lt;body&gt;</code>; it is <code>aria-hidden</code> and never intercepts a click. (The preview below is inert because it sits inside the page rather than behind it.)</p>
+<figure class="example" data-snippet="glassy-orbs">
+<div class="glassy-flare glassy-orbs" aria-hidden="true">
+  <div class="glassy-orb"></div>
+  <div class="glassy-orb"></div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-orbs">&lt;div class="glassy-flare glassy-orbs" aria-hidden="true"&gt;
+  &lt;div class="glassy-orb"&gt;&lt;/div&gt;
+  &lt;div class="glassy-orb"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">Waves</h2>
+<p>One path, four <code>&lt;use&gt;</code> copies, four different durations. Because the path has an <code>id</code>, use the block once per page.</p>
+<figure class="example" data-snippet="glassy-waves">
+<div class="glassy-flare glassy-waves" aria-hidden="true">
+  <svg viewBox="0 24 150 28" preserveAspectRatio="none">
+    <defs><path id="glassy-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/></defs>
+    <g class="glassy-wave-set">
+      <use href="#glassy-wave" x="48" y="0"/>
+      <use href="#glassy-wave" x="48" y="3"/>
+      <use href="#glassy-wave" x="48" y="5"/>
+      <use href="#glassy-wave" x="48" y="7"/>
+    </g>
+  </svg>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-waves">&lt;div class="glassy-flare glassy-waves" aria-hidden="true"&gt;
+  &lt;svg viewBox="0 24 150 28" preserveAspectRatio="none"&gt;
+    &lt;defs&gt;&lt;path id="glassy-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/&gt;&lt;/defs&gt;
+    &lt;g class="glassy-wave-set"&gt;
+      &lt;use href="#glassy-wave" x="48" y="0"/&gt;
+      &lt;use href="#glassy-wave" x="48" y="3"/&gt;
+      &lt;use href="#glassy-wave" x="48" y="5"/&gt;
+      &lt;use href="#glassy-wave" x="48" y="7"/&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>A glass panel</h3>
+<p>The recipe every component uses, as a free-standing block.</p>
+<figure class="example" data-snippet="glassy-panel">
+<div class="glassy-panel">
+  <p class="kicker">A glass panel</p>
+  <p>Any block of content can sit on a sheet of glass. This is the same recipe every card, banner and table in the template uses.</p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-panel">&lt;div class="glassy-panel"&gt;
+  &lt;p class="kicker"&gt;A glass panel&lt;/p&gt;
+  &lt;p&gt;Any block of content can sit on a sheet of glass. This is the same recipe every card, banner and table in the template uses.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.glassy-orbs</code></td><td>Fixed, full-viewport, behind everything</td></tr>
+      <tr><td><code>.glassy-orb</code></td><td>A blurred disc; the two children take the two orb tokens</td></tr>
+      <tr><td><code>.glassy-waves</code></td><td>A clipped strip holding the SVG</td></tr>
+      <tr><td><code>.glassy-wave-set use</code></td><td>One wave layer; delays and durations differ per child</td></tr>
+      <tr><td><code>.glassy-panel</code></td><td>Glass background, bright edge, blur, large radius</td></tr>
+      <tr><td><code>.glassy-flare</code></td><td>The wrapper for flare that is markup</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The gradient, the glass, the edge, the blur radius, the wave colour and the orb colours are all tokens in <code>theme.css</code> (<code>--glassy-*</code>). Nothing in <code>global.css</code> names a colour.</li>
+<li>Both animations are switched off by <code>prefers-reduced-motion: reduce</code>.</li>
+<li><code>backdrop-filter</code> is what makes the glass frosted. Every panel pays for one; on very long pages with hundreds of cards, lower <code>--glassy-blur</code>.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

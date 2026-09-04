@@ -320,12 +320,32 @@ def normalise_ws(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
 
 
+# Free-content areas inside contract components: compared by their root only,
+# so what a template puts *inside* a card body or a footer column is its own
+# business. Everything around them is the contract.
+SLOT_CLASSES = {"card-body", "card-actions", "accordion-body", "fifty-fifty-body",
+                "modal", "banner", "field", "lightbox-slide", "data-table"}
+
+# Attributes whose presence is structural but whose value is content.
+PRESENCE_ONLY = {"name", "open", "popovertarget"}
+
+
+def is_slot(node: Node) -> bool:
+    if node.classes & SLOT_CLASSES:
+        return True
+    if node.tag == "section" and any("footer" in a.classes for a in node.ancestors()):
+        return True
+    return False
+
+
 def serialise(node: Node, *, keep_text=True, strip_classes=(), skip_class=None,
-              attr_filter=None, collapse=False) -> str:
+              attr_filter=None, collapse=False, slots=False) -> str:
     """A canonical string for structural comparison.
 
     With collapse=True, consecutive identical child skeletons are folded into
-    one, so a list with three items has the same shape as one with eight."""
+    one, so a list with three items has the same shape as one with eight.
+    With slots=True, content slots (SLOT_CLASSES) are serialised as their root
+    tag only."""
     if skip_class and skip_class in node.classes:
         return ""
     attrs = dict(node.attrs)
@@ -340,7 +360,10 @@ def serialise(node: Node, *, keep_text=True, strip_classes=(), skip_class=None,
         attrs["class"] = " ".join(sorted(attrs["class"].split()))
     if attr_filter:
         attrs = {k: v for k, v in attrs.items() if attr_filter(k)}
+        attrs = {k: ("" if k in PRESENCE_ONLY else v) for k, v in attrs.items()}
     a = "".join(f' {k}="{v}"' for k, v in sorted(attrs.items()))
+    if slots and is_slot(node):
+        return f"<{node.tag}{a}/>"
     inner = []
     for c in node.children:
         if isinstance(c, str):
@@ -350,7 +373,8 @@ def serialise(node: Node, *, keep_text=True, strip_classes=(), skip_class=None,
                     inner.append(t)
         else:
             child = serialise(c, keep_text=keep_text, strip_classes=strip_classes,
-                              skip_class=skip_class, attr_filter=attr_filter, collapse=collapse)
+                              skip_class=skip_class, attr_filter=attr_filter, collapse=collapse,
+                              slots=slots)
             if collapse and inner and inner[-1] == child:
                 continue
             inner.append(child)
@@ -1111,7 +1135,8 @@ class TemplateCheck:
     def skeleton(self, n: Node) -> str:
         keep = lambda k: k in ("name", "role", "popover", "popovertarget", "type", "open") or k.startswith("data-")
         return serialise(n, keep_text=False, strip_classes=(f"{self.name}-",),
-                         skip_class=f"{self.name}-flare", attr_filter=keep, collapse=True)
+                         skip_class=f"{self.name}-flare", attr_filter=keep, collapse=True,
+                         slots=True)
 
     def check_contract(self) -> None:
         if self.plain_shapes is None or self.name == "plain":

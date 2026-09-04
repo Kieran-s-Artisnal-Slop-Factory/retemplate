@@ -31,10 +31,10 @@ state of the build; the TODO records which *asks* have landed.
 | 1 — plain | done | 2026-09-04 | 29 pages, checker green |
 | 2 — Landing | done | 2026-09-04 | search + filters, previews, plain card |
 | A — Checkpoint | passed | 2026-09-04 | unfiltered checker 0/0; programmatic pass at 1280 and 375 in both schemes (overflow, images, lightbox, dialog, accordion, popovers, toggle, console) clean; screenshots partial — owner eyeball requested in the TODO |
-| 3 — Neumorphic | not started | | |
-| 4 — Brutal News | not started | | |
-| 5 — Glassy | not started | | |
-| B — Checkpoint | not started | | |
+| 3 — Neumorphic | done | 2026-09-04 | checker green; visual pass at Checkpoint B |
+| 4 — Brutal News | done | 2026-09-04 | checker green (one expected warning: acid yellow slot below 3:1); visual pass at Checkpoint B |
+| 5 — Glassy | done | 2026-09-04 | checker green; visual pass at Checkpoint B |
+| B — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of neumorphic, brutal-news, glassy at 1280 and 375 in both schemes (fonts, borders/shadows/glass, lightbox, dialog, popovers, toggle, overflow, console) clean; screenshots taken; no contract gaps raised |
 | 6 — Neon | not started | | |
 | 7 — Natural | not started | | |
 | C — Checkpoint | not started | | |

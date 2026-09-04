@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="glassy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Contact — Halo Studio</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+<div class="glassy-flare glassy-orbs" aria-hidden="true">
+  <div class="glassy-orb"></div>
+  <div class="glassy-orb"></div>
+</div>
+<header class="navbar">
+  <a class="brand" href="index.html">Halo Studio</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Contact</p>
+    <h1>Tell us about the project.</h1>
+    <p>A few lines is plenty. We reply within two working days, usually with a time for a call.</p>
+  </header>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent.</p></div>
+
+  <form class="form-grid" action="#" method="get">
+    <fieldset>
+      <legend>You</legend>
+      <div class="field">
+        <label for="c-name">Name</label>
+        <input id="c-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="c-org">Organisation</label>
+        <input id="c-org" name="org" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="c-url">Current website, if any</label>
+        <input id="c-url" name="url" type="url" placeholder="https://">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>The project</legend>
+      <div class="field">
+        <span class="field-label">What do you need?</span>
+        <label class="check"><input type="checkbox" name="need" value="site" checked> A website</label>
+        <label class="check"><input type="checkbox" name="need" value="identity"> An identity</label>
+        <label class="check"><input type="checkbox" name="need" value="retainer"> A retainer</label>
+      </div>
+      <div class="field">
+        <label for="c-budget">Budget</label>
+        <select id="c-budget" name="budget">
+          <option value="">Prefer not to say yet</option>
+          <option value="a">Under £5,000</option>
+          <option value="b" selected>£5,000 – £15,000</option>
+          <option value="c">Over £15,000</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-when">When would you like to start?</label>
+        <input id="c-when" name="when" type="month">
+      </div>
+      <div class="field field-wide">
+        <label for="c-msg">A few lines about it</label>
+        <textarea id="c-msg" name="message" rows="5" placeholder="Who it is for, what it has to do, what is wrong with the current one."></textarea>
+      </div>
+      <div class="field">
+        <label class="switch"><input type="checkbox" role="switch" name="news"><span>Send me the studio's occasional email</span></label>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-lg" type="submit">Send</button>
+      <button class="btn" type="reset">Clear</button>
+    </div>
+  </form>
+
+  <section class="section">
+    <section class="fifty-fifty">
+      <figure><img src="../assets/gallery-8.svg" alt="" width="800" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Visit</p>
+        <h2>Unit 4, The Old Dairy</h2>
+        <p>Ten minutes' walk from the station, past the library and over the bridge while it is still open. Coffee is on. Tuesdays and Thursdays are best.</p>
+        <a class="btn" href="mailto:hello@example.com">Email instead</a>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Halo Studio</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services and prices</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>Unit 4, The Old Dairy, Millbrook</li>
+        <li>01234 567 892</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Glassy template</a></li>
+        <li><a href="../docs/index.html">Get started with Glassy</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Glassy template. The studio, its clients and its dairy are fictional.</p>
+</footer>
+</body>
+</html>

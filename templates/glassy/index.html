@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" data-theme="glassy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Glassy — a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<div class="glassy-flare glassy-orbs" aria-hidden="true">
+  <div class="glassy-orb"></div>
+  <div class="glassy-orb"></div>
+</div>
+<header class="navbar">
+  <a class="brand" href="index.html">Glassy</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Glassmorphism</p>
+      <h1>Frosted glass over colour, and something moving behind it.</h1>
+      <p>Glassy puts every card, bar and dialog on a translucent sheet with a bright edge, floats two blurred orbs behind the page, and rolls a strip of waves along the bottom of the hero. Nothing else changes: the markup is the same as every other template here.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+      </div>
+    </div>
+    <img src="assets/hero.svg" alt="" width="1200" height="500">
+  </section>
+  <div class="glassy-flare glassy-waves" aria-hidden="true">
+    <svg viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs><path id="glassy-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/></defs>
+      <g class="glassy-wave-set">
+        <use href="#glassy-wave" x="48" y="0"/>
+        <use href="#glassy-wave" x="48" y="3"/>
+        <use href="#glassy-wave" x="48" y="5"/>
+        <use href="#glassy-wave" x="48" y="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <section class="section">
+    <h2>What you get</h2>
+    <p>Take the <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> folders and you have the whole template. The three cards below are the ordinary card, with an image, an icon, and neither; each is a pane of glass and the gradient shows through it.</p>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens, the gradient stops and the glass recipe; <code>global.css</code> holds everything that uses them.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Light and dark</h3>
+          <p class="card-text">A lavender sky by day, deep navy by night. The gradient is three colour tokens, so it flips with everything else.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Retoken compatible</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards, sideways</h2>
+    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one <em>feature</em> card with an effect that suits it. Glassy's tilts back a few degrees and its glass brightens when you hover it.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The feature card</h3>
+        <p class="card-text">A fixed perspective tilt, done in CSS. Nothing follows the cursor; it does not need to.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Half and half</h2>
+    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>fifty-fifty-reverse</code> and the image moves to the right.</p>
+    <div class="stack">
+      <section class="fifty-fifty">
+        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image left</p>
+          <h2>Say the one thing this block is for</h2>
+          <p>A heading, a paragraph and a single call to action. In this template the block is one wide pane.</p>
+          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
+        </div>
+      </section>
+      <section class="fifty-fifty fifty-fifty-reverse">
+        <figure><img src="assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image right</p>
+          <h2>The same block, mirrored</h2>
+          <p>Alternate them down a page and the eye is led from side to side without any extra styling.</p>
+          <a class="btn" href="docs/components/fifty-fifty.html">Read the docs</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Questions, folded</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group of them the same <code>name</code> and opening one closes the others, with no script.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>What makes it look like glass?</summary>
+        <div class="accordion-body"><p>Three things: a translucent background, a <code>backdrop-filter</code> that blurs whatever is behind it, and a one-pixel edge brighter than the sheet. Every panel here has all three.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Which browsers?</summary>
+        <div class="accordion-body"><p>Anything from 2024 on: the template relies on <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive accordions and <code>backdrop-filter</code>.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code> and <code>assets/</code>. The README lists it.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>A gallery with a lightbox</h2>
+    <p>Click any image. The lightbox is a <code>&lt;dialog&gt;</code> on frosted glass; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="Hills under a pale sun" width="800" height="600"></a><figcaption>Hills</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Two shapes" width="800" height="600"></a><figcaption>Shapes</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="Peaks and a moon" width="800" height="600"></a><figcaption>Peaks</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Overlapping circles" width="800" height="600"></a><figcaption>Circles</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A mountain" width="800" height="600"></a><figcaption>Mountain</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Panels" width="800" height="600"></a><figcaption>Panels</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A ring" width="800" height="600"></a><figcaption>Ring</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Ridges under a moon" width="800" height="600"></a><figcaption>Ridges</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Hills under a pale sun"><figcaption>Hills — 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Two shapes"><figcaption>Shapes — 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Peaks and a moon"><figcaption>Peaks — 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Overlapping circles"><figcaption>Circles — 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A mountain"><figcaption>Mountain — 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Panels"><figcaption>Panels — 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A ring"><figcaption>Ring — 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Ridges under a moon"><figcaption>Ridges — 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are pills of glass that lift on hover; the primary one carries a gradient. The switch thumb is the accent. Badges and banners are small panes.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Primary</button>
+      <button class="btn" type="button">Default</button>
+      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Notifications</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Active</span>
+      <span class="badge badge-done">Done</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Glassy uses your system fonts and loads nothing from anywhere.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>Every pane pays for a blur. On a page with hundreds of cards, lower <code>--glassy-blur</code>.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A table and a dialog</h2>
+    <p>Tables sit on a pane that scrolls sideways when they are wider than the page.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Glass</th><th>Script</th><th>Docs</th></tr></thead>
+        <tbody>
+          <tr><td>Card</td><td>standard, brightens as the feature card</td><td>none</td><td><a href="docs/components/cards.html">cards</a></td></tr>
+          <tr><td>Navbar</td><td>standard, blurred</td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
+          <tr><td>Dialog</td><td>strong, over a blurred backdrop</td><td>one line</td><td><a href="docs/components/dialog.html">dialog</a></td></tr>
+          <tr><td>Waves</td><td>none: four layers of the wave colour</td><td>none</td><td><a href="docs/components/flare.html">flare</a></td></tr>
+          <tr><td>Theme toggle</td><td>strong</td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button below opens one; the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">A modal dialog</h2>
+      <p>It traps focus, blurs the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces; code blocks are small panes of their own. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>Glass is only glass if you can see something through it. Put colour behind it and let it move.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Glassy</strong>
+        <p class="author-bio">Frosted panels, drifting orbs, rolling waves.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Glassy</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Glassy is a retemplate template. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

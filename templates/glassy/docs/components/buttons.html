@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="glassy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Buttons — Glassy</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Glassy · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html" aria-current="page">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Buttons</h1>
+  <p>Three kinds — primary, default, danger — in three sizes. A link can wear the same classes when it should look like a button.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="buttons">
+<div class="row">
+  <button class="btn btn-primary" type="button">Primary</button>
+  <button class="btn" type="button">Default</button>
+  <button class="btn btn-danger" type="button">Danger</button>
+  <a class="btn" href="#">A link</a>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="buttons">&lt;div class="row"&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Primary&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Default&lt;/button&gt;
+  &lt;button class="btn btn-danger" type="button"&gt;Danger&lt;/button&gt;
+  &lt;a class="btn" href="#"&gt;A link&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Sizes and the disabled state</h3>
+<figure class="example" data-snippet="button-sizes">
+<div class="row">
+  <button class="btn btn-sm" type="button">Small</button>
+  <button class="btn" type="button">Regular</button>
+  <button class="btn btn-lg" type="button">Large</button>
+  <button class="btn btn-primary" type="button" disabled>Disabled</button>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="button-sizes">&lt;div class="row"&gt;
+  &lt;button class="btn btn-sm" type="button"&gt;Small&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Regular&lt;/button&gt;
+  &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
+  &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.btn</code></td><td>The base: inline flex, padding, border, radius, transition</td></tr>
+      <tr><td><code>.btn-primary</code></td><td>Filled with the accent</td></tr>
+      <tr><td><code>.btn-danger</code></td><td>Filled with the danger colour</td></tr>
+      <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
+      <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
+      <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every button that does not submit a form carries <code>type="button"</code>; otherwise, inside a form, it submits.</li>
+<li>Use a <code>&lt;button&gt;</code> for actions and an <code>&lt;a&gt;</code> for navigation, whatever they look like.</li>
+<li>Group them in <code>.row</code> to get consistent gaps and wrapping.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="page-break.html">← Page break</a><a href="forms.html">Forms →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

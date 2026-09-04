@@ -6,6 +6,12 @@
 
 * **The landing page.** `index.html` lists every template with a hand-drawn preview per scheme, a title search and tag filters (scheme, type, motion, fonts, feel) that combine, and links to each template's overview, docs and example site.
 
+* **The `neumorphic` template.** Soft UI on a single surface: every card, button and field is pushed out of, or pressed into, the page colour by a pair of light and dark shadows, with no borders anywhere but a banner's coloured edge. Buttons and the feature card press in on click; inputs and the switch track are sunken. Cool grey with white highlights by day, charcoal by night; Nunito from Google Fonts. Example site: a smart-home dashboard.
+
+* **The `brutal-news` template.** A brutalist newspaper: white paper and black ink, rules never thinner than three pixels, no rounded corners, hard offset shadows, and a harsh set of hues at full strength (hot red, acid yellow, cobalt, signal green). Archivo Black headlines, Inter body, JetBrains Mono kickers and data, all from Google Fonts. Flare: a masthead with dateline, ruled columns with a drop cap, tape, a ruled box and a red block. Dark mode prints the same paper in reverse. Example site: a local newspaper.
+
+* **The `glassy` template.** Glassmorphism: a soft gradient backdrop built from three colour tokens, two blurred colour orbs drifting behind the page, and every card, bar, panel and dialog a translucent sheet with a bright edge and a backdrop blur. Pill buttons, large radii, a strip of four wave layers on a slow parallax that stops under reduced motion, system fonts. Example site: a small design studio.
+
 ## Bug Fixes
 
 

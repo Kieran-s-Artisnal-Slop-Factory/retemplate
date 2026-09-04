@@ -1,0 +1,152 @@
+/*
+ * brutal-news — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * A brutalist newspaper: paper and ink, rules never thinner than 3px, no
+ * corners, hard offset shadows, and a handful of harsh colours used at full
+ * strength. Dark mode is the same paper printed in reverse.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation: hard offsets, ink-coloured ─────────────────────────── */
+  --shadow-1: 4px 4px 0 var(--pal-shadow-1);
+  --shadow-2: 8px 8px 0 var(--pal-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  --font-display: 'Archivo Black', 'Arial Black', Impact, system-ui, sans-serif;
+  --font-weight-display: 400;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2.25rem;
+  --font-size-3xl: 3rem;
+  --font-size-hero: clamp(3rem, 1.5rem + 6vw, 6.5rem);
+  --line-height: 1.5;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape: none ───────────────────────────────────────────────────── */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-full: 0;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 68rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: brutal-news ───────────────────────────────────────────────
+ * White paper, black ink, and a harsh set: hot red for the brand, acid
+ * yellow, cobalt, signal green, magenta and cyan for everything the slots
+ * ask for. The border slots ARE the ink: every rule is drawn in --pal-bg2.
+ * Dark mode reverses the paper; the hues stay loud.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='brutal-news'],
+[data-theme='brutal-news'] {
+  --pal-bg0: light-dark(#ffffff, #000000);
+  --pal-bg0-soft: light-dark(#ffffff, #000000);
+  --pal-bg1: light-dark(#f2f2f2, #161616);
+  --pal-bg2: light-dark(#000000, #ffffff);
+  --pal-bg3: light-dark(#000000, #ffffff);
+
+  --pal-fg: light-dark(#000000, #ffffff);
+  --pal-fg-muted: light-dark(#333333, #d4d4d4);
+  --pal-gray: light-dark(#6b6b6b, #9a9a9a);
+
+  --pal-red: light-dark(#d42a12, #ff5a3c);
+  --pal-green: light-dark(#00a651, #3ddc84);
+  --pal-yellow: light-dark(#ffe600, #ffe600);
+  --pal-blue: light-dark(#0033ff, #6b8cff);
+  --pal-purple: light-dark(#ff00aa, #ff5fc1);
+  --pal-aqua: light-dark(#00b5c2, #4de1e8);
+
+  --pal-accent: light-dark(#d42a12, #ff5a3c);
+  --pal-accent-strong: light-dark(#a81e0a, #ff8a72);
+  --pal-on-accent: light-dark(#ffffff, #000000);
+
+  --pal-shadow-1: light-dark(#000000, #ffffff);
+  --pal-shadow-2: light-dark(#000000, #ffffff);
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The rule weights and the two colours the flare uses at full strength.
+ * Not part of the retoken paste-in.
+ */
+:root,
+.themed {
+  --brutal-news-rule: 3px;
+  --brutal-news-rule-heavy: 6px;
+  --brutal-news-red: light-dark(#e6331a, #ff5a3c);
+  --brutal-news-yellow: #ffe600;
+  --brutal-news-ink-on-yellow: #000000;
+}

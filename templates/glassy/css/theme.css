@@ -1,0 +1,158 @@
+/*
+ * glassy — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * Glassmorphism: a soft gradient backdrop, blurred colour behind it, and
+ * every panel a sheet of frosted glass with a bright edge. The gradient is
+ * built from three colour tokens, so it swaps with the scheme like every
+ * other colour here.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 2px 8px var(--pal-shadow-1);
+  --shadow-2: 0 12px 40px var(--pal-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: var(--font-body);
+  --font-weight-display: 700;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.6rem;
+  --font-size-hero: clamp(2.4rem, 1.6rem + 3vw, 4rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: glassy ────────────────────────────────────────────────────
+ * Cool, airy blues by day over a lavender-tinted sky; deep navy by night.
+ * --pal-bg0 is the flat colour under the gradient (and what retoken sees);
+ * the glass panels themselves are the template tokens below.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='glassy'],
+[data-theme='glassy'] {
+  --pal-bg0: light-dark(#eef1fb, #141727);
+  --pal-bg0-soft: light-dark(#ffffff, #1c2036);
+  --pal-bg1: light-dark(#f5f7fd, #232845);
+  --pal-bg2: light-dark(#d9deef, #313866);
+  --pal-bg3: light-dark(#b9c2df, #46508a);
+
+  --pal-fg: light-dark(#1f2a44, #eef0fb);
+  --pal-fg-muted: light-dark(#526285, #aab3d6);
+  --pal-gray: light-dark(#8a97b3, #7d86ab);
+
+  --pal-red: light-dark(#d64545, #ff7b7b);
+  --pal-green: light-dark(#2e9e5b, #5fd38d);
+  --pal-yellow: light-dark(#b8801a, #f0c05a);
+  --pal-blue: light-dark(#2f6fdb, #7ea2ff);
+  --pal-purple: light-dark(#7a5af5, #b39cff);
+  --pal-aqua: light-dark(#1f9fb3, #5fd4e8);
+
+  --pal-accent: light-dark(#3556c9, #8ea6ff);
+  --pal-accent-strong: light-dark(#2a44a3, #a9bbff);
+  --pal-on-accent: light-dark(#ffffff, #0f1330);
+
+  --pal-shadow-1: light-dark(rgb(31 42 68 / 0.12), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(31 42 68 / 0.22), rgb(0 0 0 / 0.6));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The gradient stops, the glass, its edge, the blur, the wave colour and
+ * the two orbs that drift behind the page. Not part of the retoken
+ * paste-in.
+ */
+:root,
+.themed {
+  --glassy-g1: light-dark(#c8d4ff, #141727);
+  --glassy-g2: light-dark(#eef1fb, #2a3160);
+  --glassy-g3: light-dark(#f6dcff, #3a416f);
+  --glassy-glass: light-dark(rgb(255 255 255 / 0.6), rgb(28 32 54 / 0.55));
+  --glassy-glass-strong: light-dark(rgb(255 255 255 / 0.82), rgb(28 32 54 / 0.8));
+  --glassy-edge: light-dark(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.14));
+  --glassy-blur: 24px;
+  --glassy-wave: light-dark(rgb(255 255 255 / 0.55), rgb(142 166 255 / 0.16));
+  --glassy-orb-1: light-dark(#8ea6ff, #3556c9);
+  --glassy-orb-2: light-dark(#f0b6ff, #7a5af5);
+}

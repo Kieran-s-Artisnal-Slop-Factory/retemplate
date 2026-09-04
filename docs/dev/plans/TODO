@@ -16,11 +16,11 @@ Before beginning make sure the VERSION is up to date, and create a file called `
   - [x] `docs/dev/template-contract.md` + `docs/dev/testing.md`
   - [x] `templates/plain` — the reference implementation of the contract (every page, component and doc)
 - [ ] Create initial templates
-  - [ ] Neumorphic
-  - [ ] Brutal News; A brutalist newspaper like design with thick border lines and harsh colors
-    - [ ] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5)
-  - [ ] Glassy; Modern design with highly frosted glassmorphic elements, and moving wave animations
-    - [ ] [reference](https://canadiancoding.ca/)
+  - [x] Neumorphic
+  - [x] Brutal News; A brutalist newspaper like design with thick border lines and harsh colors
+    - [x] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5) (built to these words rather than the reference's 2px/one-red restraint; see open question 14)
+  - [x] Glassy; Modern design with highly frosted glassmorphic elements, and moving wave animations
+    - [x] [reference](https://canadiancoding.ca/)
   - [ ] Neon; A black design with neon accents, light mode is only less dark, don't go fully white
     - [ ] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/4)
   - [ ] Natural; A cream-papery design with some light green and brown accents, dark mode leans into more of a dirt texturey backgrop with light green and cream colours
@@ -36,6 +36,7 @@ This section is for me to keep track of what I need to manually review, feel fre
 
 - [x] Review `docs/dev/plans/version-0.1.0-phased.md` (2026-09-03): confirm the **Folder structure** section and answer the **Open questions** table (each has a default) before Phase 0 starts — confirmed 2026-09-04 with the no-npm correction
 - [ ] Checkpoint A visual pass (2026-09-04): the agent's pass was programmatic (overflow, interactions, console) plus a handful of screenshots. Please eyeball `templates/plain/index.html`, `blogpost.html`, `docs/index.html` and the landing in both schemes and note anything that looks off.
+- [ ] Checkpoint B visual pass (2026-09-04): please eyeball `templates/neumorphic`, `templates/brutal-news` and `templates/glassy` overviews and example sites in both schemes. Things a script cannot judge: whether Neumorphic's contrast feels right on your screen, whether Brutal News is loud enough (or too loud), and how the Glassy waves and orbs look in motion.
 - [ ] Open questions still defaulted, answer before Phase 3 if you disagree: fonts by Google Fonts `<link>` (or approve a download script), Brutal News built to the TODO's words (thick rules, harsh hues) rather than the 2px reference, Allegory's white-on-gold / black-on-red kept for display bands only
 
 ## Per Template

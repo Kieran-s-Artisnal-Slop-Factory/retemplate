@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" data-theme="brutal-news">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Defaults — Brutal News</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Brutal News · Defaults</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../index.html">Overview</a>
+        <a href="../blogpost.html">Blog post</a>
+        <a href="../forms.html">Forms</a>
+        <a href="../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../docs/index.html">Get started</a>
+        <a href="../docs/theme.html">Theme</a>
+        <a href="../docs/defaults.html" aria-current="page">Defaults</a>
+        <a href="../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../docs/components/index.html">All components</a>
+        <a href="../docs/components/accordion.html">Accordion</a>
+        <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../docs/components/switch.html">Switch</a>
+        <a href="../docs/components/page-break.html">Page break</a>
+        <a href="../docs/components/buttons.html">Buttons</a>
+        <a href="../docs/components/forms.html">Forms</a>
+        <a href="../docs/components/dialog.html">Dialog</a>
+        <a href="../docs/components/navbar.html">Navbar</a>
+        <a href="../docs/components/sidebar.html">Sidebar</a>
+        <a href="../docs/components/banner.html">Banner</a>
+        <a href="../docs/components/badge.html">Badge</a>
+        <a href="../docs/components/table.html">Table</a>
+        <a href="../docs/components/author-card.html">Author card</a>
+        <a href="../docs/components/footer.html">Footer</a>
+        <a href="../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Defaults</p>
+  <h1>Every bare element</h1>
+  <p>No component classes on this page, only a <code>.prose</code> wrapper. This is what markup with no classes at all looks like in Brutal News.</p>
+</header>
+<div class="prose">
+<h1>Heading one</h1>
+<h2>Heading two</h2>
+<h3>Heading three</h3>
+<h4>Heading four</h4>
+<h5>Heading five</h5>
+<h6>Heading six</h6>
+<p>A paragraph with <a href="#">a link</a>, <em>emphasis</em>, <strong>strong text</strong>, <del>deleted text</del>, <ins>inserted text</ins>, <code>inline code</code>, a <kbd>Ctrl</kbd>+<kbd>C</kbd> shortcut, <mark>highlighted words</mark>, an <abbr title="abbreviation">abbr</abbr>, <small>small print</small>, H<sub>2</sub>O and E=mc<sup>2</sup>, <cite>a citation</cite>, and a <q>short quotation</q>.</p>
+<p>Paragraphs are set at the base size with a comfortable line height and a measure of about seventy characters. <span lang="la">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+<blockquote>
+<p>A blockquote. It is quieter than the surrounding text and carries a rule on its left.</p>
+<footer>— <cite>Someone quotable</cite></footer>
+</blockquote>
+<ul>
+<li>An unordered list item</li>
+<li>Another, with a nested list
+<ul><li>Nested item</li><li>Nested item</li></ul>
+</li>
+<li>A last item</li>
+</ul>
+<ol>
+<li>An ordered list item</li>
+<li>Another
+<ol><li>Nested and numbered</li><li>Nested and numbered</li></ol>
+</li>
+<li>A last item</li>
+</ol>
+<dl>
+<dt>Term</dt><dd>A definition of the term.</dd>
+<dt>Another term</dt><dd>Its definition, which can run to more than one line if it needs to.</dd>
+</dl>
+<pre><code>// A code block
+const answer = 42;
+console.log(`The answer is ${answer}`);</code></pre>
+<table>
+<caption>A table with a caption</caption>
+<thead><tr><th>Name</th><th>Role</th><th>Since</th></tr></thead>
+<tbody>
+<tr><td>Ada</td><td>Analyst</td><td>1843</td></tr>
+<tr><td>Grace</td><td>Compiler</td><td>1952</td></tr>
+<tr><td>Margaret</td><td>Engineer</td><td>1969</td></tr>
+</tbody>
+</table>
+<figure>
+<img src="../assets/fixture-photo-1.svg" alt="A placeholder landscape" width="800" height="450">
+<figcaption>A figure with a caption.</figcaption>
+</figure>
+<hr>
+<details>
+<summary>A details element</summary>
+<p>Hidden until opened, with the browser's own marker.</p>
+</details>
+<p>Form controls, bare:</p>
+<p><label for="d-text">Text</label> <input id="d-text" type="text" placeholder="Type here"></p>
+<p><label for="d-select">Select</label> <select id="d-select"><option>One</option><option>Two</option></select></p>
+<p><label for="d-area">Textarea</label> <textarea id="d-area" rows="3"></textarea></p>
+<p><label><input type="checkbox" checked> A checkbox</label> <label><input type="radio" name="d-r" checked> A radio</label> <label><input type="radio" name="d-r"> Another radio</label></p>
+<p><label for="d-range">Range</label> <input id="d-range" type="range"> <label for="d-color">Colour</label> <input id="d-color" type="color" value="#4056c9"></p>
+<p><button type="button">A button</button> <button type="button" disabled>Disabled</button> <progress value="40" max="100">40%</progress> <meter value="0.6">60%</meter></p>
+</div>
+
+  </main>
+</div>
+<script src="../js/copy.js"></script>
+</body>
+</html>

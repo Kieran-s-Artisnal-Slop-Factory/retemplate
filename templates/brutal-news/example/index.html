@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-theme="brutal-news">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>The Millbrook Gazette</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Gazette</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Front page</a>
+    <a href="article.html">Article</a>
+    <a href="subscribe.html">Subscribe</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <div class="brutal-news-flare">
+    <header class="brutal-news-masthead">
+      <p class="kicker">Millbrook's paper since 1931</p>
+      <h1>The Millbrook Gazette</h1>
+      <p class="brutal-news-dateline"><span>No. 4,912</span><span>Thursday 4 September 2026</span><span>£1.20</span></p>
+    </header>
+  </div>
+
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Council · Exclusive</p>
+      <h1>Bridge to close for a year. Nobody told the bus.</h1>
+      <div class="brutal-news-columns">
+        <p class="brutal-news-dropcap">Mill Lane bridge will shut to traffic from October for twelve months of repairs, the county confirmed last night, after the Gazette obtained an engineer's report describing the deck as "at the end of its life". The number 4 bus, which crosses it eleven times a day, has not yet been given a diversion.</p>
+        <p>The report, dated June, was not published. Councillors were briefed in July. Residents found out on Tuesday, when a contractor's sign appeared on the parapet.</p>
+      </div>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="article.html">Read the full story</a>
+        <a class="btn btn-lg" href="subscribe.html">Subscribe</a>
+      </div>
+    </div>
+    <div class="brutal-news-box">
+      <p><span class="brutal-news-tape">Inside</span></p>
+      <ul>
+        <li><a href="#local">Local: the library lends ukuleles now</a></li>
+        <li><a href="#opinion">Opinion: fix the bridge, then the bus</a></li>
+        <li><a href="#tides">Tides and weather</a></li>
+        <li><a href="#sections">Sections</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="local">
+    <h2>Local</h2>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Library</p>
+          <h3 class="card-title"><a href="article.html">Now lending: two ukuleles and a telescope</a></h3>
+          <p class="card-text">The library of things opens on the ground floor with forty items and a waiting list for the drill.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Sport</p>
+          <h3 class="card-title">Rovers lose again, blame the pitch</h3>
+          <p class="card-text">A 3–0 defeat at home, the fourth in a row. The groundsman says the pitch is fine.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Planning</p>
+          <h3 class="card-title">Forty homes proposed for the old dairy</h3>
+          <p class="card-text">The consultation runs to 30 September. The Gazette has read all 212 pages so you do not have to.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="opinion">
+    <section class="fifty-fifty">
+      <figure><img src="../assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Opinion</p>
+        <h2>Fix the bridge. Then fix the bus.</h2>
+        <p>A closure everyone can see coming is not an emergency. It is a diary entry. The county had a year to plan the diversion and spent it not telling anyone.</p>
+        <a class="btn btn-primary" href="article.html">Read the leader</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section" id="tides">
+    <h2>Tides and weather</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>High water</th><th>Low water</th><th>Weather</th></tr></thead>
+        <tbody>
+          <tr><td>Thursday</td><td>06:12 · 18:40</td><td>12:25</td><td>Bright, 19°</td></tr>
+          <tr><td>Friday</td><td>06:58 · 19:24</td><td>13:10</td><td>Showers, 17°</td></tr>
+          <tr><td>Saturday</td><td>07:46 · 20:11</td><td>13:58</td><td>Wind, 16°</td></tr>
+          <tr><td>Sunday</td><td>08:37 · 21:02</td><td>14:49</td><td>Fine, 20°</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="sections">
+    <h2>Sections</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="sections" open>
+        <summary>News</summary>
+        <div class="accordion-body"><p>Council, courts, schools, the bridge. Everything that happens within four miles of the mill.</p></div>
+      </details>
+      <details class="accordion" name="sections">
+        <summary>Sport</summary>
+        <div class="accordion-body"><p>Rovers, the cricket club, the swimming gala, and whoever ran the fastest parkrun on Saturday.</p></div>
+      </details>
+      <details class="accordion" name="sections">
+        <summary>Notices</summary>
+        <div class="accordion-body"><p>Births, marriages, deaths, lost cats, found cats, and the WI's jam results in full.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <div class="brutal-news-red">
+    <h2>Two pounds a month. Every story, no paywall, no adverts.</h2>
+    <p>The Gazette is paid for by the people who read it. <a href="subscribe.html">Join them.</a></p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Millbrook Gazette</h2>
+      <ul>
+        <li><a href="index.html">Front page</a></li>
+        <li><a href="article.html">Today's article</a></li>
+        <li><a href="subscribe.html">Subscribe</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>3 Market Row, Millbrook</li>
+        <li>01234 567 891</li>
+        <li><a href="mailto:desk@example.com">desk@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Brutal News template</a></li>
+        <li><a href="../docs/index.html">Get started with Brutal News</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Brutal News template. The town, the bridge and the bus are fictional.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="brutal-news">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Subscribe — The Millbrook Gazette</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Gazette</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Front page</a>
+    <a href="article.html">Article</a>
+    <a href="subscribe.html" aria-current="page">Subscribe</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Subscribe</p>
+    <h1>Two pounds a month. That is the whole pitch.</h1>
+    <p>No paywall, no adverts, no tiers with names. Every reader pays the same and every story is free to everyone. Subscribers get the paper delivered, or not, as they like.</p>
+  </header>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and no money changes hands.</p></div>
+
+  <section class="section">
+    <h2>What you pay</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Plan</th><th>Price</th><th>Delivery</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly</td><td>£2.00</td><td>Online</td><td>Cancel any time</td></tr>
+          <tr><td>Monthly, paper</td><td>£4.50</td><td>Thursday, by post</td><td>Millbrook postcodes only</td></tr>
+          <tr><td>Yearly</td><td>£20.00</td><td>Online</td><td>Two months free</td></tr>
+          <tr><td>Gift</td><td>£20.00</td><td>Either</td><td><button class="btn btn-sm" type="button" onclick="document.getElementById('gift').showModal()">Send one</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <form class="form-grid" action="#" method="get">
+    <fieldset>
+      <legend>You</legend>
+      <div class="field">
+        <label for="s-name">Name</label>
+        <input id="s-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="s-email">Email</label>
+        <input id="s-email" name="email" type="email" autocomplete="email" required>
+        <p class="hint">For the receipt and, if you want it, the morning email.</p>
+      </div>
+      <div class="field field-wide">
+        <label for="s-address">Address (paper delivery only)</label>
+        <textarea id="s-address" name="address" rows="3" autocomplete="street-address"></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Plan</legend>
+      <div class="field">
+        <span class="field-label">Choose one</span>
+        <label class="check"><input type="radio" name="plan" value="monthly" checked> Monthly, £2</label>
+        <label class="check"><input type="radio" name="plan" value="paper"> Monthly with paper, £4.50</label>
+        <label class="check"><input type="radio" name="plan" value="yearly"> Yearly, £20</label>
+      </div>
+      <div class="field">
+        <label class="switch"><input type="checkbox" role="switch" name="morning" checked><span>The morning email, 7 am</span></label>
+        <label class="switch"><input type="checkbox" role="switch" name="alerts"><span>Breaking news, rarely</span></label>
+      </div>
+      <div class="field">
+        <label for="s-start">Start date</label>
+        <input id="s-start" name="start" type="date">
+      </div>
+      <div class="field">
+        <label for="s-ref">How did you hear about us?</label>
+        <select id="s-ref" name="ref">
+          <option value="">Choose…</option>
+          <option value="paper">Picked up a copy</option>
+          <option value="friend">A friend</option>
+          <option value="bridge">The bridge story</option>
+        </select>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-lg" type="submit">Subscribe</button>
+      <button class="btn" type="reset">Start again</button>
+    </div>
+  </form>
+
+  <section class="section">
+    <h2>Where the money goes</h2>
+    <div class="grid-3">
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Two reporters</h3>
+          <p class="card-text">Full-time, local, and at every council meeting whether or not anything happens.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">One press</h3>
+          <p class="card-text">Thursday's paper is printed in Millbrook on a machine older than the bridge.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Nothing else</h3>
+          <p class="card-text">No owner, no shareholders, no algorithm. The accounts are published every March.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <dialog class="modal" id="gift" aria-labelledby="gift-title">
+    <h2 id="gift-title">Send a gift subscription</h2>
+    <p>A year of the Gazette for someone who will pretend not to read it.</p>
+    <form method="dialog">
+      <div class="stack">
+        <div class="field">
+          <label for="g-to">Their email</label>
+          <input id="g-to" name="to" type="email">
+        </div>
+        <div class="field">
+          <label for="g-note">A note</label>
+          <input id="g-note" name="note" type="text" placeholder="Happy birthday. Read the news.">
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="send">Send</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Millbrook Gazette</h2>
+      <ul>
+        <li><a href="index.html">Front page</a></li>
+        <li><a href="article.html">Today's article</a></li>
+        <li><a href="subscribe.html">Subscribe</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>3 Market Row, Millbrook</li>
+        <li>01234 567 891</li>
+        <li><a href="mailto:desk@example.com">desk@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Brutal News template</a></li>
+        <li><a href="../docs/index.html">Get started with Brutal News</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Brutal News template. The town, the bridge and the bus are fictional.</p>
+</footer>
+</body>
+</html>

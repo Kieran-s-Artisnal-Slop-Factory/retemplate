@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Neumorphic preview">
+  <rect width="400" height="250" fill="#2a2d34"/>
+  <rect x="0" y="0" width="400" height="28" fill="#2a2d34"/>
+  <rect x="0" y="28" width="400" height="1" fill="#3f444e"/>
+  <rect x="14" y="10" width="44" height="8" rx="4" fill="#e6e9ef"/>
+  <rect x="250" y="11" width="26" height="6" rx="3" fill="#7f8794"/>
+  <rect x="284" y="11" width="26" height="6" rx="3" fill="#7f8794"/>
+  <rect x="318" y="11" width="26" height="6" rx="3" fill="#7f8794"/>
+  <rect x="366" y="8" width="20" height="12" rx="3" fill="#3f444e"/>
+  <rect x="24" y="52" width="150" height="14" rx="4" fill="#e6e9ef"/>
+  <rect x="24" y="72" width="190" height="8" rx="4" fill="#7f8794"/>
+  <rect x="24" y="86" width="150" height="8" rx="4" fill="#7f8794"/>
+  <rect x="24" y="106" width="64" height="20" rx="14" fill="#8fb3ff"/>
+  <rect x="96" y="106" width="64" height="20" rx="14" fill="#2a2d34" stroke="#3f444e" stroke-width="1"/>
+  <rect x="236" y="46" width="140" height="88" rx="14" fill="#8fb3ff" opacity="0.18"/>
+  <circle cx="276" cy="90" r="24" fill="#8fb3ff" opacity="0.7"/>
+  <rect x="24" y="158" width="108" height="70" rx="14" fill="#2a2d34" stroke="#3f444e" stroke-width="1"/>
+  <rect x="146" y="158" width="108" height="70" rx="14" fill="#2a2d34" stroke="#3f444e" stroke-width="1"/>
+  <rect x="268" y="158" width="108" height="70" rx="14" fill="#2a2d34" stroke="#8fb3ff" stroke-width="1"/>
+  <rect x="24" y="158" width="108" height="30" rx="14" fill="#8fb3ff" opacity="0.25"/>
+  <rect x="146" y="158" width="108" height="30" rx="14" fill="#7f8794" opacity="0.25"/>
+  <rect x="268" y="158" width="108" height="30" rx="14" fill="#8fb3ff" opacity="0.4"/>
+  <rect x="34" y="198" width="60" height="6" rx="3" fill="#e6e9ef"/>
+  <rect x="156" y="198" width="60" height="6" rx="3" fill="#e6e9ef"/>
+  <rect x="278" y="198" width="60" height="6" rx="3" fill="#e6e9ef"/>
+  <rect x="34" y="210" width="84" height="5" rx="2.5" fill="#7f8794"/>
+  <rect x="156" y="210" width="84" height="5" rx="2.5" fill="#7f8794"/>
+  <rect x="278" y="210" width="84" height="5" rx="2.5" fill="#7f8794"/>
+</svg>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="brutal-news">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Sidebar variant — Brutal News</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Brutal News · Sidebar variant</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="index.html">Overview</a>
+        <a href="blogpost.html">Blog post</a>
+        <a href="forms.html">Forms</a>
+        <a href="sidebar.html" aria-current="page">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="docs/index.html">Get started</a>
+        <a href="docs/theme.html">Theme</a>
+        <a href="docs/defaults.html">Defaults</a>
+        <a href="docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="docs/components/index.html">All components</a>
+        <a href="docs/components/accordion.html">Accordion</a>
+        <a href="docs/components/cards.html">Cards</a>
+        <a href="docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="docs/components/switch.html">Switch</a>
+        <a href="docs/components/page-break.html">Page break</a>
+        <a href="docs/components/buttons.html">Buttons</a>
+        <a href="docs/components/forms.html">Forms</a>
+        <a href="docs/components/dialog.html">Dialog</a>
+        <a href="docs/components/navbar.html">Navbar</a>
+        <a href="docs/components/sidebar.html">Sidebar</a>
+        <a href="docs/components/banner.html">Banner</a>
+        <a href="docs/components/badge.html">Badge</a>
+        <a href="docs/components/table.html">Table</a>
+        <a href="docs/components/author-card.html">Author card</a>
+        <a href="docs/components/footer.html">Footer</a>
+        <a href="docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">The other layout</p>
+  <h1>The overview, with a sidebar</h1>
+  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the docs use the sidebar layout. Here the sidebar is a column ruled off from the page with a thick line, like the index of a broadsheet.</p>
+</header>
+<h2>What the layout is made of</h2>
+<p>A grid with two rows and, above 64rem, two columns. The top bar spans both columns and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls under it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the backdrop and the dismiss behaviour.</p>
+<div class="grid-3">
+  <article class="card">
+    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code>, open by default.</p></div>
+  </article>
+  <article class="card">
+    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body"><h3 class="card-title">The current page</h3><p class="card-text">The link to the page you are on is printed in red.</p></div>
+  </article>
+  <article class="card">
+    <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body"><h3 class="card-title">Same content, either way</h3><p class="card-text">Nothing on this page needs the sidebar. Swap the shell and the page still works.</p></div>
+  </article>
+</div>
+<h2>The rest of the kit, briefly</h2>
+<div class="brutal-news-columns">
+  <p class="brutal-news-dropcap">Newspapers learned a long time ago that a page is easier to read in columns. The measure stays short, the eye never travels far, and a rule between the columns keeps the two from bleeding into each other.</p>
+  <p>The drop cap is generated by the stylesheet from the first letter of the first paragraph; there is nothing extra in the markup.</p>
+</div>
+<section class="fifty-fifty">
+  <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+  <div class="fifty-fifty-body">
+    <p class="kicker">Fifty-fifty</p>
+    <h2>Half image, half words</h2>
+    <p>The same block the overview uses, here to prove it sits happily inside the narrower column.</p>
+    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">Docs</a>
+  </div>
+</section>
+<div class="accordion-group">
+  <details class="accordion" name="side-faq" open>
+    <summary>Can the sidebar collapse on a wide screen?</summary>
+    <div class="accordion-body"><p>Not in this version. The drawer behaviour is for narrow screens only.</p></div>
+  </details>
+  <details class="accordion" name="side-faq">
+    <summary>Why is everything so loud?</summary>
+    <div class="accordion-body"><p>Because a newspaper is read at arm's length in bad light. Thick rules and heavy type survive that; delicate ones do not.</p></div>
+  </details>
+</div>
+<div class="row">
+  <label class="switch"><input type="checkbox" role="switch" checked><span>Sticky top bar</span></label>
+  <span class="badge badge-active">Sidebar layout</span>
+  <button class="btn" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
+</div>
+<dialog class="modal" id="side-modal" aria-labelledby="side-modal-title">
+  <h2 id="side-modal-title">Dialogs work anywhere</h2>
+  <p>The layout does not change how any component behaves.</p>
+  <form method="dialog" class="modal-actions"><button class="btn btn-primary" type="submit">Close</button></form>
+</dialog>
+<hr class="page-break">
+<div class="banner banner-info" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
+
+  </main>
+</div>
+<script src="js/copy.js"></script>
+</body>
+</html>

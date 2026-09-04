@@ -1,0 +1,154 @@
+/*
+ * neumorphic — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * Neumorphism draws every surface out of one background colour with a pair
+ * of shadows, one light and one dark. Those two colours, and the shadow
+ * recipes built from them, are the template's own tokens at the end.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 3px var(--pal-shadow-1);
+  --shadow-2: 0 4px 16px var(--pal-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: var(--font-body);
+  --font-weight-display: 800;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.6rem;
+  --font-size-hero: clamp(2.4rem, 1.6rem + 3vw, 4rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: neumorphic ────────────────────────────────────────────────
+ * One soft surface colour in each scheme — cool grey by day, charcoal by
+ * night — and a muted blue for anything that must stand out. The "surface"
+ * slots are barely different from the background on purpose: depth comes
+ * from shadows, not from colour.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='neumorphic'],
+[data-theme='neumorphic'] {
+  --pal-bg0: light-dark(#e0e5ec, #2a2d34);
+  --pal-bg0-soft: light-dark(#e4e9f0, #2e3239);
+  --pal-bg1: light-dark(#d5dbe4, #343841);
+  --pal-bg2: light-dark(#c7cfda, #3f444e);
+  --pal-bg3: light-dark(#aab4c2, #565c69);
+
+  --pal-fg: light-dark(#2b3444, #e6e9ef);
+  --pal-fg-muted: light-dark(#5b6677, #a9b0bc);
+  --pal-gray: light-dark(#8791a1, #7f8794);
+
+  --pal-red: light-dark(#b23a30, #e57373);
+  --pal-green: light-dark(#2e7d4f, #7fc98f);
+  --pal-yellow: light-dark(#a86b12, #e0b46a);
+  --pal-blue: light-dark(#2b64a8, #7fb2ff);
+  --pal-purple: light-dark(#6a48b5, #b39ddb);
+  --pal-aqua: light-dark(#257577, #4dd0e1);
+
+  --pal-accent: light-dark(#3b5c8f, #8fb3ff);
+  --pal-accent-strong: light-dark(#2f4a75, #a9c4ff);
+  --pal-on-accent: light-dark(#ffffff, #1b2230);
+
+  --pal-shadow-1: light-dark(rgb(163 177 198 / 0.5), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(163 177 198 / 0.7), rgb(0 0 0 / 0.6));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The two shadow colours neumorphism is made of, and the recipes global.css
+ * uses. These are not part of the retoken paste-in.
+ */
+:root,
+.themed {
+  --neumorphic-light: light-dark(#ffffff, #363b45);
+  --neumorphic-dark: light-dark(#a3b1c6, #1b1e24);
+  --neumorphic-raise: 6px 6px 14px var(--neumorphic-dark), -6px -6px 14px var(--neumorphic-light);
+  --neumorphic-raise-lg: 10px 10px 24px var(--neumorphic-dark), -10px -10px 24px var(--neumorphic-light);
+  --neumorphic-flat: 3px 3px 7px var(--neumorphic-dark), -3px -3px 7px var(--neumorphic-light);
+  --neumorphic-inset: inset 4px 4px 8px var(--neumorphic-dark), inset -4px -4px 8px var(--neumorphic-light);
+  --neumorphic-inset-sm: inset 2px 2px 5px var(--neumorphic-dark), inset -2px -2px 5px var(--neumorphic-light);
+}
