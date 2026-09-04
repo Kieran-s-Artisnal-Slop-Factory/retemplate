@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="plain">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Navbar — Plain</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Plain · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html" aria-current="page">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Navbar</h1>
+  <p>The sticky header used by the overview, the blog post and the forms page: a brand, the site links, the scheme toggle, and a menu button that turns the links into a popover on small screens.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The overview page, live. Narrow the frame to see the menu button.</p>
+<iframe class="docs-iframe" src="../../index.html" title="The overview page"></iframe>
+<h2 id="markup">Markup</h2>
+<p>Taken from <code>index.html</code>. The link to the current page carries <code>aria-current="page"</code>.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="navbar" data-source="../../index.html" data-select="header.navbar">&lt;header class="navbar"&gt;
+  &lt;a class="brand" href="index.html"&gt;Plain&lt;/a&gt;
+  &lt;button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu"&gt;☰&lt;/button&gt;
+  &lt;nav id="site-nav" popover&gt;
+    &lt;a href="index.html" aria-current="page"&gt;Overview&lt;/a&gt;
+    &lt;a href="blogpost.html"&gt;Blog post&lt;/a&gt;
+    &lt;a href="forms.html"&gt;Forms&lt;/a&gt;
+    &lt;a href="sidebar.html"&gt;Sidebar&lt;/a&gt;
+    &lt;a href="docs/index.html"&gt;Docs&lt;/a&gt;
+    &lt;a href="example/index.html"&gt;Example&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"&gt;&lt;/button&gt;
+  &lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;
+&lt;/header&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == navbar == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.navbar</code></td><td>Sticky, translucent, blurred, with a bottom border</td></tr>
+      <tr><td><code>.brand</code></td><td>The site name; pushes everything else right</td></tr>
+      <tr><td><code>nav</code></td><td>The links; a popover below 48rem, inline above</td></tr>
+      <tr><td><code>.nav-toggle</code></td><td>The menu button; hidden above 48rem</td></tr>
+      <tr><td><code>.scheme-toggle</code></td><td>The three-state theme button</td></tr>
+      <tr><td><code>.site-link</code></td><td>The one link out of the folder; delete it</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Below 48rem the <code>&lt;nav&gt;</code> has the <code>popover</code> attribute and the button opens it with <code>popovertarget</code>. <kbd>Esc</kbd> and clicking outside close it; the backdrop is the browser's.</li>
+<li>Above 48rem the same element is laid out inline; the attribute is simply ignored by the stylesheet.</li>
+<li>The three navbar pages carry the same link set. Example pages have their own.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="dialog.html">← Dialog</a><a href="sidebar.html">Sidebar →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>retemplate — templates and themes to take and use</title>
+  <link rel="icon" href="templates/plain/assets/favicon.svg">
+  <script src="landing/theme.js"></script>
+  <link rel="stylesheet" href="landing/landing.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">retemplate</p>
+      <h1>Complete website templates you can take a folder of and use.</h1>
+      <p class="lede">Plain HTML and CSS, no build step, no framework, light and dark in every one. Each template is also a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> theme, so its palette drops straight into a retoken site.</p>
+    </div>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a template">
+    <div class="search">
+      <label for="search">Search by title</label>
+      <input id="search" type="search" placeholder="Type a template name…" autocomplete="off">
+    </div>
+    <div class="chips" role="group" aria-label="Filter by tag">
+      <span class="chip-group"><span class="chip-label">Scheme</span>
+        <button class="chip" type="button" data-tag="light-first" aria-pressed="false">light-first</button>
+        <button class="chip" type="button" data-tag="dark-first" aria-pressed="false">dark-first</button>
+        <button class="chip" type="button" data-tag="balanced" aria-pressed="false">balanced</button>
+      </span>
+      <span class="chip-group"><span class="chip-label">Type</span>
+        <button class="chip" type="button" data-tag="serif" aria-pressed="false">serif</button>
+        <button class="chip" type="button" data-tag="sans" aria-pressed="false">sans</button>
+        <button class="chip" type="button" data-tag="display" aria-pressed="false">display</button>
+        <button class="chip" type="button" data-tag="mono" aria-pressed="false">mono</button>
+      </span>
+      <span class="chip-group"><span class="chip-label">Motion</span>
+        <button class="chip" type="button" data-tag="animated" aria-pressed="false">animated</button>
+        <button class="chip" type="button" data-tag="still" aria-pressed="false">still</button>
+      </span>
+      <span class="chip-group"><span class="chip-label">Fonts</span>
+        <button class="chip" type="button" data-tag="google-fonts" aria-pressed="false">google fonts</button>
+        <button class="chip" type="button" data-tag="system-fonts" aria-pressed="false">system fonts</button>
+      </span>
+      <span class="chip-group"><span class="chip-label">Feel</span>
+        <button class="chip" type="button" data-tag="minimal" aria-pressed="false">minimal</button>
+        <button class="chip" type="button" data-tag="ornate" aria-pressed="false">ornate</button>
+        <button class="chip" type="button" data-tag="playful" aria-pressed="false">playful</button>
+        <button class="chip" type="button" data-tag="editorial" aria-pressed="false">editorial</button>
+      </span>
+      <button class="chip chip-clear" type="button" id="clear">Clear</button>
+    </div>
+    <p class="count" aria-live="polite">Showing <span id="count">1 of 1</span></p>
+  </section>
+
+  <section class="cards" aria-label="Templates">
+    <article class="template-card" data-template="plain" data-title="Plain" data-tags="balanced sans still system-fonts minimal">
+      <a class="preview" href="templates/plain/index.html" aria-label="Plain: overview">
+        <img class="preview-light" src="landing/previews/plain-light.svg" alt="" width="400" height="250">
+        <img class="preview-dark" src="landing/previews/plain-dark.svg" alt="" width="400" height="250">
+      </a>
+      <div class="template-body">
+        <h2><a href="templates/plain/index.html">Plain</a></h2>
+        <p>The starting point. Every component the contract asks for, in a quiet style, on system fonts. The other templates are copies of this one, re-skinned.</p>
+        <p class="tags"><span>balanced</span><span>sans</span><span>still</span><span>system fonts</span><span>minimal</span></p>
+        <p class="links"><a href="templates/plain/index.html">Overview</a><a href="templates/plain/docs/index.html">Docs</a><a href="templates/plain/example/index.html">Example site</a></p>
+      </div>
+    </article>
+  </section>
+  <p class="empty" id="empty" hidden>No template matches that search and those tags. <button class="linkish" type="button" id="clear-2">Clear the filters.</button></p>
+
+  <section class="about">
+    <h2>How to use one</h2>
+    <ol>
+      <li>Copy <code>templates/&lt;name&gt;/</code> into your project.</li>
+      <li>Keep <code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and, if present, <code>fonts/</code>. Delete the demo pages, <code>docs/</code> and <code>example/</code>, or start from <code>example/</code>: it is a complete three-page site.</li>
+      <li>Paste the head block from the template's README into your pages and write HTML with the classes its docs describe.</li>
+    </ol>
+    <p>Every template uses the same markup, so switching templates later is a swap of three folders. Browser floor: anything from 2024 on.</p>
+    <p class="links"><a href="templates/README.md">All templates</a><a href="docs/README.md">Documentation</a><a href="fixtures/markdown-test.html">The markdown test page</a><a href="fixtures/forms.html">The form fixture</a></p>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p>retemplate is MIT licensed. Templates that link Google Fonts say so in their README; those fonts are under their own licences.</p>
+</footer>
+<script src="landing/landing.js"></script>
+</body>
+</html>

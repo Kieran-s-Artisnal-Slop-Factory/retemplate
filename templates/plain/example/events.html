@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" data-theme="plain">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Events and hours — Millbrook Public Library</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Millbrook Library</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="events.html" aria-current="page">Events</a>
+    <a href="membership.html">Membership</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">September</p>
+    <h1>Events and opening hours</h1>
+    <p>Everything is free. Some things need a seat reserved, which takes a name and an email.</p>
+  </header>
+
+  <section class="section">
+    <h2>This month</h2>
+    <div class="stack">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-5.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Thursday 18 September · 7 pm</p>
+          <h3 class="card-title">Poetry evening</h3>
+          <p class="card-text">Six local poets, one open microphone, and the reading room's lamps turned down. Doors at half past six.</p>
+          <div class="card-actions">
+            <button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('reserve').showModal()">Reserve a seat</button>
+            <span class="badge badge-active">18 seats left</span>
+          </div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-3.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Every Saturday · 10 am</p>
+          <h3 class="card-title">Story time for under-fives</h3>
+          <p class="card-text">Half an hour of picture books on the big rug, then crayons. No booking; just come.</p>
+          <div class="card-actions"><span class="badge badge-done">Drop in</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Tuesday 30 September · 6 pm</p>
+          <h3 class="card-title">Fix-it night</h3>
+          <p class="card-text">Bring the lamp that stopped working or the jumper with the hole. Volunteers and the tool library are on hand.</p>
+          <div class="card-actions">
+            <button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('reserve').showModal()">Reserve a seat</button>
+            <span class="badge">Limited tools</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="hours">
+    <h2>Opening hours</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>Library</th><th>Reading room</th><th>Tool library</th></tr></thead>
+        <tbody>
+          <tr><td>Monday – Wednesday</td><td>9 am – 7 pm</td><td>9 am – 7 pm</td><td>Closed</td></tr>
+          <tr><td>Thursday</td><td>9 am – 8 pm</td><td>9 am – 5 pm</td><td>4 pm – 8 pm</td></tr>
+          <tr><td>Friday</td><td>9 am – 6 pm</td><td>9 am – 6 pm</td><td>Closed</td></tr>
+          <tr><td>Saturday</td><td>10 am – 4 pm</td><td>10 am – 4 pm</td><td>10 am – 1 pm</td></tr>
+          <tr><td>Sunday</td><td>12 pm – 4 pm</td><td>Closed</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small">Bank holidays: Sunday hours.</p>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Regular groups</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="groups">
+        <summary>Crime readers, first Monday, 6 pm</summary>
+        <div class="accordion-body"><p>One novel a month; copies are on the hold shelf three weeks ahead.</p></div>
+      </details>
+      <details class="accordion" name="groups">
+        <summary>Knit and natter, Wednesdays, 2 pm</summary>
+        <div class="accordion-body"><p>Bring a project or borrow needles from the desk.</p></div>
+      </details>
+      <details class="accordion" name="groups">
+        <summary>Code club, Saturdays, 11 am</summary>
+        <div class="accordion-body"><p>Ages nine to fourteen. Laptops provided; parents welcome to stay.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="modal" id="reserve" aria-labelledby="reserve-title">
+    <h2 id="reserve-title">Reserve a seat</h2>
+    <p>We will email a confirmation. Seats are released ten minutes before the start.</p>
+    <form method="dialog">
+      <div class="stack">
+        <div class="field">
+          <label for="r-name">Name</label>
+          <input id="r-name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="email" type="email" required>
+          <p class="hint">Only for the confirmation.</p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="reserve">Reserve</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Millbrook Public Library</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events and hours</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>12 Mill Lane, Millbrook</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Plain template</a></li>
+        <li><a href="../docs/index.html">Get started with Plain</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Plain template. The library, its books and its ukuleles are fictional.</p>
+</footer>
+</body>
+</html>

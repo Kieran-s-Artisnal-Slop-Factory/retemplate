@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-theme="plain">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Membership — Millbrook Public Library</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Millbrook Library</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="membership.html" aria-current="page">Membership</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Free, always</p>
+    <h1>Join the library</h1>
+    <p>Fill this in and collect your card from the desk with something that shows your address. Children under twelve need a parent's signature on the form, not on the screen.</p>
+  </header>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+
+  <form class="form-grid" action="#" method="get">
+    <fieldset>
+      <legend>About you</legend>
+      <div class="field">
+        <label for="m-name">Full name</label>
+        <input id="m-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="m-dob">Date of birth</label>
+        <input id="m-dob" name="dob" type="date" required>
+        <p class="hint">Under-twelves get a junior card.</p>
+      </div>
+      <div class="field field-wide">
+        <label for="m-address">Address</label>
+        <textarea id="m-address" name="address" rows="3" autocomplete="street-address" required></textarea>
+      </div>
+      <div class="field">
+        <label for="m-email">Email</label>
+        <input id="m-email" name="email" type="email" autocomplete="email">
+        <p class="hint">For reminders and holds. Optional.</p>
+      </div>
+      <div class="field">
+        <label for="m-branch">Home branch</label>
+        <select id="m-branch" name="branch">
+          <option value="millbrook" selected>Millbrook (Mill Lane)</option>
+          <option value="north">North Millbrook</option>
+          <option value="mobile">The mobile library</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Preferences</legend>
+      <div class="field">
+        <span class="field-label">I am interested in</span>
+        <label class="check"><input type="checkbox" name="interests" value="books" checked> Books and audiobooks</label>
+        <label class="check"><input type="checkbox" name="interests" value="tools"> The tool library</label>
+        <label class="check"><input type="checkbox" name="interests" value="rooms"> Study rooms</label>
+      </div>
+      <div class="field">
+        <span class="field-label">Card type</span>
+        <label class="check"><input type="radio" name="card" value="adult" checked> Adult</label>
+        <label class="check"><input type="radio" name="card" value="junior"> Junior</label>
+      </div>
+      <div class="field">
+        <label class="switch"><input type="checkbox" role="switch" name="newsletter" checked><span>Monthly what's-on email</span></label>
+        <label class="switch"><input type="checkbox" role="switch" name="reminders"><span>Text me when a hold arrives</span></label>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-lg" type="submit">Apply</button>
+      <button class="btn" type="reset">Start again</button>
+    </div>
+  </form>
+
+  <section class="section">
+    <h2>What a card gets you</h2>
+    <div class="grid-3">
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Twenty loans</h3>
+          <p class="card-text">Books, audiobooks, magazines and things, three weeks at a time, renewable twice.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Holds and requests</h3>
+          <p class="card-text">Anything we do not have, we ask another branch for. Anything nobody has, we consider buying.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">The digital shelf</h3>
+          <p class="card-text">E-books, newspapers and language courses on your own device, wherever you are.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Millbrook Public Library</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events and hours</a></li>
+        <li><a href="membership.html">Membership</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>12 Mill Lane, Millbrook</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Plain template</a></li>
+        <li><a href="../docs/index.html">Get started with Plain</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Plain template. The library, its books and its ukuleles are fictional.</p>
+</footer>
+</body>
+</html>

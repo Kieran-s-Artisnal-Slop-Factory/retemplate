@@ -1,0 +1,147 @@
+/*
+ * plain — design tokens.
+ *
+ * Retoken compatible (https://kieranwood.ca/retoken/theme/): the same two
+ * layers retoken uses.
+ *
+ *   1. `:root, .themed` maps roles onto palette slots. The colour mapping is
+ *      retoken's, verbatim; the shared values (type, spacing, shape, layout)
+ *      are this template's own.
+ *   2. The palette block fills the 19 `--pal-*` slots, each a light-dark()
+ *      pair, under retoken's named-palette selector. That block, exactly as
+ *      written, is what you paste into a retoken site — see docs/theme.html.
+ *
+ * `color-scheme: light dark` lets the browser pick the half of each pair;
+ * js/theme.js pins it on <html> when the visitor has chosen. Components in
+ * global.css reference the semantic tokens only — never a slot, never a
+ * literal.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 3px var(--pal-shadow-1);
+  --shadow-2: 0 4px 16px var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: var(--font-body);
+  --font-weight-display: 650;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.6rem;
+  --font-size-hero: clamp(2.4rem, 1.6rem + 3vw, 4rem);
+  --line-height: 1.55;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.5rem;
+}
+
+/* ── Palette: plain ─────────────────────────────────────────────────────
+ * Quiet ink-on-paper with an indigo accent (retoken's "neutral", so the
+ * reference template looks like retoken's own default site).
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='plain'],
+[data-theme='plain'] {
+  --pal-bg0: light-dark(#fafafa, #131316);
+  --pal-bg0-soft: light-dark(#ffffff, #1b1b1f);
+  --pal-bg1: light-dark(#f4f4f5, #232329);
+  --pal-bg2: light-dark(#e4e4e7, #34343c);
+  --pal-bg3: light-dark(#c9c9d0, #4a4a55);
+
+  --pal-fg: light-dark(#1c1c1f, #ececef);
+  --pal-fg-muted: light-dark(#6b6b73, #9d9da8);
+  --pal-gray: light-dark(#8b8b95, #74747f);
+
+  --pal-red: light-dark(#c62828, #f87171);
+  --pal-green: light-dark(#1a7f37, #4ade80);
+  --pal-yellow: light-dark(#b45309, #d9a441);
+  --pal-blue: light-dark(#1d6fe0, #6ea8fe);
+  --pal-purple: light-dark(#6d3fc0, #b18cf0);
+  --pal-aqua: light-dark(#00838f, #3ec9d6);
+
+  --pal-accent: light-dark(#4056c9, #8fa2ff);
+  --pal-accent-strong: light-dark(#32449f, #aab8ff);
+  --pal-on-accent: light-dark(#ffffff, #101223);
+
+  --pal-shadow-1: light-dark(rgb(28 28 31 / 0.08), rgb(0 0 0 / 0.4));
+  --pal-shadow-2: light-dark(rgb(28 28 31 / 0.14), rgb(0 0 0 / 0.55));
+}
+
+/* plain declares no template-only tokens. A styled template adds its
+ * `--<name>-*` tokens here (gradients, textures, glows, ornament colours). */

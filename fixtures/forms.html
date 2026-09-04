@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Form fixture — retemplate fixtures</title>
+</head>
+<body>
+<p><a href="../index.html">← All templates</a> · This page has no stylesheet: it is the fixture form in the browser's default styling. Every template's <code>forms.html</code> embeds the <code>&lt;form data-fixture="forms"&gt;</code> below verbatim; <code>tools/check.py</code> keeps the copies identical. The form posts nowhere: <code>action="#"</code>.</p>
+<hr>
+<form data-fixture="forms" class="form-grid" action="#" method="get">
+  <fieldset>
+    <legend>About you</legend>
+    <div class="field">
+      <label for="f-name">Full name</label>
+      <input id="f-name" name="name" type="text" placeholder="Ada Lovelace" autocomplete="name" required>
+      <p class="hint">As it should appear on the certificate.</p>
+    </div>
+    <div class="field">
+      <label for="f-email">Email</label>
+      <input id="f-email" name="email" type="email" placeholder="ada@example.com" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="f-password">Password</label>
+      <input id="f-password" name="password" type="password" autocomplete="new-password" minlength="8">
+      <p class="hint">At least eight characters.</p>
+    </div>
+    <div class="field field-invalid">
+      <label for="f-username">Username</label>
+      <input id="f-username" name="username" type="text" value="ada lovelace" aria-invalid="true" aria-describedby="f-username-error">
+      <p class="error" id="f-username-error">Usernames cannot contain spaces.</p>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Details</legend>
+    <div class="field">
+      <label for="f-seats">Seats</label>
+      <input id="f-seats" name="seats" type="number" min="1" max="12" value="2">
+    </div>
+    <div class="field">
+      <label for="f-date">Date</label>
+      <input id="f-date" name="date" type="date">
+    </div>
+    <div class="field">
+      <label for="f-time">Time</label>
+      <input id="f-time" name="time" type="time" value="19:30">
+    </div>
+    <div class="field">
+      <label for="f-volume">Volume</label>
+      <input id="f-volume" name="volume" type="range" min="0" max="100" value="40">
+    </div>
+    <div class="field">
+      <label for="f-colour">Favourite colour</label>
+      <input id="f-colour" name="colour" type="color" value="#4056c9">
+    </div>
+    <div class="field">
+      <label for="f-file">Attachment</label>
+      <input id="f-file" name="file" type="file" accept="image/*">
+      <p class="hint">Images only, up to 2 MB.</p>
+    </div>
+    <div class="field">
+      <label for="f-country">Country</label>
+      <select id="f-country" name="country">
+        <option value="">Choose…</option>
+        <option value="ca" selected>Canada</option>
+        <option value="gb">United Kingdom</option>
+        <option value="nz">New Zealand</option>
+        <optgroup label="Elsewhere">
+          <option value="other">Somewhere else</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="field field-wide">
+      <label for="f-message">Message</label>
+      <textarea id="f-message" name="message" rows="4" placeholder="Anything we should know?"></textarea>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Preferences</legend>
+    <div class="field">
+      <span class="field-label">Interests</span>
+      <label class="check"><input type="checkbox" name="interests" value="design" checked> Design</label>
+      <label class="check"><input type="checkbox" name="interests" value="code"> Code</label>
+      <label class="check"><input type="checkbox" name="interests" value="writing"> Writing</label>
+    </div>
+    <div class="field">
+      <span class="field-label">Plan</span>
+      <label class="check"><input type="radio" name="plan" value="free" checked> Free</label>
+      <label class="check"><input type="radio" name="plan" value="pro"> Pro</label>
+      <label class="check"><input type="radio" name="plan" value="team" disabled> Team (soon)</label>
+    </div>
+    <div class="field">
+      <label class="switch"><input type="checkbox" role="switch" name="newsletter" checked><span>Monthly newsletter</span></label>
+      <label class="switch"><input type="checkbox" role="switch" name="alerts"><span>Security alerts</span></label>
+    </div>
+    <div class="field">
+      <label for="f-disabled">Disabled field</label>
+      <input id="f-disabled" name="disabled" type="text" value="Read only" disabled>
+    </div>
+  </fieldset>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Send</button>
+    <button type="reset" class="btn">Reset</button>
+    <button type="button" class="btn btn-danger">Delete draft</button>
+  </div>
+</form>
+</body>
+</html>

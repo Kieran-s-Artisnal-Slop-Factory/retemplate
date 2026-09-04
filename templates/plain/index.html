@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-theme="plain">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Plain — a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Plain</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">The starting point</p>
+      <h1>Plain is the template the other templates are made from.</h1>
+      <p>Two stylesheets, one small script, no build step. Every component the retemplate contract asks for, in a quiet style you can take as it is or re-skin into something of your own.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+      </div>
+    </div>
+    <img src="assets/hero.svg" alt="" width="1200" height="500">
+  </section>
+
+  <section class="section">
+    <h2>What you get</h2>
+    <p>Take the <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> folders and you have the whole template. Everything else on this page exists to show it off. The three cards below are the ordinary card, with an image, an icon, and neither.</p>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens and the palette; <code>global.css</code> holds everything that uses them. Nothing else to load.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Light and dark</h3>
+          <p class="card-text">Every colour is a <code>light-dark()</code> pair. The toggle in the corner cycles auto, light and dark, and remembers the choice.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3 class="card-title">Retoken compatible</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards, sideways</h2>
+    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template also has one <em>feature</em> card with an effect that suits it. Plain's lifts and shows its accent edge. Hover it.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The feature card</h3>
+        <p class="card-text">A styled template might make this glow, tilt, invert or flip. Plain keeps it to a lift, because plain is the reference and the reference should be legible.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Half and half</h2>
+    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>fifty-fifty-reverse</code> and the image moves to the right. On a phone the image comes first either way.</p>
+    <div class="stack">
+      <section class="fifty-fifty">
+        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image left</p>
+          <h2>Say the one thing this block is for</h2>
+          <p>A heading, a paragraph and a single call to action. That is the whole pattern, and it carries most landing pages.</p>
+          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
+        </div>
+      </section>
+      <section class="fifty-fifty fifty-fifty-reverse">
+        <figure><img src="assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image right</p>
+          <h2>The same block, mirrored</h2>
+          <p>Alternate them down a page and the eye is led from side to side without any extra styling.</p>
+          <a class="btn" href="docs/components/fifty-fifty.html">Read the docs</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Questions, folded</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group of them the same <code>name</code> and opening one closes the others, with no script.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How much JavaScript is there?</summary>
+        <div class="accordion-body"><p>About forty lines for the theme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. Everything else is HTML and CSS.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Which browsers?</summary>
+        <div class="accordion-body"><p>Anything from 2024 on: the template relies on <code>light-dark()</code>, <code>:has()</code>, popovers and exclusive accordions.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and, if the template has any, <code>fonts/</code>. The README lists it.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>A gallery with a lightbox</h2>
+    <p>Click any image. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="Hills under a pale sun" width="800" height="600"></a><figcaption>Hills</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Two terracotta shapes" width="800" height="600"></a><figcaption>Terracotta</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="Green peaks and a moon" width="800" height="600"></a><figcaption>Peaks</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Overlapping violet circles" width="800" height="600"></a><figcaption>Violet</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="An orange mountain" width="800" height="600"></a><figcaption>Mountain</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Teal panels" width="800" height="600"></a><figcaption>Panels</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A crimson ring" width="800" height="600"></a><figcaption>Ring</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Grey ridges under a moon" width="800" height="600"></a><figcaption>Ridges</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Hills under a pale sun"><figcaption>Hills — 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Two terracotta shapes"><figcaption>Terracotta — 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Green peaks and a moon"><figcaption>Peaks — 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Overlapping violet circles"><figcaption>Violet — 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="An orange mountain"><figcaption>Mountain — 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Teal panels"><figcaption>Panels — 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A crimson ring"><figcaption>Ring — 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Grey ridges under a moon"><figcaption>Ridges — 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons come in three kinds and three sizes. A switch is a checkbox with <code>role="switch"</code>. Badges and banners carry status.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Primary</button>
+      <button class="btn" type="button">Default</button>
+      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Notifications</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Active</span>
+      <span class="badge badge-done">Done</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Plain uses your system fonts, so nothing is downloaded.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo; its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A table and a dialog</h2>
+    <p>Tables sit inside a wrapper that scrolls sideways when they are wider than the page.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Element</th><th>Script</th><th>Docs</th></tr></thead>
+        <tbody>
+          <tr><td>Accordion</td><td><code>&lt;details&gt;</code></td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
+          <tr><td>Lightbox</td><td><code>&lt;dialog&gt;</code></td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
+          <tr><td>Navbar menu</td><td><code>popover</code></td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
+          <tr><td>Switch</td><td><code>&lt;input&gt;</code></td><td>none</td><td><a href="docs/components/switch.html">switch</a></td></tr>
+          <tr><td>Theme toggle</td><td><code>&lt;button&gt;</code></td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button below opens one; the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">A modal dialog</h2>
+      <p>It traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings, lists, quotes, code, tables, footnotes. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A template is a promise about what markup will look like. The contract is that promise written down.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Plain</strong>
+        <p class="author-bio">The reference template. Quiet on purpose.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Plain</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Plain is the reference template of retemplate. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>
