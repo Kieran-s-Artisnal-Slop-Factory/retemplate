@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Changelog — Relay</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Relay</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="changelog.html" aria-current="page">Changelog</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p><span class="neon-sign neon-sign-cyan">Changelog</span></p>
+    <h1>What shipped, and what broke on the way</h1>
+    <p>Every release, newest first, with the incidents that taught us something. Subscribe to the <a href="index.html#digest-email">weekly digest</a> to get these by email.</p>
+  </header>
+
+  <section class="section">
+    <h2>Releases</h2>
+    <div class="stack">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-8.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="meta"><time datetime="2026-09-01">1 September 2026</time> · <span class="badge badge-active">2.4</span></p>
+          <h3 class="card-title">Incident templates</h3>
+          <p class="card-text">Write the human sentence once and reuse it: "Elevated errors in EU-West", "Planned maintenance", "Third-party outage". A template pre-fills the timeline stages and the subscriber email, and you edit the specifics. Templates are per-page, so a private on-call page can be blunter than the public one.</p>
+          <p class="tags"><a class="tag" href="#">incidents</a><a class="tag" href="#">status page</a></p>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="meta"><time datetime="2026-08-18">18 August 2026</time> · <span class="badge badge-done">2.3</span></p>
+          <h3 class="card-title">Heartbeat monitors</h3>
+          <p class="card-text">For the things that call you: cron jobs, queue workers, nightly backups. Relay gives each one a URL; if the ping does not arrive inside the window, the monitor goes amber, then red. Grace periods are per monitor.</p>
+          <p class="tags"><a class="tag" href="#">monitors</a></p>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="meta"><time datetime="2026-08-04">4 August 2026</time> · <span class="badge badge-done">2.2</span></p>
+          <h3 class="card-title">A ninth region, and a private one</h3>
+          <p class="card-text">São Paulo joins the fleet. Company plans can also run a checker inside their own network, so an internal service can have a public-style status page without a public address.</p>
+          <p class="tags"><a class="tag" href="#">regions</a><a class="tag" href="#">company plan</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Incidents we learned from</h2>
+    <p>The status page for Relay itself is run by someone else, but the write-ups are ours. Open one.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="incidents" open>
+        <summary>22 August — subscriber emails delayed by 40 minutes</summary>
+        <div class="accordion-body">
+          <p>A queue worker in the notification service was restarted with an old config and pointed at a retired mail relay. Checks passed because the relay accepted connections; it just never delivered. We now heartbeat the mail path end to end, with a mailbox that expects a message every five minutes.</p>
+          <div class="banner banner-danger" role="alert"><span>×</span><p>Impact: 1,240 incident emails delivered late. No status pages were affected.</p></div>
+        </div>
+      </details>
+      <details class="accordion" name="incidents">
+        <summary>9 August — false "degraded" on 31 monitors in Sydney</summary>
+        <div class="accordion-body">
+          <p>An upstream DNS resolver in the Sydney region began returning SERVFAIL for a fraction of lookups. A single region cannot trigger an incident, so nothing went red, but customers saw Sydney listed as failing for 22 minutes. We now try a second resolver before recording a DNS failure.</p>
+          <div class="banner banner-warning" role="status"><span>!</span><p>Impact: cosmetic. No incident was opened, no email was sent.</p></div>
+        </div>
+      </details>
+      <details class="accordion" name="incidents">
+        <summary>27 July — planned maintenance, 15 minutes</summary>
+        <div class="accordion-body">
+          <p>Database version upgrade. Announced a week ahead, finished in eleven minutes, checks continued from a read replica throughout. Included here because a maintenance that goes to plan is still worth writing down.</p>
+          <div class="banner banner-success" role="status"><span>✓</span><p>Impact: none. The dashboard was read-only for eleven minutes.</p></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Uptime, last 90 days</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Service</th><th>Uptime</th><th>Incidents</th><th>Longest</th></tr></thead>
+        <tbody>
+          <tr><td>Status pages (edge)</td><td>100.00 %</td><td>0</td><td>—</td></tr>
+          <tr><td>Checking fleet</td><td>99.98 %</td><td>1</td><td>22 min</td></tr>
+          <tr><td>Notifications</td><td>99.91 %</td><td>1</td><td>40 min</td></tr>
+          <tr><td>Dashboard and API</td><td>99.97 %</td><td>1</td><td>11 min (planned)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Tell us what to build next</h2>
+    <form class="form-grid" action="#" method="post">
+      <fieldset>
+        <legend>One request</legend>
+        <div class="field field-wide">
+          <label for="req-text">What is missing?</label>
+          <textarea id="req-text" name="request" rows="4" placeholder="A sentence or two is plenty."></textarea>
+          <p class="hint">We read every one. We reply to most.</p>
+        </div>
+        <div class="field">
+          <label for="req-email">Email, if you want an answer</label>
+          <input id="req-email" type="email" name="email" placeholder="you@company.com" autocomplete="email">
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Send</button>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Relay</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Company</h2>
+      <ul>
+        <li>Relay Systems, a fictional company</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li>Status: <span class="badge badge-done">Operational</span></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Neon template</a></li>
+        <li><a href="../docs/index.html">Get started with Neon</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Neon template. Relay, its regions and its uptime are fictional; the forms post nowhere.</p>
+</footer>
+</body>
+</html>

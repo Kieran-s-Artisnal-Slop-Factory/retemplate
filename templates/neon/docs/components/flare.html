@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare — Neon</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Neon · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Neon adds light: a haze behind the page, glow you can put on text or on a box, and a lit sign for the one label a page wants to shout. Only the haze is markup; the rest are classes.</p>
+</header>
+<h2 id="preview">The haze</h2>
+<p>Two long blurred tubes — one rose, one cyan — fixed behind the whole page, breathing slowly. Put the block right after <code>&lt;body&gt;</code>; it is <code>aria-hidden</code> and never intercepts a click. It is the only flare that needs a <code>.neon-flare</code> wrapper. (The preview below is inert because it sits inside the page rather than behind it.)</p>
+<figure class="example" data-snippet="neon-haze">
+<div class="neon-flare neon-haze" aria-hidden="true">
+  <div class="neon-tube"></div>
+  <div class="neon-tube"></div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-haze">&lt;div class="neon-flare neon-haze" aria-hidden="true"&gt;
+  &lt;div class="neon-tube"&gt;&lt;/div&gt;
+  &lt;div class="neon-tube"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">Lit text</h2>
+<p>Wrap the words that matter. <code>.neon-text</code> is rose, <code>.neon-text-cyan</code> is cyan; both are a colour and a text-shadow, nothing more, so they work on any heading size.</p>
+<figure class="example" data-snippet="neon-text">
+<h2>Ship on <span class="neon-text">Friday</span>, sleep on <span class="neon-text-cyan">Saturday</span>.</h2>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-text">&lt;h2&gt;Ship on &lt;span class="neon-text"&gt;Friday&lt;/span&gt;, sleep on &lt;span class="neon-text-cyan"&gt;Saturday&lt;/span&gt;.&lt;/h2&gt;</code></pre></div>
+<h3>The sign</h3>
+<p>A pill with a lit border, a dot that flickers once every few seconds, and uppercase display type. Use it where a plainer template would use a kicker: above a hero heading, on a pricing tier, on a changelog entry. It can be a <code>&lt;span&gt;</code> or a link.</p>
+<figure class="example" data-snippet="neon-sign">
+<p class="row"><span class="neon-sign">New this week</span> <a class="neon-sign neon-sign-cyan" href="#variants">Read the notes</a></p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-sign">&lt;p class="row"&gt;&lt;span class="neon-sign"&gt;New this week&lt;/span&gt; &lt;a class="neon-sign neon-sign-cyan" href="#variants"&gt;Read the notes&lt;/a&gt;&lt;/p&gt;</code></pre></div>
+<h3>Glow on a box</h3>
+<p>The same glow the hero image and the feature card use, as a class for any block. Rose by default, cyan with the suffix. It is a <code>box-shadow</code>, so it sits under the element and costs nothing on hover.</p>
+<figure class="example" data-snippet="neon-glow">
+<div class="grid-2">
+  <article class="card neon-glow"><div class="card-body"><h3 class="card-title">Rose</h3><p class="card-text"><code>.neon-glow</code> on an ordinary card.</p></div></article>
+  <article class="card neon-glow-cyan"><div class="card-body"><h3 class="card-title">Cyan</h3><p class="card-text"><code>.neon-glow-cyan</code> on another.</p></div></article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-glow">&lt;div class="grid-2"&gt;
+  &lt;article class="card neon-glow"&gt;&lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Rose&lt;/h3&gt;&lt;p class="card-text"&gt;&lt;code&gt;.neon-glow&lt;/code&gt; on an ordinary card.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;
+  &lt;article class="card neon-glow-cyan"&gt;&lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Cyan&lt;/h3&gt;&lt;p class="card-text"&gt;&lt;code&gt;.neon-glow-cyan&lt;/code&gt; on another.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.neon-haze</code></td><td>Fixed, full-viewport, behind everything; holds the two tubes</td></tr>
+      <tr><td><code>.neon-tube</code></td><td>A blurred bar; the first child is rose, the second cyan, on a slow breathe</td></tr>
+      <tr><td><code>.neon-text</code>, <code>.neon-text-cyan</code></td><td>Lit words: colour plus text-shadow</td></tr>
+      <tr><td><code>.neon-sign</code>, <code>.neon-sign-cyan</code></td><td>A lit pill label with a flickering dot</td></tr>
+      <tr><td><code>.neon-glow</code>, <code>.neon-glow-cyan</code></td><td>The template's glow shadow on any block</td></tr>
+      <tr><td><code>.neon-flare</code></td><td>The wrapper for flare that is markup (only the haze needs it)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every glow is built from two tokens in <code>theme.css</code>, <code>--neon-rose</code> and <code>--neon-cyan</code>, which are the two accents at half alpha. Change those two and every glow on the site follows. Nothing in <code>global.css</code> names a colour.</li>
+<li>The haze's breathing, the sign's flicker and the feature card's border sweep all stop under <code>prefers-reduced-motion: reduce</code>; the light stays on, it just holds still.</li>
+<li>The feature card is not flare — it is the contract's <code>.card-feature</code> — but its sweep is Neon's: a conic gradient shown through the card's own border and turned by a registered <code>@property</code> angle. See <a href="cards.html">Cards</a>.</li>
+<li>The haze is two large blurred elements. It is cheap, but on very long pages with many fixed layers you can drop it and keep the static haze that <code>body</code> already carries.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

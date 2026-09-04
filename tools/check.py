@@ -322,16 +322,17 @@ def normalise_ws(s: str) -> str:
 
 # Free-content areas inside contract components: compared by their root only,
 # so what a template puts *inside* a card body or a footer column is its own
-# business. Everything around them is the contract.
+# business. Everything around them is the contract. Inline <svg> drawings
+# (card icons, flare art) are content too: only the element itself is shape.
 SLOT_CLASSES = {"card-body", "card-actions", "accordion-body", "fifty-fifty-body",
-                "modal", "banner", "field", "lightbox-slide", "data-table"}
+                "modal", "banner", "field", "lightbox-slide", "data-table", "card-icon"}
 
 # Attributes whose presence is structural but whose value is content.
 PRESENCE_ONLY = {"name", "open", "popovertarget"}
 
 
 def is_slot(node: Node) -> bool:
-    if node.classes & SLOT_CLASSES:
+    if node.classes & SLOT_CLASSES or node.tag == "svg":
         return True
     if node.tag == "section" and any("footer" in a.classes for a in node.ancestors()):
         return True

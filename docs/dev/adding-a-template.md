@@ -15,7 +15,11 @@ its reference implementation. A new template is a copy of `plain` re-skinned.
    `fixture-photo-1.svg`, `fixture-photo-2.svg` by name.
 6. Rewrite the copy of `index.html`, `sidebar.html`, `docs/index.html`,
    `docs/components/flare.html` and the three `example/` pages. Leave the
-   fixture fragments in `blogpost.html` and `forms.html` untouched.
+   fixture fragments in `blogpost.html` and `forms.html` untouched. The
+   navbar and footer snippets on `docs/components/navbar.html` and
+   `footer.html` are escaped copies of `index.html`'s markup (brand name,
+   footer heading), so re-copy them after rewriting the overview or the
+   snippet check fails.
 7. Write `README.md` (install set, browsers, fonts, the palette block in a
    ```css fence).
 8. `python tools/check.py --template <name>` until green.

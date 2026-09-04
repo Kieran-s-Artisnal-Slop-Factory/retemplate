@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="natural">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Dialog — Natural</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Natural · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html" aria-current="page">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Dialog</h1>
+  <p>A native <code>&lt;dialog&gt;</code> in modal mode: the page behind is dimmed and inert, focus stays inside, and <kbd>Esc</kbd> closes it. A form with <code>method="dialog"</code> closes it too, and reports which button was pressed.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="dialog">
+<button class="btn btn-primary" type="button" onclick="document.getElementById('ex-modal').showModal()">Open the dialog</button>
+<dialog class="modal" id="ex-modal" aria-labelledby="ex-modal-title">
+  <h2 id="ex-modal-title">Delete this draft?</h2>
+  <p>This cannot be undone.</p>
+  <form method="dialog" class="modal-actions">
+    <button class="btn" type="submit">Cancel</button>
+    <button class="btn btn-danger" type="submit" value="delete">Delete</button>
+  </form>
+</dialog>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="dialog">&lt;button class="btn btn-primary" type="button" onclick="document.getElementById('ex-modal').showModal()"&gt;Open the dialog&lt;/button&gt;
+&lt;dialog class="modal" id="ex-modal" aria-labelledby="ex-modal-title"&gt;
+  &lt;h2 id="ex-modal-title"&gt;Delete this draft?&lt;/h2&gt;
+  &lt;p&gt;This cannot be undone.&lt;/p&gt;
+  &lt;form method="dialog" class="modal-actions"&gt;
+    &lt;button class="btn" type="submit"&gt;Cancel&lt;/button&gt;
+    &lt;button class="btn btn-danger" type="submit" value="delete"&gt;Delete&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == dialog == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.modal</code></td><td>The dialog: surface, border, radius, width, shadow</td></tr>
+      <tr><td><code>.modal-actions</code></td><td>The button row, right-aligned</td></tr>
+      <tr><td><code>::backdrop</code></td><td>The dimmed page behind (in the base section)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The opener's <code>onclick</code> is the one line of script the contract allows for this. The declarative opener (<code>commandfor</code>) is newer than the browsers this template targets.</li>
+<li>Buttons inside <code>&lt;form method="dialog"&gt;</code> close the dialog; their <code>value</code> becomes <code>dialog.returnValue</code> if you ever want to read it.</li>
+<li>Give the dialog <code>aria-labelledby</code> pointing at its heading.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="forms.html">← Forms</a><a href="navbar.html">Navbar →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

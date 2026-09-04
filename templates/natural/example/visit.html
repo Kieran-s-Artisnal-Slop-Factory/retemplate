@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-theme="natural">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Visit — Fallow &amp; Fern Nursery</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Fallow &amp; Fern</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="field-guide.html">Field guide</a>
+    <a href="visit.html" aria-current="page">Visit</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Come and see</p>
+    <h1>Visit the nursery</h1>
+    <p>We are at the end of a farm track two miles south of Ashcombe. The gate is open when the sign is out. Wear boots; the beds are clay and the paths are grass.</p>
+  </header>
+
+  <section class="section" id="hours">
+    <h2>Opening hours</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>Nursery</th><th>Glasshouse and tea</th><th>Advice at the bench</th></tr></thead>
+        <tbody>
+          <tr><td>Monday – Wednesday</td><td>Closed</td><td>Closed</td><td>By email</td></tr>
+          <tr><td>Thursday – Friday</td><td>10 am – 5 pm</td><td>10 am – 4 pm</td><td>10 am – 1 pm</td></tr>
+          <tr><td>Saturday</td><td>10 am – 5 pm</td><td>10 am – 5 pm</td><td>All day</td></tr>
+          <tr><td>Sunday</td><td>10 am – 4 pm</td><td>10 am – 4 pm</td><td>All day</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted small">Closed the week after Christmas and in the first week of August, when we lift and divide.</p>
+  </section>
+
+  <section class="section">
+    <h2>Getting here</h2>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="6" rx="2"/><path d="M6 11l2-5h8l2 5M7 17v2M17 17v2"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">By car</h3>
+          <p class="card-text">Leave Ashcombe on the Fallow road and take the track after the second bridge. Park on the hardstanding by the barn.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="17" r="3"/><path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0-6 0M7 17l4-8h5l3 8M10 9l-1-3h3"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">By bike</h3>
+          <p class="card-text">The valley cycleway passes the bottom of the track. There is a rack under the walnut tree and a pump in the glasshouse.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="6" r="2"/><path d="M2 20l6-12 4 7 3-4 5 9H2Z"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">On foot</h3>
+          <p class="card-text">Forty minutes from Ashcombe church along the river path. Muddy after rain, which is most of the year.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="ask">
+    <h2>Ask about a plant, or book a bench</h2>
+    <p>Tell us what you have in mind and we will write back within the week. On a Saturday you can also book half an hour at the potting bench with whoever grew the plant.</p>
+    <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+    <form class="form-grid" action="#" method="get">
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field">
+          <label for="v-name">Name</label>
+          <input id="v-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="v-email">Email</label>
+          <input id="v-email" name="email" type="email" autocomplete="email" required>
+          <p class="hint">For the reply, and nothing else.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="v-garden">Your garden</label>
+          <textarea id="v-garden" name="garden" rows="3" placeholder="North-facing, clay, a wall that never dries…"></textarea>
+          <p class="hint">Soil, sun and shelter are the three things that decide what will live.</p>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>What you would like</legend>
+        <div class="field">
+          <span class="field-label">I am asking about</span>
+          <label class="check"><input type="checkbox" name="about" value="ferns" checked> Ferns</label>
+          <label class="check"><input type="checkbox" name="about" value="perennials"> Perennials</label>
+          <label class="check"><input type="checkbox" name="about" value="trees"> Trees and hedging</label>
+        </div>
+        <div class="field">
+          <span class="field-label">Bench booking</span>
+          <label class="check"><input type="radio" name="bench" value="none" checked> Just a question</label>
+          <label class="check"><input type="radio" name="bench" value="saturday"> A Saturday slot, please</label>
+        </div>
+        <div class="field">
+          <label for="v-when">Preferred Saturday</label>
+          <input id="v-when" name="when" type="date">
+        </div>
+        <div class="field">
+          <label class="switch"><input type="checkbox" role="switch" name="list" checked><span>Tell me when the bare-root list opens</span></label>
+          <label class="switch"><input type="checkbox" role="switch" name="frost"><span>Frost warnings by email</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn btn-primary btn-lg" type="submit">Send</button>
+        <button class="btn" type="reset">Start again</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>While you are here</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="here" open>
+        <summary>Can I bring pots back?</summary>
+        <div class="accordion-body"><p>Please. Terracotta goes back on the shelf; plastic goes to the grower who supplied it. Leave them by the barn door.</p></div>
+      </details>
+      <details class="accordion" name="here">
+        <summary>Is the nursery accessible?</summary>
+        <div class="accordion-body"><p>The glasshouse, the tea table and the first two beds are on hard paths and level. The lower beds are grass on a slope; ask and we will bring plants up to you.</p></div>
+      </details>
+      <details class="accordion" name="here">
+        <summary>Can I walk the wood?</summary>
+        <div class="accordion-body"><p>Yes, along the marked path. It is where most of the ferns in the <a href="field-guide.html">field guide</a> were first collected, and in April it is full of anemones.</p></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Fallow &amp; Fern Nursery</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="field-guide.html">Field guide</a></li>
+        <li><a href="visit.html">Visit</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>Lower Fallow Farm, Ashcombe</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Natural template</a></li>
+        <li><a href="../docs/index.html">Get started with Natural</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Natural template. The nursery, its clay and its ferns are fictional.</p>
+</footer>
+</body>
+</html>

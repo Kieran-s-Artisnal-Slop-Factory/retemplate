@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Relay — status pages that stay honest</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<div class="neon-flare neon-haze" aria-hidden="true">
+  <div class="neon-tube"></div>
+  <div class="neon-tube"></div>
+</div>
+<header class="navbar">
+  <a class="brand" href="index.html">Relay</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p><span class="neon-sign">All systems normal</span></p>
+      <h1>A status page your customers <span class="neon-text">actually believe</span>.</h1>
+      <p>Relay watches your endpoints from nine regions, writes the incident timeline for you, and refuses to show a green light it cannot prove. Set up in four minutes; the first monitor is free forever.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="pricing.html">Start free</a>
+        <a class="btn btn-lg" href="changelog.html">What shipped this week</a>
+      </div>
+    </div>
+    <img src="../assets/fifty.svg" alt="" width="900" height="600">
+  </section>
+
+  <section class="section">
+    <h2>What Relay does</h2>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Checks from nine regions</h3>
+          <p class="card-text">HTTP, TCP, DNS and heartbeat monitors every thirty seconds. A single region going quiet is noted; three agreeing is an incident.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Incidents that write themselves</h3>
+          <p class="card-text">The timeline starts the moment a check fails and fills in as regions recover. You add the human sentence; Relay keeps the timestamps.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Subscribers, not refreshers</h3>
+          <p class="card-text">Email, RSS, webhook and Slack. Subscribers hear about a fix at the same second you do, and never see a page that says "investigating" for six hours.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <section class="fifty-fifty fifty-fifty-reverse">
+      <figure><img src="../assets/hero.svg" alt="" width="1200" height="500"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Honesty by design</p>
+        <h2>The light only goes green when we can prove it</h2>
+        <p>A monitor shows <em>operational</em> when every region has succeeded in the last two minutes. Anything less is <em>degraded</em>, in amber, with the failing regions listed. There is no setting to change that.</p>
+        <a class="btn btn-primary" href="pricing.html">See the plans</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Questions people ask before they sign up</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Can I put the status page on my own domain?</summary>
+        <div class="accordion-body"><p>Yes, on every plan including the free one. Point a CNAME at us and Relay issues the certificate.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>What happens when Relay itself goes down?</summary>
+        <div class="accordion-body"><p>The status pages are served from a static edge that does not depend on the checking fleet, and our own status page is run by a competitor. We think that is the only honest arrangement.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Do you store request bodies?</summary>
+        <div class="accordion-body"><p>No. We keep status codes, timings and the first 512 bytes of a failed response, for fourteen days, in the region you choose.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Get the weekly digest</h2>
+    <p>One email a week: what changed, what broke, what we learned. No product tips, no "just checking in".</p>
+    <form class="form-grid" action="#" method="post">
+      <fieldset>
+        <legend>Subscribe</legend>
+        <div class="field">
+          <label for="digest-email">Work email</label>
+          <input id="digest-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <p class="hint">We send from digest@relay.example; add it to your allow-list.</p>
+        </div>
+        <div class="field">
+          <label for="digest-role">What do you run?</label>
+          <select id="digest-role" name="role">
+            <option>An API</option>
+            <option>A web app</option>
+            <option>Both, and a queue</option>
+            <option>Something stranger</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <button class="btn" type="reset">Clear</button>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+
+  <div class="banner banner-info" role="status"><span>i</span><p>Relay 2.4 shipped on Tuesday with the new incident templates. <a href="changelog.html">Read the changelog.</a></p></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Relay</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Company</h2>
+      <ul>
+        <li>Relay Systems, a fictional company</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li>Status: <span class="badge badge-done">Operational</span></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Neon template</a></li>
+        <li><a href="../docs/index.html">Get started with Neon</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Neon template. Relay, its regions and its uptime are fictional; the forms post nowhere.</p>
+</footer>
+</body>
+</html>

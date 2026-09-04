@@ -35,9 +35,9 @@ state of the build; the TODO records which *asks* have landed.
 | 4 — Brutal News | done | 2026-09-04 | checker green (one expected warning: acid yellow slot below 3:1); visual pass at Checkpoint B |
 | 5 — Glassy | done | 2026-09-04 | checker green; visual pass at Checkpoint B |
 | B — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of neumorphic, brutal-news, glassy at 1280 and 375 in both schemes (fonts, borders/shadows/glass, lightbox, dialog, popovers, toggle, overflow, console) clean; screenshots taken; no contract gaps raised |
-| 6 — Neon | not started | | |
-| 7 — Natural | not started | | |
-| C — Checkpoint | not started | | |
+| 6 — Neon | done | 2026-09-04 | checker 0/0; visual pass at Checkpoint C |
+| 7 — Natural | done | 2026-09-04 | checker 0/0; visual pass at Checkpoint C |
+| C — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of neon and natural at 1280 and 375 in both schemes (overflow, images, fonts, dialog, lightbox, exclusive accordion, nav popover, sidebar drawer, toggle persistence, console) clean, landing cards and filters checked; two gaps accepted and applied: inline `<svg>` drawings are content slots in the contract check, `copy.js` trimmed to budget in every template; eyeball items in the TODO |
 | 8 — Detailed | not started | | |
 | 9 — Gothic | not started | | |
 | 10 — Allegory | not started | | |

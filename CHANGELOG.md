@@ -12,9 +12,15 @@
 
 * **The `glassy` template.** Glassmorphism: a soft gradient backdrop built from three colour tokens, two blurred colour orbs drifting behind the page, and every card, bar, panel and dialog a translucent sheet with a bright edge and a backdrop blur. Pill buttons, large radii, a strip of four wave layers on a slow parallax that stops under reduced motion, system fonts. Example site: a small design studio.
 
+* **The `neon` template.** Black zinc surfaces, one-pixel hairlines and two neon tubes: rose for actions and danger, cyan for information, each glowing through shadows rather than fills. The light half is only less dark: the ground lifts to a warm grey, the text stays off-white, links move to a lighter rose to clear 4.5:1, and native controls, dialogs and open popovers are pinned to the dark scheme so the browser never paints a white menu or scrollbar. The feature card's border is a conic gradient turned by a registered `@property` on hover; flare adds a breathing haze, lit text, a flickering sign and a glow utility, all still under reduced motion. Space Grotesk and Inter from Google Fonts. Example site: a status-page SaaS with home, pricing and changelog.
+
+* **The `natural` template.** A field-guide look: cream paper with hairline rules, Fraunces headings, uppercase tracked kickers in moss and a rust accent, with a faint green tint in the page corner. The dark half is soil, a tiled SVG `feTurbulence` texture veiled by a `light-dark(var(--pal-bg0), transparent)` layer so the swap stays a colour, under cream and light-green text. The feature card is a pressed-flower specimen taped to the card with a paper tag that lifts on hover; flare is a ruled field note, a round nursery stamp and a leaf-sprig page break, all CSS. Fraunces and Source Sans 3 from Google Fonts. Example site: a plant nursery.
+
 ## Bug Fixes
 
 
 ## Other
 
 * **Structural checker and fixtures.** `tools/check.py` (Python, standard library only) enforces the template contract: required files, the head block, relative links, the retoken token rules with contrast maths, fixture and snippet parity, navigation consistency and the JavaScript allow-list. `fixtures/` holds the canonical markdown test article and form that every template embeds verbatim.
+
+* **Checkpoint C tidy-ups.** `js/copy.js` shipped at 31 lines against the contract's 25-line budget; its header comment and two helpers were compacted to 22 lines in every template, with no change in behaviour. The theme docs page of Neumorphic, Brutal News and Glassy claimed the template had no tokens of its own when each defines several; the paragraph now names them.

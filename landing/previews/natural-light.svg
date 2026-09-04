@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Natural preview">
+  <rect width="400" height="250" fill="#ece7d6"/>
+  <ellipse cx="400" cy="0" rx="190" ry="130" fill="#3d4a30" opacity="0.08"/>
+  <rect x="0" y="0" width="400" height="28" fill="#f5f1e4"/>
+  <rect x="0" y="28" width="400" height="1" fill="#c6c0a8"/>
+  <text x="14" y="19" font-family="Georgia, serif" font-size="12" fill="#2e2519">Natural</text>
+  <rect x="236" y="11" width="26" height="5" rx="1" fill="#6b6450"/>
+  <rect x="270" y="11" width="26" height="5" rx="1" fill="#6b6450"/>
+  <rect x="304" y="11" width="26" height="5" rx="1" fill="#6b6450"/>
+  <rect x="304" y="19" width="26" height="1.5" fill="#a33b2a"/>
+  <circle cx="376" cy="14" r="7" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="24" y="48" width="44" height="4" rx="1" fill="#3d4a30"/>
+  <text x="24" y="76" font-family="Georgia, serif" font-size="17" fill="#2e2519">Grown slowly,</text>
+  <text x="24" y="96" font-family="Georgia, serif" font-style="italic" font-size="17" fill="#a33b2a">on paper.</text>
+  <rect x="24" y="108" width="170" height="5" rx="1" fill="#6b6450" opacity="0.7"/>
+  <rect x="24" y="118" width="130" height="5" rx="1" fill="#6b6450" opacity="0.7"/>
+  <rect x="24" y="134" width="60" height="18" rx="2" fill="#a33b2a"/>
+  <rect x="92" y="134" width="60" height="18" rx="2" fill="#f5f1e4" stroke="#2e2519" stroke-width="1"/>
+  <rect x="236" y="46" width="140" height="102" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="242" y="52" width="128" height="90" rx="1" fill="#ece7d6"/>
+  <circle cx="340" cy="78" r="12" fill="#e2cf9c"/>
+  <path d="M242 118 Q 280 92 320 118 T 370 112 V142 H242Z" fill="#b9c9a0"/>
+  <path d="M242 130 Q 300 116 370 132 V142 H242Z" fill="#3d4a30"/>
+  <path d="M170 164 H 230 M 230 164 l -6 -4 M 230 164 l -6 4" stroke="#3d4a30" stroke-width="1.2" fill="none"/>
+  <rect x="24" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="146" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="268" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="30" y="184" width="96" height="22" fill="#b9c9a0"/>
+  <rect x="152" y="184" width="96" height="22" fill="#e2cf9c"/>
+  <rect x="274" y="184" width="96" height="22" fill="#e3ddc9"/>
+  <path d="M322 200 c -6 -8 -2 -14 6 -16 c 2 8 -1 14 -6 16z" fill="#3d4a30"/>
+  <rect x="352" y="180" width="30" height="9" rx="1" fill="#f8f4e8" stroke="#c6c0a8" transform="rotate(-6 367 184)"/>
+  <rect x="30" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
+  <rect x="152" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
+  <rect x="274" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
+  <rect x="30" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
+  <rect x="152" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
+  <rect x="274" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
+</svg>

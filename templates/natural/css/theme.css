@@ -1,0 +1,167 @@
+/*
+ * natural — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * Cream paper, ink, rust and moss by day. By night the page is deep brown
+ * soil — a small SVG noise texture tiled under everything and veiled by a
+ * flat gradient in the light half, so the swap is a colour and survives the
+ * paste-in — with cream and light green on top.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 2px var(--pal-shadow-1);
+  --shadow-2: 0 6px 18px var(--pal-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: 'Source Sans 3', 'Source Sans Pro', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: Fraunces, 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-weight-display: 500;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1.0625rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.6rem;
+  --font-size-2xl: 2.1rem;
+  --font-size-3xl: 2.7rem;
+  --font-size-hero: clamp(2.5rem, 1.6rem + 3.2vw, 4.25rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: natural ───────────────────────────────────────────────────
+ * Cream paper, dark ink, a rust accent and moss for the greens by day.
+ * By night: deep brown soil, cream text, a light green for the muted text
+ * and the kickers, and a straw-cream accent so links still read as links.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='natural'],
+[data-theme='natural'] {
+  --pal-bg0: light-dark(#ece7d6, #1c150f);
+  --pal-bg0-soft: light-dark(#f5f1e4, #261e16);
+  --pal-bg1: light-dark(#e3ddc9, #2f261c);
+  --pal-bg2: light-dark(#c6c0a8, #47392a);
+  --pal-bg3: light-dark(#a89f84, #5f4e3a);
+
+  --pal-fg: light-dark(#2e2519, #ece7d6);
+  --pal-fg-muted: light-dark(#6b6450, #b9c9a0);
+  --pal-gray: light-dark(#8c8470, #8a7f6b);
+
+  --pal-red: light-dark(#9c2f2f, #d98a74);
+  --pal-green: light-dark(#4d6b38, #9fbf7a);
+  --pal-yellow: light-dark(#8a6414, #d9b866);
+  --pal-blue: light-dark(#3f5f7a, #8fa9bf);
+  --pal-purple: light-dark(#6e4f7a, #b39ab8);
+  --pal-aqua: light-dark(#2f6f68, #8fbcb2);
+
+  --pal-accent: light-dark(#a33b2a, #e2cf9c);
+  --pal-accent-strong: light-dark(#7f2c1f, #f0e2b8);
+  --pal-on-accent: light-dark(#f5f1e4, #1c150f);
+
+  --pal-shadow-1: light-dark(rgb(46 37 25 / 0.10), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(46 37 25 / 0.18), rgb(0 0 0 / 0.6));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * Moss for kickers and ornaments; the soil texture and the veil that hides
+ * it by day; the moss tint in the top corner of the page; the sprig
+ * ornament as a mask; the pressed-flower card's tape and tag. Not part of
+ * the retoken paste-in.
+ */
+:root,
+.themed {
+  --natural-moss: light-dark(#3d4a30, #b9c9a0);
+  --natural-moss-soft: light-dark(rgb(61 74 48 / 0.12), rgb(185 201 160 / 0.10));
+  --natural-moss-tint: radial-gradient(52rem 36rem at 100% 0%, var(--natural-moss-soft), transparent 70%);
+
+  /* The soil. Two layers of fractal noise — slow blotches and fine grain —
+   * tinted earth and merged. In the light half the veil below covers it. */
+  --natural-soil: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='s' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.028' numOctaves='4' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.16 0 0 0 0.5 -0.14' result='blot'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 0.58 0 0 0 0 0.47 0 0 0 0 0.32 0 0 0 0.22 -0.04' result='grain'/%3E%3CfeMerge%3E%3CfeMergeNode in='blot'/%3E%3CfeMergeNode in='grain'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23s%29'/%3E%3C/svg%3E");
+  --natural-veil-color: light-dark(var(--pal-bg0), transparent);
+  --natural-veil: linear-gradient(var(--natural-veil-color), var(--natural-veil-color));
+
+  /* A leaf sprig on a hairline, used as a mask and filled with moss. */
+  --natural-sprig: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 24'%3E%3Cpath d='M0 12h52M108 12h52' stroke='%23000' stroke-width='1.2'/%3E%3Cpath d='M80 22V4' stroke='%23000' stroke-width='1.4'/%3E%3Cpath d='M80 16c-3-7-8-9-14-9 0 6 5 10 14 9zM80 16c3-7 8-9 14-9 0 6-5 10-14 9zM80 9c-2-4-5-6-9-6 0 4 3 7 9 6zM80 9c2-4 5-6 9-6 0 4-3 7-9 6z' fill='%23000'/%3E%3C/svg%3E");
+
+  --natural-tape: light-dark(rgb(245 241 228 / 0.7), rgb(236 231 214 / 0.22));
+  --natural-tag-paper: light-dark(#f8f4e8, #ece7d6);
+  --natural-tag-ink: #2e2519;
+  --natural-specimen-label: "Specimen";
+  --natural-rule: repeating-linear-gradient(transparent 0 1.55em, var(--natural-moss-soft) 1.55em 1.6em);
+}

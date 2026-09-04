@@ -21,10 +21,10 @@ Before beginning make sure the VERSION is up to date, and create a file called `
     - [x] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5) (built to these words rather than the reference's 2px/one-red restraint; see open question 14)
   - [x] Glassy; Modern design with highly frosted glassmorphic elements, and moving wave animations
     - [x] [reference](https://canadiancoding.ca/)
-  - [ ] Neon; A black design with neon accents, light mode is only less dark, don't go fully white
-    - [ ] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/4)
-  - [ ] Natural; A cream-papery design with some light green and brown accents, dark mode leans into more of a dirt texturey backgrop with light green and cream colours
-    - [ ] [reference](https://www.whichai.dev/with-design-skill/glm-5.2/3)
+  - [x] Neon; A black design with neon accents, light mode is only less dark, don't go fully white
+    - [x] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/4)
+  - [x] Natural; A cream-papery design with some light green and brown accents, dark mode leans into more of a dirt texturey backgrop with light green and cream colours
+    - [x] [reference](https://www.whichai.dev/with-design-skill/glm-5.2/3)
   - [ ] Detailed; An art deco inspired deisgn with lots of intricate details
     - [ ] [refernce](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Empire_State_Building_Entrance_decoration_%286046008895%29.jpg/960px-Empire_State_Building_Entrance_decoration_%286046008895%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
   - [ ] Gothic; A gothic design inspired website
@@ -37,6 +37,7 @@ This section is for me to keep track of what I need to manually review, feel fre
 - [x] Review `docs/dev/plans/version-0.1.0-phased.md` (2026-09-03): confirm the **Folder structure** section and answer the **Open questions** table (each has a default) before Phase 0 starts — confirmed 2026-09-04 with the no-npm correction
 - [ ] Checkpoint A visual pass (2026-09-04): the agent's pass was programmatic (overflow, interactions, console) plus a handful of screenshots. Please eyeball `templates/plain/index.html`, `blogpost.html`, `docs/index.html` and the landing in both schemes and note anything that looks off.
 - [ ] Checkpoint B visual pass (2026-09-04): please eyeball `templates/neumorphic`, `templates/brutal-news` and `templates/glassy` overviews and example sites in both schemes. Things a script cannot judge: whether Neumorphic's contrast feels right on your screen, whether Brutal News is loud enough (or too loud), and how the Glassy waves and orbs look in motion.
+- [ ] Checkpoint C visual pass (2026-09-04): please eyeball `templates/neon` and `templates/natural` overviews and example sites in both schemes. Neon: is the light half (`#3a3a42` ground, black form fields and drawer from the `color-scheme: dark` override) "less dark" enough and intentional-looking; the feature card's 4 s border sweep, the haze breathing and the `.neon-sign` flicker; the full-width feature card is very tall at desktop widths (inherited from plain). Natural: the dark soil texture strength (softened once), the pressed-specimen card's tag lift and tape at real hover speed, and whether the faint moss corner tint in light mode reads at all on your monitor.
 - [ ] Open questions still defaulted, answer before Phase 3 if you disagree: fonts by Google Fonts `<link>` (or approve a download script), Brutal News built to the TODO's words (thick rules, harsh hues) rather than the 2px reference, Allegory's white-on-gold / black-on-red kept for display bands only
 
 ## Per Template

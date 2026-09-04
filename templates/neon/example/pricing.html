@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Pricing — Relay</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Relay</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="pricing.html" aria-current="page">Pricing</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p><span class="neon-sign neon-sign-cyan">Pricing</span></p>
+    <h1>Three plans. The first one is free for as long as you like.</h1>
+    <p>Every plan includes a public status page on your own domain, unlimited subscribers and the honest green light. You pay for more monitors and shorter intervals, nothing else.</p>
+  </header>
+
+  <section class="section">
+    <div class="grid-3">
+      <article class="card">
+        <div class="card-body">
+          <p class="kicker">Solo</p>
+          <h3 class="card-title">Free</h3>
+          <p class="card-text">One monitor, checked every five minutes from three regions. A status page with your logo on it. Email and RSS for subscribers.</p>
+          <ul class="small">
+            <li>1 monitor</li>
+            <li>5-minute interval</li>
+            <li>3 regions</li>
+            <li>14 days of history</li>
+          </ul>
+          <div class="card-actions"><a class="btn" href="index.html#digest-email">Start free</a></div>
+        </div>
+      </article>
+      <article class="card card-feature">
+        <div class="card-body">
+          <p class="kicker">Team</p>
+          <h3 class="card-title">$24 a month</h3>
+          <p class="card-text">Twenty monitors at thirty seconds from all nine regions. Incident templates, Slack and webhooks, and a private page for the on-call channel.</p>
+          <ul class="small">
+            <li>20 monitors</li>
+            <li>30-second interval</li>
+            <li>9 regions</li>
+            <li>90 days of history</li>
+            <li>Slack, webhooks, private page</li>
+          </ul>
+          <div class="card-actions"><a class="btn btn-primary" href="index.html#digest-email">Start a 14-day trial</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <p class="kicker">Company</p>
+          <h3 class="card-title">$120 a month</h3>
+          <p class="card-text">Two hundred monitors, SSO, an audit log, a data region of your choice and a human who answers the phone.</p>
+          <ul class="small">
+            <li>200 monitors</li>
+            <li>30-second interval</li>
+            <li>9 regions + a private one</li>
+            <li>2 years of history</li>
+            <li>SSO, audit log, phone support</li>
+          </ul>
+          <div class="card-actions"><a class="btn" href="index.html#digest-email">Talk to us</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Everything, side by side</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Feature</th><th>Solo</th><th>Team</th><th>Company</th></tr></thead>
+        <tbody>
+          <tr><td>Monitors</td><td>1</td><td>20</td><td>200</td></tr>
+          <tr><td>Check interval</td><td>5 min</td><td>30 s</td><td>30 s</td></tr>
+          <tr><td>Regions</td><td>3</td><td>9</td><td>9 + private</td></tr>
+          <tr><td>History</td><td>14 days</td><td>90 days</td><td>2 years</td></tr>
+          <tr><td>Custom domain</td><td><span class="badge badge-done">Yes</span></td><td><span class="badge badge-done">Yes</span></td><td><span class="badge badge-done">Yes</span></td></tr>
+          <tr><td>Slack and webhooks</td><td><span class="badge">No</span></td><td><span class="badge badge-done">Yes</span></td><td><span class="badge badge-done">Yes</span></td></tr>
+          <tr><td>SSO and audit log</td><td><span class="badge">No</span></td><td><span class="badge">No</span></td><td><span class="badge badge-done">Yes</span></td></tr>
+          <tr><td>Support</td><td>Docs</td><td>Email, same day</td><td>Phone, an hour</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Estimate your bill</h2>
+    <p>Plans are flat; the only variable is which one. This form is the size of the decision.</p>
+    <form class="form-grid" action="#" method="post">
+      <fieldset>
+        <legend>Your setup</legend>
+        <div class="field">
+          <label for="est-monitors">How many endpoints do you need to watch?</label>
+          <input id="est-monitors" type="number" name="monitors" min="1" max="500" value="8">
+          <p class="hint">Count each hostname or heartbeat once.</p>
+        </div>
+        <div class="field">
+          <label for="est-interval">How quickly do you need to know?</label>
+          <select id="est-interval" name="interval">
+            <option>Within five minutes is fine</option>
+            <option>Within a minute</option>
+            <option>Thirty seconds, always</option>
+          </select>
+        </div>
+        <div class="field field-wide">
+          <label class="switch"><input type="checkbox" role="switch" name="sso"><span>We need single sign-on</span></label>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="button" onclick="document.getElementById('estimate').showModal()">Show my plan</button>
+        </div>
+      </fieldset>
+    </form>
+    <dialog class="modal" id="estimate" aria-labelledby="estimate-title">
+      <h2 id="estimate-title">You want Team</h2>
+      <p>Eight monitors at thirty seconds fits the Team plan with room to grow: <strong>$24 a month</strong>, or $240 a year. If the SSO switch was on, that is Company.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Close</button>
+        <a class="btn btn-primary" href="index.html#digest-email">Start the trial</a>
+      </form>
+    </dialog>
+  </section>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>Prices are in fictional dollars. Relay does not exist; this is a template demo.</p></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Relay</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Company</h2>
+      <ul>
+        <li>Relay Systems, a fictional company</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li>Status: <span class="badge badge-done">Operational</span></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Neon template</a></li>
+        <li><a href="../docs/index.html">Get started with Neon</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Neon template. Relay, its regions and its uptime are fictional; the forms post nowhere.</p>
+</footer>
+</body>
+</html>

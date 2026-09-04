@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-theme="natural">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare — Natural</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Natural · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Natural adds three small things from a naturalist's desk: a page from a field notebook, a round stamp, and the leaf sprig as a block of its own. The soil texture and the corner tint are not flare — they are tokens on <code>&lt;body&gt;</code> and need no markup.</p>
+</header>
+<h2 id="preview">Field note</h2>
+<p>A ruled panel with a rust margin line. The lines are a repeating gradient sized to the line height, so text sits on them; the margin is <code>::before</code>. Put anything in it; a kicker as the first child works as a heading.</p>
+<figure class="example" data-snippet="natural-note">
+<div class="natural-flare">
+  <div class="natural-note">
+    <p class="kicker">Field note · 14 May</p>
+    <p>Hart's-tongue fern under the north wall has put out six new fronds since the rain. Moved the two pots of lemon balm into the shade before they bolt.</p>
+    <p>Soil still cold at a hand's depth. Wait another week on the beans.</p>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-note">&lt;div class="natural-flare"&gt;
+  &lt;div class="natural-note"&gt;
+    &lt;p class="kicker"&gt;Field note · 14 May&lt;/p&gt;
+    &lt;p&gt;Hart's-tongue fern under the north wall has put out six new fronds since the rain. Moved the two pots of lemon balm into the shade before they bolt.&lt;/p&gt;
+    &lt;p&gt;Soil still cold at a hand's depth. Wait another week on the beans.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">Stamp</h2>
+<p>A round seal in moss with a double ring, tilted a few degrees. Small tracked capitals around one italic word in Fraunces. The overview puts one in the hero; <code>.hero .natural-flare</code> pushes it to the right edge.</p>
+<figure class="example" data-snippet="natural-stamp">
+<div class="natural-flare" aria-hidden="true"><span class="natural-stamp">Grown on<strong>paper</strong>est. 2026</span></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-stamp">&lt;div class="natural-flare" aria-hidden="true"&gt;&lt;span class="natural-stamp"&gt;Grown on&lt;strong&gt;paper&lt;/strong&gt;est. 2026&lt;/span&gt;&lt;/div&gt;</code></pre></div>
+<h3>Sprig</h3>
+<p>The page-break ornament as a standalone block, a little larger. It is the same <code>--natural-sprig</code> mask filled with <code>--natural-moss</code>, so it recolours with the scheme. Use <code>&lt;hr class="page-break"&gt;</code> when you mean a break between sections; use this when you only want the drawing.</p>
+<figure class="example" data-snippet="natural-sprig">
+<div class="natural-flare natural-sprig" aria-hidden="true"></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-sprig">&lt;div class="natural-flare natural-sprig" aria-hidden="true"&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.natural-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.natural-note</code></td><td>Ruled paper panel; <code>::before</code> is the margin line</td></tr>
+      <tr><td><code>.natural-stamp</code></td><td>Round moss seal with a double ring; <code>strong</code> inside is the italic word</td></tr>
+      <tr><td><code>.natural-sprig</code></td><td>The sprig mask as a free-standing block</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token: <code>--natural-moss</code>, <code>--natural-moss-soft</code>, <code>--natural-rule</code>, <code>--natural-sprig</code> in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>Nothing animates continuously. The only motion in the template is the tag on the <a href="cards.html">feature card</a>, a transition the global <code>prefers-reduced-motion</code> rule shortens to nothing.</li>
+<li>The stamp and the sprig are decoration; mark them <code>aria-hidden="true"</code> as the examples do. The field note is content and should not be.</li>
+<li>The soil texture (<code>--natural-soil</code>) and the corner tint (<code>--natural-moss-tint</code>) are background layers on <code>body</code>, documented on the <a href="../theme.html">theme page</a>.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>
