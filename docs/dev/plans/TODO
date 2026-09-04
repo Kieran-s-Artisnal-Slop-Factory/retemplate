@@ -1,0 +1,90 @@
+# Version 0.1.0 plans
+
+Before beginning make sure the VERSION is up to date, and create a file called `docs/dev/plans/version-<version number>-phased.md` which is a phased plan for implementing the features, then stop after creating it. If that file exists, the that means the version has been started and you're taking over from where another agent left off. If it doesn't then create the file making sure to also create "checkpoints" which are points after a few phases where the full test suite is ran, and must pass before proceeding. You don't need to run the full tests on every phase because it's going to be too slow. For each checkpoint, if it's not going to trample one another, feel free to use subagents, in fact ideally you should.
+
+
+## Features & fixes
+
+- [ ] Scaffold out project
+  - [ ] Determine project layout
+    - [ ] Create landing page for overviewing templates
+      - [ ] Showcase each template, add simple filter and search by title
+    - [ ] Create a page with an example of rendered markdown text to test with, similar to https://raw.githubusercontent.com/mxstbr/markdown-test-file/master/TEST.md
+  - [ ] Update this file's [per tempalte](#per-template) section
+- [ ] Create initial templates
+  - [ ] Neumorphic
+  - [ ] Brutal News; A brutalist newspaper like design with thick border lines and harsh colors
+    - [ ] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5)
+  - [ ] Glassy; Modern design with highly frosted glassmorphic elements, and moving wave animations
+    - [ ] [reference](https://canadiancoding.ca/)
+  - [ ] Neon; A black design with neon accents, light mode is only less dark, don't go fully white
+    - [ ] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/4)
+  - [ ] Natural; A cream-papery design with some light green and brown accents, dark mode leans into more of a dirt texturey backgrop with light green and cream colours
+    - [ ] [reference](https://www.whichai.dev/with-design-skill/glm-5.2/3)
+  - [ ] Detailed; An art deco inspired deisgn with lots of intricate details
+    - [ ] [refernce](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Empire_State_Building_Entrance_decoration_%286046008895%29.jpg/960px-Empire_State_Building_Entrance_decoration_%286046008895%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
+  - [ ] Gothic; A gothic design inspired website
+  - [ ] Allegory; A light theme based on angelic imagery and white on gold, a dark theme based on demonic imagery, black on red
+
+## For human
+
+This section is for me to keep track of what I need to manually review, feel free to add to this
+
+- [ ] Review `docs/dev/plans/version-0.1.0-phased.md` (2026-09-03): confirm the **Folder structure** section and answer the **Open questions** table (each has a default) before Phase 0 starts
+
+## Per Template
+
+For each template ensure:
+
+1. The theme is retoken compatible (https://kieranwood.ca/retoken/theme/)
+2. It includes the following components on top of the normal form fields, buttons, typography, images, `<dialog>` modals, etc.
+  1. Accordion (just use `<details><summary></summary></details>`, but also give options for combining a bunch of them together into a larger group)
+  2. Cards
+    1. Typical setup
+      1. Heading
+      2. description
+      3. icon or image
+    2. include horizontal variants with images/icons on the left or right side
+    3. include 1 more dynamic card with some sort of an effect that makes sense for the tempalte
+  3. fifty-fifty
+    1. Image takes up 50% of the component size, text takes up the rest
+    2. e.g https://web.ucalgary.ca/blocks-layouts/block-library-guide/image-text-block
+    3. image on left or right
+  4. Image gallery with lightbox
+  5. toggle switch (for themes where plain checkboxes make less sense)
+  6. page break (a `<hr>`)
+  7. Any flare elements you find that are necessary for putting together demo pages
+3. Prefer semantic html over `div`'s (e.g. `<details>` for accordions, `<dialogue>` for modals, `<main>`, `<article>`, `<footer>`, etc.)
+4. Do not use any frameworks, all pure HTML, and CSS with no build step, **minimal** js, only used when absolutely required
+5. Each should have a sidebar and normal navbar variant
+6. All templates need a light and dark theme
+7. For docs there should be a library of all components for people to see, similar to https://ui.shadcn.com/docs/components
+8. File structure should be that it lives in `tempaltes/<tempalte-name>` with the following directories and files
+  1. `index.html` an overview page to show off the theme, give it normal prose and tie the elements together nicely, with links to the other pages somewhere
+  2. `blogpost.html` an example blogpost with all markdown standard featuers (tables, images, italics, headings, etc.), and things like an author card with metadata like tags, date published, etc.
+  3. `forms.html` an example form
+  4. `sidebar.html` a sidebar variant
+  5. `docs/` a folder containing docs-style pages for the template
+    1. `docs/component/<component-name>.html` a page for each component to show it off with docs about the component and a copy-paste option to be able to use it
+    2. `docs/defaults.html` Page for generic HTML elements; elements like `<h2>`
+    3. A page to show off a blog post design
+    4. A page with a quick get-started section
+  6. `example` an example website with 3 pages, 1 homepage and 2 others that make sense, to get a feel for it in a "real" project
+9. Include it in the lading page
+
+## Per change
+Required guidence to follow per change
+
+- Check off changes as you go
+  - Make sure the TODO is kept up to date so that if a usage limit is hit I'm not left in the dark
+- Add Changes to the CHANGELOG.md
+    - If a version exists and does not have a release date yet, keep adding to it, if there's no versions without a release date, then bump version (e.g. `v0.1.0 -> v0.2.0`) in the version file, and add a new main heading to CHANGELOG.md for it (e.g. `v0.2.0 (unreleased)`) and add the changes under there.
+    - Be brief, 2-4 setnences per change, and if you need more, prompt for approval from the user
+    - Add all changes under the following categories as sub-headings:
+      - Features
+      - Bug Fixes
+      - Other
+        - For things like
+          - Documentation improvements
+          - Refinements to existing systems that weren't bugs
+          - anything else that doesn't fit in the other sections
