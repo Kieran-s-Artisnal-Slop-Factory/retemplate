@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Sidebar variant — Glassy</title>
+  <title>Sidebar variant, Glassy</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
@@ -64,38 +64,42 @@
   <main class="page docs">
 <header class="page-header">
   <p class="kicker">The other layout</p>
-  <h1>The overview, with a sidebar</h1>
-  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the docs use the sidebar layout. Here the sidebar is a tall pane of frosted glass with the gradient and the orbs showing through it.</p>
+  <h1>The overview, beside a sidebar</h1>
+  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the docs use the sidebar layout. Here the sidebar is a tall sheet of glass with the orbs showing through it, and the page is the same three depths, in a narrower column.</p>
 </header>
 <h2>What the layout is made of</h2>
-<p>A grid with two rows and, above 64rem, two columns. The top bar spans both columns and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls under it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the blurred backdrop and the dismiss behaviour.</p>
+<p>A grid with two rows and, above 64rem, two columns. The top bar spans both and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls beside it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the blurred backdrop and the dismiss behaviour.</p>
 <div class="grid-3">
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code>, open by default.</p></div>
+  <article class="card glassy-shallow">
+    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code>, open by default. Close the ones you are not using.</p></div>
   </article>
   <article class="card">
-    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
     <div class="card-body"><h3 class="card-title">The current page</h3><p class="card-text">The link to the page you are on carries <code>aria-current="page"</code> and a tinted pill.</p></div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+  <article class="card glassy-deep">
     <div class="card-body"><h3 class="card-title">Same content, either way</h3><p class="card-text">Nothing on this page needs the sidebar. Swap the shell and the page still works.</p></div>
   </article>
 </div>
 <h2>Glass on glass</h2>
-<p>Panels stack. A card inside a panel inside the page still reads, because each sheet only takes a little of the light behind it.</p>
-<div class="glassy-panel">
-  <p class="kicker">A glass panel</p>
-  <p>Any block of content can sit on a sheet of glass. This is the same recipe every card, banner and table in the template uses.</p>
+<p>Sheets stack. A card inside a pane inside the page still reads, because each sheet takes only some of the light behind it. The pane below holds a shallow card and a deep one.</p>
+<div class="glassy-pane">
+  <p class="kicker">A pane</p>
+  <div class="grid-2">
+    <article class="card glassy-shallow">
+      <div class="card-body"><h3 class="card-title">Shallow, inside</h3><p class="card-text">Sits back into the pane.</p></div>
+    </article>
+    <article class="card glassy-deep">
+      <div class="card-body"><h3 class="card-title">Deep, inside</h3><p class="card-text">Lifts off it.</p></div>
+    </article>
+  </div>
 </div>
-<section class="fifty-fifty">
+<section class="fifty-fifty glassy-overlap">
   <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
   <div class="fifty-fifty-body">
-    <p class="kicker">Fifty-fifty</p>
-    <h2>Half image, half words</h2>
-    <p>The same block the overview uses, here to prove it sits happily inside the narrower column.</p>
-    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">Docs</a>
+    <p class="kicker">Fifty-fifty, overlapped</p>
+    <h2>The panel floats over the picture</h2>
+    <p>The same block the overview uses, here to show it fits the narrower column.</p>
+    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
   </div>
 </section>
 <div class="accordion-group">
@@ -105,13 +109,13 @@
   </details>
   <details class="accordion" name="side-faq">
     <summary>Does the blur cost anything?</summary>
-    <div class="accordion-body"><p>A little, on old hardware. Every panel is a <code>backdrop-filter</code>; if a page has hundreds, lower <code>--glassy-blur</code> in <code>theme.css</code>.</p></div>
+    <div class="accordion-body"><p>A little, on old hardware. Every sheet is a <code>backdrop-filter</code>; if a page has hundreds, lower <code>--glassy-blur</code> in <code>theme.css</code>.</p></div>
   </details>
 </div>
 <div class="row">
   <label class="switch"><input type="checkbox" role="switch" checked><span>Sticky top bar</span></label>
   <span class="badge badge-active">Sidebar layout</span>
-  <button class="btn" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
+  <button class="btn glassy-ghost" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
 </div>
 <dialog class="modal" id="side-modal" aria-labelledby="side-modal-title">
   <h2 id="side-modal-title">Dialogs work anywhere</h2>
@@ -119,18 +123,7 @@
   <form method="dialog" class="modal-actions"><button class="btn btn-primary" type="submit">Close</button></form>
 </dialog>
 <hr class="page-break">
-<div class="banner banner-info" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
-<div class="glassy-flare glassy-waves" aria-hidden="true">
-  <svg viewBox="0 24 150 28" preserveAspectRatio="none">
-    <defs><path id="glassy-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"/></defs>
-    <g class="glassy-wave-set">
-      <use href="#glassy-wave" x="48" y="0"/>
-      <use href="#glassy-wave" x="48" y="3"/>
-      <use href="#glassy-wave" x="48" y="5"/>
-      <use href="#glassy-wave" x="48" y="7"/>
-    </g>
-  </svg>
-</div>
+<div class="banner glassy-frost" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
   </main>
 </div>
 <script src="js/copy.js"></script>

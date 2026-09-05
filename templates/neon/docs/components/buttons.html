@@ -68,7 +68,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Buttons</h1>
-  <p>Three kinds — primary, default, danger — in three sizes. A link can wear the same classes when it should look like a button.</p>
+  <p>Three kinds, primary, default and danger, in three sizes. A link can wear the same classes when it should look like a button.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <figure class="example" data-snippet="buttons">
@@ -101,6 +101,20 @@
   &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
   &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Neon: the outline</h3>
+<p><code>.neon-outline</code> is the accent as a tube, unfilled: rose border and rose text on the page colour, glowing on hover. It is the quiet call beside a primary, and the natural look for a control that is currently off. <code>.neon-outline-cyan</code> is the same in the information colour.</p>
+<figure class="example" data-snippet="buttons-neon-outline">
+<div class="row">
+  <button class="btn btn-primary" type="button">Save</button>
+  <button class="btn neon-outline" type="button">Preview</button>
+  <a class="btn neon-outline-cyan" href="#">Read the notes</a>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="buttons-neon-outline">&lt;div class="row"&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Save&lt;/button&gt;
+  &lt;button class="btn neon-outline" type="button"&gt;Preview&lt;/button&gt;
+  &lt;a class="btn neon-outline-cyan" href="#"&gt;Read the notes&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -109,6 +123,7 @@
       <tr><td><code>.btn-danger</code></td><td>Filled with the danger colour</td></tr>
       <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
       <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
+      <tr><td><code>.neon-outline</code>, <code>.neon-outline-cyan</code></td><td>Neon: an unfilled tube in rose or cyan</td></tr>
       <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>

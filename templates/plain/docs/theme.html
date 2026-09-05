@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Theme — Plain</title>
+  <title>Theme · Plain</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -158,7 +158,7 @@
 <tr><td><code>--font-size-hero</code></td><td><code>clamp(2.4rem, 1.6rem + 3vw, 4rem)</code></td><td>Hero and post titles</td></tr>
 </tbody></table></div>
 <h2>Use this palette in retoken</h2>
-<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="plain"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not — set those in the editor.</p>
+<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="plain"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not; set those in the editor.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='plain'],
 [data-theme='plain'] {
   --pal-bg0: light-dark(#fafafa, #131316);
@@ -185,7 +185,7 @@
 <h2>Template-only tokens</h2>
 <p>A styled template may add tokens of its own, prefixed with its name (<code>--neon-glow</code>, <code>--glassy-blur</code>). Plain has none. They live in <code>theme.css</code> so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces.</p>
 <h2>Light and dark</h2>
-<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours — a texture, an ornament, <code>content</code> — <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
+<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours (a texture, an ornament, <code>content</code>), <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
 
   </main>
 </div>

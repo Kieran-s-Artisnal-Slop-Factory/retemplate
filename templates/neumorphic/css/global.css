@@ -62,7 +62,8 @@ h5,
 h6 {
   font-family: var(--font-display);
   font-weight: var(--font-weight-display);
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
@@ -470,10 +471,8 @@ dialog::backdrop,
 
 .kicker {
   font-size: var(--font-size-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--text-muted-color);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .check {
@@ -520,9 +519,14 @@ dialog::backdrop,
   max-width: 50ch;
 }
 
+.hero h1 {
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
 @media (min-width: 48rem) {
   .hero {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--space-6);
   }
 }
@@ -573,12 +577,12 @@ dialog::backdrop,
 .btn-danger {
   background: var(--color-danger);
   border-color: var(--color-danger);
-  color: var(--surface-color);
+  color: var(--color-on-primary);
 }
 
 .btn-danger:hover {
   filter: brightness(0.92);
-  color: var(--surface-color);
+  color: var(--color-on-primary);
 }
 
 .btn-sm {
@@ -1668,8 +1672,10 @@ hr.page-break::after {
 }
 
 /* == flare == */
-/* A sunken well for grouping controls, and a round raised knob used as a
- * decorative dial. Both are pure shadow work on the page colour. */
+/* Everything Neumorphic adds beyond the contract is a control: a raised panel
+ * that groups controls, a sunken well, a readout dial, a segmented choice,
+ * a stat tile, a pressed card, a round button and a sunken banner. All of it
+ * is shadow work on the page colour; the recipes are tokens in theme.css. */
 .neumorphic-well {
   padding: var(--space-5);
   border-radius: var(--radius-lg);
@@ -1677,44 +1683,230 @@ hr.page-break::after {
   box-shadow: var(--neumorphic-inset);
 }
 
-.neumorphic-knob {
-  width: 9rem;
-  height: 9rem;
+fieldset.neumorphic-well {
+  padding: var(--space-5);
+}
+
+/* The panel: a raised board with a dial in the first column and a stack of
+ * controls in the second; anything given .neumorphic-panel-row spans both. */
+.neumorphic-panel {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  background: var(--bg-color);
+  box-shadow: var(--neumorphic-raise-lg);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.neumorphic-panel-row {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 30rem) {
+  .neumorphic-panel {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+/* The dial: a raised disc, a sunken face, a pointer at --angle (0deg is
+ * straight up) and the value it reads. */
+.neumorphic-dial {
+  --angle: 0deg;
+  width: 11rem;
+  aspect-ratio: 1;
   border-radius: var(--radius-full);
   background: var(--bg-color);
   box-shadow: var(--neumorphic-raise-lg);
   display: grid;
-  place-items: center;
+  place-content: center;
+  justify-items: center;
   position: relative;
+  text-align: center;
+  flex: none;
 }
 
-.neumorphic-knob::before {
+.neumorphic-dial::before {
   content: "";
-  width: 6.5rem;
-  height: 6.5rem;
+  position: absolute;
+  inset: 1.1rem;
   border-radius: var(--radius-full);
   box-shadow: var(--neumorphic-inset);
 }
 
-.neumorphic-knob::after {
+.neumorphic-dial::after {
   content: "";
   position: absolute;
-  top: 1rem;
+  top: 0;
   left: 50%;
   width: 0.5rem;
-  height: 1.4rem;
+  height: 50%;
   margin-left: -0.25rem;
   border-radius: var(--radius-full);
-  background: var(--color-primary);
+  background: linear-gradient(var(--color-primary) 0 0.85rem, transparent 0.85rem);
+  transform: rotate(var(--angle));
+  transform-origin: 50% 100%;
 }
 
-.neumorphic-dials {
-  display: flex;
-  gap: var(--space-5);
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: var(--space-4) 0;
+.neumorphic-dial-value {
+  position: relative;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  line-height: 1;
 }
+
+.neumorphic-dial-label {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-muted-color);
+}
+
+.neumorphic-dial-lg {
+  width: 14rem;
+}
+
+.neumorphic-dial-lg .neumorphic-dial-value {
+  font-size: var(--font-size-3xl);
+}
+
+/* The segment: radios in a sunken track; the checked one is a raised tab. */
+.neumorphic-segment {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border: 0;
+  margin: 0;
+  border-radius: var(--radius-md);
+  background: var(--bg-color);
+  box-shadow: var(--neumorphic-inset-sm);
+  position: relative;
+}
+
+.neumorphic-segment input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.neumorphic-segment label {
+  padding: 0.35em 0.9em;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-muted-color);
+  transition: box-shadow 150ms, color 120ms;
+}
+
+.neumorphic-segment label:hover {
+  color: var(--text-color);
+}
+
+.neumorphic-segment input:checked + label {
+  background: var(--bg-color);
+  box-shadow: var(--neumorphic-flat);
+  color: var(--color-primary-strong);
+}
+
+.neumorphic-segment input:focus-visible + label {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* The tile: a card that reads one number. */
+.card.neumorphic-tile .card-body {
+  gap: var(--space-1);
+}
+
+.neumorphic-tile .card-title {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-muted-color);
+}
+
+.neumorphic-tile-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.neumorphic-tile-value small {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-muted-color);
+  letter-spacing: 0;
+}
+
+/* The pressed card: the same card, sunk into the surface. Use it for what
+ * is off, idle or not chosen. */
+.card.neumorphic-pressed {
+  box-shadow: var(--neumorphic-inset);
+}
+
+.card.neumorphic-pressed .card-media {
+  background: transparent;
+}
+
+.card.neumorphic-pressed .card-media img {
+  opacity: 0.6;
+}
+
+.card.neumorphic-pressed .card-title {
+  color: var(--text-muted-color);
+}
+
+/* The round button: one glyph, for step and power controls. */
+.btn.neumorphic-round {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+.btn.btn-sm.neumorphic-round {
+  width: 2.1rem;
+  height: 2.1rem;
+  font-size: var(--font-size-base);
+}
+
+.btn.btn-lg.neumorphic-round {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: var(--font-size-xl);
+}
+
+/* The sunken banner: no edge; the icon carries the tone instead. */
+.banner.neumorphic-inset {
+  border-left-width: 0;
+  box-shadow: var(--neumorphic-inset-sm);
+  padding-left: var(--space-4);
+}
+
+.banner.neumorphic-inset > span:first-child {
+  font-weight: 800;
+}
+
+.banner-success.neumorphic-inset > span:first-child { color: var(--color-success); }
+.banner-warning.neumorphic-inset > span:first-child { color: var(--color-warning); }
+.banner-danger.neumorphic-inset > span:first-child { color: var(--color-danger); }
+.banner-info.neumorphic-inset > span:first-child { color: var(--color-info); }
 
 /* == print == */
 @media print {

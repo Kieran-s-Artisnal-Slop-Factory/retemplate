@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Sidebar variant — Neon</title>
+  <title>Sidebar variant: Neon</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
@@ -14,10 +14,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 </head>
 <body>
-<div class="neon-flare neon-haze" aria-hidden="true">
-  <div class="neon-tube"></div>
-  <div class="neon-tube"></div>
-</div>
 <div class="sidebar-layout">
   <header class="topbar">
     <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
@@ -69,59 +65,80 @@
     <p class="sidebar-footer"><a class="site-link" href="../../index.html">All templates</a></p>
   </aside>
   <main class="page docs">
-<header class="page-header">
-  <p class="kicker">The other layout</p>
-  <h1>The overview, with a sidebar</h1>
-  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the whole docs tree use the sidebar layout. On a wide screen the sidebar is a column of black glass beside the page; on a narrow one it is a drawer behind the menu button, and it closes on <kbd>Esc</kbd> or a tap outside.</p>
-</header>
-<h2>What the layout is made of</h2>
-<p>A grid with two rows and, above 64rem, two columns. The top bar spans both columns and stays put, blurring whatever scrolls under it; the sidebar is a sticky column with its own scrollbar (in the page colours — no white rail); the page scrolls beside it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the dimmed, blurred backdrop and the dismiss behaviour.</p>
+<ul class="neon-marquee">
+  <li><strong>Neon</strong></li>
+  <li>Sidebar layout</li>
+  <li>Drawer below 64rem</li>
+  <li>Column above it</li>
+</ul>
+<section class="hero neon-stage">
+  <div class="stack">
+    <h1><span class="neon-text neon-strike">Side entrance.</span></h1>
+    <p>The overview's parts in the other shell. A top bar that stays put, a sidebar that is a drawer on a phone and a fixed column on a desktop, and the page beside it. Nothing about a component changes.</p>
+    <div class="row"><a class="btn btn-primary" href="docs/components/sidebar.html">How the shell is built</a></div>
+  </div>
+</section>
+<h2>Lit is on. Dark is off.</h2>
+<p>The controls read the same in the narrower column: a lit tube is active, a hairline is idle, a badge with a lamp is a state.</p>
+<div class="row">
+  <button class="btn btn-primary" type="button">Save</button>
+  <button class="btn neon-outline" type="button">Preview</button>
+  <button class="btn" type="button">Cancel</button>
+  <label class="switch"><input type="checkbox" role="switch" checked><span>Sticky top bar</span></label>
+  <span class="badge neon-light badge-done">Up</span>
+  <span class="badge neon-light">Off</span>
+</div>
+<h2>The board</h2>
+<div class="table-wrap">
+  <table class="data-table neon-status">
+    <thead><tr><th>Part</th><th>Built on</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td>Top bar</td><td><code>position: sticky</code></td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+      <tr><td>Drawer</td><td><code>popover</code> below 64rem</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+      <tr><td>Groups</td><td><code>&lt;details open&gt;</code></td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+      <tr><td>Desktop collapse</td><td>not built</td><td><span class="badge neon-light">Off</span></td></tr>
+    </tbody>
+  </table>
+</div>
+<h2>Panels</h2>
 <div class="grid-3">
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code> with a cyan label, open by default. Close the ones you do not need.</p></div>
+  <article class="card neon-panel">
+    <div class="card-body"><h3 class="card-title">Groups</h3><p class="card-text"><strong>Fold</strong>Each navigation group is a <code>&lt;details&gt;</code> with a cyan label, open by default.</p></div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">The current page</h3><p class="card-text">The link to the page you are on carries <code>aria-current="page"</code>, which is what lights its rose edge.</p></div>
+  <article class="card neon-panel neon-panel-lit">
+    <div class="card-body"><h3 class="card-title">Current page</h3><p class="card-text"><strong>Lit</strong>The link to this page carries <code>aria-current="page"</code>. That is what lights its edge.</p></div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Same content, either way</h3><p class="card-text">Nothing on this page needs the sidebar. Swap the shell and the page still works.</p></div>
+  <article class="card neon-panel">
+    <div class="card-body"><h3 class="card-title">Scrollbar</h3><p class="card-text"><strong>Dark</strong>The column scrolls on its own, in the page colours. No white rail in either scheme.</p></div>
   </article>
 </div>
-<h2>The rest of the kit, briefly</h2>
 <section class="fifty-fifty">
   <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
   <div class="fifty-fifty-body">
     <p class="kicker">Fifty-fifty</p>
-    <h2>Half image, half words</h2>
-    <p>The same block the overview uses, here to prove it sits happily inside the narrower column.</p>
-    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">Docs</a>
+    <h2>Half picture, half words</h2>
+    <p>The same block the overview uses, here to show it fits the narrower column.</p>
+    <a class="btn neon-outline" href="docs/components/fifty-fifty.html">Docs</a>
   </div>
 </section>
 <div class="accordion-group">
-  <details class="accordion" name="side-faq" open>
+  <details class="accordion" name="side-notes" open>
     <summary>Can the sidebar collapse on a wide screen?</summary>
-    <div class="accordion-body"><p>Not in this version. The drawer behaviour is for narrow screens only; on a wide screen the column is always there.</p></div>
+    <div class="accordion-body"><p>Not in this version. The drawer is for narrow screens; on a wide screen the column is always there.</p></div>
   </details>
-  <details class="accordion" name="side-faq">
+  <details class="accordion" name="side-notes">
     <summary>Why is the drawer darker than the page in light mode?</summary>
-    <div class="accordion-body"><p>An open popover is pinned to the dark scheme so the browser never paints it white. The palette inside it resolves to its dark half, which on this template means one step blacker than the lifted grey around it.</p></div>
+    <div class="accordion-body"><p>An open popover is pinned to the dark scheme so the browser never paints it white. Inside it the palette resolves to its dark half: one step blacker than the lifted grey around it.</p></div>
   </details>
 </div>
-<div class="row">
-  <label class="switch"><input type="checkbox" role="switch" checked><span>Sticky top bar</span></label>
-  <span class="badge badge-active">Sidebar layout</span>
-  <button class="btn" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
-</div>
+<p><button class="btn" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog</button></p>
 <dialog class="modal" id="side-modal" aria-labelledby="side-modal-title">
   <h2 id="side-modal-title">Dialogs work anywhere</h2>
   <p>The layout does not change how any component behaves.</p>
   <form method="dialog" class="modal-actions"><button class="btn btn-primary" type="submit">Close</button></form>
 </dialog>
 <hr class="page-break">
-<div class="banner banner-info" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
+<div class="banner banner-info" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page in a frame with its source beside it.</p></div>
 
   </main>
 </div>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Settings — Hearth</title>
+  <title>Settings, Larch Road</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 <header class="navbar">
-  <a class="brand" href="index.html">Hearth</a>
+  <a class="brand" href="index.html">Larch Road</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html">Home</a>
@@ -31,17 +31,17 @@
   <header class="page-header">
     <p class="kicker">Hub</p>
     <h1>Settings</h1>
-    <p>The house, the people in it, and what it is allowed to do on its own.</p>
+    <p>The house, the people in it, and what it is allowed to do on its own. Each group is a sunken fieldset; nothing here is saved until you press Save.</p>
   </header>
 
-  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is stored.</p></div>
+  <div class="banner banner-info neumorphic-inset" role="status"><span>i</span><p>This is a demonstration. The form posts nowhere and nothing you type is stored.</p></div>
 
   <form class="form-grid" action="#" method="get">
-    <fieldset>
+    <fieldset class="neumorphic-well">
       <legend>The house</legend>
       <div class="field">
         <label for="s-name">Home name</label>
-        <input id="s-name" name="name" type="text" value="Hearth">
+        <input id="s-name" name="name" type="text" value="Larch Road">
       </div>
       <div class="field">
         <label for="s-tz">Time zone</label>
@@ -52,17 +52,42 @@
         </select>
       </div>
       <div class="field">
-        <label for="s-tariff">Off-peak tariff starts</label>
+        <label for="s-tariff">Off-peak rate starts</label>
         <input id="s-tariff" name="tariff" type="time" value="23:00">
         <p class="hint">The battery charges from the grid after this.</p>
       </div>
       <div class="field">
         <label for="s-eco">Eco target when nobody is home</label>
         <input id="s-eco" name="eco" type="number" min="12" max="20" value="16">
+        <p class="hint">Degrees.</p>
       </div>
     </fieldset>
-    <fieldset>
-      <legend>Automation</legend>
+    <fieldset class="neumorphic-well">
+      <legend>Heating</legend>
+      <div class="field">
+        <span class="field-label">Default mode</span>
+        <div class="neumorphic-segment" role="radiogroup" aria-label="Default heating mode">
+          <input type="radio" id="s-off" name="heat-mode"><label for="s-off">Off</label>
+          <input type="radio" id="s-eco-mode" name="heat-mode"><label for="s-eco-mode">Eco</label>
+          <input type="radio" id="s-comfort" name="heat-mode" checked><label for="s-comfort">Comfort</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="s-band">Hold within</label>
+        <select id="s-band" name="band">
+          <option value="0.25">A quarter of a degree</option>
+          <option value="0.5" selected>Half a degree</option>
+          <option value="1">One degree</option>
+        </select>
+        <p class="hint">Tighter is warmer and costs more.</p>
+      </div>
+      <div class="field field-wide">
+        <label class="switch"><input type="checkbox" role="switch" name="preheat" checked><span>Start early so rooms are warm at the scheduled time</span></label>
+        <label class="switch"><input type="checkbox" role="switch" name="windows"><span>Pause a room's heating when its window is open</span></label>
+      </div>
+    </fieldset>
+    <fieldset class="neumorphic-well">
+      <legend>On its own</legend>
       <div class="field">
         <label class="switch"><input type="checkbox" role="switch" name="auto-scenes" checked><span>Run scenes on a schedule</span></label>
         <label class="switch"><input type="checkbox" role="switch" name="presence" checked><span>Use phone presence for Away</span></label>
@@ -82,36 +107,71 @@
 
   <section class="section">
     <h2>People</h2>
+    <p>Whoever is home is raised.</p>
     <div class="grid-3">
       <article class="card">
         <div class="card-body">
           <h3 class="card-title">Sam</h3>
-          <p class="card-text">Owner. Home now.</p>
+          <p class="card-text">Owner. Home since 17:05.</p>
           <div class="card-actions"><span class="badge badge-active">Home</span></div>
         </div>
       </article>
-      <article class="card">
+      <article class="card neumorphic-pressed">
         <div class="card-body">
           <h3 class="card-title">Jo</h3>
           <p class="card-text">Member. Left at 08:12.</p>
           <div class="card-actions"><span class="badge">Away</span></div>
         </div>
       </article>
-      <article class="card">
+      <article class="card neumorphic-pressed">
         <div class="card-body">
           <h3 class="card-title">Guest</h3>
-          <p class="card-text">Lights and the front door only.</p>
+          <p class="card-text">Lights and the front door only. No code issued this week.</p>
           <div class="card-actions"><span class="badge badge-done">Limited</span></div>
         </div>
       </article>
     </div>
   </section>
+
+  <section class="section">
+    <section class="fifty-fifty">
+      <figure><img src="../assets/gallery-5.svg" alt="" width="800" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <h2>The hub</h2>
+        <p>Online since 3 May, 14 devices paired, one on a low battery. Firmware 4.2, installed on 28 August. The last backup ran at 03:00 and took eleven seconds.</p>
+        <button class="btn" type="button" onclick="document.getElementById('restart').showModal()">Restart the hub</button>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Rarely needed</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="rare">
+        <summary>Export the history</summary>
+        <div class="accordion-body"><p>Ninety days of device events as a spreadsheet. Nothing about people is included.</p><button class="btn btn-sm" type="button">Export</button></div>
+      </details>
+      <details class="accordion" name="rare">
+        <summary>Forget every device</summary>
+        <div class="accordion-body"><p>Unpairs all 14 devices and clears every scene and schedule. The hub keeps its name and time zone.</p><button class="btn btn-sm btn-danger" type="button">Forget all</button></div>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="modal" id="restart" aria-labelledby="restart-title">
+    <h2 id="restart-title">Restart the hub?</h2>
+    <p>Lights and locks keep their last state. The house is unreachable for about a minute.</p>
+    <form method="dialog" class="modal-actions">
+      <button class="btn" type="submit">Cancel</button>
+      <button class="btn btn-primary" type="submit" value="restart">Restart</button>
+    </form>
+  </dialog>
 </main>
 
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Hearth</h2>
+      <h2>Larch Road</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="room.html">Living room</a></li>
@@ -119,9 +179,9 @@
       </ul>
     </section>
     <section>
-      <h2>Status</h2>
+      <h2>Hub</h2>
       <ul>
-        <li>Hub online since 3 May</li>
+        <li>Online since 3 May</li>
         <li>14 devices, 1 low battery</li>
         <li><a href="settings.html">Diagnostics</a></li>
       </ul>

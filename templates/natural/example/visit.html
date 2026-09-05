@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Visit — Fallow &amp; Fern Nursery</title>
+  <title>Visit. Fallow &amp; Fern Nursery</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
   <link rel="stylesheet" href="../css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 </head>
 <body>
 <header class="navbar">
@@ -28,26 +28,48 @@
 </header>
 
 <main class="page">
-  <header class="page-header">
-    <p class="kicker">Come and see</p>
-    <h1>Visit the nursery</h1>
-    <p>We are at the end of a farm track two miles south of Ashcombe. The gate is open when the sign is out. Wear boots; the beds are clay and the paths are grass.</p>
-  </header>
+  <section class="hero">
+    <div class="natural-flare">
+      <figure class="natural-plate">
+        <img src="../assets/map.svg" alt="A hand-drawn map: the Fallow road from Ashcombe, two bridges, the farm track to Lower Fallow Farm and the wood" width="900" height="600">
+        <figcaption class="natural-label">
+          <p class="kicker">The way here</p>
+          <p class="natural-binomial">Lower Fallow Farm, Ashcombe</p>
+          <dl class="natural-data">
+            <dt>From</dt><dd>Ashcombe church, two miles by the Fallow road</dd>
+            <dt>Turn</dt><dd>Onto the track after the second bridge</dd>
+            <dt>Park</dt><dd>Hardstanding by the barn</dd>
+            <dt>Phone</dt><dd>01234 567 890</dd>
+          </dl>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="stack">
+      <p class="kicker">Come and see</p>
+      <h1>Visit the nursery</h1>
+      <p class="natural-lede">The gate is open when the sign is out.</p>
+      <p>We are at the end of a farm track two miles south of Ashcombe, between the river and the wood. Wear boots; the beds are clay and the paths are grass, and both are wet for most of the year.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="#ask">Ask about a plant</a>
+        <a class="btn btn-lg natural-stamp" href="#hours">Hours</a>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="hours">
     <h2>Opening hours</h2>
     <div class="table-wrap">
       <table class="data-table">
-        <thead><tr><th>Day</th><th>Nursery</th><th>Glasshouse and tea</th><th>Advice at the bench</th></tr></thead>
+        <thead><tr><th scope="col">Day</th><th scope="col">Nursery</th><th scope="col">Glasshouse and tea</th><th scope="col">Advice at the bench</th></tr></thead>
         <tbody>
-          <tr><td>Monday – Wednesday</td><td>Closed</td><td>Closed</td><td>By email</td></tr>
-          <tr><td>Thursday – Friday</td><td>10 am – 5 pm</td><td>10 am – 4 pm</td><td>10 am – 1 pm</td></tr>
-          <tr><td>Saturday</td><td>10 am – 5 pm</td><td>10 am – 5 pm</td><td>All day</td></tr>
-          <tr><td>Sunday</td><td>10 am – 4 pm</td><td>10 am – 4 pm</td><td>All day</td></tr>
+          <tr><td>Monday to Wednesday</td><td>Closed</td><td>Closed</td><td>By email</td></tr>
+          <tr><td>Thursday and Friday</td><td>10 to 5</td><td>10 to 4</td><td>10 to 1</td></tr>
+          <tr><td>Saturday</td><td>10 to 5</td><td>10 to 5</td><td>All day</td></tr>
+          <tr><td>Sunday</td><td>10 to 4</td><td>10 to 4</td><td>All day</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="muted small">Closed the week after Christmas and in the first week of August, when we lift and divide.</p>
+    <p class="muted small">Closed the week after Christmas and the first week of August, when we lift and divide.</p>
   </section>
 
   <section class="section">
@@ -80,54 +102,58 @@
   <hr class="page-break">
 
   <section class="section" id="ask">
-    <h2>Ask about a plant, or book a bench</h2>
-    <p>Tell us what you have in mind and we will write back within the week. On a Saturday you can also book half an hour at the potting bench with whoever grew the plant.</p>
+    <h2>Ask about a plant, or book the bench</h2>
+    <p>Tell us what you have in mind and we write back within the week. On a Saturday you can also book half an hour at the potting bench with whoever grew the plant. The form is on a tag, like everything else here.</p>
     <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
-    <form class="form-grid" action="#" method="get">
-      <fieldset>
-        <legend>About you</legend>
-        <div class="field">
-          <label for="v-name">Name</label>
-          <input id="v-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="v-email">Email</label>
-          <input id="v-email" name="email" type="email" autocomplete="email" required>
-          <p class="hint">For the reply, and nothing else.</p>
-        </div>
-        <div class="field field-wide">
-          <label for="v-garden">Your garden</label>
-          <textarea id="v-garden" name="garden" rows="3" placeholder="North-facing, clay, a wall that never dries…"></textarea>
-          <p class="hint">Soil, sun and shelter are the three things that decide what will live.</p>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>What you would like</legend>
-        <div class="field">
-          <span class="field-label">I am asking about</span>
-          <label class="check"><input type="checkbox" name="about" value="ferns" checked> Ferns</label>
-          <label class="check"><input type="checkbox" name="about" value="perennials"> Perennials</label>
-          <label class="check"><input type="checkbox" name="about" value="trees"> Trees and hedging</label>
-        </div>
-        <div class="field">
-          <span class="field-label">Bench booking</span>
-          <label class="check"><input type="radio" name="bench" value="none" checked> Just a question</label>
-          <label class="check"><input type="radio" name="bench" value="saturday"> A Saturday slot, please</label>
-        </div>
-        <div class="field">
-          <label for="v-when">Preferred Saturday</label>
-          <input id="v-when" name="when" type="date">
-        </div>
-        <div class="field">
-          <label class="switch"><input type="checkbox" role="switch" name="list" checked><span>Tell me when the bare-root list opens</span></label>
-          <label class="switch"><input type="checkbox" role="switch" name="frost"><span>Frost warnings by email</span></label>
-        </div>
-      </fieldset>
-      <div class="form-actions">
-        <button class="btn btn-primary btn-lg" type="submit">Send</button>
-        <button class="btn" type="reset">Start again</button>
+    <div class="natural-flare">
+      <div class="natural-tag">
+        <form class="form-grid" action="#" method="get">
+          <fieldset>
+            <legend>About you</legend>
+            <div class="field">
+              <label for="v-name">Name</label>
+              <input id="v-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="v-email">Email</label>
+              <input id="v-email" name="email" type="email" autocomplete="email" required>
+              <p class="hint">For the reply, and nothing else.</p>
+            </div>
+            <div class="field field-wide">
+              <label for="v-garden">Your garden</label>
+              <textarea id="v-garden" name="garden" rows="3" placeholder="North-facing, clay, a wall that never dries"></textarea>
+              <p class="hint">Soil, sun and shelter are the three things that decide what will live.</p>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>What you would like</legend>
+            <div class="field">
+              <span class="field-label">I am asking about</span>
+              <label class="check"><input type="checkbox" name="about" value="ferns" checked> Ferns</label>
+              <label class="check"><input type="checkbox" name="about" value="perennials"> Perennials</label>
+              <label class="check"><input type="checkbox" name="about" value="trees"> Trees and hedging</label>
+            </div>
+            <div class="field">
+              <span class="field-label">Bench booking</span>
+              <label class="check"><input type="radio" name="bench" value="none" checked> Just a question</label>
+              <label class="check"><input type="radio" name="bench" value="saturday"> A Saturday slot, please</label>
+            </div>
+            <div class="field">
+              <label for="v-when">Preferred Saturday</label>
+              <input id="v-when" name="when" type="date">
+            </div>
+            <div class="field">
+              <label class="switch"><input type="checkbox" role="switch" name="list" checked><span>Tell me when the bare-root list opens</span></label>
+              <label class="switch"><input type="checkbox" role="switch" name="frost"><span>Frost warnings by email</span></label>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg" type="submit">Send</button>
+            <button class="btn" type="reset">Start again</button>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </section>
 
   <section class="section">
@@ -139,7 +165,7 @@
       </details>
       <details class="accordion" name="here">
         <summary>Is the nursery accessible?</summary>
-        <div class="accordion-body"><p>The glasshouse, the tea table and the first two beds are on hard paths and level. The lower beds are grass on a slope; ask and we will bring plants up to you.</p></div>
+        <div class="accordion-body"><p>The glasshouse, the tea table and the first two beds are on hard paths and level. The lower beds are grass on a slope; ask and we bring plants up to you.</p></div>
       </details>
       <details class="accordion" name="here">
         <summary>Can I walk the wood?</summary>
@@ -175,7 +201,7 @@
       </ul>
     </section>
   </div>
-  <p class="footer-note">An example site for the Natural template. The nursery, its clay and its ferns are fictional.</p>
+  <p class="footer-note">An example site for the Natural template. The plants are real; the nursery, its clay and its people are not.</p>
 </footer>
 </body>
 </html>

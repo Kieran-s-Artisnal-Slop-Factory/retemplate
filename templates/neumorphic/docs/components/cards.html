@@ -162,7 +162,7 @@
   <figure class="card-media"><img src="../../assets/card-4.svg" alt="" width="640" height="400"></figure>
   <div class="card-body">
     <h3 class="card-title">The feature card</h3>
-    <p class="card-text">Neumorphic lifts it on hover and colours its edge. Other templates do something of their own.</p>
+    <p class="card-text">Neumorphic raises it further on hover and presses it in on click. Other templates do something of their own.</p>
   </div>
 </article>
 </figure>
@@ -170,9 +170,81 @@
   &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-4.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
   &lt;div class="card-body"&gt;
     &lt;h3 class="card-title"&gt;The feature card&lt;/h3&gt;
-    &lt;p class="card-text"&gt;Neumorphic lifts it on hover and colours its edge. Other templates do something of their own.&lt;/p&gt;
+    &lt;p class="card-text"&gt;Neumorphic raises it further on hover and presses it in on click. Other templates do something of their own.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>Tile, Neumorphic's own</h3>
+<p>A card that reads one number. Add <code>neumorphic-tile</code> to the card and put the reading in a <code>.neumorphic-tile-value</code>; a <code>&lt;small&gt;</code> inside it is the unit. The title becomes a small label above the number.</p>
+<figure class="example" data-snippet="card-neumorphic-tile">
+<div class="grid-2">
+  <article class="card neumorphic-tile">
+    <div class="card-body">
+      <h3 class="card-title">Battery</h3>
+      <p class="neumorphic-tile-value">62 <small>%</small></p>
+      <p class="card-text">Enough for the evening.</p>
+    </div>
+  </article>
+  <article class="card neumorphic-tile">
+    <div class="card-body">
+      <h3 class="card-title">Outside</h3>
+      <p class="neumorphic-tile-value">9 <small>°</small></p>
+      <p class="card-text">Falling to 4° overnight.</p>
+    </div>
+  </article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="card-neumorphic-tile">&lt;div class="grid-2"&gt;
+  &lt;article class="card neumorphic-tile"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Battery&lt;/h3&gt;
+      &lt;p class="neumorphic-tile-value"&gt;62 &lt;small&gt;%&lt;/small&gt;&lt;/p&gt;
+      &lt;p class="card-text"&gt;Enough for the evening.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card neumorphic-tile"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Outside&lt;/h3&gt;
+      &lt;p class="neumorphic-tile-value"&gt;9 &lt;small&gt;°&lt;/small&gt;&lt;/p&gt;
+      &lt;p class="card-text"&gt;Falling to 4° overnight.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Pressed, Neumorphic's own</h3>
+<p>The same card sunk into the surface. Use it for what is off, idle or not chosen, next to raised cards for what is on; the picture dims a little and the title goes muted.</p>
+<figure class="example" data-snippet="card-neumorphic-pressed">
+<div class="grid-2">
+  <article class="card">
+    <figure class="card-media"><img src="../../assets/card-1.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body">
+      <h3 class="card-title">Living room</h3>
+      <p class="card-text">Raised: something in here is on.</p>
+    </div>
+  </article>
+  <article class="card neumorphic-pressed">
+    <figure class="card-media"><img src="../../assets/card-3.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body">
+      <h3 class="card-title">Bedroom</h3>
+      <p class="card-text">Pressed: dark since 07:40.</p>
+    </div>
+  </article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="card-neumorphic-pressed">&lt;div class="grid-2"&gt;
+  &lt;article class="card"&gt;
+    &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-1.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Living room&lt;/h3&gt;
+      &lt;p class="card-text"&gt;Raised: something in here is on.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card neumorphic-pressed"&gt;
+    &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-3.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Bedroom&lt;/h3&gt;
+      &lt;p class="card-text"&gt;Pressed: dark since 07:40.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -186,6 +258,9 @@
       <tr><td><code>.card-horizontal</code></td><td>Media beside the body</td></tr>
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card</td></tr>
+      <tr><td><code>.neumorphic-tile</code></td><td>Neumorphic: a card that reads one number; the title becomes a label</td></tr>
+      <tr><td><code>.neumorphic-tile-value</code></td><td>Neumorphic: the reading, large and tabular; <code>&lt;small&gt;</code> for the unit</td></tr>
+      <tr><td><code>.neumorphic-pressed</code></td><td>Neumorphic: the card sunk into the surface</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

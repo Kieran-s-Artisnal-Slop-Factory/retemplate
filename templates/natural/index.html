@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Natural — a retemplate template</title>
+  <title>Natural, a retemplate template</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 </head>
 <body>
 <header class="navbar">
@@ -31,147 +31,186 @@
 
 <main class="page">
   <section class="hero">
+    <div class="natural-flare">
+      <figure class="natural-plate">
+        <img src="assets/hero.svg" alt="A pressed water avens with two nodding rust flowers on a cream herbarium sheet" width="900" height="1100">
+        <figcaption class="natural-label">
+          <p class="kicker">Herbarium of the Natural template</p>
+          <p class="natural-binomial">Geum rivale <span class="natural-auth">L.</span></p>
+          <dl class="natural-data">
+            <dt>Common</dt><dd>Water avens</dd>
+            <dt>Collected</dt><dd>Fallow brook, 4 September 2026</dd>
+            <dt>Habit</dt><dd>Perennial, nodding, to 40 cm</dd>
+            <dt>Soil</dt><dd>Wet clay, part shade</dd>
+            <dt>Det.</dt><dd>M. Penrose</dd>
+          </dl>
+        </figcaption>
+      </figure>
+    </div>
     <div class="stack">
-      <p class="kicker">Paper by day, soil by night</p>
-      <h1>A template that reads like a <em>field guide</em>.</h1>
-      <p>Cream paper, hairline rules, a serif for the headings and a rust accent for the things you can press. Turn the lights off and the paper becomes earth, with cream and light green on top. Same markup as every other template here.</p>
+      <p class="kicker">A retemplate template</p>
+      <h1>Pressed, labelled, <em>kept</em>.</h1>
+      <p class="natural-lede">Cream paper and ink by day. Soil by night.</p>
+      <p>Natural sets a page like a herbarium sheet: rust for what you can press, moss for the labels, a hairline for everything else. After dark the paper is earth and the ink is cream. The markup is the same as every template here; only the cupboard differs.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
-        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+        <a class="btn btn-lg natural-stamp" href="docs/components/index.html">The components</a>
       </div>
     </div>
-    <img src="assets/hero.svg" alt="" width="1200" height="500">
-    <div class="natural-flare" aria-hidden="true"><span class="natural-stamp">Grown on<strong>paper</strong>est. 2026</span></div>
   </section>
 
   <section class="section">
-    <h2>What you get</h2>
-    <p>Take the <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> folders and you have the whole template. Everything else on this page exists to show it off. The three cards below are the ordinary card, with an image, an icon, and neither; each one is a slip of paper with a hairline edge.</p>
+    <h2>The herbarium</h2>
+    <p>Cards are the drawers of the cupboard. Add <code>natural-specimen</code> and the picture is mounted on the sheet with a label glued under it: a common name in Fraunces, the binomial in italic, and a list of where it came from and what it wants. The list is a <code>&lt;dl&gt;</code>, so the data stays data. Take <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> and you have the whole template; everything else on this page is here to show it.</p>
     <div class="grid-3">
-      <article class="card">
-        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+      <article class="card natural-specimen">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="A pressed quaking grass with straw-coloured seed heads" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Two stylesheets</h3>
-          <p class="card-text"><code>theme.css</code> holds the tokens, the palette and the soil texture; <code>global.css</code> holds everything that uses them.</p>
+          <p class="kicker">No. 4</p>
+          <h3 class="card-title">Quaking grass</h3>
+          <p class="natural-binomial">Briza media <span class="natural-auth">L.</span></p>
+          <dl class="natural-data">
+            <dt>Collected</dt><dd>Top meadow, June</dd>
+            <dt>Habit</dt><dd>Tufted grass, 30 cm</dd>
+            <dt>Soil</dt><dd>Thin chalk, full sun</dd>
+          </dl>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+      <article class="card natural-specimen">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="A pressed primrose rosette with three pale flowers" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Light and dark</h3>
-          <p class="card-text">Cream paper with a moss tint in the corner, or deep brown soil under cream and green text. The soil is a texture veiled by a colour, so the swap is a colour too.</p>
+          <p class="kicker">No. 7</p>
+          <h3 class="card-title">Primrose</h3>
+          <p class="natural-binomial">Primula vulgaris <span class="natural-auth">Huds.</span></p>
+          <dl class="natural-data">
+            <dt>Collected</dt><dd>Wood bank, March</dd>
+            <dt>Habit</dt><dd>Rosette, 12 cm</dd>
+            <dt>Soil</dt><dd>Damp clay, light shade</dd>
+          </dl>
         </div>
       </article>
-      <article class="card">
+      <article class="card natural-specimen">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="A single fern frond" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Retoken compatible</h3>
-          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+          <p class="kicker">No. 12</p>
+          <h3 class="card-title">Hart's-tongue fern</h3>
+          <p class="natural-binomial">Asplenium scolopendrium <span class="natural-auth">L.</span></p>
+          <dl class="natural-data">
+            <dt>Collected</dt><dd>Barn wall, north side, May</dd>
+            <dt>Habit</dt><dd>Evergreen fern, 45 cm</dd>
+            <dt>Soil</dt><dd>Lime, never dry</dd>
+          </dl>
+          <div class="card-actions"><a class="btn btn-sm" href="example/field-guide.html">Its page in the guide</a></div>
         </div>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <h2>Cards, sideways</h2>
-    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+    <h2>From the collecting book</h2>
+    <p>Horizontal cards put the picture on the left or, with <code>card-media-end</code>, on the right; on a narrow screen they stack. Two entries from the autumn book, and below them the template's own dynamic card: a pressed specimen taped to the sheet, with a paper tag hanging off its corner. Rest on it and the tag lifts. Tape, tag and mount are pseudo-elements, so the markup is the ordinary card's.</p>
     <div class="grid-2">
       <article class="card card-horizontal">
-        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <figure class="card-media"><img src="assets/gallery-2.svg" alt="Three acorns" width="800" height="600"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the left</h3>
-          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+          <p class="kicker">9 October</p>
+          <h3 class="card-title">Acorns, Oak Hanger</h3>
+          <p class="card-text">A heavy year. Gathered a hatful from the two old trees, sowed forty in root trainers and left the rest for the jays.</p>
         </div>
       </article>
       <article class="card card-horizontal card-media-end">
-        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <figure class="card-media"><img src="assets/gallery-5.svg" alt="A pine cone" width="800" height="600"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the right</h3>
-          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+          <p class="kicker">22 October</p>
+          <h3 class="card-title">Cones, the plantation</h3>
+          <p class="card-text">Closed after the rain, open again by the stove. Seed shaken out onto a tray: perhaps two hundred, most of them empty.</p>
         </div>
       </article>
     </div>
-    <p>Every template also has one <em>feature</em> card with an effect that suits it. Natural's is a pressed specimen: the picture is taped to the card and a paper tag hangs off its corner. Hover, and the tag lifts.</p>
-    <article class="card card-feature">
-      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+    <article class="card card-feature" style="--natural-specimen-label: 'No. 27'">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="A pressed sunflower on gridded paper" width="640" height="400"></figure>
       <div class="card-body">
-        <h3 class="card-title">The feature card</h3>
-        <p class="card-text">Tape, tag and mount are all pseudo-elements, so this is the same card markup as the ones above. The tag's text is a token you can set per card.</p>
+        <h3 class="card-title">Sunflower, the volunteer by the compost heap</h3>
+        <p class="natural-binomial">Helianthus annuus <span class="natural-auth">L.</span></p>
+        <p class="card-text">Came up from a dropped bird seed and stood two metres tall by August. Pressed one head for the book before the finches had it. The tag's text is a token, so each card can carry its own number.</p>
         <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
       </div>
     </article>
   </section>
 
   <section class="section">
-    <h2>Half and half</h2>
-    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>fifty-fifty-reverse</code> and the image moves to the right. On a phone the image comes first either way.</p>
-    <div class="stack">
-      <section class="fifty-fifty">
-        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image left</p>
-          <h2>Say the one thing this block is for</h2>
-          <p>A heading, a paragraph and a single call to action. That is the whole pattern, and it carries most landing pages.</p>
-          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
-        </div>
-      </section>
-      <section class="fifty-fifty fifty-fifty-reverse">
-        <figure><img src="assets/gallery-6.svg" alt="" width="800" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image right</p>
-          <h2>The same block, mirrored</h2>
-          <p>Alternate them down a page and the eye is led from side to side without any extra styling.</p>
-          <a class="btn" href="docs/components/fifty-fifty.html">Read the docs</a>
-        </div>
-      </section>
-    </div>
+    <h2>Plate and notes</h2>
+    <p>The fifty-fifty block gives the picture half the width and the words the other half. With <code>natural-spread</code> the picture becomes a mounted sheet and the words lose their box and gain the notebook's rust margin, so the two read as one opening of the guide. On a phone the sheet comes first.</p>
+    <section class="fifty-fifty natural-spread">
+      <figure><img src="assets/gallery-3.svg" alt="A rosette of leaves" width="800" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Pl. II</p>
+        <h2>A rosette is a plan for winter</h2>
+        <p>Plantain, primrose, foxglove in its first year: the leaves lie flat to the ground where the frost is weakest and the light is theirs alone. Lift one in February and the roots are already at work. Plant the rosette-formers in autumn and they will have a season's start on anything sown in spring.</p>
+        <a class="btn" href="docs/components/fifty-fifty.html">How the spread is built</a>
+      </div>
+    </section>
   </section>
 
   <section class="section">
-    <h2>Questions, folded</h2>
-    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group of them the same <code>name</code> and opening one closes the others, with no script.</p>
-    <div class="accordion-group">
-      <details class="accordion" name="faq" open>
-        <summary>Does this need a build step?</summary>
-        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets, the one script and the fonts, and write HTML.</p></div>
+    <h2>A key to three ferns</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group the same <code>name</code> and opening one closes the rest, with no script. Add <code>natural-key</code> and the group is set as a dichotomous key: the leads come in pairs, numbered by a CSS counter, and each opens on where it takes you. Start at 1a.</p>
+    <div class="accordion-group natural-key">
+      <details class="accordion" name="key" open>
+        <summary>Frond undivided, a single glossy strap</summary>
+        <div class="accordion-body">
+          <p class="natural-binomial">Asplenium scolopendrium <span class="natural-auth">L.</span></p>
+          <p>Hart's-tongue fern. Evergreen; spore lines in pairs on the back. Walls, well mouths, the foot of north-facing steps. <a href="example/field-guide.html">No. 12 in the guide.</a></p>
+        </div>
       </details>
-      <details class="accordion" name="faq">
-        <summary>Where does the soil come from?</summary>
-        <div class="accordion-body"><p>A 320-pixel SVG tile of <code>feTurbulence</code> noise, stored as a data URI in <code>--natural-soil</code> and laid under the page. By day a flat layer the colour of the paper sits on top of it; by night that layer is transparent.</p></div>
+      <details class="accordion" name="key">
+        <summary>Frond divided into leaflets</summary>
+        <div class="accordion-body"><p>Go to 2.</p></div>
       </details>
-      <details class="accordion" name="faq">
-        <summary>Which browsers?</summary>
-        <div class="accordion-body"><p>Anything from 2024 on: the template relies on <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive accordions and <code>mask-image</code>.</p></div>
+      <details class="accordion" name="key">
+        <summary>Leaflets soft, each with a thumb at its base and a bristle at its tip</summary>
+        <div class="accordion-body">
+          <p class="natural-binomial">Polystichum setiferum <span class="natural-auth">(Forssk.) T. Moore ex Woyn.</span></p>
+          <p>Soft shield fern. Arching, finely cut, mostly evergreen. Hedge banks and the shady side of the wood.</p>
+        </div>
+      </details>
+      <details class="accordion" name="key">
+        <summary>Leaflets blunt, the frond stiff and upright in a shuttlecock</summary>
+        <div class="accordion-body">
+          <p class="natural-binomial">Dryopteris filix-mas <span class="natural-auth">(L.) Schott</span></p>
+          <p>Male fern. Dies back in a hard winter and comes again in April. Will grow almost anywhere that is not baked.</p>
+        </div>
       </details>
     </div>
     <p>A single accordion stands on its own.</p>
     <details class="accordion">
-      <summary>What is in the install set?</summary>
-      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code> and <code>assets/</code>. The fonts come from Google Fonts by a link; the README shows how to self-host them instead.</p></div>
+      <summary>Where does the soil come from?</summary>
+      <div class="accordion-body"><p>A 320-pixel SVG tile of <code>feTurbulence</code> noise, stored as a data URI in <code>--natural-soil</code> and laid under the page. By day a flat layer the colour of the paper sits on top of it; by night that layer is transparent. Both are tokens in <code>theme.css</code>.</p></div>
     </details>
   </section>
 
   <section class="section">
-    <h2>A gallery with a lightbox</h2>
-    <p>Click any image. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <h2>The plates</h2>
+    <p>Click any of them. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
     <ul class="gallery">
-      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="Green hills under a low sun" width="800" height="600"></a><figcaption>Hills at dawn</figcaption></figure></li>
-      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Three acorns" width="800" height="600"></a><figcaption>Acorns</figcaption></figure></li>
-      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A rosette of leaves" width="800" height="600"></a><figcaption>Rosette</figcaption></figure></li>
-      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Three mushrooms on dark soil" width="800" height="600"></a><figcaption>Mushrooms</figcaption></figure></li>
-      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A pine cone" width="800" height="600"></a><figcaption>Pine cone</figcaption></figure></li>
-      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Scattered autumn leaves" width="800" height="600"></a><figcaption>Leaves</figcaption></figure></li>
-      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A rust-coloured butterfly" width="800" height="600"></a><figcaption>Butterfly</figcaption></figure></li>
-      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A moon over dark fields" width="800" height="600"></a><figcaption>Night</figcaption></figure></li>
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="Green hills under a low sun" width="800" height="600"></a><figcaption>Fallow valley, dawn</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Three acorns" width="800" height="600"></a><figcaption>Acorns, Oak Hanger</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A rosette of leaves" width="800" height="600"></a><figcaption>Plantain rosette</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Three mushrooms on dark soil" width="800" height="600"></a><figcaption>Fungi on the leaf pile</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A pine cone" width="800" height="600"></a><figcaption>Scots pine, cone</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Scattered autumn leaves" width="800" height="600"></a><figcaption>Field maple, October</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A rust-coloured butterfly" width="800" height="600"></a><figcaption>Small tortoiseshell</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A moon over dark fields" width="800" height="600"></a><figcaption>The top field at night</figcaption></figure></li>
     </ul>
     <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
-      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Green hills under a low sun"><figcaption>Hills at dawn — 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Three acorns"><figcaption>Acorns — 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A rosette of leaves"><figcaption>Rosette — 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Three mushrooms on dark soil"><figcaption>Mushrooms — 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A pine cone"><figcaption>Pine cone — 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Scattered autumn leaves"><figcaption>Leaves — 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A rust-coloured butterfly"><figcaption>Butterfly — 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A moon over dark fields"><figcaption>Night — 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Green hills under a low sun"><figcaption>Fallow valley, dawn. 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Three acorns"><figcaption>Acorns, Oak Hanger. 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A rosette of leaves"><figcaption>Plantain rosette. 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Three mushrooms on dark soil"><figcaption>Fungi on the leaf pile. 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A pine cone"><figcaption>Scots pine, cone. 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Scattered autumn leaves"><figcaption>Field maple, October. 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A rust-coloured butterfly"><figcaption>Small tortoiseshell. 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A moon over dark fields"><figcaption>The top field at night. 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
       <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
     </dialog>
   </section>
@@ -180,53 +219,65 @@
 
   <section class="section">
     <h2>Small parts</h2>
-    <p>Buttons are inked rectangles; the primary one is rust. A switch is a checkbox with <code>role="switch"</code>, and it turns moss when it is on. Badges are small uppercase labels; banners carry status with a coloured edge.</p>
+    <p>Buttons are inked rectangles; the primary one is rust; <code>natural-stamp</code> is a rubber stamp in moss with a double rule. A switch is a checkbox with <code>role="switch"</code> and turns moss when it is on. Badges are stock labels; banners are notices with a coloured edge.</p>
     <div class="row">
-      <button class="btn btn-primary" type="button">Primary</button>
-      <button class="btn" type="button">Default</button>
-      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-primary" type="button">Reserve</button>
+      <button class="btn" type="button">Add to the list</button>
+      <button class="btn natural-stamp" type="button">Sold</button>
+      <button class="btn btn-danger" type="button">Discard</button>
       <button class="btn btn-sm" type="button">Small</button>
       <button class="btn btn-lg" type="button">Large</button>
-      <button class="btn" type="button" disabled>Disabled</button>
+      <button class="btn" type="button" disabled>Out of season</button>
     </div>
     <div class="row">
       <label class="switch"><input type="checkbox" role="switch" checked><span>Frost warnings</span></label>
-      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
-      <span class="badge">Draft</span>
-      <span class="badge badge-active">Active</span>
-      <span class="badge badge-done">Done</span>
+      <label class="switch"><input type="checkbox" role="switch"><span>Bare-root list</span></label>
+      <span class="badge">Ordered</span>
+      <span class="badge badge-active">In stock</span>
+      <span class="badge badge-done">Sold out</span>
     </div>
     <div class="stack">
-      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. The label prints on the next sheet.</p></div>
       <div class="banner banner-info" role="status"><span>i</span><p>Natural loads Fraunces and Source Sans 3 from Google Fonts. Remove three lines from the head and it falls back to Palatino and Segoe UI.</p></div>
-      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo; its forms post nowhere.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>Frost forecast for Thursday night. Fleece the tree ferns.</p></div>
       <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
     </div>
   </section>
 
   <section class="section">
-    <h2>A table and a dialog</h2>
-    <p>Tables have uppercase column heads and hairline rows, and sit inside a wrapper that scrolls sideways when they are wider than the page.</p>
-    <div class="table-wrap">
+    <h2>The calendar and a dialog</h2>
+    <p>Tables have uppercase column heads and hairline rows, and sit in a wrapper that scrolls sideways when they are wider than the page. Add <code>natural-calendar</code> and the table is a planting calendar: a month per column, a mark per cell, the plant's name in italic. The marks are backgrounds in the feedback colours, with the word in a hidden span for anyone reading by ear.</p>
+    <div class="table-wrap natural-calendar">
       <table class="data-table">
-        <thead><tr><th>Component</th><th>Element</th><th>Script</th><th>Docs</th></tr></thead>
+        <thead><tr><th scope="col">Plant</th><th scope="col">J</th><th scope="col">F</th><th scope="col">M</th><th scope="col">A</th><th scope="col">M</th><th scope="col">J</th><th scope="col">J</th><th scope="col">A</th><th scope="col">S</th><th scope="col">O</th><th scope="col">N</th><th scope="col">D</th></tr></thead>
         <tbody>
-          <tr><td>Accordion</td><td><code>&lt;details&gt;</code></td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
-          <tr><td>Lightbox</td><td><code>&lt;dialog&gt;</code></td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
-          <tr><td>Navbar menu</td><td><code>popover</code></td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
-          <tr><td>Specimen tag</td><td><code>::after</code></td><td>none</td><td><a href="docs/components/cards.html">cards</a></td></tr>
-          <tr><td>Theme toggle</td><td><code>&lt;button&gt;</code></td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+          <tr><td>Water avens</td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td></td><td></td></tr>
+          <tr><td>Primrose</td><td></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td></td><td></td></tr>
+          <tr><td>Quaking grass</td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Hart's-tongue fern</td><td></td><td></td><td></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow spores</span></td><td class="natural-sow"><span class="visually-hidden">Sow spores</span></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Field maple</td><td class="natural-lift"><span class="visually-hidden">Plant bare-root</span></td><td class="natural-lift"><span class="visually-hidden">Plant bare-root</span></td><td></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td></td><td></td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-lift"><span class="visually-hidden">Plant bare-root</span></td><td class="natural-lift"><span class="visually-hidden">Plant bare-root</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p>Dialogs are native too. The button below opens one; the dialog closes itself through a form.</p>
-    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <ul class="natural-legend">
+      <li class="natural-sow">Sow</li>
+      <li class="natural-flower">In flower</li>
+      <li class="natural-lift">Lift, divide or plant bare-root</li>
+    </ul>
+    <p>Dialogs are native too. The button below opens one; it closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Reserve a water avens</button>
     <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
-      <h2 id="demo-modal-title">A modal dialog</h2>
-      <p>It traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser. The double rule around the edge is the same one the feature card has.</p>
-      <form method="dialog" class="modal-actions">
-        <button class="btn" type="submit">Cancel</button>
-        <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
+      <h2 id="demo-modal-title">Reserve a water avens</h2>
+      <p>We hold it at the glasshouse for a fortnight and write when it is waiting. The dialog traps focus, dims the page behind it and closes on <kbd>Esc</kbd>; all of that comes from the browser.</p>
+      <form method="dialog">
+        <div class="field">
+          <label for="demo-name">Name for the label</label>
+          <input id="demo-name" name="name" type="text" autocomplete="name">
+        </div>
+        <div class="modal-actions">
+          <button class="btn" type="submit" value="cancel">Not now</button>
+          <button class="btn btn-primary" type="submit" value="ok">Reserve</button>
+        </div>
       </form>
     </dialog>
   </section>
@@ -234,21 +285,22 @@
   <section class="section">
     <h2>Words</h2>
     <div class="prose">
-      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings in Fraunces, quotes in italics with a moss rule, code blocks with a green margin. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings in Fraunces, quotes in italic with a moss rule, code blocks with a green margin. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
       <blockquote><p>A garden is a record of decisions. So is a stylesheet.</p></blockquote>
     </div>
     <div class="natural-flare">
       <div class="natural-note">
-        <p class="kicker">Field note</p>
-        <p>Flare, in this template, is a page from a notebook: ruled lines and a rust margin. Anything can go on it. It is one class, documented with the <a href="docs/components/flare.html">other two</a>.</p>
+        <p class="kicker">Collecting book, 4 September</p>
+        <p>Water avens still in flower by the brook, later than the book says. Took one for the sheet and left the rest to seed. Soil cold at a hand's depth already.</p>
+        <p>The note is a page from this book: ruled lines and a rust margin, one class, documented with the <a href="docs/components/flare.html">rest of the flare</a>.</p>
       </div>
     </div>
     <aside class="author-card">
       <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
       <div>
-        <strong class="author-name">Natural</strong>
-        <p class="author-bio">Paper, ink, rust and moss; soil after dark.</p>
-        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>2 min read</span></p>
+        <strong class="author-name">Mair Penrose</strong>
+        <p class="author-bio">Head grower at Fallow &amp; Fern. Keeps the herbarium and the collecting book, and the template that holds them.</p>
+        <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>3 min read</span></p>
         <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
       </div>
     </aside>
@@ -282,7 +334,7 @@
       </ul>
     </section>
   </div>
-  <p class="footer-note">Natural is a retemplate template. MIT licensed. No build step, no framework, one small script.</p>
+  <p class="footer-note">Natural is a retemplate template. MIT licensed. No build step, no framework, one small script. The plants are real; the nursery is not.</p>
 </footer>
 </body>
 </html>

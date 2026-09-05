@@ -122,6 +122,28 @@
     &lt;div class="card-actions"&gt;&lt;a class="btn btn-sm" href="#"&gt;Action&lt;/a&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>Story card</h3>
+<p>Add <code>brutal-news-story</code> and the card stops being a box. A heavy rule on top, the picture ruled on all four sides, a red kicker, the headline a size larger in Archivo Black, and a byline at the foot over a rule. Inside <code>.card-body</code> the kicker (<code>.kicker</code>) and the byline (<code>.brutal-news-byline</code>) are ordinary paragraphs; another template ignores the class and shows a plain card with two extra lines. Lay story cards in a <code>.grid-3.brutal-news-ruled</code> to rule them off from each other, as the overview does.</p>
+<figure class="example" data-snippet="card-brutal-news-story">
+<article class="card brutal-news-story">
+  <figure class="card-media"><img src="../../assets/card-1.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <p class="kicker">Allotments</p>
+    <h3 class="card-title"><a href="#">Waiting list hits nine years at Mill Field</a></h3>
+    <p class="card-text">Two hundred and six names for forty plots. The parish clerk says the list has not moved since 2023 because nobody gives one up.</p>
+    <p class="brutal-news-byline">By Rhys Calloway</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="card-brutal-news-story">&lt;article class="card brutal-news-story"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-1.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;p class="kicker"&gt;Allotments&lt;/p&gt;
+    &lt;h3 class="card-title"&gt;&lt;a href="#"&gt;Waiting list hits nine years at Mill Field&lt;/a&gt;&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Two hundred and six names for forty plots. The parish clerk says the list has not moved since 2023 because nobody gives one up.&lt;/p&gt;
+    &lt;p class="brutal-news-byline"&gt;By Rhys Calloway&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h3>Horizontal, media left</h3>
 <figure class="example" data-snippet="card-horizontal">
 <article class="card card-horizontal">
@@ -162,7 +184,7 @@
   <figure class="card-media"><img src="../../assets/card-4.svg" alt="" width="640" height="400"></figure>
   <div class="card-body">
     <h3 class="card-title">The feature card</h3>
-    <p class="card-text">Brutal News lifts it on hover and colours its edge. Other templates do something of their own.</p>
+    <p class="card-text">Brutal News inverts it to ink on red and throws a hard shadow on hover. Other templates do something of their own.</p>
   </div>
 </article>
 </figure>
@@ -170,7 +192,7 @@
   &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-4.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
   &lt;div class="card-body"&gt;
     &lt;h3 class="card-title"&gt;The feature card&lt;/h3&gt;
-    &lt;p class="card-text"&gt;Brutal News lifts it on hover and colours its edge. Other templates do something of their own.&lt;/p&gt;
+    &lt;p class="card-text"&gt;Brutal News inverts it to ink on red and throws a hard shadow on hover. Other templates do something of their own.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
@@ -185,14 +207,17 @@
       <tr><td><code>.card-actions</code></td><td>Buttons at the bottom, pushed down</td></tr>
       <tr><td><code>.card-horizontal</code></td><td>Media beside the body</td></tr>
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
-      <tr><td><code>.card-feature</code></td><td>The template's dynamic card</td></tr>
+      <tr><td><code>.card-feature</code></td><td>The template's dynamic card: inverts to ink on red and throws a hard shadow</td></tr>
+      <tr><td><code>.brutal-news-story</code></td><td>Brutal News only: no box, heavy rule on top, red kicker, byline at the foot (rules under <code>/* == flare == */</code>)</td></tr>
+      <tr><td><code>.brutal-news-byline</code></td><td>Mono capitals over a rule; the last line of a story card</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Cards are <code>&lt;article&gt;</code> elements; use <code>&lt;div&gt;</code> if the content is not self-contained.</li>
 <li>Lay them out with <code>.grid-2</code> or <code>.grid-3</code>; they stretch to equal heights.</li>
 <li>Horizontal cards stack on screens narrower than 30rem.</li>
-<li>The feature card responds to <code>:hover</code> and <code>:focus-within</code>; it is CSS only.</li>
+<li>The feature card responds to <code>:hover</code> and <code>:focus-within</code>; it is CSS only. The inversion is a background and a colour on the card and its media; the shadow is <code>--shadow-2</code>, a hard offset.</li>
+<li><code>.brutal-news-story</code> is not portable: another template shows an ordinary card, which is the intended fallback.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="accordion.html">← Accordion</a><a href="fifty-fifty.html">Fifty-fifty →</a></nav>
   </main>

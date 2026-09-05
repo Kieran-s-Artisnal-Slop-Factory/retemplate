@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Flare — Neumorphic</title>
+  <title>Flare, Neumorphic</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -65,13 +65,78 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Neumorphic adds two things, both made of nothing but shadow: a sunken well for grouping controls, and a raised dial for decoration.</p>
+  <p>Flare is everything a template adds beyond the contract. Neumorphic's additions are all controls, because soft UI is about things you can press: a raised panel that groups controls, a sunken well, a dial that reads a value and a segmented choice. Four more are variants of contract components and live on their own pages: the <a href="cards.html#variants">tile and the pressed card</a>, the <a href="buttons.html#variants">round button</a> and the <a href="banner.html#variants">sunken banner</a>.</p>
 </header>
-<h2 id="preview">The well</h2>
-<p>Content that belongs together sits in a pressed-in panel. It is the one place the template uses an inset shadow at page scale.</p>
+<h2 id="preview">The panel</h2>
+<p>A raised board, the first thing on the overview and on every example page. Its grid puts a dial in the first column and a stack of controls in the second; a child with <code>neumorphic-panel-row</code> spans both. Below 30rem it becomes one centred column. It sits inside the <code>.neumorphic-flare</code> wrapper because a template swap has nothing to put in its place.</p>
+<figure class="example" data-snippet="neumorphic-panel">
+<div class="neumorphic-flare neumorphic-panel">
+  <div class="neumorphic-dial" style="--angle: 200deg" role="img" aria-label="Target temperature 21 degrees"><span class="neumorphic-dial-value">21°</span><span class="neumorphic-dial-label">target</span></div>
+  <div class="stack">
+    <label class="switch"><input type="checkbox" role="switch" checked><span>Heating</span></label>
+    <label class="switch"><input type="checkbox" role="switch"><span>Hot water boost</span></label>
+  </div>
+  <div class="neumorphic-panel-row">
+    <div class="neumorphic-segment" role="radiogroup" aria-label="Mode">
+      <input type="radio" id="fl-away" name="fl-mode"><label for="fl-away">Away</label>
+      <input type="radio" id="fl-home" name="fl-mode" checked><label for="fl-home">Home</label>
+      <input type="radio" id="fl-night" name="fl-mode"><label for="fl-night">Night</label>
+    </div>
+    <div class="row">
+      <button class="btn neumorphic-round" type="button" aria-label="Cooler">−</button>
+      <button class="btn neumorphic-round" type="button" aria-label="Warmer">+</button>
+    </div>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-panel">&lt;div class="neumorphic-flare neumorphic-panel"&gt;
+  &lt;div class="neumorphic-dial" style="--angle: 200deg" role="img" aria-label="Target temperature 21 degrees"&gt;&lt;span class="neumorphic-dial-value"&gt;21°&lt;/span&gt;&lt;span class="neumorphic-dial-label"&gt;target&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch" checked&gt;&lt;span&gt;Heating&lt;/span&gt;&lt;/label&gt;
+    &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch"&gt;&lt;span&gt;Hot water boost&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="neumorphic-panel-row"&gt;
+    &lt;div class="neumorphic-segment" role="radiogroup" aria-label="Mode"&gt;
+      &lt;input type="radio" id="fl-away" name="fl-mode"&gt;&lt;label for="fl-away"&gt;Away&lt;/label&gt;
+      &lt;input type="radio" id="fl-home" name="fl-mode" checked&gt;&lt;label for="fl-home"&gt;Home&lt;/label&gt;
+      &lt;input type="radio" id="fl-night" name="fl-mode"&gt;&lt;label for="fl-night"&gt;Night&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;button class="btn neumorphic-round" type="button" aria-label="Cooler"&gt;−&lt;/button&gt;
+      &lt;button class="btn neumorphic-round" type="button" aria-label="Warmer"&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">The dial</h2>
+<p>A raised disc with a sunken face and a pointer. Set the pointer with the <code>--angle</code> custom property, where <code>0deg</code> is straight up; the value and its label are two spans in the middle. It does not turn: it reads. Give it <code>role="img"</code> and an <code>aria-label</code> that says what it shows. <code>neumorphic-dial-lg</code> makes it bigger for a page about one thing.</p>
+<figure class="example" data-snippet="neumorphic-dial">
+<div class="row">
+  <div class="neumorphic-dial" style="--angle: 200deg" role="img" aria-label="Target temperature 21 degrees"><span class="neumorphic-dial-value">21°</span><span class="neumorphic-dial-label">target</span></div>
+  <div class="neumorphic-dial neumorphic-dial-lg" style="--angle: 120deg" role="img" aria-label="Battery 62 percent"><span class="neumorphic-dial-value">62%</span><span class="neumorphic-dial-label">battery</span></div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-dial">&lt;div class="row"&gt;
+  &lt;div class="neumorphic-dial" style="--angle: 200deg" role="img" aria-label="Target temperature 21 degrees"&gt;&lt;span class="neumorphic-dial-value"&gt;21°&lt;/span&gt;&lt;span class="neumorphic-dial-label"&gt;target&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="neumorphic-dial neumorphic-dial-lg" style="--angle: 120deg" role="img" aria-label="Battery 62 percent"&gt;&lt;span class="neumorphic-dial-value"&gt;62%&lt;/span&gt;&lt;span class="neumorphic-dial-label"&gt;battery&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>The segment</h3>
+<p>A group of radio buttons in a sunken track; the checked one is a raised tab. It is the control for one choice among a few, and the labels say what the reader is choosing. Inside a form it submits like any radio group. Give the wrapper <code>role="radiogroup"</code> and an <code>aria-label</code>, or put it in a <code>.field</code> under a <code>.field-label</code> as the <a href="forms.html#variants">forms page</a> shows.</p>
+<figure class="example" data-snippet="neumorphic-segment">
+<div class="neumorphic-segment" role="radiogroup" aria-label="Heating">
+  <input type="radio" id="seg-off" name="seg-heat"><label for="seg-off">Off</label>
+  <input type="radio" id="seg-eco" name="seg-heat"><label for="seg-eco">Eco</label>
+  <input type="radio" id="seg-comfort" name="seg-heat" checked><label for="seg-comfort">Comfort</label>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-segment">&lt;div class="neumorphic-segment" role="radiogroup" aria-label="Heating"&gt;
+  &lt;input type="radio" id="seg-off" name="seg-heat"&gt;&lt;label for="seg-off"&gt;Off&lt;/label&gt;
+  &lt;input type="radio" id="seg-eco" name="seg-heat"&gt;&lt;label for="seg-eco"&gt;Eco&lt;/label&gt;
+  &lt;input type="radio" id="seg-comfort" name="seg-heat" checked&gt;&lt;label for="seg-comfort"&gt;Comfort&lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>The well</h3>
+<p>A pressed-in panel for content that belongs together. Put it on a <code>&lt;form&gt;</code> or a <code>&lt;fieldset&gt;</code> and the fields inside sit in a sunken group, which is how the example's settings page is built.</p>
 <figure class="example" data-snippet="neumorphic-well">
 <div class="neumorphic-well">
-  <p class="kicker">A sunken group</p>
   <div class="row">
     <label class="switch"><input type="checkbox" role="switch" checked><span>Lights</span></label>
     <label class="switch"><input type="checkbox" role="switch"><span>Heating</span></label>
@@ -80,36 +145,33 @@
 </div>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-well">&lt;div class="neumorphic-well"&gt;
-  &lt;p class="kicker"&gt;A sunken group&lt;/p&gt;
   &lt;div class="row"&gt;
     &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch" checked&gt;&lt;span&gt;Lights&lt;/span&gt;&lt;/label&gt;
     &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch"&gt;&lt;span&gt;Heating&lt;/span&gt;&lt;/label&gt;
     &lt;button class="btn btn-sm" type="button"&gt;Apply&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
-<h2 id="variants">The dial</h2>
-<p>Purely decorative, so it is <code>aria-hidden</code> and lives inside the <code>.neumorphic-flare</code> wrapper that a template swap strips.</p>
-<figure class="example" data-snippet="neumorphic-knob">
-<div class="neumorphic-flare neumorphic-dials">
-  <div class="neumorphic-knob" aria-hidden="true"></div>
-  <div class="neumorphic-knob" aria-hidden="true"></div>
-</div>
-</figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-knob">&lt;div class="neumorphic-flare neumorphic-dials"&gt;
-  &lt;div class="neumorphic-knob" aria-hidden="true"&gt;&lt;/div&gt;
-  &lt;div class="neumorphic-knob" aria-hidden="true"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
-<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
-      <tr><td><code>.neumorphic-well</code></td><td>Inset panel: padding, large radius, inset shadow</td></tr>
-      <tr><td><code>.neumorphic-knob</code></td><td>A raised disc with a sunken face and an accent pointer</td></tr>
-      <tr><td><code>.neumorphic-dials</code></td><td>Centres a row of knobs</td></tr>
-      <tr><td><code>.neumorphic-flare</code></td><td>The wrapper for flare that is markup, so a swap can strip it</td></tr>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th><th>Documented on</th></tr></thead><tbody>
+      <tr><td><code>.neumorphic-panel</code></td><td>Raised board: two-column grid, dial first, controls second</td><td>this page</td></tr>
+      <tr><td><code>.neumorphic-panel-row</code></td><td>A panel child that spans both columns</td><td>this page</td></tr>
+      <tr><td><code>.neumorphic-dial</code></td><td>Raised disc, sunken face, a pointer at <code>--angle</code></td><td>this page</td></tr>
+      <tr><td><code>.neumorphic-dial-value</code>, <code>.neumorphic-dial-label</code></td><td>The reading and what it is</td><td>this page</td></tr>
+      <tr><td><code>.neumorphic-dial-lg</code></td><td>The bigger dial</td><td>this page</td></tr>
+      <tr><td><code>.neumorphic-segment</code></td><td>Radios in a sunken track; the checked one is a raised tab</td><td>this page, <a href="forms.html#variants">forms</a></td></tr>
+      <tr><td><code>.neumorphic-well</code></td><td>Inset panel: padding, large radius, inset shadow</td><td>this page</td></tr>
+      <tr><td><code>.card.neumorphic-tile</code>, <code>.neumorphic-tile-value</code></td><td>A card that reads one number</td><td><a href="cards.html#variants">cards</a></td></tr>
+      <tr><td><code>.card.neumorphic-pressed</code></td><td>The card sunk into the surface</td><td><a href="cards.html#variants">cards</a></td></tr>
+      <tr><td><code>.btn.neumorphic-round</code></td><td>A round button for one glyph</td><td><a href="buttons.html#variants">buttons</a></td></tr>
+      <tr><td><code>.banner.neumorphic-inset</code></td><td>A sunken banner with no edge</td><td><a href="banner.html#variants">banner</a></td></tr>
+      <tr><td><code>.neumorphic-flare</code></td><td>The wrapper for flare that is markup, so a swap can strip it</td><td>this page</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>The shadow recipes are tokens in <code>theme.css</code> (<code>--neumorphic-raise</code>, <code>--neumorphic-inset</code> and friends), built from two colours, <code>--neumorphic-light</code> and <code>--neumorphic-dark</code>. Change those two and the whole template follows.</li>
+<li>The dial is static. If a value changes, change the text and the <code>--angle</code> in the same place; the label for assistive technology is the <code>aria-label</code>, so change that too.</li>
+<li>The segment's radios are visually hidden but stay in the tab order; the focus ring lands on the label.</li>
 <li>Nothing here animates beyond a short transition, so there is nothing to pause for reduced motion.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>

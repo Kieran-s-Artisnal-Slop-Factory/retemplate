@@ -101,6 +101,20 @@
   &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
   &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Stamp</h3>
+<p>Add <code>brutal-news-stamp</code> for the one action on a page that should read as a rubber stamp: a red outline, red Archivo Black, no fill. It fills red on hover and focus and, unlike the other buttons, does not jump. Use it once per page; it is louder than the primary. Sizes combine as usual.</p>
+<figure class="example" data-snippet="button-brutal-news-stamp">
+<div class="row">
+  <button class="btn brutal-news-stamp" type="button">Send a gift</button>
+  <button class="btn brutal-news-stamp btn-sm" type="button">Correction</button>
+  <a class="btn brutal-news-stamp btn-lg" href="#">Subscribe</a>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="button-brutal-news-stamp">&lt;div class="row"&gt;
+  &lt;button class="btn brutal-news-stamp" type="button"&gt;Send a gift&lt;/button&gt;
+  &lt;button class="btn brutal-news-stamp btn-sm" type="button"&gt;Correction&lt;/button&gt;
+  &lt;a class="btn brutal-news-stamp btn-lg" href="#"&gt;Subscribe&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -110,12 +124,14 @@
       <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
       <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
       <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
+      <tr><td><code>.brutal-news-stamp</code></td><td>Brutal News only: red outline and display type, fills on hover, no jump (rules under <code>/* == flare == */</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Every button that does not submit a form carries <code>type="button"</code>; otherwise, inside a form, it submits.</li>
 <li>Use a <code>&lt;button&gt;</code> for actions and an <code>&lt;a&gt;</code> for navigation, whatever they look like.</li>
 <li>Group them in <code>.row</code> to get consistent gaps and wrapping.</li>
+<li>The hover jump is a 90ms transform and is shortened to nothing under <code>prefers-reduced-motion</code>.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="page-break.html">← Page break</a><a href="forms.html">Forms →</a></nav>
   </main>

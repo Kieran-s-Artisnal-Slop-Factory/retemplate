@@ -161,6 +161,28 @@
     &lt;button class="btn" type="reset"&gt;Clear&lt;/button&gt;
   &lt;/div&gt;
 &lt;/form&gt;</code></pre></div>
+<h3>Segmented choice, Neumorphic's own</h3>
+<p>A <code>.neumorphic-segment</code> is a radio group in a sunken track, and it sits in a <code>.field</code> like any other control. Use it for one choice among two to four short options; more than that wants a <code>&lt;select&gt;</code>. Described in full on the <a href="flare.html#variants">flare page</a>.</p>
+<figure class="example" data-snippet="field-neumorphic-segment">
+<div class="field">
+  <span class="field-label">Heating</span>
+  <div class="neumorphic-segment" role="radiogroup" aria-label="Heating">
+    <input type="radio" id="fm-off" name="fm-heat"><label for="fm-off">Off</label>
+    <input type="radio" id="fm-eco" name="fm-heat"><label for="fm-eco">Eco</label>
+    <input type="radio" id="fm-comfort" name="fm-heat" checked><label for="fm-comfort">Comfort</label>
+  </div>
+  <p class="hint">Comfort holds the target; Eco lets it drift two degrees.</p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="field-neumorphic-segment">&lt;div class="field"&gt;
+  &lt;span class="field-label"&gt;Heating&lt;/span&gt;
+  &lt;div class="neumorphic-segment" role="radiogroup" aria-label="Heating"&gt;
+    &lt;input type="radio" id="fm-off" name="fm-heat"&gt;&lt;label for="fm-off"&gt;Off&lt;/label&gt;
+    &lt;input type="radio" id="fm-eco" name="fm-heat"&gt;&lt;label for="fm-eco"&gt;Eco&lt;/label&gt;
+    &lt;input type="radio" id="fm-comfort" name="fm-heat" checked&gt;&lt;label for="fm-comfort"&gt;Comfort&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;p class="hint"&gt;Comfort holds the target; Eco lets it drift two degrees.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == forms == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -174,6 +196,7 @@
       <tr><td><code>fieldset</code></td><td>Two columns above 40rem</td></tr>
       <tr><td><code>.field-wide</code></td><td>Spans both columns</td></tr>
       <tr><td><code>.form-actions</code></td><td>The button row</td></tr>
+      <tr><td><code>.neumorphic-segment</code></td><td>Neumorphic: radios in a sunken track, the checked one a raised tab</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

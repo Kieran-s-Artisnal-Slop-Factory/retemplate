@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Halo Studio</title>
+  <title>Osier, a design studio in Kendal</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,8 +15,8 @@
   <div class="glassy-orb"></div>
   <div class="glassy-orb"></div>
 </div>
-<header class="navbar">
-  <a class="brand" href="index.html">Halo Studio</a>
+<header class="navbar glassy-floating">
+  <a class="brand" href="index.html">Osier</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html" aria-current="page">Home</a>
@@ -29,17 +29,16 @@
 </header>
 
 <main class="page">
-  <section class="hero">
+  <section class="hero glassy-sheet">
     <div class="stack">
-      <p class="kicker">A small design studio in Millbrook</p>
-      <h1>We make websites people can see through.</h1>
-      <p>Four of us, twelve years, no account managers. We design and build sites for people who would rather talk to the person doing the work.</p>
+      <p class="kicker">A design studio of four, Kendal</p>
+      <h1>Websites you can read, from people you can ring.</h1>
+      <p>We design and build sites for shops, clubs and small presses in the Lakes and the Dales. Fixed prices, plain HTML, and the same two people from the first call to the last deploy.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="contact.html">Start a project</a>
-        <a class="btn btn-lg" href="services.html">What we do</a>
+        <a class="btn btn-lg glassy-ghost" href="services.html">Services and prices</a>
       </div>
     </div>
-    <img src="../assets/hero.svg" alt="" width="1200" height="500">
   </section>
   <div class="glassy-flare glassy-waves" aria-hidden="true">
     <svg viewBox="0 24 150 28" preserveAspectRatio="none">
@@ -53,74 +52,130 @@
     </svg>
   </div>
 
-  <section class="section">
-    <h2>What we do</h2>
+  <section class="section glassy-float">
     <div class="grid-3">
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+      <article class="card glassy-deep">
         <div class="card-body">
-          <h3 class="card-title"><a href="services.html">Websites</a></h3>
-          <p class="card-text">Marketing sites, documentation, shops. Fast, plain, and yours to edit afterwards.</p>
+          <h3 class="card-title">Six projects a year</h3>
+          <p class="card-text">Each one gets two of us for as long as it needs. We are booked to November; the next start is December.</p>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+      <article class="card glassy-deep">
         <div class="card-body">
-          <h3 class="card-title"><a href="services.html">Identity</a></h3>
-          <p class="card-text">A name, a mark, a palette and a type system that works on a business card and a billboard.</p>
+          <h3 class="card-title">Fixed price, in writing</h3>
+          <p class="card-text">One page after the first conversation: what we will make, when, and what it costs. If it takes us longer, that is our problem.</p>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+      <article class="card glassy-deep">
         <div class="card-body">
-          <h3 class="card-title"><a href="services.html">Retainers</a></h3>
-          <p class="card-text">A day a week of a designer who already knows your site. Most clients start here after launch.</p>
+          <h3 class="card-title">Yours to edit</h3>
+          <p class="card-text">Plain HTML and CSS in your own repository, and an afternoon showing your team where everything is.</p>
         </div>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <section class="fifty-fifty fifty-fifty-reverse">
+    <h2>Recent work</h2>
+    <p>Eight sites from the last two years. Click one to see it larger.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-1.svg" alt="Hartsop Wool home page" width="800" height="600"></a><figcaption>Hartsop Wool</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-2.svg" alt="Kentmere Rowing Club fixtures page" width="800" height="600"></a><figcaption>Kentmere Rowing Club</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-3.svg" alt="Ulver Press catalogue" width="800" height="600"></a><figcaption>Ulver Press</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-4.svg" alt="Staveley Cycle Works booking page" width="800" height="600"></a><figcaption>Staveley Cycle Works</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-5.svg" alt="Fell Bakery order page" width="800" height="600"></a><figcaption>Fell Bakery</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-6.svg" alt="Lune Valley Printers price list" width="800" height="600"></a><figcaption>Lune Valley Printers</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-7.svg" alt="The Kent Ferry timetable" width="800" height="600"></a><figcaption>The Kent Ferry</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-8.svg" alt="Grizedale Glass shop" width="800" height="600"></a><figcaption>Grizedale Glass</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Recent work">
+      <figure class="lightbox-slide" id="lb-1"><img src="../assets/gallery-1.svg" alt="Hartsop Wool home page"><figcaption>Hartsop Wool. A shop for a two-person mill; 2025.</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="../assets/gallery-2.svg" alt="Kentmere Rowing Club fixtures page"><figcaption>Kentmere Rowing Club. Fixtures, results and a boat-booking sheet; 2025.</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="../assets/gallery-3.svg" alt="Ulver Press catalogue"><figcaption>Ulver Press. A catalogue of forty titles and an identity; 2024.</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="../assets/gallery-4.svg" alt="Staveley Cycle Works booking page"><figcaption>Staveley Cycle Works. Repairs booked online, parts listed; 2024.</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="../assets/gallery-5.svg" alt="Fell Bakery order page"><figcaption>Fell Bakery. Weekly orders for three villages; 2024.</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="../assets/gallery-6.svg" alt="Lune Valley Printers price list"><figcaption>Lune Valley Printers. A price list that is also the order form; 2025.</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="../assets/gallery-7.svg" alt="The Kent Ferry timetable"><figcaption>The Kent Ferry. A timetable that fits a phone; 2025.</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="../assets/gallery-8.svg" alt="Grizedale Glass shop"><figcaption>Grizedale Glass. A shop and an identity for a glassblower; 2026.</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <section class="fifty-fifty glassy-overlap fifty-fifty-reverse">
       <figure><img src="../assets/fifty.svg" alt="" width="900" height="600"></figure>
       <div class="fifty-fifty-body">
-        <p class="kicker">About</p>
+        <p class="kicker">The studio</p>
         <h2>Small on purpose</h2>
-        <p>We take on six projects a year. Each gets two of us for as long as it needs, and you talk to those two people from the first call to the last deploy.</p>
+        <p>Four of us, twelve years, no account managers. We started in a room above a bookshop on Finkle Street and have moved once, to a bigger room above a different bookshop.</p>
         <a class="btn btn-primary" href="contact.html">See if we fit</a>
       </div>
     </section>
   </section>
 
   <section class="section">
+    <h2>Who does the work</h2>
+    <div class="grid-2">
+      <article class="card card-horizontal glassy-shallow">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Ines Hartley</h3>
+          <p class="card-text">Design. Started the studio in 2014. Draws every site on paper first and will show you the paper.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal glassy-shallow">
+        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Dev Okonkwo</h3>
+          <p class="card-text">Build. Writes the HTML and CSS, sets up your hosting, and answers the phone about it afterwards.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal glassy-shallow">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Ruth Amesbury</h3>
+          <p class="card-text">Type and identity. Marks, palettes and the rules for using them. Has strong views on apostrophes.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal glassy-shallow">
+        <figure class="card-media"><img src="../assets/card-4.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Tom Farrant</h3>
+          <p class="card-text">Retainers and the diary. If you are on a retainer, Tom is the day a week you are paying for.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
     <h2>How a project goes</h2>
     <div class="accordion-group">
       <details class="accordion" name="process" open>
-        <summary>1. A conversation</summary>
+        <summary>A conversation</summary>
         <div class="accordion-body"><p>An hour, free, on a call or in the studio. We ask what the site is for and who it is for. If we are not the right fit we will say so and suggest someone who is.</p></div>
       </details>
       <details class="accordion" name="process">
-        <summary>2. A plan and a price</summary>
-        <div class="accordion-body"><p>One page. What we will make, when, and what it costs. Fixed price; if it takes us longer, that is our problem.</p></div>
+        <summary>A plan and a price</summary>
+        <div class="accordion-body"><p>One page: what we will make, when, and what it costs. Fixed. Half on signing, half on launch.</p></div>
       </details>
       <details class="accordion" name="process">
-        <summary>3. Design, build, launch</summary>
+        <summary>Design, build, launch</summary>
         <div class="accordion-body"><p>Weekly shares of real, working pages rather than pictures of pages. You see the site grow and steer it as it does.</p></div>
       </details>
       <details class="accordion" name="process">
-        <summary>4. Afterwards</summary>
+        <summary>Afterwards</summary>
         <div class="accordion-body"><p>A handover with your team, the source in your repository, and a month of fixes included. Then a retainer if you want one, or nothing at all.</p></div>
       </details>
     </div>
   </section>
 
-  <div class="banner banner-info" role="status"><span>i</span><p>We have room for one more project starting in November. <a href="contact.html">Tell us about yours.</a></p></div>
+  <div class="banner glassy-frost" role="status"><span>i</span><p>The next free start is December. <a href="contact.html">Tell us about the project</a> and we will hold it for you for a fortnight.</p></div>
 </main>
 
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Halo Studio</h2>
+      <h2>Osier</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services and prices</a></li>
@@ -130,8 +185,8 @@
     <section>
       <h2>Find us</h2>
       <ul>
-        <li>Unit 4, The Old Dairy, Millbrook</li>
-        <li>01234 567 892</li>
+        <li>Second floor, 14 Finkle Street, Kendal</li>
+        <li>01539 000 214</li>
         <li><a href="mailto:hello@example.com">hello@example.com</a></li>
       </ul>
     </section>
@@ -143,7 +198,7 @@
       </ul>
     </section>
   </div>
-  <p class="footer-note">An example site for the Glassy template. The studio, its clients and its dairy are fictional.</p>
+  <p class="footer-note">An example site for the Glassy template. The studio, its people and its clients are fictional.</p>
 </footer>
 </body>
 </html>

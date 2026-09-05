@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Neon — a retemplate template</title>
+  <title>Neon: a retemplate template</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
@@ -14,10 +14,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 </head>
 <body>
-<div class="neon-flare neon-haze" aria-hidden="true">
-  <div class="neon-tube"></div>
-  <div class="neon-tube"></div>
-</div>
 <header class="navbar">
   <a class="brand" href="index.html">Neon</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
@@ -34,128 +30,174 @@
 </header>
 
 <main class="page">
-  <section class="hero">
+  <ul class="neon-marquee">
+    <li><strong>Neon</strong></li>
+    <li>Zinc, rose, cyan</li>
+    <li>Dark in both halves</li>
+    <li>Two fonts, one script</li>
+    <li><a href="docs/theme.html">Retoken palette</a></li>
+  </ul>
+
+  <section class="hero neon-stage">
     <div class="stack">
-      <p><span class="neon-sign">Lights on</span></p>
-      <h1>Black glass, two tubes, and <span class="neon-text">nothing white</span>.</h1>
-      <p>Neon is the dark template. Zinc surfaces, hairline borders, a rose tube for what matters and a cyan one for what is merely true. Its light mode is only less dark: the ground lifts to a warm grey and the glow keeps working.</p>
+      <h1><span class="neon-text neon-strike">Open all night.</span></h1>
+      <p>Neon is the dark template. The light scheme lifts the ground to grey and stops there; nothing on these pages is ever white. Glow is state: what is lit is on.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
-        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
       </div>
     </div>
-    <img src="assets/hero.svg" alt="" width="1200" height="500">
   </section>
 
   <section class="section">
-    <h2>What you get</h2>
-    <p>Take <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> and you have the whole template; everything else here is the showroom. Three ordinary cards: with a picture, with an icon, with neither. Each sits on a sheet one step lighter than the page, behind a one-pixel line of light.</p>
-    <div class="grid-3">
-      <article class="card">
-        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
-        <div class="card-body">
-          <h3 class="card-title">Two stylesheets</h3>
-          <p class="card-text"><code>theme.css</code> holds the palette and the glow tokens; <code>global.css</code> holds every component. Nothing else to load but the two fonts.</p>
-        </div>
-      </article>
-      <article class="card">
-        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
-        <div class="card-body">
-          <h3 class="card-title">Dark, and less dark</h3>
-          <p class="card-text">Every colour is a <code>light-dark()</code> pair, but the light half never reaches white. The toggle in the corner cycles auto, light and dark; try it and watch the ground lift.</p>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3 class="card-title">Retoken compatible</h3>
-          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site and turns it black. <a href="docs/theme.html">See the tokens.</a></p>
-        </div>
-      </article>
+    <h2>Lit is on. Dark is off.</h2>
+    <p>Every control reads the same way. A filled or lit tube is active; a hairline is idle. The outline button is Neon's quiet call, the switch lights when checked, and a badge with a lamp in front of it is a state light: green up, amber degraded, rose down, grey off.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Save</button>
+      <button class="btn neon-outline" type="button">Preview</button>
+      <button class="btn" type="button">Cancel</button>
+      <button class="btn btn-danger" type="button">Delete</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Alerts</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
+      <span class="badge neon-light badge-done">Up</span>
+      <span class="badge neon-light neon-light-warn">Degraded</span>
+      <span class="badge neon-light badge-active">Down</span>
+      <span class="badge neon-light">Off</span>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Active</span>
+      <span class="badge badge-done">Done</span>
     </div>
   </section>
 
   <section class="section">
-    <h2>Cards, sideways</h2>
-    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+    <h2>The board</h2>
+    <p>The table as a status grid. Each part of the template, what it is built on, how much script it needs, and its state as a lamp. Two of the lamps are honest: the sidebar does not collapse on a desktop in this version, and the fonts come from outside the folder.</p>
+    <div class="table-wrap">
+      <table class="data-table neon-status">
+        <thead><tr><th>Part</th><th>Built on</th><th>Script</th><th>State</th></tr></thead>
+        <tbody>
+          <tr><td><a href="docs/components/accordion.html">Accordion</a></td><td><code>&lt;details name&gt;</code></td><td>none</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td><a href="docs/components/gallery.html">Lightbox</a></td><td><code>&lt;dialog&gt;</code> and <code>:target</code></td><td>one <code>onclick</code></td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td><a href="docs/components/navbar.html">Navbar menu</a></td><td><code>popover</code></td><td>none</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td><a href="docs/components/switch.html">Switch</a></td><td><code>&lt;input role="switch"&gt;</code></td><td>none</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td><a href="docs/theme.html">Scheme toggle</a></td><td><code>&lt;button&gt;</code></td><td><code>theme.js</code>, 45 lines</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td><a href="docs/index.html#fonts">Fonts</a></td><td>Google Fonts by <code>&lt;link&gt;</code></td><td>none</td><td><span class="badge neon-light neon-light-warn">External</span></td></tr>
+          <tr><td><a href="docs/components/sidebar.html">Sidebar collapse</a></td><td>not built</td><td>none</td><td><span class="badge neon-light">Off</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Panels</h2>
+    <p>Cards are switched signs here. Unlit, a panel is a flat sheet with a hairline and a small title. Lit, its border is the tube. Light the one that matters and leave the rest dark.</p>
+    <div class="grid-3">
+      <article class="card neon-panel">
+        <div class="card-body">
+          <h3 class="card-title">Stylesheets</h3>
+          <p class="card-text"><strong>Two</strong><code>theme.css</code> for tokens and the palette, <code>global.css</code> for every component.</p>
+        </div>
+      </article>
+      <article class="card neon-panel neon-panel-lit">
+        <div class="card-body">
+          <h3 class="card-title">White, anywhere</h3>
+          <p class="card-text"><strong>None</strong>The light scheme stops at grey. Press the toggle in the corner and the ground lifts; it does not blank.</p>
+        </div>
+      </article>
+      <article class="card neon-panel">
+        <div class="card-body">
+          <h3 class="card-title">Retoken</h3>
+          <p class="card-text"><strong>Paste-in</strong>The palette block drops into a retoken site as it is. <a href="docs/theme.html">The tokens.</a></p>
+        </div>
+      </article>
+    </div>
+    <p>The ordinary card is still here, in three shapes: with a picture, sideways with the picture on either end, and the feature card, whose border is a tube that runs the whole way round on hover.</p>
     <div class="grid-2">
       <article class="card card-horizontal">
         <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the left</h3>
-          <p class="card-text">The image takes a little over a third of the width; the words take the rest.</p>
+          <h3 class="card-title">Media left</h3>
+          <p class="card-text">A little over a third for the picture, the rest for the words. Below 30rem it stacks.</p>
         </div>
       </article>
       <article class="card card-horizontal card-media-end">
         <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the right</h3>
-          <p class="card-text">The same card, flipped. Same markup; one class differs.</p>
+          <h3 class="card-title">Media right</h3>
+          <p class="card-text">Same card, one more class: <code>card-media-end</code>.</p>
         </div>
       </article>
     </div>
-    <p>Every template has one <em>feature</em> card with an effect of its own. Neon's border is a tube: at rest a short stretch is lit in one corner, and on hover the light runs the whole way round while the card lifts into its glow. Hover it, or tab to the button inside.</p>
     <article class="card card-feature">
       <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
       <div class="card-body">
         <h3 class="card-title">The feature card</h3>
-        <p class="card-text">A conic gradient shows through the card's own one-pixel border, and a registered custom property turns it. No extra markup, no script, and under <code>prefers-reduced-motion</code> the light simply stays where it is.</p>
-        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+        <p class="card-text">At rest, a short stretch of the border is lit in one corner. Hover, or tab to the button, and the light runs round the edge while the card lifts into its glow. A conic gradient shows through the card's own hairline; a registered custom property turns it. Under <code>prefers-reduced-motion</code> the light holds still.</p>
+        <div class="card-actions"><a class="btn btn-sm neon-outline" href="docs/components/cards.html">Card docs</a></div>
       </div>
     </article>
   </section>
 
   <section class="section">
-    <h2>Half and half</h2>
-    <p>The fifty-fifty block gives an image half the width and the words the other half. Add <code>fifty-fifty-reverse</code> and the image moves right. On a phone the image comes first either way.</p>
-    <div class="stack">
-      <section class="fifty-fifty">
-        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image left</p>
-          <h2>Say the one thing this block is for</h2>
-          <p>A heading, a paragraph and a single call to action. The kicker above is cyan because it is information; the button is rose because it is the thing to do.</p>
-          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
-        </div>
-      </section>
-      <section class="fifty-fifty fifty-fifty-reverse">
-        <figure><img src="assets/gallery-6.svg" alt="" width="800" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image right</p>
-          <h2>The same block, mirrored</h2>
-          <p>Alternate them down a page and the eye is led from side to side without any extra styling.</p>
-          <a class="btn" href="docs/components/fifty-fifty.html">Read the docs</a>
-        </div>
-      </section>
-    </div>
+    <section class="fifty-fifty fifty-fifty-reverse">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Light scheme</p>
+        <h2>Less dark. Never white.</h2>
+        <p>Light lifts the page from <code>#18181b</code> to <code>#3a3a42</code> and steps the surfaces up from there. Text stays off-white; links move to a lighter rose so both halves clear 4.5:1. Native controls, dialogs and open menus are pinned to the dark scheme, so the browser never paints a white picker over a dark page.</p>
+        <a class="btn neon-outline" href="docs/theme.html">Tokens and palette</a>
+      </div>
+    </section>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Log</h2>
+    <ol class="neon-rail">
+      <li class="neon-rail-current">
+        <time datetime="2026-09-04">4 Sep 2026</time>
+        <h3>Rebuilt as signage</h3>
+        <p>The headline became the sign. The haze behind the page and the flicker on labels were removed; glow now marks state and nothing else. Added: the panel, the state light, the status board, the outline button, the marquee and this rail.</p>
+      </li>
+      <li>
+        <time datetime="2026-09-03">3 Sep 2026</time>
+        <h3>Reference measured</h3>
+        <p>Glow at <code>0 30px 70px -25px</code> in half-alpha rose, borders at 10 to 15 percent white, radii 16, 24 and pill. Space Grotesk for display, Inter for body.</p>
+      </li>
+      <li>
+        <time datetime="2026-09">Sep 2026</time>
+        <h3>First build</h3>
+        <p>Copied from <code>plain</code> and re-skinned. Light scheme kept dark; native controls pinned to <code>color-scheme: dark</code>.</p>
+      </li>
+    </ol>
   </section>
 
   <section class="section">
-    <h2>Questions, folded</h2>
-    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group the same <code>name</code> and opening one closes the others, with no script. The open one's marker lights up.</p>
+    <h2>Service notes</h2>
     <div class="accordion-group">
-      <details class="accordion" name="faq" open>
-        <summary>Is the light mode really not white?</summary>
-        <div class="accordion-body"><p>Really not. The light half's page colour is <code>#3a3a42</code>, a warm dark grey, and the surfaces step up from there. Text stays off-white in both halves; the links move to a lighter rose so they clear 4.5:1 on the lifted ground.</p></div>
+      <details class="accordion" name="notes" open>
+        <summary>Why is the light scheme still dark?</summary>
+        <div class="accordion-body"><p>Because a neon sign on a white wall is a sticker. The light half's page colour is <code>#3a3a42</code> and the surfaces step up from there. Text stays off-white in both halves; links take a lighter rose so they clear 4.5:1 on the lifted ground.</p></div>
       </details>
-      <details class="accordion" name="faq">
-        <summary>Why do the form fields stay black in light mode?</summary>
-        <div class="accordion-body"><p>Because both halves are dark, the template pins native controls, dialogs and open menus to the dark scheme so the browser never paints a white dropdown or date picker. Inside those elements the palette resolves to its dark half, so a field is always a black well.</p></div>
+      <details class="accordion" name="notes">
+        <summary>Why do form fields stay black in light mode?</summary>
+        <div class="accordion-body"><p>Both halves are dark, so the template pins native controls, dialogs and open menus to the dark scheme. The browser never paints a white dropdown or date picker. Inside those elements the palette resolves to its dark half, so a field is always a black well.</p></div>
       </details>
-      <details class="accordion" name="faq">
+      <details class="accordion" name="notes">
         <summary>How much JavaScript is there?</summary>
-        <div class="accordion-body"><p>About forty lines for the theme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. The glows, the sweep and the haze are CSS.</p></div>
+        <div class="accordion-body"><p>About forty-five lines for the scheme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. The glow, the sweep and the strike are CSS.</p></div>
       </details>
     </div>
-    <p>A single accordion stands on its own.</p>
-    <details class="accordion">
-      <summary>Which browsers?</summary>
-      <div class="accordion-body"><p>Anything from 2024 on: <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive accordions and <code>@property</code> for the animated border.</p></div>
-    </details>
   </section>
 
   <section class="section">
-    <h2>A gallery with a lightbox</h2>
-    <p>Click any image. The lightbox is a <code>&lt;dialog&gt;</code> with a cyan glow; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <h2>Eight signs</h2>
+    <p>Click one. The lightbox is a <code>&lt;dialog&gt;</code> with a cyan glow; the arrows are links and <kbd>Esc</kbd> closes it.</p>
     <ul class="gallery">
       <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A rose ring" width="800" height="600"></a><figcaption>Ring</figcaption></figure></li>
       <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A cyan square outline" width="800" height="600"></a><figcaption>Square</figcaption></figure></li>
@@ -167,66 +209,31 @@
       <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Rose and cyan bars" width="800" height="600"></a><figcaption>Bars</figcaption></figure></li>
     </ul>
     <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
-      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A rose ring"><figcaption>Ring — 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A cyan square outline"><figcaption>Square — 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A rose zigzag"><figcaption>Zigzag — 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Cyan waves"><figcaption>Waves — 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A rose triangle over a cyan line"><figcaption>Triangle — 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="A cyan hexagon"><figcaption>Hexagon — 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A field of neon dots"><figcaption>Dots — 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Rose and cyan bars"><figcaption>Bars — 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A rose ring"><figcaption>Ring, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A cyan square outline"><figcaption>Square, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A rose zigzag"><figcaption>Zigzag, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Cyan waves"><figcaption>Waves, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A rose triangle over a cyan line"><figcaption>Triangle, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="A cyan hexagon"><figcaption>Hexagon, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A field of neon dots"><figcaption>Dots, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Rose and cyan bars"><figcaption>Bars, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
       <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
     </dialog>
   </section>
 
-  <hr class="page-break">
-
   <section class="section">
-    <h2>Small parts</h2>
-    <p>Buttons are pills in three kinds and three sizes; the primary one carries its own glow and the danger one is an outline until you commit. A switch is a checkbox with <code>role="switch"</code>. Badges and banners carry status, each lit in its own colour.</p>
-    <div class="row">
-      <button class="btn btn-primary" type="button">Primary</button>
-      <button class="btn" type="button">Default</button>
-      <button class="btn btn-danger" type="button">Danger</button>
-      <button class="btn btn-sm" type="button">Small</button>
-      <button class="btn btn-lg" type="button">Large</button>
-      <button class="btn" type="button" disabled>Disabled</button>
-    </div>
-    <div class="row">
-      <label class="switch"><input type="checkbox" role="switch" checked><span>Notifications</span></label>
-      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
-      <span class="badge">Draft</span>
-      <span class="badge badge-active">Active</span>
-      <span class="badge badge-done">Done</span>
-    </div>
+    <h2>Signals</h2>
+    <p>Banners carry a message with its colour on the edge. Cyan is information, so it never reads as an error; rose is kept for actions and for danger. The dialog is native: it traps focus, dims the page and closes on <kbd>Esc</kbd>.</p>
     <div class="stack">
-      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
-      <div class="banner banner-info" role="status"><span>i</span><p>Information is cyan here, so it never looks like an error. The rose is kept for actions and danger.</p></div>
-      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo; its forms post nowhere.</p></div>
-      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Changes are live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>The two fonts load from Google Fonts. The README shows how to self-host them.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo. Its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Check failed. Nothing did, but this is what it looks like.</p></div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>A table and a dialog</h2>
-    <p>Tables sit inside a wrapper that scrolls sideways when they are wider than the page. Column heads are set in the display face.</p>
-    <div class="table-wrap">
-      <table class="data-table">
-        <thead><tr><th>Component</th><th>Element</th><th>Script</th><th>Docs</th></tr></thead>
-        <tbody>
-          <tr><td>Accordion</td><td><code>&lt;details&gt;</code></td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
-          <tr><td>Lightbox</td><td><code>&lt;dialog&gt;</code></td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
-          <tr><td>Navbar menu</td><td><code>popover</code></td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
-          <tr><td>Switch</td><td><code>&lt;input&gt;</code></td><td>none</td><td><a href="docs/components/switch.html">switch</a></td></tr>
-          <tr><td>Theme toggle</td><td><code>&lt;button&gt;</code></td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Dialogs are native too. The button below opens one; it closes itself through a form, and the page behind it blurs.</p>
-    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <p><button class="btn" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button></p>
     <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
-      <h2 id="demo-modal-title">A modal dialog</h2>
-      <p>It traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser; the glow comes from one token.</p>
+      <h2 id="demo-modal-title">Confirm</h2>
+      <p>Focus stays inside, the page behind dims, <kbd>Esc</kbd> closes. All of it from the browser; the glow is one token.</p>
       <form method="dialog" class="modal-actions">
         <button class="btn" type="submit">Cancel</button>
         <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
@@ -237,7 +244,7 @@
   <section class="section">
     <h2>Words</h2>
     <div class="prose">
-      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings in Space Grotesk, body in Inter, inline code in cyan, quotes with a lit edge. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings in Space Grotesk, body in Inter, inline code in cyan, quotes with a lit edge. The <a href="blogpost.html">blog post</a> runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
       <blockquote><p>A dark theme is not a light theme with the values swapped. It is a room with the lights off and a few of them on.</p></blockquote>
     </div>
     <aside class="author-card">

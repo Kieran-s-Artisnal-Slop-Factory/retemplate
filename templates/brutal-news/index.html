@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Brutal News — a retemplate template</title>
+  <title>Brutal News, a retemplate template</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
@@ -34,149 +34,153 @@
     <header class="brutal-news-masthead">
       <p class="kicker">A retemplate template</p>
       <h1>Brutal News</h1>
-      <p class="brutal-news-dateline"><span>Vol. 1 · No. 1</span><span>Thursday 4 September 2026</span><span>Free, forever</span></p>
+      <p class="brutal-news-dateline"><span>Vol. 1, No. 2</span><span>Thursday 4 September 2026</span><span>Rules 3px, corners 0</span><span>Free</span></p>
     </header>
   </div>
 
-  <section class="hero">
-    <div class="stack">
-      <p class="kicker">Front page</p>
-      <h1>Thick rules. Loud colour. Nothing rounded.</h1>
-      <div class="brutal-news-columns">
-        <p class="brutal-news-dropcap">Brutal News is a newspaper that never learned to whisper. Every box is ruled in three pixels of ink, every button throws a hard shadow when you reach for it, and the palette is the stuff you find in a newsagent's window: hot red, acid yellow, cobalt, signal green.</p>
-        <p>Underneath the shouting it is the same template as every other one here: the same markup, the same components, the same two stylesheets. Only the ink is different.</p>
-      </div>
-      <div class="row">
-        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
-        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
-      </div>
+  <section class="hero brutal-news-lead">
+    <p class="kicker">Front page · The template</p>
+    <h1>Set loud. Ruled thick. Never rounded.</h1>
+    <div class="brutal-news-columns">
+      <p class="brutal-news-dropcap">Brutal News is a newspaper that never learned to whisper. Every box is ruled in three pixels of ink, the headlines are Archivo Black at the largest size the page will hold, and the palette is what you find in a newsagent's window: hot red, acid yellow, cobalt, signal green. Shadows are hard offsets or nothing.</p>
+      <p>Underneath the shouting it is the same template as every other one in retemplate: the same markup, the same components, the same two stylesheets and one small script. Swap <code>css/</code> and <code>assets/</code> for another template's and the pages change their clothes.</p>
+      <p>What this one adds is the furniture of a paper. A masthead with a dateline. Story cards with kickers and bylines. A scoreboard table. A breaking banner. A pull quote set between rules. Datelines and data in JetBrains Mono, body in Inter, in real columns.</p>
     </div>
-    <div class="brutal-news-box">
-      <p><span class="brutal-news-tape">Inside</span></p>
-      <p class="kicker">This edition</p>
-      <ul>
-        <li><a href="#cards">Cards, three ways</a></li>
-        <li><a href="#half">Half and half</a></li>
-        <li><a href="#folded">Questions, folded</a></li>
-        <li><a href="#gallery">The picture desk</a></li>
-        <li><a href="#parts">Small parts</a></li>
-        <li><a href="#words">Words</a></li>
-      </ul>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+      <a class="btn btn-lg" href="docs/components/index.html">Browse the components</a>
     </div>
   </section>
 
-  <section class="section" id="cards">
-    <h2>Cards, three ways</h2>
-    <p>Take the <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> folders and you have the whole template. The three cards below are the ordinary card, with an image, an icon, and neither. Each is a ruled box; the image is ruled off from the text.</p>
-    <div class="grid-3">
-      <article class="card">
+  <div class="banner brutal-news-breaking" role="status"><span>Breaking</span><p>The acid yellow fails the 3:1 check on white paper and the checker says so. That is by design: yellow carries black ink only, and never text on the page.</p></div>
+
+  <section class="section" id="stories">
+    <h2>Inside the folder</h2>
+    <p>Three story cards, ruled off from each other. The first has a picture, the second an icon, the third only words. Each is an ordinary <code>.card</code> with the <code>brutal-news-story</code> class.</p>
+    <div class="grid-3 brutal-news-ruled">
+      <article class="card brutal-news-story">
         <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Two stylesheets</h3>
-          <p class="card-text"><code>theme.css</code> holds the tokens and the palette; <code>global.css</code> holds everything that uses them. Nothing else to load but the fonts.</p>
+          <p class="kicker">Stylesheets</p>
+          <h3 class="card-title">Two files carry the whole look</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens and the palette; <code>global.css</code> holds every rule that uses them. Nothing else loads but the three fonts.</p>
+          <p class="brutal-news-byline">By the CSS desk</p>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><path d="M3 12h18M12 3v18"/></svg></figure>
+      <article class="card brutal-news-story">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><path d="M12 3v18M3 12h9" /><path d="M12 12h9v9h-9z" fill="currentColor"/></svg></figure>
         <div class="card-body">
-          <h3 class="card-title">Light and dark</h3>
-          <p class="card-text">White paper by day; the same page printed in reverse by night. The toggle in the corner cycles auto, light and dark.</p>
+          <p class="kicker">Schemes</p>
+          <h3 class="card-title">Printed in reverse after dark</h3>
+          <p class="card-text">White paper by day, black paper by night, the same hues at the same volume. The toggle in the corner cycles auto, light and dark, and remembers the choice.</p>
+          <p class="brutal-news-byline">By the night desk</p>
         </div>
       </article>
-      <article class="card">
+      <article class="card brutal-news-story">
         <div class="card-body">
-          <h3 class="card-title">Retoken compatible</h3>
-          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+          <p class="kicker">Retoken</p>
+          <h3 class="card-title">The palette pastes into a retoken site</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> is a retoken theme as written. Copy it whole; the border slots are the ink, so retoken's own components will rule in the same weight. <a href="docs/theme.html">See the tokens.</a></p>
+          <p class="brutal-news-byline">By the tokens desk</p>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Cards, sideways</h2>
-    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+  <section class="section" id="spread">
+    <h2>Picture desk</h2>
+    <p>The fifty-fifty block is the picture spread: half the width for the image, half for what it shows. Add <code>fifty-fifty-reverse</code> and the picture goes right, as here. On a phone the picture comes first either way.</p>
+    <section class="fifty-fifty fifty-fifty-reverse">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Picture · The rule</p>
+        <h2>Three pixels, and no less</h2>
+        <p>One pixel is a hairline and two is a border. Three is a rule: the line a paper draws between two things it wants you to read separately. Every border, underline, column rule and table rule in this template is three pixels or six.</p>
+        <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How the block is built</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section" id="scoreboard">
+    <h2>Scoreboard</h2>
+    <p>The data table has a second setting. Add <code>brutal-news-scoreboard</code> to the wrapper and it prints like the results page: mono figures, numbers to the right, the head in reverse. The ordinary ruled table is on the <a href="docs/components/table.html">table page</a>.</p>
+    <div class="table-wrap brutal-news-scoreboard">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Element</th><th>Rule</th><th>Script lines</th></tr></thead>
+        <tbody>
+          <tr><td><a href="docs/components/cards.html">Card</a></td><td>article</td><td>3px</td><td>0</td></tr>
+          <tr><td><a href="docs/components/accordion.html">Accordion</a></td><td>details</td><td>3px</td><td>0</td></tr>
+          <tr><td><a href="docs/components/gallery.html">Lightbox</a></td><td>dialog</td><td>3px</td><td>1</td></tr>
+          <tr><td><a href="docs/components/navbar.html">Navbar</a></td><td>header</td><td>6px</td><td>0</td></tr>
+          <tr><td><a href="docs/theme.html">Scheme toggle</a></td><td>button</td><td>3px</td><td>45</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="teasers">
+    <h2>Also in this edition</h2>
+    <p>Horizontal cards put the picture on the left or, with <code>card-media-end</code>, on the right. Below 30rem they stack.</p>
     <div class="grid-2">
       <article class="card card-horizontal">
         <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the left</h3>
-          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+          <p class="kicker">Page 2</p>
+          <h3 class="card-title"><a href="sidebar.html">The same paper with a sidebar</a></h3>
+          <p class="card-text">Every template ships two layouts. The second puts the index down the left, ruled off.</p>
         </div>
       </article>
       <article class="card card-horizontal card-media-end">
         <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
-          <h3 class="card-title">Media on the right</h3>
-          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+          <p class="kicker">Page 3</p>
+          <h3 class="card-title"><a href="blogpost.html">The test article, every construct</a></h3>
+          <p class="card-text">Headings to footnotes, tables to task lists, all through <code>.prose</code>.</p>
         </div>
       </article>
     </div>
-    <p>Every template has one <em>feature</em> card with an effect that suits it. Brutal News's inverts to ink on red and throws a shadow when you hover it.</p>
+    <p>Every template has one <em>feature</em> card with an effect that suits it. Brutal News's inverts to ink on red and throws a hard shadow when you reach for it. A brutalist page has two states, on and off; this is on.</p>
     <article class="card card-feature">
       <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
       <div class="card-body">
+        <p class="kicker">Late edition</p>
         <h3 class="card-title">The feature card</h3>
-        <p class="card-text">Hover it. A brutalist page has two states, on and off, and this is what on looks like.</p>
+        <p class="card-text">Hover it, or tab into the link. The inversion is a background and a colour on the card, so it is the same markup as every card above.</p>
         <div class="card-actions"><a class="btn btn-sm" href="docs/components/cards.html">Card docs</a></div>
       </div>
     </article>
   </section>
 
-  <section class="section" id="half">
-    <h2>Half and half</h2>
-    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>fifty-fifty-reverse</code> and the image moves to the right.</p>
-    <div class="stack">
-      <section class="fifty-fifty">
-        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image left</p>
-          <h2>Say the one thing this block is for</h2>
-          <p>A heading, a paragraph and a single call to action. That is the whole pattern, and it carries most front pages.</p>
-          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
-        </div>
-      </section>
-      <section class="fifty-fifty fifty-fifty-reverse">
-        <figure><img src="assets/gallery-6.svg" alt="" width="800" height="600"></figure>
-        <div class="fifty-fifty-body">
-          <p class="kicker">Image right</p>
-          <h2>The same block, mirrored</h2>
-          <p>Alternate them down a page and the eye is led from side to side without any extra styling.</p>
-          <a class="btn" href="docs/components/fifty-fifty.html">Read the docs</a>
-        </div>
-      </section>
-    </div>
-  </section>
-
-  <section class="section" id="folded">
-    <h2>Questions, folded</h2>
-    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group of them the same <code>name</code> and opening one closes the others, with no script.</p>
+  <section class="section" id="briefs">
+    <h2>In brief</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group the same <code>name</code> and opening one closes the others, with no script. The marker is a plus that turns.</p>
     <div class="accordion-group">
-      <details class="accordion" name="faq" open>
-        <summary>Does this need a build step?</summary>
-        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      <details class="accordion" name="briefs" open>
+        <summary>Build step: none</summary>
+        <div class="accordion-body"><p>Copy the folder, link the two stylesheets and the one script, and write HTML. The pages open from disk.</p></div>
       </details>
-      <details class="accordion" name="faq">
-        <summary>Why 3px?</summary>
-        <div class="accordion-body"><p>Because 1px is a hairline and 2px is a border. Three is a rule, the kind a newspaper draws between things it wants you to read separately.</p></div>
+      <details class="accordion" name="briefs">
+        <summary>Fonts: three, from Google</summary>
+        <div class="accordion-body"><p>Archivo Black for headlines, Inter for body, JetBrains Mono for kickers, datelines and data. Remove the <code>&lt;link&gt;</code> and Arial Black, your system sans and your system mono take over; the rules carry the look on their own.</p></div>
       </details>
-      <details class="accordion" name="faq">
-        <summary>Which browsers?</summary>
-        <div class="accordion-body"><p>Anything from 2024 on: the template relies on <code>light-dark()</code>, <code>:has()</code>, popovers and exclusive accordions.</p></div>
+      <details class="accordion" name="briefs">
+        <summary>Browsers: 2024 on</summary>
+        <div class="accordion-body"><p>The template relies on <code>light-dark()</code>, <code>:has()</code>, popovers and exclusive accordions. No polyfills.</p></div>
       </details>
     </div>
     <p>A single accordion stands on its own.</p>
     <details class="accordion">
       <summary>What is in the install set?</summary>
-      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code> and <code>assets/</code>. The README lists it.</p></div>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and the README. Everything else on this page is showcase and can go.</p></div>
     </details>
   </section>
 
   <section class="section" id="gallery">
-    <h2>The picture desk</h2>
-    <p>Click any image. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <h2>Picture library</h2>
+    <p>Eight pictures from the stock cupboard. Click one and the lightbox opens; the arrows are plain links, the close button is a form, and <kbd>Esc</kbd> closes it.</p>
     <ul class="gallery">
       <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="Hills under a yellow sun" width="800" height="600"></a><figcaption>Hills</figcaption></figure></li>
-      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Two red shapes" width="800" height="600"></a><figcaption>Shapes</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A red slab and a black square" width="800" height="600"></a><figcaption>Slab and square</figcaption></figure></li>
       <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="Cobalt peaks" width="800" height="600"></a><figcaption>Peaks</figcaption></figure></li>
       <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Red and yellow circles" width="800" height="600"></a><figcaption>Circles</figcaption></figure></li>
       <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A yellow mountain" width="800" height="600"></a><figcaption>Mountain</figcaption></figure></li>
@@ -185,14 +189,14 @@
       <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Cobalt ridges" width="800" height="600"></a><figcaption>Ridges</figcaption></figure></li>
     </ul>
     <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
-      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Hills under a yellow sun"><figcaption>Hills — 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Two red shapes"><figcaption>Shapes — 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Cobalt peaks"><figcaption>Peaks — 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Red and yellow circles"><figcaption>Circles — 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A yellow mountain"><figcaption>Mountain — 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Red panels"><figcaption>Panels — 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A yellow ring"><figcaption>Ring — 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
-      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Cobalt ridges"><figcaption>Ridges — 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="Hills under a yellow sun"><figcaption>Hills, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A red slab and a black square"><figcaption>Slab and square, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Cobalt peaks"><figcaption>Peaks, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Red and yellow circles"><figcaption>Circles, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A yellow mountain"><figcaption>Mountain, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Red panels"><figcaption>Panels, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A yellow ring"><figcaption>Ring, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Cobalt ridges"><figcaption>Ridges, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
       <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
     </dialog>
   </section>
@@ -200,78 +204,71 @@
   <hr class="page-break">
 
   <section class="section" id="parts">
-    <h2>Small parts</h2>
-    <p>Buttons come in three kinds and three sizes and jump towards you when hovered. The switch is a square slider. Badges are stamps; banners are ruled notices.</p>
+    <h2>Small print</h2>
+    <p>Buttons are mono capitals in a ruled box and jump towards you when hovered; the stamp is Brutal News's own, a red outline that fills. The switch is a square slider. Badges are stamps of a smaller kind; banners are ruled notices with a thick left edge.</p>
     <div class="row">
       <button class="btn btn-primary" type="button">Primary</button>
       <button class="btn" type="button">Default</button>
+      <button class="btn brutal-news-stamp" type="button">Stamp</button>
       <button class="btn btn-danger" type="button">Danger</button>
       <button class="btn btn-sm" type="button">Small</button>
       <button class="btn btn-lg" type="button">Large</button>
       <button class="btn" type="button" disabled>Disabled</button>
     </div>
     <div class="row">
-      <label class="switch"><input type="checkbox" role="switch" checked><span>Notifications</span></label>
-      <label class="switch"><input type="checkbox" role="switch"><span>Weekly digest</span></label>
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Morning email</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Breaking news</span></label>
       <span class="badge">Draft</span>
-      <span class="badge badge-active">Active</span>
-      <span class="badge badge-done">Done</span>
+      <span class="badge badge-active">Live</span>
+      <span class="badge badge-done">Filed</span>
     </div>
     <div class="stack">
-      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
-      <div class="banner banner-info" role="status"><span>i</span><p>Brutal News loads three fonts from Google Fonts. Remove the links and Arial Black takes the headlines.</p></div>
-      <div class="banner banner-warning" role="status"><span>!</span><p>The acid yellow is decorative only. It is never used for text on the paper.</p></div>
-      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+      <div class="banner banner-success" role="status"><span>✓</span><p>Filed. The story is live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Three fonts load from Google Fonts. Nothing else leaves the folder.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demonstration. Its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>The upload failed. Nothing did, but this is what it would look like.</p></div>
     </div>
   </section>
 
-  <section class="section">
-    <h2>A table and a dialog</h2>
-    <p>Tables sit inside a ruled wrapper that scrolls sideways when they are wider than the page.</p>
-    <div class="table-wrap">
-      <table class="data-table">
-        <thead><tr><th>Component</th><th>Rule</th><th>Script</th><th>Docs</th></tr></thead>
-        <tbody>
-          <tr><td>Card</td><td>3px, image ruled off</td><td>none</td><td><a href="docs/components/cards.html">cards</a></td></tr>
-          <tr><td>Navbar</td><td>6px below</td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
-          <tr><td>Banner</td><td>3px, 12px on the left</td><td>none</td><td><a href="docs/components/banner.html">banner</a></td></tr>
-          <tr><td>Switch</td><td>3px, square</td><td>none</td><td><a href="docs/components/switch.html">switch</a></td></tr>
-          <tr><td>Theme toggle</td><td>3px</td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Dialogs are native too. The button below opens one; the dialog closes itself through a form.</p>
-    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+  <section class="section" id="notices">
+    <h2>Notices</h2>
+    <p>Dialogs are native. The button opens one; the dialog closes itself through a form, traps focus while open and dims the page behind it.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Place a notice</button>
     <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
-      <h2 id="demo-modal-title">A modal dialog</h2>
-      <p>It traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser.</p>
+      <h2 id="demo-modal-title">Place a notice</h2>
+      <p>Births, marriages, deaths, lost cats. Forty words for two pounds; the desk sets it in the Thursday paper. This dialog closes on <kbd>Esc</kbd>, and all of that comes from the browser.</p>
       <form method="dialog" class="modal-actions">
         <button class="btn" type="submit">Cancel</button>
-        <button class="btn btn-primary" type="submit" value="ok">Confirm</button>
+        <button class="btn btn-primary" type="submit" value="ok">Place it</button>
       </form>
     </dialog>
   </section>
 
-  <section class="section" id="words">
-    <h2>Words</h2>
+  <section class="section" id="letters">
+    <h2>Letters</h2>
     <div class="prose">
-      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces. Quotes are set in the display face behind a red rule. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
-      <blockquote><p>A rule is a line that means something.</p></blockquote>
+      <p>Most pages are prose, so <code>.prose</code> styles every construct a markdown renderer produces: headings ruled off, lists, quotes, code, tables, footnotes. Quotes in running text are set in the display face behind a red rule; the pull quote below is the flare version, between a heavy rule and a plain one. The <a href="blogpost.html">blog post</a> runs the full test document through these rules; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
     </div>
-    <div class="brutal-news-red">
-      <h2>Read it in reverse</h2>
-      <p>Flip the theme toggle. Dark mode is not a different design; it is the same paper printed white on black, with the same hues at the same volume.</p>
-    </div>
+    <blockquote class="brutal-news-pullquote">
+      <p>A rule is a line that means something. A hairline is a line that is afraid to.</p>
+      <footer>The editor, in the first issue</footer>
+    </blockquote>
     <aside class="author-card">
       <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
       <div>
-        <strong class="author-name">Brutal News</strong>
-        <p class="author-bio">A brutalist newspaper. Thick rules, harsh colours, no corners.</p>
+        <strong class="author-name">The editor</strong>
+        <p class="author-bio">Keeps the rules at three pixels and the corners square. Signs off every page before it goes to press.</p>
         <p class="meta"><time datetime="2026-09-04">4 September 2026</time> · <span>2 min read</span></p>
-        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a><a class="tag" href="docs/components/flare.html">flare</a></p>
       </div>
     </aside>
   </section>
+
+  <div class="brutal-news-red">
+    <h2>Read it in reverse</h2>
+    <p>Flip the toggle in the corner. Dark mode is not a second design; it is the same paper printed white on black, with the same red, yellow, cobalt and green at the same volume. Every colour is a <code>light-dark()</code> pair in one file.</p>
+    <a class="btn" href="docs/theme.html">See the palette</a>
+  </div>
 </main>
 
 <footer class="footer">
@@ -290,18 +287,19 @@
         <li><a href="blogpost.html">Blog post</a></li>
         <li><a href="forms.html">Forms</a></li>
         <li><a href="sidebar.html">Sidebar variant</a></li>
-        <li><a href="example/index.html">Example site</a></li>
+        <li><a href="example/index.html">Example site: The Ashcombe Bugle</a></li>
       </ul>
     </section>
     <section>
       <h2>Theme</h2>
       <ul>
         <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="docs/components/flare.html">Flare and variants</a></li>
         <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
       </ul>
     </section>
   </div>
-  <p class="footer-note">Brutal News is a retemplate template. MIT licensed. No build step, no framework, one small script.</p>
+  <p class="footer-note">Brutal News is a retemplate template. MIT licensed. No build step, no framework, one small script, three fonts.</p>
 </footer>
 </body>
 </html>

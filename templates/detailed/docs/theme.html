@@ -161,7 +161,7 @@
 <tr><td><code>--font-size-hero</code></td><td><code>clamp(2.1rem, 1.3rem + 2.9vw, 3.8rem)</code></td><td>Post titles; the marquee sets its own larger clamp</td></tr>
 </tbody></table></div>
 <h2>Use this palette in retoken</h2>
-<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="detailed"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not — set those in the editor.</p>
+<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="detailed"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not; set those in the editor.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='detailed'],
 [data-theme='detailed'] {
   --pal-bg0: light-dark(#f3ead8, #0d1220);
@@ -205,7 +205,7 @@
 <tr><td><code>--detailed-sheen</code></td><td>a linear gradient</td><td>The gold leaf that sweeps the feature card</td></tr>
 </tbody></table></div>
 <h2>Light and dark</h2>
-<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours — a texture, an ornament, <code>content</code> — <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
+<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours (a texture, an ornament, <code>content</code>), <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
 
   </main>
 </div>

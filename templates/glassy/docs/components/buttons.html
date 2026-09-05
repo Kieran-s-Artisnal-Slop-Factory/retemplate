@@ -65,7 +65,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Buttons</h1>
-  <p>Three kinds — primary, default, danger — in three sizes. A link can wear the same classes when it should look like a button.</p>
+  <p>Three kinds, primary, default and danger, in three sizes. A link can wear the same classes when it should look like a button.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <figure class="example" data-snippet="buttons">
@@ -98,6 +98,20 @@
   &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
   &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Ghost</h3>
+<p>Glassy only. The accent as a one-pixel outline on light glass, for the quieter of two calls beside a primary. It reads over the orbs in both schemes because the fill is glass, not nothing.</p>
+<figure class="example" data-snippet="button-ghost">
+<div class="row">
+  <a class="btn btn-primary" href="#">Start a project</a>
+  <a class="btn glassy-ghost" href="#">Services and prices</a>
+  <button class="btn btn-lg glassy-ghost" type="button">Large ghost</button>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="button-ghost">&lt;div class="row"&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;Start a project&lt;/a&gt;
+  &lt;a class="btn glassy-ghost" href="#"&gt;Services and prices&lt;/a&gt;
+  &lt;button class="btn btn-lg glassy-ghost" type="button"&gt;Large ghost&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -107,12 +121,14 @@
       <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
       <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
       <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
+      <tr><td><code>.glassy-ghost</code></td><td>Glassy only: accent outline on light glass (rules under <code>/* == flare == */</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Every button that does not submit a form carries <code>type="button"</code>; otherwise, inside a form, it submits.</li>
 <li>Use a <code>&lt;button&gt;</code> for actions and an <code>&lt;a&gt;</code> for navigation, whatever they look like.</li>
 <li>Group them in <code>.row</code> to get consistent gaps and wrapping.</li>
+<li>Buttons do not move on hover; they brighten. The ghost button is not portable: another template shows it as a default button.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="page-break.html">← Page break</a><a href="forms.html">Forms →</a></nav>
   </main>

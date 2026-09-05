@@ -20,12 +20,19 @@ its reference implementation. A new template is a copy of `plain` re-skinned.
    `footer.html` are escaped copies of `index.html`'s markup (brand name,
    footer heading), so re-copy them after rewriting the overview or the
    snippet check fails.
-7. Write `README.md` (install set, browsers, fonts, the palette block in a
-   ```css fence).
-8. `python tools/check.py --template <name>` until green.
-9. Draw `landing/previews/<name>-light.svg` and `-dark.svg`; add the card to
+7. Make it distinct (decision 21 of the plan). A re-skin of plain is the
+   floor, not the template. Restructure the overview and the example site
+   for this design (section order, hero form, which components lead), add
+   the component variants the design wants as additive `.<name>-*`
+   modifiers documented on the component pages with their own snippet keys,
+   write the copy in one register with no em-dashes, and choose one
+   signature element. Then remove one accessory.
+8. Write `README.md` (install set, browsers, fonts, flare and variants, the
+   palette block in a ```css fence).
+9. `python tools/check.py --template <name>` until green.
+10. Draw `landing/previews/<name>-light.svg` and `-dark.svg`; add the card to
    `index.html` and the row to `templates/README.md`.
-10. CHANGELOG entry; TODO box; the visual pass in `testing.md`.
+11. CHANGELOG entry; TODO box; the visual pass in `testing.md`.
 
 If `plain`'s markup cannot express something the design needs, do not work
 around it in the copy: change `plain` and the contract, then propagate to

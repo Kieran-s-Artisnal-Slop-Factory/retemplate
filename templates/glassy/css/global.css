@@ -56,6 +56,9 @@ body {
   flex-direction: column;
 }
 
+/* Type carries the personality: the two large sizes are set light, with
+ * tight leading and a little negative tracking; everything smaller is a
+ * plain semibold, and labels are small, wide-tracked capitals. */
 h1,
 h2,
 h3,
@@ -63,16 +66,23 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
+  font-weight: 600;
   line-height: 1.2;
   text-wrap: balance;
 }
 
-h1 { font-size: var(--font-size-2xl); }
-h2 { font-size: var(--font-size-xl); }
+h1,
+h2 {
+  font-weight: var(--font-weight-display);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
 h3 { font-size: var(--font-size-lg); }
 h4 { font-size: var(--font-size-base); }
-h5 { font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.06em; }
+h5 { font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.12em; }
 h6 { font-size: var(--font-size-sm); color: var(--text-muted-color); }
 
 p,
@@ -443,6 +453,10 @@ dialog::backdrop,
   max-width: 60ch;
 }
 
+.page-header h1 {
+  font-size: var(--font-size-3xl);
+}
+
 .stack {
   display: flex;
   flex-direction: column;
@@ -476,9 +490,9 @@ dialog::backdrop,
 .small { font-size: var(--font-size-sm); }
 
 .kicker {
-  font-size: var(--font-size-sm);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   color: var(--text-muted-color);
   font-weight: 600;
 }
@@ -510,6 +524,12 @@ dialog::backdrop,
   margin-bottom: var(--space-4);
 }
 
+.section > h2 + p {
+  max-width: 64ch;
+  color: var(--text-muted-color);
+  margin-bottom: var(--space-4);
+}
+
 .hero {
   padding: var(--space-6) 0;
   display: grid;
@@ -519,12 +539,19 @@ dialog::backdrop,
 
 .hero h1 {
   font-size: var(--font-size-hero);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 
 .hero p {
   font-size: var(--font-size-lg);
   color: var(--text-muted-color);
   max-width: 50ch;
+}
+
+.hero .kicker,
+.page-header .kicker {
+  color: var(--color-primary-strong);
 }
 
 @media (min-width: 48rem) {
@@ -556,18 +583,18 @@ dialog::backdrop,
   box-shadow: var(--shadow-1);
   backdrop-filter: blur(var(--glassy-blur));
   -webkit-backdrop-filter: blur(var(--glassy-blur));
-  transition: transform 150ms, box-shadow 150ms, color 120ms;
+  transition: background-color 150ms, border-color 150ms, color 120ms;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-2);
+  border-color: var(--glassy-edge-strong);
+  background: var(--surface-color);
   color: var(--color-primary-strong);
 }
 
 .btn:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-1);
+  background: var(--glassy-glass-strong);
+  box-shadow: none;
 }
 
 .btn-primary {
@@ -578,6 +605,8 @@ dialog::backdrop,
 
 .btn-primary:hover {
   color: var(--color-on-primary);
+  background: var(--color-primary-strong);
+  border-color: transparent;
 }
 
 .btn-danger {
@@ -884,6 +913,10 @@ dialog::backdrop,
   align-items: flex-start;
 }
 
+.fifty-fifty-body h2 {
+  font-size: var(--font-size-2xl);
+}
+
 @media (min-width: 48rem) {
   .fifty-fifty {
     grid-template-columns: 1fr 1fr;
@@ -1108,6 +1141,10 @@ hr.page-break::after {
   margin-top: var(--space-3);
 }
 
+.modal h2 {
+  font-size: var(--font-size-xl);
+}
+
 .modal-actions {
   display: flex;
   justify-content: flex-end;
@@ -1190,6 +1227,10 @@ hr.page-break::after {
 
 .data-table th {
   white-space: nowrap;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
 }
 
 .data-table tbody tr:hover {
@@ -1225,7 +1266,7 @@ hr.page-break::after {
   display: block;
   font-size: var(--font-size-lg);
   font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
+  font-weight: 600;
 }
 
 .author-bio {
@@ -1294,7 +1335,8 @@ hr.page-break::after {
 
 .brand {
   font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   font-size: var(--font-size-lg);
   color: var(--text-color);
   text-decoration: none;
@@ -1426,7 +1468,7 @@ hr.page-break::after {
 
 .topbar-title {
   font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
+  font-weight: 600;
   margin-right: auto;
 }
 
@@ -1455,9 +1497,9 @@ hr.page-break::after {
 }
 
 .sidebar nav summary {
-  font-size: var(--font-size-sm);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.16em;
   color: var(--text-muted-color);
   padding: var(--space-1) var(--space-2);
 }
@@ -1547,7 +1589,10 @@ hr.page-break::after {
 }
 
 .footer section h2 {
-  font-size: var(--font-size-base);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--text-color);
   margin-bottom: var(--space-2);
 }
@@ -1697,9 +1742,12 @@ hr.page-break::after {
 }
 
 /* == flare == */
-/* Two blurred colour orbs drifting behind the whole page, and a strip of
- * four wave layers on a slow parallax. Both are CSS-only; the waves stop
- * under prefers-reduced-motion. */
+/* Glass is depth. The orbs are the light behind every sheet; the wave strip
+ * is the ground the hero sheet stands over; and every sheet sits at one of
+ * three depths. The only continuous motion is the orbs' drift and the waves'
+ * parallax, both CSS, both stopped under prefers-reduced-motion. */
+
+/* Orbs: two large blurred discs, fixed behind the page. */
 .glassy-orbs {
   position: fixed;
   inset: 0;
@@ -1736,12 +1784,13 @@ hr.page-break::after {
   to { transform: translate3d(4rem, 3rem, 0) scale(1.15); }
 }
 
+/* Waves: one path, four copies, four speeds. A strip the hero sheet overlaps. */
 .glassy-waves {
   position: relative;
   width: 100%;
-  height: 6rem;
+  height: 7rem;
   overflow: hidden;
-  margin-top: var(--space-4);
+  border-radius: var(--radius-lg);
 }
 
 .glassy-waves svg {
@@ -1765,6 +1814,306 @@ hr.page-break::after {
   100% { transform: translate3d(85px, 0, 0); }
 }
 
+/* The sheet hero: one deep pane of glass, text only, standing over the wave
+ * strip that follows it. The strip is pulled up under the sheet's lower edge. */
+.hero.glassy-sheet {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: clamp(var(--space-5), 4vw, var(--space-6)) clamp(var(--space-4), 5vw, 4rem);
+  background: var(--glassy-glass-strong);
+  border: 1px solid var(--glassy-edge-strong);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  max-width: 44rem;
+  margin: var(--space-4) auto 0;
+}
+
+.hero.glassy-sheet .stack {
+  gap: var(--space-4);
+}
+
+.hero.glassy-sheet .row {
+  margin-top: var(--space-2);
+}
+
+.hero.glassy-sheet + .glassy-waves {
+  margin-top: calc(-1 * var(--glassy-overlap));
+  padding-top: var(--glassy-overlap);
+  height: calc(7rem + var(--glassy-overlap));
+  z-index: 1;
+}
+
+/* Depth tiers. Any glass component can move a step towards or away from the
+ * viewer: shallow is thinner, less blurred and unshadowed; deep is brighter,
+ * blurrier and lifted. Cards, panes, banners, fifty-fifties, tables. */
+.glassy-shallow {
+  background: var(--glassy-glass-shallow);
+  border-color: var(--glassy-edge-shallow);
+  backdrop-filter: saturate(1.3) blur(var(--glassy-blur-shallow));
+  -webkit-backdrop-filter: saturate(1.3) blur(var(--glassy-blur-shallow));
+  box-shadow: none;
+}
+
+.glassy-deep {
+  background: var(--glassy-glass-strong);
+  border-color: var(--glassy-edge-strong);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  box-shadow: var(--shadow-2);
+}
+
+.card.glassy-shallow .card-media,
+.card.glassy-deep .card-media {
+  background: transparent;
+}
+
+/* Float: pull a block up over the one before it, by one overlap. */
+.glassy-float {
+  position: relative;
+  z-index: 3;
+  margin-top: calc(-1 * var(--glassy-overlap));
+}
+
+/* Pane: a section-sized sheet for grouping smaller glass parts. */
+.glassy-pane {
+  background: var(--glassy-glass);
+  border: 1px solid var(--glassy-edge);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur));
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-1);
+}
+
+.glassy-pane > * + * {
+  margin-top: var(--space-4);
+}
+
+.glassy-pane > h2 {
+  font-size: var(--font-size-xl);
+}
+
+/* Stack: sheets laid one over the next, each stepped in and one overlap down,
+ * later sheets on top. For a few panels that belong in an order. */
+.glassy-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.glassy-stack > * {
+  position: relative;
+}
+
+.glassy-stack > * + * {
+  margin-top: calc(-1 * var(--space-4));
+  margin-inline-start: var(--space-5);
+}
+
+.glassy-stack > :nth-child(2) { z-index: 2; }
+.glassy-stack > :nth-child(3) { z-index: 3; }
+.glassy-stack > :nth-child(4) { z-index: 4; }
+
+.glassy-stack > .card {
+  padding-bottom: var(--space-4);
+}
+
+@media (max-width: 40rem) {
+  .glassy-stack > * + * {
+    margin-top: var(--space-4);
+    margin-inline-start: 0;
+  }
+}
+
+/* Ghost button: the accent as an outline on light glass. */
+.btn.glassy-ghost {
+  background: var(--glassy-glass);
+  border-color: currentColor;
+  color: var(--color-primary-strong);
+  box-shadow: none;
+}
+
+.btn.glassy-ghost:hover {
+  background: var(--glassy-glass-strong);
+  color: var(--color-primary-strong);
+}
+
+/* Frost banner: no tone stripe; a bright frosted strip with the icon in a disc. */
+.banner.glassy-frost {
+  align-items: center;
+  border-left-width: 1px;
+  border-color: var(--glassy-edge-strong);
+  background: var(--glassy-glass-strong);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  box-shadow: var(--shadow-1);
+}
+
+.banner.glassy-frost > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  font-weight: 600;
+}
+
+/* Price table: a comparison with the figures in a light display size. */
+.table-wrap.glassy-price {
+  background: var(--glassy-glass-strong);
+  border-color: var(--glassy-edge-strong);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  box-shadow: var(--shadow-2);
+}
+
+.glassy-price .data-table {
+  font-size: var(--font-size-base);
+}
+
+.glassy-price th,
+.glassy-price td {
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+}
+
+.glassy-price th:first-child,
+.glassy-price td:first-child {
+  text-align: left;
+  color: var(--text-muted-color);
+}
+
+.glassy-price thead th {
+  background: transparent;
+  color: var(--text-color);
+  padding-top: var(--space-4);
+}
+
+.glassy-price thead th:first-child {
+  color: var(--text-muted-color);
+}
+
+.glassy-price tbody tr:hover {
+  background: transparent;
+}
+
+.glassy-price .glassy-total td {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
+  font-size: var(--font-size-2xl);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text-color);
+  border-top: 1px solid var(--glassy-edge-strong);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+.glassy-price .glassy-total td:first-child {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+  vertical-align: middle;
+}
+
+.glassy-price td .small {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--text-muted-color);
+}
+
+/* Overlap fifty-fifty: the picture fills the block and the text panel floats
+ * over its right half (or its left, with fifty-fifty-reverse). */
+.fifty-fifty.glassy-overlap {
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.fifty-fifty.glassy-overlap figure {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+}
+
+.fifty-fifty.glassy-overlap .fifty-fifty-body {
+  background: var(--glassy-glass-strong);
+  border: 1px solid var(--glassy-edge-strong);
+  backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  -webkit-backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  margin: calc(-1 * var(--glassy-overlap)) var(--space-4) 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 48rem) {
+  .fifty-fifty.glassy-overlap {
+    grid-template-columns: 1fr;
+    grid-template-areas: "stage";
+    padding-block: var(--space-4);
+  }
+  .fifty-fifty.glassy-overlap > figure,
+  .fifty-fifty.glassy-overlap > .fifty-fifty-body {
+    grid-area: stage;
+  }
+  .fifty-fifty.glassy-overlap > figure {
+    width: 66%;
+    align-self: stretch;
+    order: 0;
+  }
+  .fifty-fifty.glassy-overlap > figure img {
+    height: 100%;
+    min-height: 22rem;
+  }
+  .fifty-fifty.glassy-overlap > .fifty-fifty-body {
+    width: 48%;
+    margin: 0;
+    justify-self: end;
+    align-self: center;
+    padding: var(--space-5);
+  }
+  .fifty-fifty.glassy-overlap.fifty-fifty-reverse > figure {
+    justify-self: end;
+  }
+  .fifty-fifty.glassy-overlap.fifty-fifty-reverse > .fifty-fifty-body {
+    justify-self: start;
+  }
+}
+
+/* Floating navbar: the bar is a detached sheet, inset from the edges. */
+.navbar.glassy-floating {
+  top: var(--space-3);
+  margin: var(--space-3) var(--space-4) 0;
+  border: 1px solid var(--glassy-edge-strong);
+  border-radius: var(--radius-lg);
+  background: var(--glassy-glass-strong);
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 47.99rem) {
+  .navbar.glassy-floating nav {
+    inset: calc(var(--navbar-height) + var(--space-3) * 2) var(--space-4) auto var(--space-4);
+    width: auto;
+    border: 1px solid var(--glassy-edge-strong);
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* Legacy free-standing panel; the same recipe as .glassy-pane. */
 .glassy-panel {
   background: var(--glassy-glass);
   border: 1px solid var(--glassy-edge);

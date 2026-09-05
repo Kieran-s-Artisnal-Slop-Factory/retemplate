@@ -93,16 +93,43 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Scoreboard</h3>
+<p>Add <code>brutal-news-scoreboard</code> to the wrapper for results, prices and anything else that is mostly numbers. The table sets in JetBrains Mono with tabular figures, every column after the first aligns right, the head prints in reverse, and the wrapper loses its side borders so the rules run edge to edge. The first column is bold; it is the row's name.</p>
+<figure class="example" data-snippet="table-brutal-news-scoreboard">
+<div class="table-wrap brutal-news-scoreboard">
+  <table class="data-table">
+    <thead><tr><th>Fixture</th><th>Home</th><th>Away</th><th>Gate</th></tr></thead>
+    <tbody>
+      <tr><td>Ashcombe Town v Hadley Wanderers</td><td>0</td><td>3</td><td>412</td></tr>
+      <tr><td>Ashcombe Reserves v Coldwell</td><td>2</td><td>2</td><td>86</td></tr>
+      <tr><td>Ashcombe Ladies v Stanton Green</td><td>1</td><td>0</td><td>203</td></tr>
+    </tbody>
+  </table>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="table-brutal-news-scoreboard">&lt;div class="table-wrap brutal-news-scoreboard"&gt;
+  &lt;table class="data-table"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Fixture&lt;/th&gt;&lt;th&gt;Home&lt;/th&gt;&lt;th&gt;Away&lt;/th&gt;&lt;th&gt;Gate&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Ashcombe Town v Hadley Wanderers&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;412&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Ashcombe Reserves v Coldwell&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Ashcombe Ladies v Stanton Green&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;203&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == table == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.table-wrap</code></td><td>Border, radius, horizontal scrolling</td></tr>
       <tr><td><code>.data-table</code></td><td>Small type, hover rows, no last border</td></tr>
+      <tr><td><code>.brutal-news-scoreboard</code></td><td>Brutal News only, on the wrapper: mono figures right-aligned, head in reverse (rules under <code>/* == flare == */</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Use <code>&lt;th&gt;</code> in the head row, and <code>scope="row"</code> on a first-column header if rows have one.</li>
 <li>Tables inside <code>.prose</code> get the same treatment without the classes.</li>
+<li>Every row rule is three pixels, in the scoreboard and out of it. A long table is loud; that is the template.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="badge.html">← Badge</a><a href="author-card.html">Author card →</a></nav>
   </main>

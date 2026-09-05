@@ -162,7 +162,7 @@
   <figure class="card-media"><img src="../../assets/card-4.svg" alt="" width="640" height="400"></figure>
   <div class="card-body">
     <h3 class="card-title">The feature card</h3>
-    <p class="card-text">Neon runs a light round its border on hover and lifts it into a rose glow. Other templates do something of their own.</p>
+    <p class="card-text">Neon runs a light round the border on hover and lifts the card into its glow. Other templates do something of their own.</p>
   </div>
 </article>
 </figure>
@@ -170,9 +170,53 @@
   &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-4.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
   &lt;div class="card-body"&gt;
     &lt;h3 class="card-title"&gt;The feature card&lt;/h3&gt;
-    &lt;p class="card-text"&gt;Neon runs a light round its border on hover and lifts it into a rose glow. Other templates do something of their own.&lt;/p&gt;
+    &lt;p class="card-text"&gt;Neon runs a light round the border on hover and lifts the card into its glow. Other templates do something of their own.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>Neon: the panel</h3>
+<p>A card as a switched sign. <code>.neon-panel</code> is unlit: flat on the page colour, a hairline, a small tracked-caps title, and a <code>&lt;strong&gt;</code> at the top of the text set large in the display face. <code>.neon-panel-lit</code> makes the border the tube and adds the glow; <code>.neon-panel-cyan</code> with it swaps the tube for cyan. Light one panel in a row: the recommended plan, the current item. Three together are three tubes at different temperatures.</p>
+<figure class="example" data-snippet="neon-panel">
+<div class="grid-3">
+  <article class="card neon-panel">
+    <div class="card-body">
+      <h3 class="card-title">Solo</h3>
+      <p class="card-text"><strong>Free</strong>Unlit. A hairline and a small title.</p>
+    </div>
+  </article>
+  <article class="card neon-panel neon-panel-lit">
+    <div class="card-body">
+      <h3 class="card-title">Team</h3>
+      <p class="card-text"><strong>$24</strong>Lit in rose. The one to pick.</p>
+    </div>
+  </article>
+  <article class="card neon-panel neon-panel-lit neon-panel-cyan">
+    <div class="card-body">
+      <h3 class="card-title">Company</h3>
+      <p class="card-text"><strong>$120</strong>Lit in cyan. The cooler tube.</p>
+    </div>
+  </article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-panel">&lt;div class="grid-3"&gt;
+  &lt;article class="card neon-panel"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Solo&lt;/h3&gt;
+      &lt;p class="card-text"&gt;&lt;strong&gt;Free&lt;/strong&gt;Unlit. A hairline and a small title.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card neon-panel neon-panel-lit"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Team&lt;/h3&gt;
+      &lt;p class="card-text"&gt;&lt;strong&gt;$24&lt;/strong&gt;Lit in rose. The one to pick.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card neon-panel neon-panel-lit neon-panel-cyan"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h3 class="card-title"&gt;Company&lt;/h3&gt;
+      &lt;p class="card-text"&gt;&lt;strong&gt;$120&lt;/strong&gt;Lit in cyan. The cooler tube.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -186,6 +230,9 @@
       <tr><td><code>.card-horizontal</code></td><td>Media beside the body</td></tr>
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card</td></tr>
+      <tr><td><code>.neon-panel</code></td><td>Neon: the card as an unlit sign, flat with a hairline</td></tr>
+      <tr><td><code>.neon-panel-lit</code></td><td>With .neon-panel: the border becomes the tube and glows</td></tr>
+      <tr><td><code>.neon-panel-cyan</code></td><td>With .neon-panel-lit: the cyan tube instead of rose</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
@@ -193,6 +240,7 @@
 <li>Lay them out with <code>.grid-2</code> or <code>.grid-3</code>; they stretch to equal heights.</li>
 <li>Horizontal cards stack on screens narrower than 30rem.</li>
 <li>The feature card responds to <code>:hover</code> and <code>:focus-within</code>; it is CSS only.</li>
+<li>Panels are the same markup as any card; the modifiers are additive, and a template swap strips them.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="accordion.html">← Accordion</a><a href="fifty-fifty.html">Fifty-fifty →</a></nav>
   </main>

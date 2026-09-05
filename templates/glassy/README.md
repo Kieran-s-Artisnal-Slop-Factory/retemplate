@@ -1,18 +1,19 @@
 # Glassy
 
-Frosted glass over a soft gradient. Two blurred colour orbs drift behind the
-page; every card, bar, panel and dialog is a translucent sheet with a bright
-edge; buttons are pills; and a strip of four wave layers rolls slowly along
-the hero and the sidebar pages. Airy blues by day, deep navy by night, on
-your system's fonts. Part of [retemplate](../../README.md).
+Frosted glass over a soft gradient, composed by depth. Two blurred colour
+orbs drift behind the page; every card, bar, panel and dialog is a
+translucent sheet with a bright edge, at one of three depths; the hero is a
+single deep sheet standing over a strip of four slow wave layers, and the
+cards under it hang off its lower edge. Pill buttons, system fonts set light.
+Airy blues by day, deep navy by night. Part of [retemplate](../../README.md).
 
 ## Take and use
 
-Copy this folder. Keep the **install set** — `css/`, `js/theme.js`,
-`assets/`, this file — and delete the **showcase** — `index.html`,
+Copy this folder. Keep the **install set**: `css/`, `js/theme.js`,
+`assets/`, this file, and delete the **showcase**: `index.html`,
 `blogpost.html`, `forms.html`, `sidebar.html`, `docs/`, `example/`,
-`js/copy.js`. Or keep `example/`, a complete three-page agency site, and
-start from it.
+`js/copy.js`. Or keep `example/`, a complete three-page site for a small design
+studio, and start from it.
 
 Put this at the top of every page (adjust the paths for sub-folders):
 
@@ -34,9 +35,10 @@ Put this at the top of every page (adjust the paths for sub-folders):
 Then write HTML with the classes in `docs/components/` (open
 `docs/index.html` in a browser for the guided version).
 
-- **Browsers:** Baseline 2024 — `light-dark()`, `:has()`, popovers,
+- **Browsers:** Baseline 2024: `light-dark()`, `:has()`, popovers,
   `<details name>`, `color-mix()`, `backdrop-filter`. No polyfills.
-- **Fonts:** none. Glassy uses the system font stacks.
+- **Fonts:** none. Glassy uses the system font stacks, set light at the two
+  large sizes.
 - **Script:** `js/theme.js` (the theme toggle, ~45 lines) and a one-line
   `onclick` on dialog openers. Under a strict CSP, move those calls into a
   script of your own.
@@ -44,12 +46,22 @@ Then write HTML with the classes in `docs/components/` (open
   `<a class="site-link" href="../../index.html">` back to the retemplate
   landing; nothing else points outside the folder.
 
-## Flare
+## Flare and variants
 
-`.glassy-orbs` (put it right after `<body>`), `.glassy-waves` (a strip; one
-per page, since it defines an SVG id) and `.glassy-panel`, all inside
-`<div class="glassy-flare">` wrappers. See `docs/components/flare.html`.
-Both animations stop under `prefers-reduced-motion`.
+Markup flare, inside `<div class="glassy-flare">` wrappers: `.glassy-orbs`
+(put it right after `<body>`) and `.glassy-waves` (a strip; one per page,
+since it defines an SVG id, and meant to follow a sheet hero). Both
+animations stop under `prefers-reduced-motion`.
+
+Composition classes, no wrapper needed (another template ignores them):
+`.hero.glassy-sheet` (the hero as one deep sheet over the waves),
+`.glassy-shallow` / `.glassy-deep` (depth tiers on any glass component),
+`.glassy-float` (pull a block up over the one before it), `.glassy-pane`
+(a section-sized sheet), `.glassy-stack` (panels laid over one another in
+order). Component variants: `.btn.glassy-ghost`, `.banner.glassy-frost`,
+`.table-wrap.glassy-price` with `tr.glassy-total`,
+`.fifty-fifty.glassy-overlap`, `.navbar.glassy-floating`. All documented on
+`docs/components/flare.html` and the component pages it points to.
 
 ## Swapping templates
 

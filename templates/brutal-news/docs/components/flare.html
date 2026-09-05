@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Flare — Brutal News</title>
+  <title>Flare · Brutal News</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -65,28 +65,64 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Brutal News adds the furniture of a newspaper: a masthead with a dateline, columned text with a drop cap, a strip of tape, a ruled box and a red block.</p>
+  <p>Flare is everything a template adds beyond the contract. Brutal News adds the furniture of a newspaper: the lead, a masthead and its dateline, ruled columns with a drop cap, a ruled grid, a pull quote, a byline, a ruled box and a red block. The variants of contract components (the story card, the scoreboard table, the stamp button, the breaking banner) are documented on those components' pages and listed at the foot of this one.</p>
 </header>
-<h2 id="preview">Masthead</h2>
-<p>The title of the paper, ruled top and bottom, with a dateline. It is markup, so it lives inside the <code>.brutal-news-flare</code> wrapper a template swap strips.</p>
+<h2 id="preview">The lead</h2>
+<p>The front-page story, and the hero of this template. Add <code>brutal-news-lead</code> to <code>.hero</code>: a red kicker, the headline across the full width at the largest size on the page (Archivo Black, tracked to minus four and a half percent), then the text in three ruled columns with a drop cap, a byline, and one call. Two columns below 64rem, one below 40rem. There is no picture; the headline is the picture. The overview and the example front page both open with one, and the example story reuses it as a <code>.post-header</code>.</p>
+<figure class="example" data-snippet="brutal-news-lead">
+<section class="hero brutal-news-lead">
+  <p class="kicker">Council · Exclusive</p>
+  <h1>Baths shut in March. Council knew in May.</h1>
+  <div class="brutal-news-columns">
+    <p class="brutal-news-dropcap">Ashcombe Baths will close on 2 March for at least eighteen months, the council confirmed last night, after the Bugle obtained a structural survey describing the roof trusses as "beyond economic repair". The survey is dated 11 May.</p>
+    <p>Councillors were briefed in June. The swimming club, which trains there five mornings a week, found out on Monday when a notice went up by the lockers.</p>
+    <p>Repair is costed at £4.1m; a new pool at £11m. The council has budgeted for neither.</p>
+  </div>
+  <p class="brutal-news-byline">By Marta Okonkwo, chief reporter</p>
+  <div class="row"><a class="btn btn-primary btn-lg" href="#">Read the full story</a></div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-lead">&lt;section class="hero brutal-news-lead"&gt;
+  &lt;p class="kicker"&gt;Council · Exclusive&lt;/p&gt;
+  &lt;h1&gt;Baths shut in March. Council knew in May.&lt;/h1&gt;
+  &lt;div class="brutal-news-columns"&gt;
+    &lt;p class="brutal-news-dropcap"&gt;Ashcombe Baths will close on 2 March for at least eighteen months, the council confirmed last night, after the Bugle obtained a structural survey describing the roof trusses as "beyond economic repair". The survey is dated 11 May.&lt;/p&gt;
+    &lt;p&gt;Councillors were briefed in June. The swimming club, which trains there five mornings a week, found out on Monday when a notice went up by the lockers.&lt;/p&gt;
+    &lt;p&gt;Repair is costed at £4.1m; a new pool at £11m. The council has budgeted for neither.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p class="brutal-news-byline"&gt;By Marta Okonkwo, chief reporter&lt;/p&gt;
+  &lt;div class="row"&gt;&lt;a class="btn btn-primary btn-lg" href="#"&gt;Read the full story&lt;/a&gt;&lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="variants">Masthead</h2>
+<p>The paper's name between a heavy rule and the dateline. It is markup, so it lives inside the <code>.brutal-news-flare</code> wrapper a template swap strips. Keep the name to three words; it is set at up to 4.5rem.</p>
 <figure class="example" data-snippet="brutal-news-masthead">
 <div class="brutal-news-flare">
   <header class="brutal-news-masthead">
-    <p class="kicker">Late edition</p>
-    <h1>The Daily Rule</h1>
-    <p class="brutal-news-dateline"><span>Vol. 1 · No. 12</span><span>Thursday 4 September 2026</span><span>Free</span></p>
+    <p class="kicker">Ashcombe's weekly since 1898</p>
+    <h1>The Ashcombe Bugle</h1>
+    <p class="brutal-news-dateline"><span>No. 6,614</span><span>Thursday 4 September 2026</span><span>Bright, 19°</span><span>£1.50</span></p>
   </header>
 </div>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-masthead">&lt;div class="brutal-news-flare"&gt;
   &lt;header class="brutal-news-masthead"&gt;
-    &lt;p class="kicker"&gt;Late edition&lt;/p&gt;
-    &lt;h1&gt;The Daily Rule&lt;/h1&gt;
-    &lt;p class="brutal-news-dateline"&gt;&lt;span&gt;Vol. 1 · No. 12&lt;/span&gt;&lt;span&gt;Thursday 4 September 2026&lt;/span&gt;&lt;span&gt;Free&lt;/span&gt;&lt;/p&gt;
+    &lt;p class="kicker"&gt;Ashcombe's weekly since 1898&lt;/p&gt;
+    &lt;h1&gt;The Ashcombe Bugle&lt;/h1&gt;
+    &lt;p class="brutal-news-dateline"&gt;&lt;span&gt;No. 6,614&lt;/span&gt;&lt;span&gt;Thursday 4 September 2026&lt;/span&gt;&lt;span&gt;Bright, 19°&lt;/span&gt;&lt;span&gt;£1.50&lt;/span&gt;&lt;/p&gt;
   &lt;/header&gt;
 &lt;/div&gt;</code></pre></div>
-<h2 id="variants">Columns and a drop cap</h2>
-<p>Two columns above 40rem with a rule between them; one below. The drop cap is <code>::first-letter</code> on the first paragraph.</p>
+<h3>Dateline</h3>
+<p>Mono facts spread across the width, ruled top and bottom. Inside the masthead it is the bottom rule; on its own it opens an inside page. Every span is a fact: an edition number, a date, a price, the weather. It is not for decoration.</p>
+<figure class="example" data-snippet="brutal-news-dateline">
+<div class="brutal-news-flare">
+  <p class="brutal-news-dateline"><span>News · Page 4</span><span>Thursday 4 September 2026</span><span>No. 6,614</span></p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-dateline">&lt;div class="brutal-news-flare"&gt;
+  &lt;p class="brutal-news-dateline"&gt;&lt;span&gt;News · Page 4&lt;/span&gt;&lt;span&gt;Thursday 4 September 2026&lt;/span&gt;&lt;span&gt;No. 6,614&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Columns and a drop cap</h3>
+<p>Two columns above 40rem with a rule between them; one below. The drop cap is <code>::first-letter</code> on the first paragraph. Inside <code>.brutal-news-lead</code> the count rises to three.</p>
 <figure class="example" data-snippet="brutal-news-columns">
 <div class="brutal-news-columns">
   <p class="brutal-news-dropcap">Newspapers learned a long time ago that a page is easier to read in columns. The measure stays short, the eye never travels far, and a rule between the columns keeps the two from bleeding into each other.</p>
@@ -97,50 +133,89 @@
   &lt;p class="brutal-news-dropcap"&gt;Newspapers learned a long time ago that a page is easier to read in columns. The measure stays short, the eye never travels far, and a rule between the columns keeps the two from bleeding into each other.&lt;/p&gt;
   &lt;p&gt;The drop cap is generated by the stylesheet from the first letter of the first paragraph; there is nothing extra in the markup.&lt;/p&gt;
 &lt;/div&gt;</code></pre></div>
-<h3>Tape</h3>
-<figure class="example" data-snippet="brutal-news-tape">
-<p><span class="brutal-news-tape">Breaking</span> Acid yellow tape for the one word that has to be seen first.</p>
+<h3>Ruled grid</h3>
+<p>Add <code>brutal-news-ruled</code> to <code>.grid-2</code> or <code>.grid-3</code> and the gaps become rules: a heavy one across the top, a plain one between the columns. Below 40rem the rules turn horizontal. The overview uses it under story cards.</p>
+<figure class="example" data-snippet="brutal-news-ruled">
+<div class="grid-3 brutal-news-ruled">
+  <div><p class="kicker">Allotments</p><p>Waiting list hits nine years at Mill Field.</p></div>
+  <div><p class="kicker">Sport</p><p>Town lose 3-0 at home, blame the pitch.</p></div>
+  <div><p class="kicker">Planning</p><p>Forty flats proposed for the old maltings.</p></div>
+</div>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-tape">&lt;p&gt;&lt;span class="brutal-news-tape"&gt;Breaking&lt;/span&gt; Acid yellow tape for the one word that has to be seen first.&lt;/p&gt;</code></pre></div>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-ruled">&lt;div class="grid-3 brutal-news-ruled"&gt;
+  &lt;div&gt;&lt;p class="kicker"&gt;Allotments&lt;/p&gt;&lt;p&gt;Waiting list hits nine years at Mill Field.&lt;/p&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;p class="kicker"&gt;Sport&lt;/p&gt;&lt;p&gt;Town lose 3-0 at home, blame the pitch.&lt;/p&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;p class="kicker"&gt;Planning&lt;/p&gt;&lt;p&gt;Forty flats proposed for the old maltings.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Pull quote</h3>
+<p>A <code>&lt;blockquote&gt;</code> set in the display face between a heavy rule and a plain one, with a red opening quote mark and the source in a <code>&lt;footer&gt;</code>. Running-text quotes in <code>.prose</code> keep the red left rule; this is for the one line you want read before the story.</p>
+<figure class="example" data-snippet="brutal-news-pullquote">
+<blockquote class="brutal-news-pullquote">
+  <p>Two winters is not a forecast. It is a deadline the council chose not to mention.</p>
+  <footer>Tom Achebe, Ashcombe Swimming Club</footer>
+</blockquote>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-pullquote">&lt;blockquote class="brutal-news-pullquote"&gt;
+  &lt;p&gt;Two winters is not a forecast. It is a deadline the council chose not to mention.&lt;/p&gt;
+  &lt;footer&gt;Tom Achebe, Ashcombe Swimming Club&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre></div>
+<h3>Byline</h3>
+<p>Mono capitals over a rule. It follows the headline in a story and closes a story card. Use it for names and dates, not slogans.</p>
+<figure class="example" data-snippet="brutal-news-byline">
+<p class="brutal-news-byline">By Marta Okonkwo, chief reporter · Additional reporting by Rhys Calloway</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-byline">&lt;p class="brutal-news-byline"&gt;By Marta Okonkwo, chief reporter · Additional reporting by Rhys Calloway&lt;/p&gt;</code></pre></div>
 <h3>Ruled box</h3>
+<p>A heavy border, a hard shadow, and its label in acid yellow with black ink. This is the only place the yellow appears under text, and the text on it is always black. Use it for the numbers, a notice, an advert.</p>
 <figure class="example" data-snippet="brutal-news-box">
 <div class="brutal-news-box">
-  <p class="kicker">Ruled box</p>
-  <p>A heavy border and a hard shadow. Use it for a pull quote, a notice, an advert.</p>
+  <p class="kicker">In numbers</p>
+  <p><strong>116</strong> days between the survey and the notice · <strong>210</strong> club members · <strong>14</strong> miles to the next pool</p>
 </div>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-box">&lt;div class="brutal-news-box"&gt;
-  &lt;p class="kicker"&gt;Ruled box&lt;/p&gt;
-  &lt;p&gt;A heavy border and a hard shadow. Use it for a pull quote, a notice, an advert.&lt;/p&gt;
+  &lt;p class="kicker"&gt;In numbers&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;116&lt;/strong&gt; days between the survey and the notice · &lt;strong&gt;210&lt;/strong&gt; club members · &lt;strong&gt;14&lt;/strong&gt; miles to the next pool&lt;/p&gt;
 &lt;/div&gt;</code></pre></div>
 <h3>Red block</h3>
+<p>Solid brand colour with paper-coloured type, for the one section on a page that has to shout: the offer, the appeal, the reverse-print note. A button inside it prints in reverse too.</p>
 <figure class="example" data-snippet="brutal-news-red">
 <div class="brutal-news-red">
-  <h2>A red block</h2>
-  <p>Solid brand colour with paper-coloured type, for a section that has to shout.</p>
+  <h2>Two pounds a month. No paywall.</h2>
+  <p>The Bugle is paid for by the people who read it.</p>
+  <a class="btn" href="#">Subscribe</a>
 </div>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-red">&lt;div class="brutal-news-red"&gt;
-  &lt;h2&gt;A red block&lt;/h2&gt;
-  &lt;p&gt;Solid brand colour with paper-coloured type, for a section that has to shout.&lt;/p&gt;
+  &lt;h2&gt;Two pounds a month. No paywall.&lt;/h2&gt;
+  &lt;p&gt;The Bugle is paid for by the people who read it.&lt;/p&gt;
+  &lt;a class="btn" href="#"&gt;Subscribe&lt;/a&gt;
 &lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
-<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>. The last four rows are variants of contract components; their rules are in the same section and their examples on the pages named.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
-      <tr><td><code>.brutal-news-masthead</code></td><td>Heavy rule above, standard rule below, centred</td></tr>
-      <tr><td><code>.brutal-news-dateline</code></td><td>Mono, uppercase, spread across the width</td></tr>
-      <tr><td><code>.brutal-news-columns</code></td><td>Two ruled columns; one on narrow screens</td></tr>
-      <tr><td><code>.brutal-news-dropcap</code></td><td>Floats the first letter, four and a half lines tall</td></tr>
-      <tr><td><code>.brutal-news-tape</code></td><td>Acid yellow strip, slightly rotated</td></tr>
-      <tr><td><code>.brutal-news-box</code></td><td>Heavy border and a hard shadow</td></tr>
+      <tr><td><code>.brutal-news-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.hero.brutal-news-lead</code></td><td>The front-page story: full-width headline, three ruled columns, byline</td></tr>
+      <tr><td><code>.brutal-news-masthead</code></td><td>The paper's name, heavy rule above, dateline below, centred</td></tr>
+      <tr><td><code>.brutal-news-dateline</code></td><td>Mono facts spread across the width, ruled top and bottom</td></tr>
+      <tr><td><code>.brutal-news-columns</code></td><td>Two ruled columns; one below 40rem; three inside the lead</td></tr>
+      <tr><td><code>.brutal-news-dropcap</code></td><td>Floats the first letter, four lines tall</td></tr>
+      <tr><td><code>.brutal-news-ruled</code></td><td>On <code>.grid-2</code> or <code>.grid-3</code>: rules instead of gaps</td></tr>
+      <tr><td><code>.brutal-news-pullquote</code></td><td>Display type between rules, red opening quote, source in a footer</td></tr>
+      <tr><td><code>.brutal-news-byline</code></td><td>Mono capitals over a rule</td></tr>
+      <tr><td><code>.brutal-news-box</code></td><td>Heavy border, hard shadow, yellow label</td></tr>
       <tr><td><code>.brutal-news-red</code></td><td>Solid brand colour, paper-coloured type</td></tr>
-      <tr><td><code>.brutal-news-flare</code></td><td>The wrapper for flare that is markup</td></tr>
+      <tr><td><code>.card.brutal-news-story</code></td><td>No box, heavy rule on top, red kicker, byline (<a href="cards.html">cards</a>)</td></tr>
+      <tr><td><code>.table-wrap.brutal-news-scoreboard</code></td><td>Mono figures right-aligned, head in reverse (<a href="table.html">table</a>)</td></tr>
+      <tr><td><code>.btn.brutal-news-stamp</code></td><td>Red outline in display type, fills on hover (<a href="buttons.html">buttons</a>)</td></tr>
+      <tr><td><code>.banner.brutal-news-breaking</code></td><td>Solid red, first child as a label (<a href="banner.html">banner</a>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>The rule weights are two tokens, <code>--brutal-news-rule</code> (3px) and <code>--brutal-news-rule-heavy</code> (6px). The yellow and the red are tokens too, so nothing in <code>global.css</code> names a colour.</li>
-<li>The tape's rotation is a transform, not an animation; there is nothing to pause for reduced motion.</li>
-<li>Column text reflows with the viewport; long unbreakable strings (URLs, code) inside columns may overflow — keep those out of <code>.brutal-news-columns</code>.</li>
+<li>The rule weights are two tokens, <code>--brutal-news-rule</code> (3px) and <code>--brutal-news-rule-heavy</code> (6px). Nothing in the template draws thinner than the first. The yellow and the red are tokens too, so nothing in <code>global.css</code> names a colour.</li>
+<li>Nothing animates. The only motion in the template is the 90ms jump on buttons, gallery tiles and the feature card, and that is shortened to nothing under <code>prefers-reduced-motion</code>.</li>
+<li>Column text reflows with the viewport. Long unbreakable strings (URLs, code) inside columns may overflow; keep those out of <code>.brutal-news-columns</code>.</li>
+<li>The lead's headline is the largest type in the template. Keep it under nine words so it holds two lines at 1280px; the overview's is six.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
   </main>

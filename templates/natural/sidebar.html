@@ -68,38 +68,56 @@
 <header class="page-header">
   <p class="kicker">The other layout</p>
   <h1>The overview, with a sidebar</h1>
-  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the whole docs tree use the sidebar layout. On a wide screen the sidebar is a column of paper down the left; on a narrow one it is a drawer behind the menu button, and it closes on <kbd>Esc</kbd> or a tap outside.</p>
+  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the whole docs tree use the sidebar layout. On a wide screen the sidebar is a column of paper down the left, its groups headed in the same tracked moss capitals the labels use; on a narrow one it is a drawer behind the menu button, and it closes on <kbd>Esc</kbd> or a tap outside.</p>
 </header>
 <h2>What the layout is made of</h2>
-<p>A grid with two rows and, above 64rem, two columns. The top bar spans both columns and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls under it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the dimmed backdrop and the dismiss behaviour. The group headings are the same tracked moss capitals the kickers use.</p>
+<p>A grid with two rows and, above 64rem, two columns. The top bar spans both and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls under it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it and the browser supplies the backdrop and the dismissal. Nothing on this page needs the sidebar; swap the shell and the page still works.</p>
+<h2>The herbarium, in the narrower column</h2>
+<p>The specimen cards from the overview, three across until the column runs out of room and then one under another.</p>
 <div class="grid-3">
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code>, open by default. Close the ones you do not need.</p></div>
+  <article class="card natural-specimen">
+    <figure class="card-media"><img src="assets/card-1.svg" alt="A pressed quaking grass with straw-coloured seed heads" width="640" height="400"></figure>
+    <div class="card-body">
+      <p class="kicker">No. 4</p>
+      <h3 class="card-title">Quaking grass</h3>
+      <p class="natural-binomial">Briza media <span class="natural-auth">L.</span></p>
+      <dl class="natural-data"><dt>Collected</dt><dd>Top meadow, June</dd><dt>Soil</dt><dd>Thin chalk, sun</dd></dl>
+    </div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">The current page</h3><p class="card-text">The link to the page you are on carries <code>aria-current="page"</code>, which is also what styles it: a rust edge and a tinted background.</p></div>
+  <article class="card natural-specimen">
+    <figure class="card-media"><img src="assets/card-2.svg" alt="A pressed primrose rosette with three pale flowers" width="640" height="400"></figure>
+    <div class="card-body">
+      <p class="kicker">No. 7</p>
+      <h3 class="card-title">Primrose</h3>
+      <p class="natural-binomial">Primula vulgaris <span class="natural-auth">Huds.</span></p>
+      <dl class="natural-data"><dt>Collected</dt><dd>Wood bank, March</dd><dt>Soil</dt><dd>Damp clay, shade</dd></dl>
+    </div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Same content, either way</h3><p class="card-text">Nothing on this page needs the sidebar. Swap the shell and the page still works.</p></div>
+  <article class="card natural-specimen">
+    <figure class="card-media"><img src="assets/card-3.svg" alt="A single fern frond" width="640" height="400"></figure>
+    <div class="card-body">
+      <p class="kicker">No. 12</p>
+      <h3 class="card-title">Hart's-tongue fern</h3>
+      <p class="natural-binomial">Asplenium scolopendrium <span class="natural-auth">L.</span></p>
+      <dl class="natural-data"><dt>Collected</dt><dd>Barn wall, May</dd><dt>Soil</dt><dd>Lime, never dry</dd></dl>
+    </div>
   </article>
 </div>
-<h2>The rest of the kit, briefly</h2>
-<section class="fifty-fifty">
-  <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+<h2>Plate and notes</h2>
+<section class="fifty-fifty natural-spread">
+  <figure><img src="assets/gallery-3.svg" alt="A rosette of leaves" width="800" height="600"></figure>
   <div class="fifty-fifty-body">
-    <p class="kicker">Fifty-fifty</p>
-    <h2>Half image, half words</h2>
-    <p>The same block the overview uses, here to prove it sits happily inside the narrower column.</p>
-    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">Docs</a>
+    <p class="kicker">Pl. II</p>
+    <h2>A rosette is a plan for winter</h2>
+    <p>The same spread the overview uses, here to show it sits happily inside the narrower column: the sheet on one side, the notes with their rust margin on the other.</p>
+    <a class="btn" href="docs/components/fifty-fifty.html">How the spread is built</a>
   </div>
 </section>
+<h2>Two questions about the drawer</h2>
 <div class="accordion-group">
   <details class="accordion" name="side-faq" open>
     <summary>Can the sidebar collapse on a wide screen?</summary>
-    <div class="accordion-body"><p>Not in this version. The drawer behaviour is for narrow screens only; on a wide screen the column is always there.</p></div>
+    <div class="accordion-body"><p>Not in this version. The drawer is for narrow screens only; on a wide screen the column is always there.</p></div>
   </details>
   <details class="accordion" name="side-faq">
     <summary>Does the drawer remember being open?</summary>
@@ -109,7 +127,7 @@
 <div class="row">
   <label class="switch"><input type="checkbox" role="switch" checked><span>Sticky top bar</span></label>
   <span class="badge badge-active">Sidebar layout</span>
-  <button class="btn" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
+  <button class="btn natural-stamp" type="button" onclick="document.getElementById('side-modal').showModal()">Open a dialog here too</button>
 </div>
 <dialog class="modal" id="side-modal" aria-labelledby="side-modal-title">
   <h2 id="side-modal-title">Dialogs work anywhere</h2>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Living room — Hearth</title>
+  <title>Living room, Larch Road</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 <header class="navbar">
-  <a class="brand" href="index.html">Hearth</a>
+  <a class="brand" href="index.html">Larch Road</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html">Home</a>
@@ -28,33 +28,104 @@
 </header>
 
 <main class="page">
-  <header class="page-header">
-    <p class="kicker">Room</p>
-    <h1>Living room</h1>
-    <p>21.5°, two lamps on, the television off. Six devices in here.</p>
-  </header>
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Ground floor</p>
+      <h1>Living room</h1>
+      <p>21.5° and holding. Two lamps at 40 percent, the television off since 16:20. Six devices in here, all answering.</p>
+      <div class="row">
+        <button class="btn btn-primary btn-lg" type="button" onclick="document.getElementById('add-device').showModal()">Add a device</button>
+        <a class="btn btn-lg" href="index.html">Back to the house</a>
+      </div>
+    </div>
+    <div class="neumorphic-flare neumorphic-panel">
+      <div class="neumorphic-dial neumorphic-dial-lg" style="--angle: 210deg" role="img" aria-label="Target 21 degrees, room at 21.5"><span class="neumorphic-dial-value">21°</span><span class="neumorphic-dial-label">target, room at 21.5°</span></div>
+      <div class="stack">
+        <label class="switch"><input type="checkbox" role="switch" checked><span>Floor lamp</span></label>
+        <label class="switch"><input type="checkbox" role="switch" checked><span>Reading lamp</span></label>
+        <label class="switch"><input type="checkbox" role="switch"><span>Overhead</span></label>
+        <label class="switch"><input type="checkbox" role="switch"><span>Television</span></label>
+      </div>
+      <div class="neumorphic-panel-row">
+        <div class="neumorphic-segment" role="radiogroup" aria-label="Heating">
+          <input type="radio" id="rm-off" name="rm-heat"><label for="rm-off">Off</label>
+          <input type="radio" id="rm-eco" name="rm-heat"><label for="rm-eco">Eco</label>
+          <input type="radio" id="rm-comfort" name="rm-heat" checked><label for="rm-comfort">Comfort</label>
+        </div>
+        <div class="row">
+          <button class="btn neumorphic-round" type="button" aria-label="Half a degree cooler">−</button>
+          <button class="btn neumorphic-round" type="button" aria-label="Half a degree warmer">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Devices</h2>
+    <p>Raised devices are on. The pressed one is off.</p>
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Floor lamp</h3>
+          <p class="card-text">On, 40 percent, warm white. Dims with the evening scene.</p>
+          <div class="card-actions"><span class="badge badge-active">On</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Radiator valve</h3>
+          <p class="card-text">Open 35 percent. Follows the target on the dial.</p>
+          <div class="card-actions"><span class="badge badge-active">Heating</span><span class="badge">Battery 81%</span></div>
+        </div>
+      </article>
+      <article class="card neumorphic-pressed">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Television</h3>
+          <p class="card-text">Off since 16:20. Turns on with the movie scene.</p>
+          <div class="card-actions"><span class="badge">Off</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-1.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Blinds</h3>
+          <p class="card-text">Down since sunset. Up at 08:00 at the weekend, 07:10 otherwise.</p>
+          <div class="card-actions"><button class="btn btn-sm" type="button">Raise</button></div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-7.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Motion sensor</h3>
+          <p class="card-text">Last movement 18:39. Turns the lamps on after dark when the room is empty for an hour.</p>
+          <div class="card-actions"><span class="badge badge-done">Reachable</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <section class="section">
     <h2>Comfort</h2>
-    <div class="neumorphic-well">
-      <form class="form-grid" action="#" method="get">
+    <form class="neumorphic-well" action="#" method="get">
+      <div class="form-grid">
         <fieldset>
-          <legend>Right now</legend>
+          <legend>Lamps and colour</legend>
           <div class="field">
-            <label for="r-temp">Target temperature (21°)</label>
-            <input id="r-temp" name="temp" type="range" min="15" max="26" value="21">
-            <p class="hint">The heat pump holds within half a degree.</p>
-          </div>
-          <div class="field">
-            <label for="r-bright">Lamp brightness (40%)</label>
+            <label for="r-bright">Lamp brightness</label>
             <input id="r-bright" name="brightness" type="range" min="0" max="100" value="40">
+            <p class="hint">40 percent. Both lamps move together.</p>
           </div>
           <div class="field">
             <label for="r-colour">Lamp colour</label>
             <input id="r-colour" name="colour" type="color" value="#d9a86c">
           </div>
           <div class="field">
-            <label for="r-scene">Scene</label>
+            <label for="r-scene">Scene at sunset</label>
             <select id="r-scene" name="scene">
               <option value="">None</option>
               <option value="evening" selected>Evening</option>
@@ -62,47 +133,21 @@
               <option value="reading">Reading</option>
             </select>
           </div>
+          <div class="field">
+            <span class="field-label">Blinds follow</span>
+            <div class="neumorphic-segment" role="radiogroup" aria-label="Blinds follow">
+              <input type="radio" id="r-sun" name="blinds" checked><label for="r-sun">The sun</label>
+              <input type="radio" id="r-clock" name="blinds"><label for="r-clock">The clock</label>
+              <input type="radio" id="r-manual" name="blinds"><label for="r-manual">Me</label>
+            </div>
+          </div>
         </fieldset>
         <div class="form-actions">
           <button class="btn btn-primary" type="submit">Apply</button>
           <button class="btn" type="reset">Undo</button>
         </div>
-      </form>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Devices</h2>
-    <div class="stack">
-      <article class="card card-horizontal">
-        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="" width="800" height="600"></figure>
-        <div class="card-body">
-          <h3 class="card-title">Floor lamp</h3>
-          <p class="card-text">On, 40%, warm white. Dims with the evening scene.</p>
-          <label class="switch"><input type="checkbox" role="switch" checked><span>On</span></label>
-        </div>
-      </article>
-      <article class="card card-horizontal card-media-end">
-        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
-        <div class="card-body">
-          <h3 class="card-title">Television</h3>
-          <p class="card-text">Off since 16:20. Turns on with the movie scene.</p>
-          <label class="switch"><input type="checkbox" role="switch"><span>On</span></label>
-        </div>
-      </article>
-      <article class="card card-horizontal">
-        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
-        <div class="card-body">
-          <h3 class="card-title">Radiator valve</h3>
-          <p class="card-text">Open 35%. Follows the target above.</p>
-          <div class="card-actions"><span class="badge badge-active">Heating</span><span class="badge">Battery 81%</span></div>
-        </div>
-      </article>
-    </div>
-    <div class="row">
-      <button class="btn btn-primary" type="button" onclick="document.getElementById('add-device').showModal()">Add a device</button>
-      <span class="badge badge-done">All reachable</span>
-    </div>
+      </div>
+    </form>
   </section>
 
   <section class="section">
@@ -111,10 +156,10 @@
       <table class="data-table">
         <thead><tr><th>Time</th><th>What</th><th>Days</th><th>State</th></tr></thead>
         <tbody>
-          <tr><td>06:30</td><td>Heating to 21°</td><td>Mon – Fri</td><td><span class="badge badge-done">Done today</span></td></tr>
-          <tr><td>Sunset</td><td>Evening scene</td><td>Every day</td><td><span class="badge badge-active">Next</span></td></tr>
-          <tr><td>23:00</td><td>All lights off</td><td>Every day</td><td><span class="badge">Scheduled</span></td></tr>
-          <tr><td>08:00</td><td>Blinds up</td><td>Sat – Sun</td><td><span class="badge">Scheduled</span></td></tr>
+          <tr><td>06:30</td><td>Heating to 21°</td><td>Monday to Friday</td><td><span class="badge badge-done">Done today</span></td></tr>
+          <tr><td>Sunset</td><td>Evening scene</td><td>Every day</td><td><span class="badge badge-done">Done today</span></td></tr>
+          <tr><td>23:00</td><td>All lights off</td><td>Every day</td><td><span class="badge badge-active">Next</span></td></tr>
+          <tr><td>08:00</td><td>Blinds up</td><td>Saturday and Sunday</td><td><span class="badge">Scheduled</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -127,11 +172,11 @@
     <div class="accordion-group">
       <details class="accordion" name="history" open>
         <summary>Today</summary>
-        <div class="accordion-body"><p>06:30 heating on · 07:10 blinds up · 16:20 TV off · 18:05 lamps on (evening scene).</p></div>
+        <div class="accordion-body"><p>06:30 heating on. 07:10 blinds up. 16:20 television off. 18:05 lamps on, evening scene.</p></div>
       </details>
       <details class="accordion" name="history">
         <summary>Yesterday</summary>
-        <div class="accordion-body"><p>Same as today, plus the movie scene at 20:15.</p></div>
+        <div class="accordion-body"><p>The same, plus the movie scene at 20:15 and the television off again at 22:40.</p></div>
       </details>
     </div>
   </section>
@@ -165,7 +210,7 @@
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Hearth</h2>
+      <h2>Larch Road</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="room.html">Living room</a></li>
@@ -173,9 +218,9 @@
       </ul>
     </section>
     <section>
-      <h2>Status</h2>
+      <h2>Hub</h2>
       <ul>
-        <li>Hub online since 3 May</li>
+        <li>Online since 3 May</li>
         <li>14 devices, 1 low battery</li>
         <li><a href="settings.html">Diagnostics</a></li>
       </ul>

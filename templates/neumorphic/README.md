@@ -7,10 +7,10 @@ night. Part of [retemplate](../../README.md).
 
 ## Take and use
 
-Copy this folder. Keep the **install set** — `css/`, `js/theme.js`,
-`assets/`, this file — and delete the **showcase** — `index.html`,
+Copy this folder. Keep the **install set** (`css/`, `js/theme.js`,
+`assets/`, this file) and delete the **showcase**: `index.html`,
 `blogpost.html`, `forms.html`, `sidebar.html`, `docs/`, `example/`,
-`js/copy.js`. Or keep `example/`, a complete three-page smart-home site, and
+`js/copy.js`. Or keep `example/`, a three-page smart-home dashboard, and
 start from it.
 
 Put this at the top of every page (adjust the paths for sub-folders):
@@ -36,7 +36,7 @@ Put this at the top of every page (adjust the paths for sub-folders):
 Then write HTML with the classes in `docs/components/` (open
 `docs/index.html` in a browser for the guided version).
 
-- **Browsers:** Baseline 2024 — `light-dark()`, `:has()`, popovers,
+- **Browsers:** Baseline 2024: `light-dark()`, `:has()`, popovers,
   `<details name>`, `color-mix()`. No polyfills.
 - **Fonts:** [Nunito](https://fonts.google.com/specimen/Nunito) (SIL Open
   Font License) from Google Fonts, for display and body. Remove the three
@@ -50,9 +50,17 @@ Then write HTML with the classes in `docs/components/` (open
 
 ## Flare
 
-`.neumorphic-well` (a sunken panel) and `.neumorphic-knob` (a decorative
-raised dial, inside `<div class="neumorphic-flare">`). See
-`docs/components/flare.html`. Everything else is the shared contract markup.
+Neumorphic's additions are controls. `.neumorphic-panel` is a raised board
+(dial first, controls second) that opens the overview and every example
+page; `.neumorphic-dial` reads one value with a pointer set by `--angle`;
+`.neumorphic-segment` is a radio group in a sunken track; `.neumorphic-well`
+is a sunken panel for a form or fieldset. Four variants of contract
+components: `.card.neumorphic-tile` (a card that reads one number),
+`.card.neumorphic-pressed` (a card sunk into the surface, for what is off),
+`.btn.neumorphic-round` (one glyph in a disc) and `.banner.neumorphic-inset`
+(a sunken banner with no edge). The panel sits inside
+`<div class="neumorphic-flare">`; the rest are additive classes on contract
+markup. See `docs/components/flare.html`.
 
 ## Swapping templates
 
@@ -66,7 +74,7 @@ Neumorphic to another template, replace `css/` and `assets/`, change
 The palette block below is a [retoken](https://kieranwood.ca/retoken/theme/)
 theme. Paste it into a retoken site's `theme.css` after the existing palettes
 and select it with `<html data-theme="neumorphic">`. Colours carry over; the
-shadows that make it neumorphic do not — they live in this template's own
+shadows that make it neumorphic do not; they live in this template's own
 tokens.
 
 ```css

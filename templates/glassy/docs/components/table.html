@@ -90,11 +90,38 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Price table</h3>
+<p>Glassy only. A comparison on deep glass: the first column is the label, the others are centred, the head is small tracked capitals, and a row marked <code>glassy-total</code> sets its figures light and large with a note under each in <code>.small</code>. The services page of the studio site is the full version.</p>
+<figure class="example" data-snippet="table-price">
+<div class="table-wrap glassy-price">
+  <table class="data-table">
+    <thead><tr><th>Included</th><th>Websites</th><th>Identity</th><th>Retainer</th></tr></thead>
+    <tbody>
+      <tr><td>Fixed price</td><td>Yes</td><td>Yes</td><td>Monthly</td></tr>
+      <tr><td>Fixes after launch</td><td>One month</td><td>One month</td><td>Ongoing</td></tr>
+      <tr class="glassy-total"><td>From</td><td>£6,000 <span class="small">four to eight weeks</span></td><td>£4,000 <span class="small">three weeks</span></td><td>£1,800 <span class="small">a month</span></td></tr>
+    </tbody>
+  </table>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="table-price">&lt;div class="table-wrap glassy-price"&gt;
+  &lt;table class="data-table"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Included&lt;/th&gt;&lt;th&gt;Websites&lt;/th&gt;&lt;th&gt;Identity&lt;/th&gt;&lt;th&gt;Retainer&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Fixed price&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;td&gt;Monthly&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Fixes after launch&lt;/td&gt;&lt;td&gt;One month&lt;/td&gt;&lt;td&gt;One month&lt;/td&gt;&lt;td&gt;Ongoing&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr class="glassy-total"&gt;&lt;td&gt;From&lt;/td&gt;&lt;td&gt;£6,000 &lt;span class="small"&gt;four to eight weeks&lt;/span&gt;&lt;/td&gt;&lt;td&gt;£4,000 &lt;span class="small"&gt;three weeks&lt;/span&gt;&lt;/td&gt;&lt;td&gt;£1,800 &lt;span class="small"&gt;a month&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == table == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.table-wrap</code></td><td>Border, radius, horizontal scrolling</td></tr>
       <tr><td><code>.data-table</code></td><td>Small type, hover rows, no last border</td></tr>
+      <tr><td><code>.glassy-price</code></td><td>Glassy only, on the wrapper: deep glass, centred columns, a total row (rules under <code>/* == flare == */</code>)</td></tr>
+      <tr><td><code>.glassy-total</code></td><td>Glassy only, on a row: the figures set light and large</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

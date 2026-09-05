@@ -189,10 +189,9 @@
 <p>A styled template may add tokens of its own, prefixed with its name. Neon's are the glow colours and the glows built from them; they live in <code>theme.css</code> so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
 <tr><td><code>--neon-rose</code>, <code>--neon-cyan</code></td><td>the two tubes at half alpha</td><td>Every glow shadow</td></tr>
-<tr><td><code>--neon-glow</code>, <code>--neon-glow-cyan</code></td><td><code>0 30px 70px -25px …</code></td><td>Hero image, feature card, dialogs, <code>.neon-glow</code></td></tr>
-<tr><td><code>--neon-text-glow</code>, <code>--neon-text-glow-cyan</code></td><td><code>0 0 22px …</code></td><td><code>.neon-text</code>, open accordion markers</td></tr>
+<tr><td><code>--neon-glow</code>, <code>--neon-glow-cyan</code></td><td><code>0 30px 70px -25px …</code></td><td>Lit panels, the feature card, dialogs, <code>.neon-glow</code></td></tr>
+<tr><td><code>--neon-text-glow</code>, <code>--neon-text-glow-cyan</code></td><td><code>0 0 22px …</code></td><td>The sign (<code>.neon-text</code>), lit panel titles, open accordion markers</td></tr>
 <tr><td><code>--neon-line</code>, <code>--neon-line-strong</code></td><td>white at 12–14 % / 20–24 %</td><td>Hairline borders on cards, bars, inputs</td></tr>
-<tr><td><code>--neon-haze-rose</code>, <code>--neon-haze-cyan</code></td><td>the tubes at low alpha</td><td>The radial haze on <code>body</code> and the <code>.neon-haze</code> flare</td></tr>
 </tbody></table></div>
 <p>Both halves are dark, so this template also uses the contract's UA-chrome exception: <code>select</code>, <code>input</code>, <code>textarea</code>, <code>dialog</code> and open popovers carry <code>color-scheme: dark</code>, and the scrollbar takes the page colours. Inside those elements <code>light-dark()</code> resolves to the dark half in either scheme — form fields are always the black wells you see on the <a href="../forms.html">forms page</a>.</p>
 <h2>Light and dark</h2>

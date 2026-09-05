@@ -110,6 +110,28 @@
     &lt;a class="btn btn-primary" href="#"&gt;Call to action&lt;/a&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>Overlapped</h3>
+<p>Glassy only. Add <code>glassy-overlap</code> and the figure stretches across two thirds of the block while the text sits on a deep glass panel floating over its right half; with <code>fifty-fifty-reverse</code> as well, the picture goes right and the panel left. Below 48rem the panel slides up over the bottom of the picture instead.</p>
+<figure class="example" data-snippet="fifty-fifty-overlap">
+<section class="fifty-fifty glassy-overlap">
+  <figure><img src="../../assets/fifty.svg" alt="" width="900" height="600"></figure>
+  <div class="fifty-fifty-body">
+    <p class="kicker">The studio</p>
+    <h2>Small on purpose</h2>
+    <p>Four of us, twelve years, no account managers.</p>
+    <a class="btn btn-primary" href="#">See if we fit</a>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="fifty-fifty-overlap">&lt;section class="fifty-fifty glassy-overlap"&gt;
+  &lt;figure&gt;&lt;img src="../../assets/fifty.svg" alt="" width="900" height="600"&gt;&lt;/figure&gt;
+  &lt;div class="fifty-fifty-body"&gt;
+    &lt;p class="kicker"&gt;The studio&lt;/p&gt;
+    &lt;h2&gt;Small on purpose&lt;/h2&gt;
+    &lt;p&gt;Four of us, twelve years, no account managers.&lt;/p&gt;
+    &lt;a class="btn btn-primary" href="#"&gt;See if we fit&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == fifty-fifty == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -117,6 +139,7 @@
       <tr><td><code>figure</code></td><td>The image half; the image covers it</td></tr>
       <tr><td><code>.fifty-fifty-body</code></td><td>The text half, padded</td></tr>
       <tr><td><code>.fifty-fifty-reverse</code></td><td>Moves the image to the right on wide screens</td></tr>
+      <tr><td><code>.glassy-overlap</code></td><td>Glassy only: the picture behind, the text panel floating over it (rules under <code>/* == flare == */</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

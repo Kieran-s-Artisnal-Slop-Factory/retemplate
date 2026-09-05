@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Get started — Neon</title>
+  <title>Get started: Neon</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -67,38 +67,38 @@
   <main class="page docs">
 <header class="page-header">
   <p class="kicker">Get started</p>
-  <h1>Take the folder, keep four things</h1>
-  <p>Neon is a complete template: two stylesheets, one small script, a folder of art and two fonts by link. There is nothing to install and nothing to build.</p>
+  <h1>Take the folder. Keep four things.</h1>
+  <p>Neon is complete as it stands: two stylesheets, one small script, a folder of art and two fonts by link. Nothing to install, nothing to build.</p>
 </header>
 <h2>1. Copy the folder</h2>
-<p>Copy <code>templates/neon/</code> into your project. Inside it, two sets of files:</p>
+<p>Copy <code>templates/neon/</code> into your project. Inside it, two sets of files.</p>
 <div class="grid-2">
-  <article class="card">
+  <article class="card neon-panel neon-panel-lit">
     <div class="card-body">
       <h3 class="card-title">Keep: the install set</h3>
       <ul>
-        <li><code>css/theme.css</code> — the tokens, the palette and the glow colours</li>
-        <li><code>css/global.css</code> — every component and layout</li>
-        <li><code>js/theme.js</code> — the light/dark toggle</li>
-        <li><code>assets/</code> — favicon and placeholder art (swap for your own)</li>
+        <li><code>css/theme.css</code>: tokens, the palette, the glow colours</li>
+        <li><code>css/global.css</code>: every component and layout</li>
+        <li><code>js/theme.js</code>: the scheme toggle</li>
+        <li><code>assets/</code>: favicon and placeholder art, yours to replace</li>
         <li><code>README.md</code></li>
       </ul>
     </div>
   </article>
-  <article class="card">
+  <article class="card neon-panel">
     <div class="card-body">
       <h3 class="card-title">Delete: the showcase</h3>
       <ul>
         <li><code>index.html</code>, <code>blogpost.html</code>, <code>forms.html</code>, <code>sidebar.html</code></li>
-        <li><code>docs/</code> — these pages</li>
-        <li><code>example/</code> — a three-page SaaS demo (home, pricing, changelog), unless you want to start from it</li>
-        <li><code>js/copy.js</code> — only the docs use it</li>
+        <li><code>docs/</code>: these pages</li>
+        <li><code>example/</code>: a three-page SaaS status site (status, pricing, changelog), unless you start from it</li>
+        <li><code>js/copy.js</code>: only the docs use it</li>
       </ul>
     </div>
   </article>
 </div>
 <h2>2. Put this at the top of every page</h2>
-<p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script must stay a plain, synchronous script above the stylesheets: that is what applies the stored scheme before the first paint. The three font lines come last so the page paints in the fallback stack while they load.</p>
+<p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script stays a plain, synchronous script above the stylesheets; that is what applies the stored scheme before first paint. The three font lines come last so the page paints in the fallback stack while they load.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code>&lt;!doctype html&gt;
 &lt;html lang="en" data-theme="neon"&gt;
 &lt;head&gt;
@@ -119,20 +119,22 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
 <h2>3. Write HTML</h2>
-<p>Use the classes documented under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a comfortable width. The <a href="../example/index.html">example site</a> is a small real site built this way, and <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
+<p>Use the classes under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a readable width. The <a href="../example/index.html">example site</a> is a small real site built this way; <a href="../blogpost.html">the blog post</a> is a rendered article.</p>
+<h2>4. Light what matters</h2>
+<p>Neon's rule: glow is state. A lit tube is on, a hairline is off. The classes that carry it are on the <a href="components/flare.html">flare page</a>: <code>.neon-text</code> turns a headline into the sign, <code>.neon-panel-lit</code> lights one card in a row, <code>.badge.neon-light</code> is a lamp, <code>.neon-status</code> makes a table a board. Light one thing per view.</p>
 <h2>Starting from the example instead</h2>
-<p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they currently point one folder up). Everything the example uses is documented here.</p>
-<h2>The theme toggle</h2>
-<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto → light → dark → auto and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme actually in effect.</p>
+<p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they point one folder up). Everything the example uses is documented here.</p>
+<h2>The scheme toggle</h2>
+<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto, light, dark, auto, and stores the choice under the key <code>retoken-scheme</code>, the key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree on one origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme in effect.</p>
 <h2>Browsers</h2>
-<p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups, <code>color-mix()</code> and <code>@property</code> (for the feature card's animated border), with no polyfills. Where <code>@property</code> is missing the border still lights; it just does not turn.</p>
-<h2>Fonts</h2>
-<p>Two: <strong>Space Grotesk</strong> for headings, the brand, kickers and table heads, and <strong>Inter</strong> for everything else. They come from Google Fonts through the three <code>&lt;link&gt;</code> lines in the head block; <code>theme.css</code> names them with a system fallback, so a page reads fine before they arrive or if they never do.</p>
-<p>To self-host instead, download both families (they are OFL), put the <code>woff2</code> files in a <code>fonts/</code> folder beside <code>css/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> pointing at <code>../fonts/…</code>, and drop the three lines. The README repeats these steps.</p>
+<p>Anything current as of 2024: <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups, <code>color-mix()</code> and <code>@property</code> for the feature card's turning border. No polyfills. Where <code>@property</code> is missing the border still lights; it does not turn.</p>
+<h2 id="fonts">Fonts</h2>
+<p>Two. <strong>Space Grotesk</strong> for the sign, headings, the brand, labels and table heads; <strong>Inter</strong> for everything else. They come from Google Fonts through the three <code>&lt;link&gt;</code> lines in the head block. <code>theme.css</code> names them with a system fallback, so a page reads before they arrive or if they never do.</p>
+<p>To self-host, download both families (they are OFL), put the <code>woff2</code> files in a <code>fonts/</code> folder beside <code>css/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> pointing at <code>../fonts/…</code>, and drop the three lines. The README repeats these steps.</p>
 <h2>Dark, and less dark</h2>
-<p>Neon has no white. The dark half is zinc black; the light half lifts every surface to a warm grey and keeps the text off-white, so links move to a lighter rose to stay above 4.5:1. Because both halves are dark, <code>global.css</code> pins <code>select</code>, <code>input</code>, <code>textarea</code>, <code>dialog</code> and open popovers to <code>color-scheme: dark</code> and sets the scrollbar colours: the browser never paints a white menu, picker or rail. Inside those elements the palette resolves to its dark half in either scheme, so a form field is always a black well — see the <a href="../forms.html">forms page</a> with the toggle set to light.</p>
+<p>Neon has no white. The dark half is zinc black; the light half lifts every surface to a warm grey and keeps the text off-white, so links move to a lighter rose to stay above 4.5:1. Because both halves are dark, <code>global.css</code> pins <code>select</code>, <code>input</code>, <code>textarea</code>, <code>dialog</code> and open popovers to <code>color-scheme: dark</code> and sets the scrollbar colours: the browser never paints a white menu, picker or rail. Inside those elements the palette resolves to its dark half in either scheme, so a form field is always a black well. See the <a href="../forms.html">forms page</a> with the toggle set to light.</p>
 <h2>Two lines to delete</h2>
-<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar — a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
+<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar: a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
 <p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>
 <h2>Using the theme in retoken</h2>
 <p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on.</p>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Flare — Glassy</title>
+  <title>Flare, Glassy</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -65,10 +65,10 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Glassy adds the two things that make glassmorphism read as glass: colour behind the panes, and something moving behind them.</p>
+  <p>Flare is everything a template adds beyond the contract. Glassy adds the colour behind the glass (the orbs), the strip the hero stands over (the waves), the sheet hero itself, and a way of composing a page by depth: three tiers any sheet can take, a float that pulls a block up over the one before it, a pane for grouping small parts, and a stack for a few panels in order. The variants of contract components (depth on cards, the ghost button, the frost banner, the price table, the overlapped fifty-fifty, the floating navbar) are documented on those components' pages and listed at the bottom of this one.</p>
 </header>
 <h2 id="preview">Orbs</h2>
-<p>Two large blurred discs, fixed behind the page, drifting slowly. Put the block right after <code>&lt;body&gt;</code>; it is <code>aria-hidden</code> and never intercepts a click. (The preview below is inert because it sits inside the page rather than behind it.)</p>
+<p>Two large blurred discs, fixed behind the page, drifting slowly. Put the block right after <code>&lt;body&gt;</code>; it is <code>aria-hidden</code> and never intercepts a click. Without them the glass has nothing to show through it, so every page in the showcase carries them. (The preview below is inert because it sits inside the page rather than behind it.)</p>
 <figure class="example" data-snippet="glassy-orbs">
 <div class="glassy-flare glassy-orbs" aria-hidden="true">
   <div class="glassy-orb"></div>
@@ -79,8 +79,34 @@
   &lt;div class="glassy-orb"&gt;&lt;/div&gt;
   &lt;div class="glassy-orb"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
-<h2 id="variants">Waves</h2>
-<p>One path, four <code>&lt;use&gt;</code> copies, four different durations. Because the path has an <code>id</code>, use the block once per page.</p>
+<h2 id="variants">The sheet hero</h2>
+<p>Add <code>glassy-sheet</code> to <code>.hero</code> and it becomes one deep pane of glass, text only, at most 44rem wide and centred. Put a wave strip directly after it and the strip is pulled up under the sheet's lower edge, so the sheet stands over the water. The overview and the studio home both open this way; the sheet is the template's signature.</p>
+<figure class="example" data-snippet="glassy-sheet">
+<section class="hero glassy-sheet">
+  <div class="stack">
+    <p class="kicker">A design studio of four, Kendal</p>
+    <h1>Websites you can read, from people you can ring.</h1>
+    <p>Fixed prices, plain HTML, and the same two people from the first call to the last deploy.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="#">Start a project</a>
+      <a class="btn btn-lg glassy-ghost" href="#">Services and prices</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-sheet">&lt;section class="hero glassy-sheet"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A design studio of four, Kendal&lt;/p&gt;
+    &lt;h1&gt;Websites you can read, from people you can ring.&lt;/h1&gt;
+    &lt;p&gt;Fixed prices, plain HTML, and the same two people from the first call to the last deploy.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="#"&gt;Start a project&lt;/a&gt;
+      &lt;a class="btn btn-lg glassy-ghost" href="#"&gt;Services and prices&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>Waves</h3>
+<p>One path, four <code>&lt;use&gt;</code> copies, four different durations. Because the path has an <code>id</code>, use the block once per page, and use it after a sheet hero; on its own it is a strip of moving water with nothing standing on it.</p>
 <figure class="example" data-snippet="glassy-waves">
 <div class="glassy-flare glassy-waves" aria-hidden="true">
   <svg viewBox="0 24 150 28" preserveAspectRatio="none">
@@ -105,33 +131,131 @@
     &lt;/g&gt;
   &lt;/svg&gt;
 &lt;/div&gt;</code></pre></div>
-<h3>A glass panel</h3>
-<p>The recipe every component uses, as a free-standing block.</p>
-<figure class="example" data-snippet="glassy-panel">
-<div class="glassy-panel">
-  <p class="kicker">A glass panel</p>
-  <p>Any block of content can sit on a sheet of glass. This is the same recipe every card, banner and table in the template uses.</p>
+<h3>Three depths</h3>
+<p><code>glassy-shallow</code> and <code>glassy-deep</code> move any glass component a step back or forward from the default sheet. They change only the fill, the edge, the blur and the shadow, so they work on cards, panes, banners, fifty-fifties, tables, fieldsets and the author card alike. Use depth to say what to read first; one deep thing per screen is plenty.</p>
+<figure class="example" data-snippet="glassy-depths">
+<div class="grid-3">
+  <article class="card glassy-shallow">
+    <div class="card-body"><h3 class="card-title">Shallow</h3><p class="card-text">Sits back. A third of the light, a 10px blur, no shadow.</p></div>
+  </article>
+  <article class="card">
+    <div class="card-body"><h3 class="card-title">Sheet</h3><p class="card-text">The default every component starts from.</p></div>
+  </article>
+  <article class="card glassy-deep">
+    <div class="card-body"><h3 class="card-title">Deep</h3><p class="card-text">Lifts off. Nearly opaque, a 40px blur, a shadow.</p></div>
+  </article>
 </div>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-panel">&lt;div class="glassy-panel"&gt;
-  &lt;p class="kicker"&gt;A glass panel&lt;/p&gt;
-  &lt;p&gt;Any block of content can sit on a sheet of glass. This is the same recipe every card, banner and table in the template uses.&lt;/p&gt;
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-depths">&lt;div class="grid-3"&gt;
+  &lt;article class="card glassy-shallow"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Shallow&lt;/h3&gt;&lt;p class="card-text"&gt;Sits back. A third of the light, a 10px blur, no shadow.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Sheet&lt;/h3&gt;&lt;p class="card-text"&gt;The default every component starts from.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card glassy-deep"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Deep&lt;/h3&gt;&lt;p class="card-text"&gt;Lifts off. Nearly opaque, a 40px blur, a shadow.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Pane</h3>
+<p>A section-sized sheet for grouping smaller glass parts. Inside it, buttons, badges and banners sit on a bigger sheet rather than on the raw gradient. Headings inside a pane are a step smaller than section headings.</p>
+<figure class="example" data-snippet="glassy-pane">
+<div class="glassy-pane">
+  <h2>Opening hours</h2>
+  <p>Nine to five, Monday to Friday. Tuesdays and Thursdays are best for visits.</p>
+  <div class="row">
+    <span class="badge badge-active">Open today</span>
+    <button class="btn btn-sm glassy-ghost" type="button">Ring the studio</button>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-pane">&lt;div class="glassy-pane"&gt;
+  &lt;h2&gt;Opening hours&lt;/h2&gt;
+  &lt;p&gt;Nine to five, Monday to Friday. Tuesdays and Thursdays are best for visits.&lt;/p&gt;
+  &lt;div class="row"&gt;
+    &lt;span class="badge badge-active"&gt;Open today&lt;/span&gt;
+    &lt;button class="btn btn-sm glassy-ghost" type="button"&gt;Ring the studio&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Float</h3>
+<p><code>glassy-float</code> pulls a block up over the one before it by <code>--glassy-overlap</code> (3rem) and draws it on top. The overview uses it to hang three cards off the bottom of the hero; the studio home does the same. Put it on the grid, not on the cards, so the row stays level.</p>
+<figure class="example" data-snippet="glassy-float">
+<div class="glassy-pane glassy-deep">
+  <p class="kicker">The block above</p>
+  <p>Anything with a lower edge for the next block to overlap.</p>
+</div>
+<div class="grid-2 glassy-float">
+  <article class="card">
+    <div class="card-body"><h3 class="card-title">Pulled up</h3><p class="card-text">By one <code>--glassy-overlap</code>, 3rem, and drawn on top.</p></div>
+  </article>
+  <article class="card">
+    <div class="card-body"><h3 class="card-title">And its neighbour</h3><p class="card-text">The whole grid floats, so the row stays level.</p></div>
+  </article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-float">&lt;div class="glassy-pane glassy-deep"&gt;
+  &lt;p class="kicker"&gt;The block above&lt;/p&gt;
+  &lt;p&gt;Anything with a lower edge for the next block to overlap.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="grid-2 glassy-float"&gt;
+  &lt;article class="card"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Pulled up&lt;/h3&gt;&lt;p class="card-text"&gt;By one &lt;code&gt;--glassy-overlap&lt;/code&gt;, 3rem, and drawn on top.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;And its neighbour&lt;/h3&gt;&lt;p class="card-text"&gt;The whole grid floats, so the row stays level.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Stack</h3>
+<p>A few panels that belong in an order, each stepped in and laid over the one before, later panels on top. The services page stacks its three services this way, shallowest first. Below 40rem the stack unstacks into an ordinary column.</p>
+<figure class="example" data-snippet="glassy-stack">
+<div class="glassy-stack">
+  <article class="card glassy-shallow">
+    <div class="card-body"><h3 class="card-title">Websites</h3><p class="card-text">Design and build, four to eight weeks.</p></div>
+  </article>
+  <article class="card">
+    <div class="card-body"><h3 class="card-title">Identity</h3><p class="card-text">A mark, a palette, a type system, three weeks.</p></div>
+  </article>
+  <article class="card glassy-deep">
+    <div class="card-body"><h3 class="card-title">Retainers</h3><p class="card-text">A day a week, cancel monthly.</p></div>
+  </article>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-stack">&lt;div class="glassy-stack"&gt;
+  &lt;article class="card glassy-shallow"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Websites&lt;/h3&gt;&lt;p class="card-text"&gt;Design and build, four to eight weeks.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Identity&lt;/h3&gt;&lt;p class="card-text"&gt;A mark, a palette, a type system, three weeks.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="card glassy-deep"&gt;
+    &lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Retainers&lt;/h3&gt;&lt;p class="card-text"&gt;A day a week, cancel monthly.&lt;/p&gt;&lt;/div&gt;
+  &lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
-<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>. The last six rows are variants of contract components; their rules are in the same section and their examples on the pages named.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
-      <tr><td><code>.glassy-orbs</code></td><td>Fixed, full-viewport, behind everything</td></tr>
-      <tr><td><code>.glassy-orb</code></td><td>A blurred disc; the two children take the two orb tokens</td></tr>
-      <tr><td><code>.glassy-waves</code></td><td>A clipped strip holding the SVG</td></tr>
-      <tr><td><code>.glassy-wave-set use</code></td><td>One wave layer; delays and durations differ per child</td></tr>
-      <tr><td><code>.glassy-panel</code></td><td>Glass background, bright edge, blur, large radius</td></tr>
-      <tr><td><code>.glassy-flare</code></td><td>The wrapper for flare that is markup</td></tr>
+      <tr><td><code>.glassy-flare</code></td><td>The wrapper for flare that is only markup (orbs, waves); strip it when swapping templates</td></tr>
+      <tr><td><code>.glassy-orbs</code>, <code>.glassy-orb</code></td><td>Fixed, full-viewport, behind everything; the two children take the two orb tokens</td></tr>
+      <tr><td><code>.glassy-waves</code>, <code>.glassy-wave-set use</code></td><td>A clipped strip holding the SVG; one wave layer per <code>use</code></td></tr>
+      <tr><td><code>.hero.glassy-sheet</code></td><td>The hero as one deep sheet; pulls a following wave strip up under itself</td></tr>
+      <tr><td><code>.glassy-shallow</code>, <code>.glassy-deep</code></td><td>Depth tiers for any glass component</td></tr>
+      <tr><td><code>.glassy-float</code></td><td>Pull a block up over the previous one by <code>--glassy-overlap</code></td></tr>
+      <tr><td><code>.glassy-pane</code></td><td>A section-sized sheet for grouping small parts</td></tr>
+      <tr><td><code>.glassy-stack</code></td><td>Panels stepped in and laid over one another, in order</td></tr>
+      <tr><td><code>.glassy-panel</code></td><td>The older free-standing panel; the same recipe as a pane</td></tr>
+      <tr><td><code>.card.glassy-shallow</code>, <code>.card.glassy-deep</code></td><td>Depth on a card (<a href="cards.html">cards</a>)</td></tr>
+      <tr><td><code>.btn.glassy-ghost</code></td><td>The accent as an outline on light glass (<a href="buttons.html">buttons</a>)</td></tr>
+      <tr><td><code>.banner.glassy-frost</code></td><td>A toneless strip of deep glass with the icon in a disc (<a href="banner.html">banner</a>)</td></tr>
+      <tr><td><code>.table-wrap.glassy-price</code>, <code>tr.glassy-total</code></td><td>A comparison table with the figures set light and large (<a href="table.html">table</a>)</td></tr>
+      <tr><td><code>.fifty-fifty.glassy-overlap</code></td><td>The picture fills the block and the text panel floats over it (<a href="fifty-fifty.html">fifty-fifty</a>)</td></tr>
+      <tr><td><code>.navbar.glassy-floating</code></td><td>The bar as a detached sheet inset from the edges (<a href="navbar.html">navbar</a>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>The gradient, the glass, the edge, the blur radius, the wave colour and the orb colours are all tokens in <code>theme.css</code> (<code>--glassy-*</code>). Nothing in <code>global.css</code> names a colour.</li>
-<li>Both animations are switched off by <code>prefers-reduced-motion: reduce</code>.</li>
-<li><code>backdrop-filter</code> is what makes the glass frosted. Every panel pays for one; on very long pages with hundreds of cards, lower <code>--glassy-blur</code>.</li>
+<li>The gradient, the three glass fills and edges, the three blur radii, the wave colour, the orb colours and the overlap are all tokens in <code>theme.css</code> (<code>--glassy-*</code>). Nothing in <code>global.css</code> names a colour.</li>
+<li>The only continuous motion is the orbs' drift and the waves' parallax. Both stop under <code>prefers-reduced-motion: reduce</code>; so does the feature card's tilt, which then only brightens.</li>
+<li><code>backdrop-filter</code> is what makes the glass frosted. Every sheet pays for one; on a page with hundreds of cards, lower <code>--glassy-blur</code> or mark them <code>glassy-shallow</code>.</li>
+<li>The depth, float, pane and stack classes need no wrapper: another template ignores them and shows plain cards in a plain column, which is the intended fallback. Only the orbs and the waves are markup that should be stripped, and they sit in <code>.glassy-flare</code>.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
   </main>

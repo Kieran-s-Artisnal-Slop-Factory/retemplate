@@ -72,7 +72,7 @@
 <iframe class="docs-iframe" src="../../index.html" title="The overview page"></iframe>
 <h2 id="markup">Markup</h2>
 <p>Taken from <code>index.html</code>. The link to the current page carries <code>aria-current="page"</code>.</p>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="navbar" data-source="../../index.html" data-select="header.navbar">&lt;header class="navbar"&gt;
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="navbar" data-source="../../index.html" data-select="header.navbar">&lt;header class="navbar glassy-floating"&gt;
   &lt;a class="brand" href="index.html"&gt;Glassy&lt;/a&gt;
   &lt;button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu"&gt;☰&lt;/button&gt;
   &lt;nav id="site-nav" popover&gt;
@@ -90,6 +90,7 @@
 <p>The rules live in <code>css/global.css</code> under <code>/* == navbar == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.navbar</code></td><td>Sticky, translucent, blurred, with a bottom border</td></tr>
+      <tr><td><code>.glassy-floating</code></td><td>Glassy only: the bar as a detached sheet inset from the edges, with a rounded popover to match (rules under <code>/* == flare == */</code>)</td></tr>
       <tr><td><code>.brand</code></td><td>The site name; pushes everything else right</td></tr>
       <tr><td><code>nav</code></td><td>The links; a popover below 48rem, inline above</td></tr>
       <tr><td><code>.nav-toggle</code></td><td>The menu button; hidden above 48rem</td></tr>
@@ -101,6 +102,7 @@
 <li>Below 48rem the <code>&lt;nav&gt;</code> has the <code>popover</code> attribute and the button opens it with <code>popovertarget</code>. <kbd>Esc</kbd> and clicking outside close it; the backdrop is the browser's.</li>
 <li>Above 48rem the same element is laid out inline; the attribute is simply ignored by the stylesheet.</li>
 <li>The three navbar pages carry the same link set. Example pages have their own.</li>
+<li>Every showcase page adds <code>glassy-floating</code>. Leave it off for a bar that runs edge to edge.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="dialog.html">← Dialog</a><a href="sidebar.html">Sidebar →</a></nav>
   </main>

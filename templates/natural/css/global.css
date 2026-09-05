@@ -535,43 +535,52 @@ dialog::backdrop,
   border-bottom: 1px solid var(--border-color);
 }
 
+/* The hero is a herbarium sheet: a `.natural-plate` figure on the left and
+ * the words on the right. Any first child works there (an <img>, a plate,
+ * a drawing); the stack is the column of words. */
 .hero {
-  padding: var(--space-6) 0;
+  padding: var(--space-5) 0 var(--space-6);
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-5);
   align-items: center;
 }
 
 .hero h1 {
   font-size: var(--font-size-hero);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
 }
 
 .hero h1 em {
   font-style: italic;
+  font-weight: 300;
   color: var(--color-primary);
 }
 
 .hero p {
   font-size: var(--font-size-lg);
   color: var(--text-muted-color);
-  max-width: 50ch;
+  max-width: 44ch;
+}
+
+.hero .natural-lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--font-size-xl);
+  color: var(--text-color);
+  letter-spacing: -0.01em;
 }
 
 @media (min-width: 48rem) {
   .hero {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: minmax(0, 10fr) minmax(0, 9fr);
     gap: var(--space-6);
   }
-}
-
-.hero img {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  padding: 6px;
-  background: var(--surface-color);
-  box-shadow: var(--shadow-1);
+  .hero > .stack {
+    padding-block: var(--space-4);
+  }
 }
 
 /* == buttons == */
@@ -1807,13 +1816,344 @@ hr.page-break::after {
 }
 
 /* == flare == */
-/* Three pieces beyond the contract. `.natural-note` is a page from a field
- * notebook: ruled lines, a rust margin. `.natural-stamp` is a round nursery
- * seal. `.natural-sprig` is the page-break ornament as a free-standing
- * block. Anything that is markup sits inside `<div class="natural-flare">`
- * so a template swap can strip it. Colours are tokens; nothing here
- * animates continuously, so beyond the transitions the global
- * reduced-motion rule already shortens there is nothing to stop. */
+/* What Natural adds beyond the contract, all from a herbarium cupboard.
+ * `.natural-plate` is the signature: a mounted sheet with a label block
+ * glued to its corner. `.natural-label`, `.natural-binomial` and
+ * `.natural-data` are that label's type, reused on the specimen card.
+ * `.natural-note` is a page from the collecting notebook; `.natural-tag`
+ * is a paper tag with a punched hole, for a form or a notice;
+ * `.natural-sprig` is the page-break ornament as a block. The variants of
+ * contract components (specimen card, key, calendar, spread, stamp button)
+ * are here too and documented on those components' pages. Flare that is
+ * markup sits inside `<div class="natural-flare">` so a swap can strip it.
+ * Colours are tokens; nothing animates continuously. */
+
+/* -- the plate ---------------------------------------------------------- */
+.natural-plate {
+  position: relative;
+  margin: 0;
+  padding: var(--space-4);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-2);
+}
+
+.natural-plate > img,
+.natural-plate > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+}
+
+/* Two linen strips hold the sheet down. */
+.natural-plate::before,
+.natural-plate::after {
+  content: "";
+  position: absolute;
+  top: -0.35rem;
+  width: 4rem;
+  height: 1rem;
+  background: var(--natural-tape);
+  box-shadow: var(--shadow-1);
+  pointer-events: none;
+}
+
+.natural-plate::before { left: 1.5rem; transform: rotate(-4deg); }
+.natural-plate::after { right: 1.5rem; transform: rotate(3deg); }
+
+/* The label: a slip of paper glued over the bottom-right of the sheet. */
+.natural-label {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 22rem);
+  margin: calc(-1 * var(--space-6)) 0 0 auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  background: var(--natural-tag-paper);
+  color: var(--natural-tag-ink);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-1);
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+  transform: rotate(-0.6deg);
+}
+
+.natural-label > * {
+  margin: 0;
+}
+
+.natural-label .kicker {
+  color: var(--natural-tag-ink);
+  opacity: 0.72;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+
+/* Latin names: Fraunces italic; the authority stays roman. */
+.natural-binomial {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+.natural-binomial .natural-auth {
+  font-style: normal;
+  font-family: var(--font-body);
+  font-size: 0.7em;
+  letter-spacing: 0.06em;
+  margin-left: 0.3em;
+}
+
+.natural-label .natural-binomial {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-xl);
+}
+
+/* Collection data: small caps for the field, roman for the value. */
+.natural-data {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: var(--space-3);
+  row-gap: 0.1em;
+  margin: var(--space-2) 0 0;
+}
+
+.natural-data dt {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--text-muted-color);
+}
+
+.natural-label .natural-data dt {
+  color: var(--natural-tag-ink);
+  opacity: 0.7;
+}
+
+.natural-data dd {
+  margin: 0;
+}
+
+/* -- the specimen card -------------------------------------------------- */
+/* A mounted sheet with the label glued below it. Same card markup; the
+ * body holds a common name, the binomial and a data list. */
+.card.natural-specimen .card-media {
+  margin: var(--space-3) var(--space-3) 0;
+  border: 1px solid var(--border-color);
+  background: var(--surface-raised-color);
+}
+
+.card.natural-specimen .card-media img {
+  aspect-ratio: 4 / 3;
+}
+
+.card.natural-specimen .card-body {
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+}
+
+.card.natural-specimen .card-title {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.card.natural-specimen .natural-binomial {
+  color: var(--text-muted-color);
+  font-size: var(--font-size-base);
+}
+
+.card.natural-specimen .natural-data {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-color);
+  font-size: var(--font-size-sm);
+}
+
+.card.natural-specimen .card-actions {
+  padding-top: var(--space-3);
+}
+
+/* -- the key ------------------------------------------------------------ */
+/* An exclusive accordion group set as a dichotomous key. Leads come in
+ * pairs; the couplet number is a counter and the a/b is the position. */
+.accordion-group.natural-key {
+  counter-reset: couplet;
+}
+
+.natural-key > .accordion:nth-child(odd) {
+  counter-increment: couplet;
+}
+
+.natural-key > .accordion > summary {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  justify-content: flex-start;
+}
+
+.natural-key > .accordion > summary::before {
+  content: counter(couplet) "a";
+  flex: 0 0 2.4rem;
+  font-variant-caps: all-small-caps;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--natural-moss);
+}
+
+.natural-key > .accordion:nth-child(even) > summary::before {
+  content: counter(couplet) "b";
+}
+
+.natural-key > .accordion > summary::after {
+  margin-left: auto;
+}
+
+.natural-key .accordion-body {
+  padding-left: calc(var(--space-4) + 2.4rem + var(--space-3));
+}
+
+.natural-key .accordion-body .natural-binomial {
+  font-size: var(--font-size-lg);
+}
+
+/* -- the calendar ------------------------------------------------------- */
+/* A table with a month per column and a mark per cell. The marks are
+ * radial gradients in the feedback colours, so they follow the scheme;
+ * put the word in a visually-hidden span for readers. */
+.table-wrap.natural-calendar .data-table {
+  table-layout: fixed;
+  min-width: 42rem;
+}
+
+.natural-calendar th,
+.natural-calendar td {
+  text-align: center;
+  padding: var(--space-2) 0;
+}
+
+.natural-calendar th:first-child,
+.natural-calendar td:first-child {
+  width: 12rem;
+  text-align: left;
+  padding-left: var(--space-3);
+  white-space: nowrap;
+}
+
+.natural-calendar td:first-child {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--font-size-base);
+}
+
+.natural-calendar td + td {
+  border-left: 1px solid var(--border-color);
+}
+
+.natural-calendar td.natural-sow { background: radial-gradient(circle, var(--color-success) 0 0.32rem, transparent 0.38rem); }
+.natural-calendar td.natural-flower { background: radial-gradient(circle, var(--color-primary) 0 0.32rem, transparent 0.38rem); }
+.natural-calendar td.natural-lift { background: radial-gradient(circle, var(--color-warning) 0 0.32rem, transparent 0.38rem); }
+
+.natural-calendar .data-table tbody tr:hover td:first-child {
+  background: var(--surface-raised-color);
+}
+
+.natural-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted-color);
+}
+
+.natural-legend li::before {
+  content: "";
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: var(--radius-full);
+  margin-right: var(--space-2);
+  vertical-align: -0.05em;
+}
+
+.natural-legend .natural-sow::before { background: var(--color-success); }
+.natural-legend .natural-flower::before { background: var(--color-primary); }
+.natural-legend .natural-lift::before { background: var(--color-warning); }
+
+/* -- the spread --------------------------------------------------------- */
+/* The fifty-fifty as a plate beside its notes: the figure becomes a
+ * mounted sheet, the body loses its box and gains the notebook's rust
+ * margin line. */
+.fifty-fifty.natural-spread {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  align-items: start;
+  gap: var(--space-5);
+}
+
+.fifty-fifty.natural-spread figure {
+  height: auto;
+  padding: var(--space-3);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
+}
+
+.fifty-fifty.natural-spread img {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  border: 1px solid var(--border-color);
+}
+
+.fifty-fifty.natural-spread .fifty-fifty-body {
+  padding: var(--space-2) 0 var(--space-2) var(--space-5);
+  border-left: 1px solid var(--color-primary);
+}
+
+.fifty-fifty.natural-spread .fifty-fifty-body h2 {
+  font-size: var(--font-size-xl);
+}
+
+/* -- the stamp button --------------------------------------------------- */
+/* A rubber stamp: moss ink, a double rule, tracked capitals. Presses flat. */
+.btn.natural-stamp {
+  background: transparent;
+  color: var(--natural-moss);
+  border: 2px solid currentColor;
+  box-shadow: inset 0 0 0 3px var(--bg-color), inset 0 0 0 4px currentColor;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  padding: 0.75em 1.4em;
+}
+
+.btn.natural-stamp.btn-lg {
+  font-size: var(--font-size-base);
+  padding: 0.85em 1.6em;
+}
+
+.btn.natural-stamp:hover {
+  color: var(--color-primary-strong);
+  border-color: currentColor;
+  box-shadow: inset 0 0 0 3px var(--bg-color), inset 0 0 0 4px currentColor;
+}
+
+.btn.natural-stamp:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+/* -- the note ----------------------------------------------------------- */
 .natural-note {
   position: relative;
   padding: var(--space-5) var(--space-5) var(--space-5) calc(var(--space-6) + var(--space-2));
@@ -1843,56 +2183,45 @@ hr.page-break::after {
   margin-bottom: -0.8em;
 }
 
-.natural-stamp {
-  display: inline-grid;
-  place-items: center;
-  width: 7rem;
-  height: 7rem;
-  padding: var(--space-3);
-  border: 2px solid var(--natural-moss);
-  border-radius: var(--radius-full);
-  outline: 1px solid var(--natural-moss);
-  outline-offset: -7px;
-  color: var(--natural-moss);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.3;
-  transform: rotate(-8deg);
-  opacity: 0.85;
-}
-
-.natural-stamp strong {
-  font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
-  font-size: var(--font-size-xl);
-  letter-spacing: 0;
-  text-transform: none;
-  font-style: italic;
-}
-
-/* The stamp in the hero: in flow, right-aligned, on a phone; stamped over
- * the top-right corner of the hero on a wide screen. */
-.hero {
+/* -- the tag ------------------------------------------------------------ */
+/* A paper tag: a punched hole with a ring, and room for a form or a note. */
+.natural-tag {
   position: relative;
+  padding: var(--space-5) var(--space-5) var(--space-5) calc(var(--space-6) + var(--space-3));
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
 }
 
-.hero .natural-flare {
-  justify-self: end;
-  margin-top: calc(-1 * var(--space-2));
+.natural-tag::before {
+  content: "";
+  position: absolute;
+  top: var(--space-5);
+  left: var(--space-4);
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-color);
+  box-shadow: inset 0 0 0 1px var(--border-color), 0 0 0 3px var(--surface-raised-color), 0 0 0 4px var(--border-color);
 }
 
-@media (min-width: 48rem) {
-  .hero .natural-flare {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-  }
+.natural-tag::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-5) + 0.45rem);
+  left: calc(var(--space-4) + 0.45rem);
+  width: 1px;
+  height: calc(100% - var(--space-5) - 0.45rem);
+  background: var(--natural-moss);
+  opacity: 0.5;
 }
 
+.natural-tag > :first-child {
+  margin-top: 0;
+}
+
+/* -- the sprig ---------------------------------------------------------- */
 .natural-sprig {
   width: min(100%, 24rem);
   height: 2rem;
@@ -1900,6 +2229,21 @@ hr.page-break::after {
   background: var(--natural-moss);
   mask: var(--natural-sprig) center / contain no-repeat;
   -webkit-mask: var(--natural-sprig) center / contain no-repeat;
+}
+
+@media (max-width: 30rem) {
+  .natural-label {
+    width: 100%;
+    margin-top: var(--space-3);
+    transform: none;
+  }
+  .natural-tag {
+    padding-left: var(--space-5);
+  }
+  .natural-tag::before,
+  .natural-tag::after {
+    display: none;
+  }
 }
 
 /* == print == */

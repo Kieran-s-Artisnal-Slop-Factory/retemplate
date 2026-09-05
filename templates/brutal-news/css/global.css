@@ -62,8 +62,8 @@ h5,
 h6 {
   font-family: var(--font-display);
   font-weight: var(--font-weight-display);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   text-wrap: balance;
 }
@@ -84,8 +84,8 @@ figcaption {
 
 a {
   color: var(--color-primary);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.15em;
+  text-decoration-thickness: var(--brutal-news-rule);
+  text-underline-offset: 0.2em;
 }
 
 a:hover {
@@ -93,7 +93,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: var(--brutal-news-rule) solid var(--color-primary);
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
@@ -133,8 +133,8 @@ pre code {
 
 kbd {
   background: var(--surface-raised-color);
-  border: 2px solid var(--border-color);
-  border-bottom-width: 4px;
+  border: var(--brutal-news-rule) solid var(--border-color);
+  border-bottom-width: 6px;
   border-radius: var(--radius-sm);
   padding: 0.05em 0.4em;
 }
@@ -175,7 +175,7 @@ th,
 td {
   text-align: left;
   padding: var(--space-2) var(--space-3);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
   vertical-align: top;
 }
 
@@ -306,7 +306,7 @@ dialog::backdrop,
 }
 
 .prose h1 { margin-top: var(--space-6); font-size: var(--font-size-3xl); }
-.prose h2 { margin-top: var(--space-6); padding-bottom: var(--space-2); border-bottom: 1px solid var(--border-color); }
+.prose h2 { margin-top: var(--space-6); padding-bottom: var(--space-2); border-bottom: var(--brutal-news-rule) solid var(--border-color); }
 .prose h3 { margin-top: var(--space-5); }
 .prose h4,
 .prose h5,
@@ -400,7 +400,7 @@ dialog::backdrop,
 .prose .footnotes {
   margin-top: var(--space-6);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--border-color);
+  border-top: var(--brutal-news-rule) solid var(--border-color);
   font-size: var(--font-size-sm);
   color: var(--text-muted-color);
 }
@@ -479,7 +479,7 @@ dialog::backdrop,
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--text-color);
   font-weight: 700;
 }
@@ -785,7 +785,7 @@ dialog::backdrop,
 
 .card-title {
   font-size: var(--font-size-lg);
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .card-title a {
@@ -1080,16 +1080,16 @@ html:has(dialog[open]) {
 }
 
 .switch input:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: var(--brutal-news-rule) solid var(--color-primary);
   outline-offset: 2px;
 }
 
 /* == page-break == */
 hr.page-break {
   border: 0;
-  border-top: var(--brutal-news-rule) solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  height: 5px;
+  border-top: var(--brutal-news-rule-heavy) solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
+  height: 13px;
   margin: var(--space-6) 0;
 }
 
@@ -1156,7 +1156,7 @@ hr.page-break {
   line-height: 1.4;
   padding: 0.1em 0.65em;
   border-radius: var(--radius-full);
-  border: 2px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-mono);
@@ -1249,7 +1249,7 @@ hr.page-break {
   font-family: var(--font-mono);
   text-transform: uppercase;
   padding: 0.1em 0.6em;
-  border: 2px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
   background: var(--bg-color);
   color: var(--text-color);
   text-decoration: none;
@@ -1552,7 +1552,7 @@ hr.page-break {
   font-size: var(--font-size-base);
   color: var(--text-color);
   margin-bottom: var(--space-2);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
   padding-bottom: var(--space-1);
 }
 
@@ -1612,7 +1612,7 @@ hr.page-break {
   font-size: var(--font-size-sm);
   font-family: var(--font-mono);
   text-transform: uppercase;
-  border: 2px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
   border-radius: var(--radius-sm);
   background: var(--bg-color);
   color: var(--text-color);
@@ -1627,7 +1627,7 @@ hr.page-break {
 .docs > h2 {
   margin-top: var(--space-6);
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
 }
 
 .docs > h3 {
@@ -1660,7 +1660,7 @@ hr.page-break {
   gap: var(--space-3);
   margin-top: var(--space-6);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--border-color);
+  border-top: var(--brutal-news-rule) solid var(--border-color);
 }
 
 .swatches {
@@ -1671,7 +1671,7 @@ hr.page-break {
 }
 
 .swatch {
-  border: 1px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--surface-color);
@@ -1693,25 +1693,76 @@ hr.page-break {
   border-radius: var(--radius-lg);
   background: var(--bg-color);
   color: var(--text-color);
-  border: 1px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
 }
 
 .docs-iframe {
   width: 100%;
   height: 26rem;
-  border: 1px solid var(--border-color);
+  border: var(--brutal-news-rule) solid var(--border-color);
   border-radius: var(--radius-lg);
   background: var(--surface-color);
 }
 
 /* == flare == */
-/* The newspaper furniture: a masthead with a dateline, columned body text
- * with a drop cap, a strip of tape in acid yellow, and a ruled box. */
+/* Newspaper furniture. The lead (a hero variant), the masthead and its
+ * dateline, ruled columns with a drop cap, a ruled grid, a pull quote, a
+ * byline, a ruled box and a red block; then the variants of contract
+ * components (story card, scoreboard table, stamp button, breaking banner).
+ * Every rule is --brutal-news-rule (3px) or --brutal-news-rule-heavy (6px). */
+
+/* The lead: the front-page story. Kicker, a headline the full width of the
+ * page at the largest size in the template, then the text in three ruled
+ * columns. `.hero` supplies nothing here but the name. */
+.hero.brutal-news-lead {
+  display: block;
+  padding: var(--space-5) 0 var(--space-6);
+  border-bottom: var(--brutal-news-rule-heavy) solid var(--border-color);
+}
+
+.brutal-news-lead > .kicker {
+  color: var(--color-primary);
+}
+
+.brutal-news-lead h1 {
+  font-size: clamp(2.25rem, 0.5rem + 5vw, 4.5rem);
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  margin: var(--space-2) 0 var(--space-5);
+  max-width: none;
+  text-wrap: balance;
+}
+
+.brutal-news-lead p {
+  font-size: var(--font-size-base);
+  color: var(--text-color);
+  max-width: none;
+}
+
+.brutal-news-lead .brutal-news-columns {
+  column-count: 3;
+}
+
+.brutal-news-lead .row {
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 64rem) {
+  .brutal-news-lead .brutal-news-columns {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 40rem) {
+  .brutal-news-lead .brutal-news-columns {
+    column-count: 1;
+  }
+}
+
+/* The masthead: the paper's name between a heavy rule and the dateline. */
 .brutal-news-masthead {
   border-top: var(--brutal-news-rule-heavy) solid var(--border-color);
-  border-bottom: var(--brutal-news-rule) solid var(--border-color);
-  padding: var(--space-3) 0;
-  margin-bottom: var(--space-5);
+  padding-top: var(--space-3);
   text-align: center;
 }
 
@@ -1720,24 +1771,36 @@ hr.page-break {
   margin: 0;
 }
 
-.brutal-news-masthead h1 {
-  font-size: var(--font-size-hero);
-  letter-spacing: -0.04em;
+.brutal-news-masthead > .kicker {
+  color: var(--text-muted-color);
 }
 
+.brutal-news-masthead h1 {
+  font-size: clamp(2.75rem, 1.25rem + 4vw, 4.5rem);
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  margin: var(--space-2) 0 var(--space-3);
+}
+
+/* The dateline: mono facts spread across the width, ruled top and bottom.
+ * Inside the masthead it is the bottom rule; on its own it is a strip. */
 .brutal-news-dateline {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-2) var(--space-4);
+  gap: var(--space-1) var(--space-4);
   font-family: var(--font-mono);
   font-size: var(--font-size-sm);
+  font-weight: 700;
   text-transform: uppercase;
-  border-top: 1px solid var(--border-color);
-  margin-top: var(--space-3);
-  padding-top: var(--space-2);
+  letter-spacing: 0.04em;
+  border-top: var(--brutal-news-rule) solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
+  padding: var(--space-2) 0;
+  text-align: left;
 }
 
+/* Columns with a rule between them, and a drop cap on the first paragraph. */
 .brutal-news-columns {
   column-count: 2;
   column-gap: var(--space-5);
@@ -1757,22 +1820,89 @@ hr.page-break {
 .brutal-news-dropcap::first-letter {
   float: left;
   font-family: var(--font-display);
-  font-size: 4.6em;
-  line-height: 0.8;
-  padding: 0.05em 0.12em 0 0;
+  font-size: 4.2em;
+  line-height: 0.78;
+  padding: 0.06em 0.12em 0 0;
 }
 
-.brutal-news-tape {
-  display: inline-block;
-  background: var(--brutal-news-yellow);
-  color: var(--brutal-news-ink-on-yellow);
+/* A grid with rules between the columns instead of gaps. Add to .grid-2 or
+ * .grid-3. Below the grid breakpoint the rules turn horizontal. */
+.brutal-news-ruled {
+  gap: 0;
+  border-top: var(--brutal-news-rule-heavy) solid var(--border-color);
+}
+
+.brutal-news-ruled > * {
+  padding: var(--space-4) 0;
+  border-top: var(--brutal-news-rule) solid var(--border-color);
+}
+
+.brutal-news-ruled > :first-child {
+  border-top: 0;
+}
+
+@media (min-width: 40rem) {
+  .brutal-news-ruled > * {
+    padding: var(--space-4);
+    border-top: 0;
+    border-left: var(--brutal-news-rule) solid var(--border-color);
+  }
+  .brutal-news-ruled > :first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .brutal-news-ruled > :last-child {
+    padding-right: 0;
+  }
+}
+
+/* The pull quote: display type between a heavy rule and a plain one. */
+.brutal-news-pullquote {
+  border: 0;
+  border-top: var(--brutal-news-rule-heavy) solid var(--border-color);
+  border-bottom: var(--brutal-news-rule) solid var(--border-color);
+  padding: var(--space-4) 0;
+  margin: var(--space-5) 0;
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.brutal-news-pullquote p::before {
+  content: "\201C";
+  color: var(--color-primary);
+}
+
+.brutal-news-pullquote footer {
   font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-top: var(--space-3);
+}
+
+/* The byline: mono capitals over a rule. In a story card it sits at the
+ * foot; in an article it follows the headline. */
+.brutal-news-byline {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
   font-weight: 700;
   text-transform: uppercase;
-  padding: 0.15em 0.6em;
-  transform: rotate(-1.5deg);
+  letter-spacing: 0.06em;
+  color: var(--text-color);
+  padding-top: var(--space-2);
+  border-top: var(--brutal-news-rule) solid var(--border-color);
 }
 
+.brutal-news-byline a {
+  color: inherit;
+}
+
+/* The ruled box: heavy border, hard shadow, and its label in acid yellow.
+ * The yellow carries black ink only; it never sits under text on paper. */
 .brutal-news-box {
   border: var(--brutal-news-rule-heavy) solid var(--border-color);
   padding: var(--space-4);
@@ -1780,15 +1910,180 @@ hr.page-break {
   background: var(--bg-color);
 }
 
+.brutal-news-box > .kicker {
+  display: inline-block;
+  background: var(--brutal-news-yellow);
+  color: var(--brutal-news-ink-on-yellow);
+  padding: 0.15em 0.5em;
+}
+
+.brutal-news-box > * + * {
+  margin-top: var(--space-3);
+}
+
+.brutal-news-box ul {
+  padding-left: 1.2em;
+}
+
+/* The red block: brand colour edge to edge, paper-coloured type. */
 .brutal-news-red {
   background: var(--brutal-news-red);
   color: var(--color-on-primary);
   padding: var(--space-5);
 }
 
+.brutal-news-red > * + * {
+  margin-top: var(--space-3);
+}
+
+.brutal-news-red h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.04em;
+}
+
 .brutal-news-red h2,
 .brutal-news-red p,
 .brutal-news-red a {
+  color: inherit;
+}
+
+.brutal-news-red .btn {
+  background: var(--color-on-primary);
+  color: var(--brutal-news-red);
+  border-color: var(--color-on-primary);
+}
+
+.brutal-news-red .btn:hover {
+  color: var(--brutal-news-red);
+  box-shadow: 4px 4px 0 var(--color-on-primary);
+}
+
+/* -- Variants of contract components ------------------------------------ */
+
+/* Story card: no box. A heavy rule on top, the picture ruled all round, the
+ * kicker in red, the headline larger, and a byline at the foot. */
+.card.brutal-news-story {
+  border: 0;
+  border-top: var(--brutal-news-rule-heavy) solid var(--border-color);
+  background: transparent;
+  overflow: visible;
+}
+
+.card.brutal-news-story .card-media {
+  background: transparent;
+  margin-top: var(--space-3);
+}
+
+.card.brutal-news-story .card-media img {
+  border: var(--brutal-news-rule) solid var(--border-color);
+}
+
+.card.brutal-news-story .card-media .card-icon {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.card.brutal-news-story .card-body {
+  padding: var(--space-3) 0 0;
+}
+
+.card.brutal-news-story .kicker {
+  color: var(--color-primary);
+}
+
+.card.brutal-news-story .card-title {
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.035em;
+}
+
+.card.brutal-news-story .card-text {
+  color: var(--text-color);
+}
+
+.card.brutal-news-story .brutal-news-byline {
+  margin-top: auto;
+}
+
+.brutal-news-ruled > .card.brutal-news-story {
+  border-top: 0;
+}
+
+/* Scoreboard table: mono, tabular figures, numbers to the right, head
+ * printed in reverse, a rule under every row. */
+.table-wrap.brutal-news-scoreboard {
+  border-width: var(--brutal-news-rule-heavy) 0 var(--brutal-news-rule);
+  background: transparent;
+}
+
+.brutal-news-scoreboard .data-table {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-variant-numeric: tabular-nums;
+}
+
+.brutal-news-scoreboard th {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-bottom: 0;
+}
+
+.brutal-news-scoreboard td {
+  padding: var(--space-3);
+}
+
+.brutal-news-scoreboard th:not(:first-child),
+.brutal-news-scoreboard td:not(:first-child) {
+  text-align: right;
+}
+
+.brutal-news-scoreboard td:first-child {
+  font-weight: 700;
+}
+
+.brutal-news-scoreboard tbody tr:hover {
+  background: transparent;
+}
+
+/* Stamp button: red outline and red display type; fills red when hovered
+ * or focused, and does not jump. */
+.btn.brutal-news-stamp {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.btn.brutal-news-stamp:hover,
+.btn.brutal-news-stamp:focus-visible {
+  transform: none;
+  box-shadow: none;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Breaking banner: solid red, the first child set as a paper-coloured
+ * label in display type. Use role="alert" when it is news. */
+.banner.brutal-news-breaking {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--border-color);
+  border-left-width: var(--brutal-news-rule);
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+}
+
+.banner.brutal-news-breaking > :first-child {
+  background: var(--color-on-primary);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  padding: 0.1em 0.5em;
+  flex: none;
+}
+
+.banner.brutal-news-breaking a {
   color: inherit;
 }
 

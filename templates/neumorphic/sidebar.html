@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Sidebar variant — Neumorphic</title>
+  <title>Sidebar variant, Neumorphic</title>
   <link rel="icon" href="assets/favicon.svg">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/theme.css">
@@ -63,43 +63,94 @@
   </aside>
   <main class="page docs">
 <header class="page-header">
-  <p class="kicker">The other layout</p>
   <h1>The overview, with a sidebar</h1>
-  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the docs use the sidebar layout. In Neumorphic the sidebar is not a panel with a border but the page itself, pressed a little forward by a soft shadow.</p>
+  <p>Every template ships two layouts. The navbar layout is on the overview, the blog post and the forms page; this page and the docs use the sidebar layout. In Neumorphic the sidebar is not a panel with a border but the page itself, pressed a little forward by a soft shadow. The controls below are the same ones the overview opens with.</p>
 </header>
+<div class="neumorphic-flare neumorphic-panel">
+  <div class="neumorphic-dial" style="--angle: 200deg" role="img" aria-label="Target temperature 21 degrees"><span class="neumorphic-dial-value">21°</span><span class="neumorphic-dial-label">target</span></div>
+  <div class="stack">
+    <label class="switch"><input type="checkbox" role="switch" checked><span>Heating</span></label>
+    <label class="switch"><input type="checkbox" role="switch" checked><span>Porch light</span></label>
+    <label class="switch"><input type="checkbox" role="switch"><span>Hot water boost</span></label>
+  </div>
+  <div class="neumorphic-panel-row">
+    <div class="neumorphic-segment" role="radiogroup" aria-label="Mode">
+      <input type="radio" id="sb-away" name="sb-mode"><label for="sb-away">Away</label>
+      <input type="radio" id="sb-home" name="sb-mode" checked><label for="sb-home">Home</label>
+      <input type="radio" id="sb-night" name="sb-mode"><label for="sb-night">Night</label>
+    </div>
+    <div class="row">
+      <button class="btn neumorphic-round" type="button" aria-label="Half a degree cooler">−</button>
+      <button class="btn neumorphic-round" type="button" aria-label="Half a degree warmer">+</button>
+    </div>
+  </div>
+</div>
 <h2>What the layout is made of</h2>
 <p>A grid with two rows and, above 64rem, two columns. The top bar spans both columns and stays put; the sidebar is a sticky column with its own scrollbar; the page scrolls under it. Below 64rem the sidebar carries the <code>popover</code> attribute, so the menu button is a real button that opens it, and the browser supplies the dimmed backdrop and the dismiss behaviour.</p>
 <div class="grid-3">
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Groups fold</h3><p class="card-text">Each navigation group is a <code>&lt;details&gt;</code>, open by default.</p></div>
+  <article class="card neumorphic-tile">
+    <div class="card-body">
+      <h3 class="card-title">Groups</h3>
+      <p class="neumorphic-tile-value">4</p>
+      <p class="card-text">Each one a <code>&lt;details&gt;</code>, open by default.</p>
+    </div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">The current page</h3><p class="card-text">The link to the page you are on carries <code>aria-current="page"</code> and a soft tint.</p></div>
+  <article class="card neumorphic-tile">
+    <div class="card-body">
+      <h3 class="card-title">Sidebar width</h3>
+      <p class="neumorphic-tile-value">16 <small>rem</small></p>
+      <p class="card-text">The <code>--sidebar-width</code> token.</p>
+    </div>
   </article>
-  <article class="card">
-    <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
-    <div class="card-body"><h3 class="card-title">Same content, either way</h3><p class="card-text">Nothing on this page needs the sidebar. Swap the shell and the page still works.</p></div>
+  <article class="card neumorphic-tile">
+    <div class="card-body">
+      <h3 class="card-title">Becomes a drawer below</h3>
+      <p class="neumorphic-tile-value">64 <small>rem</small></p>
+      <p class="card-text">One media query; no script.</p>
+    </div>
   </article>
 </div>
 <h2>Sunken and raised</h2>
-<p>Neumorphism has two moves: push a thing out of the surface, or press it in. Controls that you act on are raised; places you put things are sunken.</p>
-<div class="neumorphic-well">
-  <p class="kicker">A sunken group</p>
-  <div class="row">
-    <label class="switch"><input type="checkbox" role="switch" checked><span>Lights</span></label>
-    <label class="switch"><input type="checkbox" role="switch"><span>Heating</span></label>
-    <button class="btn btn-sm" type="button">Apply</button>
+<p>Places you put things are sunken; controls you act on are raised. The well below is a sunken group with a <code>.field</code> form in it, the same pattern the overview and the example use.</p>
+<form class="neumorphic-well" action="#" method="get">
+  <div class="form-grid">
+    <fieldset>
+      <legend>Hallway</legend>
+      <div class="field">
+        <label for="sb-bright">Lamp brightness</label>
+        <input id="sb-bright" name="brightness" type="range" min="0" max="100" value="25">
+      </div>
+      <div class="field">
+        <span class="field-label">Heating</span>
+        <div class="neumorphic-segment" role="radiogroup" aria-label="Heating">
+          <input type="radio" id="sb-off" name="sb-heat"><label for="sb-off">Off</label>
+          <input type="radio" id="sb-eco" name="sb-heat" checked><label for="sb-eco">Eco</label>
+          <input type="radio" id="sb-comfort" name="sb-heat"><label for="sb-comfort">Comfort</label>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-sm" type="submit">Apply</button>
+      <button class="btn btn-sm" type="reset">Undo</button>
+    </div>
   </div>
+</form>
+<div class="grid-2">
+  <article class="card">
+    <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body"><h3 class="card-title">Raised</h3><p class="card-text">The ordinary card, at the width this column allows.</p></div>
+  </article>
+  <article class="card neumorphic-pressed">
+    <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+    <div class="card-body"><h3 class="card-title">Pressed</h3><p class="card-text">The same card with <code>neumorphic-pressed</code>, for what is off.</p></div>
+  </article>
 </div>
 <section class="fifty-fifty">
   <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
   <div class="fifty-fifty-body">
-    <p class="kicker">Fifty-fifty</p>
     <h2>Half image, half words</h2>
-    <p>The same block the overview uses, here to prove it sits happily inside the narrower column.</p>
-    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">Docs</a>
+    <p>The same block the overview uses, here to show it sits happily inside the narrower column.</p>
+    <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
   </div>
 </section>
 <div class="accordion-group">
@@ -123,7 +174,7 @@
   <form method="dialog" class="modal-actions"><button class="btn btn-primary" type="submit">Close</button></form>
 </dialog>
 <hr class="page-break">
-<div class="banner banner-info" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
+<div class="banner banner-info neumorphic-inset" role="status"><span>i</span><p>Looking for the markup? The <a href="docs/components/sidebar.html">sidebar component page</a> shows this page inside a frame with its source beside it.</p></div>
 
   </main>
 </div>

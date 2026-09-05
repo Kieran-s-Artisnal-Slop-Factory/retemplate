@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Services — Halo Studio</title>
+  <title>Services and prices, Osier</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,8 +15,8 @@
   <div class="glassy-orb"></div>
   <div class="glassy-orb"></div>
 </div>
-<header class="navbar">
-  <a class="brand" href="index.html">Halo Studio</a>
+<header class="navbar glassy-floating">
+  <a class="brand" href="index.html">Osier</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html">Home</a>
@@ -31,55 +31,58 @@
 <main class="page">
   <header class="page-header">
     <p class="kicker">Services</p>
-    <h1>Three things, priced up front.</h1>
-    <p>Every project is fixed-price. The numbers below are typical; the plan we send you after the first conversation is exact.</p>
+    <h1>Three things, priced before we start.</h1>
+    <p>Every project is fixed-price. The figures below are typical; the plan we send after the first conversation is exact.</p>
   </header>
 
   <section class="section">
-    <div class="stack">
-      <article class="card card-horizontal">
+    <div class="glassy-stack">
+      <article class="card card-horizontal glassy-shallow">
         <figure class="card-media"><img src="../assets/gallery-1.svg" alt="" width="800" height="600"></figure>
         <div class="card-body">
-          <p class="kicker">From £6,000</p>
-          <h3 class="card-title">Websites</h3>
-          <p class="card-text">Design and build, on plain HTML and CSS or whatever your team already runs. Fast, accessible, and yours to edit. Four to eight weeks.</p>
-          <div class="card-actions"><button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('book').showModal()">Book a call</button></div>
-        </div>
-      </article>
-      <article class="card card-horizontal card-media-end">
-        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
-        <div class="card-body">
-          <p class="kicker">From £4,000</p>
-          <h3 class="card-title">Identity</h3>
-          <p class="card-text">A name if you need one, a mark, a palette, a type system and the rules for using them. Three weeks, three rounds.</p>
-          <div class="card-actions"><button class="btn btn-primary btn-sm" type="button" onclick="document.getElementById('book').showModal()">Book a call</button></div>
+          <p class="kicker">Websites</p>
+          <h3 class="card-title">Design and build, on plain HTML and CSS</h3>
+          <p class="card-text">Or on whatever your team already runs. Fast, accessible, and yours to edit. Four to eight weeks, two of us.</p>
         </div>
       </article>
       <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Identity</p>
+          <h3 class="card-title">A mark, a palette, a type system, and the rules</h3>
+          <p class="card-text">A name too, if you need one. Three weeks, three rounds, and files in every format the printer will ask for.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal glassy-deep">
         <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
         <div class="card-body">
-          <p class="kicker">£1,800 a month</p>
-          <h3 class="card-title">Retainers</h3>
-          <p class="card-text">A day a week of a designer who already knows your site. Cancel monthly. Most clients start here after launch.</p>
-          <div class="card-actions"><span class="badge badge-active">Two places left</span></div>
+          <p class="kicker">Retainers</p>
+          <h3 class="card-title">A day a week of someone who knows your site</h3>
+          <p class="card-text">Tom, usually. Cancel monthly. Most clients start here after launch; two are on their fourth year.</p>
+          <div class="card-actions"><span class="badge badge-active">Two places from January</span></div>
         </div>
       </article>
     </div>
   </section>
 
   <section class="section">
-    <h2>What is included</h2>
-    <div class="table-wrap">
+    <h2>What each includes</h2>
+    <div class="table-wrap glassy-price">
       <table class="data-table">
         <thead><tr><th>Included</th><th>Websites</th><th>Identity</th><th>Retainer</th></tr></thead>
         <tbody>
-          <tr><td>Discovery call</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>First conversation</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
           <tr><td>Fixed price</td><td>Yes</td><td>Yes</td><td>Monthly</td></tr>
           <tr><td>Source in your repository</td><td>Yes</td><td>Files, all formats</td><td>Yes</td></tr>
-          <tr><td>A month of fixes</td><td>Yes</td><td>Yes</td><td>Ongoing</td></tr>
+          <tr><td>Fixes after launch</td><td>One month</td><td>One month</td><td>Ongoing</td></tr>
           <tr><td>Rounds of revision</td><td>Weekly shares</td><td>Three</td><td>As needed</td></tr>
+          <tr class="glassy-total"><td>From</td><td>£6,000 <span class="small">four to eight weeks</span></td><td>£4,000 <span class="small">three weeks</span></td><td>£1,800 <span class="small">a month</span></td></tr>
         </tbody>
       </table>
+    </div>
+    <div class="row">
+      <button class="btn btn-primary" type="button" onclick="document.getElementById('book').showModal()">Book the first conversation</button>
+      <a class="btn glassy-ghost" href="contact.html">Write to us instead</a>
     </div>
   </section>
 
@@ -100,25 +103,30 @@
         <summary>Can you host it?</summary>
         <div class="accordion-body"><p>We would rather you did, on a service you control. We will set it up and show you where everything is.</p></div>
       </details>
+      <details class="accordion" name="faq">
+        <summary>Do you do shops?</summary>
+        <div class="accordion-body"><p>Small ones, yes: Hartsop Wool and Grizedale Glass are both ours. Anything with a warehouse is a different kind of job and we will say so.</p></div>
+      </details>
     </div>
   </section>
 
   <dialog class="modal" id="book" aria-labelledby="book-title">
-    <h2 id="book-title">Book a call</h2>
-    <p>An hour, free. We will send a calendar invite.</p>
+    <h2 id="book-title">The first conversation</h2>
+    <p>An hour, free, on a call or in the studio. We will send a calendar invite.</p>
     <form method="dialog">
       <div class="stack">
         <div class="field">
           <label for="b-name">Name</label>
-          <input id="b-name" name="name" type="text" required>
+          <input id="b-name" name="name" type="text" autocomplete="name" required>
         </div>
         <div class="field">
           <label for="b-email">Email</label>
-          <input id="b-email" name="email" type="email" required>
+          <input id="b-email" name="email" type="email" autocomplete="email" required>
         </div>
         <div class="field">
           <label for="b-when">A time that suits</label>
           <input id="b-when" name="when" type="datetime-local">
+          <p class="hint">Tuesdays and Thursdays are best. Nothing you type here is sent; this is a demonstration.</p>
         </div>
       </div>
       <div class="modal-actions">
@@ -132,7 +140,7 @@
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Halo Studio</h2>
+      <h2>Osier</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services and prices</a></li>
@@ -142,8 +150,8 @@
     <section>
       <h2>Find us</h2>
       <ul>
-        <li>Unit 4, The Old Dairy, Millbrook</li>
-        <li>01234 567 892</li>
+        <li>Second floor, 14 Finkle Street, Kendal</li>
+        <li>01539 000 214</li>
         <li><a href="mailto:hello@example.com">hello@example.com</a></li>
       </ul>
     </section>
@@ -155,7 +163,7 @@
       </ul>
     </section>
   </div>
-  <p class="footer-note">An example site for the Glassy template. The studio, its clients and its dairy are fictional.</p>
+  <p class="footer-note">An example site for the Glassy template. The studio, its people and its clients are fictional.</p>
 </footer>
 </body>
 </html>

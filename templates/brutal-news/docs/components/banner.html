@@ -87,6 +87,13 @@
   &lt;div class="banner banner-danger" role="alert"&gt;&lt;span&gt;×&lt;/span&gt;&lt;p&gt;The upload failed. Try again.&lt;/p&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="banner"&gt;&lt;span&gt;·&lt;/span&gt;&lt;p&gt;A banner with no tone at all.&lt;/p&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Breaking</h3>
+<p>Add <code>brutal-news-breaking</code> for the one line on a page that is news. The banner fills red, and the first child, normally the icon slot, becomes a paper-coloured label in Archivo Black; put the word in it, not a symbol. Give it <code>role="alert"</code> when it is urgent and <code>role="status"</code> when it can wait. One per page at most.</p>
+<figure class="example" data-snippet="banner-brutal-news-breaking">
+<div class="banner brutal-news-breaking" role="alert"><span>Breaking</span><p>The council will publish the baths survey in full at 6pm tonight, four months after it was written.</p></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="banner-brutal-news-breaking">&lt;div class="banner brutal-news-breaking" role="alert"&gt;&lt;span&gt;Breaking&lt;/span&gt;&lt;p&gt;The council will publish the baths survey in full at 6pm tonight, four months after it was written.&lt;/p&gt;&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == banner == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -95,6 +102,7 @@
       <tr><td><code>.banner-info</code></td><td>Blue</td></tr>
       <tr><td><code>.banner-warning</code></td><td>Yellow</td></tr>
       <tr><td><code>.banner-danger</code></td><td>Red</td></tr>
+      <tr><td><code>.brutal-news-breaking</code></td><td>Brutal News only: solid red, the first child as a label in display type (rules under <code>/* == flare == */</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

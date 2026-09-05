@@ -3,17 +3,19 @@
 A brutalist newspaper. White paper and black ink, rules never thinner than
 three pixels, no rounded corners anywhere, hard offset shadows, and a
 handful of harsh colours used at full strength: hot red for the brand, acid
-yellow, cobalt, signal green. Headlines in Archivo Black, body in Inter,
-kickers and data in JetBrains Mono. Dark mode is the same paper printed in
-reverse. Part of [retemplate](../../README.md).
+yellow, cobalt, signal green. The overview is a front page: a masthead with
+a dateline, a lead story whose headline runs the full width in Archivo Black,
+ruled columns with a drop cap, story cards with kickers and bylines, a
+scoreboard table. Body in Inter, data in JetBrains Mono. Dark mode is the
+same paper printed in reverse. Part of [retemplate](../../README.md).
 
 ## Take and use
 
-Copy this folder. Keep the **install set** — `css/`, `js/theme.js`,
-`assets/`, this file — and delete the **showcase** — `index.html`,
+Copy this folder. Keep the **install set** (`css/`, `js/theme.js`,
+`assets/`, this file) and delete the **showcase**: `index.html`,
 `blogpost.html`, `forms.html`, `sidebar.html`, `docs/`, `example/`,
-`js/copy.js`. Or keep `example/`, a complete three-page newspaper site, and
-start from it.
+`js/copy.js`. Or keep `example/`, a complete three-page weekly paper (the Ashcombe Bugle: front page, story,
+subscribe), and start from it.
 
 Put this at the top of every page (adjust the paths for sub-folders):
 
@@ -38,7 +40,7 @@ Put this at the top of every page (adjust the paths for sub-folders):
 Then write HTML with the classes in `docs/components/` (open
 `docs/index.html` in a browser for the guided version).
 
-- **Browsers:** Baseline 2024 — `light-dark()`, `:has()`, popovers,
+- **Browsers:** Baseline 2024: `light-dark()`, `:has()`, popovers,
   `<details name>`, `color-mix()`. No polyfills.
 - **Fonts:** [Archivo Black](https://fonts.google.com/specimen/Archivo+Black),
   [Inter](https://fonts.google.com/specimen/Inter) and
@@ -53,13 +55,19 @@ Then write HTML with the classes in `docs/components/` (open
   `<a class="site-link" href="../../index.html">` back to the retemplate
   landing; nothing else points outside the folder.
 
-## Flare
+## Flare and variants
 
-`.brutal-news-masthead` with `.brutal-news-dateline` (inside a
-`<div class="brutal-news-flare">`), `.brutal-news-columns` with
-`.brutal-news-dropcap`, `.brutal-news-tape`, `.brutal-news-box` and
-`.brutal-news-red`. See `docs/components/flare.html`. Everything else is the
-shared contract markup.
+The newspaper furniture, all under `/* == flare == */` in `global.css`:
+`.hero.brutal-news-lead` (the front-page story: full-width headline, three
+ruled columns, byline), `.brutal-news-masthead` with `.brutal-news-dateline`
+(inside a `<div class="brutal-news-flare">`), `.brutal-news-columns` with
+`.brutal-news-dropcap`, `.brutal-news-ruled` on a grid, `.brutal-news-pullquote`,
+`.brutal-news-byline`, `.brutal-news-box` and `.brutal-news-red`. Variants of
+contract components, each documented on that component's page:
+`.card.brutal-news-story`, `.table-wrap.brutal-news-scoreboard`,
+`.btn.brutal-news-stamp` and `.banner.brutal-news-breaking`. See
+`docs/components/flare.html` for the list. Everything else is the shared
+contract markup.
 
 ## Swapping templates
 

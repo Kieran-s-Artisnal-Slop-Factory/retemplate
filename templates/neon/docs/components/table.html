@@ -93,11 +93,37 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Neon: the status board</h3>
+<p>Add <code>.neon-status</code> to the table and it becomes a board: rows on the page colour separated by hairlines, heads in small tracked caps, the first column in the display face, the last column right-aligned for a <a href="badge.html">state light</a>. A hovered row lifts a cyan edge instead of filling.</p>
+<figure class="example" data-snippet="table-neon-status">
+<div class="table-wrap">
+  <table class="data-table neon-status">
+    <thead><tr><th>Service</th><th>Regions</th><th>State</th></tr></thead>
+    <tbody>
+      <tr><td>API</td><td>9 of 9</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+      <tr><td>Email</td><td>7 of 9</td><td><span class="badge neon-light neon-light-warn">Degraded</span></td></tr>
+      <tr><td>Legacy v1</td><td>retired</td><td><span class="badge neon-light">Off</span></td></tr>
+    </tbody>
+  </table>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="table-neon-status">&lt;div class="table-wrap"&gt;
+  &lt;table class="data-table neon-status"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Service&lt;/th&gt;&lt;th&gt;Regions&lt;/th&gt;&lt;th&gt;State&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;API&lt;/td&gt;&lt;td&gt;9 of 9&lt;/td&gt;&lt;td&gt;&lt;span class="badge neon-light badge-done"&gt;Up&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Email&lt;/td&gt;&lt;td&gt;7 of 9&lt;/td&gt;&lt;td&gt;&lt;span class="badge neon-light neon-light-warn"&gt;Degraded&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Legacy v1&lt;/td&gt;&lt;td&gt;retired&lt;/td&gt;&lt;td&gt;&lt;span class="badge neon-light"&gt;Off&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == table == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.table-wrap</code></td><td>Border, radius, horizontal scrolling</td></tr>
       <tr><td><code>.data-table</code></td><td>Small type, hover rows, no last border</td></tr>
+      <tr><td><code>.neon-status</code></td><td>Neon: the board; hairline rows, caps heads, display first column, right-aligned last column</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

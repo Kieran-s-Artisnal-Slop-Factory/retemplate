@@ -42,7 +42,7 @@ state of the build; the TODO records which *asks* have landed.
 | 9 — Gothic | done | 2026-09-04 | checker 0/0; one pointed arch, illuminated initial, manuscript variant; visual pass at Checkpoint D |
 | 10 — Allegory | done | 2026-09-04 | checker 0/0; diptych hero, halo/horn pins, mirrored chapter pages; band contrast below 3:1 by brief (human to eyeball); visual pass at Checkpoint D |
 | D — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of detailed, gothic, allegory on all ten pages each at 1280 and 375 in both schemes (overflow, images, fonts, dialog, lightbox, exclusive accordion, nav popover, sidebar drawer, hero fits viewport, console) clean; landing shows 9 cards and the new tags filter correctly; no contract gaps; eyeball items in the TODO |
-| 11 — Release | not started | | |
+| 11 — Release | in progress | 2026-09-04 | distinctiveness pass dispatched for neumorphic, brutal-news, glassy, neon, natural; docs pass by the orchestrator |
 
 ---
 

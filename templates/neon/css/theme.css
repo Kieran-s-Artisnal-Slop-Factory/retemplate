@@ -1,12 +1,12 @@
 /*
- * neon — design tokens.
+ * neon: design tokens.
  *
  * Retoken compatible: the same two layers retoken uses. The colour mapping
  * under `:root, .themed` is retoken's verbatim; the shared values are this
  * template's; the palette block is the retoken paste-in (docs/theme.html).
  *
  * Neon: zinc surfaces, a rose tube and a cyan tube. The dark half is black;
- * the light half is only *less* dark — the surfaces step up to a warm grey
+ * the light half is only *less* dark: the surfaces step up to a warm grey
  * and the text stays off-white, so the glow still reads. Both halves keep
  * the same two neons; only the ground under them changes.
  */
@@ -106,7 +106,7 @@
 
 /* ── Palette: neon ──────────────────────────────────────────────────────
  * Dark: zinc black, rose accent, cyan for information. Light: the same
- * neons over a lifted grey — never white. --pal-bg2 is a flat 12 % white
+ * neons over a lifted grey, never white. --pal-bg2 is a flat 12 % white
  * over --pal-bg0, so the 1px borders read as light lines without alpha.
  *
  * This block is the retoken paste-in. Copy it whole.
@@ -139,9 +139,8 @@
 }
 
 /* ── Template tokens ────────────────────────────────────────────────────
- * The two tube colours at glow strength, the glows built from them, the
- * translucent hairlines and the two haze colours behind the page. Not part
- * of the retoken paste-in.
+ * The two tube colours at glow strength, the glows built from them and the
+ * translucent hairlines. Not part of the retoken paste-in.
  */
 :root,
 .themed {
@@ -153,6 +152,4 @@
   --neon-text-glow-cyan: 0 0 22px var(--neon-cyan);
   --neon-line: light-dark(rgb(255 255 255 / 0.14), rgb(255 255 255 / 0.12));
   --neon-line-strong: light-dark(rgb(255 255 255 / 0.24), rgb(255 255 255 / 0.2));
-  --neon-haze-rose: light-dark(rgb(255 143 163 / 0.22), rgb(244 63 94 / 0.22));
-  --neon-haze-cyan: light-dark(rgb(34 211 238 / 0.16), rgb(34 211 238 / 0.14));
 }

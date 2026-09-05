@@ -1,13 +1,14 @@
 /*
- * neon — everything that is not a token.
+ * neon: everything that is not a token.
  *
  * Organised in marked sections (`== name ==`) that the docs pages name.
  * Every colour comes from a semantic token in theme.css; there is no
  * literal colour and no `--pal-*` slot in this file (tools/check.py
  * enforces it). Copy the section you need together with theme.css.
  *
- * The look: black zinc, hairline borders, two neon tubes (rose and cyan)
- * that glow rather than fill. Surfaces are dark in both halves, so the
+ * The look: signage at night. A flat zinc field, hairline borders, and two
+ * neon tubes (rose and cyan) that glow rather than fill. Glow means state:
+ * a lit thing is on, an unlit one is off. Surfaces are dark in both halves, so the
  * UA-chrome override of the contract (§6) is in force here: native
  * controls and open layers are pinned to the dark scheme, and the
  * scrollbar takes the page colours.
@@ -69,11 +70,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image:
-    radial-gradient(60rem 30rem at 85% -10%, var(--neon-haze-rose), transparent 70%),
-    radial-gradient(50rem 26rem at -10% 110%, var(--neon-haze-cyan), transparent 70%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 h1,
@@ -550,7 +546,7 @@ dialog::backdrop,
 }
 
 @media (min-width: 48rem) {
-  .hero {
+  .hero:not(.neon-stage) {
     grid-template-columns: 3fr 2fr;
     gap: var(--space-6);
   }
@@ -560,6 +556,28 @@ dialog::backdrop,
   border-radius: var(--radius-lg);
   border: 1px solid var(--neon-line);
   box-shadow: var(--shadow-2), var(--neon-glow);
+}
+
+/* The stage: a hero with no picture. The headline is the sign (see
+ * .neon-text under flare), set very large in the display face, uppercase,
+ * tight, over a flat field. One paragraph and one call under it. */
+.hero.neon-stage {
+  grid-template-columns: minmax(0, 1fr);
+  padding: clamp(var(--space-6), 8vh, 6rem) 0 var(--space-6);
+  border-bottom: 1px solid var(--neon-line);
+}
+
+.hero.neon-stage h1 {
+  font-size: clamp(3rem, 1.5rem + 7vw, 6.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  max-width: 14ch;
+}
+
+.hero.neon-stage p {
+  max-width: 46ch;
 }
 
 /* == buttons == */
@@ -631,6 +649,33 @@ dialog::backdrop,
 .btn:disabled {
   transform: none;
   box-shadow: none;
+}
+
+/* Neon's outline button: the accent as a tube, unfilled. It is the quiet
+ * call beside a primary, and the state of a control that is off. */
+.btn.neon-outline {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary-strong);
+}
+
+.btn.neon-outline:hover {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary-strong);
+  color: var(--color-primary-strong);
+  box-shadow: 0 0 24px -6px var(--neon-rose), inset 0 0 14px -8px var(--neon-rose);
+}
+
+.btn.neon-outline-cyan {
+  border-color: var(--color-info);
+  color: var(--color-info);
+}
+
+.btn.neon-outline-cyan:hover {
+  background: var(--color-info-soft);
+  border-color: var(--color-info);
+  color: var(--color-info);
+  box-shadow: 0 0 24px -6px var(--neon-cyan), inset 0 0 14px -8px var(--neon-cyan);
 }
 
 /* == forms == */
@@ -902,6 +947,68 @@ dialog::backdrop,
 
 .card-feature .card-media {
   background: var(--color-primary-soft);
+}
+
+/* Neon's panel: the card as a switched sign. Unlit, it is a flat sheet
+ * with a hairline and a small tracked-caps title; lit, its border is the
+ * tube and it glows. Lit means "this one": the recommended plan, the
+ * current item. Cyan is the cooler tube for information. */
+.card.neon-panel {
+  background: var(--bg-color);
+  box-shadow: none;
+  border-color: var(--neon-line);
+  border-radius: var(--radius-md);
+}
+
+.card.neon-panel .card-title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted-color);
+}
+
+.card.neon-panel .card-text {
+  color: var(--text-color);
+}
+
+.card.neon-panel .card-text strong {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-display);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  display: block;
+}
+
+.card.neon-panel:hover {
+  border-color: var(--neon-line-strong);
+}
+
+.card.neon-panel.neon-panel-lit {
+  border-color: var(--color-primary);
+  background: var(--surface-color);
+  box-shadow: 0 0 0 1px var(--color-primary), var(--neon-glow), inset 0 0 40px -30px var(--neon-rose);
+}
+
+.card.neon-panel.neon-panel-lit .card-title {
+  color: var(--color-primary-strong);
+  text-shadow: var(--neon-text-glow);
+}
+
+.card.neon-panel.neon-panel-lit.neon-panel-cyan {
+  border-color: var(--color-info);
+  box-shadow: 0 0 0 1px var(--color-info), var(--neon-glow-cyan), inset 0 0 40px -30px var(--neon-cyan);
+}
+
+.card.neon-panel.neon-panel-lit.neon-panel-cyan .card-title {
+  color: var(--color-info);
+  text-shadow: var(--neon-text-glow-cyan);
+}
+
+.card.neon-panel .card-media {
+  background: transparent;
+  border-bottom: 1px solid var(--neon-line);
 }
 
 /* == fifty-fifty == */
@@ -1265,6 +1372,70 @@ hr.page-break::after {
   box-shadow: 0 0 14px -5px var(--color-primary);
 }
 
+/* Neon's state light: a badge with a lamp in front of the word. The lamp
+ * takes the badge's own colour; a plain .badge.neon-light is unlit, grey
+ * and without glow, which is the point: dark means off. */
+.badge.neon-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.2em 0.8em 0.2em 0.65em;
+  background: var(--bg-color);
+  border-color: var(--neon-line-strong);
+  color: var(--text-muted-color);
+  box-shadow: none;
+}
+
+.badge.neon-light::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: var(--radius-full);
+  background: var(--border-color);
+  border: 1px solid var(--neon-line-strong);
+  flex: none;
+}
+
+.badge.neon-light.badge-done::before,
+.badge.neon-light.badge-active::before,
+.badge.neon-light.neon-light-warn::before,
+.badge.neon-light.neon-light-cyan::before {
+  background: currentColor;
+  border-color: currentColor;
+  box-shadow: 0 0 6px currentColor, 0 0 14px currentColor;
+}
+
+.badge.neon-light.badge-done {
+  background: var(--bg-color);
+  color: var(--color-success);
+  border-color: var(--color-success);
+  box-shadow: 0 0 14px -5px var(--color-success);
+}
+
+.badge.neon-light.badge-active {
+  background: var(--bg-color);
+  color: var(--color-primary-strong);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 14px -5px var(--color-primary);
+}
+
+.badge.neon-light.neon-light-warn {
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+  box-shadow: 0 0 14px -5px var(--color-warning);
+}
+
+.badge.neon-light.neon-light-cyan {
+  color: var(--color-info);
+  border-color: var(--color-info);
+  box-shadow: 0 0 14px -5px var(--color-info);
+}
+
 /* == table == */
 .table-wrap {
   overflow-x: auto;
@@ -1295,6 +1466,47 @@ hr.page-break::after {
 
 .data-table tbody tr:last-child td {
   border-bottom: 0;
+}
+
+/* Neon's status board: the data table as a wall of lamps. Rows are
+ * hairlines on the page colour, the first column is the display face, the
+ * last column is right-aligned for the state light, and a hovered row lifts
+ * a little light along its left edge. */
+.data-table.neon-status th {
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--neon-line-strong);
+}
+
+.data-table.neon-status td {
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--neon-line);
+  vertical-align: middle;
+}
+
+.data-table.neon-status td:first-child {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.data-table.neon-status th:last-child,
+.data-table.neon-status td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.data-table.neon-status tbody tr:hover {
+  background: transparent;
+  box-shadow: inset 3px 0 0 var(--color-info), inset 10px 0 18px -14px var(--neon-cyan);
+}
+
+.table-wrap:has(> .neon-status) {
+  background: var(--bg-color);
 }
 
 /* == author-card == */
@@ -1841,56 +2053,46 @@ hr.page-break::after {
 }
 
 /* == flare == */
-/* Neon's extras: a haze of two blurred tubes fixed behind the page, glow
- * utilities for text and boxes, and a "sign" — a lit pill label. Only the
- * haze needs markup, and it lives in `.neon-flare`. The haze breathes; it
- * holds still under prefers-reduced-motion. */
-.neon-haze {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.neon-tube {
-  position: absolute;
-  width: 46rem;
-  height: 14rem;
-  border-radius: var(--radius-full);
-  filter: blur(90px);
-  opacity: 0.8;
-  animation: neon-breathe 9s ease-in-out infinite alternate;
-}
-
-.neon-tube:nth-child(1) {
-  background: var(--neon-haze-rose);
-  top: -6rem;
-  right: -12rem;
-  transform: rotate(-18deg);
-}
-
-.neon-tube:nth-child(2) {
-  background: var(--neon-haze-cyan);
-  bottom: -6rem;
-  left: -14rem;
-  transform: rotate(14deg);
-  animation-delay: -4.5s;
-}
-
-@keyframes neon-breathe {
-  from { opacity: 0.55; }
-  to { opacity: 1; }
-}
-
+/* Neon's extras. The signature is lit lettering: .neon-text turns a run of
+ * words into a tube, and .neon-strike makes it strike once when the page
+ * opens (real tubes do). Around it: a pill sign for a label, a lit strip
+ * for a heading, a dated rail, and glow as a class for any block. Only the
+ * rail is markup; the rest are classes. */
 .neon-text {
   color: var(--color-primary-strong);
-  text-shadow: var(--neon-text-glow);
+  text-shadow:
+    0 0 1px var(--color-primary-strong),
+    0 0 10px var(--neon-rose),
+    var(--neon-text-glow),
+    0 0 60px var(--neon-rose);
 }
 
 .neon-text-cyan {
   color: var(--color-info);
-  text-shadow: var(--neon-text-glow-cyan);
+  text-shadow:
+    0 0 1px var(--color-info),
+    0 0 10px var(--neon-cyan),
+    var(--neon-text-glow-cyan),
+    0 0 60px var(--neon-cyan);
+}
+
+/* The strike: a tube coming on. Runs once, about two seconds, then holds.
+ * Under reduced motion the sign is simply on. */
+.neon-strike {
+  display: inline-block;
+  animation: neon-strike 2.2s steps(1, end) 1 both;
+}
+
+@keyframes neon-strike {
+  0% { opacity: 0.25; text-shadow: none; }
+  6% { opacity: 1; }
+  9% { opacity: 0.3; text-shadow: none; }
+  14% { opacity: 1; }
+  17% { opacity: 0.55; text-shadow: none; }
+  21% { opacity: 1; }
+  38% { opacity: 1; }
+  41% { opacity: 0.7; }
+  44%, 100% { opacity: 1; }
 }
 
 .neon-glow {
@@ -1901,6 +2103,8 @@ hr.page-break::after {
   box-shadow: var(--shadow-2), var(--neon-glow-cyan);
 }
 
+/* The sign: a lit pill label with a steady lamp. Use it where a plainer
+ * template would use a kicker. */
 .neon-sign {
   display: inline-flex;
   align-items: center;
@@ -1926,7 +2130,6 @@ hr.page-break::after {
   border-radius: var(--radius-full);
   background: var(--color-primary);
   box-shadow: 0 0 8px var(--color-primary);
-  animation: neon-flicker 3s steps(1, end) infinite;
 }
 
 .neon-sign-cyan {
@@ -1941,14 +2144,125 @@ hr.page-break::after {
   box-shadow: 0 0 8px var(--color-info);
 }
 
-@keyframes neon-flicker {
-  0%, 92%, 96%, 100% { opacity: 1; }
-  94% { opacity: 0.35; }
+/* The marquee: a lit heading strip. Small tracked caps, a hairline above
+ * and below, items separated by lamps. It carries the facts a page wants
+ * read first: a spec line, a status line, a date line. */
+.neon-marquee {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--neon-line);
+  border-bottom: 1px solid var(--neon-line);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+  list-style: none;
+  margin: 0;
+}
+
+.neon-marquee > * {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+.neon-marquee > * + *::before {
+  content: "";
+  width: 0.35em;
+  height: 0.35em;
+  border-radius: var(--radius-full);
+  background: var(--color-info);
+  box-shadow: 0 0 6px var(--color-info), 0 0 12px var(--neon-cyan);
+}
+
+.neon-marquee strong {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.neon-marquee a {
+  color: inherit;
+}
+
+/* The rail: a dated list. A tube runs down the left; each entry hangs its
+ * date beside a lamp and puts its content to the right. A lit lamp is the
+ * current entry (.neon-rail-current). */
+.neon-rail {
+  list-style: none;
+  padding: 0 0 0 calc(var(--space-5) + 1rem);
+  margin: 0;
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+}
+
+.neon-rail::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(var(--color-primary), var(--color-info) 60%, transparent);
+  box-shadow: 0 0 10px var(--neon-rose);
+}
+
+.neon-rail > li {
+  position: relative;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.neon-rail > li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * (var(--space-5) + 1rem) + 0.2rem);
+  top: 0.35rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-color);
+  border: 1px solid var(--neon-line-strong);
+}
+
+.neon-rail > li.neon-rail-current::before {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary), 0 0 18px var(--neon-rose);
+}
+
+.neon-rail time {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-info);
+}
+
+.neon-rail h3,
+.neon-rail h2 {
+  font-size: var(--font-size-lg);
+}
+
+.neon-rail > li > p {
+  color: var(--text-muted-color);
+  max-width: 60ch;
+}
+
+.neon-rail .row {
+  gap: var(--space-2);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .neon-tube,
-  .neon-sign::before,
+  .neon-strike,
   .card-feature:hover,
   .card-feature:focus-within {
     animation: none;

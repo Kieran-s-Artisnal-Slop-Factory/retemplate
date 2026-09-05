@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Get started — Glassy</title>
+  <title>Get started, Glassy</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -65,36 +65,36 @@
 <header class="page-header">
   <p class="kicker">Get started</p>
   <h1>Take the folder, keep four things</h1>
-  <p>Glassy is a complete template: two stylesheets, one small script, a folder of art. There is nothing to install and nothing to build.</p>
+  <p>Glassy is a complete template: two stylesheets, one small script, a folder of art. Nothing to install, nothing to build, no fonts to load.</p>
 </header>
-<h2>1. Copy the folder</h2>
+<h2>Copy the folder</h2>
 <p>Copy <code>templates/glassy/</code> into your project. Inside it, two sets of files:</p>
 <div class="grid-2">
-  <article class="card">
+  <article class="card glassy-deep">
     <div class="card-body">
       <h3 class="card-title">Keep: the install set</h3>
       <ul>
-        <li><code>css/theme.css</code> — the tokens and the palette</li>
-        <li><code>css/global.css</code> — every component and layout</li>
-        <li><code>js/theme.js</code> — the light/dark toggle</li>
-        <li><code>assets/</code> — favicon and placeholder art (swap for your own)</li>
+        <li><code>css/theme.css</code>, the tokens, the palette and the glass recipe</li>
+        <li><code>css/global.css</code>, every component and layout</li>
+        <li><code>js/theme.js</code>, the light/dark toggle</li>
+        <li><code>assets/</code>, favicon and placeholder art; swap for your own</li>
         <li><code>README.md</code></li>
       </ul>
     </div>
   </article>
-  <article class="card">
+  <article class="card glassy-shallow">
     <div class="card-body">
       <h3 class="card-title">Delete: the showcase</h3>
       <ul>
         <li><code>index.html</code>, <code>blogpost.html</code>, <code>forms.html</code>, <code>sidebar.html</code></li>
-        <li><code>docs/</code> — these pages</li>
-        <li><code>example/</code> — a three-page demo site, unless you want to start from it</li>
-        <li><code>js/copy.js</code> — only the docs use it</li>
+        <li><code>docs/</code>, these pages</li>
+        <li><code>example/</code>, the studio site, unless you want to start from it</li>
+        <li><code>js/copy.js</code>, which only the docs use</li>
       </ul>
     </div>
   </article>
 </div>
-<h2>2. Put this at the top of every page</h2>
+<h2>Put this at the top of every page</h2>
 <p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script must stay a plain, synchronous script above the stylesheets: that is what applies the stored scheme before the first paint.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code>&lt;!doctype html&gt;
 &lt;html lang="en" data-theme="glassy"&gt;
@@ -112,18 +112,20 @@
   &lt;!-- your page --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
-<h2>3. Write HTML</h2>
-<p>Use the classes documented under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a comfortable width. The <a href="../example/index.html">example site</a> is a small real site built this way, and <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
-<h2>Starting from the example instead</h2>
+<h2>Put the orbs behind it</h2>
+<p>Right after <code>&lt;body&gt;</code>, add the orbs block from the <a href="components/flare.html">flare page</a>. Glass needs colour behind it; without the orbs the sheets sit on the gradient alone and read flatter than they should.</p>
+<h2>Write HTML</h2>
+<p>Use the classes documented under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a comfortable width. Then compose by depth: one deep sheet for the thing to read first, ordinary sheets for the rest, shallow ones for what should sit back, and <code>glassy-float</code> where one block should hang off the last. The <a href="../example/index.html">studio site</a> is a small real site built this way, and <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
+<h2>Starting from the studio site instead</h2>
 <p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they currently point one folder up). Everything the example uses is documented here.</p>
 <h2>The theme toggle</h2>
-<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto → light → dark → auto and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme actually in effect.</p>
+<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto, light, dark, auto and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme actually in effect.</p>
 <h2>Browsers</h2>
-<p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups and <code>color-mix()</code>, with no polyfills.</p>
+<p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups, <code>color-mix()</code> and <code>backdrop-filter</code>, with no polyfills.</p>
 <h2>Fonts</h2>
-<p>Glassy uses your system's fonts, so nothing is downloaded. The look comes from the glass, not the type.</p>
+<p>Glassy uses your system's fonts, so nothing is downloaded. The type is set light at the two large sizes and semibold below them; the labels are small, wide-tracked capitals. If your system has no light weight, the browser falls back to regular and the page still holds.</p>
 <h2>Two lines to delete</h2>
-<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar — a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
+<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar, a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
 <p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>
 <h2>Using the theme in retoken</h2>
 <p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on.</p>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Flare — Neon</title>
+  <title>Flare: Neon</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -68,34 +68,84 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Neon adds light: a haze behind the page, glow you can put on text or on a box, and a lit sign for the one label a page wants to shout. Only the haze is markup; the rest are classes.</p>
+  <p>Flare is what a template adds beyond the contract. Neon adds light, under one rule: glow is state. The signature is the sign, a headline set as tube lettering that strikes once when the page opens. Around it are a lit strip, a dated rail, a pill label and glow as a class. Only the rail is markup; the rest are classes on elements you already have. The component variants that follow the same rule live on their own pages: the <a href="cards.html">panel</a>, the <a href="badge.html">state light</a>, the <a href="table.html">status board</a> and the <a href="buttons.html">outline button</a>.</p>
 </header>
-<h2 id="preview">The haze</h2>
-<p>Two long blurred tubes — one rose, one cyan — fixed behind the whole page, breathing slowly. Put the block right after <code>&lt;body&gt;</code>; it is <code>aria-hidden</code> and never intercepts a click. It is the only flare that needs a <code>.neon-flare</code> wrapper. (The preview below is inert because it sits inside the page rather than behind it.)</p>
-<figure class="example" data-snippet="neon-haze">
-<div class="neon-flare neon-haze" aria-hidden="true">
-  <div class="neon-tube"></div>
-  <div class="neon-tube"></div>
-</div>
-</figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-haze">&lt;div class="neon-flare neon-haze" aria-hidden="true"&gt;
-  &lt;div class="neon-tube"&gt;&lt;/div&gt;
-  &lt;div class="neon-tube"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div>
-<h2 id="variants">Lit text</h2>
-<p>Wrap the words that matter. <code>.neon-text</code> is rose, <code>.neon-text-cyan</code> is cyan; both are a colour and a text-shadow, nothing more, so they work on any heading size.</p>
+<h2 id="preview">The sign</h2>
+<p><code>.neon-text</code> turns a run of words into a tube: the accent colour with a layered text-shadow, so it works at any size. <code>.neon-text-cyan</code> is the cooler tube. Add <code>.neon-strike</code> and the tube strikes once, about two seconds of stutter, then holds; under <code>prefers-reduced-motion</code> it is simply on. Use the strike on one headline per page, not on labels.</p>
 <figure class="example" data-snippet="neon-text">
-<h2>Ship on <span class="neon-text">Friday</span>, sleep on <span class="neon-text-cyan">Saturday</span>.</h2>
+<h2><span class="neon-text neon-strike">Open all night.</span> <span class="neon-text-cyan">Closed Sundays.</span></h2>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-text">&lt;h2&gt;Ship on &lt;span class="neon-text"&gt;Friday&lt;/span&gt;, sleep on &lt;span class="neon-text-cyan"&gt;Saturday&lt;/span&gt;.&lt;/h2&gt;</code></pre></div>
-<h3>The sign</h3>
-<p>A pill with a lit border, a dot that flickers once every few seconds, and uppercase display type. Use it where a plainer template would use a kicker: above a hero heading, on a pricing tier, on a changelog entry. It can be a <code>&lt;span&gt;</code> or a link.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-text">&lt;h2&gt;&lt;span class="neon-text neon-strike"&gt;Open all night.&lt;/span&gt; &lt;span class="neon-text-cyan"&gt;Closed Sundays.&lt;/span&gt;&lt;/h2&gt;</code></pre></div>
+<h2 id="variants">The stage</h2>
+<p>The hero without a picture. <code>.neon-stage</code> on <code>.hero</code> drops the two-column grid, sets the headline very large in Space Grotesk, uppercase and tight, and closes with a hairline. One paragraph and one call under it. The overview and every example page open this way; the headline is the page's state in two or three words.</p>
+<figure class="example" data-snippet="neon-stage">
+<section class="hero neon-stage">
+  <div class="stack">
+    <h1><span class="neon-text neon-strike">Three plans.</span></h1>
+    <p>One paragraph under the sign, and one call.</p>
+    <div class="row"><a class="btn btn-primary btn-lg" href="#variants">Start free</a></div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-stage">&lt;section class="hero neon-stage"&gt;
+  &lt;div class="stack"&gt;
+    &lt;h1&gt;&lt;span class="neon-text neon-strike"&gt;Three plans.&lt;/span&gt;&lt;/h1&gt;
+    &lt;p&gt;One paragraph under the sign, and one call.&lt;/p&gt;
+    &lt;div class="row"&gt;&lt;a class="btn btn-primary btn-lg" href="#variants"&gt;Start free&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>The marquee</h3>
+<p>A lit heading strip: small tracked caps between two hairlines, items separated by cyan lamps. It carries the facts a page wants read first, a spec line or a status line, and sits at the top of <code>main</code> before the stage. A <code>&lt;ul&gt;</code> of short items; the first is usually <code>&lt;strong&gt;</code>.</p>
+<figure class="example" data-snippet="neon-marquee">
+<ul class="neon-marquee">
+  <li><strong>Relay</strong></li>
+  <li>Nine regions</li>
+  <li>Checks every thirty seconds</li>
+  <li><a href="#variants">Subscribe</a></li>
+</ul>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-marquee">&lt;ul class="neon-marquee"&gt;
+  &lt;li&gt;&lt;strong&gt;Relay&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Nine regions&lt;/li&gt;
+  &lt;li&gt;Checks every thirty seconds&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#variants"&gt;Subscribe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
+<h3>The rail</h3>
+<p>A dated list. A tube runs down the left; each entry hangs a date beside a lamp and puts its content to the right. <code>.neon-rail-current</code> lights the lamp of the entry that is now. Entries are plain <code>&lt;li&gt;</code>s: a <code>&lt;time&gt;</code>, a heading (with a version light in a <code>.row</code> if you like), paragraphs, tags. The example changelog is one.</p>
+<figure class="example" data-snippet="neon-rail">
+<ol class="neon-rail">
+  <li class="neon-rail-current">
+    <time datetime="2026-09-01">1 Sep 2026</time>
+    <div class="row"><span class="badge neon-light neon-light-cyan">2.4</span><h3>Incident templates</h3></div>
+    <p>The current entry. Its lamp is lit.</p>
+  </li>
+  <li>
+    <time datetime="2026-08-18">18 Aug 2026</time>
+    <div class="row"><span class="badge neon-light">2.3</span><h3>Heartbeat monitors</h3></div>
+    <p>An earlier entry. Its lamp is dark.</p>
+  </li>
+</ol>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-rail">&lt;ol class="neon-rail"&gt;
+  &lt;li class="neon-rail-current"&gt;
+    &lt;time datetime="2026-09-01"&gt;1 Sep 2026&lt;/time&gt;
+    &lt;div class="row"&gt;&lt;span class="badge neon-light neon-light-cyan"&gt;2.4&lt;/span&gt;&lt;h3&gt;Incident templates&lt;/h3&gt;&lt;/div&gt;
+    &lt;p&gt;The current entry. Its lamp is lit.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;time datetime="2026-08-18"&gt;18 Aug 2026&lt;/time&gt;
+    &lt;div class="row"&gt;&lt;span class="badge neon-light"&gt;2.3&lt;/span&gt;&lt;h3&gt;Heartbeat monitors&lt;/h3&gt;&lt;/div&gt;
+    &lt;p&gt;An earlier entry. Its lamp is dark.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre></div>
+<h3>The pill</h3>
+<p>A lit pill label with a steady lamp. Use it where a plainer template would use a kicker and the label is a state: "Recommended" on a plan, "Live" on a page. It can be a <code>&lt;span&gt;</code> or a link. <code>.neon-sign-cyan</code> for information.</p>
 <figure class="example" data-snippet="neon-sign">
-<p class="row"><span class="neon-sign">New this week</span> <a class="neon-sign neon-sign-cyan" href="#variants">Read the notes</a></p>
+<p class="row"><span class="neon-sign">Recommended</span> <a class="neon-sign neon-sign-cyan" href="#variants">Read the notes</a></p>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-sign">&lt;p class="row"&gt;&lt;span class="neon-sign"&gt;New this week&lt;/span&gt; &lt;a class="neon-sign neon-sign-cyan" href="#variants"&gt;Read the notes&lt;/a&gt;&lt;/p&gt;</code></pre></div>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-sign">&lt;p class="row"&gt;&lt;span class="neon-sign"&gt;Recommended&lt;/span&gt; &lt;a class="neon-sign neon-sign-cyan" href="#variants"&gt;Read the notes&lt;/a&gt;&lt;/p&gt;</code></pre></div>
 <h3>Glow on a box</h3>
-<p>The same glow the hero image and the feature card use, as a class for any block. Rose by default, cyan with the suffix. It is a <code>box-shadow</code>, so it sits under the element and costs nothing on hover.</p>
+<p>The glow the lit panel and the dialog use, as a class for any block. Rose by default, cyan with the suffix. It is a <code>box-shadow</code>, so it sits under the element and costs nothing.</p>
 <figure class="example" data-snippet="neon-glow">
 <div class="grid-2">
   <article class="card neon-glow"><div class="card-body"><h3 class="card-title">Rose</h3><p class="card-text"><code>.neon-glow</code> on an ordinary card.</p></div></article>
@@ -107,21 +157,24 @@
   &lt;article class="card neon-glow-cyan"&gt;&lt;div class="card-body"&gt;&lt;h3 class="card-title"&gt;Cyan&lt;/h3&gt;&lt;p class="card-text"&gt;&lt;code&gt;.neon-glow-cyan&lt;/code&gt; on another.&lt;/p&gt;&lt;/div&gt;&lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
-<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>, except <code>.neon-stage</code>, which sits with <code>.hero</code> under <code>/* == utilities == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
-      <tr><td><code>.neon-haze</code></td><td>Fixed, full-viewport, behind everything; holds the two tubes</td></tr>
-      <tr><td><code>.neon-tube</code></td><td>A blurred bar; the first child is rose, the second cyan, on a slow breathe</td></tr>
-      <tr><td><code>.neon-text</code>, <code>.neon-text-cyan</code></td><td>Lit words: colour plus text-shadow</td></tr>
-      <tr><td><code>.neon-sign</code>, <code>.neon-sign-cyan</code></td><td>A lit pill label with a flickering dot</td></tr>
-      <tr><td><code>.neon-glow</code>, <code>.neon-glow-cyan</code></td><td>The template's glow shadow on any block</td></tr>
-      <tr><td><code>.neon-flare</code></td><td>The wrapper for flare that is markup (only the haze needs it)</td></tr>
+      <tr><td><code>.neon-text</code>, <code>.neon-text-cyan</code></td><td>Tube lettering: colour plus layered text-shadow</td></tr>
+      <tr><td><code>.neon-strike</code></td><td>With .neon-text: strikes once on load, then holds</td></tr>
+      <tr><td><code>.neon-stage</code></td><td>On .hero: no picture, one column, the headline as the sign</td></tr>
+      <tr><td><code>.neon-marquee</code></td><td>A lit heading strip of short caps items</td></tr>
+      <tr><td><code>.neon-rail</code>, <code>.neon-rail-current</code></td><td>A dated list on a tube; the current entry's lamp is lit</td></tr>
+      <tr><td><code>.neon-sign</code>, <code>.neon-sign-cyan</code></td><td>A lit pill label with a lamp</td></tr>
+      <tr><td><code>.neon-glow</code>, <code>.neon-glow-cyan</code></td><td>The glow shadow on any block</td></tr>
+      <tr><td><code>.neon-panel</code>, <code>.neon-light</code>, <code>.neon-status</code>, <code>.neon-outline</code></td><td>Component variants; see <a href="cards.html">cards</a>, <a href="badge.html">badge</a>, <a href="table.html">table</a>, <a href="buttons.html">buttons</a></td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Every glow is built from two tokens in <code>theme.css</code>, <code>--neon-rose</code> and <code>--neon-cyan</code>, which are the two accents at half alpha. Change those two and every glow on the site follows. Nothing in <code>global.css</code> names a colour.</li>
-<li>The haze's breathing, the sign's flicker and the feature card's border sweep all stop under <code>prefers-reduced-motion: reduce</code>; the light stays on, it just holds still.</li>
-<li>The feature card is not flare — it is the contract's <code>.card-feature</code> — but its sweep is Neon's: a conic gradient shown through the card's own border and turned by a registered <code>@property</code> angle. See <a href="cards.html">Cards</a>.</li>
-<li>The haze is two large blurred elements. It is cheap, but on very long pages with many fixed layers you can drop it and keep the static haze that <code>body</code> already carries.</li>
+<li>Every glow is built from two tokens in <code>theme.css</code>, <code>--neon-rose</code> and <code>--neon-cyan</code>, the two accents at half alpha. Change those two and every glow follows. Nothing in <code>global.css</code> names a colour.</li>
+<li>Two things move: the strike, once, and the feature card's border sweep on hover. Both stop under <code>prefers-reduced-motion: reduce</code>; the light stays on and holds still. There is no ambient animation.</li>
+<li>Light one thing per view. A page with three lit panels and a lit headline has no state left to show.</li>
+<li>The feature card is not flare; it is the contract's <code>.card-feature</code>. Its sweep is Neon's: a conic gradient shown through the card's own hairline, turned by a registered <code>@property</code> angle. See <a href="cards.html">Cards</a>.</li>
+<li>A template swap strips every <code>.neon-*</code> class. The rail and the marquee then read as an ordinary list; the stage as an ordinary hero.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
   </main>

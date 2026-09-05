@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Hearth — home</title>
+  <title>Larch Road, home</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,7 +15,7 @@
 </head>
 <body>
 <header class="navbar">
-  <a class="brand" href="index.html">Hearth</a>
+  <a class="brand" href="index.html">Larch Road</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html" aria-current="page">Home</a>
@@ -30,27 +30,71 @@
 <main class="page">
   <section class="hero">
     <div class="stack">
-      <p class="kicker">Thursday, 4 September · 18:42</p>
-      <h1>Good evening. Everything is fine.</h1>
-      <p>Three lights on, the heating idling at 20°, the front door locked since 17:10. Nothing needs you.</p>
+      <p class="kicker">Thursday 4 September, 18:42</p>
+      <h1>Everything is quiet.</h1>
+      <p>Three lights on, the heating idling at 20.5°, the front door locked since 17:10. Nothing needs you.</p>
       <div class="row">
-        <a class="btn btn-primary btn-lg" href="room.html">Living room</a>
-        <button class="btn btn-lg" type="button" onclick="document.getElementById('scene').showModal()">Run a scene</button>
+        <button class="btn btn-primary btn-lg" type="button" onclick="document.getElementById('scene').showModal()">Run a scene</button>
+        <a class="btn btn-lg" href="room.html">Living room</a>
       </div>
     </div>
-    <div class="neumorphic-flare neumorphic-dials">
-      <div class="neumorphic-knob" aria-hidden="true"></div>
+    <div class="neumorphic-flare neumorphic-panel">
+      <div class="neumorphic-dial" style="--angle: 190deg" role="img" aria-label="Inside temperature 20.5 degrees"><span class="neumorphic-dial-value">20.5°</span><span class="neumorphic-dial-label">inside</span></div>
+      <div class="stack">
+        <label class="switch"><input type="checkbox" role="switch" checked><span>Front door locked</span></label>
+        <label class="switch"><input type="checkbox" role="switch" checked><span>Porch light</span></label>
+        <label class="switch"><input type="checkbox" role="switch"><span>Hot water boost</span></label>
+      </div>
+      <div class="neumorphic-panel-row">
+        <div class="neumorphic-segment" role="radiogroup" aria-label="House mode">
+          <input type="radio" id="mode-away" name="mode"><label for="mode-away">Away</label>
+          <input type="radio" id="mode-home" name="mode" checked><label for="mode-home">Home</label>
+          <input type="radio" id="mode-night" name="mode"><label for="mode-night">Night</label>
+        </div>
+        <div class="row">
+          <button class="btn neumorphic-round" type="button" aria-label="Half a degree cooler">−</button>
+          <button class="btn neumorphic-round" type="button" aria-label="Half a degree warmer">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Right now</h2>
+    <div class="grid-3">
+      <article class="card neumorphic-tile">
+        <div class="card-body">
+          <h3 class="card-title">Drawing from the grid</h3>
+          <p class="neumorphic-tile-value">1.2 <small>kW</small></p>
+          <p class="card-text">Heat pump and the oven. Solar stopped at 18:10.</p>
+        </div>
+      </article>
+      <article class="card neumorphic-tile">
+        <div class="card-body">
+          <h3 class="card-title">Battery</h3>
+          <p class="neumorphic-tile-value">62 <small>%</small></p>
+          <p class="card-text">Carries the house until the off-peak rate at 23:00.</p>
+        </div>
+      </article>
+      <article class="card neumorphic-tile">
+        <div class="card-body">
+          <h3 class="card-title">Outside</h3>
+          <p class="neumorphic-tile-value">9 <small>°</small></p>
+          <p class="card-text">Falling to 4° overnight. The heating will start at 06:30.</p>
+        </div>
+      </article>
     </div>
   </section>
 
   <section class="section">
     <h2>Rooms</h2>
+    <p>A raised room has something on in it. A pressed room is dark.</p>
     <div class="grid-3">
       <article class="card">
         <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
           <h3 class="card-title"><a href="room.html">Living room</a></h3>
-          <p class="card-text">21.5° · two lamps on · TV off</p>
+          <p class="card-text">21.5°. Two lamps at 40 percent, television off.</p>
           <label class="switch"><input type="checkbox" role="switch" checked><span>Lights</span></label>
         </div>
       </article>
@@ -58,15 +102,15 @@
         <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
           <h3 class="card-title">Kitchen</h3>
-          <p class="card-text">20° · under-cabinet strip on · dishwasher running, 38 min left</p>
+          <p class="card-text">20°. Under-cabinet strip on. Dishwasher running, 38 minutes left.</p>
           <label class="switch"><input type="checkbox" role="switch" checked><span>Lights</span></label>
         </div>
       </article>
-      <article class="card">
+      <article class="card neumorphic-pressed">
         <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
         <div class="card-body">
           <h3 class="card-title">Bedroom</h3>
-          <p class="card-text">19° · dark · blinds closed at sunset</p>
+          <p class="card-text">19°. Dark since 07:40. Blinds closed at sunset.</p>
           <label class="switch"><input type="checkbox" role="switch"><span>Lights</span></label>
         </div>
       </article>
@@ -74,40 +118,75 @@
   </section>
 
   <section class="section">
+    <h2>Tonight</h2>
+    <form class="neumorphic-well" action="#" method="get">
+      <div class="form-grid">
+        <fieldset>
+          <legend>Until morning</legend>
+          <div class="field">
+            <span class="field-label">Scene at sunset</span>
+            <div class="neumorphic-segment" role="radiogroup" aria-label="Scene at sunset">
+              <input type="radio" id="tn-evening" name="sunset" checked><label for="tn-evening">Evening</label>
+              <input type="radio" id="tn-movie" name="sunset"><label for="tn-movie">Movie</label>
+              <input type="radio" id="tn-none" name="sunset"><label for="tn-none">Nothing</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="tn-night">Overnight target</label>
+            <input id="tn-night" name="night" type="number" min="14" max="22" step="0.5" value="17">
+            <p class="hint">Degrees, from 23:00 until the morning schedule.</p>
+          </div>
+          <div class="field">
+            <label for="tn-lamp">Hallway lamp until</label>
+            <input id="tn-lamp" name="lamp-until" type="time" value="23:30">
+          </div>
+          <div class="field">
+            <label class="switch"><input type="checkbox" role="switch" name="lock" checked><span>Lock the doors at 22:00</span></label>
+            <label class="switch"><input type="checkbox" role="switch" name="charge" checked><span>Charge the battery off-peak</span></label>
+          </div>
+        </fieldset>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Apply for tonight</button>
+          <button class="btn" type="reset">Undo</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
     <section class="fifty-fifty fifty-fifty-reverse">
       <figure><img src="../assets/fifty.svg" alt="" width="900" height="600"></figure>
       <div class="fifty-fifty-body">
-        <p class="kicker">Energy today</p>
-        <h2>9.4 kWh, a little under yesterday</h2>
-        <p>The heat pump did most of it between six and eight this morning. Solar covered the afternoon; the battery is at 62% and will carry the evening.</p>
+        <h2>9.4 kWh today, a little under yesterday</h2>
+        <p>The heat pump did most of it between six and eight this morning. Solar covered the afternoon; the battery is at 62 percent and will carry the evening.</p>
         <a class="btn btn-primary" href="settings.html">Tariff and schedule</a>
       </div>
     </section>
   </section>
 
   <section class="section">
-    <h2>Scenes</h2>
+    <h2>What ran today</h2>
     <div class="accordion-group">
-      <details class="accordion" name="scenes" open>
-        <summary>Evening</summary>
-        <div class="accordion-body"><p>Lamps to 40%, overheads off, heating to 21°, blinds down. Runs at sunset unless someone is out.</p></div>
+      <details class="accordion" name="today" open>
+        <summary>18:05 Evening scene</summary>
+        <div class="accordion-body"><p>Lamps to 40 percent, overheads off, heating to 21°, blinds down. Ran at sunset because someone was home.</p></div>
       </details>
-      <details class="accordion" name="scenes">
-        <summary>Away</summary>
-        <div class="accordion-body"><p>Everything off, heating to 16°, doors locked, a lamp on a random timer after dark.</p></div>
+      <details class="accordion" name="today">
+        <summary>17:10 Front door locked</summary>
+        <div class="accordion-body"><p>Locked by Sam from the hallway panel.</p></div>
       </details>
-      <details class="accordion" name="scenes">
-        <summary>Movie</summary>
-        <div class="accordion-body"><p>Living room lights to 10%, TV on, hallway lamp on so nobody trips.</p></div>
+      <details class="accordion" name="today">
+        <summary>06:30 Heating to 21°</summary>
+        <div class="accordion-body"><p>The weekday schedule. Reached target at 07:05.</p></div>
       </details>
     </div>
   </section>
 
-  <div class="banner banner-info" role="status"><span>i</span><p>The bedroom sensor's battery is at 12%. It will last about a week.</p></div>
+  <div class="banner banner-warning neumorphic-inset" role="status"><span>!</span><p>The bedroom sensor's battery is at 12 percent. About a week left.</p></div>
 
   <dialog class="modal" id="scene" aria-labelledby="scene-title">
     <h2 id="scene-title">Run a scene</h2>
-    <p>Pick one. It runs immediately and can be undone from the room page.</p>
+    <p>It runs straight away. Undo it from the room it changed.</p>
     <form method="dialog" class="modal-actions">
       <button class="btn" type="submit">Cancel</button>
       <button class="btn btn-primary" type="submit" value="evening">Evening</button>
@@ -119,7 +198,7 @@
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Hearth</h2>
+      <h2>Larch Road</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="room.html">Living room</a></li>
@@ -127,9 +206,9 @@
       </ul>
     </section>
     <section>
-      <h2>Status</h2>
+      <h2>Hub</h2>
       <ul>
-        <li>Hub online since 3 May</li>
+        <li>Online since 3 May</li>
         <li>14 devices, 1 low battery</li>
         <li><a href="settings.html">Diagnostics</a></li>
       </ul>

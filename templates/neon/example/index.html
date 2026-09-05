@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Relay — status pages that stay honest</title>
+  <title>Relay: status pages that show green only when proven</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -14,15 +14,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
 </head>
 <body>
-<div class="neon-flare neon-haze" aria-hidden="true">
-  <div class="neon-tube"></div>
-  <div class="neon-tube"></div>
-</div>
 <header class="navbar">
   <a class="brand" href="index.html">Relay</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
-    <a href="index.html" aria-current="page">Home</a>
+    <a href="index.html" aria-current="page">Status</a>
     <a href="pricing.html">Pricing</a>
     <a href="changelog.html">Changelog</a>
     <a href="../index.html">Template overview</a>
@@ -32,41 +28,61 @@
 </header>
 
 <main class="page">
-  <section class="hero">
+  <ul class="neon-marquee">
+    <li><strong>Relay</strong></li>
+    <li>Nine regions</li>
+    <li>Checks every thirty seconds</li>
+    <li>One lamp degraded</li>
+    <li><a href="#subscribe">Subscribe</a></li>
+  </ul>
+
+  <section class="hero neon-stage">
     <div class="stack">
-      <p><span class="neon-sign">All systems normal</span></p>
-      <h1>A status page your customers <span class="neon-text">actually believe</span>.</h1>
-      <p>Relay watches your endpoints from nine regions, writes the incident timeline for you, and refuses to show a green light it cannot prove. Set up in four minutes; the first monitor is free forever.</p>
+      <h1><span class="neon-text neon-strike">Green means proven.</span></h1>
+      <p>Relay watches your endpoints from nine regions and lights a service green only when every region has succeeded in the last two minutes. Anything less is amber, with the failing regions named. The board below is the product.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="pricing.html">Start free</a>
-        <a class="btn btn-lg" href="changelog.html">What shipped this week</a>
       </div>
     </div>
-    <img src="../assets/fifty.svg" alt="" width="900" height="600">
+  </section>
+
+  <section class="section">
+    <h2>The board</h2>
+    <p>Relay's own services, as a customer would see them. One lamp is amber right now; the row says why.</p>
+    <div class="table-wrap">
+      <table class="data-table neon-status">
+        <thead><tr><th>Service</th><th>Regions agreeing</th><th>Last incident</th><th>State</th></tr></thead>
+        <tbody>
+          <tr><td>Status pages (edge)</td><td>9 of 9</td><td>none in 90 days</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td>Checking fleet</td><td>9 of 9</td><td>9 Aug, Sydney DNS</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td>Dashboard and API</td><td>9 of 9</td><td>27 Jul, planned</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td>Webhooks</td><td>9 of 9</td><td>none in 90 days</td><td><span class="badge neon-light badge-done">Up</span></td></tr>
+          <tr><td>Email delivery</td><td>7 of 9</td><td>now: São Paulo and Sydney slow</td><td><span class="badge neon-light neon-light-warn">Degraded</span></td></tr>
+          <tr><td>Legacy v1 API</td><td>retired</td><td>1 Jun, shutdown</td><td><span class="badge neon-light">Off</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <section class="section">
     <h2>What Relay does</h2>
     <div class="grid-3">
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+      <article class="card neon-panel">
         <div class="card-body">
-          <h3 class="card-title">Checks from nine regions</h3>
-          <p class="card-text">HTTP, TCP, DNS and heartbeat monitors every thirty seconds. A single region going quiet is noted; three agreeing is an incident.</p>
+          <h3 class="card-title">Monitors</h3>
+          <p class="card-text"><strong>Four kinds</strong>HTTP, TCP, DNS and heartbeat, every thirty seconds. One region going quiet is noted; three agreeing is an incident.</p>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+      <article class="card neon-panel">
         <div class="card-body">
-          <h3 class="card-title">Incidents that write themselves</h3>
-          <p class="card-text">The timeline starts the moment a check fails and fills in as regions recover. You add the human sentence; Relay keeps the timestamps.</p>
+          <h3 class="card-title">Incidents</h3>
+          <p class="card-text"><strong>Self-written</strong>The timeline starts the moment a check fails and fills in as regions recover. You add the human sentence; Relay keeps the timestamps.</p>
         </div>
       </article>
-      <article class="card">
-        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+      <article class="card neon-panel">
         <div class="card-body">
-          <h3 class="card-title">Subscribers, not refreshers</h3>
-          <p class="card-text">Email, RSS, webhook and Slack. Subscribers hear about a fix at the same second you do, and never see a page that says "investigating" for six hours.</p>
+          <h3 class="card-title">Subscribers</h3>
+          <p class="card-text"><strong>Four channels</strong>Email, RSS, webhook and Slack. They hear about a fix the second you do, and never see "investigating" for six hours.</p>
         </div>
       </article>
     </div>
@@ -76,42 +92,42 @@
     <section class="fifty-fifty fifty-fifty-reverse">
       <figure><img src="../assets/hero.svg" alt="" width="1200" height="500"></figure>
       <div class="fifty-fifty-body">
-        <p class="kicker">Honesty by design</p>
-        <h2>The light only goes green when we can prove it</h2>
-        <p>A monitor shows <em>operational</em> when every region has succeeded in the last two minutes. Anything less is <em>degraded</em>, in amber, with the failing regions listed. There is no setting to change that.</p>
-        <a class="btn btn-primary" href="pricing.html">See the plans</a>
+        <p class="kicker">The rule</p>
+        <h2>No setting turns a lamp green</h2>
+        <p>A monitor shows <em>up</em> when every region has succeeded in the last two minutes. Anything less is <em>degraded</em>, in amber, with the regions listed. There is no override, no "acknowledged", no grace period on the public page.</p>
+        <a class="btn neon-outline-cyan" href="changelog.html">What shipped, and what broke</a>
       </div>
     </section>
   </section>
 
   <section class="section">
-    <h2>Questions people ask before they sign up</h2>
+    <h2>Service notes</h2>
     <div class="accordion-group">
-      <details class="accordion" name="faq" open>
-        <summary>Can I put the status page on my own domain?</summary>
-        <div class="accordion-body"><p>Yes, on every plan including the free one. Point a CNAME at us and Relay issues the certificate.</p></div>
+      <details class="accordion" name="notes" open>
+        <summary>Can the status page sit on my own domain?</summary>
+        <div class="accordion-body"><p>Yes, on every plan including the free one. Point a CNAME at Relay and it issues the certificate.</p></div>
       </details>
-      <details class="accordion" name="faq">
+      <details class="accordion" name="notes">
         <summary>What happens when Relay itself goes down?</summary>
-        <div class="accordion-body"><p>The status pages are served from a static edge that does not depend on the checking fleet, and our own status page is run by a competitor. We think that is the only honest arrangement.</p></div>
+        <div class="accordion-body"><p>Status pages are served from a static edge that does not depend on the checking fleet, and Relay's own status page is run by a competitor. That is the only honest arrangement.</p></div>
       </details>
-      <details class="accordion" name="faq">
+      <details class="accordion" name="notes">
         <summary>Do you store request bodies?</summary>
-        <div class="accordion-body"><p>No. We keep status codes, timings and the first 512 bytes of a failed response, for fourteen days, in the region you choose.</p></div>
+        <div class="accordion-body"><p>No. Status codes, timings and the first 512 bytes of a failed response, for fourteen days, in the region you choose.</p></div>
       </details>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Get the weekly digest</h2>
-    <p>One email a week: what changed, what broke, what we learned. No product tips, no "just checking in".</p>
+  <section class="section" id="subscribe">
+    <h2>The weekly digest</h2>
+    <p>One email a week: what changed, what broke, what was learned. No product tips.</p>
     <form class="form-grid" action="#" method="post">
       <fieldset>
         <legend>Subscribe</legend>
         <div class="field">
           <label for="digest-email">Work email</label>
           <input id="digest-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
-          <p class="hint">We send from digest@relay.example; add it to your allow-list.</p>
+          <p class="hint">Sent from digest@relay.example. Add it to your allow-list.</p>
         </div>
         <div class="field">
           <label for="digest-role">What do you run?</label>
@@ -130,7 +146,7 @@
     </form>
   </section>
 
-  <div class="banner banner-info" role="status"><span>i</span><p>Relay 2.4 shipped on Tuesday with the new incident templates. <a href="changelog.html">Read the changelog.</a></p></div>
+  <div class="banner banner-info" role="status"><span>i</span><p>Relay 2.4 shipped on 1 September with incident templates. <a href="changelog.html">The changelog.</a></p></div>
 </main>
 
 <footer class="footer">
@@ -138,7 +154,7 @@
     <section>
       <h2>Relay</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Status</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="changelog.html">Changelog</a></li>
       </ul>
@@ -148,7 +164,7 @@
       <ul>
         <li>Relay Systems, a fictional company</li>
         <li><a href="mailto:hello@example.com">hello@example.com</a></li>
-        <li>Status: <span class="badge badge-done">Operational</span></li>
+        <li>Relay itself: <span class="badge neon-light badge-done">Up</span></li>
       </ul>
     </section>
     <section>

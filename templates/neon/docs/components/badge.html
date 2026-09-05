@@ -83,12 +83,33 @@
   &lt;span class="badge badge-active"&gt;Active&lt;/span&gt;
   &lt;span class="badge badge-done"&gt;Done&lt;/span&gt;
 &lt;/div&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Neon: the state light</h3>
+<p>Add <code>.neon-light</code> and the badge grows a lamp in front of the word, set in small tracked caps. The lamp takes the badge's colour: <code>.badge-done</code> is green, <code>.neon-light-warn</code> amber, <code>.badge-active</code> rose, <code>.neon-light-cyan</code> cyan. A bare <code>.badge.neon-light</code> is unlit: grey lamp, no glow. That is the rule of the template in one component: lit means on, dark means off.</p>
+<figure class="example" data-snippet="badge-neon-light">
+<div class="row">
+  <span class="badge neon-light badge-done">Up</span>
+  <span class="badge neon-light neon-light-warn">Degraded</span>
+  <span class="badge neon-light badge-active">Down</span>
+  <span class="badge neon-light neon-light-cyan">Planned</span>
+  <span class="badge neon-light">Off</span>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="badge-neon-light">&lt;div class="row"&gt;
+  &lt;span class="badge neon-light badge-done"&gt;Up&lt;/span&gt;
+  &lt;span class="badge neon-light neon-light-warn"&gt;Degraded&lt;/span&gt;
+  &lt;span class="badge neon-light badge-active"&gt;Down&lt;/span&gt;
+  &lt;span class="badge neon-light neon-light-cyan"&gt;Planned&lt;/span&gt;
+  &lt;span class="badge neon-light"&gt;Off&lt;/span&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == badge == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.badge</code></td><td>Small, bold, pill-shaped, bordered</td></tr>
       <tr><td><code>.badge-active</code></td><td>Accent-tinted</td></tr>
       <tr><td><code>.badge-done</code></td><td>Success-tinted</td></tr>
+      <tr><td><code>.neon-light</code></td><td>Neon: a lamp before the word; unlit on its own, lit with a state class</td></tr>
+      <tr><td><code>.neon-light-warn</code>, <code>.neon-light-cyan</code></td><td>With .neon-light: an amber or a cyan lamp</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

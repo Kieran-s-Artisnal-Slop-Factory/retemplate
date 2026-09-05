@@ -101,6 +101,24 @@
   &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
   &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Round, Neumorphic's own</h3>
+<p>One glyph in a raised disc, for stepping a value or switching something on. It takes the primary fill and the size classes like any button. The glyph is not a name: give the button an <code>aria-label</code> that says what it does.</p>
+<figure class="example" data-snippet="button-neumorphic-round">
+<div class="row">
+  <button class="btn neumorphic-round" type="button" aria-label="Cooler">−</button>
+  <button class="btn neumorphic-round" type="button" aria-label="Warmer">+</button>
+  <button class="btn btn-primary neumorphic-round" type="button" aria-label="Power">⏻</button>
+  <button class="btn btn-sm neumorphic-round" type="button" aria-label="Add">+</button>
+  <button class="btn btn-lg neumorphic-round" type="button" aria-label="Play">▶</button>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="button-neumorphic-round">&lt;div class="row"&gt;
+  &lt;button class="btn neumorphic-round" type="button" aria-label="Cooler"&gt;−&lt;/button&gt;
+  &lt;button class="btn neumorphic-round" type="button" aria-label="Warmer"&gt;+&lt;/button&gt;
+  &lt;button class="btn btn-primary neumorphic-round" type="button" aria-label="Power"&gt;⏻&lt;/button&gt;
+  &lt;button class="btn btn-sm neumorphic-round" type="button" aria-label="Add"&gt;+&lt;/button&gt;
+  &lt;button class="btn btn-lg neumorphic-round" type="button" aria-label="Play"&gt;▶&lt;/button&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -110,6 +128,7 @@
       <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
       <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
       <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
+      <tr><td><code>.neumorphic-round</code></td><td>Neumorphic: a round button for a single glyph</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

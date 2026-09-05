@@ -1,19 +1,20 @@
 # Neon
 
-Black zinc, hairline borders and two neon tubes: a rose one for what matters
-and a cyan one for what is merely true. Everything glows rather than fills.
-The light mode is only *less dark* — the ground lifts to a warm grey and the
-text stays off-white, so the glow keeps working and nothing is ever white.
+Signage at night. A flat zinc field, hairline borders at 10 to 15 percent
+white, and two neon tubes: rose for what matters, cyan for what is merely
+true. Glow means state: a lit thing is on, an unlit one is off. The light
+scheme is only *less dark*: the ground lifts to a warm grey and the text
+stays off-white, so the tubes keep working and nothing is ever white.
 Headings in Space Grotesk, body in Inter. Part of
 [retemplate](../../README.md).
 
 ## Take and use
 
-Copy this folder. Keep the **install set** — `css/`, `js/theme.js`,
-`assets/`, this file — and delete the **showcase** — `index.html`,
+Copy this folder. Keep the **install set**: `css/`, `js/theme.js`,
+`assets/`, this file. Delete the **showcase**: `index.html`,
 `blogpost.html`, `forms.html`, `sidebar.html`, `docs/`, `example/`,
-`js/copy.js`. Or keep `example/`, a complete three-page SaaS site (home,
-pricing, changelog), and start from it.
+`js/copy.js`. Or keep `example/`, a complete three-page SaaS status site
+(status board, pricing, changelog), and start from it.
 
 Put this at the top of every page (adjust the paths for sub-folders):
 
@@ -38,19 +39,20 @@ Put this at the top of every page (adjust the paths for sub-folders):
 Then write HTML with the classes in `docs/components/` (open
 `docs/index.html` in a browser for the guided version).
 
-- **Browsers:** Baseline 2024 — `light-dark()`, `:has()`, popovers,
+- **Browsers:** Baseline 2024: `light-dark()`, `:has()`, popovers,
   `<details name>`, `color-mix()`, and `@property` for the feature card's
-  animated border. No polyfills.
-- **Fonts:** Inter (body) and Space Grotesk (headings), from Google Fonts by
-  the `<link>` above. To self-host instead, download the two families from
-  [Google Fonts](https://fonts.google.com/) (both are OFL), put the `woff2`
-  files in a `fonts/` folder beside `css/`, add `@font-face` rules at the top
-  of `css/global.css` pointing at `../fonts/…`, and drop the three lines
-  above. `theme.css` already names the families with a system fallback, so
-  the page reads fine while they load or if they never do.
-- **Script:** `js/theme.js` (the theme toggle, ~45 lines) and a one-line
-  `onclick` on dialog openers. Under a strict CSP, move those calls into a
-  script of your own.
+  turning border. No polyfills.
+- **Fonts:** Inter (body) and Space Grotesk (the sign, headings, labels),
+  from Google Fonts by the `<link>` above. To self-host instead, download
+  the two families from [Google Fonts](https://fonts.google.com/) (both are
+  OFL), put the `woff2` files in a `fonts/` folder beside `css/`, add
+  `@font-face` rules at the top of `css/global.css` pointing at
+  `../fonts/…`, and drop the three lines above. `theme.css` already names
+  the families with a system fallback, so the page reads while they load or
+  if they never do.
+- **Script:** `js/theme.js` (the scheme toggle, about 45 lines) and a
+  one-line `onclick` on dialog openers. Under a strict CSP, move those calls
+  into a script of your own.
 - **Native controls:** both halves are dark, so `global.css` pins `select`,
   `input`, `textarea`, `dialog` and open popovers to `color-scheme: dark`
   and sets `scrollbar-color` on `:root`. The browser never paints a white
@@ -61,29 +63,45 @@ Then write HTML with the classes in `docs/components/` (open
   `<a class="site-link" href="../../index.html">` back to the retemplate
   landing; nothing else points outside the folder.
 
-## Flare
+## Flare and variants
 
-`.neon-haze` (two blurred tubes fixed behind the page; put it right after
-`<body>` inside `<div class="neon-flare">`), `.neon-text` /
-`.neon-text-cyan` (lit words), `.neon-sign` / `.neon-sign-cyan` (a lit pill
-label) and `.neon-glow` / `.neon-glow-cyan` (the glow shadow on any block).
-See `docs/components/flare.html`. The haze's breathing, the sign's flicker
-and the feature card's border sweep all stop under `prefers-reduced-motion`.
+The signature is the sign: `.neon-text` turns a headline into tube
+lettering, `.neon-strike` makes it strike once on load, and `.neon-stage`
+on a `.hero` sets it very large with no picture. Around it, under the same
+rule (glow is state):
+
+- `.neon-marquee`: a lit heading strip of short caps items.
+- `.neon-rail` / `.neon-rail-current`: a dated list on a tube; the current
+  entry's lamp is lit.
+- `.neon-sign` / `.neon-sign-cyan`: a lit pill label.
+- `.neon-glow` / `.neon-glow-cyan`: the glow shadow on any block.
+- `.card.neon-panel`, `.neon-panel-lit`, `.neon-panel-cyan`: the card as
+  a switched sign; light one in a row.
+- `.badge.neon-light` with `.badge-done`, `.badge-active`,
+  `.neon-light-warn`, `.neon-light-cyan`: a state light; bare, it is off.
+- `.data-table.neon-status`: the table as a status board.
+- `.btn.neon-outline` / `.neon-outline-cyan`: an unfilled tube.
+
+See `docs/components/flare.html` and the cards, badge, table and buttons
+pages. Two things move, the strike once and the feature card's sweep on
+hover, and both stop under `prefers-reduced-motion`. There is no ambient
+animation.
 
 ## Swapping templates
 
 Every retemplate template uses the same markup. To move a site from Neon to
 another template, replace `css/` and `assets/`, change `data-theme` on
-`<html>`, remove the fonts `<link>` lines, and remove the
-`<div class="neon-flare">` wrapper and any `.neon-*` classes.
+`<html>`, remove the fonts `<link>` lines, and remove any `.neon-*` classes.
+A rail or a marquee then reads as an ordinary list; a stage as an ordinary
+hero.
 
 ## Using the theme in retoken
 
 The palette block below is a [retoken](https://kieranwood.ca/retoken/theme/)
 theme. Paste it into a retoken site's `theme.css` after the existing palettes
-and select it with `<html data-theme="neon">`. Colours carry over — including
-the never-white light half; the glows, the hairlines and the haze are this
-template's own tokens and stay here.
+and select it with `<html data-theme="neon">`. Colours carry over, including
+the never-white light half; the glows and the hairlines are this template's
+own tokens and stay here.
 
 ```css
 :root[data-theme='neon'],

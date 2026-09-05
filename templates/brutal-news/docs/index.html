@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Get started — Brutal News</title>
+  <title>Get started · Brutal News</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -67,38 +67,40 @@
   <main class="page docs">
 <header class="page-header">
   <p class="kicker">Get started</p>
-  <h1>Take the folder, keep four things</h1>
-  <p>Brutal News is a complete template: two stylesheets, one small script, a folder of art. There is nothing to install and nothing to build.</p>
+  <h1>Take the folder. Keep four things.</h1>
+  <p>Brutal News is a complete template: two stylesheets, one small script, a folder of art and this README. There is nothing to install and nothing to build. The pages open from disk.</p>
 </header>
 <h2>1. Copy the folder</h2>
-<p>Copy <code>templates/brutal-news/</code> into your project. Inside it, two sets of files:</p>
-<div class="grid-2">
-  <article class="card">
+<p>Copy <code>templates/brutal-news/</code> into your project. Inside it are two sets of files.</p>
+<div class="grid-2 brutal-news-ruled">
+  <article class="card brutal-news-story">
     <div class="card-body">
-      <h3 class="card-title">Keep: the install set</h3>
+      <p class="kicker">Keep</p>
+      <h3 class="card-title">The install set</h3>
       <ul>
-        <li><code>css/theme.css</code> — the tokens and the palette</li>
-        <li><code>css/global.css</code> — every component and layout</li>
-        <li><code>js/theme.js</code> — the light/dark toggle</li>
-        <li><code>assets/</code> — favicon and placeholder art (swap for your own)</li>
+        <li><code>css/theme.css</code>: the tokens and the palette</li>
+        <li><code>css/global.css</code>: every component and layout</li>
+        <li><code>js/theme.js</code>: the light and dark toggle</li>
+        <li><code>assets/</code>: favicon and placeholder art, yours to replace</li>
         <li><code>README.md</code></li>
       </ul>
     </div>
   </article>
-  <article class="card">
+  <article class="card brutal-news-story">
     <div class="card-body">
-      <h3 class="card-title">Delete: the showcase</h3>
+      <p class="kicker">Delete</p>
+      <h3 class="card-title">The showcase</h3>
       <ul>
         <li><code>index.html</code>, <code>blogpost.html</code>, <code>forms.html</code>, <code>sidebar.html</code></li>
-        <li><code>docs/</code> — these pages</li>
-        <li><code>example/</code> — a three-page demo site, unless you want to start from it</li>
-        <li><code>js/copy.js</code> — only the docs use it</li>
+        <li><code>docs/</code>: these pages</li>
+        <li><code>example/</code>: the Ashcombe Bugle, three pages, unless you want to start from it</li>
+        <li><code>js/copy.js</code>: only the docs use it</li>
       </ul>
     </div>
   </article>
 </div>
 <h2>2. Put this at the top of every page</h2>
-<p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script must stay a plain, synchronous script above the stylesheets: that is what applies the stored scheme before the first paint.</p>
+<p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script stays a plain, synchronous script above the stylesheets: that is what applies the stored scheme before the first paint. The three font links are optional; see below.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code>&lt;!doctype html&gt;
 &lt;html lang="en" data-theme="brutal-news"&gt;
 &lt;head&gt;
@@ -110,26 +112,29 @@
   &lt;script src="js/theme.js"&gt;&lt;/script&gt;
   &lt;link rel="stylesheet" href="css/theme.css"&gt;
   &lt;link rel="stylesheet" href="css/global.css"&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap"&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;!-- your page --&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre></div>
 <h2>3. Write HTML</h2>
-<p>Use the classes documented under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a comfortable width. The <a href="../example/index.html">example site</a> is a small real site built this way, and <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
+<p>Use the classes documented under <a href="components/index.html">Components</a>. Put a page in <code>&lt;main class="page"&gt;</code> and it gets the measure of a broadsheet column set; wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled. Open with a <a href="components/flare.html">lead</a> if the page has a story to tell, and a <a href="components/flare.html">masthead</a> if it is the front of something. The <a href="../example/index.html">Ashcombe Bugle</a> is a small real site built this way; <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
 <h2>Starting from the example instead</h2>
-<p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they currently point one folder up). Everything the example uses is documented here.</p>
+<p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they point one folder up). Change the name in the masthead and the navbar, the dateline, and the footer. Everything the example uses is documented here.</p>
 <h2>The theme toggle</h2>
-<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto → light → dark → auto and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme actually in effect.</p>
+<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto, light, dark, auto, and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme in effect. Dark mode is the same paper printed in reverse: black paper, white ink, the same red, yellow, cobalt and green.</p>
 <h2>Browsers</h2>
-<p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups and <code>color-mix()</code>, with no polyfills.</p>
+<p>Anything current as of 2024. The template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups and <code>color-mix()</code>, with no polyfills.</p>
 <h2>Fonts</h2>
-<p>Brutal News links <a href="https://fonts.google.com/specimen/Archivo+Black">Archivo Black</a>, <a href="https://fonts.google.com/specimen/Inter">Inter</a> and <a href="https://fonts.google.com/specimen/JetBrains+Mono">JetBrains Mono</a> from Google Fonts (three <code>&lt;link&gt;</code> lines in every showcase page, shown in the head block above). Remove them and the template falls back to Arial Black and your system's sans and mono; the rules and the shadows carry the look on their own.</p>
+<p>Brutal News links <a href="https://fonts.google.com/specimen/Archivo+Black">Archivo Black</a> for headlines, <a href="https://fonts.google.com/specimen/Inter">Inter</a> for body text and <a href="https://fonts.google.com/specimen/JetBrains+Mono">JetBrains Mono</a> for kickers, datelines, buttons and data, from Google Fonts. Remove the three <code>&lt;link&gt;</code> lines and the template falls back to Arial Black and your system's sans and mono. The rules and the shadows carry the look on their own.</p>
 <h2>Two lines to delete</h2>
-<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar — a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
+<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar or sidebar: a link back to the retemplate landing. Remove it. Nothing else in the folder points outside.</p>
 <p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>
 <h2>Using the theme in retoken</h2>
-<p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on.</p>
+<p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on. Note that the border slots are the ink colour: a retoken site wearing this palette rules in black.</p>
 
   </main>
 </div>

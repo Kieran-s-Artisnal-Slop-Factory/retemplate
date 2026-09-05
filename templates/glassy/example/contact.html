@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Contact — Halo Studio</title>
+  <title>Contact, Osier</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -15,8 +15,8 @@
   <div class="glassy-orb"></div>
   <div class="glassy-orb"></div>
 </div>
-<header class="navbar">
-  <a class="brand" href="index.html">Halo Studio</a>
+<header class="navbar glassy-floating">
+  <a class="brand" href="index.html">Osier</a>
   <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
   <nav id="site-nav" popover>
     <a href="index.html">Home</a>
@@ -29,86 +29,94 @@
 </header>
 
 <main class="page">
-  <header class="page-header">
-    <p class="kicker">Contact</p>
-    <h1>Tell us about the project.</h1>
-    <p>A few lines is plenty. We reply within two working days, usually with a time for a call.</p>
-  </header>
+  <div class="glassy-pane glassy-deep">
+    <header class="page-header">
+      <p class="kicker">Contact</p>
+      <h1>Tell us about the project.</h1>
+      <p>A few lines is plenty. We reply within two working days, usually with a time for a call.</p>
+    </header>
 
-  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent.</p></div>
+    <form class="form-grid" action="#" method="get">
+      <fieldset class="glassy-shallow">
+        <legend>You</legend>
+        <div class="field">
+          <label for="c-name">Name</label>
+          <input id="c-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="c-org">Organisation</label>
+          <input id="c-org" name="org" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="c-url">Current website, if any</label>
+          <input id="c-url" name="url" type="url" placeholder="https://">
+        </div>
+      </fieldset>
+      <fieldset class="glassy-shallow">
+        <legend>The project</legend>
+        <div class="field">
+          <span class="field-label">What do you need?</span>
+          <label class="check"><input type="checkbox" name="need" value="site" checked> A website</label>
+          <label class="check"><input type="checkbox" name="need" value="identity"> An identity</label>
+          <label class="check"><input type="checkbox" name="need" value="retainer"> A retainer</label>
+        </div>
+        <div class="field">
+          <label for="c-budget">Budget</label>
+          <select id="c-budget" name="budget">
+            <option value="">Prefer not to say yet</option>
+            <option value="a">Under £5,000</option>
+            <option value="b" selected>£5,000 to £15,000</option>
+            <option value="c">Over £15,000</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="c-when">When would you like to start?</label>
+          <input id="c-when" name="when" type="month">
+          <p class="hint">The next free start is December.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="c-msg">A few lines about it</label>
+          <textarea id="c-msg" name="message" rows="5" placeholder="Who it is for, what it has to do, what is wrong with the current one."></textarea>
+        </div>
+        <div class="field">
+          <label class="switch"><input type="checkbox" role="switch" name="news"><span>Send me the studio's occasional email</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn btn-primary btn-lg" type="submit">Send</button>
+        <button class="btn glassy-ghost" type="reset">Clear</button>
+      </div>
+    </form>
 
-  <form class="form-grid" action="#" method="get">
-    <fieldset>
-      <legend>You</legend>
-      <div class="field">
-        <label for="c-name">Name</label>
-        <input id="c-name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="field">
-        <label for="c-email">Email</label>
-        <input id="c-email" name="email" type="email" autocomplete="email" required>
-      </div>
-      <div class="field">
-        <label for="c-org">Organisation</label>
-        <input id="c-org" name="org" type="text" autocomplete="organization">
-      </div>
-      <div class="field">
-        <label for="c-url">Current website, if any</label>
-        <input id="c-url" name="url" type="url" placeholder="https://">
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>The project</legend>
-      <div class="field">
-        <span class="field-label">What do you need?</span>
-        <label class="check"><input type="checkbox" name="need" value="site" checked> A website</label>
-        <label class="check"><input type="checkbox" name="need" value="identity"> An identity</label>
-        <label class="check"><input type="checkbox" name="need" value="retainer"> A retainer</label>
-      </div>
-      <div class="field">
-        <label for="c-budget">Budget</label>
-        <select id="c-budget" name="budget">
-          <option value="">Prefer not to say yet</option>
-          <option value="a">Under £5,000</option>
-          <option value="b" selected>£5,000 – £15,000</option>
-          <option value="c">Over £15,000</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="c-when">When would you like to start?</label>
-        <input id="c-when" name="when" type="month">
-      </div>
-      <div class="field field-wide">
-        <label for="c-msg">A few lines about it</label>
-        <textarea id="c-msg" name="message" rows="5" placeholder="Who it is for, what it has to do, what is wrong with the current one."></textarea>
-      </div>
-      <div class="field">
-        <label class="switch"><input type="checkbox" role="switch" name="news"><span>Send me the studio's occasional email</span></label>
-      </div>
-    </fieldset>
-    <div class="form-actions">
-      <button class="btn btn-primary btn-lg" type="submit">Send</button>
-      <button class="btn" type="reset">Clear</button>
-    </div>
-  </form>
+    <div class="banner glassy-frost" role="status"><span>i</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent.</p></div>
+  </div>
 
   <section class="section">
-    <section class="fifty-fifty">
-      <figure><img src="../assets/gallery-8.svg" alt="" width="800" height="600"></figure>
-      <div class="fifty-fifty-body">
-        <p class="kicker">Visit</p>
-        <h2>Unit 4, The Old Dairy</h2>
-        <p>Ten minutes' walk from the station, past the library and over the bridge while it is still open. Coffee is on. Tuesdays and Thursdays are best.</p>
-        <a class="btn" href="mailto:hello@example.com">Email instead</a>
-      </div>
-    </section>
+    <div class="grid-2">
+      <article class="card glassy-shallow">
+        <div class="card-body">
+          <h3 class="card-title">Visit</h3>
+          <p class="card-text">Second floor, 14 Finkle Street, Kendal. The door beside the bookshop; ring the top bell. Five minutes from the station. Tuesdays and Thursdays are best, and the coffee is on.</p>
+        </div>
+      </article>
+      <article class="card glassy-shallow">
+        <div class="card-body">
+          <h3 class="card-title">Ring or write</h3>
+          <p class="card-text">01539 000 214, nine to five. <a href="mailto:hello@example.com">hello@example.com</a> at any hour. For a project already under way, ring the two people on it; they gave you their numbers for a reason.</p>
+        </div>
+      </article>
+    </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="footer-columns">
     <section>
-      <h2>Halo Studio</h2>
+      <h2>Osier</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services and prices</a></li>
@@ -118,8 +126,8 @@
     <section>
       <h2>Find us</h2>
       <ul>
-        <li>Unit 4, The Old Dairy, Millbrook</li>
-        <li>01234 567 892</li>
+        <li>Second floor, 14 Finkle Street, Kendal</li>
+        <li>01539 000 214</li>
         <li><a href="mailto:hello@example.com">hello@example.com</a></li>
       </ul>
     </section>
@@ -131,7 +139,7 @@
       </ul>
     </section>
   </div>
-  <p class="footer-note">An example site for the Glassy template. The studio, its clients and its dairy are fictional.</p>
+  <p class="footer-note">An example site for the Glassy template. The studio, its people and its clients are fictional.</p>
 </footer>
 </body>
 </html>
