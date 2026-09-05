@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A blue diamond">
+<rect width="800" height="600" fill="#ffd400"/><g transform="rotate(6 400 300)"><g transform="translate(14 14)"><path d="M400 110 590 300 400 490 210 300z" fill="#111111" /></g><path d="M400 110 590 300 400 490 210 300z" fill="#d4e3ff" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></g>
+</svg>

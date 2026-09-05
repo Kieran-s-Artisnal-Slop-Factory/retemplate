@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="A pink square and a blue circle">
+<rect width="160" height="120" rx="8" fill="#ffd400"/><rect x="26" y="26" width="50" height="50" rx="6" fill="#111111"/><rect x="20" y="20" width="50" height="50" rx="6" fill="#ffd3df" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="116" cy="70" r="26" fill="#111111"/><circle cx="110" cy="64" r="26" fill="#d4e3ff" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

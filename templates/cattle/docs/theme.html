@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-theme="cattle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Theme · Cattle</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Cattle · Theme</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../index.html">Overview</a>
+        <a href="../blogpost.html">Blog post</a>
+        <a href="../forms.html">Forms</a>
+        <a href="../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../docs/index.html">Get started</a>
+        <a href="../docs/theme.html" aria-current="page">Theme</a>
+        <a href="../docs/defaults.html">Defaults</a>
+        <a href="../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../docs/components/index.html">All components</a>
+        <a href="../docs/components/accordion.html">Accordion</a>
+        <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../docs/components/switch.html">Switch</a>
+        <a href="../docs/components/page-break.html">Page break</a>
+        <a href="../docs/components/buttons.html">Buttons</a>
+        <a href="../docs/components/forms.html">Forms</a>
+        <a href="../docs/components/dialog.html">Dialog</a>
+        <a href="../docs/components/navbar.html">Navbar</a>
+        <a href="../docs/components/sidebar.html">Sidebar</a>
+        <a href="../docs/components/banner.html">Banner</a>
+        <a href="../docs/components/badge.html">Badge</a>
+        <a href="../docs/components/table.html">Table</a>
+        <a href="../docs/components/author-card.html">Author card</a>
+        <a href="../docs/components/footer.html">Footer</a>
+        <a href="../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Theme</p>
+  <h1>Tokens and the palette</h1>
+  <p>Everything in Cattle is coloured through tokens. Nineteen palette slots hold the actual colours, each as a light and dark pair; a layer of semantic tokens maps roles onto them; components only ever name a role. This is retoken's system, so the palette below is also a retoken theme.</p>
+</header>
+<h2>The palette, both ways</h2>
+<p>The same nineteen slots rendered with the scheme pinned light and pinned dark. Your toggle does not affect these two panels; that is the point.</p>
+<div class="grid-2">
+<div class="scheme-panel themed" style="color-scheme: light">
+  <p class="kicker">light</p>
+  <div class="swatches">
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0)"></div><code class="swatch-name">--pal-bg0</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0-soft)"></div><code class="swatch-name">--pal-bg0-soft</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg1)"></div><code class="swatch-name">--pal-bg1</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg2)"></div><code class="swatch-name">--pal-bg2</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg3)"></div><code class="swatch-name">--pal-bg3</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg)"></div><code class="swatch-name">--pal-fg</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg-muted)"></div><code class="swatch-name">--pal-fg-muted</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-gray)"></div><code class="swatch-name">--pal-gray</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-red)"></div><code class="swatch-name">--pal-red</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-green)"></div><code class="swatch-name">--pal-green</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-yellow)"></div><code class="swatch-name">--pal-yellow</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-blue)"></div><code class="swatch-name">--pal-blue</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-purple)"></div><code class="swatch-name">--pal-purple</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-aqua)"></div><code class="swatch-name">--pal-aqua</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent)"></div><code class="swatch-name">--pal-accent</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent-strong)"></div><code class="swatch-name">--pal-accent-strong</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-on-accent)"></div><code class="swatch-name">--pal-on-accent</code></div>
+  </div>
+</div>
+<div class="scheme-panel themed" style="color-scheme: dark">
+  <p class="kicker">dark</p>
+  <div class="swatches">
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0)"></div><code class="swatch-name">--pal-bg0</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0-soft)"></div><code class="swatch-name">--pal-bg0-soft</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg1)"></div><code class="swatch-name">--pal-bg1</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg2)"></div><code class="swatch-name">--pal-bg2</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg3)"></div><code class="swatch-name">--pal-bg3</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg)"></div><code class="swatch-name">--pal-fg</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg-muted)"></div><code class="swatch-name">--pal-fg-muted</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-gray)"></div><code class="swatch-name">--pal-gray</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-red)"></div><code class="swatch-name">--pal-red</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-green)"></div><code class="swatch-name">--pal-green</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-yellow)"></div><code class="swatch-name">--pal-yellow</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-blue)"></div><code class="swatch-name">--pal-blue</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-purple)"></div><code class="swatch-name">--pal-purple</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-aqua)"></div><code class="swatch-name">--pal-aqua</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent)"></div><code class="swatch-name">--pal-accent</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent-strong)"></div><code class="swatch-name">--pal-accent-strong</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-on-accent)"></div><code class="swatch-name">--pal-on-accent</code></div>
+  </div>
+</div>
+</div>
+<h2>Semantic tokens</h2>
+<p>What components actually reference. The mapping is retoken's, verbatim, so a component written for one works with the other.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Maps to</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--color-primary</code></td><td><code>--pal-accent</code></td><td>Links, focus rings, primary buttons</td></tr>
+<tr><td><code>--color-primary-strong</code></td><td><code>--pal-accent-strong</code></td><td>Hover state of the above</td></tr>
+<tr><td><code>--color-primary-soft</code></td><td><code>accent mixed into bg0</code></td><td>Tinted backgrounds: active nav, tags</td></tr>
+<tr><td><code>--color-on-primary</code></td><td><code>--pal-on-accent</code></td><td>Text on the primary colour</td></tr>
+<tr><td><code>--bg-color</code></td><td><code>--pal-bg0</code></td><td>The page</td></tr>
+<tr><td><code>--surface-color</code></td><td><code>--pal-bg0-soft</code></td><td>Cards, panels, inputs</td></tr>
+<tr><td><code>--surface-raised-color</code></td><td><code>--pal-bg1</code></td><td>Buttons, table heads, code</td></tr>
+<tr><td><code>--border-color</code></td><td><code>--pal-bg2</code></td><td>Every border</td></tr>
+<tr><td><code>--text-color</code></td><td><code>--pal-fg</code></td><td>Body text</td></tr>
+<tr><td><code>--text-muted-color</code></td><td><code>--pal-fg-muted</code></td><td>Secondary text</td></tr>
+<tr><td><code>--color-success / -soft</code></td><td><code>--pal-green</code></td><td>Banners, badges</td></tr>
+<tr><td><code>--color-danger / -soft</code></td><td><code>--pal-red</code></td><td>Errors, danger buttons</td></tr>
+<tr><td><code>--color-warning / -soft</code></td><td><code>--pal-yellow</code></td><td>Warnings, highlights</td></tr>
+<tr><td><code>--color-info / -soft</code></td><td><code>--pal-blue</code></td><td>Information banners</td></tr>
+<tr><td><code>--shadow-1, --shadow-2</code></td><td><code>--pal-shadow-1, -2</code></td><td>Elevation</td></tr>
+<tr><td><code>--editor-*, --syntax-*</code></td><td><code>various</code></td><td>Code surfaces (retoken's editor tokens; Cattle styles only pre and code)</td></tr>
+</tbody></table></div>
+<h2>Shared tokens</h2>
+<p>Type, spacing, shape and layout. Retoken's editor lists these by name; the values are Cattle's.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--font-body</code></td><td><code>Bitter, 'Roboto Slab', Rockwell, …</code></td><td>Body text, labels, buttons</td></tr>
+<tr><td><code>--font-mono</code></td><td><code>ui-monospace, …</code></td><td>Code</td></tr>
+<tr><td><code>--font-size-sm … --font-size-2xl</code></td><td><code>0.875rem … 1.9rem</code></td><td>Type scale (retoken)</td></tr>
+<tr><td><code>--line-height</code></td><td><code>1.6</code></td><td>Body line height</td></tr>
+<tr><td><code>--space-1 … --space-6</code></td><td><code>0.25rem … 2.5rem</code></td><td>Spacing scale</td></tr>
+<tr><td><code>--radius-sm / -md / -lg / -full</code></td><td><code>2px / 4px / 6px / 999px</code></td><td>Corners: wood and leather are cut square; only rivets and the switch are round</td></tr>
+<tr><td><code>--page-max-width</code></td><td><code>64rem</code></td><td>main.page width</td></tr>
+<tr><td><code>--sidebar-width</code></td><td><code>16rem</code></td><td>The docs sidebar</td></tr>
+<tr><td><code>--panel-width, --toc-width</code></td><td><code>18rem, 15rem</code></td><td>Reserved for retoken's panel and outline</td></tr>
+<tr><td><code>--navbar-height</code></td><td><code>3.75rem</code></td><td>Navbar and top bar</td></tr>
+</tbody></table></div>
+<h3>Retemplate's additions</h3>
+<p>Four tokens retoken does not define, non-namespaced because every template needs a display face and a hero size. Retoken ignores them.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--font-display</code></td><td><code>'Alfa Slab One', Rockwell, …</code></td><td><code>h1</code>, <code>h2</code>, the brand, prices, <code>.cattle-brand</code></td></tr>
+<tr><td><code>--font-weight-display</code></td><td><code>400</code></td><td>Weight of the above (the slab has one)</td></tr>
+<tr><td><code>--font-size-3xl</code></td><td><code>2.5rem</code></td><td>Article h1</td></tr>
+<tr><td><code>--font-size-hero</code></td><td><code>clamp(2.6rem, 1.4rem + 4vw, 4.6rem)</code></td><td>Hero and post titles</td></tr>
+</tbody></table></div>
+<h2>Use this palette in retoken</h2>
+<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="cattle"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; the fonts, the grain, the burn and the leather do not; set type and shape in the editor. The light accent is saddle brown, which carries text on maple but not on dark leather, so the dark accent is brass.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='cattle'],
+[data-theme='cattle'] {
+  --pal-bg0: light-dark(#e8d9bf, #2a1a12);
+  --pal-bg0-soft: light-dark(#f0e4cd, #33221a);
+  --pal-bg1: light-dark(#dcc9a6, #3d2a20);
+  --pal-bg2: light-dark(#c4ad83, #553b2d);
+  --pal-bg3: light-dark(#9e8660, #74533f);
+
+  --pal-fg: light-dark(#2a1a12, #efe2c8);
+  --pal-fg-muted: light-dark(#6b5340, #c9b08e);
+  --pal-gray: light-dark(#8c7a62, #9a8368);
+
+  --pal-red: light-dark(#9c2a1e, #e08a72);
+  --pal-green: light-dark(#4e6b2f, #a3bf7a);
+  --pal-yellow: light-dark(#8a5a12, #e0b866);
+  --pal-blue: light-dark(#3f5c7a, #93aecb);
+  --pal-purple: light-dark(#6d4a6a, #bb9cc0);
+  --pal-aqua: light-dark(#2f6b62, #8ec2b4);
+
+  --pal-accent: light-dark(#7a3b17, #d9a65a);
+  --pal-accent-strong: light-dark(#5a2a0e, #e8bd78);
+  --pal-on-accent: light-dark(#f3e7cf, #2a1a12);
+
+  --pal-shadow-1: light-dark(rgb(42 26 18 / 0.16), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(42 26 18 / 0.28), rgb(0 0 0 / 0.65));
+}</code></pre></div>
+<p>Two things the block deliberately does not do: it never declares a bare <code>:root</code> (pasted into retoken that would override the site's default palette), and it never declares fonts (their <code>url()</code>s would break outside this folder). That is why every page here sets <code>data-theme="cattle"</code> on <code>&lt;html&gt;</code>.</p>
+<h2>Template-only tokens</h2>
+<p>Cattle's own tokens, prefixed <code>--cattle-</code>, live in <code>theme.css</code> after the palette so that <code>global.css</code> stays free of colour literals. They are not part of the retoken paste-in: the burn, the grain and the leather stay here.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--cattle-char</code></td><td><code>light-dark(#1a0e08, #f3e7cf)</code></td><td>The fill of the brand: charred by day, cream by night; rules, the mark, prices</td></tr>
+<tr><td><code>--cattle-scorch-1 … -4</code></td><td><code>light-dark(rgb(74 34 10 / 0.85) …, transparent)</code></td><td>Four rings of scorch, dark and tight to pale and wide; nothing at night</td></tr>
+<tr><td><code>--cattle-tool-shade, --cattle-tool-light</code></td><td><code>light-dark(transparent, rgb(0 0 0 / 0.75)) …</code></td><td>The press and the catch of tooled lettering; nothing by day</td></tr>
+<tr><td><code>--cattle-burn</code></td><td>six <code>text-shadow</code> layers</td><td>The brand on <code>h1</code>, <code>h2</code>, <code>.cattle-brand</code>, prices; one list serves both halves</td></tr>
+<tr><td><code>--cattle-burn-rule</code></td><td>four <code>box-shadow</code> layers</td><td>The scorch on burnt rules (<code>hr</code>, the hero's rules)</td></tr>
+<tr><td><code>--cattle-tooled</code></td><td>two <code>text-shadow</code> layers</td><td>Lettering on leather, both halves</td></tr>
+<tr><td><code>--cattle-leather-bg, -fg, -muted, -soft</code></td><td><code>light-dark(#6b3a1e, #3b2418)</code>, <code>#f3e7cf</code>, …</td><td>The leather panel and what sits on it</td></tr>
+<tr><td><code>--cattle-leather-shade, -light</code></td><td><code>rgb(0 0 0 / 0.7)</code>, <code>rgb(255 236 200 / 0.14)</code></td><td>The two layers of <code>--cattle-tooled</code></td></tr>
+<tr><td><code>--cattle-thread</code></td><td><code>light-dark(#e8cf9a, #d9a65a)</code></td><td>The running stitch; links and kickers on leather</td></tr>
+<tr><td><code>--cattle-brass, -shine, -shade</code></td><td><code>light-dark(#b8862e, #d9a65a)</code>, …</td><td>Brass; the shade is also the dark edge on cards, buttons and fields</td></tr>
+<tr><td><code>--cattle-rivet</code></td><td><code>radial-gradient(…)</code></td><td>A brass rivet: the switch knob, the accordion marker, the rivet button, lightbox controls</td></tr>
+<tr><td><code>--cattle-rope-dark, -light</code></td><td><code>light-dark(#8a6a3c, #6b4f2c)</code>, …</td><td>The two strands of <code>hr.cattle-rope</code></td></tr>
+<tr><td><code>--cattle-grain</code></td><td>an SVG <code>feTurbulence</code> tile, 600 × 240</td><td>Straight maple grain on <code>body</code>, tinted dark at a low alpha</td></tr>
+<tr><td><code>--cattle-leather</code></td><td>an SVG <code>feTurbulence</code> tile, 200 × 200</td><td>Fine pebbling on every leather surface and, at night, the whole page</td></tr>
+<tr><td><code>--cattle-veil</code></td><td><code>light-dark(#e8d9bf, transparent)</code></td><td>The layer between grain and leather on <code>body</code>: hides the leather by day</td></tr>
+<tr><td><code>--cattle-mark</code></td><td>an SVG steer head, as a <code>mask-image</code></td><td>The maker's mark: the page break, <code>.cattle-mark</code>, the feature card</td></tr>
+<tr><td><code>--cattle-scorch-glow</code></td><td><code>light-dark(rgb(90 42 14 / 0.55), rgb(217 166 90 / 0.28))</code></td><td>The scorch under the mark on the feature card</td></tr>
+</tbody></table></div>
+<h2>Light and dark</h2>
+<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. Cattle needs no <code>data-scheme</code> hook: the burn and the tooling are one <code>text-shadow</code> list whose layers are colours, so each half's layers fade to transparent in the other, and the swap from grain to leather on <code>body</code> is a veil that is bg0 by day and nothing by night. Both survive the retoken paste-in.</p>
+
+  </main>
+</div>
+<script src="../js/copy.js"></script>
+</body>
+</html>

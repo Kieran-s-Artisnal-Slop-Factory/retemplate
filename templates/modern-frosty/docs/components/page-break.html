@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Page break · Modern Frosty</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Modern Frosty · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html" aria-current="page">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Page break</h1>
+  <p>A thematic break. The bare <code>&lt;hr&gt;</code> is a rule; <code>.page-break</code> is the template's ornament, which here is a short centred rule with one blue point.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="hr">
+<p>Before the break.</p>
+<hr>
+<p>After the break.</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hr">&lt;p&gt;Before the break.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;After the break.&lt;/p&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>Ornamented</h3>
+<figure class="example" data-snippet="page-break">
+<p>Before the break.</p>
+<hr class="page-break">
+<p>After the break.</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="page-break">&lt;p&gt;Before the break.&lt;/p&gt;
+&lt;hr class="page-break"&gt;
+&lt;p&gt;After the break.&lt;/p&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == page-break == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>hr</code></td><td>A one-pixel rule with vertical space</td></tr>
+      <tr><td><code>hr.page-break</code></td><td>No rule; an ornament drawn with ::after</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Both are the same element, so both mean the same thing to a screen reader: a break between sections.</li>
+<li>The ornament is generated content; change the <code>content</code> string in the stylesheet to change it.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="switch.html">← Switch</a><a href="buttons.html">Buttons →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Leaves at night">
+<rect width="800" height="600" fill="#1e3a2a"/><g transform="rotate(-30 300 330)"><path d="M300 150 C420 222.0 420 420.0 300 510 C180 420.0 180 222.0 300 150Z" fill="#2c6b46"/><path d="M300 177.0V483.0" stroke="#4f9a68" stroke-width="8.6" stroke-linecap="round"/></g><g transform="rotate(25 520 300)"><path d="M520 140 C630 204.0 630 380.0 520 460 C410 380.0 410 204.0 520 140Z" fill="#2c6b46"/><path d="M520 164.0V436.0" stroke="#4f9a68" stroke-width="7.9" stroke-linecap="round"/></g><circle cx="640" cy="120" r="42" fill="#f6faf4" opacity=".85"/><circle cx="200" cy="90" r="5" fill="#f6faf4"/><circle cx="470" cy="70" r="4" fill="#f6faf4"/>
+</svg>

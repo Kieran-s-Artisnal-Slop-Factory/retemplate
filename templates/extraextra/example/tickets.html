@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-theme="extraextra">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Tickets · The Kiln</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Kiln</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="lineup.html">Line-up</a>
+    <a href="tickets.html" aria-current="page">Tickets</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">No booking fee</p>
+    <h1>Tickets</h1>
+    <p>The price on the poster is the price you pay. Buy here and show the email on your phone at the door, or pay at the box office from six on the night if the show has not sold out.</p>
+  </header>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+
+  <section class="section" id="prices">
+    <h2>Three ways in</h2>
+    <div class="grid-3">
+      <article class="card extraextra-poster">
+        <div class="card-body">
+          <p class="kicker">Single show</p>
+          <h3 class="card-title">£14 or less</h3>
+          <p class="card-text">One ticket, one night. Most shows are twelve or fourteen pounds; the Thursday shows are ten or pay what you can. Under-eighteens pay half.</p>
+          <div class="card-actions"><span class="badge badge-active">Most people</span></div>
+        </div>
+      </article>
+      <article class="card extraextra-poster">
+        <div class="card-body">
+          <p class="kicker">Weekend</p>
+          <h3 class="card-title">£24</h3>
+          <p class="card-text">Friday and Saturday of the same weekend, both floors, no re-entry rules between the two nights because you will have gone home in between.</p>
+          <div class="card-actions"><span class="badge">Saves £4</span></div>
+        </div>
+      </article>
+      <article class="card extraextra-poster">
+        <div class="card-body">
+          <p class="kicker">Season</p>
+          <h3 class="card-title">£90</h3>
+          <p class="card-text">Every ticketed show from October to December, about twenty of them, plus a card for a pound off at the bar. Two hundred of these exist and half have gone.</p>
+          <div class="card-actions"><span class="badge badge-done">98 left</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <form class="form-grid" action="#" method="get">
+    <fieldset>
+      <legend>Your order</legend>
+      <div class="field">
+        <label for="t-show">Show</label>
+        <select id="t-show" name="show">
+          <option value="slow-furnace" selected>Fri 3 Oct: Slow Furnace, £14</option>
+          <option value="kettle-drum-club">Sat 4 Oct: Kettle Drum Club, £14</option>
+          <option value="weekend-1">Weekend 3 and 4 Oct, £24</option>
+          <option value="ninety-watt">Fri 17 Oct: Ninety Watt, £10</option>
+          <option value="season">Season, October to December, £90</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="t-qty">Tickets</label>
+        <input id="t-qty" name="qty" type="number" min="1" max="6" value="2" required>
+        <p class="hint">Up to six per order. Groups of more than six, email us.</p>
+      </div>
+      <div class="field">
+        <label for="t-name">Name on the door list</label>
+        <input id="t-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="t-email">Email</label>
+        <input id="t-email" name="email" type="email" autocomplete="email" required>
+        <p class="hint">The ticket goes here. Nothing else does.</p>
+      </div>
+      <div class="field field-wide">
+        <label for="t-code">Discount code</label>
+        <input id="t-code" name="code" type="text" aria-describedby="t-code-error" aria-invalid="true" value="KILN-2019">
+        <p class="error" id="t-code-error">That code expired at the end of 2019.</p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>On the night</legend>
+      <div class="field">
+        <span class="field-label">Ticket type</span>
+        <label class="check"><input type="radio" name="type" value="adult" checked> Adult</label>
+        <label class="check"><input type="radio" name="type" value="under18"> Under eighteen, half price</label>
+        <label class="check"><input type="radio" name="type" value="access"> Access, with a free companion ticket</label>
+      </div>
+      <div class="field">
+        <span class="field-label">Add to the order</span>
+        <label class="check"><input type="checkbox" name="extras" value="platform"> A place on the viewing platform</label>
+        <label class="check"><input type="checkbox" name="extras" value="earplugs" checked> Earplugs at the door, free</label>
+        <label class="check"><input type="checkbox" name="extras" value="poster"> The screen-printed poster, £8</label>
+      </div>
+      <div class="field">
+        <label class="switch"><input type="checkbox" role="switch" name="settimes" checked><span>Text me the set times on the day</span></label>
+        <label class="switch"><input type="checkbox" role="switch" name="news"><span>Email me when each month goes on sale</span></label>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-lg extraextra-shout" type="submit">Pay for tickets</button>
+      <button class="btn" type="reset">Clear the form</button>
+    </div>
+  </form>
+
+  <hr class="page-break">
+
+  <section class="section" id="questions">
+    <h2>Questions at the door</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Can I get a refund?</summary>
+        <div class="accordion-body"><p>If the show is cancelled or moved, yes, in full, without asking. If you cannot come, put the ticket on the returns list from the line-up page and we sell it on for you at face value.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Do I need to print anything?</summary>
+        <div class="accordion-body"><p>No. Show the email on your phone, or tell us the name on the door list. If your phone dies in the queue, the name is enough.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>What time should I arrive?</summary>
+        <div class="accordion-body"><p>Doors are at seven and the first band walks on at eight. If you want the barrier, be in the queue by half past six. If you only want the headliner, half past nine is fine and the queue is gone.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Is there a box office?</summary>
+        <div class="accordion-body"><p>A hatch on Kiln Yard, open from six on show nights only. Cash or card, same prices as here, as long as the show has not sold out.</p></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Kiln</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html">Line-up and set times</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>3 Kiln Yard, Brickfield</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the ExtraExtra template</a></li>
+        <li><a href="../docs/index.html">Get started with ExtraExtra</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the ExtraExtra template. The Kiln, its bands and its balcony are fictional.</p>
+</footer>
+</body>
+</html>

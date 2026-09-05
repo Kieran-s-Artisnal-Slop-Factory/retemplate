@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en" data-theme="cattle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Cattle · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Cattle</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">A retemplate template</p>
+      <div class="cattle-flare"><span class="cattle-mark" aria-hidden="true"></span></div>
+      <h1>Burnt in, not printed on.</h1>
+      <p>Pale maple by day, oiled leather by night. The headings are branded into the board, the chrome around it is saddle leather with a running stitch, and the markup is the same as every other template here. Only the stylesheets and the art differ.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What you take home</h2>
+    <p>Take <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> and you have the whole template; everything else on this page exists to show it. These three are the ordinary card with the <code>cattle-stitched</code> class, which binds the board in a leather frame with the stitch running through it.</p>
+    <div class="grid-3">
+      <article class="card cattle-stitched">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens, the palette, the grain and the burn; <code>global.css</code> holds every rule that uses them.</p>
+        </div>
+      </article>
+      <article class="card cattle-stitched">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Light and dark</h3>
+          <p class="card-text">Every colour is a <code>light-dark()</code> pair. The toggle in the corner cycles auto, light and dark, and remembers the choice. Neither half is ever black or white.</p>
+        </div>
+      </article>
+      <article class="card cattle-stitched">
+        <div class="card-body">
+          <h3 class="card-title">Retoken compatible</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Wood and leather</h2>
+    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>cattle-leather</code> and the block is a leather panel: cream lettering tooled in, thread for the links, a stitch round the edge. Add <code>fifty-fifty-reverse</code> and the image moves to the right.</p>
+    <div class="stack">
+      <section class="fifty-fifty cattle-leather">
+        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Leather</p>
+          <h2>The chrome is leather. The page is wood.</h2>
+          <p>Navbar, sidebar, footer and the author card are saddle leather with a running stitch. Anything else can be, with one class. Inside leather every component recolours itself: cream text, thread links, brass for the rivets.</p>
+          <a class="btn cattle-rivet" href="docs/components/fifty-fifty.html">How it is built</a>
+        </div>
+      </section>
+      <section class="fifty-fifty fifty-fifty-reverse">
+        <figure><img src="assets/gallery-5.svg" alt="" width="800" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">After dark</p>
+          <h2>The board is put away</h2>
+          <p>The dark half is the leather all the way down: deep brown, never black, with a fine pebble grain. The brand stays, tooled in cream instead of burnt. The accent turns to brass, which carries text on leather where saddle brown cannot.</p>
+          <a class="btn" href="docs/theme.html">See both halves</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A menu is a list with prices</h2>
+    <p>Structure carries the information: a name, a price burnt at the end of a dotted leader, a line of description under it. No numbering, no cards. This is <code>cattle-menu</code>, documented under <a href="docs/components/flare.html">flare</a>; the example smokehouse uses it for the whole menu.</p>
+    <div class="cattle-flare">
+      <ul class="cattle-menu">
+        <li><span class="cattle-menu-name">Brisket</span><span class="cattle-menu-price">18</span><span class="cattle-menu-note">Fourteen hours over post oak. Sliced when you order, not before.</span></li>
+        <li><span class="cattle-menu-name">Pork ribs</span><span class="cattle-menu-price">16</span><span class="cattle-menu-note">Half a rack, dry rubbed. Sauce is on the table if you want it.</span></li>
+        <li><span class="cattle-menu-name">Smoked chicken</span><span class="cattle-menu-price">14</span><span class="cattle-menu-note">Half a bird, skin on. Comes off at eleven and again at four.</span></li>
+        <li><span class="cattle-menu-name">Pit beans</span><span class="cattle-menu-price">5</span><span class="cattle-menu-note">Cooked under the brisket, so they catch what falls.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>The boards</h2>
+    <p>Eight marks burnt into maple. Each thumbnail is bound in a thin leather edge. Click one and the lightbox opens on leather; the arrows are plain links, the close button is a form, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A branding iron burnt into a board" width="800" height="600"></a><figcaption>Iron</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A rope knot burnt into a board" width="800" height="600"></a><figcaption>Knot</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A steer head burnt into a board" width="800" height="600"></a><figcaption>Steer</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="A bird burnt into a board" width="800" height="600"></a><figcaption>Bird</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="Smoke rising, burnt into a board" width="800" height="600"></a><figcaption>Smoke</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="A stitched leather patch on a board" width="800" height="600"></a><figcaption>Patch</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="Fence rails burnt into a board" width="800" height="600"></a><figcaption>Rails</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A cleaver burnt into a board" width="800" height="600"></a><figcaption>Cleaver</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A branding iron burnt into a board"><figcaption>The iron, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A rope knot burnt into a board"><figcaption>The knot, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A steer head burnt into a board"><figcaption>The steer, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="A bird burnt into a board"><figcaption>The bird, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="Smoke rising, burnt into a board"><figcaption>Smoke, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="A stitched leather patch on a board"><figcaption>The patch, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="Fence rails burnt into a board"><figcaption>The rails, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A cleaver burnt into a board"><figcaption>The cleaver, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Cards, sideways</h2>
+    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack. Cards have no shadow: wood does not float.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one <em>feature</em> card with an effect of its own. Cattle's is the brand burning in: rest on it and over most of a second the title chars, the scorch spreads, and the mark is pressed into the picture.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The brand burns in</h3>
+        <p class="card-text">A transition on the title's colour and shadow and two pseudo-elements on the picture. Same card markup as the ones above; it also answers to keyboard focus inside the card.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Asked at the counter</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group the same <code>name</code> and opening one closes the others, with no script. The marker is a brass rivet that flattens to a burnt dash.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Where is the slab allowed?</summary>
+        <div class="accordion-body"><p>Alfa Slab One is for <code>h1</code>, <code>h2</code>, the brand, prices and anything you put <code>cattle-brand</code> on. Everything else is Bitter: body copy at 400, labels and buttons at 600 or 700 in tracked capitals.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How much JavaScript is there?</summary>
+        <div class="accordion-body"><p>About forty lines for the scheme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. Everything else is HTML and CSS, the burn included.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and this folder's <code>README.md</code>. There is no <code>fonts/</code> folder unless you self-host the two faces.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>The ledger</h2>
+    <p>Tables sit inside a wrapper that scrolls sideways when they are wider than the page. Headings are tracked capitals over a burnt rule.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Element</th><th>Script</th><th>Docs</th></tr></thead>
+        <tbody>
+          <tr><td>Accordion</td><td><code>&lt;details&gt;</code></td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
+          <tr><td>Lightbox</td><td><code>&lt;dialog&gt;</code></td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
+          <tr><td>Navbar menu</td><td><code>popover</code></td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
+          <tr><td>Switch</td><td><code>&lt;input&gt;</code></td><td>none</td><td><a href="docs/components/switch.html">switch</a></td></tr>
+          <tr><td>Scheme toggle</td><td><code>&lt;button&gt;</code></td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button below opens one; the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Hold the table</h2>
+      <p>Tables are held for fifteen minutes. The dialog traps focus, dims the page behind it and closes on <kbd>Esc</kbd>; all of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="ok">Hold it</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are plates: tracked capitals on wood, on saddle leather (primary) or, with <code>cattle-rivet</code>, on a stitched strap with a brass rivet at each end. A switch is a strap with a rivet that slides. Badges are small stamps; banners carry status.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Order</button>
+      <button class="btn" type="button">Clear</button>
+      <button class="btn btn-danger" type="button">Cancel the order</button>
+      <button class="btn cattle-rivet" type="button">Book a table</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Text me when the brisket is on</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Monthly letter</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">Open</span>
+      <span class="badge badge-done">Sold out</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. The table is held.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>The two fonts come from Google Fonts. The README shows how to self-host them instead.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demonstration; its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>The order did not go through. Nothing failed, but this is how it would look.</p></div>
+    </div>
+  </section>
+
+  <hr class="cattle-rope">
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings, lists, quotes, code, tables, footnotes. The slab appears on the first two heading levels and nowhere else in the text; the rest is Bitter at a comfortable size, with real italics.</p>
+      <blockquote><p>A template is a promise about what markup will look like. The contract is that promise written down.</p></blockquote>
+      <p>The <a href="blogpost.html">blog post</a> runs the full test document through these rules; <a href="docs/defaults.html">defaults</a> shows every bare element without a class on it.</p>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">The pitmaster</strong>
+        <p class="author-bio">Keeps the folder in order. Lights the fire at four, whether or not anyone is coming.</p>
+        <p class="meta"><time datetime="2026-09-05">5 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Cattle</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Cattle is a retemplate template: maple, saddle leather, brass and a brand burnt into the board. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* retemplate — copy.js (docs pages only). A .copy-btn copies the <code> or
+/* retemplate copy.js (docs pages only). A .copy-btn copies the <code> or
  * <pre> beside it, or the element named by its data-copy selector. */
 (function () {
   document.addEventListener('click', function (e) {

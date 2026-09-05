@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" data-theme="breathe">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>This week · Windowsill</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Windowsill</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Today</a>
+    <a href="plant.html">Plants</a>
+    <a href="schedule.html" aria-current="page">Schedule</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Week 36 · Monday 31 August to Sunday 6 September</p>
+      <h1>This week, one <em>stem</em>.</h1>
+      <p>Seven tasks across five plants. The grid shows the week at a glance; the stem under it is the same week as a list, in order, so you can work down it.</p>
+      <div class="row">
+        <button class="btn btn-primary btn-lg" type="button" onclick="document.getElementById('log').showModal()">Log a watering</button>
+        <a class="btn btn-lg breathe-quiet" href="#reminders">Change reminder times</a>
+      </div>
+    </div>
+    <div class="breathe-flare">
+      <div class="row breathe-stats">
+        <dl><dt>This week</dt><dd>7 <small>tasks</small></dd></dl>
+        <dl><dt>Done</dt><dd>1</dd></dl>
+        <dl><dt>Due today</dt><dd>2</dd></dl>
+        <dl><dt>Next quiet day</dt><dd>Thu</dd></dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The week</h2>
+    <p>A drop is a task. Pale drops are done; the mint column is today. Empty means leave it alone.</p>
+    <div class="table-wrap breathe-week">
+      <table class="data-table">
+        <thead><tr><th scope="col">Plant</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col" class="breathe-today">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr></thead>
+        <tbody>
+          <tr><td><a href="plant.html">Monstera</a></td><td class="breathe-drop breathe-done"><span class="visually-hidden">Watered</span></td><td></td><td class="breathe-today"></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Maidenhair fern</td><td></td><td></td><td class="breathe-drop breathe-today"><span class="visually-hidden">Mist</span></td><td></td><td class="breathe-drop"><span class="visually-hidden">Mist</span></td><td></td><td class="breathe-drop"><span class="visually-hidden">Mist</span></td></tr>
+          <tr><td>Pothos</td><td></td><td></td><td class="breathe-drop breathe-today"><span class="visually-hidden">Check the soil</span></td><td></td><td></td><td class="breathe-drop"><span class="visually-hidden">Water</span></td><td></td></tr>
+          <tr><td>Peperomia, left</td><td></td><td></td><td class="breathe-today"></td><td></td><td></td><td class="breathe-drop"><span class="visually-hidden">Water</span></td><td></td></tr>
+          <tr><td>Peperomia, right</td><td></td><td></td><td class="breathe-today"></td><td></td><td></td><td class="breathe-drop"><span class="visually-hidden">Water</span></td><td></td></tr>
+          <tr><td>Snake plant</td><td></td><td></td><td class="breathe-today"></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>In order</h2>
+    <p>The same seven tasks, one stem. Work down it; log each as you go and the node fades.</p>
+    <div class="stack breathe-stem">
+      <article class="card card-horizontal breathe-done">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="A single drop on a leaf" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Monday</p>
+          <h3 class="card-title">Monstera, water until it runs</h3>
+          <p class="card-text">Done, 7:40. Two litres, saucer emptied.</p>
+          <div class="card-actions"><span class="badge badge-done">Watered</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal breathe-now">
+        <figure class="card-media"><img src="../assets/gallery-1.svg" alt="A fern frond" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Wednesday, today</p>
+          <h3 class="card-title">Maidenhair fern, mist and top up the tray</h3>
+          <p class="card-text">Fronds first, then the pebble tray to just under the pebbles.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Due today</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal breathe-now">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="A large leaf close up" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Wednesday, today</p>
+          <h3 class="card-title">Pothos, check the top inch</h3>
+          <p class="card-text">Dry to the first knuckle keeps Saturday; damp pushes it to Sunday.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Check</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-7.svg" alt="A week of seven drops" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Friday</p>
+          <h3 class="card-title">Maidenhair fern, mist</h3>
+          <p class="card-text">Fronds only. The tray should still be wet from Wednesday.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-3.svg" alt="Three pots in a row" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday</p>
+          <h3 class="card-title">Pothos and both peperomias, water</h3>
+          <p class="card-text">Three pots, one sink. Let them drain before they go back, each a quarter turn round.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="Morning light through a window" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Sunday</p>
+          <h3 class="card-title">Maidenhair fern, mist and check the tray</h3>
+          <p class="card-text">Top the tray up if the pebbles are showing. Then the week is done.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="reminders">
+    <h2>Reminders</h2>
+    <p>When Windowsill nudges you, and how. Saved to this device; nothing is sent anywhere.</p>
+    <form class="form-grid" action="#" method="get">
+      <div class="field">
+        <label for="rem-time">Remind me at</label>
+        <select id="rem-time" name="time">
+          <option>7:00</option>
+          <option selected>7:30</option>
+          <option>8:00</option>
+          <option>18:00</option>
+          <option>20:00</option>
+        </select>
+        <p class="hint">Morning is best. You can see the soil in daylight.</p>
+      </div>
+      <div class="field">
+        <label for="rem-lead">Give me warning of</label>
+        <select id="rem-lead" name="lead">
+          <option>The day itself only</option>
+          <option selected>The evening before</option>
+          <option>Two days</option>
+        </select>
+      </div>
+      <div class="field field-wide">
+        <span class="field-label">Quiet days</span>
+        <label class="check"><input type="checkbox" name="quiet" value="sat"> Saturday</label>
+        <label class="check"><input type="checkbox" name="quiet" value="sun" checked> Sunday</label>
+        <p class="hint">Tasks that land on a quiet day are moved to the day before.</p>
+      </div>
+      <div class="field field-wide">
+        <label class="switch"><input type="checkbox" role="switch" checked><span>Weekly summary on Sunday evening</span></label>
+      </div>
+      <div class="field field-wide field-invalid">
+        <label for="rem-email">Email for the summary</label>
+        <input id="rem-email" name="email" type="email" value="you@example" aria-invalid="true" aria-describedby="rem-email-error">
+        <p class="error" id="rem-email-error">That address is missing its ending. Check it and try again.</p>
+      </div>
+      <div class="form-actions field-wide">
+        <button class="btn btn-primary" type="submit">Save reminders</button>
+        <button class="btn" type="reset">Put it back</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>How the week is worked out</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="how" open>
+        <summary>Where do the dates come from?</summary>
+        <div class="accordion-body"><p>Each plant has an interval, in days, and a last-watered date. The next date is one added to the other. Log early or late and the next date moves with you; the interval itself only changes when you do it twice in the same direction.</p></div>
+      </details>
+      <details class="accordion" name="how">
+        <summary>Why is the fern on three days and the snake plant on none?</summary>
+        <div class="accordion-body"><p>A maidenhair fern in a heated room dries in a day, so it is misted every other day and its tray is checked twice a week. A snake plant wants watering about once a month and less in winter; its next drop is in a fortnight.</p></div>
+      </details>
+      <details class="accordion" name="how">
+        <summary>Can I move a task?</summary>
+        <div class="accordion-body"><p>Yes. Drag it on the grid, or open the plant and change the date. The days after it move too, so the interval holds.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="modal" id="log" aria-labelledby="log-title">
+    <h2 id="log-title">Log a watering</h2>
+    <p>Say which plant and how much. The next date moves from today.</p>
+    <form method="dialog">
+      <div class="field">
+        <label for="log-plant">Plant</label>
+        <select id="log-plant" name="plant">
+          <option>Maidenhair fern</option>
+          <option>Pothos</option>
+          <option>Monstera</option>
+          <option>Peperomia, left</option>
+          <option>Peperomia, right</option>
+          <option>Snake plant</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="log-amount">How much</label>
+        <select id="log-amount" name="amount">
+          <option>A little, the top was dry</option>
+          <option selected>Until it ran through</option>
+          <option>Misted only</option>
+          <option>Bottom watered, twenty minutes</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Not now</button>
+        <button class="btn btn-primary" type="submit" value="ok">Log it</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Windowsill</h2>
+      <ul>
+        <li><a href="index.html">Today</a></li>
+        <li><a href="plant.html">Plants</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Help</h2>
+      <ul>
+        <li><a href="schedule.html#reminders">Change reminder times</a></li>
+        <li><a href="plant.html#signs">Signs a plant is unhappy</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Breathe template</a></li>
+        <li><a href="../docs/index.html">Get started with Breathe</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Breathe template. Windowsill, its plants and its sills are fictional.</p>
+</footer>
+</body>
+</html>

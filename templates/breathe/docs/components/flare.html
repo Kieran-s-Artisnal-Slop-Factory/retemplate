@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-theme="breathe">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Breathe</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Breathe · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Breathe's is small and moves slowly: a frond that sways in a breeze, the mint pot it stands in, a row of big numbers for what an app has to say at a glance, and one italic line. Each sits inside a <code>&lt;div class="breathe-flare"&gt;</code> so a template swap can strip it. The sage wash behind the page is not flare; it is a token on <code>&lt;body&gt;</code> and needs no markup.</p>
+</header>
+<h2 id="preview">The frond</h2>
+<p>The signature, and the right half of the overview's hero. An inline SVG: one stem path and six leaves, each in its own <code>&lt;g&gt;</code>. The group <code>breathe-sways</code> rotates from the base of the picture over <code>--breathe-breath</code> (seven seconds) by <code>--breathe-sway</code> (2.4 degrees) and back; the left and right leaves rotate from their own bases a little behind it, in opposite phase, so the plant moves like one thing in slow air. Colours are <code>currentColor</code> (the leaf token) and <code>--breathe-leaf-light</code>; draw your own plant with the same class names and it will move the same way.</p>
+<figure class="example" data-snippet="breathe-frond">
+<div class="breathe-flare">
+  <div class="breathe-pot">
+    <svg class="breathe-frond" viewBox="0 0 300 330" aria-hidden="true">
+      <g class="breathe-sways">
+        <path d="M150 330C149 300 152 240 149 180C147 130 148 100 146 78" fill="none" stroke-width="5" stroke-linecap="round" style="stroke: var(--breathe-stem)"/>
+        <g class="breathe-leaf-l"><path d="M149 300C110 300 70 280 60 235C100 232 140 262 149 300Z" fill="currentColor"/></g>
+        <g class="breathe-leaf-r"><path d="M151 260C190 258 230 236 240 190C200 190 162 222 151 260Z" style="fill: var(--breathe-leaf-light)"/></g>
+        <g class="breathe-leaf-l"><path d="M148 215C105 214 66 190 58 145C98 146 138 178 148 215Z" style="fill: var(--breathe-leaf-light)"/></g>
+        <g class="breathe-leaf-r"><path d="M150 170C186 168 224 144 232 98C194 100 160 134 150 170Z" fill="currentColor"/></g>
+        <g class="breathe-leaf-l"><path d="M147 125C112 124 84 104 78 66C110 68 138 94 147 125Z" fill="currentColor"/></g>
+        <g class="breathe-leaf-r"><path d="M146 80C132 60 130 30 148 8C166 30 162 60 146 80Z" style="fill: var(--breathe-leaf-light)"/></g>
+      </g>
+    </svg>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-frond">&lt;div class="breathe-flare"&gt;
+  &lt;div class="breathe-pot"&gt;
+    &lt;svg class="breathe-frond" viewBox="0 0 300 330" aria-hidden="true"&gt;
+      &lt;g class="breathe-sways"&gt;
+        &lt;path d="M150 330C149 300 152 240 149 180C147 130 148 100 146 78" fill="none" stroke-width="5" stroke-linecap="round" style="stroke: var(--breathe-stem)"/&gt;
+        &lt;g class="breathe-leaf-l"&gt;&lt;path d="M149 300C110 300 70 280 60 235C100 232 140 262 149 300Z" fill="currentColor"/&gt;&lt;/g&gt;
+        &lt;g class="breathe-leaf-r"&gt;&lt;path d="M151 260C190 258 230 236 240 190C200 190 162 222 151 260Z" style="fill: var(--breathe-leaf-light)"/&gt;&lt;/g&gt;
+        &lt;g class="breathe-leaf-l"&gt;&lt;path d="M148 215C105 214 66 190 58 145C98 146 138 178 148 215Z" style="fill: var(--breathe-leaf-light)"/&gt;&lt;/g&gt;
+        &lt;g class="breathe-leaf-r"&gt;&lt;path d="M150 170C186 168 224 144 232 98C194 100 160 134 150 170Z" fill="currentColor"/&gt;&lt;/g&gt;
+        &lt;g class="breathe-leaf-l"&gt;&lt;path d="M147 125C112 124 84 104 78 66C110 68 138 94 147 125Z" fill="currentColor"/&gt;&lt;/g&gt;
+        &lt;g class="breathe-leaf-r"&gt;&lt;path d="M146 80C132 60 130 30 148 8C166 30 162 60 146 80Z" style="fill: var(--breathe-leaf-light)"/&gt;&lt;/g&gt;
+      &lt;/g&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">The rest</h2>
+<h3>The pot</h3>
+<p>A mint panel with the leaf cut. It holds the frond in the hero, and on the example's plant page it holds the plant's picture, which takes the same cut. Anything you put in it sits at the bottom centre.</p>
+<figure class="example" data-snippet="breathe-pot">
+<div class="breathe-flare">
+  <div class="breathe-pot">
+    <img src="../../assets/hero.svg" alt="A monstera in a clay pot under a window" width="900" height="1000">
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-pot">&lt;div class="breathe-flare"&gt;
+  &lt;div class="breathe-pot"&gt;
+    &lt;img src="../../assets/hero.svg" alt="A monstera in a clay pot under a window" width="900" height="1000"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Stats</h3>
+<p>What an app has to say about itself in one glance: big numbers in Manrope with small labels under them. A <code>.row</code> of <code>&lt;dl&gt;</code>s, one term and one value each, so the pairs stay pairs for a screen reader; the CSS puts the number first. A <code>&lt;small&gt;</code> inside the value is a unit.</p>
+<figure class="example" data-snippet="breathe-stats">
+<div class="breathe-flare">
+  <div class="row breathe-stats">
+    <dl><dt>Plants</dt><dd>12</dd></dl>
+    <dl><dt>Due today</dt><dd>2</dd></dl>
+    <dl><dt>Next watering</dt><dd>4 <small>days</small></dd></dl>
+    <dl><dt>Streak</dt><dd>31 <small>days</small></dd></dl>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-stats">&lt;div class="breathe-flare"&gt;
+  &lt;div class="row breathe-stats"&gt;
+    &lt;dl&gt;&lt;dt&gt;Plants&lt;/dt&gt;&lt;dd&gt;12&lt;/dd&gt;&lt;/dl&gt;
+    &lt;dl&gt;&lt;dt&gt;Due today&lt;/dt&gt;&lt;dd&gt;2&lt;/dd&gt;&lt;/dl&gt;
+    &lt;dl&gt;&lt;dt&gt;Next watering&lt;/dt&gt;&lt;dd&gt;4 &lt;small&gt;days&lt;/small&gt;&lt;/dd&gt;&lt;/dl&gt;
+    &lt;dl&gt;&lt;dt&gt;Streak&lt;/dt&gt;&lt;dd&gt;31 &lt;small&gt;days&lt;/small&gt;&lt;/dd&gt;&lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Aside</h3>
+<p>One line in Instrument Serif italic, in the accent, for a sentence that deserves to be said slowly. The same face sets the one <code>&lt;em&gt;</code> a heading is allowed; use it for nothing else.</p>
+<figure class="example" data-snippet="breathe-aside">
+<div class="breathe-flare">
+  <p class="breathe-aside">A plant does not need a reminder. You do.</p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-aside">&lt;div class="breathe-flare"&gt;
+  &lt;p class="breathe-aside"&gt;A plant does not need a reminder. You do.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="component-variants">Variants of contract components</h2>
+<p>Breathe also gives five contract components a variant of its own. They are ordinary components with one more class, so they need no wrapper, and each is documented on its component's page.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>On</th><th>What it makes</th></tr></thead><tbody>
+      <tr><td><code>.breathe-leaf</code></td><td><a href="cards.html#variants">.card</a>, <a href="fifty-fifty.html#variants">.fifty-fifty</a></td><td>The picture takes the leaf cut and sits in from the edge</td></tr>
+      <tr><td><code>.breathe-stem</code></td><td><a href="cards.html#variants">.stack</a> of cards</td><td>A sequence down one thin stem; <code>.breathe-now</code> and <code>.breathe-done</code> mark the cards</td></tr>
+      <tr><td><code>.breathe-quiet</code></td><td><a href="buttons.html#variants">.btn</a></td><td>A text button with an arrow, for the second action</td></tr>
+      <tr><td><code>.breathe-mint</code></td><td><a href="badge.html#variants">.badge</a></td><td>A filled mint pill with a dot, for the state to notice</td></tr>
+      <tr><td><code>.breathe-week</code></td><td><a href="table.html#variants">.table-wrap</a></td><td>A week: a column per day, a drop per task, today tinted mint</td></tr>
+</tbody></table></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>; the hero's own rules are under <code>/* == utilities == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.breathe-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.breathe-frond</code></td><td>The SVG: sized to 26rem at most, coloured with <code>--breathe-leaf</code></td></tr>
+      <tr><td><code>.breathe-sways</code></td><td>The group that rotates from the base; the whole plant</td></tr>
+      <tr><td><code>.breathe-leaf-l</code>, <code>.breathe-leaf-r</code></td><td>A leaf that rotates from its own base, left or right of the stem, a little behind the sway</td></tr>
+      <tr><td><code>.breathe-pot</code></td><td>Mint panel with the leaf cut; contents sit at the bottom centre</td></tr>
+      <tr><td><code>.breathe-stats</code></td><td>On a <code>.row</code>: each <code>&lt;dl&gt;</code> becomes a number over a label</td></tr>
+      <tr><td><code>.breathe-aside</code></td><td>One line in the accent face</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token: <code>--breathe-mint</code>, <code>--breathe-mint-deep</code>, <code>--breathe-mint-ink</code>, <code>--breathe-stem</code>, <code>--breathe-leaf</code>, <code>--breathe-leaf-light</code> in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>The frond is the only thing in the template that moves on its own. <code>--breathe-sway</code> and <code>--breathe-breath</code> set how far and how long; under <code>prefers-reduced-motion: reduce</code> the animation is removed and the plant stands still.</li>
+<li>The leaves rotate with <code>transform-box: fill-box</code>, so each turns from its own base rather than the picture's corner. That needs a browser from 2023 on, which the rest of the template needs anyway.</li>
+<li>The frond and the pot are decoration when they hold a drawing; mark the SVG <code>aria-hidden="true"</code> as the example does. The stats and the aside are content and should not be.</li>
+<li>The sage wash (<code>--breathe-sage-wash</code>) is a radial gradient at the top right of <code>body</code>, documented on the <a href="../theme.html">theme page</a>.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

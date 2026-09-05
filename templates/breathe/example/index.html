@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-theme="breathe">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Windowsill · Today</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Windowsill</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Today</a>
+    <a href="plant.html">Plants</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Wednesday · two things to do</p>
+      <h1>Every plant, on its <em>day</em>.</h1>
+      <p>Twelve plants on three sills. Windowsill keeps the watering days so you only have to keep the plants. Today it is the fern and a check on the pothos; everything else can wait.</p>
+      <div class="row">
+        <button class="btn btn-primary btn-lg" type="button" onclick="document.getElementById('log').showModal()">Log a watering</button>
+        <a class="btn btn-lg breathe-quiet" href="schedule.html">Open the week</a>
+      </div>
+      <div class="breathe-flare">
+        <div class="row breathe-stats">
+          <dl><dt>Plants</dt><dd>12</dd></dl>
+          <dl><dt>Due today</dt><dd>2</dd></dl>
+          <dl><dt>Next watering</dt><dd>4 <small>days</small></dd></dl>
+          <dl><dt>Days without a miss</dt><dd>31</dd></dl>
+        </div>
+      </div>
+    </div>
+    <div class="breathe-flare">
+      <div class="breathe-pot">
+        <img src="../assets/hero.svg" alt="A monstera in a clay pot under a window" width="900" height="1000">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Today, then the rest of the week</h2>
+    <p>One stem, top to bottom. The green node is what is due now; the pale ones are behind you.</p>
+    <div class="stack breathe-stem">
+      <article class="card card-horizontal breathe-done">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="A single drop on a leaf" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Monday</p>
+          <h3 class="card-title">Monstera, water until it runs</h3>
+          <p class="card-text">Done, 7:40 in the morning. Two litres, saucer emptied after ten minutes.</p>
+          <div class="card-actions"><span class="badge badge-done">Watered</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal breathe-now">
+        <figure class="card-media"><img src="../assets/gallery-1.svg" alt="A fern frond" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Today</p>
+          <h3 class="card-title">Maidenhair fern, mist and top up the tray</h3>
+          <p class="card-text">The fern wants damp air more than wet soil. Mist the fronds, then fill the pebble tray to just under the pebbles.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Due today</span><a class="btn btn-sm breathe-quiet" href="schedule.html">See the week</a></div>
+        </div>
+      </article>
+      <article class="card card-horizontal breathe-now">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="A large leaf close up" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Today</p>
+          <h3 class="card-title">Pothos, check the top inch</h3>
+          <p class="card-text">A finger in the soil. Dry to the first knuckle means water on Saturday as planned; damp means push it to Sunday.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Check</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-3.svg" alt="Three pots in a row" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday</p>
+          <h3 class="card-title">Pothos and the two peperomias, water</h3>
+          <p class="card-text">All three on the kitchen sill. Water in the sink, let them drain, put them back a quarter turn round.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Your plants</h2>
+    <p>The ones that need you soonest come first.</p>
+    <div class="grid-3">
+      <article class="card breathe-leaf">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="Three pots in a row" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Kitchen sill</p>
+          <h3 class="card-title"><a href="plant.html">Maidenhair fern</a></h3>
+          <p class="card-text">Misted daily, tray topped up. Fussy about draughts.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Due today</span></div>
+        </div>
+      </article>
+      <article class="card breathe-leaf">
+        <figure class="card-media"><img src="../assets/card-4.svg" alt="Leaves on deep green" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Kitchen sill</p>
+          <h3 class="card-title"><a href="plant.html">Pothos</a></h3>
+          <p class="card-text">Every ten days or so. Leans to the window; turn it.</p>
+          <div class="card-actions"><span class="badge">Saturday</span></div>
+        </div>
+      </article>
+      <article class="card breathe-leaf">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="A young plant in a pot" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">Living room, east</p>
+          <h3 class="card-title"><a href="plant.html">Monstera</a></h3>
+          <p class="card-text">Watered Monday. Next in nine days, sooner if the top two inches dry.</p>
+          <div class="card-actions"><span class="badge badge-done">Watered</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <section class="fifty-fifty breathe-leaf">
+      <figure><img src="../assets/fifty.svg" alt="A plant by a hillside of green" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">A new plant</p>
+        <h2>Tell it what you have and it works out the days</h2>
+        <p>Name the plant, say which window it sits in and how big the pot is. Windowsill starts it on a sensible interval and shortens or stretches it as you log what you actually did.</p>
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('add').showModal()">Add a plant</button>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Asked often</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>What if I miss a day?</summary>
+        <div class="accordion-body"><p>Nothing dramatic. The task stays at the top of the stem until you log it, and the next date moves from the day you actually watered, not the day you were meant to.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How does it know how often?</summary>
+        <div class="accordion-body"><p>It starts from the plant's type, the pot size and the window, then learns from what you log. Water early twice and the interval shortens; skip a scheduled day and it stretches. You can set the interval by hand on the plant's page.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Does it work in winter?</summary>
+        <div class="accordion-body"><p>Yes, and it slows everything down. From November to February most intervals stretch by a third, because the plants are barely growing and wet soil in a cold room is how roots rot.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="modal" id="log" aria-labelledby="log-title">
+    <h2 id="log-title">Log a watering</h2>
+    <p>Say which plant and how much. The next date moves from today.</p>
+    <form method="dialog">
+      <div class="field">
+        <label for="log-plant">Plant</label>
+        <select id="log-plant" name="plant">
+          <option>Maidenhair fern</option>
+          <option>Pothos</option>
+          <option>Monstera</option>
+          <option>Peperomia, left</option>
+          <option>Peperomia, right</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="log-amount">How much</label>
+        <select id="log-amount" name="amount">
+          <option>A little, the top was dry</option>
+          <option selected>Until it ran through</option>
+          <option>Misted only</option>
+          <option>Bottom watered, twenty minutes</option>
+        </select>
+        <p class="hint">You can change this later on the plant's page.</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Not now</button>
+        <button class="btn btn-primary" type="submit" value="ok">Log it</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="add" aria-labelledby="add-title">
+    <h2 id="add-title">Add a plant</h2>
+    <p>Three questions. Everything else can be filled in later.</p>
+    <form method="dialog">
+      <div class="field">
+        <label for="add-name">What is it?</label>
+        <input id="add-name" name="name" type="text" placeholder="Snake plant" autocomplete="off">
+        <p class="hint">A common name is fine. Start typing and pick from the list.</p>
+      </div>
+      <div class="field">
+        <label for="add-window">Which window?</label>
+        <select id="add-window" name="window">
+          <option>Kitchen sill, south</option>
+          <option>Living room, east</option>
+          <option>Bedroom, north</option>
+          <option>Somewhere without a window</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="add-pot">Pot across the top</label>
+        <input id="add-pot" name="pot" type="number" min="5" max="60" step="1" placeholder="14">
+        <p class="hint">In centimetres. Bigger pots dry more slowly.</p>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Not now</button>
+        <button class="btn btn-primary" type="submit" value="ok">Add it</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Windowsill</h2>
+      <ul>
+        <li><a href="index.html">Today</a></li>
+        <li><a href="plant.html">Plants</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Help</h2>
+      <ul>
+        <li><a href="schedule.html#reminders">Change reminder times</a></li>
+        <li><a href="plant.html#signs">Signs a plant is unhappy</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Breathe template</a></li>
+        <li><a href="../docs/index.html">Get started with Breathe</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Breathe template. Windowsill, its plants and its sills are fictional.</p>
+</footer>
+</body>
+</html>

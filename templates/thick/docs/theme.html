@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Theme · Thick</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Thick · Theme</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../index.html">Overview</a>
+        <a href="../blogpost.html">Blog post</a>
+        <a href="../forms.html">Forms</a>
+        <a href="../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../docs/index.html">Get started</a>
+        <a href="../docs/theme.html" aria-current="page">Theme</a>
+        <a href="../docs/defaults.html">Defaults</a>
+        <a href="../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../docs/components/index.html">All components</a>
+        <a href="../docs/components/accordion.html">Accordion</a>
+        <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../docs/components/switch.html">Switch</a>
+        <a href="../docs/components/page-break.html">Page break</a>
+        <a href="../docs/components/buttons.html">Buttons</a>
+        <a href="../docs/components/forms.html">Forms</a>
+        <a href="../docs/components/dialog.html">Dialog</a>
+        <a href="../docs/components/navbar.html">Navbar</a>
+        <a href="../docs/components/sidebar.html">Sidebar</a>
+        <a href="../docs/components/banner.html">Banner</a>
+        <a href="../docs/components/badge.html">Badge</a>
+        <a href="../docs/components/table.html">Table</a>
+        <a href="../docs/components/author-card.html">Author card</a>
+        <a href="../docs/components/footer.html">Footer</a>
+        <a href="../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Theme</p>
+  <h1>Tokens and the palette</h1>
+  <p>Everything in Thick is coloured through tokens. Nineteen palette slots hold the actual colours, each as a light and dark pair; a layer of semantic tokens maps roles onto them; components only ever name a role. This is retoken's system, so the palette below is also a retoken theme.</p>
+</header>
+<h2>The palette, both ways</h2>
+<p>The same nineteen slots rendered with the scheme pinned light and pinned dark. Your toggle does not affect these two panels; that is the point.</p>
+<div class="grid-2">
+<div class="scheme-panel themed" style="color-scheme: light">
+  <p class="kicker">light</p>
+  <div class="swatches">
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0)"></div><code class="swatch-name">--pal-bg0</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0-soft)"></div><code class="swatch-name">--pal-bg0-soft</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg1)"></div><code class="swatch-name">--pal-bg1</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg2)"></div><code class="swatch-name">--pal-bg2</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg3)"></div><code class="swatch-name">--pal-bg3</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg)"></div><code class="swatch-name">--pal-fg</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg-muted)"></div><code class="swatch-name">--pal-fg-muted</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-gray)"></div><code class="swatch-name">--pal-gray</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-red)"></div><code class="swatch-name">--pal-red</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-green)"></div><code class="swatch-name">--pal-green</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-yellow)"></div><code class="swatch-name">--pal-yellow</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-blue)"></div><code class="swatch-name">--pal-blue</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-purple)"></div><code class="swatch-name">--pal-purple</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-aqua)"></div><code class="swatch-name">--pal-aqua</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent)"></div><code class="swatch-name">--pal-accent</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent-strong)"></div><code class="swatch-name">--pal-accent-strong</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-on-accent)"></div><code class="swatch-name">--pal-on-accent</code></div>
+  </div>
+</div>
+<div class="scheme-panel themed" style="color-scheme: dark">
+  <p class="kicker">dark</p>
+  <div class="swatches">
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0)"></div><code class="swatch-name">--pal-bg0</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg0-soft)"></div><code class="swatch-name">--pal-bg0-soft</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg1)"></div><code class="swatch-name">--pal-bg1</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg2)"></div><code class="swatch-name">--pal-bg2</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-bg3)"></div><code class="swatch-name">--pal-bg3</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg)"></div><code class="swatch-name">--pal-fg</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-fg-muted)"></div><code class="swatch-name">--pal-fg-muted</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-gray)"></div><code class="swatch-name">--pal-gray</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-red)"></div><code class="swatch-name">--pal-red</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-green)"></div><code class="swatch-name">--pal-green</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-yellow)"></div><code class="swatch-name">--pal-yellow</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-blue)"></div><code class="swatch-name">--pal-blue</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-purple)"></div><code class="swatch-name">--pal-purple</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-aqua)"></div><code class="swatch-name">--pal-aqua</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent)"></div><code class="swatch-name">--pal-accent</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-accent-strong)"></div><code class="swatch-name">--pal-accent-strong</code></div>
+    <div class="swatch"><div class="swatch-color" style="background: var(--pal-on-accent)"></div><code class="swatch-name">--pal-on-accent</code></div>
+  </div>
+</div>
+</div>
+<h2>Semantic tokens</h2>
+<p>What components actually reference. The mapping is retoken's, verbatim, so a component written for one works with the other.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Maps to</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--color-primary</code></td><td><code>--pal-accent</code></td><td>Links, focus rings, primary buttons</td></tr>
+<tr><td><code>--color-primary-strong</code></td><td><code>--pal-accent-strong</code></td><td>Hover state of the above</td></tr>
+<tr><td><code>--color-primary-soft</code></td><td><code>accent mixed into bg0</code></td><td>Tinted backgrounds: active nav, tags</td></tr>
+<tr><td><code>--color-on-primary</code></td><td><code>--pal-on-accent</code></td><td>Text on the primary colour</td></tr>
+<tr><td><code>--bg-color</code></td><td><code>--pal-bg0</code></td><td>The page</td></tr>
+<tr><td><code>--surface-color</code></td><td><code>--pal-bg0-soft</code></td><td>Cards, panels, inputs</td></tr>
+<tr><td><code>--surface-raised-color</code></td><td><code>--pal-bg1</code></td><td>Buttons, table heads, code</td></tr>
+<tr><td><code>--border-color</code></td><td><code>--pal-bg2</code></td><td>Every border</td></tr>
+<tr><td><code>--text-color</code></td><td><code>--pal-fg</code></td><td>Body text</td></tr>
+<tr><td><code>--text-muted-color</code></td><td><code>--pal-fg-muted</code></td><td>Secondary text</td></tr>
+<tr><td><code>--color-success / -soft</code></td><td><code>--pal-green</code></td><td>Banners, badges</td></tr>
+<tr><td><code>--color-danger / -soft</code></td><td><code>--pal-red</code></td><td>Errors, danger buttons</td></tr>
+<tr><td><code>--color-warning / -soft</code></td><td><code>--pal-yellow</code></td><td>Warnings, highlights</td></tr>
+<tr><td><code>--color-info / -soft</code></td><td><code>--pal-blue</code></td><td>Information banners</td></tr>
+<tr><td><code>--shadow-1, --shadow-2</code></td><td><code>--pal-shadow-1, -2</code></td><td>Elevation</td></tr>
+<tr><td><code>--editor-*, --syntax-*</code></td><td><code>various</code></td><td>Code surfaces (retoken's editor tokens; Thick styles only pre and code)</td></tr>
+</tbody></table></div>
+<h2>Shared tokens</h2>
+<p>Type, spacing, shape and layout. Retoken's editor lists these by name; the values are Thick's.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--font-body</code></td><td><code>'Rubik', 'Segoe UI', Roboto, …</code></td><td>Body text</td></tr>
+<tr><td><code>--font-mono</code></td><td><code>ui-monospace, 'Cascadia Code', …</code></td><td>Code</td></tr>
+<tr><td><code>--font-size-sm … --font-size-2xl</code></td><td><code>0.875rem … 2.2rem</code></td><td>Type scale (retoken)</td></tr>
+<tr><td><code>--line-height</code></td><td><code>1.5</code></td><td>Body line height</td></tr>
+<tr><td><code>--space-1 … --space-6</code></td><td><code>0.25rem … 2.5rem</code></td><td>Spacing scale</td></tr>
+<tr><td><code>--radius-sm / -md / -lg / -full</code></td><td><code>8px / 8px / 8px / 999px</code></td><td>One radius; the pill is for nothing here</td></tr>
+<tr><td><code>--page-max-width</code></td><td><code>68rem</code></td><td>main.page width</td></tr>
+<tr><td><code>--sidebar-width</code></td><td><code>16rem</code></td><td>The docs sidebar</td></tr>
+<tr><td><code>--panel-width, --toc-width</code></td><td><code>18rem, 15rem</code></td><td>Reserved for retoken's panel and outline</td></tr>
+<tr><td><code>--navbar-height</code></td><td><code>4rem</code></td><td>Navbar and top bar</td></tr>
+</tbody></table></div>
+<h3>Retemplate's additions</h3>
+<p>Four tokens retoken does not define, non-namespaced because every template needs a display face and a hero size. Retoken ignores them.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--font-display</code></td><td><code>'Rubik', 'Arial Black', …</code></td><td>Headings, brand, card titles, the accordion marker</td></tr>
+<tr><td><code>--font-weight-display</code></td><td><code>900</code></td><td>Weight of the above</td></tr>
+<tr><td><code>--font-size-3xl</code></td><td><code>3rem</code></td><td>Article h1</td></tr>
+<tr><td><code>--font-size-hero</code></td><td><code>clamp(2.4rem, 1.5rem + 3vw, 4rem)</code></td><td>Hero and post titles</td></tr>
+</tbody></table></div>
+<h2>Use this palette in retoken</h2>
+<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="thick"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not; set those in the editor.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='thick'],
+[data-theme='thick'] {
+  --pal-bg0: light-dark(#fffdf5, #141412);
+  --pal-bg0-soft: light-dark(#ffffff, #1c1c19);
+  --pal-bg1: light-dark(#f3efe3, #262620);
+  --pal-bg2: light-dark(#111111, #f5f1e6);
+  --pal-bg3: light-dark(#3d3a35, #c9c4b4);
+
+  --pal-fg: light-dark(#111111, #f5f1e6);
+  --pal-fg-muted: light-dark(#4d4842, #bdb7a6);
+  --pal-gray: light-dark(#7a746a, #8b8577);
+
+  --pal-red: light-dark(#c8264a, #ff7a95);
+  --pal-green: light-dark(#1d7d45, #62d68c);
+  --pal-yellow: light-dark(#8a5a00, #ffd400);
+  --pal-blue: light-dark(#1d55c4, #86adff);
+  --pal-purple: light-dark(#7238c4, #c7a3ff);
+  --pal-aqua: light-dark(#0b6f80, #5cd0e0);
+
+  --pal-accent: light-dark(#111111, #ffd400);
+  --pal-accent-strong: light-dark(#000000, #ffe25c);
+  --pal-on-accent: light-dark(#ffd400, #141412);
+
+  --pal-shadow-1: light-dark(rgb(17 17 17 / 0.16), rgb(0 0 0 / 0.5));
+  --pal-shadow-2: light-dark(rgb(17 17 17 / 0.28), rgb(0 0 0 / 0.7));
+}</code></pre></div>
+<p>Two things the block deliberately does not do: it never declares a bare <code>:root</code> (pasted into retoken that would override the site's default palette), and it never declares fonts (their <code>url()</code>s would break outside this folder). That is why every page here sets <code>data-theme="thick"</code> on <code>&lt;html&gt;</code>.</p>
+<h2>Template-only tokens</h2>
+<p>Thick's own tokens, all prefixed <code>--thick-</code>, live in <code>theme.css</code> after the palette so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in. The outlines are drawn in <code>--border-color</code>, which is the <code>--pal-bg2</code> slot, so a retoken site that adopts the palette gets the ink-coloured borders for free; the shadows use <code>--thick-ink</code>, the same pair as a literal.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
+<tr><td><code>--thick-line</code></td><td><code>3px</code></td><td>The outline weight, everywhere</td></tr>
+<tr><td><code>--thick-offset</code></td><td><code>4px</code></td><td>The small shadow offset: buttons, inputs, thumbnails</td></tr>
+<tr><td><code>--thick-offset-lg</code></td><td><code>8px</code></td><td>The large shadow offset: cards, the hero, the table</td></tr>
+<tr><td><code>--thick-ink</code></td><td><code>light-dark(#111111, #f5f1e6)</code></td><td>What outlines and shadows are drawn in</td></tr>
+<tr><td><code>--thick-shadow</code></td><td><code>4px 4px 0 ink</code></td><td>The small solid shadow</td></tr>
+<tr><td><code>--thick-shadow-lg</code></td><td><code>8px 8px 0 ink</code></td><td>The large solid shadow</td></tr>
+<tr><td><code>--thick-shadow-lift</code></td><td><code>6px 6px 0 ink</code></td><td>The small shadow on hover</td></tr>
+<tr><td><code>--thick-shadow-lg-lift</code></td><td><code>12px 12px 0 ink</code></td><td>The large shadow on hover</td></tr>
+<tr><td><code>--thick-yellow</code></td><td><code>#ffd400</code></td><td>The yellow, the same in both halves</td></tr>
+<tr><td><code>--thick-yellow-deep</code></td><td><code>#f0bf00</code></td><td>The primary button on hover</td></tr>
+<tr><td><code>--thick-on-yellow</code></td><td><code>#111111</code></td><td>Text on the yellow, in both halves</td></tr>
+<tr><td><code>--thick-pink</code></td><td><code>light-dark(#ffd3df, #4a2632)</code></td><td>The first pastel</td></tr>
+<tr><td><code>--thick-blue</code></td><td><code>light-dark(#d4e3ff, #223350)</code></td><td>The second pastel; also inline code</td></tr>
+<tr><td><code>--thick-scrim</code></td><td><code>yellow at 60% / near-black at 78%</code></td><td>Behind an open dialog or drawer</td></tr>
+<tr><td><code>--thick-footer-bg</code></td><td><code>light-dark(#111111, #1c1c19)</code></td><td>The footer slab</td></tr>
+<tr><td><code>--thick-footer-fg</code></td><td><code>light-dark(#e9e4d6, #bdb7a6)</code></td><td>Footer text</td></tr>
+<tr><td><code>--thick-footer-heading</code></td><td><code>#ffd400</code></td><td>Footer headings</td></tr>
+<tr><td><code>--thick-footer-rule</code></td><td><code>off-white at 22%</code></td><td>The rule above the footer note</td></tr>
+<tr><td><code>--thick-pile</code></td><td><code>five layers</code></td><td>The signature: a stack of outlined pink and blue sheets under a picture</td></tr>
+<tr><td><code>--thick-stripes</code></td><td><code>repeating-linear-gradient(…)</code></td><td>The page break's yellow and pink stripes</td></tr>
+</tbody></table></div>
+<h2>Light and dark</h2>
+<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours (a texture, an ornament, <code>content</code>), <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
+
+  </main>
+</div>
+<script src="../js/copy.js"></script>
+</body>
+</html>

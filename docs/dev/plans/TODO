@@ -29,6 +29,20 @@ Before beginning make sure the VERSION is up to date, and create a file called `
     - [x] [refernce](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Empire_State_Building_Entrance_decoration_%286046008895%29.jpg/960px-Empire_State_Building_Entrance_decoration_%286046008895%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail)
   - [x] Gothic; A gothic design inspired website
   - [x] Allegory; A light theme based on angelic imagery and white on gold, a dark theme based on demonic imagery, black on red
+- [ ] Second batch (2026-09-05)
+  - [x] Natural: dirt texture 25 % the size and much more subtle
+  - [x] Neon: current dark becomes light; new dark is a completely black `#141414` ground
+  - [x] ExtraExtra; full-width, aggressive, orange instead of red, distinct from Brutal News
+    - [x] [reference](https://www.whichai.dev/without-design-skill/fable-5.1/5)
+  - [x] Breathe; a breezy green theme for plant apps and sites
+    - [x] [dark reference](https://www.whichai.dev/with-taste-skill/gpt-6-astra/2)
+    - [x] [light reference](https://www.whichai.dev/with-design-skill/muse-spark-1.3-flash/1)
+  - [x] Modern-frosty; lightly frosted, basic minimal, light blue tinges
+    - [x] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/1)
+  - [x] Thick; neobrutalist with bright yellow accents
+    - [x] [reference](https://www.whichai.dev/with-taste-skill/kimi-k3/5)
+  - [ ] Cattle (in progress 2026-09-05); leather and wood, lettering branded into wood, leather accents (owner's reference image)
+  - [ ] Distinctiveness check on each against every built template
 
 ## For human
 

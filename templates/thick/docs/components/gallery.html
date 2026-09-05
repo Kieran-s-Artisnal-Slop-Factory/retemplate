@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Gallery and lightbox · Thick</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Thick · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html" aria-current="page">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Gallery and lightbox</h1>
+  <p>A grid of thumbnails. Each opens a <code>&lt;dialog&gt;</code> lightbox on the matching slide; arrows move between slides; <kbd>Esc</kbd> or the close button dismisses it.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="gallery">
+<ul class="gallery">
+  <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="../../assets/gallery-1.svg" alt="Hills" width="800" height="600"></a><figcaption>Hills</figcaption></figure></li>
+  <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="../../assets/gallery-2.svg" alt="Terracotta" width="800" height="600"></a><figcaption>Terracotta</figcaption></figure></li>
+  <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="../../assets/gallery-3.svg" alt="Peaks" width="800" height="600"></a><figcaption>Peaks</figcaption></figure></li>
+  <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="../../assets/gallery-4.svg" alt="Violet" width="800" height="600"></a><figcaption>Violet</figcaption></figure></li>
+</ul>
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <figure class="lightbox-slide" id="lb-1"><img src="../../assets/gallery-1.svg" alt="Hills"><figcaption>Hills, 1 of 4</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+  <figure class="lightbox-slide" id="lb-2"><img src="../../assets/gallery-2.svg" alt="Terracotta"><figcaption>Terracotta, 2 of 4</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+  <figure class="lightbox-slide" id="lb-3"><img src="../../assets/gallery-3.svg" alt="Peaks"><figcaption>Peaks, 3 of 4</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+  <figure class="lightbox-slide" id="lb-4"><img src="../../assets/gallery-4.svg" alt="Violet"><figcaption>Violet, 4 of 4</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+  <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+</dialog>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="gallery">&lt;ul class="gallery"&gt;
+  &lt;li&gt;&lt;figure&gt;&lt;a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"&gt;&lt;img src="../../assets/gallery-1.svg" alt="Hills" width="800" height="600"&gt;&lt;/a&gt;&lt;figcaption&gt;Hills&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;figure&gt;&lt;a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"&gt;&lt;img src="../../assets/gallery-2.svg" alt="Terracotta" width="800" height="600"&gt;&lt;/a&gt;&lt;figcaption&gt;Terracotta&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;figure&gt;&lt;a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"&gt;&lt;img src="../../assets/gallery-3.svg" alt="Peaks" width="800" height="600"&gt;&lt;/a&gt;&lt;figcaption&gt;Peaks&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;figure&gt;&lt;a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"&gt;&lt;img src="../../assets/gallery-4.svg" alt="Violet" width="800" height="600"&gt;&lt;/a&gt;&lt;figcaption&gt;Violet&lt;/figcaption&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;dialog class="lightbox" id="lightbox" aria-label="Image viewer"&gt;
+  &lt;figure class="lightbox-slide" id="lb-1"&gt;&lt;img src="../../assets/gallery-1.svg" alt="Hills"&gt;&lt;figcaption&gt;Hills, 1 of 4&lt;/figcaption&gt;&lt;nav class="lightbox-nav"&gt;&lt;a href="#lb-4" aria-label="Previous"&gt;‹&lt;/a&gt;&lt;a href="#lb-2" aria-label="Next"&gt;›&lt;/a&gt;&lt;/nav&gt;&lt;/figure&gt;
+  &lt;figure class="lightbox-slide" id="lb-2"&gt;&lt;img src="../../assets/gallery-2.svg" alt="Terracotta"&gt;&lt;figcaption&gt;Terracotta, 2 of 4&lt;/figcaption&gt;&lt;nav class="lightbox-nav"&gt;&lt;a href="#lb-1" aria-label="Previous"&gt;‹&lt;/a&gt;&lt;a href="#lb-3" aria-label="Next"&gt;›&lt;/a&gt;&lt;/nav&gt;&lt;/figure&gt;
+  &lt;figure class="lightbox-slide" id="lb-3"&gt;&lt;img src="../../assets/gallery-3.svg" alt="Peaks"&gt;&lt;figcaption&gt;Peaks, 3 of 4&lt;/figcaption&gt;&lt;nav class="lightbox-nav"&gt;&lt;a href="#lb-2" aria-label="Previous"&gt;‹&lt;/a&gt;&lt;a href="#lb-4" aria-label="Next"&gt;›&lt;/a&gt;&lt;/nav&gt;&lt;/figure&gt;
+  &lt;figure class="lightbox-slide" id="lb-4"&gt;&lt;img src="../../assets/gallery-4.svg" alt="Violet"&gt;&lt;figcaption&gt;Violet, 4 of 4&lt;/figcaption&gt;&lt;nav class="lightbox-nav"&gt;&lt;a href="#lb-3" aria-label="Previous"&gt;‹&lt;/a&gt;&lt;a href="#lb-1" aria-label="Next"&gt;›&lt;/a&gt;&lt;/nav&gt;&lt;/figure&gt;
+  &lt;form method="dialog"&gt;&lt;button class="lightbox-close" type="submit" aria-label="Close"&gt;×&lt;/button&gt;&lt;/form&gt;
+&lt;/dialog&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == gallery == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.gallery</code></td><td>The list of thumbnails: an auto-filling grid</td></tr>
+      <tr><td><code>.lightbox</code></td><td>The dialog; centred, rounded, most of the viewport</td></tr>
+      <tr><td><code>.lightbox-slide</code></td><td>One figure per image; hidden unless targeted (the first shows when none is)</td></tr>
+      <tr><td><code>.lightbox-nav</code></td><td>The previous and next links, floated to the sides</td></tr>
+      <tr><td><code>.lightbox-close</code></td><td>The close button in the corner</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The one line of script is the <code>onclick</code> that calls <code>showModal()</code>; everything else is the URL fragment. A thumbnail is a link to <code>#lb-3</code>, so the browser marks that slide <code>:target</code> and the stylesheet shows it. Prev and next are the same kind of link.</li>
+<li>Because slides are fragments, the browser's back button steps back through the images you viewed. That is a feature until it is not; if you would rather it did not, replace the arrows with buttons and a few lines of script.</li>
+<li>Modal mode supplies the backdrop, focus trapping and <kbd>Esc</kbd>. The page behind stops scrolling while it is open.</li>
+<li>Give every slide and thumbnail the same alt text; the lightbox image is the thumbnail, larger.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="fifty-fifty.html">← Fifty-fifty</a><a href="switch.html">Switch →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

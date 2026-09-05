@@ -32,7 +32,7 @@
 <main class="page">
   <ul class="neon-marquee">
     <li><strong>Neon</strong></li>
-    <li>Zinc, rose, cyan</li>
+    <li>Black, zinc, rose, cyan</li>
     <li>Dark in both halves</li>
     <li>Two fonts, one script</li>
     <li><a href="docs/theme.html">Retoken palette</a></li>
@@ -41,7 +41,7 @@
   <section class="hero neon-stage">
     <div class="stack">
       <h1><span class="neon-text neon-strike">Open all night.</span></h1>
-      <p>Neon is the dark template. The light scheme lifts the ground to grey and stops there; nothing on these pages is ever white. Glow is state: what is lit is on.</p>
+      <p>Neon is the dark template twice. Light is zinc, dark is black, and nothing on these pages is ever white. Glow is state: what is lit is on.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
       </div>
@@ -105,7 +105,7 @@
       <article class="card neon-panel neon-panel-lit">
         <div class="card-body">
           <h3 class="card-title">White, anywhere</h3>
-          <p class="card-text"><strong>None</strong>The light scheme stops at grey. Press the toggle in the corner and the ground lifts; it does not blank.</p>
+          <p class="card-text"><strong>None</strong>Light is zinc, dark is black. Press the toggle in the corner and the ground goes from one to the other; it never blanks.</p>
         </div>
       </article>
       <article class="card neon-panel">
@@ -146,9 +146,9 @@
     <section class="fifty-fifty fifty-fifty-reverse">
       <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
       <div class="fifty-fifty-body">
-        <p class="kicker">Light scheme</p>
-        <h2>Less dark. Never white.</h2>
-        <p>Light lifts the page from <code>#18181b</code> to <code>#3a3a42</code> and steps the surfaces up from there. Text stays off-white; links move to a lighter rose so both halves clear 4.5:1. Native controls, dialogs and open menus are pinned to the dark scheme, so the browser never paints a white picker over a dark page.</p>
+        <p class="kicker">Two schemes</p>
+        <h2>Zinc by day. Black by night.</h2>
+        <p>Light is the reference's zinc, <code>#18181b</code>; dark drops the page to <code>#141414</code> and steps the surfaces up from there. Text stays off-white and the same rose and cyan tubes sit on both grounds, clearing 4.5:1 on each. Native controls, dialogs and open menus are pinned to the dark scheme, so the browser never paints a white picker over a dark page.</p>
         <a class="btn neon-outline" href="docs/theme.html">Tokens and palette</a>
       </div>
     </section>
@@ -162,7 +162,7 @@
       <li class="neon-rail-current">
         <time datetime="2026-09-04">4 Sep 2026</time>
         <h3>Rebuilt as signage</h3>
-        <p>The headline became the sign. The haze behind the page and the flicker on labels were removed; glow now marks state and nothing else. Added: the panel, the state light, the status board, the outline button, the marquee and this rail.</p>
+        <p>The headline became the sign. The haze behind the page and the flicker on labels were removed; glow now marks state and nothing else. Added: the panel, the state light, the status board, the outline button, the marquee and this rail. The schemes swapped: the zinc look is now light, and dark is black.</p>
       </li>
       <li>
         <time datetime="2026-09-03">3 Sep 2026</time>
@@ -172,7 +172,7 @@
       <li>
         <time datetime="2026-09">Sep 2026</time>
         <h3>First build</h3>
-        <p>Copied from <code>plain</code> and re-skinned. Light scheme kept dark; native controls pinned to <code>color-scheme: dark</code>.</p>
+        <p>Copied from <code>plain</code> and re-skinned. Light scheme kept dark, a lifted grey at the time; native controls pinned to <code>color-scheme: dark</code>.</p>
       </li>
     </ol>
   </section>
@@ -182,11 +182,11 @@
     <div class="accordion-group">
       <details class="accordion" name="notes" open>
         <summary>Why is the light scheme still dark?</summary>
-        <div class="accordion-body"><p>Because a neon sign on a white wall is a sticker. The light half's page colour is <code>#3a3a42</code> and the surfaces step up from there. Text stays off-white in both halves; links take a lighter rose so they clear 4.5:1 on the lifted ground.</p></div>
+        <div class="accordion-body"><p>Because a neon sign on a white wall is a sticker. The light half's page colour is zinc, <code>#18181b</code>; the dark half's is black, <code>#141414</code>. Text stays off-white in both, and the rose reads at 4.8:1 on zinc and 5:1 on black.</p></div>
       </details>
       <details class="accordion" name="notes">
         <summary>Why do form fields stay black in light mode?</summary>
-        <div class="accordion-body"><p>Both halves are dark, so the template pins native controls, dialogs and open menus to the dark scheme. The browser never paints a white dropdown or date picker. Inside those elements the palette resolves to its dark half, so a field is always a black well.</p></div>
+        <div class="accordion-body"><p>Both halves are dark, so the template pins native controls, dialogs and open menus to the dark scheme. The browser never paints a white dropdown or date picker. Inside those elements the palette resolves to its black half, so a field is always a black well, a step deeper than the zinc page in light.</p></div>
       </details>
       <details class="accordion" name="notes">
         <summary>How much JavaScript is there?</summary>

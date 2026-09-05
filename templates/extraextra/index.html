@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="extraextra">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>ExtraExtra · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">ExtraExtra</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">Full width. Two colours. One typeface.</p>
+      <h1>Loud on purpose.</h1>
+      <p>ExtraExtra is a poster wall: paper and black type by day, black and orange by night, hard rules, no corners, no shadows, and a condensed face set in capitals as large as the page allows. The markup is the same as every other retemplate template. Only the stylesheets and the art shout.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="extraextra-flare">
+    <div class="extraextra-ticker">
+      <p><span>Two stylesheets</span><span>One script, 47 lines</span><span>Zero build steps</span><span>Three fonts</span><span>Rules 2px, bars 10px</span><span>Corners 0</span><span>Shadows none</span><span>Contrast 5.6 to 1 on paper</span><span>Contrast 6.8 to 1 on black</span></p>
+      <p aria-hidden="true"><span>Two stylesheets</span><span>One script, 47 lines</span><span>Zero build steps</span><span>Three fonts</span><span>Rules 2px, bars 10px</span><span>Corners 0</span><span>Shadows none</span><span>Contrast 5.6 to 1 on paper</span><span>Contrast 6.8 to 1 on black</span></p>
+    </div>
+  </div>
+
+  <section class="section" id="folder">
+    <h2>What is in the folder</h2>
+    <p>Take <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> and you have the whole template; everything else on this page exists to show it. These three are ordinary cards with the <code>extraextra-poster</code> class: no box, a bar on top, the title a size up.</p>
+    <div class="grid-3">
+      <article class="card extraextra-poster">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <p class="kicker">css/</p>
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens, the palette and the one orange; <code>global.css</code> holds every rule that uses them. Nothing else loads but the fonts.</p>
+        </div>
+      </article>
+      <article class="card extraextra-poster">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><rect x="3" y="3" width="18" height="18"/><path d="M12 3v18"/><path d="M12 3h9v18h-9z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <p class="kicker">Schemes</p>
+          <h3 class="card-title">Paper by day, black by night</h3>
+          <p class="card-text">The type inverts, the rules invert, and the orange stays exactly where it is. The toggle in the corner cycles auto, light and dark, and remembers the choice.</p>
+        </div>
+      </article>
+      <article class="card extraextra-poster">
+        <div class="card-body">
+          <p class="kicker">Retoken</p>
+          <h3 class="card-title">The palette pastes into a retoken site</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> is a retoken theme as written. The border slot is the ink, so retoken's own components rule in the same weight. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="extraextra-band" id="orange">
+    <section class="fifty-fifty">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">The orange</p>
+        <h2>One orange, and it only carries black.</h2>
+        <p>Bright orange fails the contrast check for small type on paper, so it is a band colour and never a text colour. Links use a burnt orange that passes on paper; after dark the bright orange passes on black and becomes the accent. The band you are reading is the bright one.</p>
+        <a class="btn btn-primary" href="docs/theme.html">Read the palette</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section" id="wall">
+    <h2>The wall</h2>
+    <p>Eight bills, pasted edge to edge with the ink showing between them. Click one and the lightbox opens in reverse; the arrows are plain links, the close button is a form, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="An orange disc on black" width="800" height="600"></a><figcaption>Disc</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="Black bars on paper" width="800" height="600"></a><figcaption>Bars</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="An orange wedge cutting a black field" width="800" height="600"></a><figcaption>Wedge</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Four black squares on orange" width="800" height="600"></a><figcaption>Squares</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A black half circle on paper with an orange rule" width="800" height="600"></a><figcaption>Half</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Orange stripes on black" width="800" height="600"></a><figcaption>Stripes</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A black ring on orange" width="800" height="600"></a><figcaption>Ring</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Orange triangles on paper" width="800" height="600"></a><figcaption>Triangles</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="An orange disc on black"><figcaption>Disc, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="Black bars on paper"><figcaption>Bars, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="An orange wedge cutting a black field"><figcaption>Wedge, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Four black squares on orange"><figcaption>Squares, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A black half circle on paper with an orange rule"><figcaption>Half, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Orange stripes on black"><figcaption>Stripes, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A black ring on orange"><figcaption>Ring, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Orange triangles on paper"><figcaption>Triangles, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <section class="section" id="sideways">
+    <h2>Cards, sideways</h2>
+    <p>Horizontal cards put the picture on the left or, with <code>card-media-end</code>, on the right, ruled off from the words. Below 30rem they stack.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title"><a href="sidebar.html">The same page with a sidebar</a></h3>
+          <p class="card-text">Every template ships two layouts. The second puts the index down the left; the orange bar stays on top.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title"><a href="blogpost.html">The test article, every construct</a></h3>
+          <p class="card-text">Headings to footnotes, tables to task lists, all through <code>.prose</code>, with the headings in capitals.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one <em>feature</em> card with an effect that suits it. ExtraExtra's is a two-colour print: hover it, or tab into the link, and the picture drops to one ink with an orange plate over it while the words flood orange.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The feature card</h3>
+        <p class="card-text">The plate is a pseudo-element with <code>mix-blend-mode: multiply</code>, so this is the same card markup as every card above. Nothing moves; the colour changes.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" id="small-print">
+    <h2>Small print</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements set as ruled rows. Give a group the same <code>name</code> and opening one closes the others, with no script. The marker is a plus on an orange square that turns.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="print" open>
+        <summary>Build step: none</summary>
+        <div class="accordion-body"><p>Copy the folder, link the two stylesheets and the one script, and write HTML. The pages open from disk.</p></div>
+      </details>
+      <details class="accordion" name="print">
+        <summary>Fonts: three, from Google</summary>
+        <div class="accordion-body"><p>Anton for everything in capitals, Barlow for the body, IBM Plex Mono for labels, data and the ticker. Remove the <code>&lt;link&gt;</code> and Impact, your system sans and your system mono take over; the bands and rules carry the look on their own.</p></div>
+      </details>
+      <details class="accordion" name="print">
+        <summary>Browsers: 2024 on</summary>
+        <div class="accordion-body"><p>The template relies on <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive accordions and <code>mix-blend-mode</code>. No polyfills.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and the README. Everything else in the folder is showcase and can go.</p></div>
+    </details>
+  </section>
+
+  <section class="section" id="times">
+    <h2>Set times</h2>
+    <p>The data table has a second setting. Add <code>extraextra-times</code> to the wrapper and it prints like the board by the door: mono figures, the first column in capitals, a bar under the head and no box. The ordinary ruled table is on the <a href="docs/components/table.html">table page</a>.</p>
+    <div class="table-wrap extraextra-times">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Element</th><th>Rule</th><th>Script</th><th>Docs</th></tr></thead>
+        <tbody>
+          <tr><td>Accordion</td><td>details</td><td>2px</td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
+          <tr><td>Lightbox</td><td>dialog</td><td>2px</td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
+          <tr><td>Navbar</td><td>header</td><td>2px</td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
+          <tr><td>Ticker</td><td>div</td><td>2px</td><td>none</td><td><a href="docs/components/flare.html">flare</a></td></tr>
+          <tr><td>Toggle</td><td>button</td><td>2px</td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button opens one; the dialog closes itself through a form, traps focus while open, and the page behind it goes orange.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Doors at seven</h2>
+      <p>Nothing is quiet after that. This dialog closes on <kbd>Esc</kbd>, traps focus and dims the page behind it, and all of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="ok">Understood</button>
+      </form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="parts">
+    <h2>Parts</h2>
+    <p>Buttons are capitals in a ruled box: the default is an outline, the primary is ink, and both go orange when pressed. The shout is ExtraExtra's own, the one call on a page set in display type. The switch is a square slider. Badges are stamps; banners are ruled strips with a thick edge.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Primary</button>
+      <button class="btn" type="button">Default</button>
+      <button class="btn btn-danger" type="button">Danger</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+      <button class="btn btn-primary extraextra-shout" type="button">Buy tickets</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Door list</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Late bar</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">On sale</span>
+      <span class="badge badge-done">Sold out</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>OK</span><p>Saved. The line-up is live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Three fonts load from Google Fonts. Nothing else leaves the folder.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demonstration. Its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>X</span><p>The upload failed. Nothing did, but this is what it would look like.</p></div>
+    </div>
+    <p>The strip is the banner's full-bleed setting, for the one notice a page must not let you miss.</p>
+    <div class="banner extraextra-strip" role="status"><span>Tonight</span><p>Doors 7. Bands 8. No re-entry after 10. <a href="example/tickets.html">Tickets at the door and online.</a></p></div>
+  </section>
+
+  <section class="extraextra-band-ink" id="dark">
+    <p class="kicker">After dark</p>
+    <h2>Flip it. The orange stays.</h2>
+    <p>Dark mode is not a second design. The paper goes black, the type goes paper, every rule inverts with it, and the orange bands do not move. Every colour is a <code>light-dark()</code> pair in one file; this band is the ink colour, so in the dark scheme it is the one paper band on the page.</p>
+    <a class="btn btn-primary" href="docs/theme.html">See both palettes</a>
+  </section>
+
+  <section class="section" id="words">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Most pages are prose, so <code>.prose</code> styles every construct a markdown renderer produces: headings in capitals over rules, square bullets with orange markers, quotes behind an orange bar, code in a ruled box, tables with a reversed head, footnotes. The <a href="blogpost.html">blog post</a> runs the full test document through these rules; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A poster has one job: to be read from across the street. Everything on it is either the message or the margin.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">The bill poster</strong>
+        <p class="author-bio">Pastes the folder up straight. Capitals for anything that has to be read from the street, Barlow for the rest.</p>
+        <p class="meta"><time datetime="2026-09-05">5 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a><a class="tag" href="docs/components/flare.html">flare</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>ExtraExtra</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site: The Kiln</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="docs/components/flare.html">Flare and variants</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">ExtraExtra is a retemplate template. MIT licensed. No build step, no framework, one small script, three fonts.</p>
+</footer>
+</body>
+</html>

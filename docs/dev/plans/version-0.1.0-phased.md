@@ -42,7 +42,15 @@ state of the build; the TODO records which *asks* have landed.
 | 9 — Gothic | done | 2026-09-04 | checker 0/0; one pointed arch, illuminated initial, manuscript variant; visual pass at Checkpoint D |
 | 10 — Allegory | done | 2026-09-04 | checker 0/0; diptych hero, halo/horn pins, mirrored chapter pages; band contrast below 3:1 by brief (human to eyeball); visual pass at Checkpoint D |
 | D — Checkpoint | passed | 2026-09-04 | unfiltered checker 0 errors (1 expected warning); programmatic pass of detailed, gothic, allegory on all ten pages each at 1280 and 375 in both schemes (overflow, images, fonts, dialog, lightbox, exclusive accordion, nav popover, sidebar drawer, hero fits viewport, console) clean; landing shows 9 cards and the new tags filter correctly; no contract gaps; eyeball items in the TODO |
-| 11 — Release | in progress | 2026-09-04 | distinctiveness pass dispatched for neumorphic, brutal-news, glassy, neon, natural; docs pass by the orchestrator |
+| 11 — Review & docs | mostly done | 2026-09-05 | distinctiveness pass landed for neumorphic, brutal-news, glassy, neon (natural finishing in Phase 12); user docs, READMEs, em-dash cleanup done; release moved to Phase 18 |
+| 12 — Fixes | done | 2026-09-05 | neon scheme swap (checker 0/0, accent 4.83 / 5.02); natural soil tile at 4× frequency and a third of the contrast, footer snippet re-copied, pass finished (checker 0/0); visual pass at Checkpoint E |
+| 13 — ExtraExtra | done | 2026-09-05 | checker 0/0; full-bleed bands, ticker signature, Anton + Barlow + IBM Plex Mono; visual pass at Checkpoint E |
+| 14 — Breathe | done | 2026-09-05 | checker 0/0; live frond hero, leaf cut, stem sequence, Manrope + Instrument Serif; visual pass at Checkpoint E |
+| 15 — Modern Frosty | done | 2026-09-05 | checker 0/0; note-as-hero, frost only on floating surfaces, Geist; visual pass at Checkpoint E |
+| 16 — Thick | done | 2026-09-05 | checker 0/0; press shadows, the pile, Rubik 900; visual pass at Checkpoint E |
+| 17 — Cattle | in progress | 2026-09-05 | subagent dispatched with 13–17 |
+| E — Checkpoint | not started | | |
+| 18 — Release | not started | | |
 
 ---
 
@@ -712,6 +720,87 @@ Measured values come from the references (computed styles read on
 - Batch order puts the three most different stresses first (shadows,
   borders, backdrop effects) so contract gaps surface at B, not D.
 - Alone: 0 → 1 → 2 → A → 3, 4, 5 → B → 6, 7 → C → 8, 9, 10 → D → 11.
+
+## Addendum (2026-09-05): fixes and five more templates
+
+The owner reviewed the nine templates and asked for two fixes and five new
+templates, all under decision 21. Release moves to Phase 18, after
+Checkpoint E. Each new template follows "Phases 3–10" exactly (copy plain,
+re-skin, restructure, variants, README, previews, checker, visual pass, the
+five merge texts) and must pass the distinctiveness check against every
+template already built: no shared display face, no shared hero form, no
+shared example-site shape, a different signature element.
+
+### Phase 12 — Fixes
+- **Natural.** The soil texture tile is too large and too strong: scale it
+  to 25 % (the `--natural-soil` tile and its `background-size` on `body`, so
+  the grain is four times finer) and make the texture itself much more
+  subtle (lower the alpha of the noise layers; it should read as a faint
+  grain, not camouflage). Also re-copy the footer snippet
+  (`docs/components/footer.html`) that the distinctiveness pass left stale.
+- **Neon.** The owner does not like the light half. The current dark palette
+  (`#18181b` zinc) becomes the new *light* half, and the new *dark* half is
+  a true black ground: `--pal-bg0: #141414` with bg0-soft/bg1/bg2/bg3
+  stepping up from it, same rose and cyan neons. Update the palette block
+  everywhere it is printed (README, `docs/theme.html`), the previews, and
+  any copy that described the light half as grey. Decision 20's override
+  stays (both halves are dark).
+
+### Design briefs, Phases 13–17
+- **Phase 13 — ExtraExtra** (`templates/extraextra/`). Reference:
+  whichai.dev `without-design-skill/fable-5.1/5` (the page Brutal News was
+  briefed from) but **orange instead of red**, the same aggression, and
+  **full-width**: edge-to-edge bands, no boxed page, oversized condensed
+  type, hard rules. Must be unmistakable next to Brutal News: where Brutal
+  News is a newspaper page (columns, masthead, drop caps, black/white/red
+  plus acid hues), ExtraExtra is a poster wall: full-bleed orange and black
+  bands, one condensed display face (not Archivo Black), mono for data, no
+  columns, no acid hue set. Dark: black bands and orange; light: paper and
+  orange with black type. Example: a music venue or festival (home,
+  line-up, tickets).
+- **Phase 14 — Breathe** (`templates/breathe/`). A breezy green theme for
+  plant apps and sites. Dark from whichai.dev `with-taste-skill/gpt-6-astra/2`
+  (botanical, deep greens); light from
+  `with-design-skill/muse-spark-1.3-flash/1` (airy, cream-white, a serif
+  fleuron accent). Must be unmistakable next to Natural (cream paper field
+  guide, Fraunces, rust, soil): Breathe is air, not paper: white-green
+  light with large whitespace, soft sage and mint, generous radii, a light
+  sans (not Fraunces, not Source Sans 3); dark is deep forest green, never
+  brown; motion is a slow breeze (leaves or a gentle sway), not a texture.
+  Example: a plant-care app (home, a plant profile, watering schedule).
+- **Phase 15 — Modern Frosty** (`templates/modern-frosty/`). Lightly frosted,
+  basic, minimal, light-blue tinges. Reference: whichai.dev
+  `with-taste-skill/glm-5.2/1`. Must be unmistakable next to Glassy (heavy
+  frost, gradient sky, orbs, waves, pills): Modern Frosty is crisp and cold:
+  near-white with icy blue tints, frost only on the sticky bars and dialogs
+  at a low blur, hairline borders, small radii, a tight geometric sans, no
+  gradients, no orbs, no animation beyond hover. Dark: deep slate blue.
+  Example: a note-taking or productivity app (home, features, pricing).
+- **Phase 16 — Thick** (`templates/thick/`). Neobrutalism with bright yellow
+  accents. Reference: whichai.dev `with-taste-skill/kimi-k3/5`. Must be
+  unmistakable next to Brutal News and ExtraExtra: Thick is playful, not
+  angry: 3px black outlines on everything, solid offset shadows that move
+  on press, bright yellow fills with one or two pastel blocks, 8px corners,
+  a chunky geometric sans (not Archivo Black, not Space Grotesk), stickers
+  and tilted labels. Dark: near-black with the same yellow and outlines in
+  off-white. Example: a small indie software shop or zine (home, products,
+  about).
+- **Phase 17 — Cattle** (`templates/cattle/`). Leather and wood, as for a
+  barbecue restaurant or cattle ranch. Owner's reference image: pale maple
+  board with lettering *branded* into it (charred near-black letterforms
+  with a scorched brown halo bleeding into the grain, a small bird mark,
+  hairline burnt rules), on navy linen. Light: pale wood grain
+  (`feTurbulence`-based `--cattle-grain` token over a flat bg0) with
+  branded headings (layered `text-shadow` burn halo, a slab or western
+  display face) and saddle-leather accents (stitched borders, brass rivets
+  as ornaments); dark: dark oiled leather ground with the same stitching,
+  cream lettering as if tooled. Example: a smokehouse restaurant (home,
+  menu, book a table) or a ranch (home, the herd, visit); the agent picks.
+
+### Ordering
+12 runs alongside 13–17 (different folders). Checkpoint E after all six;
+then Phase 18: TODO re-verified, CHANGELOG tidied, release date when the
+owner says so.
 
 ## Deliberately out of scope for 0.1.0
 

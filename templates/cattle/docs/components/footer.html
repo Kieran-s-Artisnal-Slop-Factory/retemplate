@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="cattle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Footer · Cattle</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Cattle · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html" aria-current="page">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Footer</h1>
+  <p>Columns of links and a closing note, at the bottom of every navbar page.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The overview page, live; scroll the frame to the bottom.</p>
+<iframe class="docs-iframe" src="../../index.html" title="The overview page"></iframe>
+<h2 id="markup">Markup</h2>
+<p>Taken from <code>index.html</code>.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="footer" data-source="../../index.html" data-select="footer.footer">&lt;footer class="footer"&gt;
+  &lt;div class="footer-columns"&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Cattle&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html"&gt;Overview&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="docs/index.html"&gt;Get started&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="docs/components/index.html"&gt;Components&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Pages&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="blogpost.html"&gt;Blog post&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="forms.html"&gt;Forms&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sidebar.html"&gt;Sidebar variant&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="example/index.html"&gt;Example site&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Theme&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="docs/theme.html"&gt;Tokens and palette&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://kieranwood.ca/retoken/theme/"&gt;Retoken theme docs&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+  &lt;p class="footer-note"&gt;Cattle is a retemplate template: maple, saddle leather, brass and a brand burnt into the board. MIT licensed. No build step, no framework, one small script.&lt;/p&gt;
+&lt;/footer&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == footer == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.footer</code></td><td>Raised surface, top border, muted small text; pushed to the bottom</td></tr>
+      <tr><td><code>.footer-columns</code></td><td>Auto-fitting columns</td></tr>
+      <tr><td><code>.footer section h2</code></td><td>Column heading</td></tr>
+      <tr><td><code>.footer-note</code></td><td>The closing line, ruled off</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Each column is a <code>&lt;section&gt;</code> with a heading; screen readers get a list of named sections.</li>
+<li>The footer is the last thing in <code>&lt;body&gt;</code>, and the body is a flex column, so short pages still push it to the bottom.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="author-card.html">← Author card</a><a href="flare.html">Flare →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

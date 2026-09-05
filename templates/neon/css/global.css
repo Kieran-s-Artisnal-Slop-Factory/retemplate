@@ -6,7 +6,8 @@
  * literal colour and no `--pal-*` slot in this file (tools/check.py
  * enforces it). Copy the section you need together with theme.css.
  *
- * The look: signage at night. A flat zinc field, hairline borders, and two
+ * The look: signage at night. A flat dark field (zinc in light, black in
+ * dark), hairline borders, and two
  * neon tubes (rose and cyan) that glow rather than fill. Glow means state:
  * a lit thing is on, an unlit one is off. Surfaces are dark in both halves, so the
  * UA-chrome override of the contract (§6) is in force here: native

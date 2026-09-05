@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A pink arrow pointing right">
+<rect width="800" height="600" fill="#d4e3ff"/><g transform="rotate(-10 400 300)"><g transform="translate(14 14)"><path d="M160 260h280v-90l200 130-200 130v-90H160z" fill="#111111" /></g><path d="M160 260h280v-90l200 130-200 130v-90H160z" fill="#ffd3df" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></g>
+</svg>

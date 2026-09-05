@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Breathe preview (dark)">
+<rect width="400" height="250" fill="#15231b"/>
+<ellipse cx="380" cy="-20" rx="230" ry="120" fill="#2f5a44" opacity="0.35"/>
+<text x="14" y="19" font-family="Manrope, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="-0.4" fill="#e6ece0">Breathe</text>
+<rect x="212" y="9" width="40" height="11" rx="5.5" fill="#2f5a44"/>
+<rect x="220" y="13.5" width="24" height="2.5" rx="1.2" fill="#e6ece0"/>
+<rect x="262" y="13.5" width="24" height="2.5" rx="1.2" fill="#a9baa5"/>
+<rect x="296" y="13.5" width="24" height="2.5" rx="1.2" fill="#a9baa5"/>
+<rect x="330" y="13.5" width="24" height="2.5" rx="1.2" fill="#a9baa5"/>
+<circle cx="378" cy="14.5" r="7" fill="none" stroke="#3a5041" stroke-width="1.2"/>
+<circle cx="378" cy="14.5" r="3" fill="#c2d9a4"/>
+<rect x="24" y="52" width="58" height="3" rx="1.5" fill="#c2d9a4"/>
+<text x="23" y="86" font-family="Manrope, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="500" font-size="27" letter-spacing="-1.1" fill="#e6ece0">Room to</text>
+<text x="23" y="114" font-family="'Instrument Serif', 'Iowan Old Style', Georgia, serif" font-style="italic" font-size="30" fill="#c2d9a4">grow<tspan font-family="Manrope, 'Segoe UI', Helvetica, Arial, sans-serif" font-style="normal" font-weight="500" font-size="27" fill="#e6ece0">.</tspan></text>
+<rect x="24" y="126" width="180" height="3" rx="1.5" fill="#a9baa5" opacity="0.7"/>
+<rect x="24" y="134" width="150" height="3" rx="1.5" fill="#a9baa5" opacity="0.7"/>
+<rect x="24" y="148" width="62" height="16" rx="8" fill="#c2d9a4"/>
+<rect x="36" y="155" width="38" height="2.5" rx="1.2" fill="#15231b"/>
+<rect x="96" y="155" width="44" height="2.5" rx="1.2" fill="#c2d9a4"/>
+<path d="M144 153.5 l3 2.7 -3 2.7" fill="none" stroke="#c2d9a4" stroke-width="1.2"/>
+<path d="M246 84 A44 44 0 0 1 290 40 H372 A4 4 0 0 1 376 44 V122 A44 44 0 0 1 332 166 H250 A4 4 0 0 1 246 162 Z" fill="#2f5a44"/>
+<g transform="rotate(-2 311 166)">
+<path d="M311 166 C310.5 150 312 128 310.5 104 C309.5 84 310 72 309 60" fill="none" stroke="#8fb597" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M310.5 150 C292 150 274 141 270 121 C288 120 306 133 310.5 150Z" fill="#7fc191"/>
+<path d="M311 132 C329 131 347 121 351 100 C333 100 316 114 311 132Z" fill="#a9d9b6"/>
+<path d="M310 111 C291 110 274 100 271 80 C289 81 306 95 310 111Z" fill="#a9d9b6"/>
+<path d="M311 91 C327 90 343 79 346 60 C330 61 315 76 311 91Z" fill="#7fc191"/>
+<path d="M309.5 71 C295 70 283 62 281 46 C295 47 306 58 309.5 71Z" fill="#7fc191"/>
+<path d="M309 51 C303 42 302 30 310 21 C318 30 316 42 309 51Z" fill="#a9d9b6"/>
+</g>
+<rect x="24" y="182" width="96" height="5" rx="2" fill="#e6ece0"/>
+<rect x="31" y="200" width="1.6" height="46" rx="0.8" fill="#8fb597" opacity="0.55"/>
+<rect x="46" y="196" width="330" height="30" rx="9" fill="#1c2c22"/><rect x="46" y="196" width="99" height="30" rx="9" fill="#26392c"/><rect x="133" y="196" width="12" height="30" fill="#26392c"/><path d="M60 220 C62 212 68 208 76 206 C74 215 68 220 60 220Z" fill="#7fc191" opacity="0.8"/><rect x="157" y="204" width="34" height="3" rx="1.5" fill="#c2d9a4"/><rect x="157" y="212" width="138" height="4.5" rx="2" fill="#e6ece0"/><rect x="157" y="221" width="181" height="3" rx="1.5" fill="#a9baa5" opacity="0.7"/>
+<rect x="46" y="232" width="330" height="30" rx="9" fill="#1c2c22"/><rect x="46" y="232" width="99" height="30" rx="9" fill="#26392c"/><rect x="133" y="232" width="12" height="30" fill="#26392c"/><path d="M60 256 C62 248 68 244 76 242 C74 251 68 256 60 256Z" fill="#7fc191" opacity="0.8"/><rect x="157" y="240" width="34" height="3" rx="1.5" fill="#c2d9a4"/><rect x="157" y="248" width="138" height="4.5" rx="2" fill="#e6ece0"/><rect x="157" y="257" width="181" height="3" rx="1.5" fill="#a9baa5" opacity="0.7"/>
+<path d="M27 206.6 A4.6 4.6 0 0 1 31.6 202 H36.2 A0.8 0.8 0 0 1 37 202.8 V207.4 A4.6 4.6 0 0 1 32.4 212 H27.8 A0.8 0.8 0 0 1 27 211.2 Z" fill="#a9d9b6" transform="rotate(-20 32 207)"/>
+<path d="M27 242.6 A4.6 4.6 0 0 1 31.6 238 H36.2 A0.8 0.8 0 0 1 37 238.8 V243.4 A4.6 4.6 0 0 1 32.4 248 H27.8 A0.8 0.8 0 0 1 27 247.2 Z" fill="#c2d9a4" transform="rotate(-20 32 243)"/>
+</svg>

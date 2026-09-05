@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A blue burst">
+<rect width="800" height="600" fill="#ffd3df"/><g transform="rotate(0 400 300)"><g transform="translate(14 14)"><path d="M400 100l40 90 90-40-40 90 90 40-90 40 40 90-90-40-40 90-40-90-90 40 40-90-90-40 90-40-40-90 90 40z" fill="#111111" /></g><path d="M400 100l40 90 90-40-40 90 90 40-90 40 40 90-90-40-40 90-40-90-90 40 40-90-90-40 90-40-40-90 90 40z" fill="#d4e3ff" stroke="#111111" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></g>
+</svg>

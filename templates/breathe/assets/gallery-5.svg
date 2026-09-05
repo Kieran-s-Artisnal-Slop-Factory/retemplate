@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="A sprout in soil">
+<rect width="800" height="600" fill="#cfe9d6"/><rect x="0" y="420" width="800" height="180" fill="#6b5540"/><path d="M400 420V300" stroke="#2c6b46" stroke-width="10" stroke-linecap="round"/><g transform="rotate(-60 340 290)"><path d="M340 230 C385 254.0 385 320.0 340 350 C295 320.0 295 254.0 340 230Z" fill="#4f9a68"/><path d="M340 239.0V341.0" stroke="#1e3a2a" stroke-width="3.2" stroke-linecap="round"/></g><g transform="rotate(60 460 290)"><path d="M460 230 C505 254.0 505 320.0 460 350 C415 320.0 415 254.0 460 230Z" fill="#4f9a68"/><path d="M460 239.0V341.0" stroke="#1e3a2a" stroke-width="3.2" stroke-linecap="round"/></g>
+</svg>

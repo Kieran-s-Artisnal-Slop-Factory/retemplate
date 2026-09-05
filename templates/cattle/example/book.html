@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-theme="cattle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Book a table · Harlan Creek Smokehouse</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Harlan Creek</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="book.html" aria-current="page">Book a table</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Tables and hours</p>
+    <h1>Book a table</h1>
+    <p>Six or more, any day, and anyone on a Friday or Saturday evening. Under six on a weekday, walk in; there is always a bench in the yard. We hold a table for fifteen minutes.</p>
+  </header>
+
+  <section class="section" id="hours">
+    <h2>Hours</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Day</th><th>Counter</th><th>Brisket off the pit</th><th>Yard</th></tr></thead>
+        <tbody>
+          <tr><td>Monday and Tuesday</td><td>Closed</td><td>Nothing on</td><td>Closed</td></tr>
+          <tr><td>Wednesday and Thursday</td><td>11 till it runs out</td><td>11 and 4</td><td>11 to 8</td></tr>
+          <tr><td>Friday</td><td>11 till it runs out</td><td>11 and 4</td><td>11 to 10</td></tr>
+          <tr><td>Saturday</td><td>11 till it runs out</td><td>11, 2 and 5</td><td>11 to 10</td></tr>
+          <tr><td>Sunday</td><td>11 to 4</td><td>11</td><td>11 to 5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="row"><span class="badge badge-active">Nine tables</span><span class="badge">Dogs in the yard</span><span class="muted small">Closed Sunday 14 September for the pits, and from Christmas Eve to the second of January.</span></p>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="table">
+    <h2>Hold a table</h2>
+    <p>Say how many and when. Booking a whole brisket or a board for a crowd? Put it in the notes and we will ring you back the same day.</p>
+    <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+    <form class="form-grid" action="#" method="get">
+      <fieldset>
+        <legend>Who</legend>
+        <div class="field">
+          <label for="b-name">Name</label>
+          <input id="b-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="b-phone">Phone</label>
+          <input id="b-phone" name="phone" type="tel" autocomplete="tel" required>
+          <p class="hint">We ring, we do not text, unless you ask below.</p>
+        </div>
+        <div class="field">
+          <label for="b-email">Email</label>
+          <input id="b-email" name="email" type="email" autocomplete="email">
+          <p class="hint">Only if you want the confirmation in writing.</p>
+        </div>
+        <div class="field">
+          <label for="b-party">How many</label>
+          <input id="b-party" name="party" type="number" min="1" max="40" value="6" required>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>When</legend>
+        <div class="field">
+          <label for="b-date">Day</label>
+          <input id="b-date" name="date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="b-time">Time</label>
+          <select id="b-time" name="time">
+            <option value="11" selected>Eleven, first brisket</option>
+            <option value="1230">Half past twelve</option>
+            <option value="1400">Two</option>
+            <option value="1600">Four, second brisket</option>
+            <option value="1800">Six</option>
+            <option value="1930">Half past seven, Friday and Saturday</option>
+          </select>
+          <p class="hint">Come at eleven or four if brisket is the point.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="b-notes">Notes</label>
+          <textarea id="b-notes" name="notes" rows="3" placeholder="A whole brisket, a board for thirty, a birthday, a wheelchair, a dog."></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Where and how</legend>
+        <div class="field">
+          <span class="field-label">Sit us</span>
+          <label class="check"><input type="radio" name="where" value="inside" checked> Inside, by the counter</label>
+          <label class="check"><input type="radio" name="where" value="yard"> In the yard, by the pits</label>
+          <label class="check"><input type="radio" name="where" value="either"> Wherever there is room</label>
+        </div>
+        <div class="field">
+          <span class="field-label">Also</span>
+          <label class="check"><input type="checkbox" name="also" value="highchair"> A high chair</label>
+          <label class="check"><input type="checkbox" name="also" value="nomeat"> Someone who does not eat meat</label>
+          <label class="check"><input type="checkbox" name="also" value="dog" checked> A dog</label>
+        </div>
+        <div class="field">
+          <label class="switch"><input type="checkbox" role="switch" name="text" checked><span>Text me when the brisket comes off</span></label>
+          <label class="switch"><input type="checkbox" role="switch" name="letter"><span>Send the monthly letter</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn cattle-rivet btn-lg" type="submit">Hold the table</button>
+        <button class="btn" type="reset">Clear</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="section">
+    <h2>House rules</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="rules" open>
+        <summary>Order at the counter</summary>
+        <div class="accordion-body"><p>Even with a table. Line up, say what you want, watch it sliced, carry the tray. Drinks are at the end; refills are on you.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Fifteen minutes</summary>
+        <div class="accordion-body"><p>A held table goes to the line fifteen minutes after the time you gave us. Ring if you are stuck behind a tractor; we will do what we can.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>When it is gone, it is gone</summary>
+        <div class="accordion-body"><p>A booking holds a table, not a brisket. If you want brisket for certain, book eleven or four. We will not put a cold one in the microwave for you and you would not want us to.</p></div>
+      </details>
+      <details class="accordion" name="rules">
+        <summary>Dogs, children, boots</summary>
+        <div class="accordion-body"><p>All welcome in the yard. Dogs on a lead near the pits. Children may look at the fire from the fence and no closer.</p></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Harlan Creek Smokehouse</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">The menu</a></li>
+        <li><a href="book.html">Book a table</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>4 Creek Road, at the old feed store</li>
+        <li>Wednesday to Sunday, eleven till it runs out</li>
+        <li><a href="mailto:pit@example.com">pit@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Cattle template</a></li>
+        <li><a href="../docs/index.html">Get started with Cattle</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Cattle template. The smokehouse, the creek and the man with the chair are fictional.</p>
+</footer>
+</body>
+</html>

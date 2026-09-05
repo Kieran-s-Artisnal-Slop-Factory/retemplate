@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-theme="extraextra">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · ExtraExtra</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">ExtraExtra · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. ExtraExtra adds three pieces of poster-wall furniture: an orange band, an ink band and the ticker. Four more are variants of contract components and live on their own pages: the <a href="cards.html#variants">poster card</a>, the <a href="buttons.html#variants">shout button</a>, the <a href="table.html#variants">set-times table</a> and the <a href="banner.html#variants">strip banner</a>. The ten-pixel bar above the navbar, the orange scrim behind a dialog and the two-colour feature card need no class at all.</p>
+</header>
+<h2 id="preview">Orange band</h2>
+<p>Put a section in <code>extraextra-band</code> and it runs edge to edge in the one bright orange with black type, ruled top and bottom. The heading grows to band size, the paragraph is capped at a readable measure, and buttons redraw in black on orange. Bands cancel the page gutter with a negative margin, so put them directly inside <code>main.page</code>; in the sidebar layout they stop at the index. A <a href="fifty-fifty.html#variants">fifty-fifty</a> inside a band drops its own box. This is the only place the bright orange meets type, and the type is always black: the orange fails 4.5:1 against paper as a text colour, which is why links use the burnt orange instead.</p>
+<figure class="example" data-snippet="extraextra-band">
+<section class="extraextra-band">
+  <p class="kicker">Saturday 4 October</p>
+  <h2>Two stages. One night.</h2>
+  <p>Kettle Drum Club headline the main room while the loft runs an all-night DJ set. One ticket covers both.</p>
+  <a class="btn btn-primary" href="#">Buy tickets</a>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="extraextra-band">&lt;section class="extraextra-band"&gt;
+  &lt;p class="kicker"&gt;Saturday 4 October&lt;/p&gt;
+  &lt;h2&gt;Two stages. One night.&lt;/h2&gt;
+  &lt;p&gt;Kettle Drum Club headline the main room while the loft runs an all-night DJ set. One ticket covers both.&lt;/p&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;Buy tickets&lt;/a&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="variants">Ink band</h2>
+<p><code>extraextra-band-ink</code> is the page in reverse: ink ground, paper type, and an orange kicker mark. In the dark scheme the ink is paper, so the band becomes the one pale strip on a black page. Same rules as the orange band: directly inside <code>main.page</code>, one heading, a short paragraph, at most one button.</p>
+<figure class="example" data-snippet="extraextra-band-ink">
+<section class="extraextra-band-ink">
+  <p class="kicker">Hire the room</p>
+  <h2>Four hundred people, no seats.</h2>
+  <p>The Kiln is available on Mondays and Tuesdays for launches, screenings and private shows. The PA and the engineer come with it.</p>
+  <a class="btn btn-primary" href="#">Ask about a date</a>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="extraextra-band-ink">&lt;section class="extraextra-band-ink"&gt;
+  &lt;p class="kicker"&gt;Hire the room&lt;/p&gt;
+  &lt;h2&gt;Four hundred people, no seats.&lt;/h2&gt;
+  &lt;p&gt;The Kiln is available on Mondays and Tuesdays for launches, screenings and private shows. The PA and the engineer come with it.&lt;/p&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;Ask about a date&lt;/a&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>The ticker</h3>
+<p>The signature. An ink strip the width of the page carrying short mono facts from right to left, with an orange square between each. The markup is two copies of the same <code>&lt;p&gt;</code>, the second <code>aria-hidden</code>, so the loop has no gap; each <code>&lt;span&gt;</code> is one fact. It pauses while hovered or focused, and stops under <code>prefers-reduced-motion</code>. One loop takes <code>--extraextra-ticker-speed</code>, 45 seconds; shorten it for fewer facts. The wrapper is <code>extraextra-flare</code>, so a template swap can remove the whole thing. The overview runs it under the hero; a venue runs this week's dates.</p>
+<figure class="example" data-snippet="extraextra-ticker">
+<div class="extraextra-flare">
+  <div class="extraextra-ticker">
+    <p><span>Fri 3 Oct: Slow Furnace</span><span>Sat 4 Oct: Kettle Drum Club</span><span>Thu 9 Oct: Ida Vane</span><span>Sat 11 Oct: The Stokers, sold out</span><span>Doors 7, bands 8</span></p>
+    <p aria-hidden="true"><span>Fri 3 Oct: Slow Furnace</span><span>Sat 4 Oct: Kettle Drum Club</span><span>Thu 9 Oct: Ida Vane</span><span>Sat 11 Oct: The Stokers, sold out</span><span>Doors 7, bands 8</span></p>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="extraextra-ticker">&lt;div class="extraextra-flare"&gt;
+  &lt;div class="extraextra-ticker"&gt;
+    &lt;p&gt;&lt;span&gt;Fri 3 Oct: Slow Furnace&lt;/span&gt;&lt;span&gt;Sat 4 Oct: Kettle Drum Club&lt;/span&gt;&lt;span&gt;Thu 9 Oct: Ida Vane&lt;/span&gt;&lt;span&gt;Sat 11 Oct: The Stokers, sold out&lt;/span&gt;&lt;span&gt;Doors 7, bands 8&lt;/span&gt;&lt;/p&gt;
+    &lt;p aria-hidden="true"&gt;&lt;span&gt;Fri 3 Oct: Slow Furnace&lt;/span&gt;&lt;span&gt;Sat 4 Oct: Kettle Drum Club&lt;/span&gt;&lt;span&gt;Thu 9 Oct: Ida Vane&lt;/span&gt;&lt;span&gt;Sat 11 Oct: The Stokers, sold out&lt;/span&gt;&lt;span&gt;Doors 7, bands 8&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>, the variants included: they sit at the end of that section, after the bands and the ticker.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.extraextra-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.extraextra-band</code></td><td>Full-bleed orange section, black type, ruled top and bottom</td></tr>
+      <tr><td><code>.extraextra-band-ink</code></td><td>Full-bleed section in the type colour with the page colour as type</td></tr>
+      <tr><td><code>.extraextra-ticker</code></td><td>The moving ink strip; two <code>&lt;p&gt;</code> of <code>&lt;span&gt;</code> facts</td></tr>
+      <tr><td><code>.card.extraextra-poster</code></td><td>A card with no box and an ink bar on top (<a href="cards.html#variants">cards</a>)</td></tr>
+      <tr><td><code>.btn.extraextra-shout</code></td><td>A button in display capitals at heading size (<a href="buttons.html#variants">buttons</a>)</td></tr>
+      <tr><td><code>.table-wrap.extraextra-times</code></td><td>The set-times board (<a href="table.html#variants">table</a>)</td></tr>
+      <tr><td><code>.banner.extraextra-strip</code></td><td>A full-bleed ink notice with an orange label (<a href="banner.html#variants">banner</a>)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token: <code>--extraextra-orange</code> and <code>--extraextra-on-orange</code> for the orange band, the semantic <code>--text-color</code> and <code>--bg-color</code> for the ink band and the ticker, so the ink band flips with the scheme and the orange band does not. Nothing in <code>global.css</code> names a colour.</li>
+<li>The ticker is the only thing in the template that moves on its own. It pauses on hover and focus, and the global <code>prefers-reduced-motion</code> rule sets its animation to none, so the first copy of the facts sits still and the hidden copy stays out of view.</li>
+<li>The facts in the ticker are content and are read once by assistive technology; the second <code>&lt;p&gt;</code> is <code>aria-hidden</code> so they are not read twice. Keep each fact short enough to read in passing.</li>
+<li>Bands and the strip cancel the gutter with <code>margin-inline: calc(-1 * var(--extraextra-gutter))</code>. Inside a docs example, or any other padded box, they sit flush instead; put them where the gutter is if they are to reach the edge.</li>
+<li>Focus rings inside a band are drawn in black on orange and in orange on ink, so they are visible on both.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

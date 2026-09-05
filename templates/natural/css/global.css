@@ -1,5 +1,5 @@
 /*
- * natural — everything that is not a token.
+ * natural: everything that is not a token.
  *
  * Organised in marked sections (`== name ==`) that the docs pages name.
  * Every colour comes from a semantic token in theme.css; there is no
@@ -577,6 +577,12 @@ dialog::backdrop,
   .hero {
     grid-template-columns: minmax(0, 10fr) minmax(0, 9fr);
     gap: var(--space-6);
+  }
+  /* A plate is a tall sheet (9:11 plus its label), so a hero that leads
+   * with one gives it a fixed column and the words the rest; that keeps the
+   * whole hero inside a 1280 x 800 viewport. */
+  .hero:has(> .natural-flare > .natural-plate) {
+    grid-template-columns: minmax(0, 22rem) minmax(0, 1fr);
   }
   .hero > .stack {
     padding-block: var(--space-4);

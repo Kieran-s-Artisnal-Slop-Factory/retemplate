@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Thick · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Thick</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <span class="badge thick-sticker">3px lines, 0px blur</span>
+    <div class="stack">
+      <h1>Press anything. It moves.</h1>
+      <p>Every box has a black outline and sits on a solid shadow. Press a button, a thumbnail or a text field and it drops into the page; let go and it pops back. Yellow carries the important things, two pastels carry the rest, and after dark the outlines turn off-white.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg" href="docs/components/index.html">Browse components</a>
+      </div>
+    </div>
+    <figure class="thick-pile"><img src="assets/hero.svg" alt="" width="800" height="600"></figure>
+  </section>
+
+  <section class="section">
+    <h2>Try the press</h2>
+    <p>Buttons come in three kinds and three sizes. Hover one and it lifts; press and hold and the shadow collapses to nothing. The flat variant, <code>thick-flat</code>, has no shadow and is for rows of many small actions. A switch is a checkbox with <code>role="switch"</code>; badges carry a state, and a badge with <code>thick-sticker</code> is tilted and pinned.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Add to basket</button>
+      <button class="btn" type="button">Keep browsing</button>
+      <button class="btn btn-danger" type="button">Empty basket</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Sold out</button>
+      <button class="btn thick-flat" type="button">Flat</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Email me when an issue ships</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Show sold-out issues</span></label>
+      <span class="badge">Draft</span>
+      <span class="badge badge-active">In stock</span>
+      <span class="badge badge-done">Shipped</span>
+      <span class="badge thick-sticker badge-active">12 left</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards in three colours</h2>
+    <p>An ordinary card is white on the large shadow. Add <code>thick-yellow</code>, <code>thick-pink</code> or <code>thick-blue</code> and the whole card is tinted. Yellow always carries black text, in both halves; the pastels keep the page text and go dusky after dark so it still reads.</p>
+    <div class="grid-3">
+      <article class="card thick-yellow">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens and the palette; <code>global.css</code> holds every rule that uses them. Nothing else to load but one font.</p>
+        </div>
+      </article>
+      <article class="card thick-pink">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Light and dark</h3>
+          <p class="card-text">Every colour is a <code>light-dark()</code> pair. The toggle in the corner cycles auto, light and dark, and remembers the choice. The yellow does not change; the outlines do.</p>
+        </div>
+      </article>
+      <article class="card thick-blue">
+        <div class="card-body">
+          <h3 class="card-title">Retoken compatible</h3>
+          <p class="card-text">The palette block in <code>theme.css</code> pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards, sideways</h2>
+    <p>Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right. On a narrow screen they stack.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The image takes a little over a third of the width, behind its own outline, and the text takes the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one <em>feature</em> card with an effect of its own. Thick's is the press at full size: hover and the card lifts off the page, press and it goes flat.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The pressable card</h3>
+        <p class="card-text">The lift and the press are two transitions on <code>transform</code> and <code>box-shadow</code>, nothing more. Focus inside the card lifts it too, so a keyboard gets the same feedback.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Half picture, half words</h2>
+    <p>The fifty-fifty block gives an image half the width and the text the other half. Add <code>fifty-fifty-reverse</code> and the image moves to the right; add a colour class and the text half is tinted. On a phone the image comes first either way.</p>
+    <div class="stack">
+      <section class="fifty-fifty">
+        <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image left</p>
+          <h2>Say the one thing this block is for</h2>
+          <p>A heading, a paragraph and a single button. That is the whole pattern, and it carries most shop fronts.</p>
+          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
+        </div>
+      </section>
+      <section class="fifty-fifty fifty-fifty-reverse thick-pink">
+        <figure><img src="assets/gallery-5.svg" alt="" width="800" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Image right, pink</p>
+          <h2>Yellow is a fill, not a link</h2>
+          <p>Yellow on white cannot carry a link, so in the light half the accent is the ink and the yellow is a surface that always holds black text. After dark the accent is the yellow itself.</p>
+          <a class="btn" href="docs/theme.html">See the tokens</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The sticker sheet</h2>
+    <p>Eight stickers from the example shop. Thumbnails are pressable, so they sit on the small shadow and move. Click one and the lightbox opens; the arrows are plain links, the close button is a form, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A yellow star on blue" width="800" height="600"></a><figcaption>Star</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A pink lightning bolt on yellow" width="800" height="600"></a><figcaption>Bolt</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A yellow heart on pink" width="800" height="600"></a><figcaption>Heart</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="A white cloud on yellow" width="800" height="600"></a><figcaption>Cloud</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A pink arrow on blue" width="800" height="600"></a><figcaption>Arrow</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="A blue burst on pink" width="800" height="600"></a><figcaption>Burst</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A blue diamond on yellow" width="800" height="600"></a><figcaption>Diamond</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="A yellow moon on blue" width="800" height="600"></a><figcaption>Moon</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A yellow star on blue"><figcaption>Star, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A pink lightning bolt on yellow"><figcaption>Bolt, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A yellow heart on pink"><figcaption>Heart, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="A white cloud on yellow"><figcaption>Cloud, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A pink arrow on blue"><figcaption>Arrow, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="A blue burst on pink"><figcaption>Burst, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A blue diamond on yellow"><figcaption>Diamond, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="A yellow moon on blue"><figcaption>Moon, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Questions, folded</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group the same <code>name</code> and opening one closes the others, with no script. The open one turns yellow and its plus turns into a cross.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Is the yellow the same in dark mode?</summary>
+        <div class="accordion-body"><p>Yes. <code>--thick-yellow</code> is one literal, <code>#ffd400</code>, with black text on it in both halves. What changes after dark is the page, which goes near-black, and the outlines, which go off-white.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How much JavaScript is there?</summary>
+        <div class="accordion-body"><p>About forty lines for the scheme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. The press, the lift and the sticker are CSS.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and this folder's <code>README.md</code>. There is no <code>fonts/</code> folder unless you self-host Rubik.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>A table and a dialog</h2>
+    <p>Tables sit inside an outlined wrapper that scrolls sideways when they are wider than the page. The header row is yellow.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Component</th><th>Element</th><th>Script</th><th>Docs</th></tr></thead>
+        <tbody>
+          <tr><td>Accordion</td><td><code>&lt;details&gt;</code></td><td>none</td><td><a href="docs/components/accordion.html">accordion</a></td></tr>
+          <tr><td>Lightbox</td><td><code>&lt;dialog&gt;</code></td><td>one line</td><td><a href="docs/components/gallery.html">gallery</a></td></tr>
+          <tr><td>Navbar menu</td><td><code>popover</code></td><td>none</td><td><a href="docs/components/navbar.html">navbar</a></td></tr>
+          <tr><td>Switch</td><td><code>&lt;input&gt;</code></td><td>none</td><td><a href="docs/components/switch.html">switch</a></td></tr>
+          <tr><td>Scheme toggle</td><td><code>&lt;button&gt;</code></td><td>theme.js</td><td><a href="docs/theme.html">theme</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button below opens one; the page behind it goes yellow, and the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Remove from basket?</h2>
+      <p>The dialog traps focus, dims the page behind it and closes on <kbd>Esc</kbd>. All of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Keep it</button>
+        <button class="btn btn-danger" type="submit" value="ok">Remove</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Banners</h2>
+    <p>Four kinds of notice. Each has a small ink square with a mark in it and a soft tint of its colour behind the text.</p>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Rubik comes from Google Fonts. The README shows how to self-host it instead.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example site is a demo; its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>The payment did not go through. Nothing did, but this is what it would look like.</p></div>
+    </div>
+  </section>
+
+  <div class="thick-flare">
+    <section class="thick-band">
+      <p class="kicker">Take the colours with you</p>
+      <h2>The palette pastes into a retoken site</h2>
+      <p>Nineteen slots, each a light and dark pair, in one block. The theme page prints it with a copy button and the one line that turns it on.</p>
+      <a class="btn btn-primary btn-lg" href="docs/theme.html">Copy the palette</a>
+    </section>
+  </div>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings, lists, quotes, code, tables, footnotes. Headings are Rubik at its heaviest weight; body text is the same face at regular, so the page never changes voice. Plain links light up yellow when you hover them, like a highlighter. The <a href="blogpost.html">blog post</a> runs the full test document through these rules; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A template is a promise about what markup will look like. The contract is that promise written down.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Thick</strong>
+        <p class="author-bio">Outlines, offsets and one yellow. Friendly on purpose.</p>
+        <p class="meta"><time datetime="2026-09-05">5 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Thick</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Thick is a retemplate template: black outlines, solid shadows, one yellow and two pastels. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

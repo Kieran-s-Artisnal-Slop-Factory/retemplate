@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>About and subscribe · Paper Cuts</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Paper Cuts</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="issues.html">Issues</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">About</p>
+    <h1>Three people, one risograph, forty copies at a time</h1>
+    <p>Paper Cuts started in 2023 because Ines kept explaining the same program to the same friends and decided to print it once instead. Tomasz draws, Priya keeps the books and writes the ones about spreadsheets. The shop is a room in an old print works and is open on Saturdays.</p>
+  </header>
+
+  <section class="section">
+    <div class="grid-3">
+      <article class="card">
+        <figure class="card-media"><img src="../assets/avatar.svg" alt="" width="96" height="96"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Ines</h3>
+          <p class="card-text">Writes most of the issues and runs the machine. Has opinions about floppy disks and will tell you them.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/avatar.svg" alt="" width="96" height="96"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Tomasz</h3>
+          <p class="card-text">Draws every frame of every fold-out by hand and then scans them. Wrote issue 2, which was one word long on the cover.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><img src="../assets/avatar.svg" alt="" width="96" height="96"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Priya</h3>
+          <p class="card-text">Keeps the shop solvent and the subscriber list in a spreadsheet, which is also the subject of issue 8.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="post">
+    <h2>How the post works</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Where</th><th>Cost per order</th><th>Usually takes</th><th>Tracked</th></tr></thead>
+        <tbody>
+          <tr><td>In the country</td><td>1.50</td><td>2 to 3 days</td><td>No</td></tr>
+          <tr><td>Europe</td><td>4.50</td><td>1 to 2 weeks</td><td>No</td></tr>
+          <tr><td>Everywhere else</td><td>4.50</td><td>2 to 3 weeks</td><td>No</td></tr>
+          <tr><td>Collect from the shop</td><td>0.00</td><td>Saturday</td><td>You are the tracking</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Orders go out on Tuesdays and Fridays. Issues travel in a stiff card envelope so they arrive flat; if one arrives bent, email a photo and another goes out on the next post day.</p>
+  </section>
+
+  <div class="thick-flare">
+    <section class="thick-band" id="subscribe">
+      <p class="kicker">Subscribe</p>
+      <h2>Four issues a year for 22.00, post included</h2>
+      <p>Fill in the form and we post you an invoice with the first issue. No card details, no account. Cancel any time by replying to any email from us.</p>
+    </section>
+  </div>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The form posts nowhere and nothing you type is sent anywhere.</p></div>
+
+  <form class="form-grid" action="#" method="get">
+    <fieldset>
+      <legend>Where to post</legend>
+      <div class="field">
+        <label for="s-name">Name</label>
+        <input id="s-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="s-email">Email</label>
+        <input id="s-email" name="email" type="email" autocomplete="email" required>
+        <p class="hint">For the invoice and one note when each issue ships.</p>
+      </div>
+      <div class="field field-wide">
+        <label for="s-address">Postal address</label>
+        <textarea id="s-address" name="address" rows="3" autocomplete="street-address" required></textarea>
+      </div>
+      <div class="field">
+        <label for="s-country">Country</label>
+        <select id="s-country" name="country">
+          <option value="home" selected>In the country</option>
+          <option value="eu">Europe</option>
+          <option value="world">Everywhere else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="s-start">Start with</label>
+        <select id="s-start" name="start">
+          <option value="12" selected>Issue 12, ships Friday</option>
+          <option value="13">Issue 13, next season</option>
+        </select>
+        <p class="hint">Starting with 12 means the sticker sheet comes in the same envelope.</p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Extras</legend>
+      <div class="field">
+        <span class="field-label">Add to the first envelope</span>
+        <label class="check"><input type="checkbox" name="extras" value="stickers" checked> The sticker sheet (free with a subscription)</label>
+        <label class="check"><input type="checkbox" name="extras" value="issue-11"> Issue 11, 6.00</label>
+        <label class="check"><input type="checkbox" name="extras" value="issue-10"> Issue 10, 6.00</label>
+      </div>
+      <div class="field">
+        <span class="field-label">Gift?</span>
+        <label class="check"><input type="radio" name="gift" value="no" checked> It is for me</label>
+        <label class="check"><input type="radio" name="gift" value="yes"> It is a gift; invoice me, post to them</label>
+      </div>
+      <div class="field">
+        <label class="switch"><input type="checkbox" role="switch" name="notes" checked><span>Email me when a sold-out issue is reprinted</span></label>
+        <label class="switch"><input type="checkbox" role="switch" name="open-call"><span>Email me when you are looking for writers</span></label>
+      </div>
+    </fieldset>
+    <div class="form-actions">
+      <button class="btn btn-primary btn-lg" type="submit">Send the form</button>
+      <button class="btn" type="reset">Clear it</button>
+    </div>
+  </form>
+
+  <section class="section" id="write">
+    <h2>Writing one</h2>
+    <div class="accordion-group">
+      <details class="accordion" name="write" open>
+        <summary>What we look for</summary>
+        <div class="accordion-body"><p>One program, tool or habit, and the one thing about it you cannot stop telling people. Not a review, not a tutorial. Twelve pages at our size is about 2,500 words and six drawings, or fewer words and more drawings.</p></div>
+      </details>
+      <details class="accordion" name="write">
+        <summary>What you get</summary>
+        <div class="accordion-body"><p>Ten copies, a third of what the issue makes after printing and post, and your name on the cover. Tomasz draws unless you would rather.</p></div>
+      </details>
+      <details class="accordion" name="write">
+        <summary>How to send it</summary>
+        <div class="accordion-body"><p>Email a paragraph, not a draft, to <a href="mailto:hello@example.com">hello@example.com</a>. We answer everything, usually within two weeks, always before the next issue goes to print.</p></div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Paper Cuts</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="issues.html">Issues</a></li>
+        <li><a href="about.html">About and subscribe</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>Unit 4, the old print works, Millbrook</li>
+        <li>Saturdays, 11 to 4</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Thick template</a></li>
+        <li><a href="../docs/index.html">Get started with Thick</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Thick template. The shop, its issues and its authors are fictional; the floppy disk is real.</p>
+</footer>
+</body>
+</html>

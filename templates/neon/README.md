@@ -1,11 +1,11 @@
 # Neon
 
-Signage at night. A flat zinc field, hairline borders at 10 to 15 percent
+Signage at night. A flat dark field, hairline borders at 10 to 15 percent
 white, and two neon tubes: rose for what matters, cyan for what is merely
-true. Glow means state: a lit thing is on, an unlit one is off. The light
-scheme is only *less dark*: the ground lifts to a warm grey and the text
-stays off-white, so the tubes keep working and nothing is ever white.
-Headings in Space Grotesk, body in Inter. Part of
+true. Glow means state: a lit thing is on, an unlit one is off. Both
+schemes are dark: light is zinc (`#18181b`), dark is black (`#141414`),
+and the text stays off-white in each, so the tubes keep working and
+nothing is ever white. Headings in Space Grotesk, body in Inter. Part of
 [retemplate](../../README.md).
 
 ## Take and use
@@ -57,8 +57,8 @@ Then write HTML with the classes in `docs/components/` (open
   `input`, `textarea`, `dialog` and open popovers to `color-scheme: dark`
   and sets `scrollbar-color` on `:root`. The browser never paints a white
   dropdown, date picker or scrollbar; inside those elements the palette
-  resolves to its dark half in either scheme, so a form field is always a
-  black well.
+  resolves to its black half in either scheme, so a form field is always a
+  black well, one step deeper than the zinc page around it in light.
 - **Delete these:** each showcase page has an
   `<a class="site-link" href="../../index.html">` back to the retemplate
   landing; nothing else points outside the folder.
@@ -100,31 +100,31 @@ hero.
 The palette block below is a [retoken](https://kieranwood.ca/retoken/theme/)
 theme. Paste it into a retoken site's `theme.css` after the existing palettes
 and select it with `<html data-theme="neon">`. Colours carry over, including
-the never-white light half; the glows and the hairlines are this template's
-own tokens and stay here.
+the zinc light half and the black dark half; the glows and the hairlines
+are this template's own tokens and stay here.
 
 ```css
 :root[data-theme='neon'],
 [data-theme='neon'] {
-  --pal-bg0: light-dark(#3a3a42, #18181b);
-  --pal-bg0-soft: light-dark(#43434c, #1f1f23);
-  --pal-bg1: light-dark(#4b4b55, #26262b);
-  --pal-bg2: light-dark(#525259, #343436);
-  --pal-bg3: light-dark(#6a6a76, #4b4b4d);
-  --pal-fg: light-dark(#f5f5f7, #f4f4f5);
-  --pal-fg-muted: light-dark(#c4c4cc, #a1a1aa);
-  --pal-gray: light-dark(#9a9aa6, #71717a);
-  --pal-red: light-dark(#ff8a8a, #f87171);
-  --pal-green: light-dark(#4ade80, #34d399);
-  --pal-yellow: light-dark(#fcd34d, #fbbf24);
+  --pal-bg0: light-dark(#18181b, #141414);
+  --pal-bg0-soft: light-dark(#1f1f23, #1a1a1a);
+  --pal-bg1: light-dark(#26262b, #202020);
+  --pal-bg2: light-dark(#343436, #2c2c2c);
+  --pal-bg3: light-dark(#4b4b4d, #3d3d3d);
+  --pal-fg: light-dark(#f4f4f5, #f2f2f2);
+  --pal-fg-muted: light-dark(#a1a1aa, #a3a3a3);
+  --pal-gray: light-dark(#71717a, #737373);
+  --pal-red: light-dark(#f87171, #f87171);
+  --pal-green: light-dark(#34d399, #34d399);
+  --pal-yellow: light-dark(#fbbf24, #fbbf24);
   --pal-blue: light-dark(#22d3ee, #22d3ee);
-  --pal-purple: light-dark(#c4b5fd, #a78bfa);
+  --pal-purple: light-dark(#a78bfa, #a78bfa);
   --pal-aqua: light-dark(#67e8f9, #67e8f9);
-  --pal-accent: light-dark(#ff8fa3, #f43f5e);
-  --pal-accent-strong: light-dark(#fda4af, #fb7185);
-  --pal-on-accent: light-dark(#18181b, #18181b);
-  --pal-shadow-1: light-dark(rgb(0 0 0 / 0.35), rgb(0 0 0 / 0.5));
-  --pal-shadow-2: light-dark(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.7));
+  --pal-accent: light-dark(#f43f5e, #f43f5e);
+  --pal-accent-strong: light-dark(#fb7185, #fb7185);
+  --pal-on-accent: light-dark(#18181b, #141414);
+  --pal-shadow-1: light-dark(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.6));
+  --pal-shadow-2: light-dark(rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.8));
 }
 ```
 

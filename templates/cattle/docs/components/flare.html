@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="cattle">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Cattle</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Cattle · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Cattle adds four things from the smokehouse: the brand as a utility class, the leather panel, the maker's mark, and a menu list. Three more are variants of contract components and live on their own pages: the <a href="cards.html#variants">stitched card</a>, the <a href="buttons.html#variants">rivet button</a> and the <a href="page-break.html#variants">rope rule</a>; the <a href="fifty-fifty.html#variants">leather fifty-fifty</a> is the panel applied to that block. The burn itself is two tokens, <code>--cattle-char</code> and <code>--cattle-burn</code>, and every <code>h1</code> and <code>h2</code> already carries it.</p>
+</header>
+<h2 id="preview">The brand</h2>
+<p>Put <code>cattle-brand</code> on anything and it is burnt in the way <code>h1</code> and <code>h2</code> are: the slab, capitals, the char fill and the scorch halo. By day the halo is four rings of brown fading into the grain; by night the same list of shadows is a dark press and a pale catch, so the lettering reads as tooled into the leather. One list of shadows, both halves, no <code>data-scheme</code> hook. Use it on a card title, a price, a sign; not on running text.</p>
+<figure class="example" data-snippet="cattle-brand">
+<p class="cattle-brand">Open at eleven. Gone when it's gone.</p>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-brand">&lt;p class="cattle-brand"&gt;Open at eleven. Gone when it's gone.&lt;/p&gt;</code></pre></div>
+<h2 id="variants">The leather panel</h2>
+<p>Put <code>cattle-leather</code> on a block and it is saddle leather with a running stitch inside the edge. Inside it the semantic tokens are re-pointed: text is cream, links and kickers are thread, a primary button is thread on leather, and burnt headings become tooled ones. The navbar, the sidebar, the footer and the author card are the same panel; this is the class that lets you add another. It takes its own padding on a plain block and none on a <code>.fifty-fifty</code>, a <code>.card</code> or an <code>.accordion-group</code>, which have their own.</p>
+<figure class="example" data-snippet="cattle-leather">
+<div class="cattle-flare">
+  <div class="cattle-leather">
+    <p class="kicker">Hours</p>
+    <h2>Eleven until it runs out</h2>
+    <p>Brisket comes off at eleven and again at four. When the second one is gone, we close. <a href="#">The menu</a> says what there is today.</p>
+    <a class="btn btn-primary" href="#">Book a table</a>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-leather">&lt;div class="cattle-flare"&gt;
+  &lt;div class="cattle-leather"&gt;
+    &lt;p class="kicker"&gt;Hours&lt;/p&gt;
+    &lt;h2&gt;Eleven until it runs out&lt;/h2&gt;
+    &lt;p&gt;Brisket comes off at eleven and again at four. When the second one is gone, we close. &lt;a href="#"&gt;The menu&lt;/a&gt; says what there is today.&lt;/p&gt;
+    &lt;a class="btn btn-primary" href="#"&gt;Book a table&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>The maker's mark</h3>
+<p>A steer head, drawn from the <code>--cattle-mark</code> token as a mask and filled with the char colour, scorched by day. It is an empty <code>span</code>, so mark it <code>aria-hidden</code>. The overview puts one above the hero headline; the example puts one on the home page. Change the token in <code>theme.css</code> and your own mark appears here, on every page break and on the feature card.</p>
+<figure class="example" data-snippet="cattle-mark">
+<div class="cattle-flare"><span class="cattle-mark" aria-hidden="true"></span></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-mark">&lt;div class="cattle-flare"&gt;&lt;span class="cattle-mark" aria-hidden="true"&gt;&lt;/span&gt;&lt;/div&gt;</code></pre></div>
+<h3>The menu list</h3>
+<p>A list of names and prices with a dotted leader between them and a line of description under each. The price is burnt. It is a <code>ul</code> with three spans per item, so without the stylesheet it is still a readable list; the wrapper is <code>cattle-flare</code>, so a template swap can remove the whole thing. The <a href="../../example/menu.html">example menu</a> is four of these.</p>
+<figure class="example" data-snippet="cattle-menu">
+<div class="cattle-flare">
+  <ul class="cattle-menu">
+    <li><span class="cattle-menu-name">Brisket</span><span class="cattle-menu-price">18</span><span class="cattle-menu-note">Fourteen hours over post oak. Sliced when you order.</span></li>
+    <li><span class="cattle-menu-name">Pork ribs</span><span class="cattle-menu-price">16</span><span class="cattle-menu-note">Half a rack, dry rubbed.</span></li>
+    <li><span class="cattle-menu-name">Pit beans</span><span class="cattle-menu-price">5</span><span class="cattle-menu-note">Cooked under the brisket.</span></li>
+  </ul>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-menu">&lt;div class="cattle-flare"&gt;
+  &lt;ul class="cattle-menu"&gt;
+    &lt;li&gt;&lt;span class="cattle-menu-name"&gt;Brisket&lt;/span&gt;&lt;span class="cattle-menu-price"&gt;18&lt;/span&gt;&lt;span class="cattle-menu-note"&gt;Fourteen hours over post oak. Sliced when you order.&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="cattle-menu-name"&gt;Pork ribs&lt;/span&gt;&lt;span class="cattle-menu-price"&gt;16&lt;/span&gt;&lt;span class="cattle-menu-note"&gt;Half a rack, dry rubbed.&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="cattle-menu-name"&gt;Pit beans&lt;/span&gt;&lt;span class="cattle-menu-price"&gt;5&lt;/span&gt;&lt;span class="cattle-menu-note"&gt;Cooked under the brisket.&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>, except the leather panel's token re-pointing, which is under <code>/* == navbar == */</code> because the chrome shares it, and the three variants, which sit with their components.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.cattle-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.cattle-brand</code></td><td>Burns any element: slab, capitals, char fill, scorch halo</td></tr>
+      <tr><td><code>.cattle-leather</code></td><td>A stitched leather panel; re-points the semantic tokens inside it</td></tr>
+      <tr><td><code>.cattle-mark</code></td><td>The steer mark from the <code>--cattle-mark</code> token, 4rem wide, scorched</td></tr>
+      <tr><td><code>.cattle-menu</code></td><td>The list; each <code>li</code> is a three-column grid with the leader drawn by <code>::after</code></td></tr>
+      <tr><td><code>.cattle-menu-name</code>, <code>-price</code>, <code>-note</code></td><td>The three spans: bold name, burnt price, muted note on the second row</td></tr>
+      <tr><td><code>.card.cattle-stitched</code></td><td>Leather frame with the stitch through it (<code>global.css § cards</code>)</td></tr>
+      <tr><td><code>.btn.cattle-rivet</code></td><td>Leather strap, stitch, two brass rivets (<code>global.css § buttons</code>)</td></tr>
+      <tr><td><code>hr.cattle-rope</code></td><td>Two strands of hemp rope (<code>global.css § page-break</code>)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Every colour here is a token in <code>theme.css</code>: <code>--cattle-char</code>, the four <code>--cattle-scorch-*</code> rings, <code>--cattle-burn</code>, <code>--cattle-tooled</code>, the <code>--cattle-leather-*</code> set, <code>--cattle-thread</code>, the <code>--cattle-brass-*</code> set, <code>--cattle-rivet</code>, <code>--cattle-rope-*</code>, <code>--cattle-grain</code>, <code>--cattle-leather</code>, <code>--cattle-veil</code> and <code>--cattle-mark</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>The only motion in the template is the burn-in on the <a href="cards.html">feature card</a>, the rivet marker on an accordion and the press of a button, all transitions the global <code>prefers-reduced-motion</code> rule shortens to nothing. The grain and the leather are still textures, not animations.</li>
+<li>The brand and the menu are content and should not be hidden from assistive technology. The mark is decoration; mark it <code>aria-hidden="true"</code> as the example does.</li>
+<li>Alfa Slab One has one weight and no italic. The brand uses it at that weight; do not put <code>cattle-brand</code> on text that asks for bold or italic.</li>
+<li>The leather panel's stitch is an <code>outline</code>, so it is not clipped by <code>overflow: hidden</code> and it survives on a <code>.card</code>. Do not give a stitched element a focus style of its own; focus goes to the controls inside it.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

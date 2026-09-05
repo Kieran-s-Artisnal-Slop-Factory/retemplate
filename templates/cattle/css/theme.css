@@ -1,0 +1,216 @@
+/*
+ * cattle — design tokens.
+ *
+ * Retoken compatible (https://kieranwood.ca/retoken/theme/): the same two
+ * layers retoken uses.
+ *
+ *   1. `:root, .themed` maps roles onto palette slots. The colour mapping is
+ *      retoken's, verbatim; the shared values (type, spacing, shape, layout)
+ *      are this template's own.
+ *   2. The palette block fills the 19 `--pal-*` slots, each a light-dark()
+ *      pair, under retoken's named-palette selector. That block, exactly as
+ *      written, is what you paste into a retoken site — see docs/theme.html.
+ *
+ * `color-scheme: light dark` lets the browser pick the half of each pair;
+ * js/theme.js pins it on <html> when the visitor has chosen. Components in
+ * global.css reference the semantic tokens only — never a slot, never a
+ * literal.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 3px var(--pal-shadow-1);
+  --shadow-2: 0 4px 16px var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: Bitter, 'Roboto Slab', Rockwell, 'Iowan Old Style', Georgia, serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: 'Alfa Slab One', Rockwell, 'Roboto Slab', 'Arial Black', serif;
+  --font-weight-display: 400;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.45rem;
+  --font-size-2xl: 1.9rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-hero: clamp(2.6rem, 1.4rem + 4vw, 4.6rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: cattle ────────────────────────────────────────────────────
+ * By day: pale maple, charred lettering, saddle leather for the accent and
+ * cream on it. By night: dark oiled leather, cream text and brass for the
+ * accent. Neither half is ever black or white.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='cattle'],
+[data-theme='cattle'] {
+  --pal-bg0: light-dark(#e8d9bf, #2a1a12);
+  --pal-bg0-soft: light-dark(#f0e4cd, #33221a);
+  --pal-bg1: light-dark(#dcc9a6, #3d2a20);
+  --pal-bg2: light-dark(#c4ad83, #553b2d);
+  --pal-bg3: light-dark(#9e8660, #74533f);
+
+  --pal-fg: light-dark(#2a1a12, #efe2c8);
+  --pal-fg-muted: light-dark(#6b5340, #c9b08e);
+  --pal-gray: light-dark(#8c7a62, #9a8368);
+
+  --pal-red: light-dark(#9c2a1e, #e08a72);
+  --pal-green: light-dark(#4e6b2f, #a3bf7a);
+  --pal-yellow: light-dark(#8a5a12, #e0b866);
+  --pal-blue: light-dark(#3f5c7a, #93aecb);
+  --pal-purple: light-dark(#6d4a6a, #bb9cc0);
+  --pal-aqua: light-dark(#2f6b62, #8ec2b4);
+
+  --pal-accent: light-dark(#7a3b17, #d9a65a);
+  --pal-accent-strong: light-dark(#5a2a0e, #e8bd78);
+  --pal-on-accent: light-dark(#f3e7cf, #2a1a12);
+
+  --pal-shadow-1: light-dark(rgb(42 26 18 / 0.16), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(42 26 18 / 0.28), rgb(0 0 0 / 0.65));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The burn, the wood, the leather, the thread and the brass. Not part of
+ * the retoken paste-in: global.css reads these, retoken ignores them.
+ */
+:root,
+.themed {
+  /* The brand. Charred lettering by day; cream lettering, tooled into the
+   * leather, by night. The scorch layers fade to nothing in the dark half
+   * and the tooling layers fade to nothing in the light half, so one
+   * text-shadow list serves both. */
+  --cattle-char: light-dark(#1a0e08, #f3e7cf);
+  --cattle-scorch-1: light-dark(rgb(74 34 10 / 0.85), transparent);
+  --cattle-scorch-2: light-dark(rgb(110 52 14 / 0.55), transparent);
+  --cattle-scorch-3: light-dark(rgb(140 72 22 / 0.35), transparent);
+  --cattle-scorch-4: light-dark(rgb(160 92 34 / 0.2), transparent);
+  --cattle-tool-shade: light-dark(transparent, rgb(0 0 0 / 0.75));
+  --cattle-tool-light: light-dark(transparent, rgb(255 236 200 / 0.14));
+  --cattle-burn:
+    0 0 1px var(--cattle-scorch-1),
+    0 0 3px var(--cattle-scorch-2),
+    0 0 8px var(--cattle-scorch-3),
+    0 0 18px var(--cattle-scorch-4),
+    0 1px 0 var(--cattle-tool-shade),
+    0 -1px 0 var(--cattle-tool-light);
+  --cattle-burn-rule:
+    0 0 2px 1px var(--cattle-scorch-2),
+    0 0 7px 2px var(--cattle-scorch-3),
+    0 0 16px 3px var(--cattle-scorch-4),
+    0 1px 0 var(--cattle-tool-shade);
+
+  /* Leather: the panel colour, the thread of the running stitch, brass.
+   * Lettering on leather is tooled, not burnt: a dark press below and a
+   * pale catch above, the same in both halves. */
+  --cattle-leather-bg: light-dark(#6b3a1e, #3b2418);
+  --cattle-leather-fg: #f3e7cf;
+  --cattle-leather-muted: rgb(243 231 207 / 0.72);
+  --cattle-leather-soft: rgb(255 236 200 / 0.1);
+  --cattle-leather-shade: rgb(0 0 0 / 0.7);
+  --cattle-leather-light: rgb(255 236 200 / 0.14);
+  --cattle-tooled:
+    0 1px 0 var(--cattle-leather-shade),
+    0 -1px 0 var(--cattle-leather-light);
+  --cattle-thread: light-dark(#e8cf9a, #d9a65a);
+  /* Hemp rope, two strands. */
+  --cattle-rope-dark: light-dark(#8a6a3c, #6b4f2c);
+  --cattle-rope-light: light-dark(#cdb07a, #a58652);
+  /* The veil between the wood grain and the leather on body: bg0 by day
+   * (hides the leather), nothing by night (the grain fades into it). */
+  --cattle-veil: light-dark(#e8d9bf, transparent);
+  --cattle-brass: light-dark(#b8862e, #d9a65a);
+  --cattle-brass-shine: light-dark(#e9c46a, #f1d79a);
+  --cattle-brass-shade: light-dark(#7a5416, #8a6427);
+  --cattle-rivet: radial-gradient(circle at 35% 35%, var(--cattle-brass-shine), var(--cattle-brass) 45%, var(--cattle-brass-shade) 100%);
+
+  /* Wood grain, straight and fine: fractal noise stretched along x by a very
+   * low x frequency, tinted a darker maple at a low alpha. Sits on the light
+   * half's body; global.css swaps it for the leather below on data-scheme. */
+  --cattle-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='240'%3E%3Cfilter id='g' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.004 0.16' numOctaves='3' seed='11' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' values='0 0 0 0 0.42 0 0 0 0 0.26 0 0 0 0 0.12 0 0 0 0.34 -0.10'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23g%29'/%3E%3C/svg%3E");
+  /* Leather grain: fine, even pebbling in a pale tint at a low alpha, for
+   * the dark half. */
+  --cattle-leather: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='l' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='5' stitchTiles='stitch' result='n'/%3E%3CfeColorMatrix in='n' values='0 0 0 0 0.95 0 0 0 0 0.85 0 0 0 0 0.68 0 0 0 0.16 -0.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23l%29'/%3E%3C/svg%3E");
+
+  /* The maker's mark: a steer head in outline, as a mask filled with the
+   * char colour. The page break, the favicon and the feature card use it. */
+  --cattle-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'%3E%3Cpath d='M4 8c8 4 14 4 20 2M60 8c-8 4-14 4-20 2M24 10c-2 6-2 12 0 18 2 6 6 10 8 12 2-2 6-6 8-12 2-6 2-12 0-18' fill='none' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M22 18h20' stroke='%23000' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='27' cy='25' r='2.4'/%3E%3Ccircle cx='37' cy='25' r='2.4'/%3E%3Cpath d='M29 36h6' stroke='%23000' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+
+  /* The plate of the branded card's media on hover: a scorch that spreads
+   * under the mark. */
+  --cattle-scorch-glow: light-dark(rgb(90 42 14 / 0.55), rgb(217 166 90 / 0.28));
+}

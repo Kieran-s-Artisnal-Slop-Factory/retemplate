@@ -1,14 +1,14 @@
 /*
- * natural — design tokens.
+ * natural: design tokens.
  *
  * Retoken compatible: the same two layers retoken uses. The colour mapping
  * under `:root, .themed` is retoken's verbatim; the shared values are this
  * template's; the palette block is the retoken paste-in (docs/theme.html).
  *
  * Cream paper, ink, rust and moss by day. By night the page is deep brown
- * soil — a small SVG noise texture tiled under everything and veiled by a
+ * soil, a small SVG noise texture tiled under everything and veiled by a
  * flat gradient in the light half, so the swap is a colour and survives the
- * paste-in — with cream and light green on top.
+ * paste-in, with cream and light green on top.
  */
 
 :root,
@@ -150,9 +150,9 @@
   --natural-moss-soft: light-dark(rgb(61 74 48 / 0.12), rgb(185 201 160 / 0.10));
   --natural-moss-tint: radial-gradient(52rem 36rem at 100% 0%, var(--natural-moss-soft), transparent 70%);
 
-  /* The soil. Two layers of fractal noise — slow blotches and fine grain —
+  /* The soil. Two layers of fractal noise, small blotches and fine grain,
    * tinted earth and merged. In the light half the veil below covers it. */
-  --natural-soil: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='s' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.028' numOctaves='4' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.16 0 0 0 0.5 -0.14' result='blot'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 0.58 0 0 0 0 0.47 0 0 0 0 0.32 0 0 0 0.22 -0.04' result='grain'/%3E%3CfeMerge%3E%3CfeMergeNode in='blot'/%3E%3CfeMergeNode in='grain'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23s%29'/%3E%3C/svg%3E");
+  --natural-soil: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='s' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.112' numOctaves='4' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.16 0 0 0 0.16 -0.04' result='blot'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 0.58 0 0 0 0 0.47 0 0 0 0 0.32 0 0 0 0.07 -0.012' result='grain'/%3E%3CfeMerge%3E%3CfeMergeNode in='blot'/%3E%3CfeMergeNode in='grain'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23s%29'/%3E%3C/svg%3E");
   --natural-veil-color: light-dark(var(--pal-bg0), transparent);
   --natural-veil: linear-gradient(var(--natural-veil-color), var(--natural-veil-color));
 

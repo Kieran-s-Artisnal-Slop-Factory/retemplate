@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Modern Frosty · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Modern Frosty</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <h1>Cold, clear and out of the way.</h1>
+      <p>Near-white with a cast of ice, hairlines instead of shadows, one deep blue for the things you can click. Frost appears only where content scrolls under something: the bar above you, a dialog, a menu. Same markup as every other template here.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg modern-frosty-quiet" href="example/index.html">See the example app</a>
+      </div>
+    </div>
+    <div class="modern-frosty-flare">
+      <div class="modern-frosty-note modern-frosty-scroll" aria-label="A note, as the example app draws it">
+        <div class="modern-frosty-toolbar"><b>Template notes</b><span>edited today</span><span>saved</span></div>
+        <div class="modern-frosty-sheet">
+          <h2>What frost is for</h2>
+          <p>Frost is a translucent fill and a low blur. It tells you something is <mark>above</mark> the page rather than on it.</p>
+          <ul>
+            <li>The bar you scroll under: yes.</li>
+            <li>A dialog over the page: yes.</li>
+            <li>A card sitting in the flow: no. A card gets a hairline.</li>
+          </ul>
+          <p class="muted">Scroll this note. The toolbar stays, and the lines pass under it.</p>
+          <p>Every colour is a <a href="docs/theme.html">token</a>, so the ice turns to slate when the scheme does. The lines on this sheet are one hairline colour repeated.</p>
+          <p>The type is Geist at 16px, semibold for headings with the tracking pulled in, mono for anything that is a label rather than a sentence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Three rules, one ledger</h2>
+    <p>The ledger is the template's own grid: cards that share their hairlines, with no gaps and no radius on the cells. Use it when the cards are a set and should read as one object.</p>
+    <div class="grid-3 modern-frosty-ledger">
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Frost where content passes under</h3>
+          <p class="card-text">The navbar, the docs top bar, the note toolbar, dialogs and open menus blur what is behind them at 8px. Nothing else does.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Hairlines, not shadows</h3>
+          <p class="card-text">Every edge is one pixel of icy blue. Sections are ruled off from each other; cards, tables and fields share the same line. Shadows are kept for the two things that float.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two blues</h3>
+          <p class="card-text">Pale tints are surfaces and lines. One deep cold blue carries links, focus and the primary button, and passes 4.5:1 in both schemes. In the dark it turns to ice on slate.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The example app</h2>
+    <p>The example is Sheaf, a notes app: a home page, a features page and a pricing page. The hero on its home page is a note, because the app is the point, and the plans are a table because prices are a table.</p>
+    <section class="fifty-fifty">
+      <figure><img src="assets/fifty.svg" alt="" width="900" height="600"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Fifty-fifty</p>
+        <h2>Half picture, half words, one hairline between</h2>
+        <p>The block gives an image half the width and the text the other half, divided by a rule. Add <code>fifty-fifty-reverse</code> and the picture moves right. On a phone the picture comes first either way.</p>
+        <a class="btn btn-primary" href="example/index.html">Open Sheaf</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>Where the frost is</h2>
+    <p>Every surface that blurs, and the ones that were tempted and did not. Tables sit in a wrapper that scrolls sideways when they are wider than the page; the head row is set in mono.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Surface</th><th>Frost</th><th>Blur</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Navbar and top bar</td><td><span class="badge badge-active">yes</span></td><td>8px</td><td>Content scrolls under it</td></tr>
+          <tr><td>Dialog and lightbox controls</td><td><span class="badge badge-active">yes</span></td><td>8px</td><td>Sits over the page</td></tr>
+          <tr><td>Mobile menu and sidebar drawer</td><td><span class="badge badge-active">yes</span></td><td>8px</td><td>Opens over the page</td></tr>
+          <tr><td>Feature card picture</td><td><span class="badge badge-active">until hover</span></td><td>8px to 0</td><td>The one effect</td></tr>
+          <tr><td>Cards, tables, fields, footer</td><td><span class="badge">no</span></td><td>none</td><td>They are the page</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards on their own</h2>
+    <p>Outside a ledger a card keeps its own hairline and a 6px radius. Horizontal cards put the media on the left or, with <code>card-media-end</code>, on the right, with a rule between media and body.</p>
+    <div class="grid-2">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the left</h3>
+          <p class="card-text">The image takes a little over a third of the width and the text takes the rest.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Media on the right</h3>
+          <p class="card-text">The same card with the order flipped. The markup is the same; only one class differs.</p>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one feature card with an effect of its own. This one's picture sits under a pane of frost. Hover it, or tab to the button inside it, and the frost clears.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The frost clears</h3>
+        <p class="card-text">A pseudo-element over the picture carries the same fill and blur as the navbar. On hover the blur goes to zero and the fill fades. Nothing moves, and under reduced motion the change is instant.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Eight sheets</h2>
+    <p>Eight ruled sheets, each with one mark. Click any. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the close button are frosted, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A blue disc on a ruled sheet" width="800" height="600"></a><figcaption>Disc</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A pale blue rectangle on a ruled sheet" width="800" height="600"></a><figcaption>Sheet</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="A blue triangle on a ruled sheet" width="800" height="600"></a><figcaption>Peak</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Seven vertical bars on a ruled sheet" width="800" height="600"></a><figcaption>Bars</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="Two overlapping discs on a ruled sheet" width="800" height="600"></a><figcaption>Two discs</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="Five columns of two heights on a ruled sheet" width="800" height="600"></a><figcaption>Columns</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A single blue curve on a ruled sheet" width="800" height="600"></a><figcaption>Curve</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Five dots in two blues on a ruled sheet" width="800" height="600"></a><figcaption>Dots</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A blue disc on a ruled sheet"><figcaption>Disc, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A pale blue rectangle on a ruled sheet"><figcaption>Sheet, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="A blue triangle on a ruled sheet"><figcaption>Peak, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Seven vertical bars on a ruled sheet"><figcaption>Bars, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="Two overlapping discs on a ruled sheet"><figcaption>Two discs, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="Five columns of two heights on a ruled sheet"><figcaption>Columns, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A single blue curve on a ruled sheet"><figcaption>Curve, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Five dots in two blues on a ruled sheet"><figcaption>Dots, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are small type on a hairline; the quiet one has no border until you hover. A switch is a checkbox with <code>role="switch"</code>. Badges are mono labels with square corners.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Save note</button>
+      <button class="btn" type="button">Duplicate</button>
+      <button class="btn modern-frosty-quiet" type="button">Move to folder</button>
+      <button class="btn btn-danger" type="button">Delete</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Sync on save</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Show line numbers</span></label>
+      <span class="badge">draft</span>
+      <span class="badge badge-active">syncing</span>
+      <span class="badge badge-done">saved</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Saved. The note is on every device that is online.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Geist and Geist Mono come from Google Fonts. The README shows how to self-host them instead.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The example app is a demonstration; its forms post nowhere.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Sync failed. Nothing did, but this is what it would look like.</p></div>
+    </div>
+    <p>Dialogs are native. The button opens one on frost over the page; the dialog closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Open a dialog</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Delete this note?</h2>
+      <p>It moves to the bin for thirty days, then it goes. The dialog traps focus, frosts the page behind it and closes on <kbd>Esc</kbd>; all of that comes from the browser.</p>
+      <form method="dialog" class="modal-actions">
+        <button class="btn" type="submit">Keep it</button>
+        <button class="btn btn-danger" type="submit" value="delete">Delete</button>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Questions</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code>. Give a group one <code>name</code> and opening one closes the others, with no script. With <code>modern-frosty-lines</code> the group loses its box and keeps only the rules between items.</p>
+    <div class="accordion-group modern-frosty-lines">
+      <details class="accordion" name="faq" open>
+        <summary>Why so little frost?</summary>
+        <div class="accordion-body"><p>Because frost means depth, and a page with depth everywhere has none. The blur is spent on the few things that sit above the page, so that when you see it you know what it means.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Is the dark scheme black?</summary>
+        <div class="accordion-body"><p>No. It is a deep slate blue, and the hairlines and the accent turn to ice. The checker measures text on the ground and the accent on the ground in both halves; both clear 4.5:1.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>How much JavaScript is there?</summary>
+        <div class="accordion-body"><p>About forty lines for the scheme toggle, and a one-line <code>onclick</code> on anything that opens a dialog. Everything else is HTML and CSS.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own, boxed.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and this folder's <code>README.md</code>. There is no <code>fonts/</code> folder unless you self-host the two faces.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings, lists, quotes, code, tables, footnotes. The <a href="blogpost.html">blog post</a> runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A template is a promise about what markup will look like. The contract is that promise written down.</p></blockquote>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Modern Frosty</strong>
+        <p class="author-bio">Ice tints, hairlines and one cold blue. Frost only where something sits over the page.</p>
+        <p class="meta"><time datetime="2026-09-05">5 September 2026</time> · <span>2 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a><a class="tag" href="docs/components/flare.html">flare</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Modern Frosty</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example app: Sheaf</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="docs/components/flare.html">Flare and variants</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Modern Frosty is a retemplate template. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

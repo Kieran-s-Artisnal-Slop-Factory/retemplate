@@ -1,4 +1,4 @@
-/* retemplate — theme.js
+/* retemplate theme.js
  *
  * Loaded synchronously in <head>, before the stylesheets, so the visitor's
  * stored scheme is applied before first paint. Retoken's model exactly:

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Banner · Thick</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Thick · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html" aria-current="page">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Banner</h1>
+  <p>A message with a coloured edge: success, info, warning, danger, or none.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="banner">
+<div class="stack">
+  <div class="banner banner-success" role="status"><span>✓</span><p>Saved. Your changes are live.</p></div>
+  <div class="banner banner-info" role="status"><span>i</span><p>Nothing to do here yet.</p></div>
+  <div class="banner banner-warning" role="status"><span>!</span><p>This draft has unsaved changes.</p></div>
+  <div class="banner banner-danger" role="alert"><span>×</span><p>The upload failed. Try again.</p></div>
+</div>
+<div class="banner"><span>·</span><p>A banner with no tone at all.</p></div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="banner">&lt;div class="stack"&gt;
+  &lt;div class="banner banner-success" role="status"&gt;&lt;span&gt;✓&lt;/span&gt;&lt;p&gt;Saved. Your changes are live.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="banner banner-info" role="status"&gt;&lt;span&gt;i&lt;/span&gt;&lt;p&gt;Nothing to do here yet.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="banner banner-warning" role="status"&gt;&lt;span&gt;!&lt;/span&gt;&lt;p&gt;This draft has unsaved changes.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="banner banner-danger" role="alert"&gt;&lt;span&gt;×&lt;/span&gt;&lt;p&gt;The upload failed. Try again.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="banner"&gt;&lt;span&gt;·&lt;/span&gt;&lt;p&gt;A banner with no tone at all.&lt;/p&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == banner == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.banner</code></td><td>Padding, border, a thick left edge, flex with a gap for the icon</td></tr>
+      <tr><td><code>.banner-success</code></td><td>Green edge, soft green background</td></tr>
+      <tr><td><code>.banner-info</code></td><td>Blue</td></tr>
+      <tr><td><code>.banner-warning</code></td><td>Yellow</td></tr>
+      <tr><td><code>.banner-danger</code></td><td>Red</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Use <code>role="status"</code> for messages that can wait and <code>role="alert"</code> for ones that cannot; screen readers announce alerts immediately.</li>
+<li>The first child is the icon slot; any short string or inline SVG works.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="sidebar.html">← Sidebar</a><a href="badge.html">Badge →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

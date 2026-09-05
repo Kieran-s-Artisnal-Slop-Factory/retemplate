@@ -1,0 +1,159 @@
+/*
+ * modern-frosty — design tokens.
+ *
+ * Retoken compatible (https://kieranwood.ca/retoken/theme/): the same two
+ * layers retoken uses.
+ *
+ *   1. `:root, .themed` maps roles onto palette slots. The colour mapping is
+ *      retoken's, verbatim; the shared values (type, spacing, shape, layout)
+ *      are this template's own.
+ *   2. The palette block fills the 19 `--pal-*` slots, each a light-dark()
+ *      pair, under retoken's named-palette selector. That block, exactly as
+ *      written, is what you paste into a retoken site — see docs/theme.html.
+ *
+ * Modern Frosty: near-white with icy blue tints by day, deep slate blue by
+ * night. Hairline borders, small radii, one deep cold blue for links and
+ * actions, and frost (a low backdrop blur) only on the sticky bars, the
+ * dialogs and the popovers. No gradients, no shadows worth the name.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation (used by dialogs and open popovers only) ────────────── */
+  --shadow-1: 0 1px 2px var(--pal-shadow-1);
+  --shadow-2: 0 12px 32px -12px var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: var(--font-body);
+  --font-weight-display: 600;
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1875rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.375rem;
+  --font-size-hero: clamp(2.25rem, 1.4rem + 2.6vw, 3.5rem);
+  --line-height: 1.55;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape: one small radius system ────────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 6px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 66rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.25rem;
+}
+
+/* ── Palette: modern-frosty ─────────────────────────────────────────────
+ * Light: near-white paper with an icy blue cast; the tints are surfaces and
+ * hairlines, and one deep cold blue carries links, focus and the primary
+ * button. Dark: deep slate blue, not black; the accent turns to ice.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='modern-frosty'],
+[data-theme='modern-frosty'] {
+  --pal-bg0: light-dark(#f4f7fb, #0f1a27);
+  --pal-bg0-soft: light-dark(#ffffff, #152232);
+  --pal-bg1: light-dark(#e9f0f7, #1b2b3d);
+  --pal-bg2: light-dark(#d2dfeb, #2b3f55);
+  --pal-bg3: light-dark(#a8bdd1, #42597a);
+
+  --pal-fg: light-dark(#142130, #e7eef6);
+  --pal-fg-muted: light-dark(#506478, #a2b4c8);
+  --pal-gray: light-dark(#7f92a5, #6e829a);
+
+  --pal-red: light-dark(#b42318, #f0857b);
+  --pal-green: light-dark(#157347, #6fcf97);
+  --pal-yellow: light-dark(#946200, #e4b85a);
+  --pal-blue: light-dark(#2569b3, #8cc0f0);
+  --pal-purple: light-dark(#5b4bc4, #b5a8f2);
+  --pal-aqua: light-dark(#0f7b8a, #6ed2df);
+
+  --pal-accent: light-dark(#1c5aa3, #8cc0f0);
+  --pal-accent-strong: light-dark(#154a89, #b4d8f8);
+  --pal-on-accent: light-dark(#ffffff, #0b1622);
+
+  --pal-shadow-1: light-dark(rgb(20 33 48 / 0.06), rgb(0 0 0 / 0.45));
+  --pal-shadow-2: light-dark(rgb(20 33 48 / 0.16), rgb(0 0 0 / 0.6));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The frost (a translucent fill plus a low blur radius), the ice tint that
+ * marks hover and the note toolbar, and the rule colour for the note's
+ * lines. Not part of the retoken paste-in.
+ */
+:root,
+.themed {
+  --modern-frosty-frost: light-dark(rgb(255 255 255 / 0.72), rgb(21 34 50 / 0.72));
+  --modern-frosty-blur: 8px;
+  --modern-frosty-ice: light-dark(#e2eefa, #1a3049);
+  --modern-frosty-rule: light-dark(#e3ecf5, #21354a);
+  --modern-frosty-hairline: 1px;
+}

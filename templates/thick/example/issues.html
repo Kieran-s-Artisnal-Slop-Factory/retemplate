@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="thick">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Issues · Paper Cuts</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Paper Cuts</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="issues.html" aria-current="page">Issues</a>
+    <a href="about.html">About</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">Every issue so far</p>
+    <h1>Twelve issues, three in stock</h1>
+    <p>Each one is 6.00 plus post. The counts are what is on the shelf this morning. Sold-out issues come back the season after, and the table at the bottom says when.</p>
+  </header>
+
+  <div class="banner banner-warning" role="status"><span>!</span><p>This is a demonstration. The order buttons open a dialog and nothing is bought or sent.</p></div>
+
+  <section class="section" id="issue-12">
+    <section class="fifty-fifty thick-yellow">
+      <figure><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+      <div class="fifty-fifty-body">
+        <p class="kicker">Issue 12, ships Friday</p>
+        <h2>The floppy that would not die</h2>
+        <p>A 1.44 MB disk, a program that fits on it, and why the people who wrote it still ship a build for it. Twelve pages, two fold-outs, one sticker. By Ines.</p>
+        <div class="row">
+          <button class="btn btn-primary" type="button" onclick="document.getElementById('order-12').showModal()">Order issue 12, 6.00</button>
+          <span class="badge badge-active">40 left</span>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="section">
+    <h2>In stock</h2>
+    <div class="grid-2">
+      <article class="card card-horizontal thick-pink" id="issue-11">
+        <figure class="card-media"><img src="../assets/card-4.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Issue 11: One button</h3>
+          <p class="card-text">What happens between your finger going down and the thing happening, drawn frame by frame. By Tomasz.</p>
+          <div class="card-actions"><button class="btn btn-sm btn-primary" type="button" onclick="document.getElementById('order-11').showModal()">Order, 6.00</button><span class="badge">9 left</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal thick-blue" id="issue-10">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Issue 10: The coffee script</h3>
+          <p class="card-text">Forty lines of shell that make the coffee machine at a small office say good morning. Annotated. By Ines.</p>
+          <div class="card-actions"><button class="btn btn-sm btn-primary" type="button" onclick="document.getElementById('order-10').showModal()">Order, 6.00</button><span class="badge">3 left</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The sticker sheet</h2>
+    <p>Eight stickers, one sheet, free with a subscription and 2.00 on its own. Click one to see it large.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-1.svg" alt="A yellow star on blue" width="800" height="600"></a><figcaption>Star</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-2.svg" alt="A pink lightning bolt on yellow" width="800" height="600"></a><figcaption>Bolt</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-3.svg" alt="A yellow heart on pink" width="800" height="600"></a><figcaption>Heart</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-4.svg" alt="A white cloud on yellow" width="800" height="600"></a><figcaption>Cloud</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-5.svg" alt="A pink arrow on blue" width="800" height="600"></a><figcaption>Arrow</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-6.svg" alt="A blue burst on pink" width="800" height="600"></a><figcaption>Burst</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-7.svg" alt="A blue diamond on yellow" width="800" height="600"></a><figcaption>Diamond</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="../assets/gallery-8.svg" alt="A yellow moon on blue" width="800" height="600"></a><figcaption>Moon</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="../assets/gallery-1.svg" alt="A yellow star on blue"><figcaption>Star, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="../assets/gallery-2.svg" alt="A pink lightning bolt on yellow"><figcaption>Bolt, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="../assets/gallery-3.svg" alt="A yellow heart on pink"><figcaption>Heart, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="../assets/gallery-4.svg" alt="A white cloud on yellow"><figcaption>Cloud, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="../assets/gallery-5.svg" alt="A pink arrow on blue"><figcaption>Arrow, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="../assets/gallery-6.svg" alt="A blue burst on pink"><figcaption>Burst, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="../assets/gallery-7.svg" alt="A blue diamond on yellow"><figcaption>Diamond, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="../assets/gallery-8.svg" alt="A yellow moon on blue"><figcaption>Moon, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="back-catalogue">
+    <h2>The back catalogue</h2>
+    <p>Everything before issue 10 is sold out. Reprints happen once, the season after an issue sells out, and are marked in the last column.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Issue</th><th>Title</th><th>By</th><th>Pages</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>9</td><td>A text editor in a weekend</td><td>Tomasz</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>8</td><td>The spreadsheet that runs a bakery</td><td>Priya</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>7</td><td>Backups, for people who have lost things</td><td>Ines</td><td>16</td><td><span class="badge badge-active">Reprint in spring</span></td></tr>
+          <tr><td>6</td><td>What the terminal is for</td><td>Tomasz</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>5</td><td>A font for one word</td><td>Priya</td><td>8</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>4</td><td>Sixty seconds of a web page loading</td><td>Ines</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>3</td><td>The calendar on the fridge</td><td>Priya</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>2</td><td>Undo</td><td>Tomasz</td><td>12</td><td><span class="badge badge-done">Sold out</span></td></tr>
+          <tr><td>1</td><td>Hello, world, and then what</td><td>Ines</td><td>8</td><td><span class="badge badge-done">Sold out</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <dialog class="modal" id="order-12" aria-labelledby="order-12-title">
+    <h2 id="order-12-title">Order issue 12</h2>
+    <p>6.00, plus 1.50 post in the country or 4.50 abroad. It ships Friday. In the real shop this is where the address form goes; here the buttons just close the dialog.</p>
+    <form method="dialog" class="modal-actions">
+      <button class="btn" type="submit">Not now</button>
+      <button class="btn btn-primary" type="submit" value="ok">Add to basket</button>
+    </form>
+  </dialog>
+  <dialog class="modal" id="order-11" aria-labelledby="order-11-title">
+    <h2 id="order-11-title">Order issue 11</h2>
+    <p>6.00, plus post. Nine copies left this morning. In the real shop this is where the address form goes; here the buttons just close the dialog.</p>
+    <form method="dialog" class="modal-actions">
+      <button class="btn" type="submit">Not now</button>
+      <button class="btn btn-primary" type="submit" value="ok">Add to basket</button>
+    </form>
+  </dialog>
+  <dialog class="modal" id="order-10" aria-labelledby="order-10-title">
+    <h2 id="order-10-title">Order issue 10</h2>
+    <p>6.00, plus post. Three copies left this morning, then a reprint in spring. In the real shop this is where the address form goes; here the buttons just close the dialog.</p>
+    <form method="dialog" class="modal-actions">
+      <button class="btn" type="submit">Not now</button>
+      <button class="btn btn-primary" type="submit" value="ok">Add to basket</button>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Paper Cuts</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="issues.html">Issues</a></li>
+        <li><a href="about.html">About and subscribe</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>Unit 4, the old print works, Millbrook</li>
+        <li>Saturdays, 11 to 4</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Thick template</a></li>
+        <li><a href="../docs/index.html">Get started with Thick</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Thick template. The shop, its issues and its authors are fictional; the floppy disk is real.</p>
+</footer>
+</body>
+</html>

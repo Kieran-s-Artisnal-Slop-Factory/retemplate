@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Theme — Natural</title>
+  <title>Theme · Natural</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -161,7 +161,7 @@
 <tr><td><code>--font-size-hero</code></td><td><code>clamp(2.5rem, 1.6rem + 3.2vw, 4.25rem)</code></td><td>Hero and post titles</td></tr>
 </tbody></table></div>
 <h2>Use this palette in retoken</h2>
-<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="natural"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not — set those in the editor.</p>
+<p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="natural"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not; set those in the editor.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='natural'],
 [data-theme='natural'] {
   --pal-bg0: light-dark(#ece7d6, #1c150f);
@@ -192,14 +192,14 @@
 <tr><td><code>--natural-moss-soft</code></td><td>moss at 10–12 %</td><td>The corner tint, hairlines, the ruled lines of a field note</td></tr>
 <tr><td><code>--natural-moss-tint</code></td><td>a radial gradient</td><td>The faint green in the top-right corner of every page</td></tr>
 <tr><td><code>--natural-soil</code></td><td>an SVG <code>feTurbulence</code> data URI</td><td>The soil texture tiled under the page</td></tr>
-<tr><td><code>--natural-veil-color</code>, <code>--natural-veil</code></td><td><code>light-dark(var(--pal-bg0), transparent)</code></td><td>Covers the soil by day, lets it through by night — a colour, so it survives the paste-in</td></tr>
+<tr><td><code>--natural-veil-color</code>, <code>--natural-veil</code></td><td><code>light-dark(var(--pal-bg0), transparent)</code></td><td>Covers the soil by day, lets it through by night; a colour, so it survives the paste-in</td></tr>
 <tr><td><code>--natural-sprig</code></td><td>an SVG data URI</td><td>The page-break ornament, as a mask</td></tr>
-<tr><td><code>--natural-tape</code>, <code>--natural-tag-paper</code>, <code>--natural-tag-ink</code></td><td>translucent cream, paper, ink</td><td>The feature card's tape strips and paper tag</td></tr>
+<tr><td><code>--natural-tape</code>, <code>--natural-tag-paper</code>, <code>--natural-tag-ink</code></td><td>translucent cream, paper, ink</td><td>The linen tape and paper of the plate, its label, the specimen cards and the feature card's tag</td></tr>
 <tr><td><code>--natural-specimen-label</code></td><td><code>"Specimen"</code></td><td>The text on the tag</td></tr>
 <tr><td><code>--natural-rule</code></td><td>a repeating gradient</td><td>The ruled lines of <code>.natural-note</code></td></tr>
 </tbody></table></div>
 <h2>Light and dark</h2>
-<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours — a texture, an ornament, <code>content</code> — <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
+<p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours (a texture, an ornament, <code>content</code>), <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>
 
   </main>
 </div>

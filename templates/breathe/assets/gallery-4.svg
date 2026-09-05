@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Morning light through a window">
+<rect width="800" height="600" fill="#d6e8ef"/><rect x="100" y="60" width="600" height="480" rx="30" fill="#f6faf4"/><path d="M400 60V540M100 300H700" stroke="#d6e8ef" stroke-width="12"/><circle cx="560" cy="180" r="70" fill="#f2d98a"/><path d="M100 540h600" stroke="#a8cdb2" stroke-width="20" stroke-linecap="round"/>
+</svg>

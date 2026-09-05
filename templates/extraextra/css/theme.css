@@ -1,0 +1,155 @@
+/*
+ * extraextra: design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * A poster wall. Paper and black type by day, black and orange by night,
+ * and one bright orange that never changes and only ever carries black
+ * type. No corners, no shadows, hard 2px rules and 10px bars, one condensed
+ * display face set in capitals.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax ───────────────────────────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation: none. Posters are flat. The slots are transparent. ─── */
+  --shadow-1: 0 0 0 var(--pal-shadow-1);
+  --shadow-2: 0 0 0 var(--pal-shadow-2);
+
+  /* ── Typography ────────────────────────────────────────────────────── */
+  --font-body: 'Barlow', 'Helvetica Neue', Arial, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  --font-display: 'Anton', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif-condensed, sans-serif;
+  --font-weight-display: 400;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1.0625rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.5rem;
+  --font-size-3xl: 3.5rem;
+  --font-size-hero: clamp(3.75rem, 1.5rem + 9.5vw, 11rem);
+  --line-height: 1.5;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 3rem;
+
+  /* ── Shape: none ───────────────────────────────────────────────────── */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-full: 0;
+
+  /* ── Layout: edge to edge ──────────────────────────────────────────── */
+  --page-max-width: none;
+  --sidebar-width: 17rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 4rem;
+}
+
+/* ── Palette: extraextra ────────────────────────────────────────────────
+ * Light: warm paper, near-black ink, a burnt orange for links (the bright
+ * orange fails 4.5:1 on paper, so it is a band colour, not a text colour).
+ * Dark: near-black paper, the bright orange as the accent, paper-coloured
+ * ink. The border slot is the ink, so every rule is drawn in type colour.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='extraextra'],
+[data-theme='extraextra'] {
+  --pal-bg0: light-dark(#f3eee4, #0d0c0b);
+  --pal-bg0-soft: light-dark(#faf7f0, #141312);
+  --pal-bg1: light-dark(#e8e1d2, #1e1c19);
+  --pal-bg2: light-dark(#141312, #f3eee4);
+  --pal-bg3: light-dark(#8a8378, #5a554e);
+
+  --pal-fg: light-dark(#141312, #f3eee4);
+  --pal-fg-muted: light-dark(#4d4741, #b8b0a4);
+  --pal-gray: light-dark(#7a736a, #857d73);
+
+  --pal-red: light-dark(#c8102e, #ff5c5c);
+  --pal-green: light-dark(#1f6f3a, #4fc26b);
+  --pal-yellow: light-dark(#8a5a00, #ffc466);
+  --pal-blue: light-dark(#1f4fa3, #7fa8ff);
+  --pal-purple: light-dark(#6b3fa0, #b48cff);
+  --pal-aqua: light-dark(#0b6e73, #4fd0d6);
+
+  --pal-accent: light-dark(#a63a00, #ff6a00);
+  --pal-accent-strong: light-dark(#7d2b00, #ff8a3d);
+  --pal-on-accent: light-dark(#fff8f0, #0d0c0b);
+
+  --pal-shadow-1: light-dark(rgb(20 19 18 / 0), rgb(0 0 0 / 0));
+  --pal-shadow-2: light-dark(rgb(20 19 18 / 0), rgb(0 0 0 / 0));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The one orange, the black that sits on it, the rule weights and the
+ * page gutter the bands use to reach the edges. Not part of the retoken
+ * paste-in.
+ */
+:root,
+.themed {
+  --extraextra-orange: #ff6a00;
+  --extraextra-on-orange: #0d0c0b;
+  --extraextra-rule: 2px;
+  --extraextra-bar: 10px;
+  --extraextra-gutter: clamp(1rem, 4vw, 4rem);
+  --extraextra-ticker-speed: 45s;
+}

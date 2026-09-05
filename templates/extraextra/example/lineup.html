@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-theme="extraextra">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Line-up · The Kiln</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">The Kiln</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="lineup.html" aria-current="page">Line-up</a>
+    <a href="tickets.html">Tickets</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <p class="kicker">October</p>
+    <h1>Line-up</h1>
+    <p>Every show this month, in order. Doors are at seven unless it says otherwise, the first band is on at eight, and the room is empty by eleven on a school night.</p>
+  </header>
+
+  <section class="section" id="shows">
+    <h2>This month</h2>
+    <div class="stack">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-1.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Friday 3 October · doors 7</p>
+          <h3 class="card-title">Slow Furnace</h3>
+          <p class="card-text">Support from Tin Hat. Fourteen pounds. Fourteen and over.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="tickets.html">Buy tickets</a>
+            <span class="badge badge-active">On sale</span>
+          </div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-6.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday 4 October · doors 7 · both floors until 2</p>
+          <h3 class="card-title">Kettle Drum Club</h3>
+          <p class="card-text">Support from Brass Tax, then the loft DJ set. Fourteen pounds. Eighteen and over after midnight.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="tickets.html">Buy tickets</a>
+            <span class="badge badge-active">On sale</span>
+          </div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-3.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Thursday 9 October · doors 7.30 · seated</p>
+          <h3 class="card-title">Ida Vane</h3>
+          <p class="card-text">No support. Pay what you can at the door, five pounds suggested. All ages.</p>
+          <div class="card-actions"><span class="badge">Door only</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-4.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday 11 October · doors 7</p>
+          <h3 class="card-title">The Stokers</h3>
+          <p class="card-text">Support from Ninety Watt. Twelve pounds. Sold out; returns go on sale at the door at six.</p>
+          <div class="card-actions">
+            <button class="btn btn-sm" type="button" onclick="document.getElementById('returns').showModal()">Tell me about returns</button>
+            <span class="badge badge-done">Sold out</span>
+          </div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/gallery-2.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Friday 17 October · doors 7</p>
+          <h3 class="card-title">Ninety Watt</h3>
+          <p class="card-text">Headlining for the first time, with Tin Hat and Low Tide. Ten pounds. Fourteen and over.</p>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="tickets.html">Buy tickets</a>
+            <span class="badge badge-active">On sale</span>
+          </div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/gallery-7.svg" alt="" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday 18 October · doors 6 · free</p>
+          <h3 class="card-title">Brick Choir</h3>
+          <p class="card-text">Sixty voices from the estate, one night a year, no tickets and no charge. Get here early; last year the doors shut at half past six.</p>
+          <div class="card-actions"><span class="badge">Free</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="times">
+    <h2>Set times, Saturday 4 October</h2>
+    <p>Set times for the coming Saturday go up here on the Thursday before. They are the times the bands walk on, not the times the doors open.</p>
+    <div class="table-wrap extraextra-times">
+      <table class="data-table">
+        <thead><tr><th>Act</th><th>Stage</th><th>On</th><th>Off</th></tr></thead>
+        <tbody>
+          <tr><td>Doors</td><td>Both</td><td>19:00</td><td></td></tr>
+          <tr><td>Brass Tax</td><td>Main</td><td>20:00</td><td>20:40</td></tr>
+          <tr><td>Kettle Drum Club</td><td>Main</td><td>21:15</td><td>22:45</td></tr>
+          <tr><td>Loft DJs</td><td>Loft</td><td>23:00</td><td>02:00</td></tr>
+          <tr><td>Bar closes</td><td>Both</td><td>01:30</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section" id="later">
+    <h2>Coming up</h2>
+    <p>Announced, not yet on sale. Tickets for each month go on sale on the first of the month before at ten in the morning.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="later" open>
+        <summary>November</summary>
+        <div class="accordion-body"><p>Sat 1: Low Tide. Fri 7: The Wet Look, with guests. Sat 15: Kettle Drum Club return for a second night. Thu 27: Ida Vane, seated, with a string quartet.</p></div>
+      </details>
+      <details class="accordion" name="later">
+        <summary>December</summary>
+        <div class="accordion-body"><p>Fri 5 and Sat 6: Slow Furnace, two nights, different sets. Sat 20: the Kiln staff party, and the whole street is invited. Free, standing, until the bar runs out.</p></div>
+      </details>
+      <details class="accordion" name="later">
+        <summary>January</summary>
+        <div class="accordion-body"><p>Nothing yet. The room is closed for the first two weeks of the year while the floor is relaid; the bookings open on the fifteenth.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <dialog class="modal" id="returns" aria-labelledby="returns-title">
+    <h2 id="returns-title">Returns for The Stokers</h2>
+    <p>If a ticket comes back we email everyone on this list at once, first come first served. We do not sell your address to anyone and we delete it after the show.</p>
+    <form method="dialog">
+      <div class="stack">
+        <div class="field">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="email" type="email" required>
+          <p class="hint">One email, on the night a ticket comes back.</p>
+        </div>
+        <div class="field">
+          <label for="r-qty">How many tickets</label>
+          <select id="r-qty" name="qty">
+            <option value="1" selected>One</option>
+            <option value="2">Two</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" type="submit" value="cancel">Cancel</button>
+        <button class="btn btn-primary" type="submit" value="join">Join the returns list</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>The Kiln</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lineup.html">Line-up and set times</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Find us</h2>
+      <ul>
+        <li>3 Kiln Yard, Brickfield</li>
+        <li>01234 567 890</li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the ExtraExtra template</a></li>
+        <li><a href="../docs/index.html">Get started with ExtraExtra</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the ExtraExtra template. The Kiln, its bands and its balcony are fictional.</p>
+</footer>
+</body>
+</html>

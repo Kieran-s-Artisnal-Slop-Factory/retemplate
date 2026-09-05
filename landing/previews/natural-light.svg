@@ -9,31 +9,45 @@
   <rect x="304" y="11" width="26" height="5" rx="1" fill="#6b6450"/>
   <rect x="304" y="19" width="26" height="1.5" fill="#a33b2a"/>
   <circle cx="376" cy="14" r="7" fill="#f5f1e4" stroke="#c6c0a8"/>
-  <rect x="24" y="48" width="44" height="4" rx="1" fill="#3d4a30"/>
-  <text x="24" y="76" font-family="Georgia, serif" font-size="17" fill="#2e2519">Grown slowly,</text>
-  <text x="24" y="96" font-family="Georgia, serif" font-style="italic" font-size="17" fill="#a33b2a">on paper.</text>
-  <rect x="24" y="108" width="170" height="5" rx="1" fill="#6b6450" opacity="0.7"/>
-  <rect x="24" y="118" width="130" height="5" rx="1" fill="#6b6450" opacity="0.7"/>
-  <rect x="24" y="134" width="60" height="18" rx="2" fill="#a33b2a"/>
-  <rect x="92" y="134" width="60" height="18" rx="2" fill="#f5f1e4" stroke="#2e2519" stroke-width="1"/>
-  <rect x="236" y="46" width="140" height="102" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
-  <rect x="242" y="52" width="128" height="90" rx="1" fill="#ece7d6"/>
-  <circle cx="340" cy="78" r="12" fill="#e2cf9c"/>
-  <path d="M242 118 Q 280 92 320 118 T 370 112 V142 H242Z" fill="#b9c9a0"/>
-  <path d="M242 130 Q 300 116 370 132 V142 H242Z" fill="#3d4a30"/>
-  <path d="M170 164 H 230 M 230 164 l -6 -4 M 230 164 l -6 4" stroke="#3d4a30" stroke-width="1.2" fill="none"/>
-  <rect x="24" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
-  <rect x="146" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
-  <rect x="268" y="178" width="108" height="56" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
-  <rect x="30" y="184" width="96" height="22" fill="#b9c9a0"/>
-  <rect x="152" y="184" width="96" height="22" fill="#e2cf9c"/>
-  <rect x="274" y="184" width="96" height="22" fill="#e3ddc9"/>
-  <path d="M322 200 c -6 -8 -2 -14 6 -16 c 2 8 -1 14 -6 16z" fill="#3d4a30"/>
-  <rect x="352" y="180" width="30" height="9" rx="1" fill="#f8f4e8" stroke="#c6c0a8" transform="rotate(-6 367 184)"/>
-  <rect x="30" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
-  <rect x="152" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
-  <rect x="274" y="214" width="50" height="4" rx="1" fill="#2e2519"/>
-  <rect x="30" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
-  <rect x="152" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
-  <rect x="274" y="223" width="80" height="3" rx="1" fill="#6b6450"/>
+  <rect x="24" y="46" width="152" height="112" rx="1.5" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="31" y="53" width="138" height="98" fill="#f8f4e8" stroke="#c6c0a8" stroke-width="0.6"/>
+  <path d="M100 140 C 96 118 92 96 100 74 M100 96 c -10 -6 -18 -4 -24 4 c 8 6 16 6 24 -4z M100 84 c 8 -8 16 -8 22 -2 c -8 8 -16 8 -22 2z M100 112 c -12 -6 -20 -2 -26 6 c 10 6 18 4 26 -6z M100 126 c 10 -8 18 -6 24 0 c -8 8 -16 8 -24 0z" fill="#3d4a30" stroke="#3d4a30" stroke-width="1.2" opacity="0.85"/>
+  <circle cx="98" cy="70" r="5" fill="#a33b2a"/>
+  <circle cx="110" cy="64" r="4" fill="#a33b2a"/>
+  <rect x="40" y="42" width="22" height="6" fill="#f5f1e4" opacity="0.9" transform="rotate(-5 51 45)"/>
+  <rect x="140" y="42" width="22" height="6" fill="#f5f1e4" opacity="0.9" transform="rotate(4 151 45)"/>
+  <g transform="rotate(-1 140 138)">
+    <rect x="96" y="120" width="88" height="42" fill="#f8f4e8" stroke="#c6c0a8"/>
+    <rect x="102" y="126" width="30" height="2.5" rx="1" fill="#2e2519" opacity="0.6"/>
+    <text x="102" y="140" font-family="Georgia, serif" font-style="italic" font-size="9" fill="#2e2519">Geum rivale</text>
+    <rect x="102" y="146" width="14" height="2" fill="#2e2519" opacity="0.5"/><rect x="120" y="146" width="52" height="2" fill="#2e2519" opacity="0.8"/>
+    <rect x="102" y="152" width="14" height="2" fill="#2e2519" opacity="0.5"/><rect x="120" y="152" width="40" height="2" fill="#2e2519" opacity="0.8"/>
+  </g>
+  <rect x="200" y="50" width="44" height="4" rx="1" fill="#3d4a30"/>
+  <text x="200" y="78" font-family="Georgia, serif" font-size="17" font-weight="300" fill="#2e2519">Pressed, labelled,</text>
+  <text x="200" y="98" font-family="Georgia, serif" font-style="italic" font-size="17" fill="#a33b2a">kept.</text>
+  <text x="200" y="114" font-family="Georgia, serif" font-style="italic" font-size="8.5" fill="#2e2519">Cream paper and ink by day. Soil by night.</text>
+  <rect x="200" y="122" width="168" height="4" rx="1" fill="#6b6450" opacity="0.7"/>
+  <rect x="200" y="131" width="132" height="4" rx="1" fill="#6b6450" opacity="0.7"/>
+  <rect x="200" y="144" width="60" height="16" rx="1" fill="#a33b2a"/>
+  <rect x="268" y="144" width="74" height="16" rx="1" fill="none" stroke="#3d4a30" stroke-width="1.5"/>
+  <rect x="271" y="147" width="68" height="10" rx="0.5" fill="none" stroke="#3d4a30" stroke-width="0.7"/>
+  <rect x="24" y="176" width="108" height="60" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="31" y="182" width="94" height="24" fill="#e3ddc9" stroke="#c6c0a8" stroke-width="0.6"/>
+  <rect x="31" y="212" width="46" height="4" rx="1" fill="#2e2519"/>
+  <rect x="31" y="220" width="64" height="2.5" rx="1" fill="#6b6450"/>
+  <rect x="31" y="227" width="80" height="2" rx="1" fill="#c6c0a8"/>
+  <rect x="146" y="176" width="108" height="60" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="153" y="182" width="94" height="24" fill="#e3ddc9" stroke="#c6c0a8" stroke-width="0.6"/>
+  <rect x="153" y="212" width="46" height="4" rx="1" fill="#2e2519"/>
+  <rect x="153" y="220" width="64" height="2.5" rx="1" fill="#6b6450"/>
+  <rect x="153" y="227" width="80" height="2" rx="1" fill="#c6c0a8"/>
+  <rect x="268" y="176" width="108" height="60" rx="2" fill="#f5f1e4" stroke="#c6c0a8"/>
+  <rect x="275" y="182" width="94" height="24" fill="#e3ddc9" stroke="#c6c0a8" stroke-width="0.6"/>
+  <rect x="275" y="212" width="46" height="4" rx="1" fill="#2e2519"/>
+  <rect x="275" y="220" width="64" height="2.5" rx="1" fill="#6b6450"/>
+  <rect x="275" y="227" width="80" height="2" rx="1" fill="#c6c0a8"/>
+  <path d="M60 196 c -6 -8 -2 -14 6 -16 c 2 8 -1 14 -6 16z" fill="#3d4a30"/>
+  <ellipse cx="196" cy="194" rx="9" ry="6" fill="#e2cf9c"/>
+  <path d="M314 202 c -3 -10 0 -16 6 -18 c 3 8 1 14 -6 18z M314 202 c 3 -10 0 -16 -6 -18 c -3 8 -1 14 6 18z" fill="#b9c9a0"/>
 </svg>

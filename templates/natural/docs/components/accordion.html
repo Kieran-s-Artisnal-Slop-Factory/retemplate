@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Accordion — Natural</title>
+  <title>Accordion · Natural</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -114,6 +114,64 @@
     &lt;div class="accordion-body"&gt;&lt;p&gt;And this closes whichever was open.&lt;/p&gt;&lt;/div&gt;
   &lt;/details&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Key</h3>
+<p>Natural's own variant. Add <code>natural-key</code> to an exclusive group and it is set as a dichotomous key, the form a field guide uses to name a plant: the leads come in pairs, numbered 1a, 1b, 2a, 2b by a CSS counter, and each body says what the lead is or where it sends you. Put the leads in order; the counter reads the position, so a stray odd accordion will throw the numbering off.</p>
+<figure class="example" data-snippet="natural-key">
+<div class="accordion-group natural-key">
+  <details class="accordion" name="key-docs" open>
+    <summary>Frond undivided, a single glossy strap</summary>
+    <div class="accordion-body">
+      <p class="natural-binomial">Asplenium scolopendrium <span class="natural-auth">L.</span></p>
+      <p>Hart's-tongue fern. Walls, well mouths, the foot of north-facing steps.</p>
+    </div>
+  </details>
+  <details class="accordion" name="key-docs">
+    <summary>Frond divided into leaflets</summary>
+    <div class="accordion-body"><p>Go to 2.</p></div>
+  </details>
+  <details class="accordion" name="key-docs">
+    <summary>Leaflets soft, a thumb at the base and a bristle at the tip</summary>
+    <div class="accordion-body">
+      <p class="natural-binomial">Polystichum setiferum <span class="natural-auth">(Forssk.) T. Moore ex Woyn.</span></p>
+      <p>Soft shield fern. Hedge banks and the shady side of the wood.</p>
+    </div>
+  </details>
+  <details class="accordion" name="key-docs">
+    <summary>Leaflets blunt, the frond stiff in a shuttlecock</summary>
+    <div class="accordion-body">
+      <p class="natural-binomial">Dryopteris filix-mas <span class="natural-auth">(L.) Schott</span></p>
+      <p>Male fern. Almost anywhere that is not baked.</p>
+    </div>
+  </details>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-key">&lt;div class="accordion-group natural-key"&gt;
+  &lt;details class="accordion" name="key-docs" open&gt;
+    &lt;summary&gt;Frond undivided, a single glossy strap&lt;/summary&gt;
+    &lt;div class="accordion-body"&gt;
+      &lt;p class="natural-binomial"&gt;Asplenium scolopendrium &lt;span class="natural-auth"&gt;L.&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;Hart's-tongue fern. Walls, well mouths, the foot of north-facing steps.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class="accordion" name="key-docs"&gt;
+    &lt;summary&gt;Frond divided into leaflets&lt;/summary&gt;
+    &lt;div class="accordion-body"&gt;&lt;p&gt;Go to 2.&lt;/p&gt;&lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class="accordion" name="key-docs"&gt;
+    &lt;summary&gt;Leaflets soft, a thumb at the base and a bristle at the tip&lt;/summary&gt;
+    &lt;div class="accordion-body"&gt;
+      &lt;p class="natural-binomial"&gt;Polystichum setiferum &lt;span class="natural-auth"&gt;(Forssk.) T. Moore ex Woyn.&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;Soft shield fern. Hedge banks and the shady side of the wood.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+  &lt;details class="accordion" name="key-docs"&gt;
+    &lt;summary&gt;Leaflets blunt, the frond stiff in a shuttlecock&lt;/summary&gt;
+    &lt;div class="accordion-body"&gt;
+      &lt;p class="natural-binomial"&gt;Dryopteris filix-mas &lt;span class="natural-auth"&gt;(L.) Schott&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;Male fern. Almost anywhere that is not baked.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == accordion == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -121,12 +179,14 @@
       <tr><td><code>summary</code></td><td>The clickable title; the marker is a plus that rotates</td></tr>
       <tr><td><code>.accordion-body</code></td><td>Padding around the content</td></tr>
       <tr><td><code>.accordion-group</code></td><td>Joins several into one bordered stack; hosts the exclusive name</td></tr>
+      <tr><td><code>.natural-key</code></td><td>Natural's variant on <code>.accordion-group</code>: couplet numbers before each summary, bodies indented to match (<code>global.css § flare</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>No script. <code>&lt;details name&gt;</code> is what makes a group exclusive.</li>
 <li>Keyboard: <kbd>Tab</kbd> to the summary, <kbd>Enter</kbd> or <kbd>Space</kbd> to toggle.</li>
 <li>Put <code>open</code> on one accordion to start it open.</li>
+<li>The key's numbers are <code>::before</code> generated content, so they are not part of the summary's text. Readers hear the lead itself, which is what matters.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="index.html">← All components</a><a href="cards.html">Cards →</a></nav>
   </main>

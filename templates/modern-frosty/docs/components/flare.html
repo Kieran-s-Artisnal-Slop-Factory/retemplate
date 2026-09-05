@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Modern Frosty</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Modern Frosty · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Modern Frosty adds one thing that needs markup, the note, and a short list of keyboard shortcuts. Its five variants of contract components (the ledger, the quiet button, the lined accordion group, the inline field and the plans table) are documented on those components' pages and listed at the bottom of this one.</p>
+</header>
+<h2 id="preview">The note</h2>
+<p>A piece of the example app: a frosted toolbar over a ruled sheet. The toolbar is <code>position: sticky</code> inside the note, so when the note scrolls the lines pass under it and the frost has something to blur. The lines are a repeating gradient of one hairline colour, so they swap with the scheme. Use it as a hero, as the overview and the example home do, or anywhere a page wants to show the product rather than describe it.</p>
+<figure class="example" data-snippet="modern-frosty-note">
+<div class="modern-frosty-flare">
+  <div class="modern-frosty-note">
+    <div class="modern-frosty-toolbar"><b>Reading list</b><span>edited today</span><span>saved</span></div>
+    <div class="modern-frosty-sheet">
+      <h2>Things to read this week</h2>
+      <p>Two papers, one long essay and the <mark>chapter</mark> I keep putting off.</p>
+      <ul>
+        <li>The essay first. It is shortest.</li>
+        <li>The chapter on Thursday, on paper.</li>
+      </ul>
+      <p class="muted">Notes link when you type two brackets.</p>
+    </div>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-note">&lt;div class="modern-frosty-flare"&gt;
+  &lt;div class="modern-frosty-note"&gt;
+    &lt;div class="modern-frosty-toolbar"&gt;&lt;b&gt;Reading list&lt;/b&gt;&lt;span&gt;edited today&lt;/span&gt;&lt;span&gt;saved&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="modern-frosty-sheet"&gt;
+      &lt;h2&gt;Things to read this week&lt;/h2&gt;
+      &lt;p&gt;Two papers, one long essay and the &lt;mark&gt;chapter&lt;/mark&gt; I keep putting off.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;The essay first. It is shortest.&lt;/li&gt;
+        &lt;li&gt;The chapter on Thursday, on paper.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p class="muted"&gt;Notes link when you type two brackets.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">A scrolling note</h2>
+<p>Add <code>modern-frosty-scroll</code> and the note is capped at 22rem and scrolls inside itself, which is what gives the toolbar its frost. The overview's hero is one of these; scroll it and watch the lines pass under the bar.</p>
+<figure class="example" data-snippet="modern-frosty-scroll">
+<div class="modern-frosty-flare">
+  <div class="modern-frosty-note modern-frosty-scroll">
+    <div class="modern-frosty-toolbar"><b>Meeting notes</b><span>2 people</span><span>saved</span></div>
+    <div class="modern-frosty-sheet">
+      <h2>Tuesday</h2>
+      <p>Agreed to move the release to the second week. The import tool needs another pass; the export is done.</p>
+      <p>Open questions: whether the free plan keeps sync, and who writes the changelog.</p>
+      <p>Actions: draft the pricing page, ask about the domain, book the room for Thursday.</p>
+      <p class="muted">Keep scrolling. The toolbar stays where it is.</p>
+      <p>The lines here are one repeated hairline; the toolbar is the same frost as the navbar, so the two read as the same material.</p>
+    </div>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-scroll">&lt;div class="modern-frosty-flare"&gt;
+  &lt;div class="modern-frosty-note modern-frosty-scroll"&gt;
+    &lt;div class="modern-frosty-toolbar"&gt;&lt;b&gt;Meeting notes&lt;/b&gt;&lt;span&gt;2 people&lt;/span&gt;&lt;span&gt;saved&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="modern-frosty-sheet"&gt;
+      &lt;h2&gt;Tuesday&lt;/h2&gt;
+      &lt;p&gt;Agreed to move the release to the second week. The import tool needs another pass; the export is done.&lt;/p&gt;
+      &lt;p&gt;Open questions: whether the free plan keeps sync, and who writes the changelog.&lt;/p&gt;
+      &lt;p&gt;Actions: draft the pricing page, ask about the domain, book the room for Thursday.&lt;/p&gt;
+      &lt;p class="muted"&gt;Keep scrolling. The toolbar stays where it is.&lt;/p&gt;
+      &lt;p&gt;The lines here are one repeated hairline; the toolbar is the same frost as the navbar, so the two read as the same material.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Keys</h3>
+<p>A wrapping list of shortcuts, each a <code>&lt;kbd&gt;</code> and a word. The features page of the example uses it under the table of commands.</p>
+<figure class="example" data-snippet="modern-frosty-keys">
+<div class="modern-frosty-flare">
+  <ul class="modern-frosty-keys">
+    <li><kbd>Ctrl</kbd> <kbd>N</kbd> new note</li>
+    <li><kbd>Ctrl</kbd> <kbd>K</kbd> find</li>
+    <li><kbd>[[</kbd> link a note</li>
+    <li><kbd>Ctrl</kbd> <kbd>.</kbd> toggle the sidebar</li>
+  </ul>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-keys">&lt;div class="modern-frosty-flare"&gt;
+  &lt;ul class="modern-frosty-keys"&gt;
+    &lt;li&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;N&lt;/kbd&gt; new note&lt;/li&gt;
+    &lt;li&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;K&lt;/kbd&gt; find&lt;/li&gt;
+    &lt;li&gt;&lt;kbd&gt;[[&lt;/kbd&gt; link a note&lt;/li&gt;
+    &lt;li&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; &lt;kbd&gt;.&lt;/kbd&gt; toggle the sidebar&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>. The last five rows are variants of contract components; their rules are in the component's own section and their examples on the pages named.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.modern-frosty-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.modern-frosty-note</code></td><td>The bordered note: a toolbar and a sheet</td></tr>
+      <tr><td><code>.modern-frosty-toolbar</code></td><td>The frosted, sticky bar; <code>b</code> is the title, the last <code>span</code> is pushed right</td></tr>
+      <tr><td><code>.modern-frosty-sheet</code></td><td>Ruled lines at 1.75rem; headings and paragraphs sit on the lines</td></tr>
+      <tr><td><code>.modern-frosty-scroll</code></td><td>Caps the note at 22rem and lets it scroll</td></tr>
+      <tr><td><code>.modern-frosty-keys</code></td><td>A wrapping list of shortcuts</td></tr>
+      <tr><td><code>.grid-2.modern-frosty-ledger</code>, <code>.grid-3.modern-frosty-ledger</code></td><td>Cards sharing hairlines (<a href="cards.html">cards</a>)</td></tr>
+      <tr><td><code>.btn.modern-frosty-quiet</code></td><td>The text button (<a href="buttons.html">buttons</a>)</td></tr>
+      <tr><td><code>.accordion-group.modern-frosty-lines</code></td><td>The unboxed group (<a href="accordion.html">accordion</a>)</td></tr>
+      <tr><td><code>.field.modern-frosty-inline</code></td><td>Label beside the control (<a href="forms.html">forms</a>)</td></tr>
+      <tr><td><code>.table-wrap.modern-frosty-plans</code>, <code>.modern-frosty-pick</code></td><td>The plans table and its picked column (<a href="table.html">table</a>)</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The frost is two tokens, <code>--modern-frosty-frost</code> (the fill) and <code>--modern-frosty-blur</code> (8px), used by the navbar, the top bar, the toolbar, the dialog, the lightbox controls, the mobile menu, the drawer and the feature card. Lower the blur in <code>theme.css</code> and every one of them follows.</li>
+<li>Nothing animates continuously. The only transitions are hover colours and the feature card's frost clearing, and the global <code>prefers-reduced-motion</code> rule shortens them to nothing.</li>
+<li>Flare must still use tokens: no colour literals in <code>global.css</code>. The ice tint and the rule colour are <code>--modern-frosty-ice</code> and <code>--modern-frosty-rule</code> in <code>theme.css</code>.</li>
+<li>The variants need no wrapper: another template ignores the class and shows the plain component. Only the note and the keys are markup to strip, and they sit in <code>.modern-frosty-flare</code>.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

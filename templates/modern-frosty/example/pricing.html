@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Pricing · Sheaf</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Sheaf</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="pricing.html" aria-current="page">Pricing</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <h1>A free plan and two paid ones.</h1>
+    <p>Prices are per month, in your currency, and the free plan has no time limit. Pay yearly and get two months back.</p>
+  </header>
+
+  <section class="section">
+    <h2>What each plan has</h2>
+    <p>Prices are a table, so the plans are one. The recommended column is marked; every row says what you get, and the last row says what it costs.</p>
+    <div class="table-wrap modern-frosty-plans">
+      <table class="data-table">
+        <thead><tr><th>Plan</th><th>Free</th><th class="modern-frosty-pick">Personal</th><th>Team</th></tr></thead>
+        <tbody>
+          <tr><td>Notes</td><td>Unlimited</td><td class="modern-frosty-pick">Unlimited</td><td>Unlimited</td></tr>
+          <tr><td>Devices in sync</td><td>2</td><td class="modern-frosty-pick">Any number</td><td>Any number</td></tr>
+          <tr><td>Attachments</td><td>Up to 1 GB</td><td class="modern-frosty-pick">Up to 20 GB</td><td>Up to 20 GB a seat</td></tr>
+          <tr><td>Shared folders</td><td>No</td><td class="modern-frosty-pick">No</td><td>Yes</td></tr>
+          <tr><td>Version history</td><td>7 days</td><td class="modern-frosty-pick">1 year</td><td>1 year</td></tr>
+          <tr><td>Support</td><td>Email</td><td class="modern-frosty-pick">Email, same day</td><td>Email, same day</td></tr>
+          <tr><td>Per month</td><td>0</td><td class="modern-frosty-pick">4</td><td>8 a seat</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Everyone starts on Free. Move to Personal or Team from the settings page whenever you like; the change takes effect the same day.</p>
+  </section>
+
+  <section class="section" id="questions">
+    <h2>Questions about plans</h2>
+    <div class="accordion-group modern-frosty-lines">
+      <details class="accordion" name="plans" open>
+        <summary>What happens to my notes if I stop paying?</summary>
+        <div class="accordion-body"><p>Nothing. They are files in a folder on your disk. Sync goes back to two devices, and shared folders become read only until someone on the team is paying again.</p></div>
+      </details>
+      <details class="accordion" name="plans">
+        <summary>Is there a student price?</summary>
+        <div class="accordion-body"><p>Personal is half price with a school email. Write to us from that address and we will set it up.</p></div>
+      </details>
+      <details class="accordion" name="plans">
+        <summary>How is a seat counted?</summary>
+        <div class="accordion-body"><p>A seat is one person who can write in the team's shared folders. People who only read do not need a seat.</p></div>
+      </details>
+      <details class="accordion" name="plans">
+        <summary>Can I pay yearly?</summary>
+        <div class="accordion-body"><p>Yes. A year of Personal costs ten months; a year of Team costs ten months a seat.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <h2>Ask about Team</h2>
+    <p>Tell us how many people and we will reply with a quote and a trial folder the same day.</p>
+    <form class="form-grid" action="#" method="get">
+      <fieldset>
+        <legend>Your team</legend>
+        <div class="field">
+          <label for="t-name">Your name</label>
+          <input id="t-name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="t-email">Work email</label>
+          <input id="t-email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="t-seats">Seats</label>
+          <input id="t-seats" name="seats" type="number" min="2" value="5">
+          <p class="hint">Writers only. Readers are free.</p>
+        </div>
+        <div class="field">
+          <label for="t-when">When would you start?</label>
+          <select id="t-when" name="when"><option>This month</option><option>Next month</option><option>Later this year</option></select>
+        </div>
+        <div class="field field-wide">
+          <label for="t-notes">Anything we should know</label>
+          <textarea id="t-notes" name="notes" rows="3" placeholder="Where your notes are now, what you need to import"></textarea>
+        </div>
+        <div class="field">
+          <label class="switch"><input type="checkbox" role="switch" name="trial" checked><span>Set up a trial folder</span></label>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Send</button>
+        <button class="btn modern-frosty-quiet" type="reset">Clear the form</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Sheaf</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Help</h2>
+      <ul>
+        <li><a href="features.html#keys">Keyboard shortcuts</a></li>
+        <li><a href="pricing.html#questions">Questions about plans</a></li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Modern Frosty template</a></li>
+        <li><a href="../docs/index.html">Get started with Modern Frosty</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Modern Frosty template. Sheaf is fictional and its forms post nowhere.</p>
+</footer>
+</body>
+</html>

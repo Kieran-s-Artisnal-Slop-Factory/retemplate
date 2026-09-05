@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Flare — Natural</title>
+  <title>Flare · Natural</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -68,9 +68,70 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Natural adds three small things from a naturalist's desk: a page from a field notebook, a round stamp, and the leaf sprig as a block of its own. The soil texture and the corner tint are not flare — they are tokens on <code>&lt;body&gt;</code> and need no markup.</p>
+  <p>Flare is everything a template adds beyond the contract. Natural's comes out of a herbarium cupboard: a mounted plate with its label, a paper tag, a page from the collecting book, a round stamp, and the leaf sprig as a block of its own. Each sits inside a <code>&lt;div class="natural-flare"&gt;</code> so a template swap can strip it. The soil texture and the corner tint are not flare; they are tokens on <code>&lt;body&gt;</code> and need no markup.</p>
 </header>
-<h2 id="preview">Field note</h2>
+<h2 id="preview">The plate</h2>
+<p>The signature, and the hero of the overview and both example entries. A sheet held down by two strips of linen tape (pseudo-elements), with a label glued over its bottom corner. The label is a <code>&lt;figcaption&gt;</code> so the data belongs to the picture: a kicker, the binomial in Fraunces italic with the authority in roman, and a <code>&lt;dl class="natural-data"&gt;</code> of collection data. Any first child of <code>.hero</code> may be a plate; below 30rem the label straightens and drops under the sheet.</p>
+<figure class="example" data-snippet="natural-plate">
+<div class="natural-flare">
+  <figure class="natural-plate">
+    <img src="../../assets/specimen.svg" alt="A pressed hart's-tongue fern on a cream sheet" width="900" height="1100">
+    <figcaption class="natural-label">
+      <p class="kicker">Herbarium</p>
+      <p class="natural-binomial">Asplenium scolopendrium <span class="natural-auth">L.</span></p>
+      <dl class="natural-data">
+        <dt>Common</dt><dd>Hart's-tongue fern</dd>
+        <dt>Collected</dt><dd>Barn wall, north side, 14 May</dd>
+        <dt>Habit</dt><dd>Evergreen fern, to 45 cm</dd>
+        <dt>Soil</dt><dd>Lime, damp, shaded</dd>
+        <dt>Det.</dt><dd>M. Penrose</dd>
+      </dl>
+    </figcaption>
+  </figure>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-plate">&lt;div class="natural-flare"&gt;
+  &lt;figure class="natural-plate"&gt;
+    &lt;img src="../../assets/specimen.svg" alt="A pressed hart's-tongue fern on a cream sheet" width="900" height="1100"&gt;
+    &lt;figcaption class="natural-label"&gt;
+      &lt;p class="kicker"&gt;Herbarium&lt;/p&gt;
+      &lt;p class="natural-binomial"&gt;Asplenium scolopendrium &lt;span class="natural-auth"&gt;L.&lt;/span&gt;&lt;/p&gt;
+      &lt;dl class="natural-data"&gt;
+        &lt;dt&gt;Common&lt;/dt&gt;&lt;dd&gt;Hart's-tongue fern&lt;/dd&gt;
+        &lt;dt&gt;Collected&lt;/dt&gt;&lt;dd&gt;Barn wall, north side, 14 May&lt;/dd&gt;
+        &lt;dt&gt;Habit&lt;/dt&gt;&lt;dd&gt;Evergreen fern, to 45 cm&lt;/dd&gt;
+        &lt;dt&gt;Soil&lt;/dt&gt;&lt;dd&gt;Lime, damp, shaded&lt;/dd&gt;
+        &lt;dt&gt;Det.&lt;/dt&gt;&lt;dd&gt;M. Penrose&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="variants">The rest of the desk</h2>
+<h3>Tag</h3>
+<p>A paper tag with a punched hole and a string down the margin, for a notice or a short form. The example site hangs one beside the nursery's hero and another round the enquiry form. The hole and the string are pseudo-elements; on a phone they go and the tag is a plain panel.</p>
+<figure class="example" data-snippet="natural-tag">
+<div class="natural-flare">
+  <div class="natural-tag">
+    <p class="kicker">This week at the gate</p>
+    <dl class="natural-data">
+      <dt>Open</dt><dd>Thursday to Sunday, 10 to 5</dd>
+      <dt>Looking good</dt><dd>Water avens, hart's-tongue, quaking grass</dd>
+      <dt>Bare-root</dt><dd>List opens 1 October</dd>
+    </dl>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-tag">&lt;div class="natural-flare"&gt;
+  &lt;div class="natural-tag"&gt;
+    &lt;p class="kicker"&gt;This week at the gate&lt;/p&gt;
+    &lt;dl class="natural-data"&gt;
+      &lt;dt&gt;Open&lt;/dt&gt;&lt;dd&gt;Thursday to Sunday, 10 to 5&lt;/dd&gt;
+      &lt;dt&gt;Looking good&lt;/dt&gt;&lt;dd&gt;Water avens, hart's-tongue, quaking grass&lt;/dd&gt;
+      &lt;dt&gt;Bare-root&lt;/dt&gt;&lt;dd&gt;List opens 1 October&lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h3>Field note</h3>
 <p>A ruled panel with a rust margin line. The lines are a repeating gradient sized to the line height, so text sits on them; the margin is <code>::before</code>. Put anything in it; a kicker as the first child works as a heading.</p>
 <figure class="example" data-snippet="natural-note">
 <div class="natural-flare">
@@ -88,8 +149,8 @@
     &lt;p&gt;Soil still cold at a hand's depth. Wait another week on the beans.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
-<h2 id="variants">Stamp</h2>
-<p>A round seal in moss with a double ring, tilted a few degrees. Small tracked capitals around one italic word in Fraunces. The overview puts one in the hero; <code>.hero .natural-flare</code> pushes it to the right edge.</p>
+<h3>Stamp</h3>
+<p>A round seal in moss with a double ring, tilted a few degrees. Small tracked capitals around one italic word in Fraunces. The same class on a <code>.btn</code> is the <a href="buttons.html#variants">stamp button</a>.</p>
 <figure class="example" data-snippet="natural-stamp">
 <div class="natural-flare" aria-hidden="true"><span class="natural-stamp">Grown on<strong>paper</strong>est. 2026</span></div>
 </figure>
@@ -100,19 +161,35 @@
 <div class="natural-flare natural-sprig" aria-hidden="true"></div>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-sprig">&lt;div class="natural-flare natural-sprig" aria-hidden="true"&gt;&lt;/div&gt;</code></pre></div>
+<h2 id="component-variants">Variants of contract components</h2>
+<p>Natural also gives five contract components a variant of its own. They are ordinary components with one more class, so they need no wrapper, and each is documented on its component's page.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>On</th><th>What it makes</th></tr></thead><tbody>
+      <tr><td><code>.natural-specimen</code></td><td><a href="cards.html#variants">.card</a></td><td>A mounted specimen with a label for a body</td></tr>
+      <tr><td><code>.natural-key</code></td><td><a href="accordion.html#variants">.accordion-group</a></td><td>A dichotomous key with numbered couplets</td></tr>
+      <tr><td><code>.natural-calendar</code></td><td><a href="table.html#variants">.table-wrap</a></td><td>A planting calendar, a dot per month</td></tr>
+      <tr><td><code>.natural-spread</code></td><td><a href="fifty-fifty.html#variants">.fifty-fifty</a></td><td>A plate beside its notes</td></tr>
+      <tr><td><code>.natural-stamp</code></td><td><a href="buttons.html#variants">.btn</a></td><td>A rubber-stamp button</td></tr>
+</tbody></table></div>
 <h2 id="classes">Classes</h2>
-<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>.</p>
+<p>The rules live in <code>css/global.css</code> under <code>/* == flare == */</code>; the hero's own rules are under <code>/* == utilities == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.natural-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.natural-plate</code></td><td>A mounted sheet: padded surface, shadow, two tape strips as <code>::before</code> and <code>::after</code></td></tr>
+      <tr><td><code>.natural-label</code></td><td>The label slip glued over the plate's corner; paper and ink tokens, a slight tilt</td></tr>
+      <tr><td><code>.natural-binomial</code></td><td>A Latin name in Fraunces italic; <code>.natural-auth</code> inside it is the authority, roman and small</td></tr>
+      <tr><td><code>.natural-data</code></td><td>A two-column <code>&lt;dl&gt;</code>: small-caps field, roman value</td></tr>
+      <tr><td><code>.natural-lede</code></td><td>In <code>.hero</code>: the one italic Fraunces line under the heading</td></tr>
+      <tr><td><code>.natural-tag</code></td><td>Paper tag; <code>::before</code> is the punched hole, <code>::after</code> the string</td></tr>
       <tr><td><code>.natural-note</code></td><td>Ruled paper panel; <code>::before</code> is the margin line</td></tr>
-      <tr><td><code>.natural-stamp</code></td><td>Round moss seal with a double ring; <code>strong</code> inside is the italic word</td></tr>
+      <tr><td><code>.natural-stamp</code></td><td>Round moss seal with a double ring; <code>strong</code> inside is the italic word. On a <code>.btn</code>, the stamp button</td></tr>
       <tr><td><code>.natural-sprig</code></td><td>The sprig mask as a free-standing block</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Every colour here is a token: <code>--natural-moss</code>, <code>--natural-moss-soft</code>, <code>--natural-rule</code>, <code>--natural-sprig</code> in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>Every colour here is a token: <code>--natural-moss</code>, <code>--natural-moss-soft</code>, <code>--natural-tape</code>, <code>--natural-tag-paper</code>, <code>--natural-tag-ink</code>, <code>--natural-rule</code>, <code>--natural-sprig</code> in <code>theme.css</code>. Nothing in <code>global.css</code> names a colour.</li>
+<li>The label keeps its paper and ink in both schemes, so a plate in the dark half is a cream sheet on soil, which is the point.</li>
 <li>Nothing animates continuously. The only motion in the template is the tag on the <a href="cards.html">feature card</a>, a transition the global <code>prefers-reduced-motion</code> rule shortens to nothing.</li>
-<li>The stamp and the sprig are decoration; mark them <code>aria-hidden="true"</code> as the examples do. The field note is content and should not be.</li>
+<li>The stamp and the sprig are decoration; mark them <code>aria-hidden="true"</code> as the examples do. The plate, the tag and the field note are content and should not be.</li>
 <li>The soil texture (<code>--natural-soil</code>) and the corner tint (<code>--natural-moss-tint</code>) are background layers on <code>body</code>, documented on the <a href="../theme.html">theme page</a>.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>

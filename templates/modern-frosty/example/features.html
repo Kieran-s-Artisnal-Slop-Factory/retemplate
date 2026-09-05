@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Features · Sheaf</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Sheaf</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html">Home</a>
+    <a href="features.html" aria-current="page">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="../index.html">Template overview</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <header class="page-header">
+    <h1>Everything Sheaf does, on one page.</h1>
+    <p>Four features, a table of commands and the import dialog. If it is not here, Sheaf does not do it.</p>
+  </header>
+
+  <section class="section">
+    <h2>The four features</h2>
+    <div class="stack">
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/card-1.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Plain files</h3>
+          <p class="card-text">A note is a Markdown file. Its name is the file name; its first line is the heading. Rename the file and every link to it follows.</p>
+          <div class="card-actions"><span class="badge badge-done">All plans</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/card-3.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Links by name</h3>
+          <p class="card-text">Type two opening brackets and start a name; Sheaf completes it from your notes or makes a new one. The other note lists what links to it.</p>
+          <div class="card-actions"><span class="badge badge-done">All plans</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="../assets/card-2.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Sync on save</h3>
+          <p class="card-text">The folder is mirrored to your other devices each time a note is written. Two devices on the free plan; any number on Personal and Team.</p>
+          <div class="card-actions"><span class="badge badge-active">Free: two devices</span></div>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end">
+        <figure class="card-media"><img src="../assets/card-4.svg" alt="" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Shared folders</h3>
+          <p class="card-text">A Team folder is one folder several people write in. Each note shows who touched it last; there are no comments, permissions or roles.</p>
+          <div class="card-actions"><span class="badge">Team only</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="keys">
+    <h2>Commands</h2>
+    <p>Everything has a key. The command palette lists these and searches them by name.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>Command</th><th>Keys</th><th>Does</th></tr></thead>
+        <tbody>
+          <tr><td>New note</td><td><kbd>Ctrl</kbd> <kbd>N</kbd></td><td>A blank file named by today's date until you give it a heading</td></tr>
+          <tr><td>Find</td><td><kbd>Ctrl</kbd> <kbd>K</kbd></td><td>Searches names first, then text</td></tr>
+          <tr><td>Link</td><td><kbd>[[</kbd></td><td>Completes a note name at the cursor</td></tr>
+          <tr><td>Toggle list</td><td><kbd>Ctrl</kbd> <kbd>.</kbd></td><td>Hides the left pane so the note has the window</td></tr>
+          <tr><td>Open folder</td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td><td>Shows the notes folder in your file manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modern-frosty-flare">
+      <ul class="modern-frosty-keys">
+        <li><kbd>Ctrl</kbd> <kbd>N</kbd> new note</li>
+        <li><kbd>Ctrl</kbd> <kbd>K</kbd> find</li>
+        <li><kbd>[[</kbd> link</li>
+        <li><kbd>Ctrl</kbd> <kbd>.</kbd> toggle list</li>
+        <li><kbd>Ctrl</kbd> <kbd>O</kbd> open folder</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Bring your notes with you</h2>
+    <p>Sheaf reads a folder of Markdown or plain text files as it is. If your notes are in another app, export them to a folder first, then point Sheaf at it.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('import').showModal()">Import a folder</button>
+    <dialog class="modal" id="import" aria-labelledby="import-title">
+      <h2 id="import-title">Import a folder</h2>
+      <p>Choose the folder and how to treat files that are not Markdown.</p>
+      <form method="dialog">
+        <div class="stack">
+          <div class="field modern-frosty-inline">
+            <label for="im-folder">Folder</label>
+            <input id="im-folder" name="folder" type="text" value="~/Notes">
+          </div>
+          <div class="field modern-frosty-inline">
+            <label for="im-other">Other files</label>
+            <select id="im-other" name="other"><option>Leave in place</option><option>Copy as attachments</option><option>Skip</option></select>
+            <p class="hint">Images and PDFs are attachments; anything else is left alone.</p>
+          </div>
+          <div class="field modern-frosty-inline">
+            <span class="field-label">Links</span>
+            <label class="switch"><input type="checkbox" role="switch" name="links" checked><span>Turn matching names into links</span></label>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn" type="submit" value="cancel">Cancel</button>
+          <button class="btn btn-primary" type="submit" value="import">Import</button>
+        </div>
+      </form>
+    </dialog>
+  </section>
+
+  <div class="banner banner-info" role="status"><span>i</span><p>Sheaf is an example site for the Modern Frosty template. The buttons and forms on this page do nothing.</p></div>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Sheaf</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Help</h2>
+      <ul>
+        <li><a href="features.html#keys">Keyboard shortcuts</a></li>
+        <li><a href="pricing.html#questions">Questions about plans</a></li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>About this site</h2>
+      <ul>
+        <li><a href="../index.html">Built with the Modern Frosty template</a></li>
+        <li><a href="../docs/index.html">Get started with Modern Frosty</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">An example site for the Modern Frosty template. Sheaf is fictional and its forms post nowhere.</p>
+</footer>
+</body>
+</html>

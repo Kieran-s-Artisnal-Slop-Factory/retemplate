@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Table — Natural</title>
+  <title>Table · Natural</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -93,16 +93,54 @@
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Calendar</h3>
+<p>Natural's own variant. Add <code>natural-calendar</code> to the wrapper and the table is a planting calendar: the plant's name in Fraunces italic down the first column, a month per column after it, and a dot per cell. The dots are backgrounds in the feedback colours (<code>natural-sow</code> green, <code>natural-flower</code> rust, <code>natural-lift</code> amber), so they follow the scheme; put the word in a <code>.visually-hidden</code> span so the cell is not empty to a reader. A <code>.natural-legend</code> list under the table explains the colours.</p>
+<figure class="example" data-snippet="natural-calendar">
+<div class="table-wrap natural-calendar">
+  <table class="data-table">
+    <thead><tr><th scope="col">Plant</th><th scope="col">J</th><th scope="col">F</th><th scope="col">M</th><th scope="col">A</th><th scope="col">M</th><th scope="col">J</th><th scope="col">J</th><th scope="col">A</th><th scope="col">S</th><th scope="col">O</th><th scope="col">N</th><th scope="col">D</th></tr></thead>
+    <tbody>
+      <tr><td>Water avens</td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td></td><td></td></tr>
+      <tr><td>Primrose</td><td></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td class="natural-lift"><span class="visually-hidden">Lift and divide</span></td><td></td><td></td></tr>
+      <tr><td>Quaking grass</td><td></td><td></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td class="natural-sow"><span class="visually-hidden">Sow</span></td><td></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td class="natural-flower"><span class="visually-hidden">Flowers</span></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+<ul class="natural-legend">
+  <li class="natural-sow">Sow</li>
+  <li class="natural-flower">In flower</li>
+  <li class="natural-lift">Lift and divide</li>
+</ul>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-calendar">&lt;div class="table-wrap natural-calendar"&gt;
+  &lt;table class="data-table"&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope="col"&gt;Plant&lt;/th&gt;&lt;th scope="col"&gt;J&lt;/th&gt;&lt;th scope="col"&gt;F&lt;/th&gt;&lt;th scope="col"&gt;M&lt;/th&gt;&lt;th scope="col"&gt;A&lt;/th&gt;&lt;th scope="col"&gt;M&lt;/th&gt;&lt;th scope="col"&gt;J&lt;/th&gt;&lt;th scope="col"&gt;J&lt;/th&gt;&lt;th scope="col"&gt;A&lt;/th&gt;&lt;th scope="col"&gt;S&lt;/th&gt;&lt;th scope="col"&gt;O&lt;/th&gt;&lt;th scope="col"&gt;N&lt;/th&gt;&lt;th scope="col"&gt;D&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Water avens&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-lift"&gt;&lt;span class="visually-hidden"&gt;Lift and divide&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-lift"&gt;&lt;span class="visually-hidden"&gt;Lift and divide&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Primrose&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-lift"&gt;&lt;span class="visually-hidden"&gt;Lift and divide&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-lift"&gt;&lt;span class="visually-hidden"&gt;Lift and divide&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;td&gt;Quaking grass&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-sow"&gt;&lt;span class="visually-hidden"&gt;Sow&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td class="natural-flower"&gt;&lt;span class="visually-hidden"&gt;Flowers&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;ul class="natural-legend"&gt;
+  &lt;li class="natural-sow"&gt;Sow&lt;/li&gt;
+  &lt;li class="natural-flower"&gt;In flower&lt;/li&gt;
+  &lt;li class="natural-lift"&gt;Lift and divide&lt;/li&gt;
+&lt;/ul&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == table == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
       <tr><td><code>.table-wrap</code></td><td>Border, radius, horizontal scrolling</td></tr>
       <tr><td><code>.data-table</code></td><td>Small type, hover rows, no last border</td></tr>
+      <tr><td><code>.natural-calendar</code></td><td>Natural's variant on <code>.table-wrap</code>: fixed layout, centred cells, italic first column (<code>global.css § flare</code>)</td></tr>
+      <tr><td><code>.natural-sow</code>, <code>.natural-flower</code>, <code>.natural-lift</code></td><td>A dot in a cell: success, primary and warning colours</td></tr>
+      <tr><td><code>.natural-legend</code></td><td>An inline list of the three marks with their dots</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Use <code>&lt;th&gt;</code> in the head row, and <code>scope="row"</code> on a first-column header if rows have one.</li>
 <li>Tables inside <code>.prose</code> get the same treatment without the classes.</li>
+<li>The calendar is at least 42rem wide and scrolls inside its wrapper on a phone, first column and all; the legend stays put beneath it.</li>
 </ul>
 <nav class="prev-next" aria-label="Component pages"><a href="badge.html">← Badge</a><a href="author-card.html">Author card →</a></nav>
   </main>

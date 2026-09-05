@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Buttons — Natural</title>
+  <title>Buttons · Natural</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -68,7 +68,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Buttons</h1>
-  <p>Three kinds — primary, default, danger — in three sizes. A link can wear the same classes when it should look like a button.</p>
+  <p>Three kinds: primary, default and danger, in three sizes. A link can wear the same classes when it should look like a button.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <figure class="example" data-snippet="buttons">
@@ -101,6 +101,20 @@
   &lt;button class="btn btn-lg" type="button"&gt;Large&lt;/button&gt;
   &lt;button class="btn btn-primary" type="button" disabled&gt;Disabled&lt;/button&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>Stamp</h3>
+<p>Natural's own variant. <code>natural-stamp</code> on a button or a link makes a rubber stamp: moss ink, a double rule, tracked capitals, no fill. It takes <code>btn-lg</code>; it presses flat on click. The overview and the example site use it for the second action beside a rust primary, so the two never compete.</p>
+<figure class="example" data-snippet="natural-stamp">
+<div class="row">
+  <button class="btn natural-stamp" type="button">Sold</button>
+  <button class="btn natural-stamp btn-lg" type="button">Reserved</button>
+  <a class="btn natural-stamp" href="#">The field guide</a>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-stamp">&lt;div class="row"&gt;
+  &lt;button class="btn natural-stamp" type="button"&gt;Sold&lt;/button&gt;
+  &lt;button class="btn natural-stamp btn-lg" type="button"&gt;Reserved&lt;/button&gt;
+  &lt;a class="btn natural-stamp" href="#"&gt;The field guide&lt;/a&gt;
+&lt;/div&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == buttons == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -110,6 +124,7 @@
       <tr><td><code>.btn-sm</code></td><td>Smaller padding and type</td></tr>
       <tr><td><code>.btn-lg</code></td><td>Larger padding and type</td></tr>
       <tr><td><code>:disabled</code></td><td>Faded, not clickable</td></tr>
+      <tr><td><code>.natural-stamp</code></td><td>Natural's variant: a moss rubber stamp with a double rule (<code>global.css § flare</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

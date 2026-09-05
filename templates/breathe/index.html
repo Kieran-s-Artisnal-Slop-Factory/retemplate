@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en" data-theme="breathe">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Breathe · a retemplate template</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Manrope:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html">Breathe</a>
+  <button class="nav-toggle" type="button" popovertarget="site-nav" aria-label="Menu">☰</button>
+  <nav id="site-nav" popover>
+    <a href="index.html" aria-current="page">Overview</a>
+    <a href="blogpost.html">Blog post</a>
+    <a href="forms.html">Forms</a>
+    <a href="sidebar.html">Sidebar</a>
+    <a href="docs/index.html">Docs</a>
+    <a href="example/index.html">Example</a>
+  </nav>
+  <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  <a class="site-link" href="../../index.html">All templates</a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div class="stack">
+      <p class="kicker">A retemplate template</p>
+      <h1>Room to <em>grow</em>.</h1>
+      <p>White-green air by day, deep forest by night, Manrope set light and wide, and one frond that moves in a slow breeze. Made for apps and sites about plants. The markup is the same as every template here; only the stylesheets and the art differ.</p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
+        <a class="btn btn-lg breathe-quiet" href="docs/components/index.html">Browse the components</a>
+      </div>
+    </div>
+    <div class="breathe-flare">
+      <div class="breathe-pot">
+        <svg class="breathe-frond" viewBox="0 0 300 330" aria-hidden="true">
+          <g class="breathe-sways">
+            <path d="M150 330C149 300 152 240 149 180C147 130 148 100 146 78" fill="none" stroke-width="5" stroke-linecap="round" style="stroke: var(--breathe-stem)"/>
+            <g class="breathe-leaf-l"><path d="M149 300C110 300 70 280 60 235C100 232 140 262 149 300Z" fill="currentColor"/></g>
+            <g class="breathe-leaf-r"><path d="M151 260C190 258 230 236 240 190C200 190 162 222 151 260Z" style="fill: var(--breathe-leaf-light)"/></g>
+            <g class="breathe-leaf-l"><path d="M148 215C105 214 66 190 58 145C98 146 138 178 148 215Z" style="fill: var(--breathe-leaf-light)"/></g>
+            <g class="breathe-leaf-r"><path d="M150 170C186 168 224 144 232 98C194 100 160 134 150 170Z" fill="currentColor"/></g>
+            <g class="breathe-leaf-l"><path d="M147 125C112 124 84 104 78 66C110 68 138 94 147 125Z" fill="currentColor"/></g>
+            <g class="breathe-leaf-r"><path d="M146 80C132 60 130 30 148 8C166 30 162 60 146 80Z" style="fill: var(--breathe-leaf-light)"/></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A week, down one stem</h2>
+    <p>Cards in a <code>stack</code> are a list. Add <code>breathe-stem</code> and the list becomes a sequence: one thin stem, a leaf at each card, first thing first. <code>breathe-now</code> marks the card that is due and <code>breathe-done</code> the ones behind you. These are ordinary horizontal cards; the stem and the leaves are pseudo-elements. Take <code>css/</code>, <code>js/theme.js</code> and <code>assets/</code> and you have the whole template; everything else on this page is here to show it.</p>
+    <div class="stack breathe-stem">
+      <article class="card card-horizontal breathe-done">
+        <figure class="card-media"><img src="assets/gallery-2.svg" alt="A single drop on a leaf" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Monday</p>
+          <h3 class="card-title">Monstera, water until it runs</h3>
+          <p class="card-text">Done on Monday morning. Two litres, then the saucer emptied after ten minutes.</p>
+        </div>
+      </article>
+      <article class="card card-horizontal card-media-end breathe-now">
+        <figure class="card-media"><img src="assets/gallery-1.svg" alt="A fern frond" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Today, Wednesday</p>
+          <h3 class="card-title">Maidenhair fern, mist and check the tray</h3>
+          <p class="card-text">The fern wants damp air more than wet soil. Mist the fronds and top up the pebble tray.</p>
+          <div class="card-actions"><a class="btn btn-sm btn-primary" href="example/schedule.html">Open the schedule</a></div>
+        </div>
+      </article>
+      <article class="card card-horizontal">
+        <figure class="card-media"><img src="assets/gallery-3.svg" alt="Three pots in a row" width="800" height="600"></figure>
+        <div class="card-body">
+          <p class="kicker">Saturday</p>
+          <h3 class="card-title">Pothos, water and turn a quarter</h3>
+          <p class="card-text">It leans toward the window. Turn the pot a quarter each week and it grows even.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cards, and the leaf cut</h2>
+    <p>The card is a white panel on a soft shadow with no border. Add <code>breathe-leaf</code> and its picture takes the leaf cut: two corners round, two sharp, set in from the edge. An icon sits in a mint disc.</p>
+    <div class="grid-2">
+      <article class="card breathe-leaf">
+        <figure class="card-media"><img src="assets/card-1.svg" alt="A young plant in a pot" width="640" height="400"></figure>
+        <div class="card-body">
+          <h3 class="card-title">Two stylesheets</h3>
+          <p class="card-text"><code>theme.css</code> holds the tokens, the palette and the breeze settings; <code>global.css</code> holds every rule that uses them. The palette block pastes straight into a retoken site. <a href="docs/theme.html">See the tokens.</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="card-media"><svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 4.2 6 7.4 6 10.5a6 6 0 0 1-12 0C6 10.4 8.5 7.2 12 3Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg></figure>
+        <div class="card-body">
+          <h3 class="card-title">Light and dark</h3>
+          <p class="card-text">Every colour is a <code>light-dark()</code> pair. The dark half is forest, a blue-green, and never brown. Both halves clear 4.5:1 on text, links and buttons.</p>
+          <div class="card-actions"><span class="badge breathe-mint">Checked in both halves</span></div>
+        </div>
+      </article>
+    </div>
+    <p>Every template has one <em>feature</em> card with an effect of its own. Breathe's is a mint panel that lifts on a green shadow; its picture leans a degree with it, as if it caught the same air. Rest on it.</p>
+    <article class="card card-feature">
+      <figure class="card-media"><img src="assets/card-4.svg" alt="Leaves on deep green" width="640" height="400"></figure>
+      <div class="card-body">
+        <h3 class="card-title">The feature card</h3>
+        <p class="card-text">The lift and the lean are transitions on the card and its image, so this is the same card markup as the three above. It answers to keyboard focus inside the card too.</p>
+        <div class="card-actions"><a class="btn btn-sm btn-primary" href="docs/components/cards.html">Card docs</a></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section">
+    <h2>Half picture, half air</h2>
+    <p>The fifty-fifty block gives a picture half the width and the words the other half. With <code>breathe-leaf</code> the panel loses its box and the picture takes the leaf cut, so the two halves float on the page. Without it you get the boxed version; <code>fifty-fifty-reverse</code> puts the picture on the right. On a phone the picture comes first either way.</p>
+    <div class="stack">
+      <section class="fifty-fifty breathe-leaf">
+        <figure><img src="assets/fifty.svg" alt="A plant by a hillside of green" width="900" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">The leaf cut</p>
+          <h2>Say the one thing this block is for</h2>
+          <p>A heading, a paragraph and a single call to action. That is the whole pattern, and it carries most landing pages.</p>
+          <a class="btn btn-primary" href="docs/components/fifty-fifty.html">How it is built</a>
+        </div>
+      </section>
+      <section class="fifty-fifty fifty-fifty-reverse">
+        <figure><img src="assets/gallery-4.svg" alt="Morning light through a window" width="800" height="600"></figure>
+        <div class="fifty-fifty-body">
+          <p class="kicker">Boxed, mirrored</p>
+          <h2>The same block in its panel</h2>
+          <p>Alternate the two down a page and the eye is led from side to side without any extra styling.</p>
+          <a class="btn breathe-quiet" href="docs/components/fifty-fifty.html">Read the docs</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Questions, folded</h2>
+    <p>Accordions are native <code>&lt;details&gt;</code> elements. Give a group of them the same <code>name</code> and opening one closes the others, with no script. The marker is a mint disc with a plus that turns.</p>
+    <div class="accordion-group">
+      <details class="accordion" name="faq" open>
+        <summary>Does this need a build step?</summary>
+        <div class="accordion-body"><p>No. Copy the folder, link the two stylesheets and the one script, and write HTML.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>What moves?</summary>
+        <div class="accordion-body"><p>Only the frond. The stem sways about two degrees from its base over seven seconds and each leaf lags a little behind it. Under <code>prefers-reduced-motion</code> it stands still. Nothing else in the template animates on its own.</p></div>
+      </details>
+      <details class="accordion" name="faq">
+        <summary>Which browsers?</summary>
+        <div class="accordion-body"><p>Anything from 2024 on: the template relies on <code>light-dark()</code>, <code>:has()</code>, popovers and exclusive accordions.</p></div>
+      </details>
+    </div>
+    <p>A single accordion stands on its own.</p>
+    <details class="accordion">
+      <summary>What is in the install set?</summary>
+      <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and this folder's <code>README.md</code>. The two fonts come from Google Fonts by one <code>&lt;link&gt;</code>; the README says how to self-host them instead.</p></div>
+    </details>
+  </section>
+
+  <section class="section">
+    <h2>Eight pictures and a lightbox</h2>
+    <p>Click any of them. The lightbox is a <code>&lt;dialog&gt;</code>; the arrows and the thumbnails are plain links, and <kbd>Esc</kbd> closes it.</p>
+    <ul class="gallery">
+      <li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-1.svg" alt="A fern frond" width="800" height="600"></a><figcaption>Frond</figcaption></figure></li>
+      <li><figure><a href="#lb-2" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-2.svg" alt="A single drop on a leaf" width="800" height="600"></a><figcaption>Drop</figcaption></figure></li>
+      <li><figure><a href="#lb-3" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-3.svg" alt="Three pots in a row" width="800" height="600"></a><figcaption>Three pots</figcaption></figure></li>
+      <li><figure><a href="#lb-4" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-4.svg" alt="Morning light through a window" width="800" height="600"></a><figcaption>Morning</figcaption></figure></li>
+      <li><figure><a href="#lb-5" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-5.svg" alt="A sprout in soil" width="800" height="600"></a><figcaption>Sprout</figcaption></figure></li>
+      <li><figure><a href="#lb-6" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-6.svg" alt="A large leaf close up" width="800" height="600"></a><figcaption>Close up</figcaption></figure></li>
+      <li><figure><a href="#lb-7" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-7.svg" alt="A week of seven drops" width="800" height="600"></a><figcaption>The week</figcaption></figure></li>
+      <li><figure><a href="#lb-8" onclick="document.getElementById('lightbox').showModal()"><img src="assets/gallery-8.svg" alt="Leaves at night" width="800" height="600"></a><figcaption>Night</figcaption></figure></li>
+    </ul>
+    <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+      <figure class="lightbox-slide" id="lb-1"><img src="assets/gallery-1.svg" alt="A fern frond"><figcaption>Frond, 1 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-8" aria-label="Previous">‹</a><a href="#lb-2" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-2"><img src="assets/gallery-2.svg" alt="A single drop on a leaf"><figcaption>Drop, 2 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-1" aria-label="Previous">‹</a><a href="#lb-3" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-3"><img src="assets/gallery-3.svg" alt="Three pots in a row"><figcaption>Three pots, 3 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-2" aria-label="Previous">‹</a><a href="#lb-4" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-4"><img src="assets/gallery-4.svg" alt="Morning light through a window"><figcaption>Morning, 4 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-3" aria-label="Previous">‹</a><a href="#lb-5" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-5"><img src="assets/gallery-5.svg" alt="A sprout in soil"><figcaption>Sprout, 5 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-4" aria-label="Previous">‹</a><a href="#lb-6" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-6"><img src="assets/gallery-6.svg" alt="A large leaf close up"><figcaption>Close up, 6 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-5" aria-label="Previous">‹</a><a href="#lb-7" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-7"><img src="assets/gallery-7.svg" alt="A week of seven drops"><figcaption>The week, 7 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-6" aria-label="Previous">‹</a><a href="#lb-8" aria-label="Next">›</a></nav></figure>
+      <figure class="lightbox-slide" id="lb-8"><img src="assets/gallery-8.svg" alt="Leaves at night"><figcaption>Night, 8 of 8</figcaption><nav class="lightbox-nav"><a href="#lb-7" aria-label="Previous">‹</a><a href="#lb-1" aria-label="Next">›</a></nav></figure>
+      <form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>
+    </dialog>
+  </section>
+
+  <hr class="page-break">
+
+  <section class="section">
+    <h2>Small parts</h2>
+    <p>Buttons are pills in three kinds and three sizes; <code>breathe-quiet</code> is the second action beside a primary, a link with an arrow. A switch is a checkbox with <code>role="switch"</code>. Badges carry state; <code>breathe-mint</code> is the one you should notice. Banners are tinted with a disc for the mark.</p>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Water now</button>
+      <button class="btn" type="button">Snooze a day</button>
+      <button class="btn breathe-quiet" type="button">See the plant</button>
+      <button class="btn btn-danger" type="button">Remove plant</button>
+      <button class="btn btn-sm" type="button">Small</button>
+      <button class="btn btn-lg" type="button">Large</button>
+      <button class="btn" type="button" disabled>Disabled</button>
+    </div>
+    <div class="row">
+      <label class="switch"><input type="checkbox" role="switch" checked><span>Morning reminders</span></label>
+      <label class="switch"><input type="checkbox" role="switch"><span>Weekly summary</span></label>
+      <span class="badge">Resting</span>
+      <span class="badge badge-active">Growing</span>
+      <span class="badge badge-done">Watered</span>
+      <span class="badge breathe-mint">Due today</span>
+    </div>
+    <div class="stack">
+      <div class="banner banner-success" role="status"><span>✓</span><p>Logged. The monstera's next watering is in nine days.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Breathe loads Manrope and Instrument Serif from Google Fonts. Remove three lines from the head and it falls back to Segoe UI and Georgia.</p></div>
+      <div class="banner banner-warning" role="status"><span>!</span><p>The fern's tray has been dry for two days. Mist it today.</p></div>
+      <div class="banner banner-danger" role="alert"><span>×</span><p>Something went wrong. Nothing did, but this is what it would look like.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>A week in a table, and a dialog</h2>
+    <p>Tables sit in a wrapper that scrolls sideways when they are wider than the page. Add <code>breathe-week</code> and the columns after the first are days: a cell with <code>breathe-drop</code> shows a drop, <code>breathe-done</code> fades it, and <code>breathe-today</code> tints a column mint. The words stay in a hidden span for anyone reading by ear.</p>
+    <div class="table-wrap breathe-week">
+      <table class="data-table">
+        <thead><tr><th scope="col">Plant</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col" class="breathe-today">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr></thead>
+        <tbody>
+          <tr><td>Monstera</td><td class="breathe-drop breathe-done"><span class="visually-hidden">Watered</span></td><td></td><td class="breathe-today"></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>Maidenhair fern</td><td></td><td></td><td class="breathe-drop breathe-today"><span class="visually-hidden">Mist</span></td><td></td><td class="breathe-drop"><span class="visually-hidden">Mist</span></td><td></td><td class="breathe-drop"><span class="visually-hidden">Mist</span></td></tr>
+          <tr><td>Pothos</td><td></td><td></td><td class="breathe-today"></td><td></td><td></td><td class="breathe-drop"><span class="visually-hidden">Water</span></td><td></td></tr>
+          <tr><td>Snake plant</td><td></td><td></td><td class="breathe-today"></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Dialogs are native too. The button below opens one; it closes itself through a form.</p>
+    <button class="btn btn-primary" type="button" onclick="document.getElementById('demo-modal').showModal()">Log a watering</button>
+    <dialog class="modal" id="demo-modal" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title">Log a watering</h2>
+      <p>The dialog traps focus, dims the page behind it and closes on <kbd>Esc</kbd>; all of that comes from the browser.</p>
+      <form method="dialog">
+        <div class="field">
+          <label for="demo-amount">How much</label>
+          <select id="demo-amount" name="amount">
+            <option>A little, the top is dry</option>
+            <option selected>Until it runs through</option>
+            <option>Bottom watered for twenty minutes</option>
+          </select>
+          <p class="hint">You can change this later on the plant's page.</p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn" type="submit" value="cancel">Not now</button>
+          <button class="btn btn-primary" type="submit" value="ok">Log it</button>
+        </div>
+      </form>
+    </dialog>
+  </section>
+
+  <section class="section">
+    <h2>Words</h2>
+    <div class="prose">
+      <p>Prose is what most pages are made of, so <code>.prose</code> styles every construct a markdown renderer produces: headings in Manrope with tight tracking, quotes as soft sage panels, code with a hairline. The <a href="blogpost.html">blog post</a> page runs the full test document through it; <a href="docs/defaults.html">defaults</a> shows every bare element.</p>
+      <blockquote><p>A plant does not need a reminder. You do. That is the whole app.</p></blockquote>
+    </div>
+    <div class="breathe-flare">
+      <p class="breathe-aside">One italic line in Instrument Serif, for a sentence that deserves to be said slowly.</p>
+    </div>
+    <aside class="author-card">
+      <img class="avatar" src="assets/avatar.svg" alt="" width="96" height="96">
+      <div>
+        <strong class="author-name">Breathe</strong>
+        <p class="author-bio">The green template. Air, not paper.</p>
+        <p class="meta"><time datetime="2026-09-05">5 September 2026</time> · <span>3 min read</span></p>
+        <p class="tags"><a class="tag" href="docs/index.html">get started</a><a class="tag" href="docs/theme.html">tokens</a></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-columns">
+    <section>
+      <h2>Breathe</h2>
+      <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="docs/index.html">Get started</a></li>
+        <li><a href="docs/components/index.html">Components</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="blogpost.html">Blog post</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="sidebar.html">Sidebar variant</a></li>
+        <li><a href="example/index.html">Example site</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Theme</h2>
+      <ul>
+        <li><a href="docs/theme.html">Tokens and palette</a></li>
+        <li><a href="https://kieranwood.ca/retoken/theme/">Retoken theme docs</a></li>
+      </ul>
+    </section>
+  </div>
+  <p class="footer-note">Breathe is a retemplate template: air, mint and deep green, one frond that sways. MIT licensed. No build step, no framework, one small script.</p>
+</footer>
+</body>
+</html>

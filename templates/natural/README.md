@@ -2,15 +2,16 @@
 
 Cream paper, ink, rust and moss. Fraunces for the headings, Source Sans 3
 for everything else, hairline rules, uppercase tracked kickers, and a faint
-green tint in the corner of the page. At night the paper gives way to soil:
+green tint in the corner of the page. The page opens on a herbarium plate:
+a mounted specimen with its label glued over one corner. At night the paper gives way to soil:
 a tiled SVG noise texture under everything, with cream and light-green text
 on top. The feature card is a pressed-flower specimen whose paper tag lifts
 when you hover. Part of [retemplate](../../README.md).
 
 ## Take and use
 
-Copy this folder. Keep the **install set** — `css/`, `js/theme.js`,
-`assets/`, this file — and delete the **showcase** — `index.html`,
+Copy this folder. Keep the **install set** (`css/`, `js/theme.js`,
+`assets/`, this file) and delete the **showcase**: `index.html`,
 `blogpost.html`, `forms.html`, `sidebar.html`, `docs/`, `example/`,
 `js/copy.js`. Or keep `example/`, a complete three-page plant-nursery site,
 and start from it.
@@ -38,7 +39,7 @@ Put this at the top of every page (adjust the paths for sub-folders):
 Then write HTML with the classes in `docs/components/` (open
 `docs/index.html` in a browser for the guided version).
 
-- **Browsers:** Baseline 2024 — `light-dark()`, `:has()`, popovers,
+- **Browsers:** Baseline 2024: `light-dark()`, `:has()`, popovers,
   `<details name>`, `color-mix()`, `mask-image`. No polyfills.
 - **Fonts:** Fraunces (display) and Source Sans 3 (body), both OFL, loaded
   from Google Fonts by the three `<link>`s above. Without them the fallback
@@ -53,20 +54,37 @@ Then write HTML with the classes in `docs/components/` (open
   `<a class="site-link" href="../../index.html">` back to the retemplate
   landing; nothing else points outside the folder.
 
-## Flare
+## Flare and variants
 
-Three optional pieces, documented on `docs/components/flare.html`:
-`.natural-note` (a page from a field notebook, ruled with a rust margin),
-`.natural-stamp` (a round nursery seal) and `.natural-sprig` (the
-page-break ornament as a free-standing block). Markup for them sits inside
-`<div class="natural-flare">` wrappers. Nothing animates continuously; the
-only motion is the tag on the feature card, which the global
-`prefers-reduced-motion` rule shortens to nothing.
+Everything Natural adds beyond the shared contract comes out of a herbarium
+cupboard, and all of it is documented on `docs/components/flare.html`:
+
+- `.natural-plate`, the signature: a mounted sheet held down by two strips
+  of tape, with a `.natural-label` glued over its corner carrying a
+  `.natural-binomial` (Latin name, authority in `.natural-auth`) and a
+  `.natural-data` list. It is the hero of the overview and of both example
+  entries.
+- `.natural-tag` (a paper tag with a punched hole), `.natural-note` (a page
+  from the collecting book, ruled with a rust margin), `.natural-stamp` (a
+  round nursery seal) and `.natural-sprig` (the page-break ornament as a
+  block). Markup for these sits inside `<div class="natural-flare">`
+  wrappers so a template swap can strip it.
+- Five variants of contract components, each one extra class on the
+  ordinary markup and documented on that component's page:
+  `.card.natural-specimen` (a mounted specimen with a label for a body),
+  `.accordion-group.natural-key` (a dichotomous key with numbered
+  couplets), `.table-wrap.natural-calendar` (a planting calendar, a dot per
+  month, with `.natural-legend`), `.fifty-fifty.natural-spread` (a plate
+  beside its notes) and `.btn.natural-stamp` (a rubber-stamp button).
+
+Nothing animates continuously; the only motion is the tag on the feature
+card, which the global `prefers-reduced-motion` rule shortens to nothing.
 
 The soil texture and the corner tint are `--natural-*` tokens layered on
-`<body>`. The texture is covered by a `light-dark(var(--pal-bg0),
-transparent)` gradient, so it shows only in the dark half; remove
-`background-image` from `body` in `global.css` to lose both.
+`<body>`. The texture is a fine, faint grain; it is covered by a
+`light-dark(var(--pal-bg0), transparent)` gradient, so it shows only in the
+dark half. Remove `background-image` from `body` in `global.css` to lose
+both.
 
 ## Swapping templates
 

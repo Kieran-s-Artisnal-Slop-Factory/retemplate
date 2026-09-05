@@ -1,0 +1,195 @@
+/*
+ * thick — design tokens.
+ *
+ * Retoken compatible (https://kieranwood.ca/retoken/theme/): the same two
+ * layers retoken uses.
+ *
+ *   1. `:root, .themed` maps roles onto palette slots. The colour mapping is
+ *      retoken's, verbatim; the shared values (type, spacing, shape, layout)
+ *      are this template's own.
+ *   2. The palette block fills the 19 `--pal-*` slots, each a light-dark()
+ *      pair, under retoken's named-palette selector. That block, exactly as
+ *      written, is what you paste into a retoken site — see docs/theme.html.
+ *
+ * `color-scheme: light dark` lets the browser pick the half of each pair;
+ * js/theme.js pins it on <html> when the visitor has chosen. Components in
+ * global.css reference the semantic tokens and the `--thick-*` tokens only —
+ * never a slot, never a literal.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 3px var(--pal-shadow-1);
+  --shadow-2: 0 4px 16px var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: 'Rubik', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: 'Rubik', 'Arial Black', 'Segoe UI', Roboto, sans-serif;
+  --font-weight-display: 900;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.6rem;
+  --font-size-2xl: 2.2rem;
+  --font-size-3xl: 3rem;
+  --font-size-hero: clamp(2.4rem, 1.5rem + 3vw, 4rem);
+  --line-height: 1.5;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape: one radius, 8px, on everything but the switch ─────────── */
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 68rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 4rem;
+}
+
+/* ── Palette: thick ─────────────────────────────────────────────────────
+ * Warm paper and ink by day, a warm near-black with off-white ink by night.
+ * The border slots ARE the ink: every outline is drawn in --pal-bg2, so the
+ * whole template swaps to off-white outlines after dark from one pair.
+ *
+ * The accent is the ink in the light half (yellow on white cannot carry a
+ * link) and the yellow in the dark half. The bright yellow itself is a fill,
+ * --thick-yellow below, and always carries black text. The --pal-yellow slot
+ * is a deep amber so warnings and syntax stay readable on paper.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='thick'],
+[data-theme='thick'] {
+  --pal-bg0: light-dark(#fffdf5, #141412);
+  --pal-bg0-soft: light-dark(#ffffff, #1c1c19);
+  --pal-bg1: light-dark(#f3efe3, #262620);
+  --pal-bg2: light-dark(#111111, #f5f1e6);
+  --pal-bg3: light-dark(#3d3a35, #c9c4b4);
+
+  --pal-fg: light-dark(#111111, #f5f1e6);
+  --pal-fg-muted: light-dark(#4d4842, #bdb7a6);
+  --pal-gray: light-dark(#7a746a, #8b8577);
+
+  --pal-red: light-dark(#c8264a, #ff7a95);
+  --pal-green: light-dark(#1d7d45, #62d68c);
+  --pal-yellow: light-dark(#8a5a00, #ffd400);
+  --pal-blue: light-dark(#1d55c4, #86adff);
+  --pal-purple: light-dark(#7238c4, #c7a3ff);
+  --pal-aqua: light-dark(#0b6f80, #5cd0e0);
+
+  --pal-accent: light-dark(#111111, #ffd400);
+  --pal-accent-strong: light-dark(#000000, #ffe25c);
+  --pal-on-accent: light-dark(#ffd400, #141412);
+
+  --pal-shadow-1: light-dark(rgb(17 17 17 / 0.16), rgb(0 0 0 / 0.5));
+  --pal-shadow-2: light-dark(rgb(17 17 17 / 0.28), rgb(0 0 0 / 0.7));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The outline weight, the two shadow offsets, the ink that draws both, the
+ * yellow and its two pastel neighbours, the dialog scrim, the footer's
+ * colours and the striped page break. Not part of the retoken paste-in.
+ */
+:root,
+.themed {
+  /* Outline and offsets. Every outline is --thick-line; every shadow is a
+   * solid block of --thick-ink at one of the two offsets, no blur. */
+  --thick-line: 3px;
+  --thick-offset: 4px;
+  --thick-offset-lg: 8px;
+  --thick-ink: light-dark(#111111, #f5f1e6);
+  --thick-shadow: var(--thick-offset) var(--thick-offset) 0 var(--thick-ink);
+  --thick-shadow-lg: var(--thick-offset-lg) var(--thick-offset-lg) 0 var(--thick-ink);
+  --thick-shadow-lift: calc(var(--thick-offset) + 2px) calc(var(--thick-offset) + 2px) 0 var(--thick-ink);
+  --thick-shadow-lg-lift: calc(var(--thick-offset-lg) + 4px) calc(var(--thick-offset-lg) + 4px) 0 var(--thick-ink);
+
+  /* The yellow: a fill, the same in both halves, always with black text. */
+  --thick-yellow: #ffd400;
+  --thick-yellow-deep: #f0bf00;
+  --thick-on-yellow: #111111;
+
+  /* Two pastels for secondary surfaces. Dusky after dark so off-white text
+   * still clears 4.5:1 on them. */
+  --thick-pink: light-dark(#ffd3df, #4a2632);
+  --thick-blue: light-dark(#d4e3ff, #223350);
+
+  /* What the page looks like behind an open dialog. */
+  --thick-scrim: light-dark(rgb(255 212 0 / 0.6), rgb(20 20 18 / 0.78));
+
+  /* The footer is a slab of ink in both halves. */
+  --thick-footer-bg: light-dark(#111111, #1c1c19);
+  --thick-footer-fg: light-dark(#e9e4d6, #bdb7a6);
+  --thick-footer-heading: #ffd400;
+  --thick-footer-rule: rgb(255 253 245 / 0.22);
+
+  /* The pile: the signature. A picture sits on a stack of outlined sheets,
+   * pink then blue, each on its own ink edge. Solid layers, no blur. */
+  --thick-pile: 3px 3px 0 var(--thick-ink), 9px 9px 0 var(--thick-pink), 12px 12px 0 var(--thick-ink), 18px 18px 0 var(--thick-blue), 21px 21px 0 var(--thick-ink);
+
+  /* The page break: yellow and pink stripes inside an outlined strip. */
+  --thick-stripes: repeating-linear-gradient(-45deg, var(--thick-yellow) 0 10px, var(--thick-pink) 10px 20px);
+}

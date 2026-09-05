@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-theme="modern-frosty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Switch · Modern Frosty</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Modern Frosty · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html" aria-current="page">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Switch</h1>
+  <p>A checkbox styled as a switch, for settings that are on or off. The input keeps every native behaviour; the class only draws the track and the thumb.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<figure class="example" data-snippet="switch">
+<label class="switch"><input type="checkbox" role="switch"><span>Email me updates</span></label>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="switch">&lt;label class="switch"&gt;&lt;input type="checkbox" role="switch"&gt;&lt;span&gt;Email me updates&lt;/span&gt;&lt;/label&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>States</h3>
+<figure class="example" data-snippet="switch-states">
+<div class="row">
+  <label class="switch"><input type="checkbox" role="switch" checked><span>On</span></label>
+  <label class="switch"><input type="checkbox" role="switch" disabled><span>Disabled</span></label>
+  <label class="switch"><input type="checkbox" role="switch" checked disabled><span>On, disabled</span></label>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="switch-states">&lt;div class="row"&gt;
+  &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch" checked&gt;&lt;span&gt;On&lt;/span&gt;&lt;/label&gt;
+  &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch" disabled&gt;&lt;span&gt;Disabled&lt;/span&gt;&lt;/label&gt;
+  &lt;label class="switch"&gt;&lt;input type="checkbox" role="switch" checked disabled&gt;&lt;span&gt;On, disabled&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == switch == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.switch</code></td><td>The label: inline flex, gap, pointer</td></tr>
+      <tr><td><code>input[role=switch]</code></td><td>The track, drawn with appearance: none</td></tr>
+      <tr><td><code>input::before</code></td><td>The thumb, moved with a transform when checked</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><code>role="switch"</code> tells assistive technology it is a switch, not a checkbox; the label text is its name.</li>
+<li>Keyboard: <kbd>Space</kbd> toggles; the focus ring is the accent colour.</li>
+<li>It submits like any checkbox. Give it a <code>name</code> inside a form.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="gallery.html">← Gallery and lightbox</a><a href="page-break.html">Page break →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

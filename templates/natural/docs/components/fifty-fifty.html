@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Fifty-fifty — Natural</title>
+  <title>Fifty-fifty · Natural</title>
   <link rel="icon" href="../../assets/favicon.svg">
   <script src="../../js/theme.js"></script>
   <link rel="stylesheet" href="../../css/theme.css">
@@ -113,6 +113,28 @@
     &lt;a class="btn btn-primary" href="#"&gt;Call to action&lt;/a&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>Spread</h3>
+<p>Natural's own variant. Add <code>natural-spread</code> and the block is an opening of the guide: the figure becomes a mounted sheet with a margin and a shadow, and the body loses its box and gains the notebook's rust margin line. It reverses like the ordinary block and stacks sheet-first on a phone.</p>
+<figure class="example" data-snippet="natural-spread">
+<section class="fifty-fifty natural-spread">
+  <figure><img src="../../assets/gallery-3.svg" alt="" width="800" height="600"></figure>
+  <div class="fifty-fifty-body">
+    <p class="kicker">Pl. II</p>
+    <h2>A rosette is a plan for winter</h2>
+    <p>The leaves lie flat to the ground where the frost is weakest and the light is theirs alone.</p>
+    <a class="btn" href="#">Read the entry</a>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-spread">&lt;section class="fifty-fifty natural-spread"&gt;
+  &lt;figure&gt;&lt;img src="../../assets/gallery-3.svg" alt="" width="800" height="600"&gt;&lt;/figure&gt;
+  &lt;div class="fifty-fifty-body"&gt;
+    &lt;p class="kicker"&gt;Pl. II&lt;/p&gt;
+    &lt;h2&gt;A rosette is a plan for winter&lt;/h2&gt;
+    &lt;p&gt;The leaves lie flat to the ground where the frost is weakest and the light is theirs alone.&lt;/p&gt;
+    &lt;a class="btn" href="#"&gt;Read the entry&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == fifty-fifty == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -120,6 +142,7 @@
       <tr><td><code>figure</code></td><td>The image half; the image covers it</td></tr>
       <tr><td><code>.fifty-fifty-body</code></td><td>The text half, padded</td></tr>
       <tr><td><code>.fifty-fifty-reverse</code></td><td>Moves the image to the right on wide screens</td></tr>
+      <tr><td><code>.natural-spread</code></td><td>Natural's variant: mounted figure, unboxed body with a rust margin (<code>global.css § flare</code>)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

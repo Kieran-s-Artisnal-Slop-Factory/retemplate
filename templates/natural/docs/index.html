@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Get started — Natural</title>
+  <title>Get started · Natural</title>
   <link rel="icon" href="../assets/favicon.svg">
   <script src="../js/theme.js"></script>
   <link rel="stylesheet" href="../css/theme.css">
@@ -77,10 +77,10 @@
     <div class="card-body">
       <h3 class="card-title">Keep: the install set</h3>
       <ul>
-        <li><code>css/theme.css</code> — the tokens, the palette, the soil texture and the sprig</li>
-        <li><code>css/global.css</code> — every component and layout</li>
-        <li><code>js/theme.js</code> — the light/dark toggle</li>
-        <li><code>assets/</code> — favicon and placeholder art (swap for your own)</li>
+        <li><code>css/theme.css</code>: the tokens, the palette, the soil texture and the sprig</li>
+        <li><code>css/global.css</code>: every component and layout</li>
+        <li><code>js/theme.js</code>: the light/dark toggle</li>
+        <li><code>assets/</code>: favicon and placeholder art (swap for your own)</li>
         <li><code>README.md</code></li>
       </ul>
     </div>
@@ -90,9 +90,9 @@
       <h3 class="card-title">Delete: the showcase</h3>
       <ul>
         <li><code>index.html</code>, <code>blogpost.html</code>, <code>forms.html</code>, <code>sidebar.html</code></li>
-        <li><code>docs/</code> — these pages</li>
-        <li><code>example/</code> — a three-page plant nursery, unless you want to start from it</li>
-        <li><code>js/copy.js</code> — only the docs use it</li>
+        <li><code>docs/</code>: these pages</li>
+        <li><code>example/</code>: a three-page plant nursery, unless you want to start from it</li>
+        <li><code>js/copy.js</code>: only the docs use it</li>
       </ul>
     </div>
   </article>
@@ -127,9 +127,9 @@
 <h2>Browsers</h2>
 <p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups, <code>color-mix()</code> and <code>mask-image</code>, with no polyfills.</p>
 <h2>Fonts</h2>
-<p>Fraunces (headings, brand, quotes) and Source Sans 3 (everything else) load from Google Fonts through the three <code>&lt;link&gt;</code>s in the head. Both are free under the SIL Open Font License. Without them — offline, or with the links removed — the fallback stacks in <code>theme.css</code> give you Palatino or Georgia and Segoe UI or Helvetica, and nothing breaks. To self-host: download both families, put the files in <code>fonts/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> (not <code>theme.css</code>, whose palette block gets pasted into other sites) and remove the links.</p>
+<p>Fraunces (headings, brand, quotes) and Source Sans 3 (everything else) load from Google Fonts through the three <code>&lt;link&gt;</code>s in the head. Both are free under the SIL Open Font License. Without them (offline, or with the links removed) the fallback stacks in <code>theme.css</code> give you Palatino or Georgia and Segoe UI or Helvetica, and nothing breaks. To self-host: download both families, put the files in <code>fonts/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> (not <code>theme.css</code>, whose palette block gets pasted into other sites) and remove the links.</p>
 <h2>Two lines to delete</h2>
-<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar — a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
+<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar, a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
 <p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>
 <h2>Using the theme in retoken</h2>
 <p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on. The soil, the sprig and the fonts stay here; they are this template's own tokens.</p>

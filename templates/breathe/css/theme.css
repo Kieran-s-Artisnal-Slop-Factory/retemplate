@@ -1,0 +1,167 @@
+/*
+ * breathe — design tokens.
+ *
+ * Retoken compatible: the same two layers retoken uses. The colour mapping
+ * under `:root, .themed` is retoken's verbatim; the shared values are this
+ * template's; the palette block is the retoken paste-in (docs/theme.html).
+ *
+ * Air, not paper. By day a white-green ground with a lot of room, sage
+ * panels, a mint that is never asked to carry text, and a deep leaf green
+ * for links and buttons. By night the ground is forest: a deep blue-green
+ * that never turns brown, with pale sage text and a pale lime accent.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 1px 2px var(--pal-shadow-1);
+  --shadow-2: 0 12px 32px -8px var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: Manrope, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: Manrope, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-weight-display: 500;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.6rem;
+  --font-size-2xl: 2.2rem;
+  --font-size-3xl: 2.8rem;
+  --font-size-hero: clamp(2.6rem, 1.4rem + 3.6vw, 4.4rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.75rem;
+  --space-6: 3.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 68rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.75rem;
+}
+
+/* ── Palette: breathe ───────────────────────────────────────────────────
+ * White-green ground, white panels, sage for raised surfaces and borders,
+ * dark leaf ink, and a deep green accent that clears 4.5:1 on the ground.
+ * By night: deep forest (blue-green, never brown), pale sage text, and a
+ * pale lime accent with forest text on it.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='breathe'],
+[data-theme='breathe'] {
+  --pal-bg0: light-dark(#f3f7f0, #15231b);
+  --pal-bg0-soft: light-dark(#ffffff, #1c2c22);
+  --pal-bg1: light-dark(#e6eee1, #26392c);
+  --pal-bg2: light-dark(#cfdcc9, #3a5041);
+  --pal-bg3: light-dark(#a3b89d, #57705d);
+
+  --pal-fg: light-dark(#1e2b23, #e6ece0);
+  --pal-fg-muted: light-dark(#586a5d, #a9baa5);
+  --pal-gray: light-dark(#83958a, #7e9282);
+
+  --pal-red: light-dark(#b0432f, #e8957f);
+  --pal-green: light-dark(#2e7a4a, #8fd0a0);
+  --pal-yellow: light-dark(#8f6400, #dfbe6c);
+  --pal-blue: light-dark(#2f6a95, #8fc0e2);
+  --pal-purple: light-dark(#6a4f95, #b9a5dc);
+  --pal-aqua: light-dark(#227a76, #86ccc6);
+
+  --pal-accent: light-dark(#2c6b46, #c2d9a4);
+  --pal-accent-strong: light-dark(#1f5234, #d6e6bf);
+  --pal-on-accent: light-dark(#ffffff, #15231b);
+
+  --pal-shadow-1: light-dark(rgb(30 43 35 / 0.06), rgb(0 0 0 / 0.35));
+  --pal-shadow-2: light-dark(rgb(30 43 35 / 0.16), rgb(0 0 0 / 0.55));
+}
+
+/* ── Template tokens ────────────────────────────────────────────────────
+ * The mint (a surface, never a text colour), the sage wash behind the
+ * hero, the accent face used for one italic word, the leaf cut, and the
+ * breeze: how far the frond sways and how long one breath takes. Not part
+ * of the retoken paste-in.
+ */
+:root,
+.themed {
+  --breathe-mint: light-dark(#c9ead2, #2f5a44);
+  --breathe-mint-deep: light-dark(#a8d9b8, #3f7457);
+  --breathe-mint-ink: light-dark(#1e3a2a, #e6ece0);
+  --breathe-sage-wash: radial-gradient(60rem 32rem at 85% -10%, light-dark(rgb(201 234 210 / 0.55), rgb(47 90 68 / 0.35)), transparent 70%);
+  --breathe-stem: light-dark(#5f8a6b, #8fb597);
+  --breathe-leaf: light-dark(#4f9a68, #7fc191);
+  --breathe-leaf-light: light-dark(#8fcaa1, #a9d9b6);
+
+  /* The accent face: one italic word in a heading, nothing else. */
+  --breathe-font-accent: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+
+  /* The leaf cut: one rounded corner pair, opposite corners sharp. */
+  --breathe-leaf-radius: 46% 8px 46% 8px / 46% 8px 46% 8px;
+
+  /* The breeze. One breath is one full sway; the leaves lag the stem. */
+  --breathe-sway: 2.4deg;
+  --breathe-breath: 7s;
+}
