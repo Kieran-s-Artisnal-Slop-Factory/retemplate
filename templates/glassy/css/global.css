@@ -1816,8 +1816,8 @@ hr.page-break::after {
 
 /* The sheet hero: one deep pane of glass, text only, standing over the wave
  * strip that follows it. The strip is pulled up under the sheet's lower edge. */
-/* The sheet fills the width and most of the viewport, cut at an angle at
- * the top left and the bottom right (--glassy-cut in theme.css), so it
+/* The sheet fills the width as a wide trapezoid, its left edge leaning
+ * one way and its right edge the other (--glassy-cut in theme.css), so it
  * reads as a pane set into the page rather than a card sitting on it. */
 .hero.glassy-sheet {
   position: relative;
@@ -1825,8 +1825,8 @@ hr.page-break::after {
   display: grid;
   place-items: center;
   text-align: center;
-  min-height: min(70vh, 42rem);
-  padding: clamp(var(--space-6), 8vw, 6rem) clamp(var(--space-5), 12vw, 10rem);
+  min-height: min(46vh, 26rem);
+  padding: clamp(var(--space-5), 4vw, 3rem) clamp(var(--space-5), 14vw, 12rem);
   background: var(--glassy-glass-strong);
   border: 1px solid var(--glassy-edge-strong);
   backdrop-filter: saturate(1.6) blur(var(--glassy-blur-deep));
@@ -1839,9 +1839,13 @@ hr.page-break::after {
 }
 
 .hero.glassy-sheet .stack {
-  gap: var(--space-4);
+  gap: var(--space-3);
   align-items: center;
-  max-width: 48rem;
+  max-width: 44rem;
+}
+
+.hero.glassy-sheet h1 {
+  font-size: clamp(2rem, 1.2rem + 2.8vw, 3.4rem);
 }
 
 .hero.glassy-sheet .stack > p {
@@ -2161,8 +2165,17 @@ hr.page-break::after {
 }
 
 .hero.hero-image {
-  display: block;
-  padding-block: var(--space-4);
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-image > .stack {
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .hero.hero-image > img,
@@ -2173,8 +2186,19 @@ hr.page-break::after {
 }
 
 .hero.hero-image > img {
-  aspect-ratio: 21 / 9;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero-image {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+  .hero.hero-image.hero-image-half {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 /* The orbit: three glass discs circle the headline on a hairline ring. The
@@ -2291,17 +2315,24 @@ hr.page-break::after {
 }
 
 .glassy-crack::before {
-  clip-path: polygon(0 0, 20% 0, 0 45%);
+  clip-path: polygon(0 0, 12% 0, 0 100%);
   animation-name: glassy-fall-left;
 }
 
 .glassy-crack::after {
-  clip-path: polygon(100% 55%, 100% 100%, 80% 100%);
+  clip-path: polygon(100% 0, 100% 100%, 88% 100%);
   animation-name: glassy-fall-right;
 }
 
+/* Once cut, the sheet stays cut: the class holds the shape outside the
+ * animation too, and the crack lines settle to a faint trace along the
+ * new edges rather than vanishing. */
+.glassy-crack > .hero.glassy-sheet {
+  clip-path: var(--glassy-cut);
+}
+
 @keyframes glassy-crack-cut {
-  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0); }
+  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
   to { clip-path: var(--glassy-cut); }
 }
 
@@ -2316,7 +2347,7 @@ hr.page-break::after {
 }
 
 @keyframes glassy-crack-fade {
-  to { opacity: 0; }
+  to { opacity: 0.35; }
 }
 
 @keyframes glassy-fall-left {

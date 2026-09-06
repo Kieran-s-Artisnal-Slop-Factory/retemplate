@@ -72,6 +72,13 @@ Before beginning make sure the VERSION is up to date, and create a file called `
   - [x] Termy; a terminal template: dark green phosphor screen by day, black on white by night, JetBrains Mono, no corners, prompts, brackets, cursor, and a configurable CRT overlay (`body.termy-crt`, `--termy-crt-strength`, `--termy-crt-flicker`)
     - [x] [reference](https://www.whichai.dev/without-design-skill/glm-5.3-flash/5)
   - [x] Every template: `.hero.hero-text` (words only) and `.hero.hero-image` (picture only) contract variants on `docs/components/hero.html`
+- [x] Fourth batch (2026-09-06, owner's notes)
+  - [x] Termy: dark scheme is green on true black (was black on white)
+  - [x] Breathe: the ripple was stacked behind the page (z-index without isolation); now isolated, thicker, stronger
+  - [x] Allegory: the tide replaced by the wings, a bordered card with the ornament (wings by day, horns by night) beating behind the words
+  - [x] Natural: the canopy pseudo-elements inherited the plate's tape size; every box property reset, blur and strength raised
+  - [x] Glassy: the sheet is a wide trapezoid (12% lean, under half the viewport tall); the crack keeps the cut shape and a trace of the cracks
+  - [x] Every template: `.hero.hero-image` is picture led (25/75), `.hero-image-half` for 50/50
 - [x] Animated card variant in every template (2026-09-05), on each `docs/components/cards.html`: Plain's sheen, Neumorphic's float, Brutal News' flash, Glassy's glint, Neon's pulse, Natural's swing, Detailed's marquee lights, Gothic's ember, Allegory's turn, ExtraExtra's flutter, Breathe's bloom, Modern Frosty's thaw, Thick's hop, Cattle's smoulder
 
 ## For human

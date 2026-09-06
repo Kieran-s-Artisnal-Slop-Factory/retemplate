@@ -146,15 +146,31 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>Image only</h3>
-<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<h3>Image led</h3>
+<p>A hero that gives the picture most of the room: the words take one column and the image three, a 25/75 split at desktop widths that stacks on a phone. Add <code>hero-image-half</code> as well for an even 50/50. Every template carries this variant with the same classes.</p>
 <figure class="example" data-snippet="hero-image">
 <section class="hero hero-image">
-  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+  <div class="stack">
+    <p class="kicker">Picture led</p>
+    <h1>The picture takes three quarters.</h1>
+    <p>Words in the first column, the picture in the rest.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+  <img src="../../assets/hero.svg" alt="" width="1200" height="750">
 </section>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
-  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Picture led&lt;/p&gt;
+    &lt;h1&gt;The picture takes three quarters.&lt;/h1&gt;
+    &lt;p&gt;Words in the first column, the picture in the rest.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;img src="../../assets/hero.svg" alt="" width="1200" height="750"&gt;
 &lt;/section&gt;</code></pre></div>
 <h3>The radiance</h3>
 <p>The hero is framed in a doubled band-colour border with a hairline set outside it and a small diamond at two corners, and a light pulses through the frame: it swells outward over three seconds, brightening the heading with it, and settles. In the light scheme the frame and the light are gold; in the dark, red, because both are the one band token. Add <code>allegory-radiant</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
@@ -196,44 +212,32 @@
     &lt;/section&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>The tide</h3>
-<p>The two faces rise and fall against each other: the ascent drifts up as the descent sinks, then they trade, on a slow ten-second swell. The radiance above the halo and the flame below the horn brighten as each face reaches its height. Add <code>allegory-tide</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
-<figure class="example" data-snippet="allegory-tide">
-<section class="hero allegory-split allegory-tide">
+<h3>The wings</h3>
+<p>The hero becomes a card: a bordered panel in the band colour with the template's ornament spread large behind the words. By day that is the wings in gold, beating slowly from the shoulders; by night it is the horns in red, since the ornament token changes with the scheme. The words sit still in front. Add <code>allegory-winged</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="allegory-winged">
+<section class="hero allegory-split allegory-winged">
+  <div class="allegory-flare allegory-wingspan" aria-hidden="true"></div>
   <div class="stack">
-    <p class="kicker">Two faces, one tide</p>
-    <h1>One rises as <em>the other falls.</em></h1>
-  </div>
-  <div class="allegory-diptych">
-    <section class="allegory-halo">
-      <h2 class="allegory-band">The ascent</h2>
-      <p>Drifts up a little and brightens, then gives way.</p>
+    <p class="kicker">Under the wings</p>
+    <h1>Held up, <em>either way.</em></h1>
+    <p>By day a pair of wings spreads behind the words in gold and beats, slowly; by night the same shape is the horns in red. It is the template's own ornament, scaled to the card.</p>
+    <div class="row">
       <a class="btn allegory-vow" href="../../example/ascent.html">Read the ascent</a>
-    </section>
-    <section class="allegory-horn">
-      <h2 class="allegory-band">The descent</h2>
-      <p>Sinks as the other rises, and glows when it is low.</p>
       <a class="btn allegory-vow" href="../../example/descent.html">Read the descent</a>
-    </section>
+    </div>
   </div>
 </section>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-tide">&lt;section class="hero allegory-split allegory-tide"&gt;
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-winged">&lt;section class="hero allegory-split allegory-winged"&gt;
+  &lt;div class="allegory-flare allegory-wingspan" aria-hidden="true"&gt;&lt;/div&gt;
   &lt;div class="stack"&gt;
-    &lt;p class="kicker"&gt;Two faces, one tide&lt;/p&gt;
-    &lt;h1&gt;One rises as &lt;em&gt;the other falls.&lt;/em&gt;&lt;/h1&gt;
-  &lt;/div&gt;
-  &lt;div class="allegory-diptych"&gt;
-    &lt;section class="allegory-halo"&gt;
-      &lt;h2 class="allegory-band"&gt;The ascent&lt;/h2&gt;
-      &lt;p&gt;Drifts up a little and brightens, then gives way.&lt;/p&gt;
+    &lt;p class="kicker"&gt;Under the wings&lt;/p&gt;
+    &lt;h1&gt;Held up, &lt;em&gt;either way.&lt;/em&gt;&lt;/h1&gt;
+    &lt;p&gt;By day a pair of wings spreads behind the words in gold and beats, slowly; by night the same shape is the horns in red. It is the template's own ornament, scaled to the card.&lt;/p&gt;
+    &lt;div class="row"&gt;
       &lt;a class="btn allegory-vow" href="../../example/ascent.html"&gt;Read the ascent&lt;/a&gt;
-    &lt;/section&gt;
-    &lt;section class="allegory-horn"&gt;
-      &lt;h2 class="allegory-band"&gt;The descent&lt;/h2&gt;
-      &lt;p&gt;Sinks as the other rises, and glows when it is low.&lt;/p&gt;
       &lt;a class="btn allegory-vow" href="../../example/descent.html"&gt;Read the descent&lt;/a&gt;
-    &lt;/section&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
@@ -242,10 +246,11 @@
       <tr><td><code>.hero</code></td><td>The opening section: a grid of a text stack and, in most templates, a picture or a piece of flare</td></tr>
       <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
-      <tr><td><code>.hero.allegory-split.allegory-tide</code></td><td>The faces of the diptych rise and fall against each other</td></tr>
       <tr><td><code>.hero.allegory-split.allegory-radiant</code></td><td>The framed hero with a pulsing light in the band colour: gold by day, red by night</td></tr>
       <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
-      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture led: words one column, picture three; with <code>.hero-image-half</code> an even split (every template)</td></tr>
+      <tr><td><code>.hero.allegory-split.allegory-winged</code></td><td>The card with the ornament behind its words</td></tr>
+      <tr><td><code>.allegory-wingspan</code></td><td>The wings (or horns) as a mask in the band colour, beating</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

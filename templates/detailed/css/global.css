@@ -2179,8 +2179,17 @@ hr.page-break::after {
 }
 
 .hero.hero-image {
-  display: block;
-  padding-block: var(--space-4);
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-image > .stack {
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .hero.hero-image > img,
@@ -2191,8 +2200,19 @@ hr.page-break::after {
 }
 
 .hero.hero-image > img {
-  aspect-ratio: 21 / 9;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero-image {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+  .hero.hero-image.hero-image-half {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 /* The curtain: two pleated panels part from the centre and slide off; the

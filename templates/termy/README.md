@@ -2,8 +2,8 @@
 
 A terminal. By day a dark green screen: near-black green ground, phosphor
 green text and accent, a glow on the letters and scanlines over the page.
-By night the same terminal printed on paper: black on white, deep green
-accent, no glow. JetBrains Mono for everything, no corners anywhere,
+By night the same phosphor on true black, the room lights off, the glow
+a little stronger. JetBrains Mono for everything, no corners anywhere,
 brackets around every button, a prompt before every kicker and a hash
 before every heading, a cursor blinking after the hero. The CRT overlay is
 one class on `<body>` and two tokens, so it can be turned down, or off.
@@ -75,29 +75,29 @@ Colours carry over; fonts, radii and spacing are set in the editor.
 ```css
 :root[data-theme='termy'],
 [data-theme='termy'] {
-  --pal-bg0: light-dark(#0a1f13, #ffffff);
-  --pal-bg0-soft: light-dark(#0d2618, #fafafa);
-  --pal-bg1: light-dark(#12301f, #f0f0f0);
-  --pal-bg2: light-dark(#1c4530, #d6d6d6);
-  --pal-bg3: light-dark(#2f6a4a, #a8a8a8);
+  --pal-bg0: light-dark(#0a1f13, #000000);
+  --pal-bg0-soft: light-dark(#0d2618, #060a07);
+  --pal-bg1: light-dark(#12301f, #0d150f);
+  --pal-bg2: light-dark(#1c4530, #1b2b20);
+  --pal-bg3: light-dark(#2f6a4a, #2e5a3f);
 
-  --pal-fg: light-dark(#c9f5d3, #111111);
-  --pal-fg-muted: light-dark(#7fcf9a, #555555);
-  --pal-gray: light-dark(#5a9a72, #8a8a8a);
+  --pal-fg: light-dark(#c9f5d3, #baffcc);
+  --pal-fg-muted: light-dark(#7fcf9a, #6fd38c);
+  --pal-gray: light-dark(#5a9a72, #4f8a63);
 
-  --pal-red: light-dark(#ff7b72, #b3001b);
-  --pal-green: light-dark(#5cff8a, #0b6e2a);
-  --pal-yellow: light-dark(#ffd75e, #7a5200);
-  --pal-blue: light-dark(#6ec6ff, #0b4fa8);
-  --pal-purple: light-dark(#d3a6ff, #6b2fb3);
-  --pal-aqua: light-dark(#5ff2e0, #007a70);
+  --pal-red: light-dark(#ff7b72, #ff6e66);
+  --pal-green: light-dark(#5cff8a, #4dff80);
+  --pal-yellow: light-dark(#ffd75e, #ffd24d);
+  --pal-blue: light-dark(#6ec6ff, #5fbfff);
+  --pal-purple: light-dark(#d3a6ff, #cf9dff);
+  --pal-aqua: light-dark(#5ff2e0, #4ff0dc);
 
-  --pal-accent: light-dark(#5cff8a, #0b6e2a);
-  --pal-accent-strong: light-dark(#9dffb8, #084f1f);
-  --pal-on-accent: light-dark(#0a1f13, #ffffff);
+  --pal-accent: light-dark(#5cff8a, #4dff80);
+  --pal-accent-strong: light-dark(#9dffb8, #8dffae);
+  --pal-on-accent: light-dark(#0a1f13, #000000);
 
-  --pal-shadow-1: light-dark(rgb(92 255 138 / 0.35), rgb(17 17 17 / 0.2));
-  --pal-shadow-2: light-dark(rgb(92 255 138 / 0.55), rgb(17 17 17 / 0.85));
+  --pal-shadow-1: light-dark(rgb(92 255 138 / 0.35), rgb(77 255 128 / 0.35));
+  --pal-shadow-2: light-dark(rgb(92 255 138 / 0.55), rgb(77 255 128 / 0.6));
 }
 ```
 

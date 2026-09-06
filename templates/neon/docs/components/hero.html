@@ -120,15 +120,31 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>Image only</h3>
-<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<h3>Image led</h3>
+<p>A hero that gives the picture most of the room: the words take one column and the image three, a 25/75 split at desktop widths that stacks on a phone. Add <code>hero-image-half</code> as well for an even 50/50. Every template carries this variant with the same classes.</p>
 <figure class="example" data-snippet="hero-image">
 <section class="hero hero-image">
-  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+  <div class="stack">
+    <p class="kicker">Picture led</p>
+    <h1>The picture takes three quarters.</h1>
+    <p>Words in the first column, the picture in the rest.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+  <img src="../../assets/hero.svg" alt="" width="1200" height="750">
 </section>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
-  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Picture led&lt;/p&gt;
+    &lt;h1&gt;The picture takes three quarters.&lt;/h1&gt;
+    &lt;p&gt;Words in the first column, the picture in the rest.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;img src="../../assets/hero.svg" alt="" width="1200" height="750"&gt;
 &lt;/section&gt;</code></pre></div>
 <h3>The chase</h3>
 <p>A run of lights chases around the edge of the stage: a dashed cyan line on an inline SVG, its dashes moving along the outline like bulbs around a sign. The headline lights up behind it. Add <code>neon-chase</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
@@ -186,7 +202,7 @@
       <tr><td><code>.neon-chase-lights</code></td><td>The inline SVG; its rect is one dashed stroke on a loop</td></tr>
       <tr><td><code>.hero.neon-stage.neon-switch-on</code></td><td>Each .neon-text word in the heading catches in turn</td></tr>
       <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
-      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture led: words one column, picture three; with <code>.hero-image-half</code> an even split (every template)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

@@ -121,15 +121,31 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>Image only</h3>
-<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<h3>Image led</h3>
+<p>A hero that gives the picture most of the room: the words take one column and the image three, a 25/75 split at desktop widths that stacks on a phone. Add <code>hero-image-half</code> as well for an even 50/50. Every template carries this variant with the same classes.</p>
 <figure class="example" data-snippet="hero-image">
 <section class="hero hero-image">
-  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+  <div class="stack">
+    <p class="kicker">Picture led</p>
+    <h1>The picture takes three quarters.</h1>
+    <p>Words in the first column, the picture in the rest.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+  <img src="../../assets/hero.svg" alt="" width="1200" height="750">
 </section>
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
-  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Picture led&lt;/p&gt;
+    &lt;h1&gt;The picture takes three quarters.&lt;/h1&gt;
+    &lt;p&gt;Words in the first column, the picture in the rest.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;img src="../../assets/hero.svg" alt="" width="1200" height="750"&gt;
 &lt;/section&gt;</code></pre></div>
 <h3>The orbit</h3>
 <p>Three discs of glass circle the headline on a hairline ring, one turn every forty seconds, staying upright as they go. The text sits in the middle; the discs pass behind it and in front of the orbs. Add <code>glassy-orbit</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
@@ -160,18 +176,18 @@
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h3>The crack</h3>
-<p>The full-width sheet starts as a plain rectangle. Two cracks draw in from the corners that the default hero cuts, the pane shudders, and the corners break off and fall, leaving the cut shape behind. The falling pieces are pseudo-elements of a wrapper, so the hero's own clip does not take them. Wrap the hero in <code>glassy-crack</code>; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<p>The full-width sheet starts as a plain rectangle. Two cracks draw down its sides where the default hero is cut, the pane shudders, and the slivers break off and fall. The sheet keeps the shape the cracks made, and a faint trace of each crack stays along the new edge. The falling pieces are pseudo-elements of a wrapper, so the hero's own clip does not take them. Wrap the hero in <code>glassy-crack</code>; the global <code>prefers-reduced-motion</code> rule stops it.</p>
 <figure class="example" data-snippet="glassy-crack">
 <div class="glassy-flare glassy-crack">
   <svg class="glassy-crack-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-    <path pathLength="1" d="M0 45 L5 42 L8 34 L13 29 L16 18 L20 0"/>
-    <path pathLength="1" d="M100 55 L95 59 L92 66 L87 71 L84 82 L80 100"/>
+    <path pathLength="1" d="M0 100 L3 86 L5 64 L8 44 L10 22 L12 0"/>
+    <path pathLength="1" d="M100 0 L97 14 L95 36 L92 56 L90 78 L88 100"/>
   </svg>
   <section class="hero glassy-sheet">
     <div class="stack">
       <p class="kicker">Under stress</p>
       <h1>Cracked to shape.</h1>
-      <p>The sheet begins whole. A crack runs in from each cut corner, the pane shudders, and the two corners fall away and dissolve. What is left is the shape the default hero has. It plays once.</p>
+      <p>The sheet begins whole. A crack runs down each side, the pane shudders, the two slivers fall away, and the sheet keeps the shape the cracks made: the default hero's trapezoid. It plays once.</p>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
         <a class="btn btn-lg glassy-ghost" href="../../example/index.html">See the studio site</a>
@@ -182,14 +198,14 @@
 </figure>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-crack">&lt;div class="glassy-flare glassy-crack"&gt;
   &lt;svg class="glassy-crack-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"&gt;
-    &lt;path pathLength="1" d="M0 45 L5 42 L8 34 L13 29 L16 18 L20 0"/&gt;
-    &lt;path pathLength="1" d="M100 55 L95 59 L92 66 L87 71 L84 82 L80 100"/&gt;
+    &lt;path pathLength="1" d="M0 100 L3 86 L5 64 L8 44 L10 22 L12 0"/&gt;
+    &lt;path pathLength="1" d="M100 0 L97 14 L95 36 L92 56 L90 78 L88 100"/&gt;
   &lt;/svg&gt;
   &lt;section class="hero glassy-sheet"&gt;
     &lt;div class="stack"&gt;
       &lt;p class="kicker"&gt;Under stress&lt;/p&gt;
       &lt;h1&gt;Cracked to shape.&lt;/h1&gt;
-      &lt;p&gt;The sheet begins whole. A crack runs in from each cut corner, the pane shudders, and the two corners fall away and dissolve. What is left is the shape the default hero has. It plays once.&lt;/p&gt;
+      &lt;p&gt;The sheet begins whole. A crack runs down each side, the pane shudders, the two slivers fall away, and the sheet keeps the shape the cracks made: the default hero's trapezoid. It plays once.&lt;/p&gt;
       &lt;div class="row"&gt;
         &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
         &lt;a class="btn btn-lg glassy-ghost" href="../../example/index.html"&gt;See the studio site&lt;/a&gt;
@@ -211,7 +227,7 @@
       <tr><td><code>.glassy-crack-lines</code></td><td>The inline SVG whose two paths are the cracks</td></tr>
       <tr><td><code>.glassy-crack &gt; .hero.glassy-sheet</code></td><td>The sheet, cut to shape when the cracks meet the edge</td></tr>
       <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
-      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture led: words one column, picture three; with <code>.hero-image-half</code> an even split (every template)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

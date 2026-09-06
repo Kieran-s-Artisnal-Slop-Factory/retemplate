@@ -2171,8 +2171,17 @@ hr.page-break::after {
 }
 
 .hero.hero-image {
-  display: block;
-  padding-block: var(--space-4);
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-image > .stack {
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .hero.hero-image > img,
@@ -2183,8 +2192,19 @@ hr.page-break::after {
 }
 
 .hero.hero-image > img {
-  aspect-ratio: 21 / 9;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero-image {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+  .hero.hero-image.hero-image-half {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 /* The seeds: six pale discs drift up through the hero on their own delays
@@ -2228,6 +2248,7 @@ hr.page-break::after {
 .hero.breathe-ripple {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .breathe-rings {
@@ -2245,8 +2266,8 @@ hr.page-break::after {
   height: 10rem;
   margin: -5rem 0 0 -5rem;
   border-radius: 50%;
-  border: 2px solid var(--breathe-mint-deep);
-  background: var(--breathe-mint);
+  border: 4px solid var(--breathe-leaf);
+  background: var(--breathe-mint-deep);
   opacity: 0;
   animation: breathe-ripple 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
@@ -2256,8 +2277,8 @@ hr.page-break::after {
 
 @keyframes breathe-ripple {
   0% { transform: scale(0.2); opacity: 0; }
-  20% { opacity: 0.55; }
-  70% { opacity: 0.35; }
+  20% { opacity: 0.9; }
+  70% { opacity: 0.6; }
   100% { transform: scale(4.5); opacity: 0; }
 }
 

@@ -165,29 +165,29 @@
 <p>Copy the block below into your retoken site's <code>theme.css</code> after the existing palettes, then select it with <code>&lt;html data-theme="termy"&gt;</code> or pick it in the theme editor, which discovers palettes from the stylesheet. Colours travel; fonts, radii and spacing do not; set those in the editor.</p>
 <div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="palette">:root[data-theme='termy'],
 [data-theme='termy'] {
-  --pal-bg0: light-dark(#0a1f13, #ffffff);
-  --pal-bg0-soft: light-dark(#0d2618, #fafafa);
-  --pal-bg1: light-dark(#12301f, #f0f0f0);
-  --pal-bg2: light-dark(#1c4530, #d6d6d6);
-  --pal-bg3: light-dark(#2f6a4a, #a8a8a8);
+  --pal-bg0: light-dark(#0a1f13, #000000);
+  --pal-bg0-soft: light-dark(#0d2618, #060a07);
+  --pal-bg1: light-dark(#12301f, #0d150f);
+  --pal-bg2: light-dark(#1c4530, #1b2b20);
+  --pal-bg3: light-dark(#2f6a4a, #2e5a3f);
 
-  --pal-fg: light-dark(#c9f5d3, #111111);
-  --pal-fg-muted: light-dark(#7fcf9a, #555555);
-  --pal-gray: light-dark(#5a9a72, #8a8a8a);
+  --pal-fg: light-dark(#c9f5d3, #baffcc);
+  --pal-fg-muted: light-dark(#7fcf9a, #6fd38c);
+  --pal-gray: light-dark(#5a9a72, #4f8a63);
 
-  --pal-red: light-dark(#ff7b72, #b3001b);
-  --pal-green: light-dark(#5cff8a, #0b6e2a);
-  --pal-yellow: light-dark(#ffd75e, #7a5200);
-  --pal-blue: light-dark(#6ec6ff, #0b4fa8);
-  --pal-purple: light-dark(#d3a6ff, #6b2fb3);
-  --pal-aqua: light-dark(#5ff2e0, #007a70);
+  --pal-red: light-dark(#ff7b72, #ff6e66);
+  --pal-green: light-dark(#5cff8a, #4dff80);
+  --pal-yellow: light-dark(#ffd75e, #ffd24d);
+  --pal-blue: light-dark(#6ec6ff, #5fbfff);
+  --pal-purple: light-dark(#d3a6ff, #cf9dff);
+  --pal-aqua: light-dark(#5ff2e0, #4ff0dc);
 
-  --pal-accent: light-dark(#5cff8a, #0b6e2a);
-  --pal-accent-strong: light-dark(#9dffb8, #084f1f);
-  --pal-on-accent: light-dark(#0a1f13, #ffffff);
+  --pal-accent: light-dark(#5cff8a, #4dff80);
+  --pal-accent-strong: light-dark(#9dffb8, #8dffae);
+  --pal-on-accent: light-dark(#0a1f13, #000000);
 
-  --pal-shadow-1: light-dark(rgb(92 255 138 / 0.35), rgb(17 17 17 / 0.2));
-  --pal-shadow-2: light-dark(rgb(92 255 138 / 0.55), rgb(17 17 17 / 0.85));
+  --pal-shadow-1: light-dark(rgb(92 255 138 / 0.35), rgb(77 255 128 / 0.35));
+  --pal-shadow-2: light-dark(rgb(92 255 138 / 0.55), rgb(77 255 128 / 0.6));
 }</code></pre></div>
 <p>Two things the block deliberately does not do: it never declares a bare <code>:root</code> (pasted into retoken that would override the site's default palette), and it never declares fonts (their <code>url()</code>s would break outside this folder). That is why every page here sets <code>data-theme="termy"</code> on <code>&lt;html&gt;</code>.</p>
 <h2>Template-only tokens</h2>

@@ -2107,8 +2107,17 @@ h3.allegory-band { font-size: var(--font-size-xl); }
 }
 
 .hero.hero-image {
-  display: block;
-  padding-block: var(--space-4);
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-image > .stack {
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .hero.hero-image > img,
@@ -2119,8 +2128,19 @@ h3.allegory-band { font-size: var(--font-size-xl); }
 }
 
 .hero.hero-image > img {
-  aspect-ratio: 21 / 9;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero-image {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+  .hero.hero-image.hero-image-half {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 /* The radiance: a doubled border in the band colour with a hairline set
@@ -2169,23 +2189,50 @@ h3.allegory-band { font-size: var(--font-size-xl); }
   50% { text-shadow: 0 0 24px var(--allegory-band); }
 }
 
-/* The tide: the two faces drift against each other and glow at the turn. */
-.hero.allegory-tide .allegory-diptych > * {
-  animation: allegory-tide-up 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+/* The wings: the hero is a bordered card and the ornament (wings by day,
+ * horns by night) spreads large behind the words in the band colour,
+ * beating from the shoulders. The mask token already swaps with the
+ * scheme, so one rule serves both faces. */
+.hero.allegory-split.allegory-winged {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--allegory-band);
+  outline: 1px solid var(--allegory-band);
+  outline-offset: 5px;
+  background: var(--surface-color);
+  text-align: center;
+  grid-template-columns: minmax(0, 1fr);
 }
 
-.hero.allegory-tide .allegory-diptych > :last-child {
-  animation-name: allegory-tide-down;
+.hero.allegory-split.allegory-winged > .stack {
+  align-items: center;
+  max-width: 44rem;
+  margin-inline: auto;
 }
 
-@keyframes allegory-tide-up {
-  0%, 100% { transform: translateY(0.6rem); filter: brightness(0.96); }
-  50% { transform: translateY(-0.6rem); filter: brightness(1.06); }
+.hero.allegory-split.allegory-winged .row {
+  justify-content: center;
 }
 
-@keyframes allegory-tide-down {
-  0%, 100% { transform: translateY(-0.6rem); filter: brightness(1.06); }
-  50% { transform: translateY(0.6rem); filter: brightness(0.96); }
+.allegory-wingspan {
+  position: absolute;
+  inset: 8% -6% auto;
+  height: 72%;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--allegory-band);
+  opacity: 0.32;
+  mask: var(--allegory-ornament) center / 100% 100% no-repeat;
+  -webkit-mask: var(--allegory-ornament) center / 100% 100% no-repeat;
+  transform-origin: 50% 50%;
+  animation: allegory-beat 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes allegory-beat {
+  0%, 100% { transform: scaleX(1) translateY(0); opacity: 0.32; }
+  50% { transform: scaleX(1.06) translateY(-3%); opacity: 0.42; }
 }
 
 /* == card variants (animated) == */

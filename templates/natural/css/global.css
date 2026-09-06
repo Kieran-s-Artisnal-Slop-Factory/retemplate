@@ -2265,8 +2265,17 @@ hr.page-break::after {
 }
 
 .hero.hero-image {
-  display: block;
-  padding-block: var(--space-4);
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-image > .stack {
+  justify-self: stretch;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .hero.hero-image > img,
@@ -2277,8 +2286,19 @@ hr.page-break::after {
 }
 
 .hero.hero-image > img {
-  aspect-ratio: 21 / 9;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero-image {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: var(--space-6);
+  }
+  .hero.hero-image.hero-image-half {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
 }
 
 /* The growth: a stem draws its length, then each leaf opens from the stalk
@@ -2330,11 +2350,22 @@ hr.page-break::after {
   overflow: hidden;
 }
 
+/* The plate's own ::before and ::after draw its tape; here they are
+ * re-purposed, so every box property is reset explicitly. */
 .hero.natural-dapple .natural-plate::before,
 .hero.natural-dapple .natural-plate::after {
   content: "";
   position: absolute;
   inset: -30%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  clip-path: none;
+  transform: none;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -2343,8 +2374,8 @@ hr.page-break::after {
     radial-gradient(28% 18% at 30% 35%, var(--natural-moss) 0 60%, transparent 100%),
     radial-gradient(22% 30% at 68% 62%, var(--natural-moss) 0 55%, transparent 100%),
     radial-gradient(18% 12% at 55% 20%, var(--natural-moss) 0 50%, transparent 100%);
-  filter: blur(14px);
-  opacity: 0.55;
+  filter: blur(12px);
+  opacity: 0.7;
   mix-blend-mode: multiply;
   animation: natural-canopy 16s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
