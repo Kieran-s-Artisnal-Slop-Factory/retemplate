@@ -60,6 +60,9 @@ Before beginning make sure the VERSION is up to date, and create a file called `
   - [x] Thick (the drop)
   - [x] Cattle (the iron)
   - [ ] Owner eyeball of each variant at real speed (listed under For human)
+  - [x] Neumorphic breath and Gothic candle smoothed (2026-09-05): same-shape shadows in every keyframe, sixteen eased stops for the candle
+  - [x] Second animated hero variant in every template (2026-09-05): Plain's roll, Neumorphic's sweep, Brutal News' roller, Glassy's ripple, Neon's switch-on, Natural's dapple, Detailed's rays, Gothic's scribe, Allegory's tide, ExtraExtra's roll-by, Breathe's dew, Modern Frosty's defrost, Thick's pile-up, Cattle's lasso
+- [x] Animated card variant in every template (2026-09-05), on each `docs/components/cards.html`: Plain's sheen, Neumorphic's float, Brutal News' flash, Glassy's glint, Neon's pulse, Natural's swing, Detailed's marquee lights, Gothic's ember, Allegory's turn, ExtraExtra's flutter, Breathe's bloom, Modern Frosty's thaw, Thick's hop, Cattle's smoulder
 
 ## For human
 

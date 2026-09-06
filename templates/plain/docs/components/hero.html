@@ -66,7 +66,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Plain's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Plain's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -125,6 +125,34 @@
   &lt;/div&gt;
   &lt;img src="../../assets/hero.svg" alt="" width="1200" height="500"&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The roll</h3>
+<p>The last word of the heading is a short list that rolls upward: each word slides into place, holds, and gives way to the next, on a loop. The list is markup, so the words are readable and copyable, and the roll is one keyframe on the list. Add <code>plain-roll</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="plain-roll">
+<section class="hero plain-roll">
+  <div class="stack">
+    <p class="kicker">The starting point</p>
+    <h1>Plain is <span class="plain-roll-words"><span>quiet.</span><span>yours.</span><span>enough.</span><span>quiet.</span></span></h1>
+    <p>Three words take turns in the heading. The last entry repeats the first so the loop closes without a jump.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+  <img src="../../assets/hero.svg" alt="" width="1200" height="500">
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="plain-roll">&lt;section class="hero plain-roll"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;The starting point&lt;/p&gt;
+    &lt;h1&gt;Plain is &lt;span class="plain-roll-words"&gt;&lt;span&gt;quiet.&lt;/span&gt;&lt;span&gt;yours.&lt;/span&gt;&lt;span&gt;enough.&lt;/span&gt;&lt;span&gt;quiet.&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
+    &lt;p&gt;Three words take turns in the heading. The last entry repeats the first so the loop closes without a jump.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;img src="../../assets/hero.svg" alt="" width="1200" height="500"&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -132,6 +160,8 @@
       <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
       <tr><td><code>.hero.plain-reveal</code></td><td>The staggered rise; the heading draws its rule, the picture fades in last</td></tr>
+      <tr><td><code>.hero.plain-roll</code></td><td>The heading with a rolling word</td></tr>
+      <tr><td><code>.plain-roll-words</code></td><td>The clipped column; its spans are the words, last repeating first</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

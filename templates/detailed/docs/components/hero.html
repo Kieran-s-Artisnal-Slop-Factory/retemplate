@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Detailed's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Detailed's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -126,6 +126,34 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The rays</h3>
+<p>The sunburst behind the marquee turns, slowly, a few degrees one way and then the other, as though the light were moving behind the letters. A gold sheen crosses the headline each time the rays reach the end of their swing. Add <code>detailed-rays</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="detailed-rays">
+<section class="hero detailed-marquee detailed-rays">
+  <div class="detailed-flare detailed-sunburst" aria-hidden="true"><svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"><path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/><path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/></svg></div>
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Detailed</h1>
+    <p>The rays swing four degrees each way over ten seconds, pivoting on the point where they meet. The sheen on the headline follows the swing.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg detailed-outline" href="index.html">Browse the components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-rays">&lt;section class="hero detailed-marquee detailed-rays"&gt;
+  &lt;div class="detailed-flare detailed-sunburst" aria-hidden="true"&gt;&lt;svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"&gt;&lt;path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/&gt;&lt;path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/&gt;&lt;/svg&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Detailed&lt;/h1&gt;
+    &lt;p&gt;The rays swing four degrees each way over ten seconds, pivoting on the point where they meet. The sheen on the headline follows the swing.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg detailed-outline" href="index.html"&gt;Browse the components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -133,6 +161,7 @@
       <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
       <tr><td><code>.hero.detailed-marquee.detailed-curtain</code></td><td>The marquee with the curtains drawn over it, parting on load</td></tr>
+      <tr><td><code>.hero.detailed-marquee.detailed-rays</code></td><td>The sunburst swings and the headline carries a moving sheen</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

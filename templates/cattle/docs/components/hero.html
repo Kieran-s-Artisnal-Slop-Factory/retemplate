@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Cattle's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Cattle's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -128,6 +128,34 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The lasso</h3>
+<p>A rope draws itself around the hero, starting at the top left and running the whole way round in three seconds, with the twist of the rope showing in its two-tone dash. When it closes it stays, a rope border on the board. Add <code>cattle-lasso</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="cattle-lasso">
+<section class="hero cattle-lasso">
+  <svg class="cattle-lasso-rope" aria-hidden="true"><rect class="cattle-lasso-under" pathLength="100"/><rect class="cattle-lasso-over" pathLength="100"/></svg>
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Roped off.</h1>
+    <p>Two strokes on one rectangle: a dark rope underneath, a light twist on top, both drawn from the same corner by the same offset. The rope tokens change with the scheme.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-lasso">&lt;section class="hero cattle-lasso"&gt;
+  &lt;svg class="cattle-lasso-rope" aria-hidden="true"&gt;&lt;rect class="cattle-lasso-under" pathLength="100"/&gt;&lt;rect class="cattle-lasso-over" pathLength="100"/&gt;&lt;/svg&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Roped off.&lt;/h1&gt;
+    &lt;p&gt;Two strokes on one rectangle: a dark rope underneath, a light twist on top, both drawn from the same corner by the same offset. The rope tokens change with the scheme.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -137,6 +165,8 @@
       <tr><td><code>.hero.cattle-iron</code></td><td>The burn-in on the heading and the rules drawing out</td></tr>
       <tr><td><code>.cattle-smoke</code></td><td>The zero-height layer above the heading that holds the smoke</td></tr>
       <tr><td><code>.cattle-smoke span</code></td><td>A wisp; three on staggered delays</td></tr>
+      <tr><td><code>.hero.cattle-lasso</code></td><td>The hero with a rope drawing itself around it</td></tr>
+      <tr><td><code>.cattle-lasso-rope</code></td><td>The inline SVG; two rects, the rope and its twist</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

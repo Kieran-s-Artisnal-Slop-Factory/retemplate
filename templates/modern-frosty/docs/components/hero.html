@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Modern Frosty's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Modern Frosty's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -168,6 +168,50 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The defrost</h3>
+<p>The note beside the heading starts frosted over, and the frost lifts from the top down as the page loads: a pane the colour of the navbar slides off the note in a second and a half, and the toolbar is the first thing to come clear. Once. Add <code>modern-frosty-defrost</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="modern-frosty-defrost">
+<section class="hero modern-frosty-defrost">
+  <div class="stack">
+    <h1>Cleared from <em>the top down.</em></h1>
+    <p>The pane over the note is the frost token, a fill and a blur. It slides off toward the bottom edge and is gone, leaving the note as it always was.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg modern-frosty-quiet" href="../../example/index.html">See the example app</a>
+    </div>
+  </div>
+  <div class="modern-frosty-flare">
+    <div class="modern-frosty-note">
+      <div class="modern-frosty-toolbar"><b>Thawing</b><span>just now</span><span>saved</span></div>
+      <div class="modern-frosty-sheet">
+        <h2>What was under the frost</h2>
+        <p>Nothing changed while you could not see it. The lines are the same lines.</p>
+        <p class="muted">Reload to watch it clear again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-defrost">&lt;section class="hero modern-frosty-defrost"&gt;
+  &lt;div class="stack"&gt;
+    &lt;h1&gt;Cleared from &lt;em&gt;the top down.&lt;/em&gt;&lt;/h1&gt;
+    &lt;p&gt;The pane over the note is the frost token, a fill and a blur. It slides off toward the bottom edge and is gone, leaving the note as it always was.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg modern-frosty-quiet" href="../../example/index.html"&gt;See the example app&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="modern-frosty-flare"&gt;
+    &lt;div class="modern-frosty-note"&gt;
+      &lt;div class="modern-frosty-toolbar"&gt;&lt;b&gt;Thawing&lt;/b&gt;&lt;span&gt;just now&lt;/span&gt;&lt;span&gt;saved&lt;/span&gt;&lt;/div&gt;
+      &lt;div class="modern-frosty-sheet"&gt;
+        &lt;h2&gt;What was under the frost&lt;/h2&gt;
+        &lt;p&gt;Nothing changed while you could not see it. The lines are the same lines.&lt;/p&gt;
+        &lt;p class="muted"&gt;Reload to watch it clear again.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -177,6 +221,7 @@
       <tr><td><code>.hero.modern-frosty-prompt</code></td><td>Centred hero; the stack rises, the command types</td></tr>
       <tr><td><code>.modern-frosty-command</code></td><td>The ink command line (see flare)</td></tr>
       <tr><td><code>.modern-frosty-live</code></td><td>The ember dot with its ping (see flare)</td></tr>
+      <tr><td><code>.hero.modern-frosty-defrost</code></td><td>The note starts under frost that slides off downward on load</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

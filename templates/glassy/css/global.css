@@ -2190,6 +2190,69 @@ hr.page-break::after {
   }
 }
 
+/* The ripple: three rings grow from behind the heading and fade. */
+.hero.glassy-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.glassy-rings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glassy-rings span {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 6rem;
+  height: 6rem;
+  margin: -3rem 0 0 -3rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--glassy-edge-strong);
+  opacity: 0;
+  animation: glassy-ripple 6s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+
+.glassy-rings span:nth-child(2) { animation-delay: 2s; }
+.glassy-rings span:nth-child(3) { animation-delay: 4s; }
+
+@keyframes glassy-ripple {
+  0% { transform: scale(0.2); opacity: 0; }
+  15% { opacity: 0.9; }
+  100% { transform: scale(9); opacity: 0; }
+}
+
+/* == card variants (animated) == */
+/* The glint: a bright point circles the card's edge. A conic gradient sits
+ * in a pseudo-element masked to a one-pixel ring and turns. */
+.card.glassy-glint {
+  position: relative;
+}
+
+.card.glassy-glint::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from 0deg, transparent 0 70%, var(--glassy-edge-strong) 85%, transparent 100%);
+  -webkit-mask: linear-gradient(var(--text-color) 0 0) content-box, linear-gradient(var(--text-color) 0 0);
+  mask: linear-gradient(var(--text-color) 0 0) content-box, linear-gradient(var(--text-color) 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: glassy-glint 6s linear infinite;
+}
+
+@keyframes glassy-glint {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Allegory's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Allegory's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -160,6 +160,46 @@
     &lt;/section&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The tide</h3>
+<p>The two faces rise and fall against each other: the ascent drifts up as the descent sinks, then they trade, on a slow ten-second swell. The radiance above the halo and the flame below the horn brighten as each face reaches its height. Add <code>allegory-tide</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="allegory-tide">
+<section class="hero allegory-split allegory-tide">
+  <div class="stack">
+    <p class="kicker">Two faces, one tide</p>
+    <h1>One rises as <em>the other falls.</em></h1>
+  </div>
+  <div class="allegory-diptych">
+    <section class="allegory-halo">
+      <h2 class="allegory-band">The ascent</h2>
+      <p>Drifts up a little and brightens, then gives way.</p>
+      <a class="btn allegory-vow" href="../../example/ascent.html">Read the ascent</a>
+    </section>
+    <section class="allegory-horn">
+      <h2 class="allegory-band">The descent</h2>
+      <p>Sinks as the other rises, and glows when it is low.</p>
+      <a class="btn allegory-vow" href="../../example/descent.html">Read the descent</a>
+    </section>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-tide">&lt;section class="hero allegory-split allegory-tide"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Two faces, one tide&lt;/p&gt;
+    &lt;h1&gt;One rises as &lt;em&gt;the other falls.&lt;/em&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class="allegory-diptych"&gt;
+    &lt;section class="allegory-halo"&gt;
+      &lt;h2 class="allegory-band"&gt;The ascent&lt;/h2&gt;
+      &lt;p&gt;Drifts up a little and brightens, then gives way.&lt;/p&gt;
+      &lt;a class="btn allegory-vow" href="../../example/ascent.html"&gt;Read the ascent&lt;/a&gt;
+    &lt;/section&gt;
+    &lt;section class="allegory-horn"&gt;
+      &lt;h2 class="allegory-band"&gt;The descent&lt;/h2&gt;
+      &lt;p&gt;Sinks as the other rises, and glows when it is low.&lt;/p&gt;
+      &lt;a class="btn allegory-vow" href="../../example/descent.html"&gt;Read the descent&lt;/a&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -167,6 +207,7 @@
       <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
       <tr><td><code>.hero.allegory-split.allegory-turn</code></td><td>The diptych as two lifting leaves, out of phase</td></tr>
+      <tr><td><code>.hero.allegory-split.allegory-tide</code></td><td>The faces of the diptych rise and fall against each other</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

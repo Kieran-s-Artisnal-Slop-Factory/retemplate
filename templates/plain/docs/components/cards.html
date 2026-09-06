@@ -171,6 +171,24 @@
     &lt;p class="card-text"&gt;Plain lifts it on hover and colours its edge. Other templates do something of their own.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>The sheen</h3>
+<p>A band of light crosses the picture every four seconds, left to right, and the rest of the card stays still. It is the plain template's one continuous motion, kept to the media so the text never moves. Add <code>plain-sheen</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="plain-sheen">
+<article class="card plain-sheen">
+  <figure class="card-media"><img src="../../assets/card-2.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">A light passes over</h3>
+    <p class="card-text">The band is a gradient of the surface colour at low opacity, so it works on any picture and in both schemes.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="plain-sheen">&lt;article class="card plain-sheen"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-2.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;A light passes over&lt;/h3&gt;
+    &lt;p class="card-text"&gt;The band is a gradient of the surface colour at low opacity, so it works on any picture and in both schemes.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -184,6 +202,7 @@
       <tr><td><code>.card-horizontal</code></td><td>Media beside the body</td></tr>
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card</td></tr>
+      <tr><td><code>.card.plain-sheen</code></td><td>A band of light crosses the media on a four-second loop</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

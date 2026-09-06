@@ -2140,6 +2140,63 @@ hr.page-break {
   }
 }
 
+/* The roller: a black bar crosses; the headline and columns are clipped to
+ * the bar's trailing edge so the ink appears as it passes. */
+.hero.brutal-news-roller {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.brutal-news-roller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12%;
+  width: 12%;
+  background: var(--text-color);
+  animation: brutal-news-roll 1.5s steps(24, end) both;
+}
+
+.hero.brutal-news-roller h1,
+.hero.brutal-news-roller .brutal-news-columns {
+  clip-path: inset(0 100% 0 0);
+  animation: brutal-news-print 1.5s steps(24, end) both;
+}
+
+.hero.brutal-news-roller .brutal-news-columns {
+  animation-delay: 400ms;
+}
+
+@keyframes brutal-news-roll {
+  to {
+    transform: translateX(calc(100vw + 12%));
+  }
+}
+
+@keyframes brutal-news-print {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* == card variants (animated) == */
+/* The flash: the kicker cuts between red-on-paper and paper-on-red. */
+.card.brutal-news-flash .kicker {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  color: var(--brutal-news-red);
+  outline: var(--brutal-news-rule) solid var(--brutal-news-red);
+  animation: brutal-news-flash 1s steps(2, end) infinite;
+}
+
+@keyframes brutal-news-flash {
+  50% {
+    background: var(--brutal-news-red);
+    color: var(--color-on-primary);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

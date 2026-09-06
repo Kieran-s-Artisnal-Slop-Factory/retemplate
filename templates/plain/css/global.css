@@ -1676,6 +1676,53 @@ hr.page-break::after {
   }
 }
 
+/* The roll: a column of words in the heading slides up one line at a
+ * time; the last word repeats the first so the loop is seamless. */
+.plain-roll-words {
+  display: inline-grid;
+  height: 1.1em;
+  overflow: hidden;
+  vertical-align: bottom;
+  color: var(--color-primary);
+}
+
+.plain-roll-words > span {
+  display: block;
+  height: 1.1em;
+  line-height: 1.1;
+  animation: plain-roll 9s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+}
+
+@keyframes plain-roll {
+  0%, 28% { transform: translateY(0); }
+  33%, 61% { transform: translateY(-1.1em); }
+  66%, 94% { transform: translateY(-2.2em); }
+  100% { transform: translateY(-3.3em); }
+}
+
+/* == card variants (animated) == */
+/* The sheen: a soft band of light crosses the media every four seconds. */
+.card.plain-sheen .card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.card.plain-sheen .card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, var(--surface-raised-color) 50%, transparent 60%);
+  opacity: 0.55;
+  transform: translateX(-100%);
+  animation: plain-sheen 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes plain-sheen {
+  40%, 100% {
+    transform: translateX(100%);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

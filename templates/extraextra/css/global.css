@@ -2362,6 +2362,54 @@ hr.page-break::after {
   }
 }
 
+/* The roll-by: the headline scrolls edge to edge and comes round again. */
+.hero.extraextra-rollby {
+  display: block;
+}
+
+.extraextra-rollby-track {
+  overflow: hidden;
+  margin: 0 calc(-1 * var(--extraextra-gutter, 0px));
+  border-top: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.extraextra-rollby-track h1 {
+  display: flex;
+  width: max-content;
+  margin: 0;
+  font-size: clamp(3rem, 12vw, 9rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  animation: extraextra-rollby 20s linear infinite;
+}
+
+.extraextra-rollby-track:hover h1 {
+  animation-play-state: paused;
+}
+
+.extraextra-rollby-track h1 > span {
+  padding: 0 0.3em;
+}
+
+@keyframes extraextra-rollby {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* == card variants (animated) == */
+/* The flutter: the card tilts about its top edge as a loose poster does. */
+.card.extraextra-flutter {
+  transform-origin: 50% 0;
+  animation: extraextra-flutter 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes extraextra-flutter {
+  0%, 100% { transform: perspective(60rem) rotateX(0); box-shadow: 0 0 0 var(--text-color); }
+  50% { transform: perspective(60rem) rotateX(-8deg); box-shadow: 0 1rem 0 -0.5rem var(--text-color); }
+}
+
 /* == print == */
 @media print {
   .navbar,

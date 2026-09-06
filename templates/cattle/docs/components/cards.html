@@ -192,6 +192,24 @@
     &lt;p class="card-text"&gt;Fourteen hours over post oak. Sliced when you order.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>The smoulder</h3>
+<p>The branded title glows warmer and cools again, slowly, as a mark does in the first minute after the iron comes off: the scorch halo widens and brightens over four seconds and settles over four more. The card is otherwise still. Add <code>cattle-smoulder</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="cattle-smoulder">
+<article class="card cattle-stitched cattle-smoulder">
+  <figure class="card-media"><img src="../../assets/card-1.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Still warm</h3>
+    <p class="card-text">The title's text-shadow eases between the settled burn and a wider, brighter scorch, eight seconds a cycle.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="cattle-smoulder">&lt;article class="card cattle-stitched cattle-smoulder"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-1.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Still warm&lt;/h3&gt;
+    &lt;p class="card-text"&gt;The title's text-shadow eases between the settled burn and a wider, brighter scorch, eight seconds a cycle.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -206,6 +224,7 @@
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card: the title burns in, the mark is pressed into the picture</td></tr>
       <tr><td><code>.cattle-stitched</code></td><td>Cattle only: a leather frame with the stitch through it</td></tr>
+      <tr><td><code>.card.cattle-smoulder</code></td><td>The branded title's scorch breathes, eight seconds a cycle</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

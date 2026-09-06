@@ -2084,6 +2084,75 @@ hr.cattle-rope {
   100% { transform: translate(1rem, -9rem) scale(2.4); opacity: 0; }
 }
 
+/* The lasso: a two-tone rope draws itself around the hero. */
+.hero.cattle-lasso {
+  position: relative;
+  padding-inline: var(--space-5);
+}
+
+.cattle-lasso-rope {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.cattle-lasso-rope rect {
+  x: 4px;
+  y: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  rx: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: cattle-lasso 3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.cattle-lasso-under {
+  stroke: var(--cattle-rope-dark);
+  stroke-width: 7;
+}
+
+.cattle-lasso-over {
+  stroke: var(--cattle-rope-light);
+  stroke-width: 3;
+  stroke-dasharray: 1.2 1.2;
+  animation: cattle-lasso-twist 3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes cattle-lasso {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* The twist is a short dash; its own draw is a clip drawn by the rope
+ * underneath, so it appears only where the rope already is. */
+@keyframes cattle-lasso-twist {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* == card variants (animated) == */
+/* The smoulder: the title's scorch widens and brightens, then settles. */
+.card.cattle-smoulder .card-title {
+  color: var(--cattle-char);
+  animation: cattle-smoulder 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes cattle-smoulder {
+  0%, 100% { text-shadow: 0 0 1px var(--cattle-scorch-1), 0 0 3px var(--cattle-scorch-2), 0 0 8px var(--cattle-scorch-3), 0 0 18px var(--cattle-scorch-4); }
+  50% { text-shadow: 0 0 2px var(--cattle-scorch-1), 0 0 8px var(--cattle-scorch-2), 0 0 20px var(--cattle-scorch-3), 0 0 36px var(--cattle-scorch-3); }
+}
+
 /* == print == */
 @media print {
   .navbar,

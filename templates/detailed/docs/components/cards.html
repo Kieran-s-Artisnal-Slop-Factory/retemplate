@@ -192,6 +192,24 @@
     &lt;p class="card-text"&gt;The same markup as the card above, with one more class.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>The marquee lights</h3>
+<p>Bulbs run around the card's frame, chasing, the way they do around a theatre marquee. They are a dotted gold border whose dots march; the gap between them is the step, so the chase is even at every size. Add <code>detailed-lights</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="detailed-lights">
+<article class="card detailed-lights">
+  <figure class="card-media"><img src="../../assets/card-2.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Around the frame</h3>
+    <p class="card-text">Gold dots, eight to the inch, one step every quarter second. The card itself is still; only the lights move.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-lights">&lt;article class="card detailed-lights"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-2.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Around the frame&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Gold dots, eight to the inch, one step every quarter second. The card itself is still; only the lights move.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -206,6 +224,7 @@
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The dynamic card: double gold rule, stepped frame, the gold-leaf sheen</td></tr>
       <tr><td><code>.detailed-stepped</code></td><td>Detailed only: stepped top corners with a gold hairline (rules under <code>/* == flare == */</code>)</td></tr>
+      <tr><td><code>.card.detailed-lights</code></td><td>A chase of gold bulbs around the frame</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

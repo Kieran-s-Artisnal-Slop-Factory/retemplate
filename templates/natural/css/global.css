@@ -2294,6 +2294,51 @@ hr.page-break::after {
   }
 }
 
+/* The dapple: a patch of light drifts across the plate and back. */
+.hero.natural-dapple .natural-plate {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.natural-dapple .natural-plate::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background: radial-gradient(closest-side, var(--natural-tape), transparent 70%);
+  opacity: 0.8;
+  animation: natural-dapple 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes natural-dapple {
+  0%, 100% { transform: translate(-25%, -20%) scale(0.9); }
+  50% { transform: translate(25%, 20%) scale(1.1); }
+}
+
+/* == card variants (animated) == */
+/* The swing: the card pivots from its tape at the top centre. */
+.card.natural-swing {
+  transform-origin: 50% -0.5rem;
+  animation: natural-swing 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.card.natural-swing::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  width: 3rem;
+  height: 1.1rem;
+  margin-left: -1.5rem;
+  background: var(--natural-tape);
+  transform: rotate(-3deg);
+}
+
+@keyframes natural-swing {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
 /* == print == */
 @media print {
   .navbar,

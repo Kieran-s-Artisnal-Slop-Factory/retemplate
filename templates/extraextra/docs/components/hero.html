@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows ExtraExtra's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows ExtraExtra's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -126,6 +126,32 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The roll-by</h3>
+<p>The headline is too wide for the wall and does not care: it scrolls across from right to left at the size a poster would be, edge to edge, and comes round again. The paragraph and buttons sit still under it. Add <code>extraextra-rollby</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="extraextra-rollby">
+<section class="hero extraextra-rollby">
+  <div class="extraextra-rollby-track" aria-hidden="true"><h1><span>Loud on purpose.</span><span>Loud on purpose.</span></h1></div>
+  <div class="stack">
+    <p class="kicker">Full width, then some</p>
+    <p>The heading is two copies in a row, translated by half the track's width, so the loop closes without a seam. Twenty seconds a pass; hover holds it.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="extraextra-rollby">&lt;section class="hero extraextra-rollby"&gt;
+  &lt;div class="extraextra-rollby-track" aria-hidden="true"&gt;&lt;h1&gt;&lt;span&gt;Loud on purpose.&lt;/span&gt;&lt;span&gt;Loud on purpose.&lt;/span&gt;&lt;/h1&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Full width, then some&lt;/p&gt;
+    &lt;p&gt;The heading is two copies in a row, translated by half the track's width, so the loop closes without a seam. Twenty seconds a pass; hover holds it.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -135,6 +161,8 @@
       <tr><td><code>.hero.extraextra-slap</code></td><td>The wall; each h1 span is a poster</td></tr>
       <tr><td><code>.extraextra-slap h1 &gt; span</code></td><td>A poster; odd ones orange from the left, the second ink from the right</td></tr>
       <tr><td><code>.badge.extraextra-sticker</code></td><td>The round sticker that spins on last</td></tr>
+      <tr><td><code>.hero.extraextra-rollby</code></td><td>The hero with a scrolling headline over its stack</td></tr>
+      <tr><td><code>.extraextra-rollby-track</code></td><td>The clipped track; its h1 holds two copies of the words</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

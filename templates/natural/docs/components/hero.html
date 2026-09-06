@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Natural's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Natural's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -178,6 +178,50 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The dapple</h3>
+<p>Light through leaves moves across the specimen plate: a soft patch of brightness drifts slowly over the picture and back, as the sun does through a window with a tree outside. The plate and the label never move; only the light does. Add <code>natural-dapple</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="natural-dapple">
+<section class="hero natural-dapple">
+  <div class="natural-flare">
+    <figure class="natural-plate">
+      <img src="../../assets/hero.svg" alt="A pressed water avens on a cream herbarium sheet" width="900" height="1100">
+      <figcaption class="natural-label">
+        <p class="kicker">Herbarium of the Natural template</p>
+        <p class="natural-binomial">Geum rivale <span class="natural-auth">L.</span></p>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Light through <em>leaves</em>.</h1>
+    <p>A patch of brightness crosses the plate over twelve seconds and comes back. It is a radial gradient in the tape colour, blended over the picture at low strength.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-dapple">&lt;section class="hero natural-dapple"&gt;
+  &lt;div class="natural-flare"&gt;
+    &lt;figure class="natural-plate"&gt;
+      &lt;img src="../../assets/hero.svg" alt="A pressed water avens on a cream herbarium sheet" width="900" height="1100"&gt;
+      &lt;figcaption class="natural-label"&gt;
+        &lt;p class="kicker"&gt;Herbarium of the Natural template&lt;/p&gt;
+        &lt;p class="natural-binomial"&gt;Geum rivale &lt;span class="natural-auth"&gt;L.&lt;/span&gt;&lt;/p&gt;
+      &lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Light through &lt;em&gt;leaves&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p&gt;A patch of brightness crosses the plate over twelve seconds and comes back. It is a radial gradient in the tape colour, blended over the picture at low strength.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -188,6 +232,7 @@
       <tr><td><code>.natural-vine</code></td><td>The inline SVG</td></tr>
       <tr><td><code>.natural-vine-stem</code></td><td>One path that draws its own length</td></tr>
       <tr><td><code>.natural-vine-leaf</code></td><td>A leaf; opens from its base after a delay set by --i</td></tr>
+      <tr><td><code>.hero.natural-dapple</code></td><td>The plate with a patch of light drifting over it</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

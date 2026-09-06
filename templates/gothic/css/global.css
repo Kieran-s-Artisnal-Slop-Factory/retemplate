@@ -1877,33 +1877,91 @@ hr.gothic-tracery {
   pointer-events: none;
   background: radial-gradient(closest-side at 35% 45%, var(--gothic-gold), transparent 75%);
   opacity: 0.22;
-  animation: gothic-flicker 5s steps(1, end) infinite;
+  animation: gothic-flicker 6s ease-in-out infinite;
 }
 
 .hero.gothic-candle h1 {
   text-shadow: 0 0 18px var(--gothic-gold);
-  animation: gothic-glow 5s steps(1, end) infinite;
+  animation: gothic-glow 6s ease-in-out infinite;
 }
 
+/* Sixteen stops, eased between, so the light wanders rather than jumps;
+ * the stops are unevenly spaced so the rhythm never quite repeats. */
 @keyframes gothic-flicker {
-  0% { opacity: 0.22; transform: scale(1); }
-  9% { opacity: 0.3; transform: scale(1.03); }
-  17% { opacity: 0.18; transform: scale(0.98); }
-  31% { opacity: 0.27; transform: scale(1.01); }
-  38% { opacity: 0.2; transform: scale(1.04); }
-  55% { opacity: 0.32; transform: scale(0.99); }
-  68% { opacity: 0.16; transform: scale(1.02); }
-  84% { opacity: 0.26; transform: scale(1); }
+  0%   { opacity: 0.22; transform: scale(1); }
+  6%   { opacity: 0.26; transform: scale(1.015); }
+  11%  { opacity: 0.29; transform: scale(1.03); }
+  17%  { opacity: 0.24; transform: scale(1.01); }
+  23%  { opacity: 0.19; transform: scale(0.985); }
+  30%  { opacity: 0.23; transform: scale(1); }
+  36%  { opacity: 0.27; transform: scale(1.02); }
+  41%  { opacity: 0.21; transform: scale(1.035); }
+  49%  { opacity: 0.25; transform: scale(1.01); }
+  55%  { opacity: 0.31; transform: scale(0.995); }
+  62%  { opacity: 0.26; transform: scale(1.005); }
+  68%  { opacity: 0.18; transform: scale(1.02); }
+  75%  { opacity: 0.22; transform: scale(1.01); }
+  82%  { opacity: 0.27; transform: scale(0.99); }
+  91%  { opacity: 0.24; transform: scale(1.005); }
+  100% { opacity: 0.22; transform: scale(1); }
 }
 
 @keyframes gothic-glow {
-  0% { text-shadow: 0 0 18px var(--gothic-gold); }
-  9% { text-shadow: 0 0 26px var(--gothic-gold); }
-  17% { text-shadow: 0 0 12px var(--gothic-gold); }
-  38% { text-shadow: 0 0 22px var(--gothic-gold); }
-  55% { text-shadow: 0 0 30px var(--gothic-gold); }
-  68% { text-shadow: 0 0 10px var(--gothic-gold); }
-  84% { text-shadow: 0 0 20px var(--gothic-gold); }
+  0%   { text-shadow: 0 0 18px var(--gothic-gold); }
+  6%   { text-shadow: 0 0 21px var(--gothic-gold); }
+  11%  { text-shadow: 0 0 25px var(--gothic-gold); }
+  17%  { text-shadow: 0 0 20px var(--gothic-gold); }
+  23%  { text-shadow: 0 0 14px var(--gothic-gold); }
+  30%  { text-shadow: 0 0 17px var(--gothic-gold); }
+  36%  { text-shadow: 0 0 22px var(--gothic-gold); }
+  41%  { text-shadow: 0 0 16px var(--gothic-gold); }
+  49%  { text-shadow: 0 0 21px var(--gothic-gold); }
+  55%  { text-shadow: 0 0 28px var(--gothic-gold); }
+  62%  { text-shadow: 0 0 23px var(--gothic-gold); }
+  68%  { text-shadow: 0 0 12px var(--gothic-gold); }
+  75%  { text-shadow: 0 0 17px var(--gothic-gold); }
+  82%  { text-shadow: 0 0 24px var(--gothic-gold); }
+  91%  { text-shadow: 0 0 20px var(--gothic-gold); }
+  100% { text-shadow: 0 0 18px var(--gothic-gold); }
+}
+
+/* The scribe: heading then paragraph are revealed left to right. */
+.hero.gothic-scribe h1,
+.hero.gothic-scribe > .stack > p:not(.kicker) {
+  clip-path: inset(0 100% 0 0);
+  animation: gothic-write 2s cubic-bezier(0.4, 0, 0.6, 1) both;
+}
+
+.hero.gothic-scribe > .stack > p:not(.kicker) {
+  animation-delay: 1.6s;
+  animation-duration: 2.6s;
+}
+
+.hero.gothic-scribe .row {
+  animation: gothic-appear 800ms 4s both;
+}
+
+@keyframes gothic-write {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes gothic-appear {
+  from {
+    opacity: 0;
+  }
+}
+
+/* == card variants (animated) == */
+/* The ember: a gold glow behind the card breathes on an eight-second loop. */
+.card.gothic-ember {
+  animation: gothic-ember 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes gothic-ember {
+  0%, 100% { box-shadow: 0 0 12px -4px var(--gothic-gold); }
+  50% { box-shadow: 0 0 36px 6px var(--gothic-gold); }
 }
 
 /* == print == */

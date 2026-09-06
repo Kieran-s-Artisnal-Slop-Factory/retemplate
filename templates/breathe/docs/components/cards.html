@@ -248,6 +248,24 @@
     &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>The bloom</h3>
+<p>The picture inside its leaf cut swells a little and eases back, slowly, as a leaf does when the light changes; a mint halo widens around the card in time with it. Nine seconds a breath, and no other part of the card moves. Add <code>breathe-bloom</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="breathe-bloom">
+<article class="card breathe-leaf breathe-bloom">
+  <figure class="card-media"><img src="../../assets/card-1.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Breathing in</h3>
+    <p class="card-text">The picture scales three percent inside its cut; the halo is a mint spread on the card's shadow. Both ease.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-bloom">&lt;article class="card breathe-leaf breathe-bloom"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-1.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Breathing in&lt;/h3&gt;
+    &lt;p class="card-text"&gt;The picture scales three percent inside its cut; the halo is a mint spread on the card's shadow. Both ease.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -264,6 +282,7 @@
       <tr><td><code>.breathe-leaf</code></td><td>Breathe's variant: the picture takes the leaf cut and sits in from the edge (<code>global.css § cards</code>)</td></tr>
       <tr><td><code>.breathe-stem</code></td><td>On the list around the cards: one stem down the left, a leaf node per card</td></tr>
       <tr><td><code>.breathe-now</code>, <code>.breathe-done</code></td><td>On a card in a stem: the node turns accent, or fades</td></tr>
+      <tr><td><code>.card.breathe-bloom</code></td><td>The picture swells in its cut and a mint halo widens, nine seconds a breath</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

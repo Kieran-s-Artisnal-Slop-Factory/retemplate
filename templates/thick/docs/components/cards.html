@@ -220,6 +220,24 @@
   &lt;/div&gt;
 &lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>The hop</h3>
+<p>Every three seconds the card hops: it drops onto its shadow, which collapses under it, and springs back up with a little overshoot. The rest of the time it sits still, so a grid of these hops one at a time if you stagger their delays. Add <code>thick-hop</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="thick-hop">
+<article class="card thick-hop">
+  <figure class="card-media"><img src="../../assets/card-2.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Hop</h3>
+    <p class="card-text">Down onto the shadow in a tenth of a second, back up with a bounce in four tenths, then still until the next.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="thick-hop">&lt;article class="card thick-hop"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-2.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Hop&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Down onto the shadow in a tenth of a second, back up with a bounce in four tenths, then still until the next.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -234,6 +252,7 @@
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The pressable card: lifts on hover and focus, flattens on press</td></tr>
       <tr><td><code>.thick-yellow</code>, <code>.thick-pink</code>, <code>.thick-blue</code></td><td>Tinted card (Thick)</td></tr>
+      <tr><td><code>.card.thick-hop</code></td><td>Drops onto its shadow and springs back every three seconds</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

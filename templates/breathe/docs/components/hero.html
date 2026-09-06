@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Breathe's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Breathe's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -170,6 +170,38 @@
     &lt;span style="--x: 90%; --d: 3.9s"&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The dew</h3>
+<p>A drop forms at the tip of the frond, swells, lets go, and falls, and then another begins. The drop is a single pale disc; forming is a scale, falling is a translate, and the whole thing is one keyframe on a five-second loop. Add <code>breathe-dew</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="breathe-dew">
+<section class="hero breathe-dew">
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>One drop, <em>then another</em>.</h1>
+    <p>It gathers for two seconds, holds for one, and falls in one. The frond it hangs from is the hero's own; the drop sits at its tip.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg breathe-quiet" href="index.html">Browse the components</a>
+    </div>
+  </div>
+  <div class="breathe-flare breathe-dew-pot" aria-hidden="true">
+    <span class="breathe-drop"></span>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-dew">&lt;section class="hero breathe-dew"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;One drop, &lt;em&gt;then another&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p&gt;It gathers for two seconds, holds for one, and falls in one. The frond it hangs from is the hero's own; the drop sits at its tip.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg breathe-quiet" href="index.html"&gt;Browse the components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="breathe-flare breathe-dew-pot" aria-hidden="true"&gt;
+    &lt;span class="breathe-drop"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -179,6 +211,9 @@
       <tr><td><code>.hero.breathe-seeds</code></td><td>The hero clipped so the seeds leave at its top edge</td></tr>
       <tr><td><code>.breathe-air</code></td><td>The layer holding the seeds</td></tr>
       <tr><td><code>.breathe-air span</code></td><td>A seed; --x is its column, --d its delay</td></tr>
+      <tr><td><code>.hero.breathe-dew</code></td><td>The hero with a drop forming and falling beside it</td></tr>
+      <tr><td><code>.breathe-dew-pot</code></td><td>The mint panel the drop falls through</td></tr>
+      <tr><td><code>.breathe-drop</code></td><td>The drop</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

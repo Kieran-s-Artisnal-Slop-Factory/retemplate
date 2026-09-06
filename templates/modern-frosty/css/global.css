@@ -2368,6 +2368,44 @@ hr.page-break::after {
   }
 }
 
+/* The defrost: a pane of frost slides off the note from the top down. */
+.hero.modern-frosty-defrost .modern-frosty-note {
+  position: relative;
+}
+
+.hero.modern-frosty-defrost .modern-frosty-note::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--modern-frosty-frost);
+  backdrop-filter: blur(var(--modern-frosty-blur));
+  pointer-events: none;
+  animation: modern-frosty-defrost 1.5s 600ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes modern-frosty-defrost {
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* == card variants (animated) == */
+/* The thaw: the feature card's frost pane clears and returns on a loop. */
+.card.card-feature.modern-frosty-thaw .card-media::after {
+  animation: modern-frosty-thaw 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.card.card-feature.modern-frosty-thaw:hover .card-media::after {
+  animation-play-state: paused;
+}
+
+@keyframes modern-frosty-thaw {
+  0%, 15% { backdrop-filter: blur(var(--modern-frosty-blur)); opacity: 1; }
+  45%, 65% { backdrop-filter: blur(0); opacity: 0; }
+  90%, 100% { backdrop-filter: blur(var(--modern-frosty-blur)); opacity: 1; }
+}
+
 /* == print == */
 @media print {
   .navbar,

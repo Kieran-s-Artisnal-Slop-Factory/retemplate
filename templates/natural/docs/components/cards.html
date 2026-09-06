@@ -204,6 +204,24 @@
     &lt;/dl&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>The swing</h3>
+<p>The card hangs from its tape and swings, slowly, a degree and a half either way, as a label on a string does in a draught. The pivot is the top centre, where the tape is, so the bottom edge travels and the top hardly moves. Add <code>natural-swing</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="natural-swing">
+<article class="card natural-swing">
+  <figure class="card-media"><img src="../../assets/card-2.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">On a string</h3>
+    <p class="card-text">Six seconds a swing, eased at both ends. The whole card moves, picture and label together.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-swing">&lt;article class="card natural-swing"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-2.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;On a string&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Six seconds a swing, eased at both ends. The whole card moves, picture and label together.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -220,6 +238,7 @@
       <tr><td><code>.natural-specimen</code></td><td>Natural's variant: media mounted with a margin, body set as a label (<code>global.css § flare</code>)</td></tr>
       <tr><td><code>.natural-binomial</code></td><td>A Latin name in Fraunces italic; <code>.natural-auth</code> inside it is the authority, roman and small</td></tr>
       <tr><td><code>.natural-data</code></td><td>A two-column <code>&lt;dl&gt;</code>: small-caps field, roman value</td></tr>
+      <tr><td><code>.card.natural-swing</code></td><td>Swings from a tape at the top centre</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

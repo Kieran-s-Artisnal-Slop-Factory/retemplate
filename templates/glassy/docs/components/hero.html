@@ -66,7 +66,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Glassy's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Glassy's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -123,6 +123,34 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The ripple</h3>
+<p>Rings of glass spread out from behind the headline like drops on still water: three of them, each a hairline circle that grows and fades, staggered so one is always starting. The text rides on top, unmoved. Add <code>glassy-ripple</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="glassy-ripple">
+<section class="hero glassy-sheet glassy-ripple">
+  <div class="glassy-flare glassy-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="stack">
+    <p class="kicker">Still water</p>
+    <h1>Rings, spreading.</h1>
+    <p>Each ring is an empty circle with a glass edge. It starts small under the heading, grows past the sheet, and is gone in six seconds; the next starts two seconds after it.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg glassy-ghost" href="../../example/index.html">See the studio site</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="glassy-ripple">&lt;section class="hero glassy-sheet glassy-ripple"&gt;
+  &lt;div class="glassy-flare glassy-rings" aria-hidden="true"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Still water&lt;/p&gt;
+    &lt;h1&gt;Rings, spreading.&lt;/h1&gt;
+    &lt;p&gt;Each ring is an empty circle with a glass edge. It starts small under the heading, grows past the sheet, and is gone in six seconds; the next starts two seconds after it.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg glassy-ghost" href="../../example/index.html"&gt;See the studio site&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -132,6 +160,8 @@
       <tr><td><code>.hero.glassy-orbit</code></td><td>Centred hero with the ring behind it</td></tr>
       <tr><td><code>.glassy-ring</code></td><td>The hairline ring, one turn in forty seconds</td></tr>
       <tr><td><code>.glassy-ring span</code></td><td>A disc; three sizes at three depths, counter-turning to stay upright</td></tr>
+      <tr><td><code>.hero.glassy-sheet.glassy-ripple</code></td><td>The sheet with rings behind its text</td></tr>
+      <tr><td><code>.glassy-rings span</code></td><td>A ring; three on two-second offsets</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

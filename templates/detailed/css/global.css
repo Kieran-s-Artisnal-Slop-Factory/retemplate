@@ -2226,6 +2226,62 @@ hr.page-break::after {
   }
 }
 
+/* == card variants (animated) == */
+/* The marquee lights: a dotted gold ring around the card whose dots march.
+ * Four repeating gradients, one per edge, share a background-position. */
+.card.detailed-lights {
+  position: relative;
+  outline: 2px solid var(--detailed-gold);
+  outline-offset: 5px;
+}
+
+.card.detailed-lights::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(90deg, var(--detailed-gold) 0 4px, transparent 4px 12px) top / 100% 4px no-repeat,
+    repeating-linear-gradient(90deg, var(--detailed-gold) 0 4px, transparent 4px 12px) bottom / 100% 4px no-repeat,
+    repeating-linear-gradient(180deg, var(--detailed-gold) 0 4px, transparent 4px 12px) left / 4px 100% no-repeat,
+    repeating-linear-gradient(180deg, var(--detailed-gold) 0 4px, transparent 4px 12px) right / 4px 100% no-repeat;
+  animation: detailed-lights 1s steps(3, end) infinite;
+}
+
+@keyframes detailed-lights {
+  to {
+    background-position: 12px 0, calc(100% - 12px) 100%, 0 calc(100% - 12px), 100% 12px;
+  }
+}
+
+/* The rays: the sunburst swings a few degrees about its focus; a sheen
+ * crosses the headline in time with it. */
+.hero.detailed-rays .detailed-sunburst svg {
+  transform-origin: 50% 100%;
+  animation: detailed-rays 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero.detailed-rays h1 {
+  background: var(--detailed-sheen), linear-gradient(var(--text-color), var(--text-color));
+  background-size: 250% 100%, 100% 100%;
+  background-position: 100% 0, 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: detailed-rays-sheen 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes detailed-rays {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
+
+@keyframes detailed-rays-sheen {
+  0%, 100% { background-position: 100% 0, 0 0; }
+  50% { background-position: 0 0, 0 0; }
+}
+
 /* == print == */
 @media print {
   .navbar,

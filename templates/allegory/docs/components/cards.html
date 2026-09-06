@@ -206,6 +206,24 @@
     &lt;p class="card-text"&gt;Allegory's flips to its other face: black and red behind a light page, ivory and gold behind a dark one. Hover it.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/article&gt;</code></pre></div>
+<h3>The turn</h3>
+<p>The feature card turns over on hover; this one turns over on its own. Every eight seconds it makes a half turn, holds the other face for a while, and turns back, so both faces get their time without anyone touching it. Add <code>allegory-turn-card</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="allegory-turn-card">
+<article class="card card-feature allegory-turn-card">
+  <figure class="card-media"><img src="../../assets/card-4.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">The other face, in time</h3>
+    <p class="card-text">A half turn at the two-second mark, held until the six, and a half turn back. The card's own hover flip is disabled while it runs.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-turn-card">&lt;article class="card card-feature allegory-turn-card"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-4.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;The other face, in time&lt;/h3&gt;
+    &lt;p class="card-text"&gt;A half turn at the two-second mark, held until the six, and a half turn back. The card's own hover flip is disabled while it runs.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -221,6 +239,7 @@
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card: turns over to the other face on hover and focus</td></tr>
       <tr><td><code>.card.allegory-halo</code></td><td>Pinned to the day face, ornament at the foot (Allegory only)</td></tr>
       <tr><td><code>.card.allegory-horn</code></td><td>Pinned to the night face, ornament at the foot (Allegory only)</td></tr>
+      <tr><td><code>.card.card-feature.allegory-turn-card</code></td><td>Turns a half turn to the other face and back, every eight seconds; hover pauses it</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

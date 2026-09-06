@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Brutal News's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Brutal News's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -132,6 +132,34 @@
     &lt;a class="btn btn-lg" href="index.html"&gt;Browse the components&lt;/a&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The roller</h3>
+<p>A black roller crosses the hero from left to right and the headline is printed behind it: the text is clipped to the roller's trailing edge, so each letter appears the moment the ink passes. Runs once, on load. Add <code>brutal-news-roller</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="brutal-news-roller">
+<section class="hero brutal-news-lead brutal-news-roller">
+  <p class="kicker">Printed as you watch</p>
+  <h1>Ink goes on. Words come out.</h1>
+  <div class="brutal-news-columns">
+    <p>The roller is one black bar sliding across; the headline's clip follows its trailing edge. Two keyframes, one and a half seconds.</p>
+    <p>The columns under it print after, in the same way, one beat later.</p>
+  </div>
+  <div class="row">
+    <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    <a class="btn btn-lg" href="index.html">Browse the components</a>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="brutal-news-roller">&lt;section class="hero brutal-news-lead brutal-news-roller"&gt;
+  &lt;p class="kicker"&gt;Printed as you watch&lt;/p&gt;
+  &lt;h1&gt;Ink goes on. Words come out.&lt;/h1&gt;
+  &lt;div class="brutal-news-columns"&gt;
+    &lt;p&gt;The roller is one black bar sliding across; the headline's clip follows its trailing edge. Two keyframes, one and a half seconds.&lt;/p&gt;
+    &lt;p&gt;The columns under it print after, in the same way, one beat later.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;a class="btn btn-lg" href="index.html"&gt;Browse the components&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -140,6 +168,7 @@
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
       <tr><td><code>.hero.brutal-news-press</code></td><td>The stepped slam, the wipe and the stamp</td></tr>
       <tr><td><code>.badge.brutal-news-stamp</code></td><td>The red stamp pinned to the top corner</td></tr>
+      <tr><td><code>.hero.brutal-news-roller</code></td><td>The roller bar and the printed headline and columns</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

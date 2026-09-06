@@ -69,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Hero</h1>
-  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Neon's, then a second variant that moves.</p>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Neon's, then two variants that move.</p>
 </header>
 <h2 id="preview">Preview</h2>
 <p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
@@ -118,6 +118,28 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
+<h3>The switch-on</h3>
+<p>The sign comes on one word at a time. Each word starts dark, stutters twice as the gas catches, and holds lit, and the next word starts a beat later. It plays once; after that the sign is simply on. Add <code>neon-switch-on</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="neon-switch-on">
+<section class="hero neon-stage neon-switch-on">
+  <div class="stack">
+    <h1><span class="neon-text">Open.</span> <span class="neon-text">All.</span> <span class="neon-text">Night.</span></h1>
+    <p>Three tubes, three switches, half a second apart. The stutter is four stepped frames; the hold is the rest of the page.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-switch-on">&lt;section class="hero neon-stage neon-switch-on"&gt;
+  &lt;div class="stack"&gt;
+    &lt;h1&gt;&lt;span class="neon-text"&gt;Open.&lt;/span&gt; &lt;span class="neon-text"&gt;All.&lt;/span&gt; &lt;span class="neon-text"&gt;Night.&lt;/span&gt;&lt;/h1&gt;
+    &lt;p&gt;Three tubes, three switches, half a second apart. The stutter is four stepped frames; the hold is the rest of the page.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -126,6 +148,7 @@
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
       <tr><td><code>.hero.neon-chase</code></td><td>The stage with the lights around it</td></tr>
       <tr><td><code>.neon-chase-lights</code></td><td>The inline SVG; its rect is one dashed stroke on a loop</td></tr>
+      <tr><td><code>.hero.neon-stage.neon-switch-on</code></td><td>Each .neon-text word in the heading catches in turn</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

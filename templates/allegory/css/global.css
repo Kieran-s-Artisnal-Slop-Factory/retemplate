@@ -2125,6 +2125,69 @@ h3.allegory-band { font-size: var(--font-size-xl); }
   }
 }
 
+/* The tide: the two faces drift against each other and glow at the turn. */
+.hero.allegory-tide .allegory-diptych > * {
+  animation: allegory-tide-up 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero.allegory-tide .allegory-diptych > :last-child {
+  animation-name: allegory-tide-down;
+}
+
+@keyframes allegory-tide-up {
+  0%, 100% { transform: translateY(0.6rem); filter: brightness(0.96); }
+  50% { transform: translateY(-0.6rem); filter: brightness(1.06); }
+}
+
+@keyframes allegory-tide-down {
+  0%, 100% { transform: translateY(-0.6rem); filter: brightness(1.06); }
+  50% { transform: translateY(0.6rem); filter: brightness(0.96); }
+}
+
+/* == card variants (animated) == */
+/* The turn: the feature card turns itself over and back on a loop, using
+ * the same mechanism as its hover flip: the card turns in perspective, its
+ * children mirror at the halfway point, and the face colours swap there. */
+.card.card-feature.allegory-turn-card {
+  animation: allegory-turn-card 8s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+
+.card.card-feature.allegory-turn-card > * {
+  animation: allegory-turn-inner 8s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+
+.card.card-feature.allegory-turn-card .card-title {
+  animation: allegory-turn-title 8s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+
+.card.card-feature.allegory-turn-card:hover,
+.card.card-feature.allegory-turn-card:hover > *,
+.card.card-feature.allegory-turn-card:hover .card-title {
+  animation-play-state: paused;
+}
+
+@keyframes allegory-turn-card {
+  0%, 20% { transform: perspective(60rem) rotateY(0); background: var(--surface-color); color: var(--text-color); border-color: var(--allegory-band); }
+  25.9% { background: var(--surface-color); color: var(--text-color); border-color: var(--allegory-band); }
+  26% { background: var(--allegory-face-other-surface); color: var(--allegory-face-other-fg); border-color: var(--allegory-band-other); }
+  32%, 68% { transform: perspective(60rem) rotateY(180deg); box-shadow: var(--shadow-2); }
+  73.9% { background: var(--allegory-face-other-surface); color: var(--allegory-face-other-fg); border-color: var(--allegory-band-other); }
+  74% { background: var(--surface-color); color: var(--text-color); border-color: var(--allegory-band); }
+  80%, 100% { transform: perspective(60rem) rotateY(360deg); background: var(--surface-color); color: var(--text-color); border-color: var(--allegory-band); }
+}
+
+@keyframes allegory-turn-inner {
+  0%, 25.9% { transform: scaleX(1); }
+  26%, 73.9% { transform: scaleX(-1); }
+  74%, 100% { transform: scaleX(1); }
+}
+
+@keyframes allegory-turn-title {
+  0%, 25.9% { background: var(--allegory-band); color: var(--allegory-on-band); }
+  26%, 73.9% { background: var(--allegory-band-other); color: var(--allegory-on-band-other); }
+  74%, 100% { background: var(--allegory-band); color: var(--allegory-on-band); }
+}
+
 /* == print == */
 @media print {
   .navbar,

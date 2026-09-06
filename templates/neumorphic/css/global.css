@@ -1915,21 +1915,59 @@ fieldset.neumorphic-well {
   padding: var(--space-6);
   border-radius: var(--radius-lg);
   box-shadow: var(--neumorphic-raise-lg);
-  animation: neumorphic-breathe-out 6s ease-in-out infinite;
+  animation: neumorphic-breathe-out 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
 .hero.neumorphic-breathe .neumorphic-panel {
-  animation: neumorphic-breathe-in 6s ease-in-out infinite;
+  animation: neumorphic-breathe-in 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
+/* Every frame lists the same two shadows in the same order, so the browser
+ * interpolates offsets and blur instead of cutting between token values. The
+ * panel stays inset throughout and only its depth changes. */
 @keyframes neumorphic-breathe-out {
-  0%, 100% { box-shadow: var(--neumorphic-raise-lg); }
-  50% { box-shadow: var(--neumorphic-flat); }
+  0%   { box-shadow: 10px 10px 24px var(--neumorphic-dark), -10px -10px 24px var(--neumorphic-light); }
+  25%  { box-shadow: 7px 7px 18px var(--neumorphic-dark), -7px -7px 18px var(--neumorphic-light); }
+  50%  { box-shadow: 3px 3px 7px var(--neumorphic-dark), -3px -3px 7px var(--neumorphic-light); }
+  75%  { box-shadow: 7px 7px 18px var(--neumorphic-dark), -7px -7px 18px var(--neumorphic-light); }
+  100% { box-shadow: 10px 10px 24px var(--neumorphic-dark), -10px -10px 24px var(--neumorphic-light); }
 }
 
 @keyframes neumorphic-breathe-in {
-  0%, 100% { box-shadow: var(--neumorphic-flat); }
-  50% { box-shadow: var(--neumorphic-inset); }
+  0%   { box-shadow: inset 1px 1px 3px var(--neumorphic-dark), inset -1px -1px 3px var(--neumorphic-light); }
+  25%  { box-shadow: inset 2px 2px 5px var(--neumorphic-dark), inset -2px -2px 5px var(--neumorphic-light); }
+  50%  { box-shadow: inset 4px 4px 8px var(--neumorphic-dark), inset -4px -4px 8px var(--neumorphic-light); }
+  75%  { box-shadow: inset 2px 2px 5px var(--neumorphic-dark), inset -2px -2px 5px var(--neumorphic-light); }
+  100% { box-shadow: inset 1px 1px 3px var(--neumorphic-dark), inset -1px -1px 3px var(--neumorphic-light); }
+}
+
+/* The sweep: the dial's arc angle is registered so it animates. */
+@property --neumorphic-sweep-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 30deg;
+}
+
+.hero.neumorphic-sweep .neumorphic-dial {
+  --angle: var(--neumorphic-sweep-angle);
+  animation: neumorphic-sweep 8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes neumorphic-sweep {
+  0%, 100% { --neumorphic-sweep-angle: 30deg; }
+  50% { --neumorphic-sweep-angle: 300deg; }
+}
+
+/* == card variants (animated) == */
+/* The float: the card rocks a degree either way and its shadows follow,
+ * every frame listing the same two shadows so nothing cuts. */
+.card.neumorphic-float {
+  animation: neumorphic-float 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes neumorphic-float {
+  0%, 100% { transform: rotate(-1deg); box-shadow: 8px 6px 16px var(--neumorphic-dark), -4px -6px 14px var(--neumorphic-light); }
+  50% { transform: rotate(1deg); box-shadow: 4px 6px 14px var(--neumorphic-dark), -8px -6px 16px var(--neumorphic-light); }
 }
 
 /* == print == */

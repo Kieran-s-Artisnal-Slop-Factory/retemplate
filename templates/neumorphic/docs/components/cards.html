@@ -246,6 +246,24 @@
     &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>The float</h3>
+<p>The card rocks a degree either way and its shadows swing with it, so it reads as a plate floating on the surface rather than fixed to it. Seven seconds a cycle, always eased. Add <code>neumorphic-float</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="neumorphic-float">
+<article class="card neumorphic-float">
+  <figure class="card-media"><img src="../../assets/card-2.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Floating</h3>
+    <p class="card-text">Rotation and shadow move together: as the plate tips left, the light catches its right edge.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neumorphic-float">&lt;article class="card neumorphic-float"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-2.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Floating&lt;/h3&gt;
+    &lt;p class="card-text"&gt;Rotation and shadow move together: as the plate tips left, the light catches its right edge.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -262,6 +280,7 @@
       <tr><td><code>.neumorphic-tile</code></td><td>Neumorphic: a card that reads one number; the title becomes a label</td></tr>
       <tr><td><code>.neumorphic-tile-value</code></td><td>Neumorphic: the reading, large and tabular; <code>&lt;small&gt;</code> for the unit</td></tr>
       <tr><td><code>.neumorphic-pressed</code></td><td>Neumorphic: the card sunk into the surface</td></tr>
+      <tr><td><code>.card.neumorphic-float</code></td><td>Rocks a degree each way with its shadows following</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

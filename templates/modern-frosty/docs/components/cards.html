@@ -218,6 +218,24 @@
     &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;</code></pre></div>
+<h3>The thaw</h3>
+<p>The feature card's frost clears on hover; this card's frost clears on its own and comes back. The pane over the picture goes from an eight-pixel blur to none over three seconds, holds clear, and frosts over again, on a ten-second loop. Add <code>modern-frosty-thaw</code> to the card; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="modern-frosty-thaw">
+<article class="card card-feature modern-frosty-thaw">
+  <figure class="card-media"><img src="../../assets/card-4.svg" alt="" width="640" height="400"></figure>
+  <div class="card-body">
+    <h3 class="card-title">Frost, then not, then frost</h3>
+    <p class="card-text">The same pane as the feature card, animated instead of hovered. Hover still clears it at once.</p>
+  </div>
+</article>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-thaw">&lt;article class="card card-feature modern-frosty-thaw"&gt;
+  &lt;figure class="card-media"&gt;&lt;img src="../../assets/card-4.svg" alt="" width="640" height="400"&gt;&lt;/figure&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h3 class="card-title"&gt;Frost, then not, then frost&lt;/h3&gt;
+    &lt;p class="card-text"&gt;The same pane as the feature card, animated instead of hovered. Hover still clears it at once.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
 <p>The rules live in <code>css/global.css</code> under <code>/* == cards == */</code>.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
@@ -232,6 +250,7 @@
       <tr><td><code>.card-media-end</code></td><td>With .card-horizontal: media on the right</td></tr>
       <tr><td><code>.card-feature</code></td><td>The template's dynamic card</td></tr>
       <tr><td><code>.modern-frosty-ledger</code></td><td>Modern Frosty only, on .grid-2 or .grid-3: cards share their hairlines</td></tr>
+      <tr><td><code>.card.card-feature.modern-frosty-thaw</code></td><td>The frost pane clears and frosts over again every ten seconds</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

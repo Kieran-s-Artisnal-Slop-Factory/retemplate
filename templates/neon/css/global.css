@@ -2310,6 +2310,35 @@ hr.page-break::after {
   }
 }
 
+/* The switch-on: each word of the sign catches in turn, with a stutter. */
+.hero.neon-switch-on h1 > .neon-text {
+  animation: neon-catch 1.2s steps(1, end) both;
+}
+
+.hero.neon-switch-on h1 > .neon-text:nth-child(2) { animation-delay: 600ms; }
+.hero.neon-switch-on h1 > .neon-text:nth-child(3) { animation-delay: 1200ms; }
+
+@keyframes neon-catch {
+  0% { opacity: 0.15; text-shadow: none; }
+  30% { opacity: 1; }
+  38% { opacity: 0.25; text-shadow: none; }
+  50% { opacity: 1; }
+  58% { opacity: 0.4; text-shadow: none; }
+  70%, 100% { opacity: 1; }
+}
+
+/* == card variants (animated) == */
+/* The pulse: the cyan tube around the card swells and eases back. */
+.card.neon-pulse {
+  border-color: var(--neon-cyan);
+  animation: neon-pulse 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { box-shadow: 0 0 4px var(--neon-cyan), 0 0 10px var(--neon-cyan), inset 0 0 4px var(--neon-cyan); }
+  50% { box-shadow: 0 0 10px var(--neon-cyan), 0 0 28px var(--neon-cyan), inset 0 0 10px var(--neon-cyan); }
+}
+
 /* == print == */
 @media print {
   .navbar,
