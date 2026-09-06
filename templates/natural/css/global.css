@@ -60,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
-  background-image: var(--natural-moss-tint), var(--natural-veil), var(--natural-soil);
+  background-image: var(--natural-moss-tint);
   background-attachment: fixed, fixed, fixed;
   background-size: auto, auto, 320px 320px;
 }
@@ -2253,6 +2253,34 @@ hr.page-break::after {
 }
 
 /* == hero variants == */
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.hero.hero-text > .stack {
+  max-width: 62ch;
+}
+
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
+}
+
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 /* The growth: a stem draws its length, then each leaf opens from the stalk
  * in turn. Stroke and fill are moss tokens. */
 .natural-vine {
@@ -2294,25 +2322,48 @@ hr.page-break::after {
   }
 }
 
-/* The dapple: a patch of light drifts across the plate and back. */
+/* The canopy: two blurred leaf shadows in moss drift across the plate one
+ * way while a patch of sun drifts the other. The shadows multiply into the
+ * picture so they show on paper and soil alike. */
 .hero.natural-dapple .natural-plate {
   position: relative;
   overflow: hidden;
 }
 
+.hero.natural-dapple .natural-plate::before,
 .hero.natural-dapple .natural-plate::after {
   content: "";
   position: absolute;
-  inset: -20%;
+  inset: -30%;
   pointer-events: none;
-  background: radial-gradient(closest-side, var(--natural-tape), transparent 70%);
-  opacity: 0.8;
-  animation: natural-dapple 12s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
-@keyframes natural-dapple {
-  0%, 100% { transform: translate(-25%, -20%) scale(0.9); }
-  50% { transform: translate(25%, 20%) scale(1.1); }
+.hero.natural-dapple .natural-plate::before {
+  background:
+    radial-gradient(28% 18% at 30% 35%, var(--natural-moss) 0 60%, transparent 100%),
+    radial-gradient(22% 30% at 68% 62%, var(--natural-moss) 0 55%, transparent 100%),
+    radial-gradient(18% 12% at 55% 20%, var(--natural-moss) 0 50%, transparent 100%);
+  filter: blur(14px);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  animation: natural-canopy 16s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero.natural-dapple .natural-plate::after {
+  background: radial-gradient(35% 30% at 50% 50%, var(--natural-tape) 0 30%, transparent 100%);
+  filter: blur(10px);
+  mix-blend-mode: screen;
+  animation: natural-sun 16s cubic-bezier(0.45, 0, 0.55, 1) infinite reverse;
+}
+
+@keyframes natural-canopy {
+  0%, 100% { transform: translate(-12%, -8%) rotate(-6deg); }
+  50% { transform: translate(14%, 10%) rotate(5deg); }
+}
+
+@keyframes natural-sun {
+  0%, 100% { transform: translate(-25%, 18%); }
+  50% { transform: translate(25%, -18%); }
 }
 
 /* == card variants (animated) == */

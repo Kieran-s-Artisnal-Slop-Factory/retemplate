@@ -78,14 +78,14 @@
   --font-body: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
   --font-display: var(--font-body);
-  --font-weight-display: 600;
+  --font-weight-display: 700;
   --font-size-sm: 0.8125rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.1875rem;
   --font-size-xl: 1.5rem;
-  --font-size-2xl: 1.875rem;
+  --font-size-2xl: 2.125rem;
   --font-size-3xl: 2.375rem;
-  --font-size-hero: clamp(2.25rem, 1.4rem + 2.6vw, 3.5rem);
+  --font-size-hero: clamp(2.75rem, 1.6rem + 4.2vw, 5.25rem);
   --line-height: 1.55;
 
   /* ── Spacing ───────────────────────────────────────────────────────── */
@@ -151,8 +151,14 @@
  */
 :root,
 .themed {
-  --modern-frosty-frost: light-dark(rgb(255 255 255 / 0.72), rgb(21 34 50 / 0.72));
-  --modern-frosty-blur: 8px;
+  --modern-frosty-frost: light-dark(rgb(255 255 255 / 0.5), rgb(21 34 50 / 0.55));
+  --modern-frosty-blur: 18px;
+  --modern-frosty-rime: light-dark(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.14));
+  --modern-frosty-sky: linear-gradient(160deg,
+    light-dark(#dbe9fa, #0b1522) 0%,
+    light-dark(#f4f7fb, #12243a) 40%,
+    light-dark(#eaf2fb, #0f1a27) 65%,
+    light-dark(#c9dcf3, #1a3049) 100%);
   --modern-frosty-ice: light-dark(#e2eefa, #1a3049);
   --modern-frosty-rule: light-dark(#e3ecf5, #21354a);
   --modern-frosty-hairline: 1px;

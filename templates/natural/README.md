@@ -80,10 +80,9 @@ cupboard, and all of it is documented on `docs/components/flare.html`:
 Nothing animates continuously; the only motion is the tag on the feature
 card, which the global `prefers-reduced-motion` rule shortens to nothing.
 
-The soil texture and the corner tint are `--natural-*` tokens layered on
-`<body>`. The texture is a fine, faint grain; it is covered by a
-`light-dark(var(--pal-bg0), transparent)` gradient, so it shows only in the
-dark half. Remove `background-image` from `body` in `global.css` to lose
+The corner tint is a `--natural-*` token layered on `<body>`; the dark
+half is a flat deep brown with no texture. Remove `background-image` from
+`body` in `global.css` to lose
 both.
 
 ## Swapping templates
@@ -98,7 +97,7 @@ to another template, replace `css/` and `assets/`, change `data-theme` on
 The palette block below is a [retoken](https://kieranwood.ca/retoken/theme/)
 theme. Paste it into a retoken site's `theme.css` after the existing palettes
 and select it with `<html data-theme="natural">`. Colours carry over; the
-fonts, the soil texture, the sprig and the specimen tag are this template's
+fonts, the sprig and the specimen tag are this template's
 own tokens and stay here.
 
 ```css

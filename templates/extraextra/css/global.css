@@ -1474,54 +1474,77 @@ hr.page-break::after {
 
 /* == navbar == */
 /* The navbar is the first orange band, in both schemes: black type on
- * orange, a rule under it in the ink colour. */
+ * orange, a rule under it in the ink colour, and every item in its own
+ * cell with a rule between, like the column rules of a masthead. */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 10;
   height: var(--navbar-height);
   display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: 0 var(--extraextra-gutter);
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
   background: var(--extraextra-orange);
   color: var(--extraextra-on-orange);
   border-bottom: var(--extraextra-rule) solid var(--border-color);
 }
 
 .brand {
-  font-family: var(--font-display);
-  font-weight: var(--font-weight-display);
-  font-size: var(--font-size-xl);
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--extraextra-gutter);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.12em;
   color: inherit;
   text-decoration: none;
   margin-right: auto;
   line-height: 1;
+  border-right: var(--extraextra-rule) solid var(--extraextra-on-orange);
 }
 
 .navbar nav a {
-  display: block;
-  padding: var(--space-2) var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--space-5);
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-weight: 600;
   font-size: var(--font-size-sm);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border: var(--extraextra-rule) solid transparent;
+  letter-spacing: 0.12em;
+  border-left: var(--extraextra-rule) solid var(--extraextra-on-orange);
 }
 
 .navbar nav a:hover {
-  border-color: var(--extraextra-on-orange);
+  background: var(--extraextra-on-orange);
+  color: var(--extraextra-orange);
 }
 
 .navbar nav a[aria-current="page"] {
-  background: var(--extraextra-on-orange);
-  color: var(--extraextra-orange);
-  border-color: var(--extraextra-on-orange);
+  box-shadow: inset 0 calc(-1 * var(--extraextra-bar)) 0 var(--extraextra-on-orange);
+}
+
+.navbar > .scheme-toggle,
+.navbar > .nav-toggle {
+  width: var(--navbar-height);
+  height: auto;
+  border: 0;
+  border-left: var(--extraextra-rule) solid var(--extraextra-on-orange);
+}
+
+.navbar > .site-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--extraextra-gutter);
+  border-left: var(--extraextra-rule) solid var(--extraextra-on-orange);
+  text-decoration: none;
 }
 
 .nav-toggle,
@@ -1623,7 +1646,9 @@ hr.page-break::after {
 @media (min-width: 48rem) {
   .navbar nav {
     display: flex;
-    gap: var(--space-1);
+    align-items: stretch;
+    height: 100%;
+    gap: 0;
     position: static;
     inset: auto;
     width: auto;
@@ -2287,6 +2312,34 @@ hr.page-break::after {
 }
 
 /* == hero variants == */
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.hero.hero-text > .stack {
+  max-width: 62ch;
+}
+
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
+}
+
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 /* The slap: each word of the headline is a poster that lands from its own
  * side with a tilt; a sticker spins on last. */
 .hero.extraextra-slap {

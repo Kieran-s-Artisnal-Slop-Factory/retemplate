@@ -132,6 +132,42 @@
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h2 id="variants">Variants</h2>
+<h3>Text only</h3>
+<p>The same hero with nothing beside the words. Add <code>hero-text</code>: the grid becomes one column and the stack is capped at a readable measure. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-text">
+<section class="hero hero-text">
+  <div class="stack">
+    <p class="kicker">Words only</p>
+    <h1>A hero with nothing beside it.</h1>
+    <p>One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-text">&lt;section class="hero hero-text"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Words only&lt;/p&gt;
+    &lt;h1&gt;A hero with nothing beside it.&lt;/h1&gt;
+    &lt;p&gt;One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>Image only</h3>
+<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-image">
+<section class="hero hero-image">
+  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
+  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+&lt;/section&gt;</code></pre></div>
 <h3>The growth</h3>
 <p>A stem draws itself up the page and its leaves unfold from the stalk one after another, in moss and the lighter moss of the tags. It grows once, in about three seconds, and then stands. Add <code>natural-grow</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
 <figure class="example" data-snippet="natural-grow">
@@ -178,8 +214,8 @@
     &lt;/svg&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>The dapple</h3>
-<p>Light through leaves moves across the specimen plate: a soft patch of brightness drifts slowly over the picture and back, as the sun does through a window with a tree outside. The plate and the label never move; only the light does. Add <code>natural-dapple</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<h3>The canopy</h3>
+<p>Leaf shadows cross the specimen plate as the light behind them moves: two dark, blurred leaves drift one way over sixteen seconds while a patch of sun drifts the other, so the plate is always half in shade and the shade is always somewhere new. Add <code>natural-dapple</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
 <figure class="example" data-snippet="natural-dapple">
 <section class="hero natural-dapple">
   <div class="natural-flare">
@@ -193,8 +229,8 @@
   </div>
   <div class="stack">
     <p class="kicker">A retemplate template</p>
-    <h1>Light through <em>leaves</em>.</h1>
-    <p>A patch of brightness crosses the plate over twelve seconds and comes back. It is a radial gradient in the tape colour, blended over the picture at low strength.</p>
+    <h1>Under the <em>canopy</em>.</h1>
+    <p>Two leaf shadows in moss drift across the plate and a patch of sun drifts the other way. The shadows multiply into the picture, so they read on paper and on soil alike.</p>
     <div class="row">
       <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
       <a class="btn btn-lg" href="index.html">Browse components</a>
@@ -214,8 +250,8 @@
   &lt;/div&gt;
   &lt;div class="stack"&gt;
     &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
-    &lt;h1&gt;Light through &lt;em&gt;leaves&lt;/em&gt;.&lt;/h1&gt;
-    &lt;p&gt;A patch of brightness crosses the plate over twelve seconds and comes back. It is a radial gradient in the tape colour, blended over the picture at low strength.&lt;/p&gt;
+    &lt;h1&gt;Under the &lt;em&gt;canopy&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p&gt;Two leaf shadows in moss drift across the plate and a patch of sun drifts the other way. The shadows multiply into the picture, so they read on paper and on soil alike.&lt;/p&gt;
     &lt;div class="row"&gt;
       &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
       &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
@@ -232,7 +268,9 @@
       <tr><td><code>.natural-vine</code></td><td>The inline SVG</td></tr>
       <tr><td><code>.natural-vine-stem</code></td><td>One path that draws its own length</td></tr>
       <tr><td><code>.natural-vine-leaf</code></td><td>A leaf; opens from its base after a delay set by --i</td></tr>
-      <tr><td><code>.hero.natural-dapple</code></td><td>The plate with a patch of light drifting over it</td></tr>
+      <tr><td><code>.hero.natural-dapple</code></td><td>The plate with leaf shadows and a patch of sun drifting across it</td></tr>
+      <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

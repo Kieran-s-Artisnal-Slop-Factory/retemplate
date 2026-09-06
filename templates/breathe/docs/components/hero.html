@@ -128,6 +128,42 @@
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h2 id="variants">Variants</h2>
+<h3>Text only</h3>
+<p>The same hero with nothing beside the words. Add <code>hero-text</code>: the grid becomes one column and the stack is capped at a readable measure. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-text">
+<section class="hero hero-text">
+  <div class="stack">
+    <p class="kicker">Words only</p>
+    <h1>A hero with nothing beside it.</h1>
+    <p>One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-text">&lt;section class="hero hero-text"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Words only&lt;/p&gt;
+    &lt;h1&gt;A hero with nothing beside it.&lt;/h1&gt;
+    &lt;p&gt;One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>Image only</h3>
+<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-image">
+<section class="hero hero-image">
+  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
+  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+&lt;/section&gt;</code></pre></div>
 <h3>The seeds</h3>
 <p>Six seeds drift up from the bottom of the hero and out of it, each on its own slow path and its own delay, fading as they go. It is the frond's motion given to the air: nothing else on the page moves. Add <code>breathe-seeds</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
 <figure class="example" data-snippet="breathe-seeds">
@@ -170,36 +206,32 @@
     &lt;span style="--x: 90%; --d: 3.9s"&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
-<h3>The dew</h3>
-<p>A drop forms at the tip of the frond, swells, lets go, and falls, and then another begins. The drop is a single pale disc; forming is a scale, falling is a translate, and the whole thing is one keyframe on a five-second loop. Add <code>breathe-dew</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
-<figure class="example" data-snippet="breathe-dew">
-<section class="hero breathe-dew">
+<h3>The breathing ripple</h3>
+<p>Rings of mint spread from behind the heading on the rhythm of a breath: each swells slowly for most of its life and fades at the end, and the next begins before the last is gone, so the page seems to inhale and exhale. Nothing on the page moves but the rings. Add <code>breathe-ripple</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="breathe-ripple">
+<section class="hero breathe-ripple">
+  <div class="breathe-flare breathe-rings" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="stack">
     <p class="kicker">A retemplate template</p>
-    <h1>One drop, <em>then another</em>.</h1>
-    <p>It gathers for two seconds, holds for one, and falls in one. The frond it hangs from is the hero's own; the drop sits at its tip.</p>
+    <h1>In, and <em>out</em>.</h1>
+    <p>Three rings widen from behind the heading on the rhythm of a slow breath: eight seconds each, a new one every two and a half, drawn in the deep mint and gone before they reach the edge.</p>
     <div class="row">
       <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
       <a class="btn btn-lg breathe-quiet" href="index.html">Browse the components</a>
     </div>
   </div>
-  <div class="breathe-flare breathe-dew-pot" aria-hidden="true">
-    <span class="breathe-drop"></span>
-  </div>
 </section>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-dew">&lt;section class="hero breathe-dew"&gt;
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="breathe-ripple">&lt;section class="hero breathe-ripple"&gt;
+  &lt;div class="breathe-flare breathe-rings" aria-hidden="true"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
   &lt;div class="stack"&gt;
     &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
-    &lt;h1&gt;One drop, &lt;em&gt;then another&lt;/em&gt;.&lt;/h1&gt;
-    &lt;p&gt;It gathers for two seconds, holds for one, and falls in one. The frond it hangs from is the hero's own; the drop sits at its tip.&lt;/p&gt;
+    &lt;h1&gt;In, and &lt;em&gt;out&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p&gt;Three rings widen from behind the heading on the rhythm of a slow breath: eight seconds each, a new one every two and a half, drawn in the deep mint and gone before they reach the edge.&lt;/p&gt;
     &lt;div class="row"&gt;
       &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
       &lt;a class="btn btn-lg breathe-quiet" href="index.html"&gt;Browse the components&lt;/a&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="breathe-flare breathe-dew-pot" aria-hidden="true"&gt;
-    &lt;span class="breathe-drop"&gt;&lt;/span&gt;
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h2 id="classes">Classes</h2>
@@ -211,9 +243,11 @@
       <tr><td><code>.hero.breathe-seeds</code></td><td>The hero clipped so the seeds leave at its top edge</td></tr>
       <tr><td><code>.breathe-air</code></td><td>The layer holding the seeds</td></tr>
       <tr><td><code>.breathe-air span</code></td><td>A seed; --x is its column, --d its delay</td></tr>
-      <tr><td><code>.hero.breathe-dew</code></td><td>The hero with a drop forming and falling beside it</td></tr>
-      <tr><td><code>.breathe-dew-pot</code></td><td>The mint panel the drop falls through</td></tr>
       <tr><td><code>.breathe-drop</code></td><td>The drop</td></tr>
+      <tr><td><code>.hero.breathe-ripple</code></td><td>The hero with breathing rings behind its heading</td></tr>
+      <tr><td><code>.breathe-rings span</code></td><td>A ring; three, two and a half seconds apart</td></tr>
+      <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

@@ -62,6 +62,16 @@ Before beginning make sure the VERSION is up to date, and create a file called `
   - [ ] Owner eyeball of each variant at real speed (listed under For human)
   - [x] Neumorphic breath and Gothic candle smoothed (2026-09-05): same-shape shadows in every keyframe, sixteen eased stops for the candle
   - [x] Second animated hero variant in every template (2026-09-05): Plain's roll, Neumorphic's sweep, Brutal News' roller, Glassy's ripple, Neon's switch-on, Natural's dapple, Detailed's rays, Gothic's scribe, Allegory's tide, ExtraExtra's roll-by, Breathe's dew, Modern Frosty's defrost, Thick's pile-up, Cattle's lasso
+- [x] Third batch (2026-09-05, owner's notes on the animated variants)
+  - [x] Breathe: the dew hero replaced by the breathing ripple
+  - [x] Allegory: the turning-page hero replaced by the radiance, a doubled band-colour frame with a pulsing light, gold by day and red by night
+  - [x] Natural: the dapple replaced by the canopy (leaf shadows and a patch of sun crossing the plate, visibly); the dark soil texture removed, colour kept
+  - [x] Glassy: the default sheet now fills the width and most of the viewport, cut at an angle top-left and bottom-right; the ripple replaced by the crack, which breaks a full sheet into that shape
+  - [x] ExtraExtra: the navbar segmented into cells with rules between, mono capitals
+  - [x] Modern Frosty made bolder: a fixed sky of ice behind the page, every pane (dock, hero, cards, note, footer) a sheet of frost blurred at 18px with a rime of light, heavy tight headlines
+  - [x] Termy; a terminal template: dark green phosphor screen by day, black on white by night, JetBrains Mono, no corners, prompts, brackets, cursor, and a configurable CRT overlay (`body.termy-crt`, `--termy-crt-strength`, `--termy-crt-flicker`)
+    - [x] [reference](https://www.whichai.dev/without-design-skill/glm-5.3-flash/5)
+  - [x] Every template: `.hero.hero-text` (words only) and `.hero.hero-image` (picture only) contract variants on `docs/components/hero.html`
 - [x] Animated card variant in every template (2026-09-05), on each `docs/components/cards.html`: Plain's sheen, Neumorphic's float, Brutal News' flash, Glassy's glint, Neon's pulse, Natural's swing, Detailed's marquee lights, Gothic's ember, Allegory's turn, ExtraExtra's flutter, Breathe's bloom, Modern Frosty's thaw, Thick's hop, Cattle's smoulder
 
 ## For human
@@ -74,6 +84,7 @@ This section is for me to keep track of what I need to manually review, feel fre
 - [ ] Checkpoint C visual pass (2026-09-04): please eyeball `templates/neon` and `templates/natural` overviews and example sites in both schemes. Neon: is the light half (`#3a3a42` ground, black form fields and drawer from the `color-scheme: dark` override) "less dark" enough and intentional-looking; the feature card's 4 s border sweep, the haze breathing and the `.neon-sign` flicker; the full-width feature card is very tall at desktop widths (inherited from plain). Natural: the dark soil texture strength (softened once), the pressed-specimen card's tag lift and tape at real hover speed, and whether the faint moss corner tint in light mode reads at all on your monitor.
 - [ ] Checkpoint D visual pass (2026-09-04): please eyeball `templates/detailed`, `templates/gothic` and `templates/allegory` overviews and example sites in both schemes. Detailed: the dark scheme (sunburst gold on navy, body-ray density), the 92px Limelight marquee (too loud?), the stepped card's 1px gold hairline at fractional zoom. Gothic: the arched card pictures on pale stone (lancet outline may be faint), the 3.6em illuminated initial, the stained-glass wash at hover speed, ESC and light-dismiss on popovers and dialogs. Allegory: the gold and red display bands sit below 3:1 by the brief's hybrid reading (white on `#c8a44a` is 2.4:1, black on `#b3122e` is 2.9:1), the feature-card flip on hover, how the ivory pinned header reads on the dark ascent page.
 - [ ] Decision 21 (2026-09-04): the three Checkpoint D templates were built to the "must not feel the same" rule; the five before it were not. Phase 11 opens with a distinctiveness pass over neumorphic, brutal-news, glassy, neon and natural. Say if any of the three new ones overshoots so that pass can be calibrated.
+- [ ] Termy's CRT (2026-09-05): please judge the scanline strength (0.5) and the five-second flicker on your screen, and whether the green scheme's glow is legible at small sizes. Both are knobs.
 - [ ] Hero variants (2026-09-05): please watch each template's `docs/components/hero.html` second variant at real speed in both schemes. Things a script cannot judge: whether Neon's chasing lights and Gothic's candle flicker are lively or nagging, whether Detailed's curtain and ExtraExtra's slap are too much on a reload, and whether Modern Frosty's typed command reads as a feature or a gimmick.
 - [ ] Modern Frosty rework (2026-09-05): the dock (floating pill navbar), the ink slab, the ember dot and Newsreader italic were added to answer "not unique enough". Say if it now overshoots the "lightly frosted, basic minimal" brief.
 - [ ] Open questions still defaulted, answer before Phase 3 if you disagree: fonts by Google Fonts `<link>` (or approve a download script), Brutal News built to the TODO's words (thick rules, harsh hues) rather than the 2px reference, Allegory's white-on-gold / black-on-red kept for display bands only
@@ -86,7 +97,7 @@ The authority is `docs/dev/template-contract.md` (written in Phase 0 of `version
 2. It includes the following components on top of the normal form fields, buttons, typography, images, `<dialog>` modals, etc. — with the **same markup and class names in every template** (the contract), so switching templates is a stylesheet swap:
   1. Accordion (`<details class="accordion">`; `.accordion-group` shares a `name` for exclusive open)
   2. Cards (`.card` with heading, description, icon or image; `.card-horizontal` with media left, `.card-media-end` for right; `.card-feature` = one dynamic card with an effect that suits the template)
-  3. Hero (`.hero` with a `.stack`; the template's own form, plus one animated `.<name>-*` variant on `docs/components/hero.html` that stops under `prefers-reduced-motion`)
+  3. Hero (`.hero` with a `.stack`; the template's own form, the contract variants `.hero-text` and `.hero-image`, plus two animated `.<name>-*` variants on `docs/components/hero.html` that stop under `prefers-reduced-motion`)
   4. Fifty-fifty (`.fifty-fifty`, image 50 %, `.fifty-fifty-reverse` for image right; stacks image-first on mobile)
   5. Image gallery with lightbox (`.gallery` + one `<dialog class="lightbox">` per gallery, `:target` slides, prev/next anchors)
   6. Toggle switch (`.switch`, `<input type="checkbox" role="switch">`)

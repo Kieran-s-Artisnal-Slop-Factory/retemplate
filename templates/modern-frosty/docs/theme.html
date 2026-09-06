@@ -191,10 +191,12 @@
 }</code></pre></div>
 <p>Two things the block deliberately does not do: it never declares a bare <code>:root</code> (pasted into retoken that would override the site's default palette), and it never declares fonts (their <code>url()</code>s would break outside this folder). That is why every page here sets <code>data-theme="modern-frosty"</code> on <code>&lt;html&gt;</code>.</p>
 <h2>Template-only tokens</h2>
-<p>Nine tokens of the template's own, prefixed <code>--modern-frosty-</code>. They live in <code>theme.css</code> beside the palette so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in.</p>
+<p>Eleven tokens of the template's own, prefixed <code>--modern-frosty-</code>. They live in <code>theme.css</code> beside the palette so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
-<tr><td><code>--modern-frosty-frost</code></td><td><code>light-dark(rgb(255 255 255 / 0.72), rgb(21 34 50 / 0.72))</code></td><td>The translucent fill of the navbar, top bar, note toolbar, dialogs, lightbox controls, menus and the feature card's pane</td></tr>
-<tr><td><code>--modern-frosty-blur</code></td><td><code>8px</code></td><td>The one blur radius behind every frosted surface; lower it and all of them follow</td></tr>
+<tr><td><code>--modern-frosty-frost</code></td><td><code>light-dark(rgb(255 255 255 / 0.5), rgb(21 34 50 / 0.55))</code></td><td>The translucent fill of every pane: the dock, the hero, cards, the note, dialogs, menus, the footer</td></tr>
+<tr><td><code>--modern-frosty-blur</code></td><td><code>18px</code></td><td>The one blur radius behind every frosted surface; lower it and all of them follow</td></tr>
+<tr><td><code>--modern-frosty-rime</code></td><td><code>light-dark(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.14))</code></td><td>The line of light along the top edge of every pane</td></tr>
+<tr><td><code>--modern-frosty-sky</code></td><td>a <code>linear-gradient()</code> of four <code>light-dark()</code> stops</td><td>The fixed gradient behind the page that the frost blurs</td></tr>
 <tr><td><code>--modern-frosty-ice</code></td><td><code>light-dark(#e2eefa, #1a3049)</code></td><td>The hover tint on buttons, nav links, table rows and ledger cells</td></tr>
 <tr><td><code>--modern-frosty-rule</code></td><td><code>light-dark(#e3ecf5, #21354a)</code></td><td>The ruled lines of the note's sheet</td></tr>
 <tr><td><code>--modern-frosty-hairline</code></td><td><code>1px</code></td><td>The border width, named once</td></tr>

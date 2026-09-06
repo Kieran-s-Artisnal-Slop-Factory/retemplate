@@ -1909,6 +1909,34 @@ fieldset.neumorphic-well {
 .banner-info.neumorphic-inset > span:first-child { color: var(--color-info); }
 
 /* == hero variants == */
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.hero.hero-text > .stack {
+  max-width: 62ch;
+}
+
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
+}
+
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 /* The breath: the hero is a plate whose shadow softens to flat and rises
  * again over six seconds; the panel inside breathes the other way. */
 .hero.neumorphic-breathe {

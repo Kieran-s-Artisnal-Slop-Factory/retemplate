@@ -120,42 +120,78 @@
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h2 id="variants">Variants</h2>
-<h3>The turning page</h3>
-<p>The diptych becomes two leaves of a book. Each lifts a little from its outer edge, as a page does before it turns, and settles again; the ascent lifts first, the descent four seconds later, so one is always rising while the other rests. Add <code>allegory-turn</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
-<figure class="example" data-snippet="allegory-turn">
-<section class="hero allegory-split allegory-turn">
+<h3>Text only</h3>
+<p>The same hero with nothing beside the words. Add <code>hero-text</code>: the grid becomes one column and the stack is capped at a readable measure. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-text">
+<section class="hero hero-text">
   <div class="stack">
-    <p class="kicker">Two faces, turning</p>
-    <h1>One leaf lifts. <em>The other rests.</em></h1>
+    <p class="kicker">Words only</p>
+    <h1>A hero with nothing beside it.</h1>
+    <p>One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-text">&lt;section class="hero hero-text"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Words only&lt;/p&gt;
+    &lt;h1&gt;A hero with nothing beside it.&lt;/h1&gt;
+    &lt;p&gt;One column, the text measure capped so the lines stay readable, and everything else the hero has: the kicker, the heading at the hero size, the paragraph, the buttons.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>Image only</h3>
+<p>A hero that is one picture, edge to edge, cropped to a wide band. Add <code>hero-image</code> and give it a single <code>&lt;img&gt;</code> (or a <code>&lt;figure&gt;</code>) with a real <code>alt</code>, since there is no heading to say what it is. Every template carries this variant with the same class.</p>
+<figure class="example" data-snippet="hero-image">
+<section class="hero hero-image">
+  <img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500">
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero-image">&lt;section class="hero hero-image"&gt;
+  &lt;img src="../../assets/hero.svg" alt="The template's hero picture, filling the width" width="1200" height="500"&gt;
+&lt;/section&gt;</code></pre></div>
+<h3>The radiance</h3>
+<p>The hero is framed in a doubled band-colour border with a hairline set outside it and a small diamond at two corners, and a light pulses through the frame: it swells outward over three seconds, brightening the heading with it, and settles. In the light scheme the frame and the light are gold; in the dark, red, because both are the one band token. Add <code>allegory-radiant</code> to the hero; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<figure class="example" data-snippet="allegory-radiant">
+<section class="hero allegory-split allegory-radiant">
+  <div class="stack">
+    <p class="kicker">Two faces, one light</p>
+    <h1>Lit from within, <em>either way.</em></h1>
   </div>
   <div class="allegory-diptych">
     <section class="allegory-halo">
       <h2 class="allegory-band">The ascent</h2>
-      <p>Lifts from its left edge, eight seconds a cycle, and never quite turns over.</p>
+      <p>By day the border is antique gold, doubled, with a hairline set outside it, and the light that pulses through it is gold.</p>
       <a class="btn allegory-vow" href="../../example/ascent.html">Read the ascent</a>
     </section>
     <section class="allegory-horn">
       <h2 class="allegory-band">The descent</h2>
-      <p>Lifts from its right edge, four seconds behind, so the two are never up together.</p>
+      <p>By night the same border is red, and the pulse is red. One rule, one token, two faces.</p>
       <a class="btn allegory-vow" href="../../example/descent.html">Read the descent</a>
     </section>
   </div>
 </section>
 </figure>
-<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-turn">&lt;section class="hero allegory-split allegory-turn"&gt;
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="allegory-radiant">&lt;section class="hero allegory-split allegory-radiant"&gt;
   &lt;div class="stack"&gt;
-    &lt;p class="kicker"&gt;Two faces, turning&lt;/p&gt;
-    &lt;h1&gt;One leaf lifts. &lt;em&gt;The other rests.&lt;/em&gt;&lt;/h1&gt;
+    &lt;p class="kicker"&gt;Two faces, one light&lt;/p&gt;
+    &lt;h1&gt;Lit from within, &lt;em&gt;either way.&lt;/em&gt;&lt;/h1&gt;
   &lt;/div&gt;
   &lt;div class="allegory-diptych"&gt;
     &lt;section class="allegory-halo"&gt;
       &lt;h2 class="allegory-band"&gt;The ascent&lt;/h2&gt;
-      &lt;p&gt;Lifts from its left edge, eight seconds a cycle, and never quite turns over.&lt;/p&gt;
+      &lt;p&gt;By day the border is antique gold, doubled, with a hairline set outside it, and the light that pulses through it is gold.&lt;/p&gt;
       &lt;a class="btn allegory-vow" href="../../example/ascent.html"&gt;Read the ascent&lt;/a&gt;
     &lt;/section&gt;
     &lt;section class="allegory-horn"&gt;
       &lt;h2 class="allegory-band"&gt;The descent&lt;/h2&gt;
-      &lt;p&gt;Lifts from its right edge, four seconds behind, so the two are never up together.&lt;/p&gt;
+      &lt;p&gt;By night the same border is red, and the pulse is red. One rule, one token, two faces.&lt;/p&gt;
       &lt;a class="btn allegory-vow" href="../../example/descent.html"&gt;Read the descent&lt;/a&gt;
     &lt;/section&gt;
   &lt;/div&gt;
@@ -206,8 +242,10 @@
       <tr><td><code>.hero</code></td><td>The opening section: a grid of a text stack and, in most templates, a picture or a piece of flare</td></tr>
       <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
       <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
-      <tr><td><code>.hero.allegory-split.allegory-turn</code></td><td>The diptych as two lifting leaves, out of phase</td></tr>
       <tr><td><code>.hero.allegory-split.allegory-tide</code></td><td>The faces of the diptych rise and fall against each other</td></tr>
+      <tr><td><code>.hero.allegory-split.allegory-radiant</code></td><td>The framed hero with a pulsing light in the band colour: gold by day, red by night</td></tr>
+      <tr><td><code>.hero.hero-text</code></td><td>Words only: one column, capped measure (every template)</td></tr>
+      <tr><td><code>.hero.hero-image</code></td><td>Picture only: one image edge to edge, cropped 21:9 (every template)</td></tr>
 </tbody></table></div>
 <h2 id="notes">Notes</h2>
 <ul>

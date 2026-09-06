@@ -46,6 +46,8 @@ textarea {
 /* == base == */
 html {
   background: var(--bg-color);
+  background-image: var(--modern-frosty-sky);
+  background-attachment: fixed;
   color: var(--text-color);
   font-family: var(--font-body);
   font-size: var(--font-size-base);
@@ -72,7 +74,7 @@ h6 {
   text-wrap: balance;
 }
 
-h1 { font-size: var(--font-size-2xl); letter-spacing: -0.025em; }
+h1 { font-size: var(--font-size-2xl); letter-spacing: -0.035em; }
 h2 { font-size: var(--font-size-xl); }
 h3 { font-size: var(--font-size-lg); letter-spacing: -0.01em; }
 h4 { font-size: var(--font-size-base); letter-spacing: 0; }
@@ -566,17 +568,26 @@ dialog::backdrop,
   margin-top: var(--space-4);
 }
 
+/* The hero is the biggest pane of frost on the page: a translucent sheet
+ * over the sky with a rime of light along its top edge, and the headline
+ * set bold and tight. */
 .hero {
-  padding: var(--space-6) 0 var(--space-5);
+  padding: clamp(var(--space-6), 6vw, 4.5rem) clamp(var(--space-5), 5vw, 3.5rem);
   display: grid;
   gap: var(--space-5);
   align-items: center;
+  background: var(--modern-frosty-frost);
+  backdrop-filter: blur(var(--modern-frosty-blur)) saturate(1.3);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 1px 0 var(--modern-frosty-rime), var(--shadow-2);
 }
 
 .hero h1 {
   font-size: var(--font-size-hero);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  font-weight: 700;
 }
 
 .hero > .stack > p {
@@ -593,7 +604,6 @@ dialog::backdrop,
   .hero {
     grid-template-columns: 5fr 4fr;
     gap: var(--space-6);
-    padding-top: calc(var(--space-6) + var(--space-4));
   }
 }
 
@@ -937,9 +947,11 @@ h2 em,
 .card {
   display: flex;
   flex-direction: column;
-  background: var(--surface-color);
+  background: var(--modern-frosty-frost);
+  backdrop-filter: blur(var(--modern-frosty-blur));
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
+  box-shadow: inset 0 1px 0 var(--modern-frosty-rime);
   overflow: hidden;
   transition: border-color 150ms, background-color 150ms;
 }
@@ -1601,8 +1613,7 @@ hr.page-break::after {
 
 /* == navbar == */
 /* The dock: a frosted pill that floats clear of the page edges and stays
- * put while the page scrolls under it. The one place on an ordinary page
- * where frost belongs, and the one place with a shadow. */
+ * put while the page scrolls under it. */
 .navbar {
   position: sticky;
   top: var(--space-3);
@@ -1919,7 +1930,8 @@ hr.page-break::after {
 .footer {
   margin-top: auto;
   border-top: 1px solid var(--border-color);
-  background: var(--bg-color);
+  background: var(--modern-frosty-frost);
+  backdrop-filter: blur(var(--modern-frosty-blur));
   color: var(--text-muted-color);
   font-size: var(--font-size-sm);
   padding: var(--space-6) var(--space-4);
@@ -2114,7 +2126,9 @@ hr.page-break::after {
 .modern-frosty-note {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  background: var(--surface-color);
+  background: var(--modern-frosty-frost);
+  backdrop-filter: blur(var(--modern-frosty-blur));
+  box-shadow: inset 0 1px 0 var(--modern-frosty-rime);
   overflow: hidden;
   position: relative;
   font-size: var(--font-size-sm);
@@ -2332,6 +2346,34 @@ hr.page-break::after {
 }
 
 /* == hero variants == */
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.hero.hero-text > .stack {
+  max-width: 62ch;
+}
+
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
+}
+
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 /* The prompt: centred, the stack rises, and the command on the slab types
  * itself out. The typed line is 26 characters wide; change both the text
  * and the width together. */

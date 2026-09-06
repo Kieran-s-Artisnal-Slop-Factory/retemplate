@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="termy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Flare · Termy</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+</head>
+<body class="termy-crt">
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Termy · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/hero.html">Hero</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html" aria-current="page">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Flare</h1>
+  <p>Flare is everything a template adds beyond the contract. Termy adds the window, a terminal frame with a transcript inside, and the CRT, an overlay on the whole page that is one class and two tokens. The prompts, hashes, brackets and cursor need no markup: they are generated content on the contract's own classes.</p>
+</header>
+<h2 id="preview">The window</h2>
+<p>A frame with three dots in its title bar and a <code>&lt;pre class="termy-prompt"&gt;</code> transcript. <code>&lt;b&gt;</code> is a prompt, <code>termy-ok</code>, <code>termy-err</code> and <code>termy-dim</code> colour a line. The overview and the example home use one as the hero's picture.</p>
+<figure class="example" data-snippet="termy-window">
+<div class="termy-flare">
+  <div class="termy-window">
+    <div class="termy-titlebar"><span></span><span></span><span></span>shelf — 80×24</div>
+<pre class="termy-prompt"><b>$</b> shelf sync
+<span class="termy-ok">✓</span> 3 notes pushed  <span class="termy-dim">0.2s</span>
+<b>$</b> shelf rm 0009
+<span class="termy-err">✗</span> refusing: note is pinned</pre>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="termy-window">&lt;div class="termy-flare"&gt;
+  &lt;div class="termy-window"&gt;
+    &lt;div class="termy-titlebar"&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;shelf — 80×24&lt;/div&gt;
+&lt;pre class="termy-prompt"&gt;&lt;b&gt;$&lt;/b&gt; shelf sync
+&lt;span class="termy-ok"&gt;✓&lt;/span&gt; 3 notes pushed  &lt;span class="termy-dim"&gt;0.2s&lt;/span&gt;
+&lt;b&gt;$&lt;/b&gt; shelf rm 0009
+&lt;span class="termy-err"&gt;✗&lt;/span&gt; refusing: note is pinned&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="crt">The CRT</h2>
+<p>With <code>termy-crt</code> on <code>&lt;body&gt;</code> the page gets scanlines and a vignette fixed over it, a phosphor glow on the text in the green scheme, and a flicker once every five seconds. <code>--termy-crt-strength</code> (0 to 1) sets how strong the overlay is and <code>--termy-crt-flicker: 0</code> stops the flicker. Every page in this folder ships with it on at 0.5.</p>
+<figure class="example" data-snippet="termy-crt">
+<div class="termy-flare">
+  <p>Turn the screen down: <code>&lt;body class="termy-crt" style="--termy-crt-strength: 0.2"&gt;</code>. Turn it off: drop the class.</p>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="termy-crt">&lt;div class="termy-flare"&gt;
+  &lt;p&gt;Turn the screen down: &lt;code&gt;&amp;lt;body class="termy-crt" style="--termy-crt-strength: 0.2"&amp;gt;&lt;/code&gt;. Turn it off: drop the class.&lt;/p&gt;
+&lt;/div&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code> under <code>/* == termy == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.termy-flare</code></td><td>The wrapper for flare that is markup; strip it when swapping templates</td></tr>
+      <tr><td><code>.termy-window</code>, <code>.termy-titlebar</code></td><td>The frame and its title bar with three dots</td></tr>
+      <tr><td><code>pre.termy-prompt</code></td><td>The transcript; <code>b</code> is a prompt</td></tr>
+      <tr><td><code>.termy-ok</code>, <code>.termy-err</code>, <code>.termy-dim</code></td><td>A line in success, danger or muted</td></tr>
+      <tr><td><code>body.termy-crt</code></td><td>The overlay, the glow and the flicker</td></tr>
+      <tr><td><code>--termy-crt-strength</code>, <code>--termy-crt-flicker</code></td><td>The two knobs, settable inline or in theme.css</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The overlay is <code>pointer-events: none</code> and sits above everything, including dialogs. Lower the strength if a dialog needs to read cleanly.</li>
+<li>The flicker is a fixed layer that flashes at 5% for a frame; reduced motion stops it and the cursor.</li>
+<li>Flare must still use tokens: no colour literals in <code>global.css</code>. The scanlines, vignette, glows and flash are <code>--termy-*</code> tokens in <code>theme.css</code>.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="footer.html">← Footer</a><a href="../index.html">Get started →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

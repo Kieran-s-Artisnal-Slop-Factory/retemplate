@@ -2271,6 +2271,34 @@ hr.page-break::after {
 }
 
 /* == hero variants == */
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.hero.hero-text > .stack {
+  max-width: 62ch;
+}
+
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
+}
+
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
 /* The chase: a dashed stroke around the stage whose dashes run along the
  * outline like bulbs around a sign. The rect is sized in CSS, so it fits
  * whatever the hero is. */

@@ -2095,34 +2095,78 @@ h3.allegory-band { font-size: var(--font-size-xl); }
 }
 
 /* == hero variants == */
-/* The turning page: each leaf of the diptych lifts from its outer edge and
- * settles, the two out of phase. */
-.hero.allegory-turn .allegory-diptych {
-  perspective: 1400px;
+/* Contract variants: a hero that is only words, and one that is only a
+ * picture. Every template carries both. */
+.hero.hero-text {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
 }
 
-.hero.allegory-turn .allegory-diptych > * {
-  transform-origin: left center;
-  animation: allegory-lift-left 8s ease-in-out infinite;
-  backface-visibility: hidden;
+.hero.hero-text > .stack {
+  max-width: 62ch;
 }
 
-.hero.allegory-turn .allegory-diptych > :last-child {
-  transform-origin: right center;
-  animation-name: allegory-lift-right;
-  animation-delay: 4s;
+.hero.hero-image {
+  display: block;
+  padding-block: var(--space-4);
 }
 
-@keyframes allegory-lift-left {
-  50% {
-    transform: rotateY(-14deg);
-  }
+.hero.hero-image > img,
+.hero.hero-image > figure {
+  display: block;
+  width: 100%;
+  margin: 0;
 }
 
-@keyframes allegory-lift-right {
-  50% {
-    transform: rotateY(14deg);
-  }
+.hero.hero-image > img {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+/* The radiance: a doubled border in the band colour with a hairline set
+ * outside it, diamonds at two corners, and a light in the same colour that
+ * pulses through the frame. --allegory-band is gold by day and red by
+ * night, so the one rule gives each face its own light. */
+.hero.allegory-split.allegory-radiant {
+  position: relative;
+  padding: var(--space-6) var(--space-5);
+  border: 4px double var(--allegory-band);
+  outline: 1px solid var(--allegory-band);
+  outline-offset: 6px;
+  animation: allegory-radiate 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero.allegory-split.allegory-radiant::before,
+.hero.allegory-split.allegory-radiant::after {
+  content: "";
+  position: absolute;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: var(--allegory-band);
+  transform: rotate(45deg);
+  animation: allegory-radiate-mark 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero.allegory-split.allegory-radiant::before { top: -0.45rem; left: -0.45rem; }
+.hero.allegory-split.allegory-radiant::after { bottom: -0.45rem; right: -0.45rem; }
+
+.hero.allegory-split.allegory-radiant h1 {
+  animation: allegory-radiate-text 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes allegory-radiate {
+  0%, 100% { box-shadow: 0 0 0 0 var(--allegory-band-soft), inset 0 0 0 0 var(--allegory-band-soft); }
+  50% { box-shadow: 0 0 48px 10px var(--allegory-band-soft), inset 0 0 40px 0 var(--allegory-band-soft); }
+}
+
+@keyframes allegory-radiate-mark {
+  0%, 100% { box-shadow: 0 0 0 0 var(--allegory-band-soft); }
+  50% { box-shadow: 0 0 16px 6px var(--allegory-band-soft); }
+}
+
+@keyframes allegory-radiate-text {
+  0%, 100% { text-shadow: 0 0 0 var(--allegory-band-soft); }
+  50% { text-shadow: 0 0 24px var(--allegory-band); }
 }
 
 /* The tide: the two faces drift against each other and glow at the turn. */

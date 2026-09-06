@@ -1,0 +1,162 @@
+/*
+ * termy — design tokens. A terminal: mono everywhere, no corners, and two
+ * schemes that are both screens: light is dark green phosphor, dark is
+ * black on white paper.
+ *
+ * Retoken compatible (https://kieranwood.ca/retoken/theme/): the same two
+ * layers retoken uses.
+ *
+ *   1. `:root, .themed` maps roles onto palette slots. The colour mapping is
+ *      retoken's, verbatim; the shared values (type, spacing, shape, layout)
+ *      are this template's own.
+ *   2. The palette block fills the 19 `--pal-*` slots, each a light-dark()
+ *      pair, under retoken's named-palette selector. That block, exactly as
+ *      written, is what you paste into a retoken site — see docs/theme.html.
+ *
+ * `color-scheme: light dark` lets the browser pick the half of each pair;
+ * js/theme.js pins it on <html> when the visitor has chosen. Components in
+ * global.css reference the semantic tokens only — never a slot, never a
+ * literal.
+ */
+
+:root,
+.themed {
+  color-scheme: light dark;
+
+  /* ── Brand ─────────────────────────────────────────────────────────── */
+  --color-primary: var(--pal-accent);
+  --color-primary-strong: var(--pal-accent-strong);
+  --color-primary-soft: color-mix(in srgb, var(--pal-accent) 14%, var(--pal-bg0));
+  --color-on-primary: var(--pal-on-accent);
+
+  /* ── Surfaces ──────────────────────────────────────────────────────── */
+  --bg-color: var(--pal-bg0);
+  --surface-color: var(--pal-bg0-soft);
+  --surface-raised-color: var(--pal-bg1);
+  --border-color: var(--pal-bg2);
+
+  /* ── Text ──────────────────────────────────────────────────────────── */
+  --text-color: var(--pal-fg);
+  --text-muted-color: var(--pal-fg-muted);
+
+  /* ── Feedback ──────────────────────────────────────────────────────── */
+  --color-success: var(--pal-green);
+  --color-success-soft: color-mix(in srgb, var(--pal-green) 14%, var(--pal-bg0));
+  --color-danger: var(--pal-red);
+  --color-danger-soft: color-mix(in srgb, var(--pal-red) 12%, var(--pal-bg0));
+  --color-warning: var(--pal-yellow);
+  --color-warning-soft: color-mix(in srgb, var(--pal-yellow) 14%, var(--pal-bg0));
+  --color-info: var(--pal-blue);
+  --color-info-soft: color-mix(in srgb, var(--pal-blue) 14%, var(--pal-bg0));
+
+  /* ── Editor / syntax (rendered code blocks) ────────────────────────── */
+  --editor-bg: var(--pal-bg0-soft);
+  --editor-gutter-bg: var(--pal-bg1);
+  --editor-gutter-fg: var(--pal-gray);
+  --editor-active-line: color-mix(in srgb, var(--pal-bg1) 60%, transparent);
+  --editor-selection: color-mix(in srgb, var(--pal-bg2) 75%, transparent);
+  --editor-cursor: var(--pal-accent);
+  --editor-chrome-color: color-mix(in srgb, var(--pal-fg) 80%, transparent);
+  --syntax-keyword: var(--pal-red);
+  --syntax-string: var(--pal-green);
+  --syntax-number: var(--pal-purple);
+  --syntax-comment: var(--pal-gray);
+  --syntax-type: var(--pal-yellow);
+  --syntax-operator: var(--pal-aqua);
+  --syntax-name: var(--pal-blue);
+  --syntax-punctuation: var(--pal-fg-muted);
+  --editor-tooltip-bg: var(--pal-bg0-soft);
+  --editor-tooltip-fg: var(--pal-fg);
+  --editor-tooltip-border: var(--pal-bg3);
+  --editor-tooltip-selected-bg: var(--color-primary);
+  --editor-tooltip-selected-fg: var(--color-on-primary);
+  --editor-match-fg: var(--color-primary-strong);
+
+  /* ── Elevation ─────────────────────────────────────────────────────── */
+  --shadow-1: 0 0 0 1px var(--pal-shadow-1);
+  --shadow-2: 4px 4px 0 var(--pal-shadow-2);
+
+  /* ── Typography (this template's values) ───────────────────────────── */
+  --font-body: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-display: var(--font-body);
+  --font-weight-display: 800;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.6rem;
+  --font-size-hero: clamp(2rem, 1.2rem + 2.6vw, 3.4rem);
+  --line-height: 1.6;
+
+  /* ── Spacing ───────────────────────────────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2.5rem;
+
+  /* ── Shape ─────────────────────────────────────────────────────────── */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-full: 0;
+
+  /* ── Layout ────────────────────────────────────────────────────────── */
+  --page-max-width: 64rem;
+  --sidebar-width: 16rem;
+  --panel-width: 18rem;
+  --toc-width: 15rem;
+  --navbar-height: 3.5rem;
+}
+
+/* ── Palette: termy ─────────────────────────────────────────────────────
+ * Light is a dark green screen: near-black green ground, phosphor green
+ * text and accent. Dark is the same terminal printed on paper: black on
+ * white with a deep green accent. Both halves clear 4.5:1.
+ *
+ * This block is the retoken paste-in. Copy it whole.
+ */
+:root[data-theme='termy'],
+[data-theme='termy'] {
+  --pal-bg0: light-dark(#0a1f13, #ffffff);
+  --pal-bg0-soft: light-dark(#0d2618, #fafafa);
+  --pal-bg1: light-dark(#12301f, #f0f0f0);
+  --pal-bg2: light-dark(#1c4530, #d6d6d6);
+  --pal-bg3: light-dark(#2f6a4a, #a8a8a8);
+
+  --pal-fg: light-dark(#c9f5d3, #111111);
+  --pal-fg-muted: light-dark(#7fcf9a, #555555);
+  --pal-gray: light-dark(#5a9a72, #8a8a8a);
+
+  --pal-red: light-dark(#ff7b72, #b3001b);
+  --pal-green: light-dark(#5cff8a, #0b6e2a);
+  --pal-yellow: light-dark(#ffd75e, #7a5200);
+  --pal-blue: light-dark(#6ec6ff, #0b4fa8);
+  --pal-purple: light-dark(#d3a6ff, #6b2fb3);
+  --pal-aqua: light-dark(#5ff2e0, #007a70);
+
+  --pal-accent: light-dark(#5cff8a, #0b6e2a);
+  --pal-accent-strong: light-dark(#9dffb8, #084f1f);
+  --pal-on-accent: light-dark(#0a1f13, #ffffff);
+
+  --pal-shadow-1: light-dark(rgb(92 255 138 / 0.35), rgb(17 17 17 / 0.2));
+  --pal-shadow-2: light-dark(rgb(92 255 138 / 0.55), rgb(17 17 17 / 0.85));
+}
+
+/* Termy's own tokens: the CRT overlay and the phosphor glow. Set
+ * --termy-crt-strength to 0 (or drop the termy-crt class from <body>) to
+ * turn the screen effect off; --termy-crt-flicker to 0 stops the flicker
+ * and keeps the lines. */
+:root,
+.themed {
+  --termy-crt-strength: 0.5;
+  --termy-crt-flicker: 1;
+  --termy-scanlines: repeating-linear-gradient(0deg, light-dark(rgb(0 0 0 / 0.28), rgb(0 0 0 / 0.09)) 0 1px, transparent 1px 3px);
+  --termy-vignette: radial-gradient(ellipse at center, transparent 55%, rgb(0 0 0 / 0.45) 100%);
+  --termy-glow: light-dark(0 0 6px rgb(92 255 138 / 0.45), none);
+  --termy-glow-strong: light-dark(0 0 12px rgb(92 255 138 / 0.7), none);
+  --termy-flash: light-dark(rgb(201 245 211 / 1), rgb(17 17 17 / 1));
+}

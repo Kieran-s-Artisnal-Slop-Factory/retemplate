@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-theme="termy">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Get started · Termy</title>
+  <link rel="icon" href="../assets/favicon.svg">
+  <script src="../js/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&display=swap">
+</head>
+<body class="termy-crt">
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Termy · Get started</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../index.html">Overview</a>
+        <a href="../blogpost.html">Blog post</a>
+        <a href="../forms.html">Forms</a>
+        <a href="../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../docs/index.html" aria-current="page">Get started</a>
+        <a href="../docs/theme.html">Theme</a>
+        <a href="../docs/defaults.html">Defaults</a>
+        <a href="../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../docs/components/index.html">All components</a>
+        <a href="../docs/components/accordion.html">Accordion</a>
+        <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/hero.html">Hero</a>
+        <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../docs/components/switch.html">Switch</a>
+        <a href="../docs/components/page-break.html">Page break</a>
+        <a href="../docs/components/buttons.html">Buttons</a>
+        <a href="../docs/components/forms.html">Forms</a>
+        <a href="../docs/components/dialog.html">Dialog</a>
+        <a href="../docs/components/navbar.html">Navbar</a>
+        <a href="../docs/components/sidebar.html">Sidebar</a>
+        <a href="../docs/components/banner.html">Banner</a>
+        <a href="../docs/components/badge.html">Badge</a>
+        <a href="../docs/components/table.html">Table</a>
+        <a href="../docs/components/author-card.html">Author card</a>
+        <a href="../docs/components/footer.html">Footer</a>
+        <a href="../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Get started</p>
+  <h1>Take the folder, keep four things</h1>
+  <p>Termy is a complete template: two stylesheets, one small script, a folder of art. There is nothing to install and nothing to build.</p>
+</header>
+<h2>1. Copy the folder</h2>
+<p>Copy <code>templates/termy/</code> into your project. Inside it, two sets of files:</p>
+<div class="grid-2">
+  <article class="card">
+    <div class="card-body">
+      <h3 class="card-title">Keep: the install set</h3>
+      <ul>
+        <li><code>css/theme.css</code>: the tokens and the palette</li>
+        <li><code>css/global.css</code>: every component and layout</li>
+        <li><code>js/theme.js</code>: the light/dark toggle</li>
+        <li><code>assets/</code>: favicon and placeholder art (swap for your own)</li>
+        <li><code>README.md</code></li>
+      </ul>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card-body">
+      <h3 class="card-title">Delete: the showcase</h3>
+      <ul>
+        <li><code>index.html</code>, <code>blogpost.html</code>, <code>forms.html</code>, <code>sidebar.html</code></li>
+        <li><code>docs/</code>: these pages</li>
+        <li><code>example/</code>: a three-page demo site, unless you want to start from it</li>
+        <li><code>js/copy.js</code>: only the docs use it</li>
+      </ul>
+    </div>
+  </article>
+</div>
+<h2>2. Put this at the top of every page</h2>
+<p>Adjust the relative paths for pages in sub-folders (<code>../css/theme.css</code> and so on). The script must stay a plain, synchronous script above the stylesheets: that is what applies the stored scheme before the first paint.</p>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code>&lt;!doctype html&gt;
+&lt;html lang="en" data-theme="termy"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta name="color-scheme" content="light dark"&gt;
+  &lt;title&gt;My page&lt;/title&gt;
+  &lt;link rel="icon" href="assets/favicon.svg"&gt;
+  &lt;script src="js/theme.js"&gt;&lt;/script&gt;
+  &lt;link rel="stylesheet" href="css/theme.css"&gt;
+  &lt;link rel="stylesheet" href="css/global.css"&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,800;1,400&amp;display=swap"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- your page --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<h2>3. Write HTML</h2>
+<p>Use the classes documented under <a href="components/index.html">Components</a>. Wrap article text in <code>&lt;div class="prose"&gt;</code> and every markdown construct is styled; put a page in <code>&lt;main class="page"&gt;</code> and it gets a comfortable width. The <a href="../example/index.html">example site</a> is a small real site built this way, and <a href="../blogpost.html">the blog post</a> is what a rendered article looks like.</p>
+<h2>Starting from the example instead</h2>
+<p>Copy <code>example/</code> next to <code>css/</code>, <code>js/</code> and <code>assets/</code>, delete the rest, and fix the three pages' relative paths (they currently point one folder up). Everything the example uses is documented here.</p>
+<h2>The theme toggle</h2>
+<p>Every page has a <code>&lt;button class="scheme-toggle"&gt;</code>. It cycles auto → light → dark → auto and stores the choice under the key <code>retoken-scheme</code>, the same key a <a href="https://kieranwood.ca/retoken/theme/">retoken</a> site uses, so the two agree when they share an origin. Colours follow <code>light-dark()</code> pairs; anything that is not a colour can key off <code>html[data-scheme="dark"]</code>, which the script keeps equal to the scheme actually in effect.</p>
+<h2>Browsers</h2>
+<p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups and <code>color-mix()</code>, with no polyfills.</p>
+<h2>Fonts</h2>
+<p>Termy sets everything in JetBrains Mono, loaded from Google Fonts by the three <code>&lt;link&gt;</code>s in the head block; without it the fallback is your system's monospace face. The CRT overlay is the <code>termy-crt</code> class on <code>&lt;body&gt;</code>: remove it, or set <code>--termy-crt-strength: 0</code>, and the page is a flat screen.</p>
+<h2>Two lines to delete</h2>
+<p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar, a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
+<p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>
+<h2>Using the theme in retoken</h2>
+<p>The palette block in <code>theme.css</code> is a retoken theme. <a href="theme.html">The theme page</a> shows it with a copy button and the one line that turns it on.</p>
+
+  </main>
+</div>
+<script src="../js/copy.js"></script>
+</body>
+</html>

@@ -1,12 +1,12 @@
 # Modern Frosty
 
-Near-white with a cast of ice by day, deep slate blue by night. Hairlines
-instead of shadows, corners of 4px and 6px, one deep cold blue for links,
-focus and the primary button, and one warm ember for anything live. Frost
-(a translucent fill and an 8px blur) appears only where something sits
-over the page: the dock, a navbar that floats as a frosted pill clear of
-the page edges, the docs top bar, dialogs, the lightbox controls, the
-mobile menu, the sidebar drawer and the note's toolbar. The ink slab is
+A sky of ice by day, deep slate blue by night, fixed behind the page, and
+every pane on it a sheet of frost: a translucent fill, an 18px blur and a
+rime of light along the top edge. The dock (a navbar that floats as a
+frosted pill clear of the page edges), the hero, the cards, the note, the
+dialogs, the menus and the footer are all that one material. Headlines are
+set heavy and tight; one deep cold blue carries links, focus and the
+primary button, and one warm ember marks anything live. The ink slab is
 the one inverted surface: the page turned over, for a call to action or a
 command line. Geist for everything, Geist Mono for labels, and one line of
 Newsreader italic where a heading changes its voice. The hero rises in on

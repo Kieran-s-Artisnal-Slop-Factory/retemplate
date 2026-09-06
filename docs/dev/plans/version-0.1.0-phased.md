@@ -50,6 +50,7 @@ state of the build; the TODO records which *asks* have landed.
 | 16 — Thick | done | 2026-09-05 | checker 0/0; press shadows, the pile, Rubik 900; visual pass at Checkpoint E |
 | 17 — Cattle | done | 2026-09-05 | checker 0/0; branded headings, leather chrome, rivets; landing card, previews and README row added; visual pass at Checkpoint E |
 | 17b — Hero component + Modern Frosty rework | done | 2026-09-05 | `docs/components/hero.html` in all 14 templates (own hero + one animated variant), checker requires it; Modern Frosty: dock, ink slab, Newsreader italic, ember, rising hero; unfiltered checker 0 errors (1 expected warning); owner eyeball items in the TODO |
+| 17c — Third batch + Termy | done | 2026-09-05 | owner's notes on the variants applied (Breathe, Allegory, Natural, Glassy, ExtraExtra, Modern Frosty); `templates/termy/` built from plain (15 templates); `.hero-text` / `.hero-image` in every template; unfiltered checker 0 errors (1 expected warning) |
 | E — Checkpoint | not started | | |
 | 18 — Release | not started | | |
 
