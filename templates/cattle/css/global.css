@@ -2018,6 +2018,72 @@ hr.cattle-rope {
   font-size: var(--font-size-sm);
 }
 
+/* == hero variants == */
+/* The iron: the headline burns in from a pale mark to char, the rules draw
+ * out from the centre, and smoke rises from the letters. */
+.hero.cattle-iron h1 {
+  animation: cattle-burn-in 2.2s ease-out both;
+}
+
+.hero.cattle-iron h1::before,
+.hero.cattle-iron h1::after {
+  transform-origin: center;
+  animation: cattle-rule-out 1.6s 600ms ease-out both;
+}
+
+.cattle-smoke {
+  position: relative;
+  height: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.cattle-smoke span {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--text-muted-color);
+  filter: blur(8px);
+  opacity: 0;
+  animation: cattle-smoke 6s ease-out infinite;
+}
+
+.cattle-smoke span:nth-child(2) { left: 38%; animation-delay: 2s; }
+.cattle-smoke span:nth-child(3) { left: 62%; animation-delay: 3.6s; }
+
+@keyframes cattle-burn-in {
+  0% {
+    color: var(--text-muted-color);
+    text-shadow: none;
+    opacity: 0.5;
+  }
+  45% {
+    color: var(--cattle-char);
+    text-shadow: 0 0 6px var(--cattle-scorch-2), 0 0 22px var(--cattle-scorch-2), 0 0 40px var(--cattle-scorch-3);
+    opacity: 1;
+  }
+  100% {
+    color: var(--cattle-char);
+    text-shadow: var(--cattle-burn);
+  }
+}
+
+@keyframes cattle-rule-out {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes cattle-smoke {
+  0% { transform: translate(0, 0) scale(0.6); opacity: 0; }
+  15% { opacity: 0.35; }
+  100% { transform: translate(1rem, -9rem) scale(2.4); opacity: 0; }
+}
+
 /* == print == */
 @media print {
   .navbar,

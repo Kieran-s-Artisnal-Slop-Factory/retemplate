@@ -1861,6 +1861,51 @@ hr.gothic-tracery {
   color: var(--gothic-ornament);
 }
 
+/* == hero variants == */
+/* The candle: a warm radial light behind the words flickers in uneven
+ * steps, and the headline's glow trembles with it. */
+.hero.gothic-candle {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero.gothic-candle::before {
+  content: "";
+  position: absolute;
+  inset: -10% 30% -10% -10%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side at 35% 45%, var(--gothic-gold), transparent 75%);
+  opacity: 0.22;
+  animation: gothic-flicker 5s steps(1, end) infinite;
+}
+
+.hero.gothic-candle h1 {
+  text-shadow: 0 0 18px var(--gothic-gold);
+  animation: gothic-glow 5s steps(1, end) infinite;
+}
+
+@keyframes gothic-flicker {
+  0% { opacity: 0.22; transform: scale(1); }
+  9% { opacity: 0.3; transform: scale(1.03); }
+  17% { opacity: 0.18; transform: scale(0.98); }
+  31% { opacity: 0.27; transform: scale(1.01); }
+  38% { opacity: 0.2; transform: scale(1.04); }
+  55% { opacity: 0.32; transform: scale(0.99); }
+  68% { opacity: 0.16; transform: scale(1.02); }
+  84% { opacity: 0.26; transform: scale(1); }
+}
+
+@keyframes gothic-glow {
+  0% { text-shadow: 0 0 18px var(--gothic-gold); }
+  9% { text-shadow: 0 0 26px var(--gothic-gold); }
+  17% { text-shadow: 0 0 12px var(--gothic-gold); }
+  38% { text-shadow: 0 0 22px var(--gothic-gold); }
+  55% { text-shadow: 0 0 30px var(--gothic-gold); }
+  68% { text-shadow: 0 0 10px var(--gothic-gold); }
+  84% { text-shadow: 0 0 20px var(--gothic-gold); }
+}
+
 /* == print == */
 @media print {
   .navbar,

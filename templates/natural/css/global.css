@@ -2252,6 +2252,48 @@ hr.page-break::after {
   }
 }
 
+/* == hero variants == */
+/* The growth: a stem draws its length, then each leaf opens from the stalk
+ * in turn. Stroke and fill are moss tokens. */
+.natural-vine {
+  display: block;
+  width: min(100%, 18rem);
+  margin-inline: auto;
+}
+
+.natural-vine-stem {
+  fill: none;
+  stroke: var(--natural-moss);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: natural-draw 2.4s ease-out both;
+}
+
+.natural-vine-leaf {
+  fill: var(--natural-moss-soft);
+  stroke: var(--natural-moss);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  transform-box: view-box;
+  transform: scale(0);
+  animation: natural-open 700ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+  animation-delay: calc(0.5s + var(--i) * 0.35s);
+}
+
+@keyframes natural-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes natural-open {
+  to {
+    transform: scale(1);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

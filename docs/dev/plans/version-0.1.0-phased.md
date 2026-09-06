@@ -48,7 +48,8 @@ state of the build; the TODO records which *asks* have landed.
 | 14 — Breathe | done | 2026-09-05 | checker 0/0; live frond hero, leaf cut, stem sequence, Manrope + Instrument Serif; visual pass at Checkpoint E |
 | 15 — Modern Frosty | done | 2026-09-05 | checker 0/0; note-as-hero, frost only on floating surfaces, Geist; visual pass at Checkpoint E |
 | 16 — Thick | done | 2026-09-05 | checker 0/0; press shadows, the pile, Rubik 900; visual pass at Checkpoint E |
-| 17 — Cattle | in progress | 2026-09-05 | subagent dispatched with 13–17 |
+| 17 — Cattle | done | 2026-09-05 | checker 0/0; branded headings, leather chrome, rivets; landing card, previews and README row added; visual pass at Checkpoint E |
+| 17b — Hero component + Modern Frosty rework | done | 2026-09-05 | `docs/components/hero.html` in all 14 templates (own hero + one animated variant), checker requires it; Modern Frosty: dock, ink slab, Newsreader italic, ember, rising hero; unfiltered checker 0 errors (1 expected warning); owner eyeball items in the TODO |
 | E — Checkpoint | not started | | |
 | 18 — Release | not started | | |
 

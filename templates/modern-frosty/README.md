@@ -2,11 +2,15 @@
 
 Near-white with a cast of ice by day, deep slate blue by night. Hairlines
 instead of shadows, corners of 4px and 6px, one deep cold blue for links,
-focus and the primary button. Frost (a translucent fill and an 8px blur)
-appears only where something sits over the page: the sticky navbar and top
-bar, dialogs, the lightbox controls, the mobile menu and the sidebar
-drawer, and the note's toolbar. Geist for everything, Geist Mono for
-labels. No gradients, no orbs, no motion beyond hover. Part of
+focus and the primary button, and one warm ember for anything live. Frost
+(a translucent fill and an 8px blur) appears only where something sits
+over the page: the dock, a navbar that floats as a frosted pill clear of
+the page edges, the docs top bar, dialogs, the lightbox controls, the
+mobile menu, the sidebar drawer and the note's toolbar. The ink slab is
+the one inverted surface: the page turned over, for a call to action or a
+command line. Geist for everything, Geist Mono for labels, and one line of
+Newsreader italic where a heading changes its voice. The hero rises in on
+load and the note beside it drifts; nothing else moves. Part of
 [retemplate](../../README.md).
 
 ## Take and use
@@ -33,7 +37,7 @@ Put this at the top of every page (adjust the paths for sub-folders):
   <link rel="stylesheet" href="css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
 </head>
 ```
 
@@ -44,7 +48,8 @@ Then write HTML with the classes in `docs/components/` (open
   `<details name>`, `color-mix()`, `backdrop-filter`. No polyfills. Where
   `backdrop-filter` is missing the frosted surfaces keep their translucent
   fill and lose the blur.
-- **Fonts:** Geist (body and headings) and Geist Mono (labels, badges,
+- **Fonts:** Geist (body and headings), Newsreader italic (the
+  counterpoint in headings) and Geist Mono (labels, badges,
   table heads, code), both OFL, loaded from Google Fonts by the three
   `<link>`s above. Without them the fallback stacks in `theme.css` give
   the system sans and the system mono. To self-host, download the two

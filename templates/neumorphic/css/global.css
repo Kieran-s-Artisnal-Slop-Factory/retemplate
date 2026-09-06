@@ -1908,6 +1908,30 @@ fieldset.neumorphic-well {
 .banner-danger.neumorphic-inset > span:first-child { color: var(--color-danger); }
 .banner-info.neumorphic-inset > span:first-child { color: var(--color-info); }
 
+/* == hero variants == */
+/* The breath: the hero is a plate whose shadow softens to flat and rises
+ * again over six seconds; the panel inside breathes the other way. */
+.hero.neumorphic-breathe {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--neumorphic-raise-lg);
+  animation: neumorphic-breathe-out 6s ease-in-out infinite;
+}
+
+.hero.neumorphic-breathe .neumorphic-panel {
+  animation: neumorphic-breathe-in 6s ease-in-out infinite;
+}
+
+@keyframes neumorphic-breathe-out {
+  0%, 100% { box-shadow: var(--neumorphic-raise-lg); }
+  50% { box-shadow: var(--neumorphic-flat); }
+}
+
+@keyframes neumorphic-breathe-in {
+  0%, 100% { box-shadow: var(--neumorphic-flat); }
+  50% { box-shadow: var(--neumorphic-inset); }
+}
+
 /* == print == */
 @media print {
   .navbar,

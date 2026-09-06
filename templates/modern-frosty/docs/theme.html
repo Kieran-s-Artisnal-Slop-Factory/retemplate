@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
 </head>
 <body>
 <div class="sidebar-layout">
@@ -41,6 +41,7 @@
         <a href="../docs/components/index.html">All components</a>
         <a href="../docs/components/accordion.html">Accordion</a>
         <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/hero.html">Hero</a>
         <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
         <a href="../docs/components/gallery.html">Gallery and lightbox</a>
         <a href="../docs/components/switch.html">Switch</a>
@@ -190,13 +191,17 @@
 }</code></pre></div>
 <p>Two things the block deliberately does not do: it never declares a bare <code>:root</code> (pasted into retoken that would override the site's default palette), and it never declares fonts (their <code>url()</code>s would break outside this folder). That is why every page here sets <code>data-theme="modern-frosty"</code> on <code>&lt;html&gt;</code>.</p>
 <h2>Template-only tokens</h2>
-<p>Five tokens of the template's own, prefixed <code>--modern-frosty-</code>. They live in <code>theme.css</code> beside the palette so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in.</p>
+<p>Nine tokens of the template's own, prefixed <code>--modern-frosty-</code>. They live in <code>theme.css</code> beside the palette so that <code>global.css</code> stays free of colour literals, which <code>tools/check.py</code> enforces. They are not part of the retoken paste-in.</p>
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead><tbody>
 <tr><td><code>--modern-frosty-frost</code></td><td><code>light-dark(rgb(255 255 255 / 0.72), rgb(21 34 50 / 0.72))</code></td><td>The translucent fill of the navbar, top bar, note toolbar, dialogs, lightbox controls, menus and the feature card's pane</td></tr>
 <tr><td><code>--modern-frosty-blur</code></td><td><code>8px</code></td><td>The one blur radius behind every frosted surface; lower it and all of them follow</td></tr>
 <tr><td><code>--modern-frosty-ice</code></td><td><code>light-dark(#e2eefa, #1a3049)</code></td><td>The hover tint on buttons, nav links, table rows and ledger cells</td></tr>
 <tr><td><code>--modern-frosty-rule</code></td><td><code>light-dark(#e3ecf5, #21354a)</code></td><td>The ruled lines of the note's sheet</td></tr>
 <tr><td><code>--modern-frosty-hairline</code></td><td><code>1px</code></td><td>The border width, named once</td></tr>
+<tr><td><code>--modern-frosty-serif</code></td><td><code>'Newsreader', 'Iowan Old Style', …</code></td><td>The counterpoint face: <code>em</code> in a heading, or <code>.modern-frosty-serif</code></td></tr>
+<tr><td><code>--modern-frosty-ink</code></td><td><code>var(--pal-fg)</code></td><td>The ground of the ink slab, the command line and the dock's pill</td></tr>
+<tr><td><code>--modern-frosty-on-ink</code></td><td><code>var(--pal-bg0)</code></td><td>Text on the ink slab</td></tr>
+<tr><td><code>--modern-frosty-ember</code></td><td><code>light-dark(#d9480f, #ff9a57)</code></td><td>The one warm colour: the live dot, the command prompt and the caret</td></tr>
 </tbody></table></div>
 <h2>Light and dark</h2>
 <p><code>color-scheme: light dark</code> on <code>:root</code> lets the browser resolve each <code>light-dark()</code> pair from the visitor's preference. The toggle pins <code>color-scheme</code> on <code>&lt;html&gt;</code> instead; the third click unpins it. For things that are not colours (a texture, an ornament, <code>content</code>), <code>theme.js</code> keeps <code>html[data-scheme]</code> equal to the scheme in effect, so CSS can select on it.</p>

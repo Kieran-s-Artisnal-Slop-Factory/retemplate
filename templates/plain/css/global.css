@@ -1641,6 +1641,41 @@ hr.page-break::after {
 /* == flare == */
 /* plain has no flare. A styled template puts its `.<name>-*` rules here. */
 
+/* == hero variants == */
+/* The reveal: the stack rises a line at a time, the heading underlines
+ * itself, the picture fades in last. */
+.hero.plain-reveal > .stack > * {
+  animation: plain-rise 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero.plain-reveal > .stack > :nth-child(2) { animation-delay: 120ms; }
+.hero.plain-reveal > .stack > :nth-child(3) { animation-delay: 240ms; }
+.hero.plain-reveal > .stack > :nth-child(4) { animation-delay: 360ms; }
+
+.hero.plain-reveal > .stack > h1 {
+  padding-bottom: 0.2em;
+  background: linear-gradient(var(--color-primary), var(--color-primary)) no-repeat 0 100% / 0% 3px;
+  animation: plain-rise 600ms 120ms cubic-bezier(0.2, 0.7, 0.2, 1) both,
+             plain-draw 900ms 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero.plain-reveal > img {
+  animation: plain-rise 900ms 500ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes plain-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+@keyframes plain-draw {
+  to {
+    background-size: 100% 3px;
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

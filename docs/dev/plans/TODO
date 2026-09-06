@@ -41,8 +41,25 @@ Before beginning make sure the VERSION is up to date, and create a file called `
     - [x] [reference](https://www.whichai.dev/with-taste-skill/glm-5.2/1)
   - [x] Thick; neobrutalist with bright yellow accents
     - [x] [reference](https://www.whichai.dev/with-taste-skill/kimi-k3/5)
-  - [ ] Cattle (in progress 2026-09-05); leather and wood, lettering branded into wood, leather accents (owner's reference image)
+  - [x] Cattle (2026-09-05); leather and wood, lettering branded into wood, leather accents (owner's reference image); landing card, previews and README row added 2026-09-05
   - [ ] Distinctiveness check on each against every built template
+    - [x] Modern Frosty reworked (2026-09-05, after https://www.tasteskill.dev/): the dock (a frosted pill navbar floating clear of the page), Newsreader italic as a counterpoint face, the ink slab (one inverted surface) with a command line and a live dot, one warm ember accent, a hero that rises
+- [ ] Hero component (2026-09-05): `docs/components/hero.html` in every template with two variants, the template's own hero and one animated `.<name>-*` modifier that stops under reduced motion
+  - [x] Plain (the reveal)
+  - [x] Neumorphic (the breath)
+  - [x] Brutal News (hot off the press)
+  - [x] Glassy (the orbit)
+  - [x] Neon (the chase)
+  - [x] Natural (the growth)
+  - [x] Detailed (the curtain)
+  - [x] Gothic (the candle)
+  - [x] Allegory (the turning page)
+  - [x] ExtraExtra (the slap)
+  - [x] Breathe (the seeds)
+  - [x] Modern Frosty (the prompt)
+  - [x] Thick (the drop)
+  - [x] Cattle (the iron)
+  - [ ] Owner eyeball of each variant at real speed (listed under For human)
 
 ## For human
 
@@ -54,6 +71,8 @@ This section is for me to keep track of what I need to manually review, feel fre
 - [ ] Checkpoint C visual pass (2026-09-04): please eyeball `templates/neon` and `templates/natural` overviews and example sites in both schemes. Neon: is the light half (`#3a3a42` ground, black form fields and drawer from the `color-scheme: dark` override) "less dark" enough and intentional-looking; the feature card's 4 s border sweep, the haze breathing and the `.neon-sign` flicker; the full-width feature card is very tall at desktop widths (inherited from plain). Natural: the dark soil texture strength (softened once), the pressed-specimen card's tag lift and tape at real hover speed, and whether the faint moss corner tint in light mode reads at all on your monitor.
 - [ ] Checkpoint D visual pass (2026-09-04): please eyeball `templates/detailed`, `templates/gothic` and `templates/allegory` overviews and example sites in both schemes. Detailed: the dark scheme (sunburst gold on navy, body-ray density), the 92px Limelight marquee (too loud?), the stepped card's 1px gold hairline at fractional zoom. Gothic: the arched card pictures on pale stone (lancet outline may be faint), the 3.6em illuminated initial, the stained-glass wash at hover speed, ESC and light-dismiss on popovers and dialogs. Allegory: the gold and red display bands sit below 3:1 by the brief's hybrid reading (white on `#c8a44a` is 2.4:1, black on `#b3122e` is 2.9:1), the feature-card flip on hover, how the ivory pinned header reads on the dark ascent page.
 - [ ] Decision 21 (2026-09-04): the three Checkpoint D templates were built to the "must not feel the same" rule; the five before it were not. Phase 11 opens with a distinctiveness pass over neumorphic, brutal-news, glassy, neon and natural. Say if any of the three new ones overshoots so that pass can be calibrated.
+- [ ] Hero variants (2026-09-05): please watch each template's `docs/components/hero.html` second variant at real speed in both schemes. Things a script cannot judge: whether Neon's chasing lights and Gothic's candle flicker are lively or nagging, whether Detailed's curtain and ExtraExtra's slap are too much on a reload, and whether Modern Frosty's typed command reads as a feature or a gimmick.
+- [ ] Modern Frosty rework (2026-09-05): the dock (floating pill navbar), the ink slab, the ember dot and Newsreader italic were added to answer "not unique enough". Say if it now overshoots the "lightly frosted, basic minimal" brief.
 - [ ] Open questions still defaulted, answer before Phase 3 if you disagree: fonts by Google Fonts `<link>` (or approve a download script), Brutal News built to the TODO's words (thick rules, harsh hues) rather than the 2px reference, Allegory's white-on-gold / black-on-red kept for display bands only
 
 ## Per Template
@@ -64,11 +83,12 @@ The authority is `docs/dev/template-contract.md` (written in Phase 0 of `version
 2. It includes the following components on top of the normal form fields, buttons, typography, images, `<dialog>` modals, etc. — with the **same markup and class names in every template** (the contract), so switching templates is a stylesheet swap:
   1. Accordion (`<details class="accordion">`; `.accordion-group` shares a `name` for exclusive open)
   2. Cards (`.card` with heading, description, icon or image; `.card-horizontal` with media left, `.card-media-end` for right; `.card-feature` = one dynamic card with an effect that suits the template)
-  3. Fifty-fifty (`.fifty-fifty`, image 50 %, `.fifty-fifty-reverse` for image right; stacks image-first on mobile)
-  4. Image gallery with lightbox (`.gallery` + one `<dialog class="lightbox">` per gallery, `:target` slides, prev/next anchors)
-  5. Toggle switch (`.switch`, `<input type="checkbox" role="switch">`)
-  6. Page break (`<hr>` and the ornamented `<hr class="page-break">`)
-  7. Also: buttons, `.field` form patterns, dialog, navbar, sidebar, banner, badge, table, author card, footer, and any flare the template needs (namespaced `.<name>-*`)
+  3. Hero (`.hero` with a `.stack`; the template's own form, plus one animated `.<name>-*` variant on `docs/components/hero.html` that stops under `prefers-reduced-motion`)
+  4. Fifty-fifty (`.fifty-fifty`, image 50 %, `.fifty-fifty-reverse` for image right; stacks image-first on mobile)
+  5. Image gallery with lightbox (`.gallery` + one `<dialog class="lightbox">` per gallery, `:target` slides, prev/next anchors)
+  6. Toggle switch (`.switch`, `<input type="checkbox" role="switch">`)
+  7. Page break (`<hr>` and the ornamented `<hr class="page-break">`)
+  8. Also: buttons, `.field` form patterns, dialog, navbar, sidebar, banner, badge, table, author card, footer, and any flare the template needs (namespaced `.<name>-*`)
 3. Prefer semantic html over `div`'s (`<details>`, `<dialog>`, `<main>`, `<article>`, `<nav>`, `<aside>`, `<footer>`, `<figure>`)
 4. No frameworks, no build step, no npm: pure HTML and CSS. JavaScript only from the allow-list: `js/theme.js` (scheme boot + tri-state toggle), `js/copy.js` (docs copy buttons), the landing's search, and a one-line `onclick="…showModal()"` on dialog/lightbox openers.
 5. Each has a navbar layout (`index.html`, `blogpost.html`, `forms.html`, `example/`) and a sidebar layout (`sidebar.html`, `docs/`)

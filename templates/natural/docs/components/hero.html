@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-theme="natural">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Hero · Natural</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Natural · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/hero.html" aria-current="page">Hero</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Hero</h1>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Natural's, then a second variant that moves.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
+<figure class="example" data-snippet="hero">
+<section class="hero">
+  <div class="natural-flare">
+    <figure class="natural-plate">
+      <img src="../../assets/hero.svg" alt="A pressed water avens with two nodding rust flowers on a cream herbarium sheet" width="900" height="1100">
+      <figcaption class="natural-label">
+        <p class="kicker">Herbarium of the Natural template</p>
+        <p class="natural-binomial">Geum rivale <span class="natural-auth">L.</span></p>
+        <dl class="natural-data">
+          <dt>Common</dt><dd>Water avens</dd>
+          <dt>Collected</dt><dd>Fallow brook, 4 September 2026</dd>
+          <dt>Habit</dt><dd>Perennial, nodding, to 40 cm</dd>
+          <dt>Soil</dt><dd>Wet clay, part shade</dd>
+          <dt>Det.</dt><dd>M. Penrose</dd>
+        </dl>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Pressed, labelled, <em>kept</em>.</h1>
+    <p class="natural-lede">Cream paper and ink by day. Soil by night.</p>
+    <p>Natural sets a page like a herbarium sheet: rust for what you can press, moss for the labels, a hairline for everything else. After dark the paper is earth and the ink is cream. The markup is the same as every template here; only the cupboard differs.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg natural-stamp" href="index.html">The components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero">&lt;section class="hero"&gt;
+  &lt;div class="natural-flare"&gt;
+    &lt;figure class="natural-plate"&gt;
+      &lt;img src="../../assets/hero.svg" alt="A pressed water avens with two nodding rust flowers on a cream herbarium sheet" width="900" height="1100"&gt;
+      &lt;figcaption class="natural-label"&gt;
+        &lt;p class="kicker"&gt;Herbarium of the Natural template&lt;/p&gt;
+        &lt;p class="natural-binomial"&gt;Geum rivale &lt;span class="natural-auth"&gt;L.&lt;/span&gt;&lt;/p&gt;
+        &lt;dl class="natural-data"&gt;
+          &lt;dt&gt;Common&lt;/dt&gt;&lt;dd&gt;Water avens&lt;/dd&gt;
+          &lt;dt&gt;Collected&lt;/dt&gt;&lt;dd&gt;Fallow brook, 4 September 2026&lt;/dd&gt;
+          &lt;dt&gt;Habit&lt;/dt&gt;&lt;dd&gt;Perennial, nodding, to 40 cm&lt;/dd&gt;
+          &lt;dt&gt;Soil&lt;/dt&gt;&lt;dd&gt;Wet clay, part shade&lt;/dd&gt;
+          &lt;dt&gt;Det.&lt;/dt&gt;&lt;dd&gt;M. Penrose&lt;/dd&gt;
+        &lt;/dl&gt;
+      &lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Pressed, labelled, &lt;em&gt;kept&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p class="natural-lede"&gt;Cream paper and ink by day. Soil by night.&lt;/p&gt;
+    &lt;p&gt;Natural sets a page like a herbarium sheet: rust for what you can press, moss for the labels, a hairline for everything else. After dark the paper is earth and the ink is cream. The markup is the same as every template here; only the cupboard differs.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg natural-stamp" href="index.html"&gt;The components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>The growth</h3>
+<p>A stem draws itself up the page and its leaves unfold from the stalk one after another, in moss and the lighter moss of the tags. It grows once, in about three seconds, and then stands. Add <code>natural-grow</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
+<figure class="example" data-snippet="natural-grow">
+<section class="hero natural-grow">
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Drawn as it <em>grows</em>.</h1>
+    <p>The stem is one path drawing its length; each leaf is a shape that opens from where it meets the stalk. Stroke and fill are the moss tokens, so the plant changes with the scheme.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg" href="index.html">Browse components</a>
+    </div>
+  </div>
+  <div class="natural-flare">
+    <svg class="natural-vine" viewBox="0 0 220 340" aria-hidden="true">
+      <path class="natural-vine-stem" pathLength="1" d="M110 330C112 280 104 240 112 190C120 140 104 100 112 50C114 36 116 24 118 12"/>
+      <path class="natural-vine-leaf" style="--i: 1; transform-origin: 109px 272px" d="M109 272C80 270 52 250 46 216C80 220 104 244 109 272Z"/>
+      <path class="natural-vine-leaf" style="--i: 2; transform-origin: 107px 225px" d="M107 225C136 222 164 200 170 166C136 170 112 196 107 225Z"/>
+      <path class="natural-vine-leaf" style="--i: 3; transform-origin: 112px 170px" d="M112 170C84 168 56 148 50 116C84 120 108 144 112 170Z"/>
+      <path class="natural-vine-leaf" style="--i: 4; transform-origin: 108px 118px" d="M108 118C136 116 162 96 168 64C136 68 112 92 108 118Z"/>
+      <path class="natural-vine-leaf" style="--i: 5; transform-origin: 113px 66px" d="M113 66C92 64 72 50 68 26C92 30 108 46 113 66Z"/>
+    </svg>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="natural-grow">&lt;section class="hero natural-grow"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Drawn as it &lt;em&gt;grows&lt;/em&gt;.&lt;/h1&gt;
+    &lt;p&gt;The stem is one path drawing its length; each leaf is a shape that opens from where it meets the stalk. Stroke and fill are the moss tokens, so the plant changes with the scheme.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg" href="index.html"&gt;Browse components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="natural-flare"&gt;
+    &lt;svg class="natural-vine" viewBox="0 0 220 340" aria-hidden="true"&gt;
+      &lt;path class="natural-vine-stem" pathLength="1" d="M110 330C112 280 104 240 112 190C120 140 104 100 112 50C114 36 116 24 118 12"/&gt;
+      &lt;path class="natural-vine-leaf" style="--i: 1; transform-origin: 109px 272px" d="M109 272C80 270 52 250 46 216C80 220 104 244 109 272Z"/&gt;
+      &lt;path class="natural-vine-leaf" style="--i: 2; transform-origin: 107px 225px" d="M107 225C136 222 164 200 170 166C136 170 112 196 107 225Z"/&gt;
+      &lt;path class="natural-vine-leaf" style="--i: 3; transform-origin: 112px 170px" d="M112 170C84 168 56 148 50 116C84 120 108 144 112 170Z"/&gt;
+      &lt;path class="natural-vine-leaf" style="--i: 4; transform-origin: 108px 118px" d="M108 118C136 116 162 96 168 64C136 68 112 92 108 118Z"/&gt;
+      &lt;path class="natural-vine-leaf" style="--i: 5; transform-origin: 113px 66px" d="M113 66C92 64 72 50 68 26C92 30 108 46 113 66Z"/&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.hero</code></td><td>The opening section: a grid of a text stack and, in most templates, a picture or a piece of flare</td></tr>
+      <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
+      <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
+      <tr><td><code>.hero.natural-grow</code></td><td>The hero with the vine beside the text</td></tr>
+      <tr><td><code>.natural-vine</code></td><td>The inline SVG</td></tr>
+      <tr><td><code>.natural-vine-stem</code></td><td>One path that draws its own length</td></tr>
+      <tr><td><code>.natural-vine-leaf</code></td><td>A leaf; opens from its base after a delay set by --i</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>One <code>&lt;h1&gt;</code> per page: the hero's heading is it. The kicker above it is a <code>&lt;p&gt;</code>, not a heading.</li>
+<li>Above <code>48rem</code> the hero is two columns, text then picture; below, it stacks. The variant keeps whatever layout its markup implies.</li>
+<li>The variant is CSS only. Its animation is declared with <code>both</code> fill, so the page is correct before it starts and after it ends, and the global <code>prefers-reduced-motion</code> rule stops it.</li>
+<li>Another template ignores <code>natural-grow</code> and shows its own hero; any flare markup inside sits in the template's flare wrapper so a swap can drop it.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="cards.html">← Cards</a><a href="fifty-fifty.html">Fifty-fifty →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

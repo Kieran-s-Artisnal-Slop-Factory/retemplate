@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
 </head>
 <body>
 <header class="navbar">
@@ -32,8 +32,11 @@
 <main class="page">
   <section class="hero">
     <div class="stack">
-      <h1>Cold, clear and out of the way.</h1>
-      <p>Near-white with a cast of ice, hairlines instead of shadows, one deep blue for the things you can click. Frost appears only where content scrolls under something: the bar above you, a dialog, a menu. Same markup as every other template here.</p>
+      <h1>Cold, clear and <em>out of the way.</em></h1>
+      <p>Near-white with a cast of ice, hairlines instead of shadows, one deep blue for the things you can click and one warm ember for the things that are live. Frost appears only where content scrolls under something: the dock above you, a dialog, a menu. Same markup as every other template here.</p>
+      <div class="modern-frosty-flare">
+        <p class="modern-frosty-command"><span>$</span><code>cp -r templates/modern-frosty my-site</code><span class="modern-frosty-caret"></span></p>
+      </div>
       <div class="row">
         <a class="btn btn-primary btn-lg" href="docs/index.html">Get started</a>
         <a class="btn btn-lg modern-frosty-quiet" href="example/index.html">See the example app</a>
@@ -52,7 +55,7 @@
           </ul>
           <p class="muted">Scroll this note. The toolbar stays, and the lines pass under it.</p>
           <p>Every colour is a <a href="docs/theme.html">token</a>, so the ice turns to slate when the scheme does. The lines on this sheet are one hairline colour repeated.</p>
-          <p>The type is Geist at 16px, semibold for headings with the tracking pulled in, mono for anything that is a label rather than a sentence.</p>
+          <p>The type is Geist at 16px, semibold for headings with the tracking pulled in, mono for anything that is a label rather than a sentence, and one line of Newsreader italic where a heading wants a change of voice.</p>
         </div>
       </div>
     </div>
@@ -112,6 +115,7 @@
           <tr><td>Mobile menu and sidebar drawer</td><td><span class="badge badge-active">yes</span></td><td>8px</td><td>Opens over the page</td></tr>
           <tr><td>Feature card picture</td><td><span class="badge badge-active">until hover</span></td><td>8px to 0</td><td>The one effect</td></tr>
           <tr><td>Cards, tables, fields, footer</td><td><span class="badge">no</span></td><td>none</td><td>They are the page</td></tr>
+          <tr><td>The ink slab</td><td><span class="badge">no</span></td><td>none</td><td>It is the page, turned over</td></tr>
         </tbody>
       </table>
     </div>
@@ -196,7 +200,7 @@
     </div>
     <div class="stack">
       <div class="banner banner-success" role="status"><span>✓</span><p>Saved. The note is on every device that is online.</p></div>
-      <div class="banner banner-info" role="status"><span>i</span><p>Geist and Geist Mono come from Google Fonts. The README shows how to self-host them instead.</p></div>
+      <div class="banner banner-info" role="status"><span>i</span><p>Geist, Geist Mono and Newsreader come from Google Fonts. The README shows how to self-host them instead.</p></div>
       <div class="banner banner-warning" role="status"><span>!</span><p>The example app is a demonstration; its forms post nowhere.</p></div>
       <div class="banner banner-danger" role="alert"><span>×</span><p>Sync failed. Nothing did, but this is what it would look like.</p></div>
     </div>
@@ -234,6 +238,16 @@
       <summary>What is in the install set?</summary>
       <div class="accordion-body"><p><code>css/</code>, <code>js/theme.js</code>, <code>assets/</code> and this folder's <code>README.md</code>. There is no <code>fonts/</code> folder unless you self-host the two faces.</p></div>
     </details>
+  </section>
+
+  <section class="section modern-frosty-slab">
+    <p class="kicker"><span class="modern-frosty-live"></span>Take it</p>
+    <h2>One folder. <em>Nothing to install.</em></h2>
+    <p>The slab is the page turned over: text colour as ground, ground colour as text. It holds the one thing a page most wants you to do, and the ember dot beside the kicker says it is current.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="docs/index.html">Read the get-started page</a>
+      <a class="btn btn-lg" href="docs/components/flare.html">See the flare</a>
+    </div>
   </section>
 
   <section class="section">

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Hero · Neon</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Neon · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/hero.html" aria-current="page">Hero</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Hero</h1>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Neon's, then a second variant that moves.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
+<figure class="example" data-snippet="hero">
+<section class="hero neon-stage">
+  <div class="stack">
+    <h1><span class="neon-text neon-strike">Open all night.</span></h1>
+    <p>Neon is the dark template twice. Light is zinc, dark is black, and nothing on these pages is ever white. Glow is state: what is lit is on.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero">&lt;section class="hero neon-stage"&gt;
+  &lt;div class="stack"&gt;
+    &lt;h1&gt;&lt;span class="neon-text neon-strike"&gt;Open all night.&lt;/span&gt;&lt;/h1&gt;
+    &lt;p&gt;Neon is the dark template twice. Light is zinc, dark is black, and nothing on these pages is ever white. Glow is state: what is lit is on.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>The chase</h3>
+<p>A run of lights chases around the edge of the stage: a dashed cyan line on an inline SVG, its dashes moving along the outline like bulbs around a sign. The headline lights up behind it. Add <code>neon-chase</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
+<figure class="example" data-snippet="neon-chase">
+<section class="hero neon-stage neon-chase">
+  <svg class="neon-chase-lights" aria-hidden="true"><rect pathLength="100"/></svg>
+  <div class="stack">
+    <h1><span class="neon-text">Lights, chasing.</span></h1>
+    <p>The bulbs around the sign are one dashed stroke with its offset on a loop. Cyan for the frame, rose for what you can press.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="neon-chase">&lt;section class="hero neon-stage neon-chase"&gt;
+  &lt;svg class="neon-chase-lights" aria-hidden="true"&gt;&lt;rect pathLength="100"/&gt;&lt;/svg&gt;
+  &lt;div class="stack"&gt;
+    &lt;h1&gt;&lt;span class="neon-text"&gt;Lights, chasing.&lt;/span&gt;&lt;/h1&gt;
+    &lt;p&gt;The bulbs around the sign are one dashed stroke with its offset on a loop. Cyan for the frame, rose for what you can press.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.hero</code></td><td>The opening section: a grid of a text stack and, in most templates, a picture or a piece of flare</td></tr>
+      <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
+      <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
+      <tr><td><code>.hero.neon-chase</code></td><td>The stage with the lights around it</td></tr>
+      <tr><td><code>.neon-chase-lights</code></td><td>The inline SVG; its rect is one dashed stroke on a loop</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>One <code>&lt;h1&gt;</code> per page: the hero's heading is it. The kicker above it is a <code>&lt;p&gt;</code>, not a heading.</li>
+<li>Above <code>48rem</code> the hero is two columns, text then picture; below, it stacks. The variant keeps whatever layout its markup implies.</li>
+<li>The variant is CSS only. Its animation is declared with <code>both</code> fill, so the page is correct before it starts and after it ends, and the global <code>prefers-reduced-motion</code> rule stops it.</li>
+<li>Another template ignores <code>neon-chase</code> and shows its own hero; any flare markup inside sits in the template's flare wrapper so a swap can drop it.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="cards.html">← Cards</a><a href="fifty-fifty.html">Fifty-fifty →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

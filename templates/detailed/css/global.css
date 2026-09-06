@@ -2166,6 +2166,66 @@ hr.page-break::after {
   -webkit-mask: var(--detailed-chevron) center / contain no-repeat;
 }
 
+/* == hero variants == */
+/* The curtain: two pleated panels part from the centre and slide off; the
+ * marquee's letters spread to their tracking as they go. */
+.hero.detailed-curtain {
+  position: relative;
+  overflow: hidden;
+  min-height: 24rem;
+}
+
+.hero.detailed-curtain::before,
+.hero.detailed-curtain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 51%;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--detailed-band) 0 1.5rem,
+    var(--detailed-band-raised) 1.5rem 3rem
+  );
+  animation: 1.4s 400ms cubic-bezier(0.7, 0, 0.3, 1) both;
+}
+
+.hero.detailed-curtain::before {
+  left: 0;
+  border-right: 3px solid var(--detailed-gold);
+  animation-name: detailed-part-left;
+}
+
+.hero.detailed-curtain::after {
+  right: 0;
+  border-left: 3px solid var(--detailed-gold);
+  animation-name: detailed-part-right;
+}
+
+.hero.detailed-curtain h1 {
+  animation: detailed-spread 1.4s 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes detailed-part-left {
+  to {
+    transform: translateX(-102%);
+  }
+}
+
+@keyframes detailed-part-right {
+  to {
+    transform: translateX(102%);
+  }
+}
+
+@keyframes detailed-spread {
+  from {
+    letter-spacing: -0.02em;
+    opacity: 0.4;
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

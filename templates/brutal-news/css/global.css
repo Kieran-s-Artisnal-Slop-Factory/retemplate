@@ -2087,6 +2087,59 @@ hr.page-break {
   color: inherit;
 }
 
+/* == hero variants == */
+/* Hot off the press: the headline slams in stepped, a red rule wipes under
+ * it, a stamp lands on the corner. */
+.hero.brutal-news-press {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.brutal-news-press h1 {
+  animation: brutal-news-slam 450ms steps(4, end) both;
+}
+
+.hero.brutal-news-press h1::after {
+  content: "";
+  display: block;
+  height: 0.16em;
+  margin-top: 0.2em;
+  background: var(--brutal-news-red);
+  transform-origin: left;
+  animation: brutal-news-wipe 600ms 400ms steps(6, end) both;
+}
+
+.hero.brutal-news-press .brutal-news-stamp {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: var(--brutal-news-red);
+  color: var(--color-on-primary);
+  border-color: var(--text-color);
+  transform: rotate(-8deg);
+  animation: brutal-news-stamp 300ms 1s steps(2, end) both;
+}
+
+@keyframes brutal-news-slam {
+  from {
+    opacity: 0;
+    transform: scale(1.35) translateY(-0.2em);
+  }
+}
+
+@keyframes brutal-news-wipe {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes brutal-news-stamp {
+  from {
+    opacity: 0;
+    transform: rotate(-8deg) scale(2.2);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

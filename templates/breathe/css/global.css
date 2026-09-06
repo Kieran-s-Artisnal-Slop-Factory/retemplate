@@ -2158,6 +2158,42 @@ hr.page-break::after {
   max-width: 30ch;
 }
 
+/* == hero variants == */
+/* The seeds: six pale discs drift up through the hero on their own delays
+ * and fade out. --x sets the column, --d the delay. */
+.hero.breathe-seeds {
+  position: relative;
+  overflow: hidden;
+}
+
+.breathe-air {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.breathe-air span {
+  position: absolute;
+  bottom: -1rem;
+  left: var(--x);
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--breathe-leaf-light);
+  box-shadow: 0 0 0 0.35rem var(--breathe-mint);
+  opacity: 0;
+  animation: breathe-drift 9s linear infinite;
+  animation-delay: var(--d);
+}
+
+@keyframes breathe-drift {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 0.9; }
+  50% { transform: translate(1.5rem, -50vh); }
+  90% { opacity: 0.5; }
+  100% { transform: translate(-1rem, -100vh); opacity: 0; }
+}
+
 /* == print == */
 @media print {
   .navbar,

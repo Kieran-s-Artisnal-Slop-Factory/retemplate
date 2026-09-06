@@ -165,7 +165,7 @@ drawer; above it, static. There is no desktop collapse in 0.1.0.
 
 ### 4.3 Component pages
 
-Order: accordion, cards, fifty-fifty, gallery, switch, page-break, buttons,
+Order: accordion, cards, hero, fifty-fifty, gallery, switch, page-break, buttons,
 forms, dialog, navbar, sidebar, banner, badge, table, author-card, footer,
 flare. Each page, in this order:
 
@@ -192,6 +192,7 @@ data-select="header.navbar">`.
 | --- | --- |
 | Accordion | `<details class="accordion"><summary>Title</summary><div class="accordion-body">…</div></details>`. A group: `<div class="accordion-group">` of accordions sharing `name="faq"` (exclusive open). |
 | Cards | `<article class="card"><figure class="card-media"><img …></figure><div class="card-body"><h3 class="card-title">…</h3><p class="card-text">…</p></div></article>`. Media may be an `<img>` or an inline `<svg class="card-icon">`. What is drawn inside the `<svg>` is content, not contract. Variants: `.card-horizontal` (media left), `.card-horizontal.card-media-end` (media right), `.card-feature` (the template's dynamic card). |
+| Hero | `<section class="hero"><div class="stack"><p class="kicker">…</p><h1>…</h1><p>…</p><div class="row"><a class="btn btn-primary btn-lg">…</a></div></div><img …></section>`. The picture may be an `<img>` or the template's flare. The hero's shape is the template's own (decision 21); the contract asks only for `.hero` with a `.stack`. Each template documents two variants on `docs/components/hero.html`: its own hero, and one animated `.<name>-*` modifier that stops under `prefers-reduced-motion`. |
 | Fifty-fifty | `<section class="fifty-fifty"><figure><img …></figure><div class="fifty-fifty-body"><h2>…</h2><p>…</p><a class="btn btn-primary" href="…">…</a></div></section>`. `.fifty-fifty-reverse` puts the image on the right. Stacks image-first below `48rem`. |
 | Gallery + lightbox | `<ul class="gallery">` of `<li><figure><a href="#lb-1" onclick="document.getElementById('lightbox').showModal()"><img …></a><figcaption>…</figcaption></figure></li>` and, after the list, one `<dialog class="lightbox" id="lightbox">` holding `<figure class="lightbox-slide" id="lb-1"><img …><figcaption>…</figcaption><nav class="lightbox-nav"><a href="#lb-8">‹</a><a href="#lb-2">›</a></nav></figure>` per image and a `<form method="dialog"><button class="lightbox-close" type="submit" aria-label="Close">×</button></form>`. `:target` shows a slide; the first slide shows when nothing is targeted. |
 | Switch | `<label class="switch"><input type="checkbox" role="switch"><span>Label</span></label>` |

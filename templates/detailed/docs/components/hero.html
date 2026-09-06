@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-theme="detailed">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Hero · Detailed</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <script src="../../js/theme.js"></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Josefin+Sans:wght@400;600;700&family=Jost:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+</head>
+<body>
+<div class="sidebar-layout">
+  <header class="topbar">
+    <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Navigation">☰</button>
+    <span class="topbar-title">Detailed · Components</span>
+    <button class="scheme-toggle" type="button" data-scheme="auto" aria-label="Theme: auto"></button>
+  </header>
+  <aside class="sidebar" id="sidebar" popover>
+    <nav aria-label="Documentation">
+      <details open>
+        <summary>Pages</summary>
+        <a href="../../index.html">Overview</a>
+        <a href="../../blogpost.html">Blog post</a>
+        <a href="../../forms.html">Forms</a>
+        <a href="../../sidebar.html">Sidebar variant</a>
+      </details>
+      <details open>
+        <summary>Docs</summary>
+        <a href="../../docs/index.html">Get started</a>
+        <a href="../../docs/theme.html">Theme</a>
+        <a href="../../docs/defaults.html">Defaults</a>
+        <a href="../../docs/blog.html">Blog anatomy</a>
+      </details>
+      <details open>
+        <summary>Components</summary>
+        <a href="../../docs/components/index.html">All components</a>
+        <a href="../../docs/components/accordion.html">Accordion</a>
+        <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/hero.html" aria-current="page">Hero</a>
+        <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
+        <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
+        <a href="../../docs/components/switch.html">Switch</a>
+        <a href="../../docs/components/page-break.html">Page break</a>
+        <a href="../../docs/components/buttons.html">Buttons</a>
+        <a href="../../docs/components/forms.html">Forms</a>
+        <a href="../../docs/components/dialog.html">Dialog</a>
+        <a href="../../docs/components/navbar.html">Navbar</a>
+        <a href="../../docs/components/sidebar.html">Sidebar</a>
+        <a href="../../docs/components/banner.html">Banner</a>
+        <a href="../../docs/components/badge.html">Badge</a>
+        <a href="../../docs/components/table.html">Table</a>
+        <a href="../../docs/components/author-card.html">Author card</a>
+        <a href="../../docs/components/footer.html">Footer</a>
+        <a href="../../docs/components/flare.html">Flare</a>
+      </details>
+      <details open>
+        <summary>Example</summary>
+        <a href="../../example/index.html">Example site</a>
+      </details>
+    </nav>
+    <p class="sidebar-footer"><a class="site-link" href="../../../../index.html">All templates</a></p>
+  </aside>
+  <main class="page docs">
+<header class="page-header">
+  <p class="kicker">Component</p>
+  <h1>Hero</h1>
+  <p>The opening of a page: a heading at the largest size, a paragraph, one or two buttons, and beside them whatever the template leads with. Every template has its own hero form; this page shows Detailed's, then a second variant that moves.</p>
+</header>
+<h2 id="preview">Preview</h2>
+<p>The hero as the overview uses it. The heading takes <code>--font-size-hero</code>; the paragraph is muted and capped at a readable measure.</p>
+<figure class="example" data-snippet="hero">
+<section class="hero detailed-marquee">
+  <div class="detailed-flare detailed-sunburst" aria-hidden="true"><svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"><path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/><path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/></svg></div>
+  <div class="stack">
+    <p class="kicker">A retemplate template</p>
+    <h1>Detailed</h1>
+    <p>Brass on black. Cream by day, navy by night. Sunbursts, stepped corners and chevron rules, with Limelight over the door and Jost for the small print.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg detailed-outline" href="index.html">Browse the components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="hero">&lt;section class="hero detailed-marquee"&gt;
+  &lt;div class="detailed-flare detailed-sunburst" aria-hidden="true"&gt;&lt;svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMax meet" fill="none" stroke="currentColor" stroke-width="1"&gt;&lt;path d="M340 300L104 300M340 295L105 274M341 290L108 249M342 284L114 223M344 279L122 199M346 275L132 175M348 270L144 152M351 266L158 130M354 261L173 110M358 258L191 91M361 254L210 73M366 251L230 58M370 248L252 44M375 246L275 32M379 244L299 22M384 242L323 14M390 241L349 8M395 240L374 5M400 240L400 4M405 240L426 5M410 241L451 8M416 242L477 14M421 244L501 22M425 246L525 32M430 248L548 44M434 251L570 58M439 254L590 73M442 258L609 91M446 261L627 110M449 266L642 130M452 270L656 152M454 275L668 175M456 279L678 199M458 284L686 223M459 290L692 249M460 295L695 274M460 300L696 300"/&gt;&lt;path d="M260 300A140 140 0 0 1 540 300M180 300A220 220 0 0 1 620 300M104 300A296 296 0 0 1 696 300" stroke-width="1.5"/&gt;&lt;/svg&gt;&lt;/div&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;A retemplate template&lt;/p&gt;
+    &lt;h1&gt;Detailed&lt;/h1&gt;
+    &lt;p&gt;Brass on black. Cream by day, navy by night. Sunbursts, stepped corners and chevron rules, with Limelight over the door and Jost for the small print.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg detailed-outline" href="index.html"&gt;Browse the components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="variants">Variants</h2>
+<h3>The curtain</h3>
+<p>Two pleated curtains in the band colour, each edged in gold, part from the centre and slide off to either side, and the marquee is there behind them with its letters spreading to their full tracking. It plays once, on load. Add <code>detailed-curtain</code> to the hero. Under <code>prefers-reduced-motion</code> the global rule cuts every animation to nothing, so the hero is simply there.</p>
+<figure class="example" data-snippet="detailed-curtain">
+<section class="hero detailed-marquee detailed-curtain">
+  <div class="stack">
+    <p class="kicker">Tonight, and every night</p>
+    <h1>Curtain</h1>
+    <p>Pleated in the band colour, edged in gold, drawn apart in a second and a half. The headline waits behind them with its tracking closed, and opens as they go.</p>
+    <div class="row">
+      <a class="btn btn-primary btn-lg" href="../index.html">Get started</a>
+      <a class="btn btn-lg detailed-outline" href="index.html">Browse the components</a>
+    </div>
+  </div>
+</section>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="detailed-curtain">&lt;section class="hero detailed-marquee detailed-curtain"&gt;
+  &lt;div class="stack"&gt;
+    &lt;p class="kicker"&gt;Tonight, and every night&lt;/p&gt;
+    &lt;h1&gt;Curtain&lt;/h1&gt;
+    &lt;p&gt;Pleated in the band colour, edged in gold, drawn apart in a second and a half. The headline waits behind them with its tracking closed, and opens as they go.&lt;/p&gt;
+    &lt;div class="row"&gt;
+      &lt;a class="btn btn-primary btn-lg" href="../index.html"&gt;Get started&lt;/a&gt;
+      &lt;a class="btn btn-lg detailed-outline" href="index.html"&gt;Browse the components&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<h2 id="classes">Classes</h2>
+<p>The rules live in <code>css/global.css</code>: the hero under <code>/* == utilities == */</code> with the other layout helpers, the variant under <code>/* == hero variants == */</code>.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Class</th><th>Purpose</th></tr></thead><tbody>
+      <tr><td><code>.hero</code></td><td>The opening section: a grid of a text stack and, in most templates, a picture or a piece of flare</td></tr>
+      <tr><td><code>.hero .stack</code></td><td>The kicker, heading, paragraph and button row</td></tr>
+      <tr><td><code>.hero .row</code></td><td>The buttons</td></tr>
+      <tr><td><code>.hero.detailed-marquee.detailed-curtain</code></td><td>The marquee with the curtains drawn over it, parting on load</td></tr>
+</tbody></table></div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>One <code>&lt;h1&gt;</code> per page: the hero's heading is it. The kicker above it is a <code>&lt;p&gt;</code>, not a heading.</li>
+<li>Above <code>48rem</code> the hero is two columns, text then picture; below, it stacks. The variant keeps whatever layout its markup implies.</li>
+<li>The variant is CSS only. Its animation is declared with <code>both</code> fill, so the page is correct before it starts and after it ends, and the global <code>prefers-reduced-motion</code> rule stops it.</li>
+<li>Another template ignores <code>detailed-curtain</code> and shows its own hero; any flare markup inside sits in the template's flare wrapper so a swap can drop it.</li>
+</ul>
+<nav class="prev-next" aria-label="Component pages"><a href="cards.html">← Cards</a><a href="fifty-fifty.html">Fifty-fifty →</a></nav>
+  </main>
+</div>
+<script src="../../js/copy.js"></script>
+</body>
+</html>

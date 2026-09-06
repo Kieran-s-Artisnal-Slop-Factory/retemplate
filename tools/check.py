@@ -33,7 +33,7 @@ LANDING = ROOT / "index.html"
 # ---------------------------------------------------------------------------
 
 COMPONENTS = [
-    "accordion", "cards", "fifty-fifty", "gallery", "switch", "page-break",
+    "accordion", "cards", "hero", "fifty-fifty", "gallery", "switch", "page-break",
     "buttons", "forms", "dialog", "navbar", "sidebar", "banner", "badge",
     "table", "author-card", "footer", "flare",
 ]
@@ -62,7 +62,7 @@ OVERVIEW_MUST_USE = [
 
 # What each component docs page must contain at least once.
 COMPONENT_PAGE_MUST_CONTAIN = {
-    "accordion": ".accordion", "cards": ".card", "fifty-fifty": ".fifty-fifty",
+    "accordion": ".accordion", "cards": ".card", "hero": ".hero", "fifty-fifty": ".fifty-fifty",
     "gallery": ".gallery", "switch": ".switch", "page-break": "hr.page-break",
     "buttons": ".btn", "forms": ".field", "dialog": "dialog.modal",
     "navbar": "iframe", "sidebar": "iframe", "banner": ".banner",

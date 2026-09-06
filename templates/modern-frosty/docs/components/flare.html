@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../../css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
 </head>
 <body>
 <div class="sidebar-layout">
@@ -41,6 +41,7 @@
         <a href="../../docs/components/index.html">All components</a>
         <a href="../../docs/components/accordion.html">Accordion</a>
         <a href="../../docs/components/cards.html">Cards</a>
+        <a href="../../docs/components/hero.html">Hero</a>
         <a href="../../docs/components/fifty-fifty.html">Fifty-fifty</a>
         <a href="../../docs/components/gallery.html">Gallery and lightbox</a>
         <a href="../../docs/components/switch.html">Switch</a>
@@ -68,7 +69,7 @@
 <header class="page-header">
   <p class="kicker">Component</p>
   <h1>Flare</h1>
-  <p>Flare is everything a template adds beyond the contract. Modern Frosty adds one thing that needs markup, the note, and a short list of keyboard shortcuts. Its five variants of contract components (the ledger, the quiet button, the lined accordion group, the inline field and the plans table) are documented on those components' pages and listed at the bottom of this one.</p>
+  <p>Flare is everything a template adds beyond the contract. Modern Frosty adds the note, the ink slab with its command line and live dot, and a short list of keyboard shortcuts; the dock (the floating navbar) and the serif counterpoint need no markup of their own. Its five variants of contract components (the ledger, the quiet button, the lined accordion group, the inline field and the plans table) are documented on those components' pages and listed at the bottom of this one.</p>
 </header>
 <h2 id="preview">The note</h2>
 <p>A piece of the example app: a frosted toolbar over a ruled sheet. The toolbar is <code>position: sticky</code> inside the note, so when the note scrolls the lines pass under it and the frost has something to blur. The lines are a repeating gradient of one hairline colour, so they swap with the scheme. Use it as a hero, as the overview and the example home do, or anywhere a page wants to show the product rather than describe it.</p>
@@ -132,6 +133,26 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
+<h2 id="slab">The ink slab</h2>
+<p>The one inverted surface: the text colour as ground, the ground colour as text, so it reads as the page turned over. A section with <code>modern-frosty-slab</code> loses its top rule and gains the inversion; buttons inside it invert too. The command line is a <code>&lt;p&gt;</code> with a prompt, a <code>&lt;code&gt;</code> and a caret that blinks, and the live dot is a span before a kicker with a ring that pings.</p>
+<figure class="example" data-snippet="modern-frosty-slab">
+<div class="modern-frosty-flare">
+  <div class="modern-frosty-slab">
+    <p class="kicker"><span class="modern-frosty-live"></span>Now on every plan</p>
+    <h2>Sync, <em>quietly.</em></h2>
+    <p>Notes are files in a folder you own. Sync copies them; it never rewrites them.</p>
+    <p class="modern-frosty-command"><span>$</span><code>sheaf sync --watch</code><span class="modern-frosty-caret"></span></p>
+  </div>
+</div>
+</figure>
+<div class="snippet"><button class="copy-btn" type="button">Copy</button><pre><code data-snippet="modern-frosty-slab">&lt;div class="modern-frosty-flare"&gt;
+  &lt;div class="modern-frosty-slab"&gt;
+    &lt;p class="kicker"&gt;&lt;span class="modern-frosty-live"&gt;&lt;/span&gt;Now on every plan&lt;/p&gt;
+    &lt;h2&gt;Sync, &lt;em&gt;quietly.&lt;/em&gt;&lt;/h2&gt;
+    &lt;p&gt;Notes are files in a folder you own. Sync copies them; it never rewrites them.&lt;/p&gt;
+    &lt;p class="modern-frosty-command"&gt;&lt;span&gt;$&lt;/span&gt;&lt;code&gt;sheaf sync --watch&lt;/code&gt;&lt;span class="modern-frosty-caret"&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
 <h3>Keys</h3>
 <p>A wrapping list of shortcuts, each a <code>&lt;kbd&gt;</code> and a word. The features page of the example uses it under the table of commands.</p>
 <figure class="example" data-snippet="modern-frosty-keys">
@@ -161,6 +182,11 @@
       <tr><td><code>.modern-frosty-sheet</code></td><td>Ruled lines at 1.75rem; headings and paragraphs sit on the lines</td></tr>
       <tr><td><code>.modern-frosty-scroll</code></td><td>Caps the note at 22rem and lets it scroll</td></tr>
       <tr><td><code>.modern-frosty-keys</code></td><td>A wrapping list of shortcuts</td></tr>
+      <tr><td><code>.modern-frosty-slab</code></td><td>The inverted surface; on a <code>.section</code> it also drops the top rule</td></tr>
+      <tr><td><code>.modern-frosty-command</code></td><td>A command line: prompt span, <code>code</code>, caret</td></tr>
+      <tr><td><code>.modern-frosty-caret</code></td><td>The blinking caret</td></tr>
+      <tr><td><code>.modern-frosty-live</code></td><td>The ember dot with a pinging ring, before a kicker</td></tr>
+      <tr><td><code>.modern-frosty-serif</code>, <code>h1 em</code>, <code>h2 em</code></td><td>The Newsreader italic counterpoint</td></tr>
       <tr><td><code>.grid-2.modern-frosty-ledger</code>, <code>.grid-3.modern-frosty-ledger</code></td><td>Cards sharing hairlines (<a href="cards.html">cards</a>)</td></tr>
       <tr><td><code>.btn.modern-frosty-quiet</code></td><td>The text button (<a href="buttons.html">buttons</a>)</td></tr>
       <tr><td><code>.accordion-group.modern-frosty-lines</code></td><td>The unboxed group (<a href="accordion.html">accordion</a>)</td></tr>
@@ -170,7 +196,8 @@
 <h2 id="notes">Notes</h2>
 <ul>
 <li>The frost is two tokens, <code>--modern-frosty-frost</code> (the fill) and <code>--modern-frosty-blur</code> (8px), used by the navbar, the top bar, the toolbar, the dialog, the lightbox controls, the mobile menu, the drawer and the feature card. Lower the blur in <code>theme.css</code> and every one of them follows.</li>
-<li>Nothing animates continuously. The only transitions are hover colours and the feature card's frost clearing, and the global <code>prefers-reduced-motion</code> rule shortens them to nothing.</li>
+<li>Motion is small and named: the hero rises once on load, the note drifts, the caret blinks and the live dot pings. Everything else is a hover colour or the feature card's frost clearing, and the global <code>prefers-reduced-motion</code> rule shortens all of it to nothing.</li>
+<li>The dock is the navbar with no extra markup: it floats <code>var(--space-3)</code> from the top, is capped at the page width, and is the only thing on an ordinary page with a shadow.</li>
 <li>Flare must still use tokens: no colour literals in <code>global.css</code>. The ice tint and the rule colour are <code>--modern-frosty-ice</code> and <code>--modern-frosty-rule</code> in <code>theme.css</code>.</li>
 <li>The variants need no wrapper: another template ignores the class and shows the plain component. Only the note and the keys are markup to strip, and they sit in <code>.modern-frosty-flare</code>.</li>
 </ul>

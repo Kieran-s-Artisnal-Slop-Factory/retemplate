@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
 </head>
 <body>
 <div class="sidebar-layout">
@@ -41,6 +41,7 @@
         <a href="../docs/components/index.html">All components</a>
         <a href="../docs/components/accordion.html">Accordion</a>
         <a href="../docs/components/cards.html">Cards</a>
+        <a href="../docs/components/hero.html">Hero</a>
         <a href="../docs/components/fifty-fifty.html">Fifty-fifty</a>
         <a href="../docs/components/gallery.html">Gallery and lightbox</a>
         <a href="../docs/components/switch.html">Switch</a>
@@ -137,7 +138,7 @@
 <h2>Browsers</h2>
 <p>Anything current as of 2024: the template uses <code>light-dark()</code>, <code>:has()</code>, popovers, exclusive <code>&lt;details name&gt;</code> groups, <code>color-mix()</code> and <code>backdrop-filter</code>, with no polyfills. Where <code>backdrop-filter</code> is missing the frosted bars fall back to their translucent fill.</p>
 <h2>Fonts</h2>
-<p>Geist for everything and Geist Mono for labels, badges, table heads and code, both from Google Fonts by the three <code>&lt;link&gt;</code>s above. Without them the fallback stacks in <code>theme.css</code> give the system sans and mono. To self-host, download the two families, put the files in <code>fonts/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> (not <code>theme.css</code>, whose palette block is pasted elsewhere) and drop the three lines.</p>
+<p>Geist for everything, Newsreader italic for one word or phrase in a heading, and Geist Mono for labels, badges, table heads and code, all three from Google Fonts by the three <code>&lt;link&gt;</code>s above. Without them the fallback stacks in <code>theme.css</code> give the system sans and mono. To self-host, download the two families, put the files in <code>fonts/</code>, add <code>@font-face</code> rules at the top of <code>css/global.css</code> (not <code>theme.css</code>, whose palette block is pasted elsewhere) and drop the three lines.</p>
 <h2>Two lines to delete</h2>
 <p>Each showcase page carries <code>&lt;a class="site-link" href="../../index.html"&gt;All templates&lt;/a&gt;</code> in its navbar and sidebar, a link back to the retemplate landing. Remove it; nothing else in the folder points outside.</p>
 <p>The dialogs and the lightbox open with a one-line <code>onclick</code>. Under a strict Content-Security-Policy that blocks inline handlers, move those calls into <code>theme.js</code> (or any script of yours) as click listeners.</p>

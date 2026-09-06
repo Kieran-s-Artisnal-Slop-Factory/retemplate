@@ -2094,6 +2094,37 @@ h3.allegory-band { font-size: var(--font-size-xl); }
   font-size: var(--font-size-xl);
 }
 
+/* == hero variants == */
+/* The turning page: each leaf of the diptych lifts from its outer edge and
+ * settles, the two out of phase. */
+.hero.allegory-turn .allegory-diptych {
+  perspective: 1400px;
+}
+
+.hero.allegory-turn .allegory-diptych > * {
+  transform-origin: left center;
+  animation: allegory-lift-left 8s ease-in-out infinite;
+  backface-visibility: hidden;
+}
+
+.hero.allegory-turn .allegory-diptych > :last-child {
+  transform-origin: right center;
+  animation-name: allegory-lift-right;
+  animation-delay: 4s;
+}
+
+@keyframes allegory-lift-left {
+  50% {
+    transform: rotateY(-14deg);
+  }
+}
+
+@keyframes allegory-lift-right {
+  50% {
+    transform: rotateY(14deg);
+  }
+}
+
 /* == print == */
 @media print {
   .navbar,

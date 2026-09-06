@@ -2208,6 +2208,50 @@ hr.page-break::after {
   transform: rotate(-3deg);
 }
 
+/* == hero variants == */
+/* The drop: the box lands and bounces, the stack pops up in turn, and the
+ * sticker lands last and keeps wobbling. */
+.hero.thick-drop {
+  animation: thick-land 700ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.hero.thick-drop > .stack > * {
+  animation: thick-pop 450ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.hero.thick-drop > .stack > :nth-child(1) { animation-delay: 500ms; }
+.hero.thick-drop > .stack > :nth-child(2) { animation-delay: 650ms; }
+.hero.thick-drop > .stack > :nth-child(3) { animation-delay: 800ms; }
+
+.hero.thick-drop > .thick-pile {
+  animation: thick-pop 500ms 700ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.hero.thick-drop > .thick-sticker {
+  animation: thick-pop 400ms 1.1s cubic-bezier(0.3, 1.6, 0.5, 1) both,
+             thick-wobble 3s 1.5s ease-in-out infinite;
+}
+
+@keyframes thick-land {
+  from {
+    opacity: 0;
+    transform: translateY(-2.5rem);
+    box-shadow: none;
+  }
+}
+
+@keyframes thick-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+@keyframes thick-wobble {
+  0%, 100% { rotate: -4deg; }
+  50% { rotate: 4deg; }
+}
+
 /* == print == */
 @media print {
   .navbar,

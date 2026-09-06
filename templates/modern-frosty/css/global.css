@@ -602,6 +602,51 @@ dialog::backdrop,
   border: 1px solid var(--border-color);
 }
 
+/* The counterpoint: one serif italic word or phrase in a heading, set in
+ * Newsreader against Geist. Use <em> in a heading, or the class anywhere. */
+.hero h1 em,
+h2 em,
+.modern-frosty-serif {
+  font-family: var(--modern-frosty-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* The hero rises: each child of the stack fades up in turn, then whatever
+ * flare sits beside it drifts a few pixels, slowly, so the frost has
+ * something to blur. Both stop under reduced motion. */
+.hero > .stack > * {
+  animation: modern-frosty-rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero > .stack > :nth-child(2) { animation-delay: 90ms; }
+.hero > .stack > :nth-child(3) { animation-delay: 180ms; }
+.hero > .stack > :nth-child(4) { animation-delay: 270ms; }
+.hero > .stack > :nth-child(5) { animation-delay: 360ms; }
+.hero > .stack > :nth-child(6) { animation-delay: 450ms; }
+
+.hero > .modern-frosty-flare {
+  animation: modern-frosty-rise 900ms 300ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero > .modern-frosty-flare > .modern-frosty-note {
+  animation: modern-frosty-float 7s 1.2s ease-in-out infinite;
+}
+
+@keyframes modern-frosty-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+@keyframes modern-frosty-float {
+  50% {
+    transform: translateY(-0.4rem);
+  }
+}
+
 /* == buttons == */
 .btn {
   display: inline-flex;
@@ -1555,20 +1600,25 @@ hr.page-break::after {
 }
 
 /* == navbar == */
-/* The frosted bar: the one place on an ordinary page where frost belongs,
- * because content scrolls under it. */
+/* The dock: a frosted pill that floats clear of the page edges and stays
+ * put while the page scrolls under it. The one place on an ordinary page
+ * where frost belongs, and the one place with a shadow. */
 .navbar {
   position: sticky;
-  top: 0;
+  top: var(--space-3);
   z-index: 10;
   height: var(--navbar-height);
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  padding: 0 var(--space-4);
+  width: min(100% - 2 * var(--space-4), var(--page-max-width));
+  margin: var(--space-3) auto 0;
+  padding: 0 var(--space-2) 0 var(--space-4);
   background: var(--modern-frosty-frost);
   backdrop-filter: blur(var(--modern-frosty-blur));
-  border-bottom: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-2);
 }
 
 .brand {
@@ -1654,16 +1704,34 @@ hr.page-break::after {
   white-space: nowrap;
 }
 
+/* In the dock the link back to the landing is an ink pill: the inverted
+ * surface, in miniature. */
+.navbar .site-link {
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: var(--modern-frosty-ink);
+  color: var(--modern-frosty-on-ink);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.navbar .site-link:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
 /* Below the breakpoint the nav is a popover opened by the menu button. */
 @media (max-width: 47.99rem) {
   .navbar nav {
     position: fixed;
-    inset: var(--navbar-height) 0 auto 0;
-    width: 100%;
+    inset: calc(var(--navbar-height) + var(--space-5)) var(--space-4) auto;
+    width: auto;
     margin: 0;
     padding: var(--space-3);
-    border: 0;
-    border-bottom: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-2);
     background: var(--modern-frosty-frost);
     backdrop-filter: blur(var(--modern-frosty-blur));
     color: var(--text-color);
@@ -2140,6 +2208,164 @@ hr.page-break::after {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+}
+
+/* The ink slab: the one inverted surface. The text colour becomes the
+ * ground and the ground colour becomes the text, so it reads as the page
+ * turned over. A section can be one; so can a command line. */
+.modern-frosty-slab {
+  background: var(--modern-frosty-ink);
+  color: var(--modern-frosty-on-ink);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+}
+
+.section.modern-frosty-slab {
+  border-top: 0;
+  padding-top: var(--space-6);
+}
+
+.modern-frosty-slab > h2,
+.modern-frosty-slab > h2 + p {
+  color: inherit;
+}
+
+.modern-frosty-slab > h2 + p {
+  opacity: 0.8;
+}
+
+.modern-frosty-slab .btn {
+  background: var(--modern-frosty-on-ink);
+  color: var(--modern-frosty-ink);
+  border-color: transparent;
+}
+
+.modern-frosty-slab .btn:hover {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.modern-frosty-slab .btn.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.modern-frosty-slab a:not(.btn) {
+  color: inherit;
+}
+
+/* A command line on a slab: a prompt in ember, the command in mono, and a
+ * caret that blinks. Inside a slab the colours invert again. */
+.modern-frosty-command {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-md);
+  background: var(--modern-frosty-ink);
+  color: var(--modern-frosty-on-ink);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.modern-frosty-command > span:first-child {
+  color: var(--modern-frosty-ember);
+}
+
+.modern-frosty-command code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+  white-space: nowrap;
+}
+
+.modern-frosty-caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.1em;
+  background: var(--modern-frosty-ember);
+  animation: modern-frosty-blink 1s steps(2, end) infinite;
+}
+
+.modern-frosty-slab .modern-frosty-command {
+  background: var(--modern-frosty-on-ink);
+  color: var(--modern-frosty-ink);
+}
+
+@keyframes modern-frosty-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* The live dot: an ember point with a ring that pings outward. For a
+ * kicker that announces something current. */
+.modern-frosty-live {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: var(--space-2);
+  border-radius: 50%;
+  background: var(--modern-frosty-ember);
+  vertical-align: middle;
+}
+
+.modern-frosty-live::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  animation: modern-frosty-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes modern-frosty-ping {
+  to {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* == hero variants == */
+/* The prompt: centred, the stack rises, and the command on the slab types
+ * itself out. The typed line is 26 characters wide; change both the text
+ * and the width together. */
+.hero.modern-frosty-prompt {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  text-align: center;
+  padding-block: clamp(var(--space-6), 10vh, 6rem);
+}
+
+.hero.modern-frosty-prompt > .stack {
+  align-items: center;
+  max-width: 44rem;
+}
+
+.hero.modern-frosty-prompt > .stack > p {
+  margin-inline: auto;
+}
+
+.hero.modern-frosty-prompt .row {
+  justify-content: center;
+}
+
+.hero.modern-frosty-prompt .modern-frosty-command code {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  animation: modern-frosty-type 1.8s steps(26, end) 900ms both;
+}
+
+@keyframes modern-frosty-type {
+  to {
+    width: 26ch;
+  }
 }
 
 /* == print == */

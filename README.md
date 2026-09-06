@@ -8,7 +8,8 @@ a [retoken](https://kieranwood.ca/retoken/theme/) theme.
 - **Landing page:** `index.html`, every template with previews, a title
   search and tag filters.
 - **Templates:** [`templates/`](templates/README.md), one folder each: Plain,
-  Neumorphic, Brutal News, Glassy, Neon, Natural, Detailed, Gothic, Allegory.
+  Neumorphic, Brutal News, Glassy, Neon, Natural, Detailed, Gothic, Allegory,
+  ExtraExtra, Breathe, Modern Frosty, Thick, Cattle.
 - **Docs:** [`docs/`](docs/README.md): using a template, using its theme in
   retoken, the contract every template follows, testing, adding a template.
 
