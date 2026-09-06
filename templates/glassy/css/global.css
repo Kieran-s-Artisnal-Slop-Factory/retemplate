@@ -2178,6 +2178,15 @@ hr.page-break::after {
   min-width: 0;
 }
 
+/* The headline in the narrow column is set smaller than the hero size and
+ * may break inside a word, so it never runs under the picture. */
+.hero.hero-image h1 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.4rem);
+  overflow-wrap: anywhere;
+  width: auto;
+  max-width: 100%;
+}
+
 .hero.hero-image > img,
 .hero.hero-image > figure {
   display: block;
@@ -2193,11 +2202,11 @@ hr.page-break::after {
 
 @media (min-width: 48rem) {
   .hero.hero-image {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-    gap: var(--space-6);
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 3fr);
+    gap: clamp(var(--space-6), 7vw, 6rem);
   }
   .hero.hero-image.hero-image-half {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 1fr);
   }
 }
 
@@ -2270,9 +2279,7 @@ hr.page-break::after {
 
 .glassy-crack > .hero.glassy-sheet {
   margin-top: 0;
-  animation:
-    glassy-crack-cut 1ms 1.1s steps(1, end) both,
-    glassy-shudder 240ms 900ms steps(4, end) both;
+  animation: glassy-shudder 240ms 900ms steps(4, end) both;
 }
 
 .glassy-crack-lines {
@@ -2310,7 +2317,6 @@ hr.page-break::after {
   backdrop-filter: blur(var(--glassy-blur-deep));
   -webkit-backdrop-filter: blur(var(--glassy-blur-deep));
   pointer-events: none;
-  opacity: 0;
   animation: 1.3s 1.1s cubic-bezier(0.4, 0, 1, 1) both;
 }
 
@@ -2324,16 +2330,12 @@ hr.page-break::after {
   animation-name: glassy-fall-right;
 }
 
-/* Once cut, the sheet stays cut: the class holds the shape outside the
- * animation too, and the crack lines settle to a faint trace along the
- * new edges rather than vanishing. */
+/* The sheet is cut from the start; the two slivers are pseudo-elements
+ * of the same glass that cover the cut-away corners, so the sheet looks
+ * whole until they fall. Nothing animates the clip, so the cut can never
+ * come back. The crack lines settle to a faint trace along the new edges. */
 .glassy-crack > .hero.glassy-sheet {
   clip-path: var(--glassy-cut);
-}
-
-@keyframes glassy-crack-cut {
-  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-  to { clip-path: var(--glassy-cut); }
 }
 
 @keyframes glassy-shudder {
@@ -2351,14 +2353,12 @@ hr.page-break::after {
 }
 
 @keyframes glassy-fall-left {
-  0% { opacity: 0; }
-  1% { opacity: 1; transform: none; }
+  0% { opacity: 1; transform: none; }
   100% { opacity: 0; transform: translate(-8%, 16%) rotate(-9deg); }
 }
 
 @keyframes glassy-fall-right {
-  0% { opacity: 0; }
-  1% { opacity: 1; transform: none; }
+  0% { opacity: 1; transform: none; }
   100% { opacity: 0; transform: translate(8%, 18%) rotate(8deg); }
 }
 

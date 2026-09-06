@@ -176,7 +176,7 @@
   &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <h3>The crack</h3>
-<p>The full-width sheet starts as a plain rectangle. Two cracks draw down its sides where the default hero is cut, the pane shudders, and the slivers break off and fall. The sheet keeps the shape the cracks made, and a faint trace of each crack stays along the new edge. The falling pieces are pseudo-elements of a wrapper, so the hero's own clip does not take them. Wrap the hero in <code>glassy-crack</code>; the global <code>prefers-reduced-motion</code> rule stops it.</p>
+<p>The full-width sheet starts as a plain rectangle. Two cracks draw down its sides where the default hero is cut, the pane shudders, and the slivers break off and fall. The sheet keeps the shape the cracks made, and a faint trace of each crack stays along the new edge. The sheet is cut from the start; the falling slivers are pseudo-elements of a wrapper that cover the cut corners until they go, so the cut can never come back. Wrap the hero in <code>glassy-crack</code>; the global <code>prefers-reduced-motion</code> rule stops it.</p>
 <figure class="example" data-snippet="glassy-crack">
 <div class="glassy-flare glassy-crack">
   <svg class="glassy-crack-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">

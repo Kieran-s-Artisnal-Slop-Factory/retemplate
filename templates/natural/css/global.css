@@ -2278,6 +2278,15 @@ hr.page-break::after {
   min-width: 0;
 }
 
+/* The headline in the narrow column is set smaller than the hero size and
+ * may break inside a word, so it never runs under the picture. */
+.hero.hero-image h1 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.4rem);
+  overflow-wrap: anywhere;
+  width: auto;
+  max-width: 100%;
+}
+
 .hero.hero-image > img,
 .hero.hero-image > figure {
   display: block;
@@ -2293,11 +2302,11 @@ hr.page-break::after {
 
 @media (min-width: 48rem) {
   .hero.hero-image {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-    gap: var(--space-6);
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 3fr);
+    gap: clamp(var(--space-6), 7vw, 6rem);
   }
   .hero.hero-image.hero-image-half {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(14rem, 1fr) minmax(0, 1fr);
   }
 }
 
@@ -2371,11 +2380,11 @@ hr.page-break::after {
 
 .hero.natural-dapple .natural-plate::before {
   background:
-    radial-gradient(28% 18% at 30% 35%, var(--natural-moss) 0 60%, transparent 100%),
-    radial-gradient(22% 30% at 68% 62%, var(--natural-moss) 0 55%, transparent 100%),
-    radial-gradient(18% 12% at 55% 20%, var(--natural-moss) 0 50%, transparent 100%);
+    radial-gradient(28% 18% at 30% 35%, #b9c9a0 0 60%, transparent 100%),
+    radial-gradient(22% 30% at 68% 62%, #b9c9a0 0 55%, transparent 100%),
+    radial-gradient(18% 12% at 55% 20%, #b9c9a0 0 50%, transparent 100%);
   filter: blur(12px);
-  opacity: 0.7;
+  opacity: 0.53;
   mix-blend-mode: multiply;
   animation: natural-canopy 16s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
@@ -2383,6 +2392,7 @@ hr.page-break::after {
 .hero.natural-dapple .natural-plate::after {
   background: radial-gradient(35% 30% at 50% 50%, var(--natural-tape) 0 30%, transparent 100%);
   filter: blur(10px);
+  opacity: 0.75;
   mix-blend-mode: screen;
   animation: natural-sun 16s cubic-bezier(0.45, 0, 0.55, 1) infinite reverse;
 }
